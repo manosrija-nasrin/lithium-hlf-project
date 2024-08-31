@@ -1,0 +1,165 @@
+Script started on 2024-08-21 19:10:42+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd first-network/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh up[K[Kdown[K[K[K[Kup
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'leveldb' with crypto from 'cryptogen'[0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+/mnt/f/blood-data-management-system/first-network/../bin/cryptogen
+[0;34mGenerating certificates using cryptogen tool[0m
+[0;34mCreating Org1 Identities[0m
++ cryptogen generate --config=./organizations/cryptogen/crypto-config-hosp1.yaml --output=organizations
+hosp1.lithium.com
++ res=0
+[0;34mCreating Org2 Identities[0m
++ cryptogen generate --config=./organizations/cryptogen/crypto-config-hosp2.yaml --output=organizations
+hosp2.lithium.com
++ res=0
+[0;34mCreating Orderer Org Identities[0m
++ cryptogen generate --config=./organizations/cryptogen/crypto-config-orderer.yaml --output=organizations
++ res=0
+[0;34mGenerating CCP files for Org1 and Org2[0m
+[1A[1B[0G[?25l[+] Running 0/0
+ [33m⠋[0m Container peer0.hosp2.lithium.com  Creating                                                                                  [34m0.1s [0m
+ [33m⠋[0m Container peer0.hosp1.lithium.com  Creating                                                                                  [34m0.1s [0m
+ [33m⠋[0m Container orderer.lithium.com      Creating                                                                                  [34m0.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠙[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m0.2s [0m
+ [33m⠙[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m0.2s [0m
+ [33m⠙[0m Container orderer.lithium.com      Starting                                                                                  [34m0.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠹[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m0.3s [0m
+ [33m⠹[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m0.3s [0m
+ [33m⠹[0m Container orderer.lithium.com      Starting                                                                                  [34m0.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠸[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m0.4s [0m
+ [33m⠸[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m0.4s [0m
+ [33m⠸[0m Container orderer.lithium.com      Starting                                                                                  [34m0.4s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠼[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m0.5s [0m
+ [33m⠼[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m0.5s [0m
+ [33m⠼[0m Container orderer.lithium.com      Starting                                                                                  [34m0.5s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠴[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m0.6s [0m
+ [33m⠴[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m0.6s [0m
+ [33m⠴[0m Container orderer.lithium.com      Starting                                                                                  [34m0.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠦[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m0.7s [0m
+ [33m⠦[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m0.7s [0m
+ [33m⠦[0m Container orderer.lithium.com      Starting                                                                                  [34m0.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mStarted[0m                                                                                   [34m0.7s [0m
+ [33m⠧[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m0.8s [0m
+ [33m⠧[0m Container orderer.lithium.com      Starting                                                                                  [34m0.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/3[0m
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mStarted[0m                                                                                   [34m0.7s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mStarted[0m                                                                                   [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mStarted[0m                                                                                   [34m0.8s [0m
+[?25hCONTAINER ID   IMAGE                               COMMAND                  CREATED             STATUS                         PORTS                                                                    NAMES
+4135e0d0163e   hyperledger/fabric-orderer:latest   "orderer"                1 second ago        Up Less than a second          0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.lithium.com
+8888e5c6b9ce   hyperledger/fabric-peer:latest      "peer node start"        1 second ago        Up Less than a second          0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.hosp2.lithium.com
+008bfb1ebaca   hyperledger/fabric-peer:latest      "peer node start"        1 second ago        Up Less than a second          0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.hosp1.lithium.com
+bcd07796f7c9   hyperledger/fabric-nodeenv:2.5      "docker-entrypoint.s…"   About an hour ago   Exited (0) About an hour ago                                                                            cranky_heyrovsky
+c05d76b642e7   hyperledger/fabric-nodeenv:2.5      "docker-entrypoint.s…"   About an hour ago   Exited (0) About an hour ago                                                                            gifted_dirac
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh deployCC -c hospitalchannel -ccn donor -ccv 1 -cci initLedger -ccp "../donor-asset-transfer/chaincode" -ccl javascript
+[0;34mUsing docker and docker-compose[0m
+[0;34mdeploying chaincode on channel 'hospitalchannel'[0m
+executing with the following
+- CHANNEL_NAME: [0;32mhospitalchannel[0m
+- CC_NAME: [0;32mdonor[0m
+- CC_SRC_PATH: [0;32m../donor-asset-transfer/chaincode[0m
+- CC_SRC_LANGUAGE: [0;32mjavascript[0m
+- CC_VERSION: [0;32m1[0m
+- CC_SEQUENCE: [0;32mauto[0m
+- CC_END_POLICY: [0;32mNA[0m
+- CC_COLL_CONFIG: [0;32mNA[0m
+- CC_INIT_FCN: [0;32minitLedger[0m
+- DELAY: [0;32m3[0m
+- MAX_RETRY: [0;32m5[0m
+- VERBOSE: [0;32mfalse[0m
+executing with the following
+- CC_NAME: [0;32mdonor[0m
+- CC_SRC_PATH: [0;32m../donor-asset-transfer/chaincode[0m
+- CC_SRC_LANGUAGE: [0;32mjavascript[0m
+- CC_VERSION: [0;32m1[0m
++ '[' false = true ']'
++ peer lifecycle chaincode package donor.tar.gz --path ../donor-asset-transfer/chaincode --lang node --label donor_1
++ res=0
+[0;32mChaincode is packaged[0m
+[0;34mInstalling chaincode on peer0.hosp1...[0m
+[0;34mUsing organization 1[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb$'
++ test 0 -ne 0
+donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+scripts/envVar.sh: line 86: [: too many arguments
+[0;32mChaincode is installed on peer0.org1[0m
+[0;34mInstall chaincode on peer0.hosp2...[0m
+[0;34mUsing organization 2[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb$'
++ test 0 -ne 0
+donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+scripts/envVar.sh: line 86: [: too many arguments
+[0;32mChaincode is installed on peer0.org2[0m
+++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
+++ sed -n '/Version:/{s/.*Sequence: //; s/, Endorsement Plugin:.*$//; p;}'
+Error: failed to endorse proposal: rpc error: code = Unknown desc = error validating proposal: access denied: channel [hospitalchannel] creator org unknown, creator is malformed
++ COMMITTED_CC_SEQUENCE=
++ res=0
+[0;34mUsing organization 1[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb$'
++ res=0
+donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+[0;32mQuery installed successful on peer0.org1 on channel[0m
+[0;34mUsing organization 1[0m
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID hospitalchannel --name donor --version 1 --package-id donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb --sequence 1 --init-required
++ res=1
+Error: failed to endorse proposal: rpc error: code = Unknown desc = error validating proposal: access denied: channel [hospitalchannel] creator org unknown, creator is malformed
+[0;31mChaincode definition approved on peer0.org1 on channel 'hospitalchannel' failed[0m
+[0;31mDeploying chaincode failed[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh deployCC -c hospitalchannel -ccn donor -ccv 1 -cci initLedger -ccp "../donor-asset-transfer/chaincode" -ccl javascript[A]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [C[C[C[C[C[C[C[C[C[C[C[C[Cup[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[Kdown
+[0;34mUsing docker and docker-compose[0m
+[0;34mStopping network[0m
+stat /mnt/f/blood-data-management-system/first-network/addOrg3/compose/compose-hosp3.yaml: no such file or directory
+Error response from daemon: get docker_orderer.lithium.com: no such volume
+Error response from daemon: get docker_peer0.hosp1.lithium.com: no such volume
+Error response from daemon: get docker_peer0.hosp2.lithium.com: no such volume
+[0;34mRemoving remaining containers[0m
+4135e0d0163e
+8888e5c6b9ce
+008bfb1ebaca
+fd8356f0eea3
+1772db08bdd7
+ca376572c754
+541759c4cc67
+[0;34mRemoving generated chaincode docker images[0m
+Untagged: dev-peer0.hosp1.lithium.com-receiver_1-9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c-234cd09718da6225f11ca7669cb20e95a4bb43bc2ea5b6455ccc5c2cf81e1bd1:latest
+Deleted: sha256:6a99f6adc3d0252a78b772fd76fea2164c7f92c78805a982c8d73782acc1929e
+Deleted: sha256:88fc1450c78e14c91d2a7a2e5f057a4b21e936bdb0d909b678ff6c2652fa17df
+Deleted: sha256:51903b66bce5978d77b05ddab2688d8622e527c7f211bd1117a1e8307cf95d6e
+Deleted: sha256:d18c42a60e27c3308ec321e983653265822f5bcc343dba3b00b6ebda6de15833
+Untagged: dev-peer0.hosp2.lithium.com-receiver_1-9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c-1af4dd1be5b9e39caea9fa0b2f38f5f7beae80a4b7b067abd8bd83b6bb0b518a:latest
+Deleted: sha256:d165b0362803e3d1f3c77abfb100c537f79d9e6ab9eb5527064fb4440a4575ee
+Deleted: sha256:fb7e7d37143cbfb5bd0cd74b0a3e1fabcb462afa1bda69abb6aed3c58125bd91
+Deleted: sha256:5532606988fbdce0e9f26ba35660db732b624db65eeeb0e2baaed561292c0f28
+Deleted: sha256:afcff76c5705196033c6d286f8dd1d76da209dbae83e1df5693ef7f1d549b069
+Untagged: dev-peer0.hosp1.lithium.com-donor_1-a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb-839b79f613ec51ece4a839028ceee50d632048592acc499d473da7abe8e287b1:latest
+Deleted: sha256:2e1ebf9870dd7ce38a74a2882e8c45337645aa2f3077ba00f1b1398374f6ca59
+Deleted: sha256:7d3f72d206a0125225c4d569b49333f14ba6182c3d08c3c4179eaedb8b4949a2
+Deleted: sha256:f66ed87690e36c08be6f578282b53f100e5b431c16288c66255f63a6766cdda1
+Deleted: sha256:176dad6f805b515d91ea8ef8a16cd294ef649a15ecc4ce9138f17e40ef382a9f
+Untagged: dev-peer0.hosp2.lithium.com-donor_1-a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb-d4c726b5a93d250b00cec41f6aec7537a91e41a92ec185c1a2e3555f7b940253:latest
+Deleted: sha256:37528e33c3d330cf6c26d022c5ea430bc5fab49d2ec145784275e9f7188b78b6
+Deleted: sha256:ef78d2d1887a11f75a08202436041b1171d46e2815f30550b935a1346b755f3b
+Deleted: sha256:22f79452394542170ee2cc11ff3d22093198bd0aae58ec16578396a03664548b
+Deleted: sha256:d996ccbb64b888f30eeea51e65f80d4b5a3908fe775f936cdc45c68aa33a9e74
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m exit
+exit
+
+Script done on 2024-08-21 19:17:02+05:30 [COMMAND_EXIT_CODE="0"]

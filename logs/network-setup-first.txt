@@ -1,0 +1,334 @@
+first-network $ ./network.sh up createChannel -c hospitalchannel -s couchdb
+Using docker and docker-compose
+Creating channel 'hospitalchannel'.
+If network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb with crypto from 'cryptogen'
+Bringing up network
+LOCAL_VERSION=v2.5.9
+DOCKER_IMAGE_VERSION=v2.5.9
+/mnt/f/blood-data-management-system/first-network/../bin/cryptogen
+Generating certificates using cryptogen tool
+Creating Org1 Identities
++ cryptogen generate --config=./organizations/cryptogen/crypto-config-org1.yaml --output=organizations
+org1.example.com
++ res=0
+Creating Org2 Identities
++ cryptogen generate --config=./organizations/cryptogen/crypto-config-org2.yaml --output=organizations
+org2.example.com
++ res=0
+Creating Orderer Org Identities
++ cryptogen generate --config=./organizations/cryptogen/crypto-config-orderer.yaml --output=organizations
++ res=0
+Generating CCP files for Org1 and Org2
+[+] Running 13/13
+ ✔ couchdb0 Pulled                                         57.5s
+ ✔ couchdb1 Pulled                                         57.4s
+   ✔ 5de87e84afee Pull complete                            48.0s
+   ✔ 84c7e0147c4d Pull complete                            48.0s
+   ✔ 54229209e7c0 Pull complete                            48.3s
+   ✔ 8fef7b55809c Pull complete                            48.3s
+   ✔ 35ece7eeabbe Pull complete                            48.4s
+   ✔ 389d0b93c950 Pull complete                            48.4s
+   ✔ b07dd9a547e1 Pull complete                            52.7s
+   ✔ 2b339adf81b3 Pull complete                            52.8s
+   ✔ 1f87213e0a01 Pull complete                            52.8s
+   ✔ 26927614f578 Pull complete                            52.8s
+   ✔ 1151599fed5b Pull complete                            52.8s
+[+] Running 9/9
+ ✔ Network fabric_test                      Created         0.1s
+ ✔ Volume "compose_orderer.example.com"     Created         0.0s
+ ✔ Volume "compose_peer0.org1.example.com"  Created         0.0s
+ ✔ Volume "compose_peer0.org2.example.com"  Created         0.0s
+ ✔ Container orderer.example.com            Started        14.9s
+ ✔ Container couchdb1                       Started        14.8s
+ ✔ Container couchdb0                       Started        14.9s
+ ✔ Container peer0.org1.example.com         Started         3.8s
+ ✔ Container peer0.org2.example.com         Started         3.6s
+CONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS                  PORTS                                                                    NAMESdc77db311e39   hyperledger/fabric-peer:latest      "peer node start"        3 seconds ago    Up Less than a second   0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.org2.example.com
+659ef1857257   hyperledger/fabric-peer:latest      "peer node start"        3 seconds ago    Up Less than a second   0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.org1.example.com
+672923b1f618   hyperledger/fabric-orderer:latest   "orderer"                15 seconds ago   Up 1 second             0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.example.com
+2f0c461335f5   couchdb:3.3.3                       "tini -- /docker-ent…"   15 seconds ago   Up 1 second             4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp                               couchdb1
+c9dd3a21930e   couchdb:3.3.3                       "tini -- /docker-ent…"   15 seconds ago   Up 1 second             4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp                               couchdb0
+Using docker and docker-compose
+Generating channel genesis block 'hospitalchannel.block'
+Using organization 1
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile ChannelUsingRaft -outputBlock ./channel-artifacts/hospitalchannel.block -channelID hospitalchannel
+2024-08-10 07:00:21.426 IST 0001 INFO [common.tools.configtxgen] main -> Loading configuration
+2024-08-10 07:00:21.441 IST 0002 INFO [common.tools.configtxgen.localconfig] completeInitialization -> orderer type: etcdraft
+2024-08-10 07:00:21.441 IST 0003 INFO [common.tools.configtxgen.localconfig] completeInitialization -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216
+2024-08-10 07:00:21.441 IST 0004 INFO [common.tools.configtxgen.localconfig] Load -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+2024-08-10 07:00:21.521 IST 0005 INFO [common.tools.configtxgen] doOutputBlock -> Generating genesis block
+2024-08-10 07:00:21.521 IST 0006 INFO [common.tools.configtxgen] doOutputBlock -> Creating application channel genesis block
+2024-08-10 07:00:21.523 IST 0007 INFO [common.tools.configtxgen] doOutputBlock -> Writing genesis block
++ res=0
+Creating channel hospitalchannel
+Adding orderers
++ . scripts/orderer.sh hospitalchannel
++ '[' 0 -eq 1 ']'
++ res=0
+Status: 201
+{
+        "name": "hospitalchannel",
+        "url": "/participation/v1/channels/hospitalchannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 1
+}
+
+Channel 'hospitalchannel' created
+Joining org1 peer to the channel...
+Using organization 1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=0
+2024-08-10 07:00:29.512 IST 0001 INFO [channelCmd] InitCmdFactory -> Endorser and orderer connections initialized
+2024-08-10 07:00:29.816 IST 0002 INFO [channelCmd] executeJoin -> Successfully submitted proposal to join channel
+Joining org2 peer to the channel...
+Using organization 2
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=0
+2024-08-10 07:00:33.656 IST 0001 INFO [channelCmd] InitCmdFactory -> Endorser and orderer connections initialized
+2024-08-10 07:00:33.943 IST 0002 INFO [channelCmd] executeJoin -> Successfully submitted proposal to join channel
+Setting anchor peer for org1...
+Using organization 1
+Fetching channel config for channel hospitalchannel
+Using organization 1
+Fetching the most recent configuration block for the channel
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c hospitalchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
+2024-08-10 07:00:34.785 IST 0001 INFO [channelCmd] InitCmdFactory -> Endorser and orderer connections initialized
+2024-08-10 07:00:34.791 IST 0002 INFO [cli.common] readBlock -> Received block: 0
+2024-08-10 07:00:34.791 IST 0003 INFO [channelCmd] fetch -> Retrieving last config block: 0
+2024-08-10 07:00:34.792 IST 0004 INFO [cli.common] readBlock -> Received block: 0
+Decoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org1MSPconfig.json
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+Generating anchor peer update transaction for Org1 on channel hospitalchannel
+++ jq '.channel_group.groups.Application.groups.Org1MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.org1.example.com","port": 7051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org1MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org1MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org1MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id hospitalchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"hospitalchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"hospitalchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"Org1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"Org1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.org1.example.com",' '"port":' 7051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org1MSPanchors.tx
+2024-08-10 07:00:38.108 IST 0001 INFO [channelCmd] InitCmdFactory -> Endorser and orderer connections initialized
+2024-08-10 07:00:38.137 IST 0002 INFO [channelCmd] update -> Successfully submitted channel update
+Anchor peer set for org 'Org1MSP' on channel 'hospitalchannel'
+Setting anchor peer for org2...
+Using organization 2
+Fetching channel config for channel hospitalchannel
+Using organization 2
+Fetching the most recent configuration block for the channel
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c hospitalchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
+2024-08-10 07:00:39.029 IST 0001 INFO [channelCmd] InitCmdFactory -> Endorser and orderer connections initialized
+2024-08-10 07:00:39.031 IST 0002 INFO [cli.common] readBlock -> Received block: 1
+2024-08-10 07:00:39.031 IST 0003 INFO [channelCmd] fetch -> Retrieving last config block: 1
+2024-08-10 07:00:39.032 IST 0004 INFO [cli.common] readBlock -> Received block: 1
+Decoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org2MSPconfig.json
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+Generating anchor peer update transaction for Org2 on channel hospitalchannel
+++ jq '.channel_group.groups.Application.groups.Org2MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.org2.example.com","port": 9051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org2MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org2MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org2MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id hospitalchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"hospitalchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"hospitalchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"Org2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"Org2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.org2.example.com",' '"port":' 9051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/Org2MSPanchors.tx
+2024-08-10 07:00:41.539 IST 0001 INFO [channelCmd] InitCmdFactory -> Endorser and orderer connections initialized
+2024-08-10 07:00:41.563 IST 0002 INFO [channelCmd] update -> Successfully submitted channel update
+Anchor peer set for org 'Org2MSP' on channel 'hospitalchannel'
+Channel 'hospitalchannel' joined
+first-network $ ./network.sh deployCC -c hospitalchannel -ccn donor -ccv 1 -cci initLedger -ccp "../donor-asset-transfer/chaincode" -ccl javascript
+Using docker and docker-compose
+deploying chaincode on channel 'hospitalchannel'
+executing with the following
+- CHANNEL_NAME: hospitalchannel
+- CC_NAME: donor
+- CC_SRC_PATH: ../donor-asset-transfer/chaincode
+- CC_SRC_LANGUAGE: javascript
+- CC_VERSION: 1
+- CC_SEQUENCE: auto
+- CC_END_POLICY: NA
+- CC_COLL_CONFIG: NA
+- CC_INIT_FCN: initLedger
+- DELAY: 3
+- MAX_RETRY: 5
+- VERBOSE: false
+executing with the following
+- CC_NAME: donor
+- CC_SRC_PATH: ../donor-asset-transfer/chaincode
+- CC_SRC_LANGUAGE: javascript
+- CC_VERSION: 1
+Path to chaincode does not exist. Please provide different path.
+Error: failed to read chaincode package at 'donor.tar.gz': open donor.tar.gz: no such file or directory
+Installing chaincode on peer0.org1...
+Using organization 1
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^$'
++ test 1 -ne 0
++ peer lifecycle chaincode install donor.tar.gz
++ res=1
+Error: failed to read chaincode package at 'donor.tar.gz': open donor.tar.gz: no such file or directory
+Chaincode installation on peer0.org1 has failed
+Deploying chaincode failed
+first-network $
+first-network $ ./network.sh deployCC -c hospitalchannel -ccn donor -ccv 1 -cci initLedger -ccp "../donor-asset-transfer/chaincode" -ccl javascript
+Using docker and docker-compose
+deploying chaincode on channel 'hospitalchannel'
+executing with the following
+- CHANNEL_NAME: hospitalchannel
+- CC_NAME: donor
+- CC_SRC_PATH: ../donor-asset-transfer/chaincode
+- CC_SRC_LANGUAGE: javascript
+- CC_VERSION: 1
+- CC_SEQUENCE: auto
+- CC_END_POLICY: NA
+- CC_COLL_CONFIG: NA
+- CC_INIT_FCN: initLedger
+- DELAY: 3
+- MAX_RETRY: 5
+- VERBOSE: false
+executing with the following
+- CC_NAME: donor
+- CC_SRC_PATH: ../donor-asset-transfer/chaincode
+- CC_SRC_LANGUAGE: javascript
+- CC_VERSION: 1
++ '[' false = true ']'
++ peer lifecycle chaincode package donor.tar.gz --path ../donor-asset-transfer/chaincode --lang node --label donor_1
++ res=0
+Chaincode is packaged
+Installing chaincode on peer0.org1...
+Using organization 1
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb$'
++ test 1 -ne 0
++ peer lifecycle chaincode install donor.tar.gz
++ res=0
+2024-08-10 07:06:48.149 IST 0001 INFO [cli.lifecycle.chaincode] submitInstallProposal -> Installed remotely: response:<status:200 payload:"\nHdonor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb\022\007donor_1" >
+2024-08-10 07:06:48.155 IST 0002 INFO [cli.lifecycle.chaincode] submitInstallProposal -> Chaincode code package identifier: donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+Chaincode is installed on peer0.org1
+Install chaincode on peer0.org2...
+Using organization 2
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb$'
++ test 1 -ne 0
++ peer lifecycle chaincode install donor.tar.gz
++ res=0
+2024-08-10 07:07:36.443 IST 0001 INFO [cli.lifecycle.chaincode] submitInstallProposal -> Installed remotely: response:<status:200 payload:"\nHdonor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb\022\007donor_1" >
+2024-08-10 07:07:36.480 IST 0002 INFO [cli.lifecycle.chaincode] submitInstallProposal -> Chaincode code package identifier: donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+Chaincode is installed on peer0.org2
+++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
+++ sed -n '/Version:/{s/.*Sequence: //; s/, Endorsement Plugin:.*$//; p;}'
+Error: query failed with status: 404 - namespace donor is not defined
++ COMMITTED_CC_SEQUENCE=
++ res=0
+Using organization 1
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb$'
++ res=0
+donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+Query installed successful on peer0.org1 on channel
+Using organization 1
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem --channelID hospitalchannel --name donor --version 1 --package-id donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb --sequence 1 --init-required
++ res=0
+2024-08-10 07:07:43.349 IST 0001 INFO [chaincodeCmd] ClientWait -> txid [addc24eaeb0a9eed8d4f6245ec29b616c39f121efaada2436490ba2d1e20843e] committed with status (VALID) at localhost:7051
+Chaincode definition approved on peer0.org1 on channel 'hospitalchannel'
+Using organization 1
+Checking the commit readiness of the chaincode definition on peer0.org1 on channel 'hospitalchannel'...
+Attempting to check the commit readiness of the chaincode definition on peer0.org1, Retry after 3 seconds.
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+        "approvals": {
+                "Org1MSP": true,
+                "Org2MSP": false
+        }
+}
+Checking the commit readiness of the chaincode definition successful on peer0.org1 on channel 'hospitalchannel'
+Using organization 2
+Checking the commit readiness of the chaincode definition on peer0.org2 on channel 'hospitalchannel'...
+Attempting to check the commit readiness of the chaincode definition on peer0.org2, Retry after 3 seconds.
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+        "approvals": {
+                "Org1MSP": true,
+                "Org2MSP": false
+        }
+}
+Checking the commit readiness of the chaincode definition successful on peer0.org2 on channel 'hospitalchannel'
+Using organization 2
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem --channelID hospitalchannel --name donor --version 1 --package-id donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb --sequence 1 --init-required
++ res=0
+2024-08-10 07:07:54.402 IST 0001 INFO [chaincodeCmd] ClientWait -> txid [3f4af50216403a60fa129e877b753ae272752c1cd4702717cc231d513111c913] committed with status (VALID) at localhost:9051
+Chaincode definition approved on peer0.org2 on channel 'hospitalchannel'
+Using organization 1
+Checking the commit readiness of the chaincode definition on peer0.org1 on channel 'hospitalchannel'...
+Attempting to check the commit readiness of the chaincode definition on peer0.org1, Retry after 3 seconds.
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+        "approvals": {
+                "Org1MSP": true,
+                "Org2MSP": true
+        }
+}
+Checking the commit readiness of the chaincode definition successful on peer0.org1 on channel 'hospitalchannel'
+Using organization 2
+Checking the commit readiness of the chaincode definition on peer0.org2 on channel 'hospitalchannel'...
+Attempting to check the commit readiness of the chaincode definition on peer0.org2, Retry after 3 seconds.
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+        "approvals": {
+                "Org1MSP": true,
+                "Org2MSP": true
+        }
+}
+Checking the commit readiness of the chaincode definition successful on peer0.org2 on channel 'hospitalchannel'
+Using organization 1
+Using organization 2
++ peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem --channelID hospitalchannel --name donor --peerAddresses localhost:7051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem --peerAddresses localhost:9051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem --version 1 --sequence 1 --init-required
++ res=0
+2024-08-10 07:08:05.268 IST 0001 INFO [chaincodeCmd] ClientWait -> txid [a1099065128bbf5830721d02ba60798400c31a02bbbcc4c7b267c43724e7a290] committed with status (VALID) at localhost:7051
+2024-08-10 07:08:05.288 IST 0002 INFO [chaincodeCmd] ClientWait -> txid [a1099065128bbf5830721d02ba60798400c31a02bbbcc4c7b267c43724e7a290] committed with status (VALID) at localhost:9051
+Chaincode definition committed on channel 'hospitalchannel'
+Using organization 1
+Querying chaincode definition on peer0.org1 on channel 'hospitalchannel'...
+Attempting to Query committed status on peer0.org1, Retry after 3 seconds.
++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
++ res=0
+Committed chaincode definition for chaincode 'donor' on channel 'hospitalchannel':
+Version: 1, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true]
+Query chaincode definition successful on peer0.org1 on channel 'hospitalchannel'
+Using organization 2
+Querying chaincode definition on peer0.org2 on channel 'hospitalchannel'...
+Attempting to Query committed status on peer0.org2, Retry after 3 seconds.
++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
++ res=0
+Committed chaincode definition for chaincode 'donor' on channel 'hospitalchannel':
+Version: 1, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true]
+Query chaincode definition successful on peer0.org2 on channel 'hospitalchannel'
+Using organization 1
+Using organization 2
++ infoln 'invoke fcn call:{"function":"initLedger","Args":[]}'
++ println '\033[0;34minvoke fcn call:{"function":"initLedger","Args":[]}\033[0m'
++ echo -e '\033[0;34minvoke fcn call:{"function":"initLedger","Args":[]}\033[0m'
+invoke fcn call:{"function":"initLedger","Args":[]}
++ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem -C hospitalchannel -n donor --peerAddresses localhost:7051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem --peerAddresses localhost:9051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem --isInit -c '{"function":"initLedger","Args":[]}'
++ res=0
+2024-08-10 07:08:17.029 IST 0001 INFO [chaincodeCmd] chaincodeInvokeOrQuery -> Chaincode invoke successful. result: status:200
+Invoke transaction successful on peer0.org1 peer0.org2 on channel 'hospitalchannel'
+first-network $

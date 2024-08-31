@@ -1,0 +1,44 @@
+# All  zip files
+*.zip
+
+# Error folders of network
+error-*/
+
+# Node modules
+node_modules/
+
+.gitignore
+
+# channel artifacts
+channel-artifacts/
+organizations/peerOrganizations
+organizations/ordererOrganizations
+
+# dependencies
+/node_modules
+
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db

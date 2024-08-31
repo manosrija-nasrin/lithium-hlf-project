@@ -1,0 +1,764 @@
+Script started on 2024-08-21 20:19:56+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd first-network/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh up
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'leveldb' with crypto from 'cryptogen'[0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+/mnt/f/blood-data-management-system/first-network/../bin/cryptogen
+[0;34mGenerating certificates using cryptogen tool[0m
+[0;34mCreating Org1 Identities[0m
++ cryptogen generate --config=./organizations/cryptogen/crypto-config-hosp1.yaml --output=organizations
+hosp1.lithium.com
++ res=0
+[0;34mCreating Org2 Identities[0m
++ cryptogen generate --config=./organizations/cryptogen/crypto-config-hosp2.yaml --output=organizations
+hosp2.lithium.com
++ res=0
+[0;34mCreating Orderer Org Identities[0m
++ cryptogen generate --config=./organizations/cryptogen/crypto-config-orderer.yaml --output=organizations
++ res=0
+[0;34mGenerating CCP files for Org1 and Org2[0m
+[1A[1B[0G[?25l[+] Running 4/0
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [33m⠋[0m Container orderer.lithium.com             Creating                                                                           [34m0.0s [0m
+ [33m⠋[0m Container peer0.hosp1.lithium.com         Creating                                                                           [34m0.0s [0m
+ [33m⠋[0m Container peer0.hosp2.lithium.com         Creating                                                                           [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [33m⠙[0m Container orderer.lithium.com             Creating                                                                           [34m0.1s [0m
+ [33m⠙[0m Container peer0.hosp1.lithium.com         Creating                                                                           [34m0.1s [0m
+ [33m⠙[0m Container peer0.hosp2.lithium.com         Creating                                                                           [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [33m⠹[0m Container orderer.lithium.com             Starting                                                                           [34m0.2s [0m
+ [33m⠹[0m Container peer0.hosp1.lithium.com         Starting                                                                           [34m0.2s [0m
+ [33m⠹[0m Container peer0.hosp2.lithium.com         Starting                                                                           [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [33m⠸[0m Container orderer.lithium.com             Starting                                                                           [34m0.3s [0m
+ [33m⠸[0m Container peer0.hosp1.lithium.com         Starting                                                                           [34m0.3s [0m
+ [33m⠸[0m Container peer0.hosp2.lithium.com         Starting                                                                           [34m0.3s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [33m⠼[0m Container orderer.lithium.com             Starting                                                                           [34m0.4s [0m
+ [33m⠼[0m Container peer0.hosp1.lithium.com         Starting                                                                           [34m0.4s [0m
+ [33m⠼[0m Container peer0.hosp2.lithium.com         Starting                                                                           [34m0.4s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [33m⠴[0m Container orderer.lithium.com             Starting                                                                           [34m0.5s [0m
+ [33m⠴[0m Container peer0.hosp1.lithium.com         Starting                                                                           [34m0.5s [0m
+ [33m⠴[0m Container peer0.hosp2.lithium.com         Starting                                                                           [34m0.5s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [33m⠦[0m Container orderer.lithium.com             Starting                                                                           [34m0.6s [0m
+ [33m⠦[0m Container peer0.hosp1.lithium.com         Starting                                                                           [34m0.6s [0m
+ [33m⠦[0m Container peer0.hosp2.lithium.com         Starting                                                                           [34m0.6s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [33m⠧[0m Container orderer.lithium.com             Starting                                                                           [34m0.7s [0m
+ [33m⠧[0m Container peer0.hosp1.lithium.com         Starting                                                                           [34m0.7s [0m
+ [33m⠧[0m Container peer0.hosp2.lithium.com         Starting                                                                           [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [33m⠇[0m Container orderer.lithium.com             Starting                                                                           [34m0.8s [0m
+ [33m⠇[0m Container peer0.hosp1.lithium.com         Starting                                                                           [34m0.8s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mStarted[0m                                                                            [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 7/7[0m
+ [32m✔[0m Network fabric_test                       [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume "compose_orderer.lithium.com"      [32mCreated[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mStarted[0m                                                                            [34m0.9s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mStarted[0m                                                                            [34m0.9s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mStarted[0m                                                                            [34m0.7s [0m
+[?25hCONTAINER ID   IMAGE                               COMMAND             CREATED        STATUS                  PORTS                                                                    NAMES
+871e8cc3059a   hyperledger/fabric-peer:latest      "peer node start"   1 second ago   Up Less than a second   0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.hosp1.lithium.com
+bc98b161b411   hyperledger/fabric-peer:latest      "peer node start"   1 second ago   Up Less than a second   0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.hosp2.lithium.com
+760b0852fe60   hyperledger/fabric-orderer:latest   "orderer"           1 second ago   Up Less than a second   0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.lithium.com
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh createChannel -c hospitalchannel -s couchdb
+[0;34mUsing docker and docker-compose[0m
+[0;34mCreating channel 'hospitalchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb [0m
+[0;34mBringing up network[0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[1A[1B[0G[?25l[+] Running 1/0
+ [33m⠋[0m Container couchdb1             Creating                                                                                      [34m0.0s [0m
+ [33m⠋[0m Container couchdb0             Creating                                                                                      [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com  [32mRunning[0m                                                                                       [34m0.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/3[0m
+ [32m✔[0m Container couchdb1                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container couchdb0                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠋[0m Container peer0.hosp1.lithium.com  Recreate                                                                                  [34m0.1s [0m
+ [33m⠋[0m Container peer0.hosp2.lithium.com  Recreate                                                                                  [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [32m✔[0m Container couchdb1                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container couchdb0                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠙[0m Container peer0.hosp1.lithium.com  Recreate                                                                                  [34m0.2s [0m
+ [33m⠙[0m Container peer0.hosp2.lithium.com  Recreate                                                                                  [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [32m✔[0m Container couchdb1                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container couchdb0                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠹[0m Container peer0.hosp1.lithium.com  Recreate                                                                                  [34m0.3s [0m
+ [33m⠹[0m Container peer0.hosp2.lithium.com  Recreate                                                                                  [34m0.3s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [32m✔[0m Container couchdb1                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container couchdb0                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠸[0m Container peer0.hosp1.lithium.com  Recreate                                                                                  [34m0.4s [0m
+ [33m⠸[0m Container peer0.hosp2.lithium.com  Recreate                                                                                  [34m0.4s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [32m✔[0m Container couchdb1                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container couchdb0                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠼[0m Container peer0.hosp1.lithium.com  Recreate                                                                                  [34m0.5s [0m
+ [33m⠼[0m Container peer0.hosp2.lithium.com  Recreate                                                                                  [34m0.5s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/5
+ [32m✔[0m Container couchdb1                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container couchdb0                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mRecreated[0m                                                                                 [34m0.6s [0m
+ [33m⠴[0m Container peer0.hosp2.lithium.com  Recreate                                                                                  [34m0.6s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/5
+ [32m✔[0m Container couchdb1                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container couchdb0                 [32mCreated[0m                                                                                   [34m0.1s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mRecreated[0m                                                                                 [34m0.6s [0m
+ [33m⠦[0m Container peer0.hosp2.lithium.com  Recreate                                                                                  [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [33m⠙[0m Container couchdb1                 Starting                                                                                  [34m0.8s [0m
+ [33m⠙[0m Container couchdb0                 Starting                                                                                  [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mRecreated[0m                                                                                 [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mRecreated[0m                                                                                 [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [33m⠹[0m Container couchdb1                 Starting                                                                                  [34m0.9s [0m
+ [33m⠹[0m Container couchdb0                 Starting                                                                                  [34m0.9s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mRecreated[0m                                                                                 [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mRecreated[0m                                                                                 [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [33m⠸[0m Container couchdb1                 Starting                                                                                  [34m1.0s [0m
+ [33m⠸[0m Container couchdb0                 Starting                                                                                  [34m1.0s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mRecreated[0m                                                                                 [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mRecreated[0m                                                                                 [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [33m⠼[0m Container couchdb1                 Starting                                                                                  [34m1.1s [0m
+ [33m⠼[0m Container couchdb0                 Starting                                                                                  [34m1.1s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mRecreated[0m                                                                                 [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mRecreated[0m                                                                                 [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [33m⠴[0m Container couchdb1                 Starting                                                                                  [34m1.2s [0m
+ [33m⠴[0m Container couchdb0                 Starting                                                                                  [34m1.2s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mRecreated[0m                                                                                 [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mRecreated[0m                                                                                 [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [33m⠦[0m Container couchdb1                 Starting                                                                                  [34m1.3s [0m
+ [32m✔[0m Container couchdb0                 [32mStarted[0m                                                                                   [34m1.3s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠴[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m1.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mRecreated[0m                                                                                 [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [32m✔[0m Container couchdb1                 [32mStarted[0m                                                                                   [34m1.4s [0m
+ [32m✔[0m Container couchdb0                 [32mStarted[0m                                                                                   [34m1.3s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠦[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m1.4s [0m
+ [33m⠧[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m1.4s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [32m✔[0m Container couchdb1                 [32mStarted[0m                                                                                   [34m1.4s [0m
+ [32m✔[0m Container couchdb0                 [32mStarted[0m                                                                                   [34m1.3s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠧[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m1.5s [0m
+ [33m⠇[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m1.5s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [32m✔[0m Container couchdb1                 [32mStarted[0m                                                                                   [34m1.4s [0m
+ [32m✔[0m Container couchdb0                 [32mStarted[0m                                                                                   [34m1.3s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠇[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m1.6s [0m
+ [33m⠏[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m1.6s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/5
+ [32m✔[0m Container couchdb1                 [32mStarted[0m                                                                                   [34m1.4s [0m
+ [32m✔[0m Container couchdb0                 [32mStarted[0m                                                                                   [34m1.3s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [33m⠏[0m Container peer0.hosp1.lithium.com  Starting                                                                                  [34m1.7s [0m
+ [33m⠋[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m1.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/5
+ [32m✔[0m Container couchdb1                 [32mStarted[0m                                                                                   [34m1.4s [0m
+ [32m✔[0m Container couchdb0                 [32mStarted[0m                                                                                   [34m1.3s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mStarted[0m                                                                                   [34m1.7s [0m
+ [33m⠙[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m1.8s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/5
+ [32m✔[0m Container couchdb1                 [32mStarted[0m                                                                                   [34m1.4s [0m
+ [32m✔[0m Container couchdb0                 [32mStarted[0m                                                                                   [34m1.3s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mStarted[0m                                                                                   [34m1.7s [0m
+ [33m⠹[0m Container peer0.hosp2.lithium.com  Starting                                                                                  [34m1.9s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 5/5[0m
+ [32m✔[0m Container couchdb1                 [32mStarted[0m                                                                                   [34m1.4s [0m
+ [32m✔[0m Container couchdb0                 [32mStarted[0m                                                                                   [34m1.3s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mStarted[0m                                                                                   [34m1.7s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mStarted[0m                                                                                   [34m1.9s [0m
+[?25hCONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS                  PORTS                                                                    NAMES
+3c4dc7829ae9   hyperledger/fabric-peer:latest      "peer node start"        2 seconds ago    Up Less than a second   0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.hosp2.lithium.com
+3241fd6ba65c   hyperledger/fabric-peer:latest      "peer node start"        2 seconds ago    Up Less than a second   0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.hosp1.lithium.com
+ca4134d6c76f   couchdb:3.3.3                       "tini -- /docker-ent…"   2 seconds ago    Up 1 second             4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp                               couchdb1
+e4fa947ac816   couchdb:3.3.3                       "tini -- /docker-ent…"   2 seconds ago    Up 1 second             4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp                               couchdb0
+760b0852fe60   hyperledger/fabric-orderer:latest   "orderer"                46 seconds ago   Up 45 seconds           0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.lithium.com
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'hospitalchannel.block'[0m
+[0;34mUsing organization 1[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile ChannelUsingRaft -outputBlock ./channel-artifacts/hospitalchannel.block -channelID hospitalchannel
+[34m2024-08-21 20:21:07.111 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2024-08-21 20:21:07.163 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2024-08-21 20:21:07.163 IST 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2024-08-21 20:21:07.163 IST 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2024-08-21 20:21:07.216 IST 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2024-08-21 20:21:07.216 IST 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating application channel genesis block
+[34m2024-08-21 20:21:07.216 IST 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[0;34mCreating channel hospitalchannel[0m
+[0;34mAdding orderers[0m
++ . scripts/orderer.sh hospitalchannel
++ '[' 0 -eq 1 ']'
++ res=0
+Status: 201
+{
+	"name": "hospitalchannel",
+	"url": "/participation/v1/channels/hospitalchannel",
+	"consensusRelation": "consenter",
+	"status": "active",
+	"height": 1
+}
+
+[0;32mChannel 'hospitalchannel' created[0m
+[0;34mJoining hosp1 peer to the channel...[0m
+[0;34mUsing organization 1[0m
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=0
+[34m2024-08-21 20:21:15.044 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:21:15.171 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mJoining hosp2 peer to the channel...[0m
+[0;34mUsing organization 2[0m
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=0
+[34m2024-08-21 20:21:19.040 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:21:19.171 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mSetting anchor peer for hosp1...[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching channel config for channel hospitalchannel[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c hospitalchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2024-08-21 20:21:20.079 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:21:20.083 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[34m2024-08-21 20:21:20.083 IST 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 0
+[34m2024-08-21 20:21:20.084 IST 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for Org1 on channel hospitalchannel[0m
+++ jq '.channel_group.groups.Application.groups.hosp1MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.hosp1.lithium.com","port": 7051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id hospitalchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"hospitalchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"hospitalchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.hosp1.lithium.com",' '"port":' 7051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPanchors.tx
+[34m2024-08-21 20:21:23.504 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:21:23.529 IST 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'hosp1MSP' on channel 'hospitalchannel'[0m
+[0;34mSetting anchor peer for hosp2...[0m
+[0;34mUsing organization 2[0m
+[0;34mFetching channel config for channel hospitalchannel[0m
+[0;34mUsing organization 2[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c hospitalchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2024-08-21 20:21:24.377 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:21:24.381 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[34m2024-08-21 20:21:24.381 IST 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 1
+[34m2024-08-21 20:21:24.383 IST 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for Org2 on channel hospitalchannel[0m
+++ jq '.channel_group.groups.Application.groups.hosp2MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.hosp2.lithium.com","port": 9051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id hospitalchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"hospitalchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"hospitalchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.hosp2.lithium.com",' '"port":' 9051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPanchors.tx
+[34m2024-08-21 20:21:27.040 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:21:27.066 IST 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'hosp2MSP' on channel 'hospitalchannel'[0m
+[0;32mChannel 'hospitalchannel' joined[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh deployCC -c hospitalchannel -ccn donor -ccv 1 -cci initLedger -ccp "../donor-asset-transfer/chaincode" -ccl javascript
+[0;34mUsing docker and docker-compose[0m
+[0;34mdeploying chaincode on channel 'hospitalchannel'[0m
+executing with the following
+- CHANNEL_NAME: [0;32mhospitalchannel[0m
+- CC_NAME: [0;32mdonor[0m
+- CC_SRC_PATH: [0;32m../donor-asset-transfer/chaincode[0m
+- CC_SRC_LANGUAGE: [0;32mjavascript[0m
+- CC_VERSION: [0;32m1[0m
+- CC_SEQUENCE: [0;32mauto[0m
+- CC_END_POLICY: [0;32mNA[0m
+- CC_COLL_CONFIG: [0;32mNA[0m
+- CC_INIT_FCN: [0;32minitLedger[0m
+- DELAY: [0;32m3[0m
+- MAX_RETRY: [0;32m5[0m
+- VERBOSE: [0;32mfalse[0m
+executing with the following
+- CC_NAME: [0;32mdonor[0m
+- CC_SRC_PATH: [0;32m../donor-asset-transfer/chaincode[0m
+- CC_SRC_LANGUAGE: [0;32mjavascript[0m
+- CC_VERSION: [0;32m1[0m
++ '[' false = true ']'
++ peer lifecycle chaincode package donor.tar.gz --path ../donor-asset-transfer/chaincode --lang node --label donor_1
++ res=0
+[0;32mChaincode is packaged[0m
+[0;34mInstalling chaincode on peer0.hosp1...[0m
+[0;34mUsing organization 1[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb$'
++ test 1 -ne 0
++ peer lifecycle chaincode install donor.tar.gz
++ res=0
+[34m2024-08-21 20:23:17.634 IST 0001 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Installed remotely: response:<status:200 payload:"\nHdonor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb\022\007donor_1" > 
+[34m2024-08-21 20:23:17.635 IST 0002 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Chaincode code package identifier: donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+[0;32mChaincode is installed on peer0.org1[0m
+[0;34mInstall chaincode on peer0.hosp2...[0m
+[0;34mUsing organization 2[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb$'
++ test 1 -ne 0
++ peer lifecycle chaincode install donor.tar.gz
++ res=0
+[34m2024-08-21 20:24:02.246 IST 0001 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Installed remotely: response:<status:200 payload:"\nHdonor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb\022\007donor_1" > 
+[34m2024-08-21 20:24:02.246 IST 0002 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Chaincode code package identifier: donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+[0;32mChaincode is installed on peer0.org2[0m
+++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
+++ sed -n '/Version:/{s/.*Sequence: //; s/, Endorsement Plugin:.*$//; p;}'
+Error: query failed with status: 404 - namespace donor is not defined
++ COMMITTED_CC_SEQUENCE=
++ res=0
+[0;34mUsing organization 1[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb$'
++ res=0
+donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+[0;32mQuery installed successful on peer0.org1 on channel[0m
+[0;34mUsing organization 1[0m
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID hospitalchannel --name donor --version 1 --package-id donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb --sequence 1 --init-required
++ res=0
+[34m2024-08-21 20:24:06.931 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [eaa368e44f7b1f1c416057e687b9e564eb55057375ee2b20a4e37170100cbd42] committed with status (VALID) at localhost:7051
+[0;32mChaincode definition approved on peer0.org1 on channel 'hospitalchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org1 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org1 on channel 'hospitalchannel'[0m
+[0;34mUsing organization 2[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org2 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org2 on channel 'hospitalchannel'[0m
+[0;34mUsing organization 2[0m
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID hospitalchannel --name donor --version 1 --package-id donor_1:a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb --sequence 1 --init-required
++ res=0
+[34m2024-08-21 20:24:17.810 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [2369cd0a8be171e78bd822e889763dd2aff9df05139524438a000806d4680bf7] committed with status (VALID) at localhost:9051
+[0;32mChaincode definition approved on peer0.org2 on channel 'hospitalchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org1 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org1 on channel 'hospitalchannel'[0m
+[0;34mUsing organization 2[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org2 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org2 on channel 'hospitalchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mUsing organization 2[0m
++ peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID hospitalchannel --name donor --peerAddresses localhost:7051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/tlsca/tlsca.hosp1.lithium.com-cert.pem --peerAddresses localhost:9051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/tlsca/tlsca.hosp2.lithium.com-cert.pem --version 1 --sequence 1 --init-required
++ res=0
+[34m2024-08-21 20:24:28.499 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [c091a3ea16369ec6f99573f50d0229149cb5b40513f7d1a37cc9d4d1256b94b1] committed with status (VALID) at localhost:9051
+[34m2024-08-21 20:24:28.504 IST 0002 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [c091a3ea16369ec6f99573f50d0229149cb5b40513f7d1a37cc9d4d1256b94b1] committed with status (VALID) at localhost:7051
+[0;32mChaincode definition committed on channel 'hospitalchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mQuerying chaincode definition on peer0.org1 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to Query committed status on peer0.org1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
++ res=0
+Committed chaincode definition for chaincode 'donor' on channel 'hospitalchannel':
+Version: 1, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [hosp1MSP: true, hosp2MSP: true]
+[0;32mQuery chaincode definition successful on peer0.org1 on channel 'hospitalchannel'[0m
+[0;34mUsing organization 2[0m
+[0;34mQuerying chaincode definition on peer0.org2 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to Query committed status on peer0.org2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
++ res=0
+Committed chaincode definition for chaincode 'donor' on channel 'hospitalchannel':
+Version: 1, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [hosp1MSP: true, hosp2MSP: true]
+[0;32mQuery chaincode definition successful on peer0.org2 on channel 'hospitalchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mUsing organization 2[0m
++ infoln 'invoke fcn call:{"function":"initLedger","Args":[]}'
++ println '\033[0;34minvoke fcn call:{"function":"initLedger","Args":[]}\033[0m'
++ echo -e '\033[0;34minvoke fcn call:{"function":"initLedger","Args":[]}\033[0m'
+[0;34minvoke fcn call:{"function":"initLedger","Args":[]}[0m
++ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem -C hospitalchannel -n donor --peerAddresses localhost:7051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/tlsca/tlsca.hosp1.lithium.com-cert.pem --peerAddresses localhost:9051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/tlsca/tlsca.hosp2.lithium.com-cert.pem --isInit -c '{"function":"initLedger","Args":[]}'
++ res=0
+[34m2024-08-21 20:24:40.157 IST 0001 INFO[0m [chaincodeCmd] [34;1mchaincodeInvokeOrQuery[0m -> Chaincode invoke successful. result: status:200 
+[0;32mInvoke transaction successful on peer0.hosp1 peer0.hosp2 on channel 'hospitalchannel'[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh createChannel -c receiverchannel -s couchdb
+[0;34mUsing docker and docker-compose[0m
+[0;34mCreating channel 'receiverchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb [0m
+[0;34mBringing up network[0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[1A[1B[0G[?25l[+] Running 5/0
+ [32m✔[0m Container couchdb1                 [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container couchdb0                 [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com      [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com  [32mRunning[0m                                                                                   [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com  [32mRunning[0m                                                                                   [34m0.0s [0m
+[?25hCONTAINER ID   IMAGE                                                                                                                                                                   COMMAND                  CREATED          STATUS          PORTS                                                                    NAMES
+4508d195560c   dev-peer0.hosp1.lithium.com-donor_1-a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb-839b79f613ec51ece4a839028ceee50d632048592acc499d473da7abe8e287b1   "docker-entrypoint.s…"   55 seconds ago   Up 55 seconds                                                                            dev-peer0.hosp1.lithium.com-donor_1-a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+11b710dfd1a3   dev-peer0.hosp2.lithium.com-donor_1-a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb-d4c726b5a93d250b00cec41f6aec7537a91e41a92ec185c1a2e3555f7b940253   "docker-entrypoint.s…"   55 seconds ago   Up 55 seconds                                                                            dev-peer0.hosp2.lithium.com-donor_1-a8fd361282c9f3dc84a9be66e8a71ebe2205464c3dc2f5a7c4694fad5e4f9eeb
+3c4dc7829ae9   hyperledger/fabric-peer:latest                                                                                                                                          "peer node start"        4 minutes ago    Up 4 minutes    0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.hosp2.lithium.com
+3241fd6ba65c   hyperledger/fabric-peer:latest                                                                                                                                          "peer node start"        4 minutes ago    Up 4 minutes    0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.hosp1.lithium.com
+ca4134d6c76f   couchdb:3.3.3                                                                                                                                                           "tini -- /docker-ent…"   4 minutes ago    Up 4 minutes    4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp                               couchdb1
+e4fa947ac816   couchdb:3.3.3                                                                                                                                                           "tini -- /docker-ent…"   4 minutes ago    Up 4 minutes    4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp                               couchdb0
+760b0852fe60   hyperledger/fabric-orderer:latest                                                                                                                                       "orderer"                5 minutes ago    Up 5 minutes    0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.lithium.com
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'receiverchannel.block'[0m
+[0;34mUsing organization 1[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile ChannelUsingRaft -outputBlock ./channel-artifacts/receiverchannel.block -channelID receiverchannel
+[34m2024-08-21 20:25:24.584 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2024-08-21 20:25:24.595 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2024-08-21 20:25:24.595 IST 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2024-08-21 20:25:24.595 IST 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2024-08-21 20:25:24.650 IST 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2024-08-21 20:25:24.651 IST 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating application channel genesis block
+[34m2024-08-21 20:25:24.651 IST 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[0;34mCreating channel receiverchannel[0m
+[0;34mAdding orderers[0m
++ . scripts/orderer.sh receiverchannel
++ '[' 0 -eq 1 ']'
++ res=0
+[34m2024-08-21 20:24:40.157 IST 0001 INFO[0m [chaincodeCmd] [34;1mchaincodeInvokeOrQuery[0m -> Chaincode invoke successful. result: status:200 
+Status: 201
+{
+	"name": "receiverchannel",
+	"url": "/participation/v1/channels/receiverchannel",
+	"consensusRelation": "consenter",
+	"status": "active",
+	"height": 1
+}
+
+[0;32mChannel 'receiverchannel' created[0m
+[0;34mJoining hosp1 peer to the channel...[0m
+[0;34mUsing organization 1[0m
++ peer channel join -b ./channel-artifacts/receiverchannel.block
++ res=0
+[34m2024-08-21 20:25:31.865 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:25:31.981 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mJoining hosp2 peer to the channel...[0m
+[0;34mUsing organization 2[0m
++ peer channel join -b ./channel-artifacts/receiverchannel.block
++ res=0
+[34m2024-08-21 20:25:35.829 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:25:35.949 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mSetting anchor peer for hosp1...[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching channel config for channel receiverchannel[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c receiverchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2024-08-21 20:25:36.795 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:25:36.802 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[34m2024-08-21 20:25:36.802 IST 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 0
+[34m2024-08-21 20:25:36.803 IST 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for Org1 on channel receiverchannel[0m
+++ jq '.channel_group.groups.Application.groups.hosp1MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.hosp1.lithium.com","port": 7051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id receiverchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"receiverchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"receiverchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.hosp1.lithium.com",' '"port":' 7051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPanchors.tx
+[34m2024-08-21 20:25:39.448 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:25:39.479 IST 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'hosp1MSP' on channel 'receiverchannel'[0m
+[0;34mSetting anchor peer for hosp2...[0m
+[0;34mUsing organization 2[0m
+[0;34mFetching channel config for channel receiverchannel[0m
+[0;34mUsing organization 2[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c receiverchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2024-08-21 20:25:40.363 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:25:40.368 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[34m2024-08-21 20:25:40.369 IST 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 1
+[34m2024-08-21 20:25:40.370 IST 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for Org2 on channel receiverchannel[0m
+++ jq '.channel_group.groups.Application.groups.hosp2MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.hosp2.lithium.com","port": 9051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id receiverchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"receiverchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"receiverchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.hosp2.lithium.com",' '"port":' 9051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPanchors.tx
+[34m2024-08-21 20:25:43.054 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-21 20:25:43.080 IST 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'hosp2MSP' on channel 'receiverchannel'[0m
+[0;32mChannel 'receiverchannel' joined[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh deployCC -c receiverchannel -ccn receiver -ccv 1 -cci initLedger -ccp "../receiver-asset-transfer/chaincode" -ccl javaScript
+[0;34mUsing docker and docker-compose[0m
+[0;34mdeploying chaincode on channel 'receiverchannel'[0m
+executing with the following
+- CHANNEL_NAME: [0;32mreceiverchannel[0m
+- CC_NAME: [0;32mreceiver[0m
+- CC_SRC_PATH: [0;32m../receiver-asset-transfer/chaincode[0m
+- CC_SRC_LANGUAGE: [0;32mjavaScript[0m
+- CC_VERSION: [0;32m1[0m
+- CC_SEQUENCE: [0;32mauto[0m
+- CC_END_POLICY: [0;32mNA[0m
+- CC_COLL_CONFIG: [0;32mNA[0m
+- CC_INIT_FCN: [0;32minitLedger[0m
+- DELAY: [0;32m3[0m
+- MAX_RETRY: [0;32m5[0m
+- VERBOSE: [0;32mfalse[0m
+executing with the following
+- CC_NAME: [0;32mreceiver[0m
+- CC_SRC_PATH: [0;32m../receiver-asset-transfer/chaincode[0m
+- CC_SRC_LANGUAGE: [0;32mjavaScript[0m
+- CC_VERSION: [0;32m1[0m
++ '[' false = true ']'
++ peer lifecycle chaincode package receiver.tar.gz --path ../receiver-asset-transfer/chaincode --lang node --label receiver_1
++ res=0
+[0;32mChaincode is packaged[0m
+[0;34mInstalling chaincode on peer0.hosp1...[0m
+[0;34mUsing organization 1[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^receiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c$'
++ test 1 -ne 0
++ peer lifecycle chaincode install receiver.tar.gz
++ res=0
+[34m2024-08-21 20:27:31.427 IST 0001 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Installed remotely: response:<status:200 payload:"\nKreceiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c\022\nreceiver_1" > 
+[34m2024-08-21 20:27:31.429 IST 0002 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Chaincode code package identifier: receiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c
+[0;32mChaincode is installed on peer0.org1[0m
+[0;34mInstall chaincode on peer0.hosp2...[0m
+[0;34mUsing organization 2[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^receiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c$'
++ test 1 -ne 0
++ peer lifecycle chaincode install receiver.tar.gz
++ res=0
+[34m2024-08-21 20:29:00.375 IST 0001 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Installed remotely: response:<status:200 payload:"\nKreceiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c\022\nreceiver_1" > 
+[34m2024-08-21 20:29:00.376 IST 0002 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Chaincode code package identifier: receiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c
+[0;32mChaincode is installed on peer0.org2[0m
+++ peer lifecycle chaincode querycommitted --channelID receiverchannel --name receiver
+++ sed -n '/Version:/{s/.*Sequence: //; s/, Endorsement Plugin:.*$//; p;}'
+Error: query failed with status: 404 - namespace receiver is not defined
++ COMMITTED_CC_SEQUENCE=
++ res=0
+[0;34mUsing organization 1[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^receiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c$'
++ res=0
+receiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c
+[0;32mQuery installed successful on peer0.org1 on channel[0m
+[0;34mUsing organization 1[0m
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID receiverchannel --name receiver --version 1 --package-id receiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c --sequence 1 --init-required
++ res=0
+[34m2024-08-21 20:29:05.168 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [c1a55487f7bc4f992ffdf6b0579974587a328b99499d7cd713ec24aae53f9379] committed with status (VALID) at localhost:7051
+[0;32mChaincode definition approved on peer0.org1 on channel 'receiverchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org1 on channel 'receiverchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID receiverchannel --name receiver --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org1 on channel 'receiverchannel'[0m
+[0;34mUsing organization 2[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org2 on channel 'receiverchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID receiverchannel --name receiver --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org2 on channel 'receiverchannel'[0m
+[0;34mUsing organization 2[0m
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID receiverchannel --name receiver --version 1 --package-id receiver_1:9ea470cd254bdf94eb54364279b3189fd12651ea9ff4f0f139fbce622468ad5c --sequence 1 --init-required
++ res=0
+[34m2024-08-21 20:29:16.047 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [f4a72ee2eb93f2a2c655680593d941c16d6d7821cb79e416bf0f0f12e6a17fce] committed with status (VALID) at localhost:9051
+[0;32mChaincode definition approved on peer0.org2 on channel 'receiverchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org1 on channel 'receiverchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID receiverchannel --name receiver --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org1 on channel 'receiverchannel'[0m
+[0;34mUsing organization 2[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org2 on channel 'receiverchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID receiverchannel --name receiver --version 1 --sequence 1 --init-required --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org2 on channel 'receiverchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mUsing organization 2[0m
++ peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID receiverchannel --name receiver --peerAddresses localhost:7051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/tlsca/tlsca.hosp1.lithium.com-cert.pem --peerAddresses localhost:9051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/tlsca/tlsca.hosp2.lithium.com-cert.pem --version 1 --sequence 1 --init-required
++ res=0
+[34m2024-08-21 20:29:26.842 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [8d89dbc5ad497f7ce76bc416df29170d609df64e834bf12cb45a7369c5d59a57] committed with status (VALID) at localhost:9051
+[34m2024-08-21 20:29:26.848 IST 0002 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [8d89dbc5ad497f7ce76bc416df29170d609df64e834bf12cb45a7369c5d59a57] committed with status (VALID) at localhost:7051
+[0;32mChaincode definition committed on channel 'receiverchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mQuerying chaincode definition on peer0.org1 on channel 'receiverchannel'...[0m
+[0;34mAttempting to Query committed status on peer0.org1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode querycommitted --channelID receiverchannel --name receiver
++ res=0
+Committed chaincode definition for chaincode 'receiver' on channel 'receiverchannel':
+Version: 1, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [hosp1MSP: true, hosp2MSP: true]
+[0;32mQuery chaincode definition successful on peer0.org1 on channel 'receiverchannel'[0m
+[0;34mUsing organization 2[0m
+[0;34mQuerying chaincode definition on peer0.org2 on channel 'receiverchannel'...[0m
+[0;34mAttempting to Query committed status on peer0.org2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode querycommitted --channelID receiverchannel --name receiver
++ res=0
+Committed chaincode definition for chaincode 'receiver' on channel 'receiverchannel':
+Version: 1, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [hosp1MSP: true, hosp2MSP: true]
+[0;32mQuery chaincode definition successful on peer0.org2 on channel 'receiverchannel'[0m
+[0;34mUsing organization 1[0m
+[0;34mUsing organization 2[0m
++ infoln 'invoke fcn call:{"function":"initLedger","Args":[]}'
++ println '\033[0;34minvoke fcn call:{"function":"initLedger","Args":[]}\033[0m'
++ echo -e '\033[0;34minvoke fcn call:{"function":"initLedger","Args":[]}\033[0m'
+[0;34minvoke fcn call:{"function":"initLedger","Args":[]}[0m
++ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem -C receiverchannel -n receiver --peerAddresses localhost:7051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/tlsca/tlsca.hosp1.lithium.com-cert.pem --peerAddresses localhost:9051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/tlsca/tlsca.hosp2.lithium.com-cert.pem --isInit -c '{"function":"initLedger","Args":[]}'
++ res=0
+[34m2024-08-21 20:29:38.516 IST 0001 INFO[0m [chaincodeCmd] [34;1mchaincodeInvokeOrQuery[0m -> Chaincode invoke successful. result: status:200 
+[0;32mInvoke transaction successful on peer0.hosp1 peer0.hosp2 on channel 'receiverchannel'[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m exit
+exit
+
+Script done on 2024-08-21 20:32:25+05:30 [COMMAND_EXIT_CODE="0"]

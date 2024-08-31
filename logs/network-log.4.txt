@@ -1,0 +1,151 @@
+Script started on 2024-08-10 09:08:24+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m c [Kd first-network/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh up createChannel -c hospitalchannel -s cu[Kouchdb
+[0;34mCreating channel 'hospitalchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb with crypto from 'Certificate Authorities'[0m
+[0;34mBringing up network[0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[0;34mCA_LOCAL_VERSION=v1.5.12[0m
+[0;34mCA_DOCKER_IMAGE_VERSION=v1.5.12[0m
+[0;34mGenerate certificates using Fabric CA's[0m
+[33mWARN[0m[0000] /mnt/f/blood-data-management-system/first-network/docker/docker-compose-ca.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[1A[1B[0G[?25l[+] Running 1/0
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠋[0m Container ca_hosp2                Creating                                                                                   [34m0.0s [0m
+ [33m⠋[0m Container ca_hosp1                Creating                                                                                   [34m0.0s [0m
+ [33m⠋[0m Container ca_orderer              Creating                                                                                   [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠙[0m Container ca_hosp2                Starting                                                                                   [34m0.1s [0m
+ [33m⠙[0m Container ca_hosp1                Starting                                                                                   [34m0.1s [0m
+ [33m⠙[0m Container ca_orderer              Starting                                                                                   [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠹[0m Container ca_hosp2                Starting                                                                                   [34m0.2s [0m
+ [33m⠹[0m Container ca_hosp1                Starting                                                                                   [34m0.2s [0m
+ [33m⠹[0m Container ca_orderer              Starting                                                                                   [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠸[0m Container ca_hosp2                Starting                                                                                   [34m0.3s [0m
+ [33m⠸[0m Container ca_hosp1                Starting                                                                                   [34m0.3s [0m
+ [33m⠸[0m Container ca_orderer              Starting                                                                                   [34m0.3s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠼[0m Container ca_hosp2                Starting                                                                                   [34m0.4s [0m
+ [33m⠼[0m Container ca_hosp1                Starting                                                                                   [34m0.4s [0m
+ [33m⠼[0m Container ca_orderer              Starting                                                                                   [34m0.4s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠴[0m Container ca_hosp2                Starting                                                                                   [34m0.5s [0m
+ [33m⠴[0m Container ca_hosp1                Starting                                                                                   [34m0.5s [0m
+ [33m⠴[0m Container ca_orderer              Starting                                                                                   [34m0.5s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠦[0m Container ca_hosp2                Starting                                                                                   [34m0.6s [0m
+ [33m⠦[0m Container ca_hosp1                Starting                                                                                   [34m0.6s [0m
+ [33m⠦[0m Container ca_orderer              Starting                                                                                   [34m0.6s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠧[0m Container ca_hosp2                Starting                                                                                   [34m0.6s [0m
+ [33m⠧[0m Container ca_hosp1                Starting                                                                                   [34m0.6s [0m
+ [33m⠧[0m Container ca_orderer              Starting                                                                                   [34m0.6s [0m
+[?25hError response from daemon: error while creating mount source path '/run/desktop/mnt/host/wsl/docker-desktop-bind-mounts/Ubuntu/9ec21bed3e183fa07d481bd80a1bd1cd97b77a3a4f705ec1911158e8886fa1cf': mkdir /run/desktop/mnt/host/wsl/docker-desktop-bind-mounts/Ubuntu/9ec21bed3e183fa07d481bd80a1bd1cd97b77a3a4f705ec1911158e8886fa1cf: file exists
+./network.sh: line 186: organizations/fabric-ca/registerEnroll.sh: No such file or directory
+^C
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh down
+[0;34mStopping network[0m
+[33mWARN[0m[0000] /mnt/f/blood-data-management-system/first-network/docker/docker-compose-hospital-net.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[33mWARN[0m[0000] /mnt/f/blood-data-management-system/first-network/docker/docker-compose-couch.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[33mWARN[0m[0000] /mnt/f/blood-data-management-system/first-network/docker/docker-compose-ca.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[33mWARN[0m[0000] /mnt/f/blood-data-management-system/first-network/docker/docker-compose-redis.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[1A[1B[0G[?25l[+] Running 6/0
+ [32m✔[0m Container ca_orderer                            [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Container ca_hosp2                              [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Container ca_hosp1                              [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_orderer.lithium.com      [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_peer0.hosp2.lithium.com  [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_peer0.hosp1.lithium.com  [32mRemoved[0m                                                                      [34m0.0s [0m
+ [33m⠋[0m Network lithium-network_hospital                Removing                                                                     [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/7
+ [32m✔[0m Container ca_orderer                            [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Container ca_hosp2                              [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Container ca_hosp1                              [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_orderer.lithium.com      [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_peer0.hosp2.lithium.com  [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_peer0.hosp1.lithium.com  [32mRemoved[0m                                                                      [34m0.0s [0m
+ [33m⠙[0m Network lithium-network_hospital                Removing                                                                     [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/7
+ [32m✔[0m Container ca_orderer                            [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Container ca_hosp2                              [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Container ca_hosp1                              [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_orderer.lithium.com      [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_peer0.hosp2.lithium.com  [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_peer0.hosp1.lithium.com  [32mRemoved[0m                                                                      [34m0.0s [0m
+ [33m⠹[0m Network lithium-network_hospital                Removing                                                                     [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 7/7[0m
+ [32m✔[0m Container ca_orderer                            [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Container ca_hosp2                              [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Container ca_hosp1                              [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_orderer.lithium.com      [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_peer0.hosp2.lithium.com  [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Volume lithium-network_peer0.hosp1.lithium.com  [32mRemoved[0m                                                                      [34m0.0s [0m
+ [32m✔[0m Network lithium-network_hospital                [32mRemoved[0m                                                                      [34m0.3s [0m
+[?25h[33mWARN[0m[0000] /mnt/f/blood-data-management-system/first-network/addHosp3/docker/docker-compose-couch-hosp3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[33mWARN[0m[0000] /mnt/f/blood-data-management-system/first-network/addHosp3/docker/docker-compose-hosp3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[1A[1B[0G[?25l[+] Running 1/0
+ [32m✔[0m Volume lithium-network_peer0.hosp3.lithium.com  [32mRemoved[0m                                                                      [34m0.0s [0m
+[?25h[0;34mNo containers available for deletion[0m
+[0;34mNo images available for deletion[0m
+[0;34mThe wallet has cleared.[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh downup createChannel -c hospitalchannel -s couchdb
+[0;34mCreating channel 'hospitalchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb with crypto from 'Certificate Authorities'[0m
+[0;34mBringing up network[0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[0;34mCA_LOCAL_VERSION=v1.5.12[0m
+[0;34mCA_DOCKER_IMAGE_VERSION=v1.5.12[0m
+[0;34mGenerate certificates using Fabric CA's[0m
+[1A[1B[0G[?25l[+] Running 1/0
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠋[0m Container ca_hosp1                Creating                                                                                   [34m0.0s [0m
+ [33m⠋[0m Container ca_hosp2                Creating                                                                                   [34m0.0s [0m
+ [33m⠋[0m Container ca_orderer              Creating                                                                                   [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠙[0m Container ca_hosp1                Starting                                                                                   [34m0.1s [0m
+ [33m⠙[0m Container ca_hosp2                Starting                                                                                   [34m0.1s [0m
+ [33m⠙[0m Container ca_orderer              Starting                                                                                   [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠹[0m Container ca_hosp1                Starting                                                                                   [34m0.2s [0m
+ [33m⠹[0m Container ca_hosp2                Starting                                                                                   [34m0.2s [0m
+ [33m⠹[0m Container ca_orderer              Starting                                                                                   [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠸[0m Container ca_hosp1                Starting                                                                                   [34m0.3s [0m
+ [33m⠸[0m Container ca_hosp2                Starting                                                                                   [34m0.3s [0m
+ [33m⠸[0m Container ca_orderer              Starting                                                                                   [34m0.3s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠼[0m Container ca_hosp1                Starting                                                                                   [34m0.4s [0m
+ [33m⠼[0m Container ca_hosp2                Starting                                                                                   [34m0.4s [0m
+ [33m⠼[0m Container ca_orderer              Starting                                                                                   [34m0.4s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠴[0m Container ca_hosp1                Starting                                                                                   [34m0.5s [0m
+ [33m⠴[0m Container ca_hosp2                Starting                                                                                   [34m0.5s [0m
+ [33m⠴[0m Container ca_orderer              Starting                                                                                   [34m0.5s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠦[0m Container ca_hosp1                Starting                                                                                   [34m0.6s [0m
+ [33m⠦[0m Container ca_hosp2                Starting                                                                                   [34m0.6s [0m
+ [33m⠦[0m Container ca_orderer              Starting                                                                                   [34m0.6s [0m
+[?25hError response from daemon: error while creating mount source path '/run/desktop/mnt/host/wsl/docker-desktop-bind-mounts/Ubuntu/3b88a774f2a606fe84e20e6cd21da9387cf015bb7b3951a4cd379fe195944578': mkdir /run/desktop/mnt/host/wsl/docker-desktop-bind-mounts/Ubuntu/3b88a774f2a606fe84e20e6cd21da9387cf015bb7b3951a4cd379fe195944578: file exists
+./network.sh: line 186: organizations/fabric-ca/registerEnroll.sh: No such file or directory
+^C
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m exit
+exit
+
+Script done on 2024-08-10 09:15:46+05:30 [COMMAND_EXIT_CODE="130"]

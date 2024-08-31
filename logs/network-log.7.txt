@@ -1,0 +1,637 @@
+Script started on 2024-08-10 11:15:58+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m exit./network.sh createChannel -c hospitalchannel -s couchdb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ..[K[3Plscd $FABRIC_CFG_PATHecho $FABRIC_CFG_PATH xport FABRIC_CFG_PATH=$(pwd)/configtx[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./network.sh createChannel -c hospitalchannel -s couchdb[3@up [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd first-network/[Kexit[Kcd first-network/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m cd first-network/exit[K./network.sh createChannel -c hospitalchannel -s couchdb[C[1@ [1@u[1@p
+[0;34mCreating channel 'hospitalchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb with crypto from 'Certificate Authorities'[0m
+[0;34mBringing up network[0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[0;34mCA_LOCAL_VERSION=v1.5.12[0m
+[0;34mCA_DOCKER_IMAGE_VERSION=v1.5.12[0m
+[0;34mGenerate certificates using Fabric CA's[0m
+[1A[1B[0G[?25l[+] Running 1/0
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠋[0m Container ca_orderer              Creating                                                                                   [34m0.0s [0m
+ [33m⠋[0m Container ca_hosp2                Creating                                                                                   [34m0.0s [0m
+ [33m⠋[0m Container ca_hosp1                Creating                                                                                   [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠙[0m Container ca_orderer              Starting                                                                                   [34m0.1s [0m
+ [33m⠙[0m Container ca_hosp2                Starting                                                                                   [34m0.1s [0m
+ [33m⠙[0m Container ca_hosp1                Starting                                                                                   [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠹[0m Container ca_orderer              Starting                                                                                   [34m0.2s [0m
+ [33m⠹[0m Container ca_hosp2                Starting                                                                                   [34m0.2s [0m
+ [33m⠹[0m Container ca_hosp1                Starting                                                                                   [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠸[0m Container ca_orderer              Starting                                                                                   [34m0.3s [0m
+ [33m⠸[0m Container ca_hosp2                Starting                                                                                   [34m0.3s [0m
+ [33m⠸[0m Container ca_hosp1                Starting                                                                                   [34m0.3s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠼[0m Container ca_orderer              Starting                                                                                   [34m0.4s [0m
+ [33m⠼[0m Container ca_hosp2                Starting                                                                                   [34m0.4s [0m
+ [33m⠼[0m Container ca_hosp1                Starting                                                                                   [34m0.4s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠴[0m Container ca_orderer              Starting                                                                                   [34m0.5s [0m
+ [33m⠴[0m Container ca_hosp2                Starting                                                                                   [34m0.5s [0m
+ [33m⠴[0m Container ca_hosp1                Starting                                                                                   [34m0.5s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠦[0m Container ca_orderer              Starting                                                                                   [34m0.6s [0m
+ [33m⠦[0m Container ca_hosp2                Starting                                                                                   [34m0.6s [0m
+ [33m⠦[0m Container ca_hosp1                Starting                                                                                   [34m0.6s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/4
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [33m⠧[0m Container ca_orderer              Starting                                                                                   [34m0.7s [0m
+ [33m⠧[0m Container ca_hosp2                Starting                                                                                   [34m0.7s [0m
+ [33m⠧[0m Container ca_hosp1                Starting                                                                                   [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 4/4[0m
+ [32m✔[0m Network lithium-network_hospital  [32mCreated[0m                                                                                    [34m0.0s [0m
+ [32m✔[0m Container ca_orderer              [32mStarted[0m                                                                                    [34m0.8s [0m
+ [32m✔[0m Container ca_hosp2                [32mStarted[0m                                                                                    [34m0.8s [0m
+ [32m✔[0m Container ca_hosp1                [32mStarted[0m                                                                                    [34m0.8s [0m
+[?25h[0;34mCreate Org1 Identities[0m
+[0;34mEnrolling the CA admin (Hosp1)[0m
++ fabric-ca-client enroll -u https://hosp1admin:hosp1lithium@localhost:7054 --caname ca-hosp1 --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2024/08/10 11:16:23 [INFO] Created a default configuration file at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:23 [INFO] TLS Enabled
+2024/08/10 11:16:23 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:23 [INFO] encoded CSR
+2024/08/10 11:16:23 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:23 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/msp/cacerts/localhost-7054-ca-hosp1.pem
+2024/08/10 11:16:23 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:23 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering peer0[0m
++ fabric-ca-client register --caname ca-hosp1 --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2024/08/10 11:16:24 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:24 [INFO] TLS Enabled
+2024/08/10 11:16:24 [INFO] TLS Enabled
+Password: peer0pw
+[0;34mRegistering user[0m
++ fabric-ca-client register --caname ca-hosp1 --id.name user1 --id.secret user1pw --id.type client --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2024/08/10 11:16:24 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:24 [INFO] TLS Enabled
+2024/08/10 11:16:24 [INFO] TLS Enabled
+Password: user1pw
+[0;34mRegistering the org admin[0m
++ fabric-ca-client register --caname ca-hosp1 --id.name hosp1hosp1admin --id.secret hosp1adminpw --id.type admin --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2024/08/10 11:16:25 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:25 [INFO] TLS Enabled
+2024/08/10 11:16:25 [INFO] TLS Enabled
+Password: hosp1adminpw
+[0;34mGenerating the peer0 msp[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-hosp1 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2024/08/10 11:16:26 [INFO] TLS Enabled
+2024/08/10 11:16:26 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:26 [INFO] encoded CSR
+2024/08/10 11:16:26 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:26 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp/cacerts/localhost-7054-ca-hosp1.pem
+2024/08/10 11:16:26 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:26 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the peer0-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-hosp1 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls --enrollment.profile tls --csr.hosts peer0.hosp1.lithium.com --csr.hosts localhost --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2024/08/10 11:16:26 [INFO] TLS Enabled
+2024/08/10 11:16:26 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:26 [INFO] encoded CSR
+2024/08/10 11:16:27 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls/signcerts/cert.pem
+2024/08/10 11:16:27 [INFO] Stored TLS root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls/tlscacerts/tls-localhost-7054-ca-hosp1.pem
+2024/08/10 11:16:27 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls/IssuerPublicKey
+2024/08/10 11:16:27 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the user msp[0m
++ fabric-ca-client enroll -u https://user1:user1pw@localhost:7054 --caname ca-hosp1 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2024/08/10 11:16:27 [INFO] TLS Enabled
+2024/08/10 11:16:27 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:27 [INFO] encoded CSR
+2024/08/10 11:16:27 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:27 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp/cacerts/localhost-7054-ca-hosp1.pem
+2024/08/10 11:16:27 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:27 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the org admin msp[0m
++ fabric-ca-client enroll -u https://hosp1hosp1admin:hosp1adminpw@localhost:7054 --caname ca-hosp1 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2024/08/10 11:16:28 [INFO] TLS Enabled
+2024/08/10 11:16:28 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:28 [INFO] encoded CSR
+2024/08/10 11:16:28 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:28 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp/cacerts/localhost-7054-ca-hosp1.pem
+2024/08/10 11:16:28 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:28 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mCreate Org2 Identities[0m
+[0;34mEnrolling the CA admin (Hosp2)[0m
++ fabric-ca-client enroll -u https://hosp2admin:hosp2lithium@localhost:8054 --caname ca-hosp2 --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2024/08/10 11:16:28 [INFO] Created a default configuration file at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:28 [INFO] TLS Enabled
+2024/08/10 11:16:28 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:28 [INFO] encoded CSR
+2024/08/10 11:16:29 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:29 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/msp/cacerts/localhost-8054-ca-hosp2.pem
+2024/08/10 11:16:29 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:29 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering peer0[0m
++ fabric-ca-client register --caname ca-hosp2 --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2024/08/10 11:16:29 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:29 [INFO] TLS Enabled
+2024/08/10 11:16:29 [INFO] TLS Enabled
+Password: peer0pw
+[0;34mRegistering user[0m
++ fabric-ca-client register --caname ca-hosp2 --id.name user1 --id.secret user1pw --id.type client --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2024/08/10 11:16:30 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:30 [INFO] TLS Enabled
+2024/08/10 11:16:30 [INFO] TLS Enabled
+Password: user1pw
+[0;34mRegistering the org admin[0m
++ fabric-ca-client register --caname ca-hosp2 --id.name hosp2hosp2admin --id.secret hosp2adminpw --id.type admin --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2024/08/10 11:16:30 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:30 [INFO] TLS Enabled
+2024/08/10 11:16:30 [INFO] TLS Enabled
+Password: hosp2adminpw
+[0;34mGenerating the peer0 msp[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:8054 --caname ca-hosp2 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2024/08/10 11:16:31 [INFO] TLS Enabled
+2024/08/10 11:16:31 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:31 [INFO] encoded CSR
+2024/08/10 11:16:31 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:31 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp/cacerts/localhost-8054-ca-hosp2.pem
+2024/08/10 11:16:31 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:31 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the peer0-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:8054 --caname ca-hosp2 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls --enrollment.profile tls --csr.hosts peer0.hosp2.lithium.com --csr.hosts localhost --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2024/08/10 11:16:32 [INFO] TLS Enabled
+2024/08/10 11:16:32 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:32 [INFO] encoded CSR
+2024/08/10 11:16:32 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls/signcerts/cert.pem
+2024/08/10 11:16:32 [INFO] Stored TLS root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls/tlscacerts/tls-localhost-8054-ca-hosp2.pem
+2024/08/10 11:16:32 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls/IssuerPublicKey
+2024/08/10 11:16:32 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the user msp[0m
++ fabric-ca-client enroll -u https://user1:user1pw@localhost:8054 --caname ca-hosp2 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2024/08/10 11:16:32 [INFO] TLS Enabled
+2024/08/10 11:16:32 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:32 [INFO] encoded CSR
+2024/08/10 11:16:32 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:32 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp/cacerts/localhost-8054-ca-hosp2.pem
+2024/08/10 11:16:32 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:32 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the org admin msp[0m
++ fabric-ca-client enroll -u https://hosp2hosp2admin:hosp2adminpw@localhost:8054 --caname ca-hosp2 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2024/08/10 11:16:33 [INFO] TLS Enabled
+2024/08/10 11:16:33 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:33 [INFO] encoded CSR
+2024/08/10 11:16:33 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:33 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp/cacerts/localhost-8054-ca-hosp2.pem
+2024/08/10 11:16:33 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:33 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mCreate Orderer Org Identities[0m
+[0;34mEnrolling the CA admin (orderer)[0m
++ fabric-ca-client enroll -u https://admin:adminpw@localhost:9054 --caname ca-orderer --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/08/10 11:16:34 [INFO] Created a default configuration file at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:34 [INFO] TLS Enabled
+2024/08/10 11:16:34 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:34 [INFO] encoded CSR
+2024/08/10 11:16:34 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:34 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/msp/cacerts/localhost-9054-ca-orderer.pem
+2024/08/10 11:16:34 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:34 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering orderer[0m
++ fabric-ca-client register --caname ca-orderer --id.name orderer --id.secret ordererpw --id.type orderer --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/08/10 11:16:34 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:34 [INFO] TLS Enabled
+2024/08/10 11:16:34 [INFO] TLS Enabled
+Password: ordererpw
+[0;34mRegistering the orderer admin[0m
++ fabric-ca-client register --caname ca-orderer --id.name ordererAdmin --id.secret ordererAdminpw --id.type admin --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/08/10 11:16:35 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/fabric-ca-client-config.yaml
+2024/08/10 11:16:35 [INFO] TLS Enabled
+2024/08/10 11:16:35 [INFO] TLS Enabled
+Password: ordererAdminpw
+[0;34mGenerating the orderer msp[0m
++ fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/08/10 11:16:36 [INFO] TLS Enabled
+2024/08/10 11:16:36 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:36 [INFO] encoded CSR
+2024/08/10 11:16:36 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:36 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/cacerts/localhost-9054-ca-orderer.pem
+2024/08/10 11:16:36 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:36 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the orderer-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls --enrollment.profile tls --csr.hosts orderer.lithium.com --csr.hosts localhost --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/08/10 11:16:36 [INFO] TLS Enabled
+2024/08/10 11:16:36 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:36 [INFO] encoded CSR
+2024/08/10 11:16:36 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls/signcerts/cert.pem
+2024/08/10 11:16:36 [INFO] Stored TLS root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls/tlscacerts/tls-localhost-9054-ca-orderer.pem
+2024/08/10 11:16:36 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls/IssuerPublicKey
+2024/08/10 11:16:36 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the admin msp[0m
++ fabric-ca-client enroll -u https://ordererAdmin:ordererAdminpw@localhost:9054 --caname ca-orderer -M /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2024/08/10 11:16:37 [INFO] TLS Enabled
+2024/08/10 11:16:37 [INFO] generating key: &{A:ecdsa S:256}
+2024/08/10 11:16:37 [INFO] encoded CSR
+2024/08/10 11:16:37 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp/signcerts/cert.pem
+2024/08/10 11:16:37 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp/cacerts/localhost-9054-ca-orderer.pem
+2024/08/10 11:16:37 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp/IssuerPublicKey
+2024/08/10 11:16:37 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerate CCP files for Hospital 1 and Hospital 2[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
+[0;34mGenerating Orderer Genesis block[0m
++ configtxgen -profile TwoOrgsOrdererGenesis -channelID system-channel -outputBlock ./system-genesis-block/genesis.block
+[34m2024-08-10 11:16:38.239 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2024-08-10 11:16:38.251 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2024-08-10 11:16:38.252 IST 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2024-08-10 11:16:38.252 IST 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2024-08-10 11:16:38.339 IST 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2024-08-10 11:16:38.339 IST 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating system channel genesis block
+[34m2024-08-10 11:16:38.339 IST 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[33mWARN[0m[0000] Found orphan containers ([ca_hosp1 ca_hosp2 ca_orderer]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 3/0
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠋[0m Container orderer.lithium.com                     Creating                                                                   [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp1.lithium.com               Creating                                                                   [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp2.lithium.com               Creating                                                                   [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/6
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠙[0m Container orderer.lithium.com                     Creating                                                                   [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mCreated[0m                                                                    [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com               [32mCreated[0m                                                                    [34m0.1s [0m
+ [33m⠋[0m Container peer0.hosp2.lithium.com                 Creating                                                                   [34m0.0s [0m
+ [33m⠋[0m Container peer0.hosp1.lithium.com                 Creating                                                                   [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠹[0m Container orderer.lithium.com                     Creating                                                                   [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mCreated[0m                                                                    [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com               [32mCreated[0m                                                                    [34m0.1s [0m
+ [33m⠙[0m Container peer0.hosp2.lithium.com                 Creating                                                                   [34m0.1s [0m
+ [33m⠙[0m Container peer0.hosp1.lithium.com                 Creating                                                                   [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com                     [32mCreated[0m                                                                    [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mCreated[0m                                                                    [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com               [32mCreated[0m                                                                    [34m0.1s [0m
+ [33m⠹[0m Container peer0.hosp2.lithium.com                 Creating                                                                   [34m0.2s [0m
+ [33m⠹[0m Container peer0.hosp1.lithium.com                 Creating                                                                   [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠸[0m Container orderer.lithium.com                     Starting                                                                   [34m0.4s [0m
+ [33m⠙[0m Container couchdb.hosp1.lithium.com               Starting                                                                   [34m0.4s [0m
+ [33m⠙[0m Container couchdb.hosp2.lithium.com               Starting                                                                   [34m0.4s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠼[0m Container orderer.lithium.com                     Starting                                                                   [34m0.5s [0m
+ [33m⠹[0m Container couchdb.hosp1.lithium.com               Starting                                                                   [34m0.5s [0m
+ [33m⠹[0m Container couchdb.hosp2.lithium.com               Starting                                                                   [34m0.5s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠴[0m Container orderer.lithium.com                     Starting                                                                   [34m0.6s [0m
+ [33m⠸[0m Container couchdb.hosp1.lithium.com               Starting                                                                   [34m0.6s [0m
+ [33m⠸[0m Container couchdb.hosp2.lithium.com               Starting                                                                   [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠦[0m Container orderer.lithium.com                     Starting                                                                   [34m0.7s [0m
+ [33m⠼[0m Container couchdb.hosp1.lithium.com               Starting                                                                   [34m0.7s [0m
+ [33m⠼[0m Container couchdb.hosp2.lithium.com               Starting                                                                   [34m0.7s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠧[0m Container orderer.lithium.com                     Starting                                                                   [34m0.8s [0m
+ [33m⠴[0m Container couchdb.hosp1.lithium.com               Starting                                                                   [34m0.8s [0m
+ [33m⠴[0m Container couchdb.hosp2.lithium.com               Starting                                                                   [34m0.8s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠇[0m Container orderer.lithium.com                     Starting                                                                   [34m0.9s [0m
+ [33m⠦[0m Container couchdb.hosp1.lithium.com               Starting                                                                   [34m0.9s [0m
+ [33m⠦[0m Container couchdb.hosp2.lithium.com               Starting                                                                   [34m0.9s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [33m⠏[0m Container orderer.lithium.com                     Starting                                                                   [34m1.0s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mStarted[0m                                                                    [34m1.0s [0m
+ [33m⠧[0m Container couchdb.hosp2.lithium.com               Starting                                                                   [34m1.0s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com                 [32mCreated[0m                                                                    [34m0.2s [0m
+ [33m⠸[0m Container peer0.hosp1.lithium.com                 Starting                                                                   [34m0.9s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com                     [32mStarted[0m                                                                    [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mStarted[0m                                                                    [34m1.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com               [32mStarted[0m                                                                    [34m1.1s [0m
+ [33m⠸[0m Container peer0.hosp2.lithium.com                 Starting                                                                   [34m1.0s [0m
+ [33m⠼[0m Container peer0.hosp1.lithium.com                 Starting                                                                   [34m1.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com                     [32mStarted[0m                                                                    [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mStarted[0m                                                                    [34m1.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com               [32mStarted[0m                                                                    [34m1.1s [0m
+ [33m⠼[0m Container peer0.hosp2.lithium.com                 Starting                                                                   [34m1.1s [0m
+ [33m⠴[0m Container peer0.hosp1.lithium.com                 Starting                                                                   [34m1.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com                     [32mStarted[0m                                                                    [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mStarted[0m                                                                    [34m1.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com               [32mStarted[0m                                                                    [34m1.1s [0m
+ [33m⠴[0m Container peer0.hosp2.lithium.com                 Starting                                                                   [34m1.2s [0m
+ [33m⠦[0m Container peer0.hosp1.lithium.com                 Starting                                                                   [34m1.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com                     [32mStarted[0m                                                                    [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mStarted[0m                                                                    [34m1.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com               [32mStarted[0m                                                                    [34m1.1s [0m
+ [33m⠦[0m Container peer0.hosp2.lithium.com                 Starting                                                                   [34m1.3s [0m
+ [33m⠧[0m Container peer0.hosp1.lithium.com                 Starting                                                                   [34m1.3s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 7/8
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com                     [32mStarted[0m                                                                    [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mStarted[0m                                                                    [34m1.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com               [32mStarted[0m                                                                    [34m1.1s [0m
+ [33m⠧[0m Container peer0.hosp2.lithium.com                 Starting                                                                   [34m1.4s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com                 [32mStarted[0m                                                                    [34m1.3s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 8/8[0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Volume "lithium-network_orderer.lithium.com"      [32mCreated[0m                                                                    [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com                     [32mStarted[0m                                                                    [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com               [32mStarted[0m                                                                    [34m1.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com               [32mStarted[0m                                                                    [34m1.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com                 [32mStarted[0m                                                                    [34m1.5s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com                 [32mStarted[0m                                                                    [34m1.3s [0m
+[?25h[1A[1B[0G[?25l[+] Running 0/0
+ [33m⠋[0m redis1 Pulling                                                                                                               [34m0.0s [0m
+ [33m⠋[0m redis2 Pulling                                                                                                               [34m0.0s [0m
+ [33m⠋[0m redis3 Pulling                                                                                                               [34m0.0s [0m
+[?25herror getting credentials - err: exit status 1, out: ``
+CONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS                  PORTS                                        NAMES
+d4420bf8d8f1   hyperledger/fabric-peer:latest      "peer node start"        2 seconds ago    Up Less than a second   0.0.0.0:7051->7051/tcp                       peer0.hosp1.lithium.com
+30f941f09f3d   hyperledger/fabric-peer:latest      "peer node start"        2 seconds ago    Up Less than a second   7051/tcp, 0.0.0.0:9051->9051/tcp             peer0.hosp2.lithium.com
+0aa7d21abff5   hyperledger/fabric-orderer:latest   "orderer"                2 seconds ago    Up 1 second             0.0.0.0:7050->7050/tcp                       orderer.lithium.com
+f86e004a3fb6   couchdb:3.1.1                       "tini -- /docker-ent…"   2 seconds ago    Up 1 second             4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp   couchdb.hosp2.lithium.com
+71ccd6b8c163   couchdb:3.1.1                       "tini -- /docker-ent…"   2 seconds ago    Up 1 second             4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp   couchdb.hosp1.lithium.com
+2784d26fee5f   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   19 seconds ago   Up 18 seconds           0.0.0.0:7054->7054/tcp                       ca_hosp1
+59be1f5979fb   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   19 seconds ago   Up 18 seconds           7054/tcp, 0.0.0.0:8054->8054/tcp             ca_hosp2
+3adb7c30a236   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   19 seconds ago   Up 18 seconds           7054/tcp, 0.0.0.0:9054->9054/tcp             ca_orderer
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'hospitalchannel.block'[0m
+[0;34mUsing organization 1[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile TwoOrgsOrdererGenesis -outputBlock ./channel-artifacts/hospitalchannel.block -channelID hospitalchannel
+[34m2024-08-10 11:16:40.622 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2024-08-10 11:16:40.637 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2024-08-10 11:16:40.637 IST 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2024-08-10 11:16:40.637 IST 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2024-08-10 11:16:40.704 IST 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2024-08-10 11:16:40.704 IST 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating system channel genesis block
+[34m2024-08-10 11:16:40.705 IST 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[0;34mCreating channel hospitalchannel[0m
+[0;34mAdding orderers[0m
++ . scripts/orderer.sh hospitalchannel
++ '[' 0 -eq 1 ']'
++ res=0
+Error: Post "https://localhost:7053/participation/v1/channels": dial tcp 127.0.0.1:7053: connect: connection refused
+
+[0;32mChannel 'hospitalchannel' created[0m
+[0;34mJoining hosp1 peer to the channel...[0m
+[0;34mUsing organization 1[0m
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
+[34m2024-08-10 11:16:59.732 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+Error: proposal failed (err: bad proposal response 500: "JoinChain" for channelID = hospitalchannel failed because of validation of configuration block, because of Invalid configuration block, missing Application configuration group)
+[0;31mAfter 5 attempts, peer0.org1 has failed to join channel 'hospitalchannel' [0m
+[0;31mCreate channel failed[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps
+CONTAINER ID   IMAGE                               COMMAND                  CREATED              STATUS              PORTS                                        NAMES
+d4420bf8d8f1   hyperledger/fabric-peer:latest      "peer node start"        About a minute ago   Up About a minute   0.0.0.0:7051->7051/tcp                       peer0.hosp1.lithium.com
+30f941f09f3d   hyperledger/fabric-peer:latest      "peer node start"        About a minute ago   Up About a minute   7051/tcp, 0.0.0.0:9051->9051/tcp             peer0.hosp2.lithium.com
+0aa7d21abff5   hyperledger/fabric-orderer:latest   "orderer"                About a minute ago   Up About a minute   0.0.0.0:7050->7050/tcp                       orderer.lithium.com
+f86e004a3fb6   couchdb:3.1.1                       "tini -- /docker-ent…"   About a minute ago   Up About a minute   4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp   couchdb.hosp2.lithium.com
+71ccd6b8c163   couchdb:3.1.1                       "tini -- /docker-ent…"   About a minute ago   Up About a minute   4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp   couchdb.hosp1.lithium.com
+2784d26fee5f   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   2 minutes ago        Up 2 minutes        0.0.0.0:7054->7054/tcp                       ca_hosp1
+59be1f5979fb   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   2 minutes ago        Up 2 minutes        7054/tcp, 0.0.0.0:8054->8054/tcp             ca_hosp2
+3adb7c30a236   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   2 minutes ago        Up 2 minutes        7054/tcp, 0.0.0.0:9054->9054/tcp             ca_orderer
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps./network.sh up createChannel -c hospitalchannel -s couchdb[1P[1P[1P
+[0;34mCreating channel 'hospitalchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb [0m
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'hospitalchannel.block'[0m
+[0;34mUsing organization 1[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile TwoOrgsOrdererGenesis -outputBlock ./channel-artifacts/hospitalchannel.block -channelID hospitalchannel
+[34m2024-08-10 11:19:20.347 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2024-08-10 11:19:20.400 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2024-08-10 11:19:20.400 IST 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2024-08-10 11:19:20.400 IST 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2024-08-10 11:19:20.507 IST 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2024-08-10 11:19:20.507 IST 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating system channel genesis block
+[34m2024-08-10 11:19:20.509 IST 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[0;34mCreating channel hospitalchannel[0m
+[0;34mAdding orderers[0m
++ . scripts/orderer.sh hospitalchannel
++ '[' 0 -eq 1 ']'
++ res=0
+[34m2024-08-10 11:16:59.732 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+Error: proposal failed (err: bad proposal response 500: "JoinChain" for channelID = hospitalchannel failed because of validation of configuration block, because of Invalid configuration block, missing Application configuration group)
+Error: Post "https://localhost:7053/participation/v1/channels": dial tcp 127.0.0.1:7053: connect: connection refused
+
+[0;32mChannel 'hospitalchannel' created[0m
+[0;34mJoining hosp1 peer to the channel...[0m
+[0;34mUsing organization 1[0m
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
+[34m2024-08-10 11:19:41.783 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+Error: proposal failed (err: bad proposal response 500: "JoinChain" for channelID = hospitalchannel failed because of validation of configuration block, because of Invalid configuration block, missing Application configuration group)
+[0;31mAfter 5 attempts, peer0.org1 has failed to join channel 'hospitalchannel' [0m
+[0;31mCreate channel failed[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh createChannel -c hospitalchannel -s couchdb
+[0;34mCreating channel 'hospitalchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb [0m
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'hospitalchannel.block'[0m
+[0;34mUsing organization 1[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile TwoOrgsChannel -outputBlock ./channel-artifacts/hospitalchannel.block -channelID hospitalchannel
+[34m2024-08-10 12:39:28.760 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2024-08-10 12:39:28.833 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2024-08-10 12:39:28.993 IST 0003 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[35m2024-08-10 12:39:28.993 IST 0004 FATA[0m [common.tools.configtxgen] [35;1mmain[0m -> Error on outputBlock: refusing to generate block which is missing orderer section
++ res=1
+[0;31mFailed to generate channel configuration transaction...[0m
+[0;31mCreate channel failed[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m osnadmin channel list
+osnadmin: command not found
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m osnadmin channel list[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./network.sh createChannel -c hospitalchannel -s couchdb[H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh createChannel -c hospitalchannel -s couchdb
+[0;34mCreating channel 'hospitalchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb [0m
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'hospitalchannel.block'[0m
+[0;34mUsing organization 1[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile TwoOrgsChannel -outputBlock ./channel-artifacts/hospitalchannel.block -channelID hospitalchannel
+[34m2024-08-10 13:07:51.104 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2024-08-10 13:07:51.118 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2024-08-10 13:07:51.119 IST 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2024-08-10 13:07:51.119 IST 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2024-08-10 13:07:51.328 IST 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2024-08-10 13:07:51.328 IST 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating application channel genesis block
+[34m2024-08-10 13:07:51.328 IST 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[0;34mCreating channel hospitalchannel[0m
+[0;34mAdding orderers[0m
++ . scripts/orderer.sh hospitalchannel
++ '[' 0 -eq 1 ']'
++ res=0
+[34m2024-08-10 11:19:41.783 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+Error: proposal failed (err: bad proposal response 500: "JoinChain" for channelID = hospitalchannel failed because of validation of configuration block, because of Invalid configuration block, missing Application configuration group)
+Error: Post "https://localhost:7053/participation/v1/channels": dial tcp 127.0.0.1:7053: connect: connection refused
+
+[0;32mChannel 'hospitalchannel' created[0m
+[0;34mJoining hosp1 peer to the channel...[0m
+[0;34mUsing organization 1[0m
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=0
+[34m2024-08-10 13:08:01.016 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-10 13:08:01.365 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mJoining hosp2 peer to the channel...[0m
+[0;34mUsing organization 2[0m
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=0
+[34m2024-08-10 13:08:05.346 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-10 13:08:05.487 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mSetting anchor peer for hosp1...[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching channel config for channel hospitalchannel[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c hospitalchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[31m2024-08-10 13:08:06.450 IST 0001 ERRO[0m [comm.tls] [31;1mClientHandshake[0m -> Client TLS handshake failed after 5.334707ms with error: tls: failed to verify certificate: x509: certificate is valid for orderer.lithium.com, localhost, not orderer.example.com remoteaddress=127.0.0.1:7050
+[31m2024-08-10 13:08:07.457 IST 0002 ERRO[0m [comm.tls] [31;1mClientHandshake[0m -> Client TLS handshake failed after 5.025045ms with error: tls: failed to verify certificate: x509: certificate is valid for orderer.lithium.com, localhost, not orderer.example.com remoteaddress=127.0.0.1:7050
+[31m2024-08-10 13:08:09.314 IST 0003 ERRO[0m [comm.tls] [31;1mClientHandshake[0m -> Client TLS handshake failed after 2.894414ms with error: tls: failed to verify certificate: x509: certificate is valid for orderer.lithium.com, localhost, not orderer.example.com remoteaddress=127.0.0.1:7050
+Error: failed to create deliver client for orderer: orderer client failed to connect to localhost:7050: failed to create new connection: context deadline exceeded
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+configtxlator: error: open /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb: no such file or directory, try --help
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+jq: error: Could not open file /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json: No such file or directory
+++ res=2
+[0;31mFailed to parse channel configuration, make sure you have jq installed[0m
+[0;31mCreate channel failed[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh createChannel -c hospitalchannel -s couchdb
+[0;34mCreating channel 'hospitalchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb [0m
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'hospitalchannel.block'[0m
+[0;34mUsing organization 1[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile TwoOrgsChannel -outputBlock ./channel-artifacts/hospitalchannel.block -channelID hospitalchannel
+[34m2024-08-10 13:15:36.998 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2024-08-10 13:15:37.052 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2024-08-10 13:15:37.052 IST 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2024-08-10 13:15:37.052 IST 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2024-08-10 13:15:37.163 IST 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2024-08-10 13:15:37.163 IST 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating application channel genesis block
+[34m2024-08-10 13:15:37.163 IST 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[0;34mCreating channel hospitalchannel[0m
+[0;34mAdding orderers[0m
++ . scripts/orderer.sh hospitalchannel
++ '[' 0 -eq 1 ']'
++ res=0
+[34m2024-08-10 13:08:05.346 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2024-08-10 13:08:05.487 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+Error: Post "https://localhost:7053/participation/v1/channels": dial tcp 127.0.0.1:7053: connect: connection refused
+
+[0;32mChannel 'hospitalchannel' created[0m
+[0;34mJoining hosp1 peer to the channel...[0m
+[0;34mUsing organization 1[0m
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=1
+[34m2024-08-10 13:15:58.307 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+Error: proposal failed (err: bad proposal response 500: cannot create ledger from genesis block: ledger [hospitalchannel] already exists with state [ACTIVE])
+[0;31mAfter 5 attempts, peer0.org1 has failed to join channel 'hospitalchannel' [0m
+[0;31mCreate channel failed[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps
+CONTAINER ID   IMAGE                               COMMAND                  CREATED       STATUS       PORTS                                        NAMES
+d4420bf8d8f1   hyperledger/fabric-peer:latest      "peer node start"        2 hours ago   Up 2 hours   0.0.0.0:7051->7051/tcp                       peer0.hosp1.lithium.com
+30f941f09f3d   hyperledger/fabric-peer:latest      "peer node start"        2 hours ago   Up 2 hours   7051/tcp, 0.0.0.0:9051->9051/tcp             peer0.hosp2.lithium.com
+0aa7d21abff5   hyperledger/fabric-orderer:latest   "orderer"                2 hours ago   Up 2 hours   0.0.0.0:7050->7050/tcp                       orderer.lithium.com
+f86e004a3fb6   couchdb:3.1.1                       "tini -- /docker-ent…"   2 hours ago   Up 2 hours   4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp   couchdb.hosp2.lithium.com
+71ccd6b8c163   couchdb:3.1.1                       "tini -- /docker-ent…"   2 hours ago   Up 2 hours   4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp   couchdb.hosp1.lithium.com
+2784d26fee5f   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   2 hours ago   Up 2 hours   0.0.0.0:7054->7054/tcp                       ca_hosp1
+59be1f5979fb   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   2 hours ago   Up 2 hours   7054/tcp, 0.0.0.0:8054->8054/tcp             ca_hosp2
+3adb7c30a236   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   2 hours ago   Up 2 hours   7054/tcp, 0.0.0.0:9054->9054/tcp             ca_orderer
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m grep -r peer channel fetch config
+grep: channel: No such file or directory
+grep: fetch: No such file or directory
+grep: config: No such file or directory
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m grep -r peer channel fetch config[C"[1@:[1P[1@"
+[35m[Kscripts/configUpdate.sh[m[K[36m[K:[m[K  [01;31m[Kpeer channel fetch config[m[K ${TEST_NETWORK_HOME}/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL --tls --cafile "$ORDERER_CA"
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m exit
+exit
+
+Script done on 2024-08-10 13:22:34+05:30 [COMMAND_EXIT_CODE="0"]
