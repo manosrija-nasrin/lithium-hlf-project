@@ -1,13 +1,13 @@
 #!/bin/bash
 
-function createOrg1() {
-  infoln "Enrolling the CA admin"
+function createHosp1() {
+  infoln "Enrolling the CA admin (Hosp1)"
   mkdir -p organizations/peerOrganizations/hosp1.lithium.com/
 
   export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/hosp1.lithium.com/
 
   set -x
-  fabric-ca-client enroll -u https://admin:adminpw@localhost:7054 --caname ca-hosp1 --tls.certfiles "${PWD}/organizations/fabric-ca/hosp1/ca-cert.pem"
+  fabric-ca-client enroll -u https://hosp1admin:hosp1lithium@localhost:7054 --caname ca-hosp1 --tls.certfiles "${PWD}/organizations/fabric-ca/hosp1/ca-cert.pem"
   { set +x; } 2>/dev/null
 
   echo 'NodeOUs:
@@ -51,7 +51,7 @@ function createOrg1() {
 
   infoln "Registering the org admin"
   set -x
-  fabric-ca-client register --caname ca-hosp1 --id.name hosp1admin --id.secret hosp1adminpw --id.type admin --tls.certfiles "${PWD}/organizations/fabric-ca/hosp1/ca-cert.pem"
+  fabric-ca-client register --caname ca-hosp1 --id.name hosp1hosp1admin --id.secret hosp1adminpw --id.type admin --tls.certfiles "${PWD}/organizations/fabric-ca/hosp1/ca-cert.pem"
   { set +x; } 2>/dev/null
 
   infoln "Generating the peer0 msp"
@@ -80,20 +80,20 @@ function createOrg1() {
 
   infoln "Generating the org admin msp"
   set -x
-  fabric-ca-client enroll -u https://hosp1admin:hosp1adminpw@localhost:7054 --caname ca-hosp1 -M "${PWD}/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp" --tls.certfiles "${PWD}/organizations/fabric-ca/hosp1/ca-cert.pem"
+  fabric-ca-client enroll -u https://hosp1hosp1admin:hosp1adminpw@localhost:7054 --caname ca-hosp1 -M "${PWD}/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp" --tls.certfiles "${PWD}/organizations/fabric-ca/hosp1/ca-cert.pem"
   { set +x; } 2>/dev/null
 
   cp "${PWD}/organizations/peerOrganizations/hosp1.lithium.com/msp/config.yaml" "${PWD}/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp/config.yaml"
 }
 
-function createOrg2() {
-  infoln "Enrolling the CA admin"
+function createHosp2() {
+  infoln "Enrolling the CA admin (Hosp2)"
   mkdir -p organizations/peerOrganizations/hosp2.lithium.com/
 
   export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/hosp2.lithium.com/
 
   set -x
-  fabric-ca-client enroll -u https://admin:adminpw@localhost:8054 --caname ca-hosp2 --tls.certfiles "${PWD}/organizations/fabric-ca/hosp2/ca-cert.pem"
+  fabric-ca-client enroll -u https://hosp2admin:hosp2lithium@localhost:8054 --caname ca-hosp2 --tls.certfiles "${PWD}/organizations/fabric-ca/hosp2/ca-cert.pem"
   { set +x; } 2>/dev/null
 
   echo 'NodeOUs:
@@ -137,7 +137,7 @@ function createOrg2() {
 
   infoln "Registering the org admin"
   set -x
-  fabric-ca-client register --caname ca-hosp2 --id.name hosp2admin --id.secret hosp2adminpw --id.type admin --tls.certfiles "${PWD}/organizations/fabric-ca/hosp2/ca-cert.pem"
+  fabric-ca-client register --caname ca-hosp2 --id.name hosp2hosp2admin --id.secret hosp2adminpw --id.type admin --tls.certfiles "${PWD}/organizations/fabric-ca/hosp2/ca-cert.pem"
   { set +x; } 2>/dev/null
 
   infoln "Generating the peer0 msp"
@@ -166,7 +166,7 @@ function createOrg2() {
 
   infoln "Generating the org admin msp"
   set -x
-  fabric-ca-client enroll -u https://hosp2admin:hosp2adminpw@localhost:8054 --caname ca-hosp2 -M "${PWD}/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp" --tls.certfiles "${PWD}/organizations/fabric-ca/hosp2/ca-cert.pem"
+  fabric-ca-client enroll -u https://hosp2hosp2admin:hosp2adminpw@localhost:8054 --caname ca-hosp2 -M "${PWD}/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp" --tls.certfiles "${PWD}/organizations/fabric-ca/hosp2/ca-cert.pem"
   { set +x; } 2>/dev/null
 
   cp "${PWD}/organizations/peerOrganizations/hosp2.lithium.com/msp/config.yaml" "${PWD}/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp/config.yaml"

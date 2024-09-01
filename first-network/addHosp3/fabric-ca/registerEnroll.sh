@@ -12,7 +12,7 @@ function createHosp3 {
 	export FABRIC_CA_CLIENT_HOME=${PWD}/../organizations/peerOrganizations/hosp3.lithium.com/
 
   set -x
-  fabric-ca-client enroll -u https://admin:adminpw@localhost:11054 --caname ca-hosp3 --tls.certfiles "${PWD}/fabric-ca/hosp3/tls-cert.pem"
+  fabric-ca-client enroll -u https://hosp3admin:hosp3lithium@localhost:11054 --caname ca-hosp3 --tls.certfiles "${PWD}/fabric-ca/hosp3/tls-cert.pem"
   { set +x; } 2>/dev/null
 
   echo 'NodeOUs:
@@ -42,7 +42,7 @@ function createHosp3 {
 
   infoln "Registering the org admin"
   set -x
-  fabric-ca-client register --caname ca-hosp3 --id.name hosp3admin --id.secret hosp3adminpw --id.type admin --tls.certfiles "${PWD}/fabric-ca/hosp3/tls-cert.pem"
+  fabric-ca-client register --caname ca-hosp3 --id.name hosp3hosp3admin --id.secret hosp3hosp3lithium --id.type admin --tls.certfiles "${PWD}/fabric-ca/hosp3/tls-cert.pem"
   { set +x; } 2>/dev/null
 
   infoln "Generating the peer0 msp"
@@ -80,7 +80,7 @@ function createHosp3 {
 
   infoln "Generating the org admin msp"
   set -x
-	fabric-ca-client enroll -u https://hosp3admin:hosp3adminpw@localhost:11054 --caname ca-hosp3 -M "${PWD}/../organizations/peerOrganizations/hosp3.lithium.com/users/Admin@hosp3.lithium.com/msp" --tls.certfiles "${PWD}/fabric-ca/hosp3/tls-cert.pem"
+	fabric-ca-client enroll -u https://hosp3hosp3admin:hosp3hosp3lithium@localhost:11054 --caname ca-hosp3 -M "${PWD}/../organizations/peerOrganizations/hosp3.lithium.com/users/Admin@hosp3.lithium.com/msp" --tls.certfiles "${PWD}/fabric-ca/hosp3/tls-cert.pem"
   { set +x; } 2>/dev/null
 
   cp "${PWD}/../organizations/peerOrganizations/hosp3.lithium.com/msp/config.yaml" "${PWD}/../organizations/peerOrganizations/hosp3.lithium.com/users/Admin@hosp3.lithium.com/msp/config.yaml"
