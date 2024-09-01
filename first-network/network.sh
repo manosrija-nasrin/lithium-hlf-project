@@ -167,7 +167,7 @@ function createOrgs() {
     fi
     infoln "Generating certificates using cryptogen tool"
 
-    infoln "Creating Org1 Identities"
+    infoln "Creating Hosp1 Identities"
 
     set -x
     cryptogen generate --config=./organizations/cryptogen/crypto-config-hosp1.yaml --output="organizations"
@@ -177,7 +177,7 @@ function createOrgs() {
       fatalln "Failed to generate certificates..."
     fi
 
-    infoln "Creating Org2 Identities"
+    infoln "Creating Hosp2 Identities"
 
     set -x
     cryptogen generate --config=./organizations/cryptogen/crypto-config-hosp2.yaml --output="organizations"
@@ -207,7 +207,7 @@ function createOrgs() {
     peer_cert peer peer0.hosp1.lithium.com hosp1
     peer_cert admin Admin@hosp1.lithium.com hosp1
 
-    infoln "Creating Org2 Identities"
+    infoln "Creating Hosp2 Identities"
     #function_name cert-type   CN   org
     peer_cert peer peer0.hosp2.lithium.com hosp2
     peer_cert admin Admin@hosp2.lithium.com hosp2
@@ -235,13 +235,13 @@ function createOrgs() {
       fi
     done
 
-    infoln "Creating Org1 Identities"
+    infoln "Creating Hosp1 Identities"
 
-    createOrg1
+    createHosp1
 
-    infoln "Creating Org2 Identities"
+    infoln "Creating Hosp2 Identities"
 
-    createOrg2
+    createHosp2
 
     infoln "Creating Orderer Org Identities"
 
@@ -249,7 +249,7 @@ function createOrgs() {
 
   fi
 
-  infoln "Generating CCP files for Org1 and Org2"
+  infoln "Generating CCP files for Hosp1 and Hosp2"
   ./organizations/ccp-generate.sh
 }
 
@@ -290,6 +290,7 @@ function networkUp() {
   fi
 
   COMPOSE_FILES="-f compose/${COMPOSE_FILE_BASE} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_BASE}"
+  COMPOSE_FILES="${COMPOSE_FILES} -f compose/${COMPOSE_FILE_REDIS} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_REDIS}"
 
   if [ "${DATABASE}" == "couchdb" ]; then
     COMPOSE_FILES="${COMPOSE_FILES} -f compose/${COMPOSE_FILE_COUCH} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_COUCH}"
@@ -418,17 +419,19 @@ function queryChaincode() {
 # Tear down running network
 function networkDown() {
   local temp_compose=$COMPOSE_FILE_BASE
-  COMPOSE_FILE_BASE=compose-bft-test-net.yaml
+  COMPOSE_FILE_BASE=compose-bft-hospital-net.yaml
   COMPOSE_BASE_FILES="-f compose/${COMPOSE_FILE_BASE} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_BASE}"
+  COMPOSE_REDIS_FILES="-f compose/${COMPOSE_FILE_REDIS} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_REDIS}"
   COMPOSE_COUCH_FILES="-f compose/${COMPOSE_FILE_COUCH} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_COUCH}"
   COMPOSE_CA_FILES="-f compose/${COMPOSE_FILE_CA} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_CA}"
-  COMPOSE_FILES="${COMPOSE_BASE_FILES} ${COMPOSE_COUCH_FILES} ${COMPOSE_CA_FILES}"
+  COMPOSE_FILES="${COMPOSE_BASE_FILES} ${COMPOSE_REDIS_FILES} ${COMPOSE_COUCH_FILES} ${COMPOSE_CA_FILES}"
 
   # stop hosp3 containers also in addition to hosp1 and hosp2, in case we were running sample to add hosp3
   COMPOSE_HOSP3_BASE_FILES="-f addHosp3/compose/${COMPOSE_FILE_HOSP3_BASE} -f addHosp3/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_HOSP3_BASE}"
+  COMPOSE_HOSP3_REDIS_FILES="-f addHosp3/compose/${COMPOSE_FILE_HOSP3_REDIS} -f addHosp3/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_HOSP3_REDIS}"
   COMPOSE_HOSP3_COUCH_FILES="-f addHosp3/compose/${COMPOSE_FILE_HOSP3_COUCH} -f addHosp3/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_HOSP3_COUCH}"
   COMPOSE_HOSP3_CA_FILES="-f addHosp3/compose/${COMPOSE_FILE_HOSP3_CA} -f addHosp3/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_HOSP3_CA}"
-  COMPOSE_HOSP3_FILES="${COMPOSE_HOSP3_BASE_FILES} ${COMPOSE_HOSP3_COUCH_FILES} ${COMPOSE_HOSP3_CA_FILES}"
+  COMPOSE_HOSP3_FILES="${COMPOSE_HOSP3_BASE_FILES} ${COMPOSE_HOSP3_REDIS_FILES} ${COMPOSE_HOSP3_COUCH_FILES} ${COMPOSE_HOSP3_CA_FILES}"
 
   if [ "${CONTAINER_CLI}" == "docker" ]; then
     DOCKER_SOCK=$DOCKER_SOCK ${CONTAINER_CLI_COMPOSE} ${COMPOSE_FILES} ${COMPOSE_HOSP3_FILES} down --volumes --remove-orphans
@@ -463,18 +466,57 @@ function networkDown() {
 . ./network.config
 
 # use this as the default docker-compose yaml definition
-COMPOSE_FILE_BASE=compose-test-net.yaml
+COMPOSE_FILE_BASE=compose-hospital-net.yaml
+# docker-compose.yaml file for redis
+COMPOSE_FILE_REDIS=compose-redis.yaml
 # docker-compose.yaml file if you are using couchdb
 COMPOSE_FILE_COUCH=compose-couch.yaml
 # certificate authorities compose file
 COMPOSE_FILE_CA=compose-ca.yaml
 # use this as the default docker-compose yaml definition for hosp3
 COMPOSE_FILE_HOSP3_BASE=compose-hosp3.yaml
+# use this as docker compose file for redis
+COMPOSE_FILE_HOSP3_REDIS=compose-redis-hosp3.yaml
 # use this as the docker compose couch file for hosp3
 COMPOSE_FILE_HOSP3_COUCH=compose-couch-hosp3.yaml
 # certificate authorities compose file
 COMPOSE_FILE_HOSP3_CA=compose-ca-hosp3.yaml
-#
+
+# Obtain the OS and Architecture string that will be used to select the correct
+# native binaries for your platform, e.g., darwin-amd64 or linux-amd64
+OS_ARCH=$(echo "$(uname -s | tr '[:upper:]' '[:lower:]' | sed 's/mingw64_nt.*/windows/')-$(uname -m | sed 's/x86_64/amd64/g')" | awk '{print tolower($0)}')
+# Using crpto vs CA. default is cryptogen
+CRYPTO="Certificate Authorities"
+# timeout duration - the duration the CLI should wait for a response from
+# another container before giving up
+MAX_RETRY=5
+# default for delay between commands
+CLI_DELAY=3
+# channel name defaults to "mychannel"
+CHANNEL_NAME="hospitalchannel"
+# chaincode name defaults to "basic"
+CC_NAME="donor"
+# chaincode path defaults to "NA"
+CC_SRC_PATH="NA"
+# endorsement policy defaults to "NA". This would allow chaincodes to use the majority default policy.
+CC_END_POLICY="NA"
+# collection configuration defaults to "NA"
+CC_COLL_CONFIG="../private-collections/private-collections.json"
+# chaincode init function defaults to "NA"
+CC_INIT_FCN="initLedger"
+
+# use go as the default language for chaincode
+CC_SRC_LANGUAGE="javascript"
+# Chaincode version
+CC_VERSION="1.0"
+# Chaincode definition sequence
+CC_SEQUENCE=1
+# default image tag
+IMAGETAG="latest"
+# default ca image tag
+CA_IMAGETAG="latest"
+# default database
+DATABASE="couchdb"
 
 # Get docker sock path from environment variable
 SOCK="${DOCKER_HOST:-/var/run/docker.sock}"

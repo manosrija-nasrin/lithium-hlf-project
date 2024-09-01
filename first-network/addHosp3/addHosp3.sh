@@ -133,9 +133,9 @@ function Hosp3Up () {
   fi
 
   if [ "${DATABASE}" == "couchdb" ]; then
-    DOCKER_SOCK=${DOCKER_SOCK} ${CONTAINER_CLI_COMPOSE} -f ${COMPOSE_FILE_BASE} -f $COMPOSE_FILE_HOSP3 -f ${COMPOSE_FILE_COUCH_BASE} -f $COMPOSE_FILE_COUCH_HOSP3 up -d 2>&1
+    DOCKER_SOCK=${DOCKER_SOCK} ${CONTAINER_CLI_COMPOSE} -f ${COMPOSE_FILE_BASE} -f $COMPOSE_FILE_HOSP3 -f ${COMPOSE_FILE_REDIS_BASE} -f $COMPOSE_FILE_REDIS_HOSP3 -f ${COMPOSE_FILE_COUCH_BASE} -f $COMPOSE_FILE_COUCH_HOSP3 up -d 2>&1
   else
-    DOCKER_SOCK=${DOCKER_SOCK} ${CONTAINER_CLI_COMPOSE} -f ${COMPOSE_FILE_BASE} -f $COMPOSE_FILE_HOSP3 up -d 2>&1
+    DOCKER_SOCK=${DOCKER_SOCK} ${CONTAINER_CLI_COMPOSE} -f ${COMPOSE_FILE_BASE} -f $COMPOSE_FILE_HOSP3 -f ${COMPOSE_FILE_REDIS_BASE} -f $COMPOSE_FILE_REDIS_HOSP3  up -d 2>&1
   fi
   if [ $? -ne 0 ]; then
     fatalln "ERROR !!!! Unable to start Hosp3 network"
@@ -188,18 +188,21 @@ CLI_TIMEOUT=10
 #default for delay
 CLI_DELAY=3
 # channel name defaults to "mychannel"
-CHANNEL_NAME="mychannel"
+CHANNEL_NAME="hospitalchannel"
 # use this as the docker compose couch file
 COMPOSE_FILE_COUCH_BASE=compose/compose-couch-hosp3.yaml
-COMPOSE_FILE_COUCH_HOSP3=compose/${CONTAINER_CLI}/docker-compose-couch-hosp3.yaml
+COMPOSE_FILE_COUCH_HOSP3=compose/${CONTAINER_CLI}/${CONTAINER_CLI}-compose-couch-hosp3.yaml
 # use this as the default docker-compose yaml definition
 COMPOSE_FILE_BASE=compose/compose-hosp3.yaml
-COMPOSE_FILE_HOSP3=compose/${CONTAINER_CLI}/docker-compose-hosp3.yaml
+COMPOSE_FILE_HOSP3=compose/${CONTAINER_CLI}/${CONTAINER_CLI}-compose-hosp3.yaml
 # certificate authorities compose file
 COMPOSE_FILE_CA_BASE=compose/compose-ca-hosp3.yaml
-COMPOSE_FILE_CA_HOSP3=compose/${CONTAINER_CLI}/docker-compose-ca-hosp3.yaml
+COMPOSE_FILE_CA_HOSP3=compose/${CONTAINER_CLI}/${CONTAINER_CLI}-compose-ca-hosp3.yaml
+# redis compose file
+COMPOSE_FILE_REDIS_BASE=compose/compose-redis-hosp3.yaml
+COMPOSE_FILE_REDIS_HOSP3=compose/${CONTAINER_CLI}/${CONTAINER_CLI}-compose-redis-hosp3.yaml
 # database
-DATABASE="leveldb"
+DATABASE="couchdb"
 
 # Get docker sock path from environment variable
 SOCK="${DOCKER_HOST:-/var/run/docker.sock}"
