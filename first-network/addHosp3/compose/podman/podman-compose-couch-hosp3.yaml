@@ -6,8 +6,8 @@
 version: "3.7"
 
 networks:
-  test:
-    name: fabric_test
+  hospital:
+    name: hospital
 
 services:
   couchdb4:

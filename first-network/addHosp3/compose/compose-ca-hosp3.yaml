@@ -4,8 +4,9 @@
 #
 
 networks:
-  test:
-    name: fabric_test
+  hospital:
+    name: hospital
+    external: true
 
 services:
   ca_hosp3:

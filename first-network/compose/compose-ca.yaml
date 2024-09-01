@@ -4,8 +4,8 @@
 #
 
 networks:
-  test:
-    name: fabric_test
+  hospital:
+    name: hospital
 
 services:
   ca_hosp1:
@@ -26,7 +26,7 @@ services:
       - ../organizations/fabric-ca/hosp1:/etc/hyperledger/fabric-ca-server
     container_name: ca_hosp1
     networks:
-      - test
+      - hospital
 
   ca_hosp2:
     image: hyperledger/fabric-ca:latest
@@ -46,7 +46,7 @@ services:
       - ../organizations/fabric-ca/hosp2:/etc/hyperledger/fabric-ca-server
     container_name: ca_hosp2
     networks:
-      - test
+      - hospital
 
   ca_orderer:
     image: hyperledger/fabric-ca:latest
@@ -66,4 +66,4 @@ services:
       - ../organizations/fabric-ca/ordererOrg:/etc/hyperledger/fabric-ca-server
     container_name: ca_orderer
     networks:
-      - test
+      - hospital

@@ -9,8 +9,8 @@ volumes:
   peer0.hosp3.lithium.com:
 
 networks:
-  test:
-    name: fabric_test
+  hospital:
+    name: hospital
 
 services:
   peer0.hosp3.lithium.com:

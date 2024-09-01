@@ -7,8 +7,8 @@ volumes:
   peer0.hosp2.lithium.com:
 
 networks:
-  test:
-    name: fabric_test
+  hospital:
+    name: hospital
 
 services:
   orderer.lithium.com:
@@ -51,7 +51,7 @@ services:
       - 7053:7053
       - 9443:9443
     networks:
-      - test
+      - hospital
 
   orderer2.lithium.com:
     container_name: orderer2.lithium.com
@@ -93,7 +93,7 @@ services:
       - 7055:7055
       - 9446:9446
     networks:
-      - test
+      - hospital
 
   orderer3.lithium.com:
     container_name: orderer3.lithium.com
@@ -135,7 +135,7 @@ services:
       - 7057:7057
       - 9447:9447
     networks:
-      - test
+      - hospital
 
   orderer4.lithium.com:
     container_name: orderer4.lithium.com
@@ -177,7 +177,7 @@ services:
       - 7059:7059
       - 9448:9448
     networks:
-      - test
+      - hospital
 
   peer0.hosp1.lithium.com:
     container_name: peer0.hosp1.lithium.com
@@ -216,7 +216,7 @@ services:
       - 7051:7051
       - 9444:9444
     networks:
-      - test
+      - hospital
 
   peer0.hosp2.lithium.com:
     container_name: peer0.hosp2.lithium.com
@@ -255,4 +255,4 @@ services:
       - 9051:9051
       - 9445:9445
     networks:
-      - test
+      - hospital

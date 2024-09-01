@@ -5,10 +5,12 @@
 
 volumes:
   peer0.hosp3.lithium.com:
+    name: docker_peer0.hosp3.lithium.com
 
 networks:
-  test:
-    name: fabric_test
+  hospital:
+    name: hospital
+    external: true
 
 services:
   peer0.hosp3.lithium.com:
@@ -47,4 +49,4 @@ services:
     ports:
       - 11051:11051
     networks:
-      - test
+      - hospital
