@@ -38,7 +38,7 @@ Organizations:
         Rule: "OR('OrdererMSP.admin')"
     OrdererEndpoints:
       - orderer.lithium.com:7050
-  - &Org1
+  - &hosp1
     # DefaultOrg defines the organization which is used in the sampleconfig
     # of the fabric.git development environment
     Name: hosp1MSP
@@ -61,7 +61,7 @@ Organizations:
       Endorsement:
         Type: Signature
         Rule: "OR('hosp1MSP.peer')"
-  - &Org2
+  - &hosp2
     # DefaultOrg defines the organization which is used in the sampleconfig
     # of the fabric.git development environment
     Name: hosp2MSP
@@ -274,6 +274,6 @@ Profiles:
     Application:
       <<: *ApplicationDefaults
       Organizations:
-        - *Org1
-        - *Org2
+        - *hosp1
+        - *hosp2
       Capabilities: *ApplicationCapabilities
