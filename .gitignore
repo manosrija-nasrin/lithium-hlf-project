@@ -21,6 +21,9 @@ organizations/ordererOrganizations
 .settings/
 *.sublime-workspace
 
+# Wallets
+donor-asset-transfer/application-javascript/wallet/
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
