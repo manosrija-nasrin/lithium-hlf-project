@@ -89,12 +89,12 @@ async function enrollAndRegisterTechnicians() {
  * @description Need not run this manually, included as a prestart in package.json
  */
 async function main() {
-  /*await enrollAdminHosp1();
+  await enrollAdminHosp1();
   await enrollAdminHosp2();
   await initLedger();
   await initRedis();
   await enrollAndRegisterDoctors();
-  await enrollAndRegisterTechnicians();*/
+  await enrollAndRegisterTechnicians();
 }
 
 main(); // Execute the main function

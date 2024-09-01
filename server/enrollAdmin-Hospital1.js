@@ -36,7 +36,7 @@ exports.enrollAdminHosp1 = async function() {
 
     console.log('msg: Successfully enrolled admin user ' + adminHospital1 + ' and imported it into the wallet');
   } catch (error) {
-    console.error(`Failed to enroll admin user ' + ${adminHospital1} + : ${error}`);
+    console.error(`Failed to enroll admin user ${adminHospital1}: ${error}`);
     process.exit(1);
   }
 };

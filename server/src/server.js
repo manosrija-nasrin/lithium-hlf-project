@@ -78,6 +78,8 @@ function generateAccessToken(username, role) {
     if (username.includes("DOC") && role === ROLE_DOCTOR) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
+      console.log("got this from redis", value)
+      console.log("got this as pw", password)
       user = value === password;
       redisClient.quit();
     }
@@ -85,6 +87,8 @@ function generateAccessToken(username, role) {
     if (username.includes("admin") && role === ROLE_ADMIN) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
+      console.log("got this from redis", value)
+      console.log("got this as pw", password)
       user = value === password;
       redisClient.quit();
     }
@@ -92,6 +96,8 @@ function generateAccessToken(username, role) {
     if (username.includes("TECH") && role === ROLE_TECHNICIAN) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
+      console.log("got this from redis", value)
+      console.log("got this as pw", password)
       user = value === password;
       redisClient.quit();
     }
@@ -108,6 +114,7 @@ function generateAccessToken(username, role) {
           return; // Exit early if there's an error
         } else {
           const parsedResponse = await JSON.parse(response);
+          console.log("got parsed response", parsedResponse, "with value", value);
           if (parsedResponse.password.toString('utf8') === value) {
             (!parsedResponse.pwdTemp) ?
               user = true :
@@ -121,6 +128,7 @@ function generateAccessToken(username, role) {
         });
         args = [JSON.stringify(args)];
         const response = await network.invoke(networkObj, false, capitalize(role) + 'Contract:updateDonorPassword', args);
+        console.log("got this response on update pw", response);
         if (response.error) {
           res.status(500).send(response.error);
           return; // Exit early if there's an error
