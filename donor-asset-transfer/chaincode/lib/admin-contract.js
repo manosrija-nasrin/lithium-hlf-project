@@ -7,8 +7,17 @@ class AdminContract extends PrimaryContract {
 
     async getLatestDonorId(ctx) {
         let allResults = await this.queryAllDonors(ctx);
+        let maxID = 0;
+        for (let i = 0; i < allResults.length; i++) {
+            if (allResults[i].donorId !== undefined) {
+                let currID = parseInt(allResults[i].donorId.slice(3));
+                if (currID > maxID) maxID = currID;
+            } else {
+                console.log("No Donor ID:", allResults[i]);
+            }
+        }
 
-        return allResults[allResults.length - 1].donorId;
+        return 'PID' + maxID;
     }
 
     async createDonor(ctx, args) {
