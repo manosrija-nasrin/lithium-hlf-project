@@ -1,9 +1,7 @@
 'use strict';
 
-let Donor = require('./Donor.js');
 const crypto = require('crypto');
 const PrimaryContract = require('./primary-contract.js');
-const { Context } = require('fabric-contract-api');
 
 class DonorContract extends PrimaryContract {
 
@@ -78,19 +76,20 @@ class DonorContract extends PrimaryContract {
 
         const donor = await this.readDonor(ctx, donorId);
         donor.password = crypto.createHash('sha256').update(newPassword).digest('hex');
-        if(donor.pwdTemp){
+        if (donor.pwdTemp) {
             donor.pwdTemp = false;
         }
         const buffer = Buffer.from(JSON.stringify(donor));
         await ctx.stub.putState(donorId, buffer);
     }
 
-    
+
     async getDonorPassword(ctx, donorId) {
         let donor = await this.readDonor(ctx, donorId);
         donor = ({
             password: donor.password,
-            pwdTemp: donor.pwdTemp})
+            pwdTemp: donor.pwdTemp
+        })
         return donor;
     }
 
@@ -133,7 +132,7 @@ class DonorContract extends PrimaryContract {
         let doctorId = args.doctorId;
 
         const donor = await this.readDonor(ctx, donorId);
-       
+
         if (!donor.permissionGranted.includes(doctorId)) {
             donor.permissionGranted.push(doctorId);
         }
@@ -149,6 +148,34 @@ class DonorContract extends PrimaryContract {
         const donor = await this.readDonor(ctx, donorId);
         if (donor.permissionGranted.includes(doctorId)) {
             donor.permissionGranted = donor.permissionGranted.filter(doctor => doctor !== doctorId);
+        }
+        const buffer = Buffer.from(JSON.stringify(donor));
+        await ctx.stub.putState(donorId, buffer);
+    };
+
+
+    async grantAccessToSuper(ctx, args) {
+        args = JSON.parse(args);
+        let donorId = args.donorId;
+        let superId = args.doctorId;
+
+        const donor = await this.readDonor(ctx, donorId);
+
+        if (!donor.permissionGranted.includes(superId)) {
+            donor.permissionGranted.push(superId);
+        }
+        const buffer = Buffer.from(JSON.stringify(donor));
+        await ctx.stub.putState(donorId, buffer);
+    };
+
+    async revokeAccessFromSuper(ctx, args) {
+        args = JSON.parse(args);
+        let donorId = args.donorId;
+        let superId = args.superId;
+
+        const donor = await this.readDonor(ctx, donorId);
+        if (donor.permissionGranted.includes(superId)) {
+            donor.permissionGranted = donor.permissionGranted.filter(hospSuperId => hospSuperId !== superId);
         }
         const buffer = Buffer.from(JSON.stringify(donor));
         await ctx.stub.putState(donorId, buffer);
