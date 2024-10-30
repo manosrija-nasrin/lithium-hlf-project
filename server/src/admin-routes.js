@@ -3,7 +3,7 @@
  */
 
 // Bring common classes into scope, and Fabric SDK network class
-const {ROLE_ADMIN, ROLE_DOCTOR, ROLE_TECHNICIAN, capitalize, getMessage, validateRole, createRedisClient} = require('../utils.js');
+const { ROLE_ADMIN, ROLE_DOCTOR, ROLE_SUPER, ROLE_TECHNICIAN, capitalize, getMessage, validateRole, createRedisClient } = require('../utils.js');
 const network = require('../../donor-asset-transfer/application-javascript/app.js');
 
 exports.createDonor = async (req, res) => {
@@ -38,43 +38,43 @@ exports.createDonor = async (req, res) => {
   }
 
   // Enrol and register the user with the CA and adds the user to the wallet.
-  const userData = JSON.stringify({hospitalId: (req.headers.username).slice(4, 5), userId: req.body.donorId});
+  const userData = JSON.stringify({ hospitalId: (req.headers.username).slice(4, 5), userId: req.body.donorId });
   const registerUserRes = await network.registerUser(userData);
   if (registerUserRes.error) {
     await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:deleteDonor', req.body.donorId);
     res.send(registerUserRes.error);
   }
-  
-  const dat=JSON.parse(data);
+
+  const dat = JSON.parse(data);
   let doctors;
   // Set up and connect to Fabric Gateway
   networkObj = await network.connectToNetwork(dat.changedBy);
-  
-  
-  if(dat.changedBy==='hosp1admin') {
-   doctors=await network.getAllDoctorsByHospitalId(networkObj,1);
+
+
+  if (dat.changedBy === 'hosp1admin') {
+    doctors = await network.getAllDoctorsByHospitalId(networkObj, 1);
   }
-  else if(dat.changedBy==='hosp2admin') {
-   doctors=await network.getAllDoctorsByHospitalId(networkObj,2);
+  else if (dat.changedBy === 'hosp2admin') {
+    doctors = await network.getAllDoctorsByHospitalId(networkObj, 2);
   }
- 
+
   let response;
   // Invoke the smart contract function
   for (let doc of doctors) {
     if (!doc.id) {
-        console.error("Doctor ID is undefined for a doctor.");
-        continue;
+      console.error("Doctor ID is undefined for a doctor.");
+      continue;
     }
 
-    let args ={donorId: dat.donorId, doctorId: doc.id};
-    args= [JSON.stringify(args)];
+    let args = { donorId: dat.donorId, doctorId: doc.id };
+    args = [JSON.stringify(args)];
     response = await network.invoke(networkObj, false, 'DonorContract:grantAccessToDoctor', args);
 
     if (response.error) {
-        res.status(500).send(response.error);
+      res.status(500).send(response.error);
     }
-  } 
-             
+  }
+
   res.status(201).send(getMessage(false, 'Successfully registered Donor.', req.body.donorId, req.body.password));
 };
 
@@ -86,7 +86,7 @@ exports.createDonor = async (req, res) => {
 exports.createDoctor = async (req, res) => {
   // User role from the request header is validated
   const userRole = req.headers.role;
-  let {hospitalId, username, password} = req.body;
+  let { hospitalId, username, password } = req.body;
   hospitalId = parseInt(hospitalId);
 
   await validateRole([ROLE_ADMIN], userRole, res);
@@ -104,28 +104,98 @@ exports.createDoctor = async (req, res) => {
     (await redisClient).DEL(username);
     res.status(400).send(response.error);
   }
-  
+
   const networkObj = await network.connectToNetwork(req.headers.username);
-  const donors= await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllDonors',
+  const donors = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllDonors',
     userRole === ROLE_DOCTOR ? req.headers.username : '');
   const parsedDonors = await JSON.parse(donors);
-  
-  for(const donor of parsedDonors) {
-   if (!donor.donorId) {
-        console.error("Donor ID is undefined for a donor.");
-        continue; // Skip to the next iteration
+
+  for (const donor of parsedDonors) {
+    if (!donor.donorId) {
+      console.error("Donor ID is undefined for a donor.");
+      continue; // Skip to the next iteration
     }
 
-    args ={donorId: donor.donorId, doctorId: username };
-    args= [JSON.stringify(args)];
+    args = { donorId: donor.donorId, doctorId: username };
+    args = [JSON.stringify(args)];
     response = await network.invoke(networkObj, false, 'DonorContract:grantAccessToDoctor', args);
 
     if (response.error) {
-        res.status(500).send(response.error);
+      res.status(500).send(response.error);
     }
   }
-  
+
   res.status(201).send(getMessage(false, response, username, password));
+};
+
+/**
+ * @param  {Request} req Body must be a super json and role in the header
+ * @param  {Response} res 201 response if asset is created else 400 with a simple json message
+ * @description Creates a super as an user adds the doctor to the wallet
+ */
+exports.createSuper = async (req, res) => {
+  // User role from the request header is validated
+  const userRole = req.headers.role;
+  let { hospitalId, username, password } = req.body;
+  hospitalId = parseInt(hospitalId);
+
+  // only admin can create super roles
+  await validateRole([ROLE_ADMIN], userRole, res);
+
+  req.body.userId = username;
+  req.body.role = ROLE_SUPER;
+  req.body = JSON.stringify(req.body);
+
+  let args = [req.body];
+  // Create a redis client and add the doctor to redis
+  const redisClient = createRedisClient(hospitalId);
+  (await redisClient).SET(username, password);
+  // Enrol and register the user with the CA and adds the user to the wallet.
+  let response = await network.registerUser(args);
+  if (response.error) {
+    (await redisClient).DEL(username);
+    res.status(400).send(response.error);
+  }
+
+  const networkObj = await network.connectToNetwork(req.headers.username);
+  const donors = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllDonors',
+    userRole === ROLE_SUPER ? req.headers.username : '');
+  const parsedDonors = await JSON.parse(donors);
+
+  for (const donor of parsedDonors) {
+    if (!donor.donorId) {
+      console.error("Donor ID is undefined for a donor.");
+      continue; // Skip to the next iteration
+    }
+
+    args = { donorId: donor.donorId, doctorId: username };
+    args = [JSON.stringify(args)];
+    response = await network.invoke(networkObj, false, 'DonorContract:grantAccessToDoctor', args);
+
+    if (response.error) {
+      res.status(500).send(response.error);
+    }
+  }
+
+  res.status(201).send(getMessage(false, response, username, password));
+};
+
+/**
+ * @param  {Request} req Role in the header and hospitalId in the url
+ * @param  {Response} res 200 response with array of all doctors else 500 with the error message
+ * @description Get all the doctors of the mentioned hospitalId
+ */
+exports.getSupersByHospitalId = async (req, res) => {
+  // User role from the request header is validated
+  const userRole = req.headers.role;
+  await validateRole([ROLE_ADMIN], userRole, res);
+  const hospitalId = parseInt(req.params.hospitalId);
+  // Set up and connect to Fabric Gateway
+  userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'hosp3admin';
+  const networkObj = await network.connectToNetwork(userId);
+  // Use the gateway and identity service to get all users enrolled by the CA
+  const response = await network.getAllSupersByHospitalId(networkObj, hospitalId);
+  (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
 };
 
 /**
@@ -156,14 +226,14 @@ exports.getTechniciansByHospitalId = async (req, res) => {
   const networkObj = await network.connectToNetwork(userId);
   // Use the gateway and identity service to get all users enrolled by the CA
   const response = await network.getAllTechniciansByHospitalId(networkObj, hospitalId);
-  
+
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
 };
 
 exports.createTechnician = async (req, res) => {
   // User role from the request header is validated
   const userRole = req.headers.role;
-  let {hospitalId, username, password} = req.body;
+  let { hospitalId, username, password } = req.body;
   hospitalId = parseInt(hospitalId);
 
   await validateRole([ROLE_ADMIN], userRole, res);
@@ -189,7 +259,7 @@ exports.deleteUser = async (req, res) => {
     // User role from the request header is validated
     const userRole = req.headers.role;
     await validateRole([ROLE_ADMIN], userRole, res);
-    
+
     // Extract adminId and doctorId from the request parameters
     const { adminId, Id } = req.params;
     console.log(adminId);
@@ -200,7 +270,7 @@ exports.deleteUser = async (req, res) => {
     }
 
     // Perform deletion logic here, such as deleting the doctor from the Redis database
-    const hospitalId=adminId.substring(4,5);
+    const hospitalId = adminId.substring(4, 5);
     const redisClient = createRedisClient(parseInt(hospitalId)); // Assuming adminId is used to select the Redis database
     (await redisClient).DEL(Id); // Delete the doctor using the doctorId
 
