@@ -4,7 +4,7 @@
 <br><br><br>
 
 <div class="sidebar-layout-bottom-row p-3 container-fluid">
-  <p>List of all supers.</p>
+  <p>List of all doctors.</p>
   <div class="table-responsive">
     <table class="table table-hover">
       <thead class="thead-light">
@@ -15,7 +15,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let singleRecord of doctorRecords$ | async">
+        <tr *ngFor="let singleRecord of superRecords$ | async">
           <td>{{singleRecord.registration}}</td>
           <td>{{singleRecord.fullName}}</td>
           <td>{{singleRecord.address}}</td>
@@ -26,6 +26,6 @@
         </tr>
       </tbody>
     </table>
-    <span>Total count: {{(doctorRecords$ | async)?.length}}</span>
+    <span>Total count: {{(superRecords$ | async)?.length}}</span>
   </div>
 </div>

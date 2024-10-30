@@ -2,7 +2,8 @@ export enum RoleEnum {
   ADMIN = 'admin',
   DONOR = 'donor',
   DOCTOR = 'doctor',
-  TECHNICIAN = 'technician'
+  TECHNICIAN = 'technician',
+  SUPER = 'super'
 }
 
 export enum BrowserStorageFields {
@@ -11,7 +12,7 @@ export enum BrowserStorageFields {
   USER_ROLE = 'user_role',
   HOSPITAL_ID = 'hospital_id',
   USERNAME = 'username',
-  TOKEN_EXPIRY = 'token_expiry'  
+  TOKEN_EXPIRY = 'token_expiry'
 }
 
 export class Utils {

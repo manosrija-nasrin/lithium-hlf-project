@@ -46,10 +46,16 @@ import { BloodRequestComponent } from './technician/bloodrequest.component';
 import { ReadAllocatedBloodBagComponent } from './technician/readallocatedbloodbag.component';
 import { LTapprovalComponent } from './technician/LTapproval.component';
 import { MOCapprovalComponent } from './doctor/MOCapproval.component';
-
+import { BlockedDonorListForSuperComponent } from './super/blocked-donor-list-for-super/blocked-donor-list-for-super.component';
+import { SuperComponent } from './super/super.component';
+import { SuperService } from './super/super.service';
+import { SuperRegisterComponent } from './super/super-register/super-register.component';
 
 const components = [
   AppComponent,
+  BlockedDonorListForSuperComponent,
+  SuperComponent,
+  SuperRegisterComponent,
   LoginComponent,
   AdminComponent,
   DonorComponent,
@@ -84,7 +90,7 @@ const components = [
   ReadAllocatedBloodBagComponent,
   LTapprovalComponent,
   MOCapprovalComponent
-  
+
 ];
 
 const pipes = [
@@ -102,13 +108,13 @@ const pipes = [
     NgSelectModule,
     NgbTooltipModule
   ],
-  providers: [ AuthService, AuthGuard, SearchService, AdminService, DonorService, DoctorService, TechnicianService,
+  providers: [AuthService, AuthGuard, SearchService, AdminService, DonorService, DoctorService, TechnicianService, SuperService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
       multi: true
     }
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

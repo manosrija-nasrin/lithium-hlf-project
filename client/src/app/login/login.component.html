@@ -15,6 +15,7 @@
               <select name="role" class="form-control rounded-1" required placeholder="Select a user role"
                 [(ngModel)]="role" (ngModelChange)="roleChanged()">
                 <option value="admin">Admin</option>
+                <option value="super">Super</option>
                 <option value="doctor">Doctor</option>
                 <option value="technician">Technician</option>
                 <option value="donor">Donor</option>
@@ -31,13 +32,11 @@
             </div>
             <div class="form-group mt-3">
               <label for="name">Username</label>
-              <input type="text" name="username" class="form-control rounded-1" required
-                [(ngModel)]="username">
+              <input type="text" name="username" class="form-control rounded-1" required [(ngModel)]="username">
             </div>
             <div class="form-group mt-3">
               <label for="password">Password</label>
-              <input type="password" name="password" class="form-control rounded-1" required
-                [(ngModel)]="pwd">
+              <input type="password" name="password" class="form-control rounded-1" required [(ngModel)]="pwd">
             </div>
             <div *ngIf="error.message">
               <p class="alert alert alert-danger">{{error.message}}</p>
@@ -50,25 +49,25 @@
                 Create new password
               </button>
             </ng-container>
-            <button *ngIf="!createNewPwd" type="button" class="btn btn-success float-right mt-2" [disabled]="loginForm.invalid"
-                    (click)="loginUser()">
+            <button *ngIf="!createNewPwd" type="button" class="btn btn-success float-right mt-2"
+              [disabled]="loginForm.invalid" (click)="loginUser()">
               Login
             </button>
           </form>
-          
+
         </div>
-        
+
       </div>
 
     </div>
   </div>
   <div class="row" style="display: flex; justify-content: center; padding-top: 10px;">
     <div style="width: 150px;">
-        <a routerLink="/receiver" class="btn" style="background-color: #4CAF50; color: white; ">Enter as Receiver</a>
+      <a routerLink="/receiver" class="btn" style="background-color: #4CAF50; color: white; ">Enter as Receiver</a>
 
 
     </div>
-</div>
+  </div>
 
 </div>
 
