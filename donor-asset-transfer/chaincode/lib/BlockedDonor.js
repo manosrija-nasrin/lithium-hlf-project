@@ -2,13 +2,27 @@
   SPDX-License-Identifier: Apache-2.0
 */
 
-const Donor = require("./Donor.js");
-
 // BlockedDonor describes details that are private to owners
-class BlockedDonor extends Donor {
+class BlockedDonor {
   constructor(donor, blockedDate, blockedTenure, blockedReason, blockedBy, bloodBagUnitNo = '', bloodBagSegmentNo = '') {
-    const { donorId, firstName, lastName, password, dob, phoneNumber, aadhar, address, bloodGroup, donationHistory, alert, isDiseased, creditCard, donationStatus, pwdTemp, permissionGranted } = donor;
-    super(donorId, firstName, lastName, password, dob, phoneNumber, aadhar, address, bloodGroup, donationHistory, alert, isDiseased, creditCard, donationStatus, pwdTemp, permissionGranted);
+    const { donorId, firstName, lastName, password, dob, phoneNumber, aadhar, address, bloodGroup, donationHistory, creditCard, pwdTemp, permissionGranted } = donor;
+    // super(donorId, firstName, lastName, password, dob, phoneNumber, aadhar, address, bloodGroup, donationHistory, alert, isDiseased, creditCard, donationStatus, pwdTemp, permissionGranted);
+    this.donorId = donorId;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.password = password;
+    this.dob = dob;    
+    this.phoneNumber = phoneNumber;
+    this.aadhar = aadhar;
+    this.address = address;
+    this.bloodGroup = bloodGroup;
+    this.donationHistory = donationHistory;
+    this.alert = true;
+    this.isDiseased = true;
+    this.creditCard = creditCard;
+    this.donationStatus = 'blocked';
+    this.pwdTemp = pwdTemp;
+    this.permissionGranted = permissionGranted;
     this.blockedDate = blockedDate;
     this.blockedTenure = blockedTenure;
     this.blockedReason = blockedReason;

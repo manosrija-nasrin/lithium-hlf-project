@@ -80,7 +80,7 @@ exports.invokePDCWriteTransaction = async function (networkObj, func, args = '')
   try {
     const contractObj = networkObj.contract;
     const gatewayObj = networkObj.gateway;
-    const transientMap = new Map();
+    // const transientMap = new Map();  //  not required
     console.log(args);
     if (args && args.length > 1) {
       let parsedArgs = JSON.parse(args[0]);
@@ -100,8 +100,9 @@ exports.invokePDCWriteTransaction = async function (networkObj, func, args = '')
       { transientData: { reasons: [ 'Malaria', 'Syphilis' ] } }
        */
       if ('transientData' in transientData) {
-        transientMap.set("transientData", Buffer.from(JSON.stringify(transientData['transientData'])));
-        const response = await contractObj.createTransaction(func).setTransient(transientData).submit(JSON.stringify(parsedArgs));
+        // transientMap.set("transientData", Buffer.from(JSON.stringify(transientData['transientData'])));
+        let wrappedTransientData = {'transientData': Buffer.from(JSON.stringify(transientData['transientData']))};
+        const response = await contractObj.createTransaction(func).setTransient(wrappedTransientData).submit(JSON.stringify(parsedArgs));
         await gatewayObj.disconnect();
         return response;
       } else {

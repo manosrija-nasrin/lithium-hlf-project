@@ -1,5 +1,9 @@
 'use strict';
+const BlockedDonor = require('./BlockedDonor.js');
+const DoctorContract = require('./doctor-contract.js');                                                                
 const PrimaryContract = require('./primary-contract.js');
+const stringify = require('json-stringify-deterministic');
+const sortKeysRecursive = require('sort-keys-recursive');
 const privateCollection = 'blockedDonorPrivateCollection';
 
 class SuperContract extends PrimaryContract {
@@ -13,30 +17,69 @@ class SuperContract extends PrimaryContract {
         }
     }
 
-    async queryAllBlockedDonors(ctx, args) {
+    fetchLimitedFields(assets, includeTimeStamp = false) {
         try {
-            this.verifyClientOrgMatchesPeerOrg(ctx);
-            const parsedArgs = JSON.parse(args);
-            const superId = parsedArgs.username;
-            let resultsIterator = await ctx.stub.getPrivateDataByRange(privateCollection, '', '');
-            let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
-
-            let permissionedAssets = [];
-            for (let i = 0; i < assets.length; i++) {
+            const newAssets = [];
+            console.debug("Asset list length", assets.length);
+            for (let i = 0; i < assets.length && assets[i].Key.includes("PID"); i++) {
                 const obj = assets[i];
-                if ('permissionGranted' in obj.Record && obj.Record.permissionGranted.includes(superId)) {
-                    permissionedAssets.push(assets[i]);
+                const newObj = {
+                    donorId: obj.Key,
+                    donationHistory: 'donationHistory' in obj.Record ? obj.Record.donationHistory : null,
+                };
+                // console.debug("Object:", obj.Record.donationHistory);
+                // console.debug("Keys:", Object.keys(obj.Record.donationHistory));
+                if (includeTimeStamp)
+                    newObj.Timestamp = obj.Timestamp;
+                newAssets.push(newObj);
+            }
+    
+            return newAssets;
+        } catch (error) {
+            console.error("Error while fetching limited fields", error);
+        }
+    };
+
+    async queryAllDonors(ctx) {
+        let resultsIterator;
+        const assets = [];
+
+        try {
+            resultsIterator = await ctx.stub.getStateByRange('', '');
+            while (true) {
+                const res = await resultsIterator.next();
+                if (res.value && res.value.value) {
+                    const key = res.value.key;
+                    // console.debug("Key:", key);
+                    let value;
+                    try {
+                        value = JSON.parse(res.value.value.toString('utf8'));
+                    } catch (error) {
+                        console.error("Error while parsing JSON for Record: ", error);
+                        value = res.value.value.toString('utf8');
+                    }
+                    const timestamp = res.value.timestamp;
+                    if (key && key.startsWith("PID"))
+                        assets.push({ Key: key, Record: value, Timestamp: timestamp });
+                }
+                if (res.done) {
+                    await resultsIterator.close();
+                    console.debug("All done, fetched ", assets.length, " donor records.");
+                    const limitedAssets = this.fetchLimitedFields(assets);
+                    return limitedAssets;
                 }
             }
-
-            return this.fetchLimitedFields(permissionedAssets);
         } catch (error) {
-            console.error(error);
-            return { error: error };
-        }
+            console.error('Error during query: ', error);
+            throw new Error('Failed to query donors');
+        } /* finally {
+            if (resultsIterator) {
+                await resultsIterator.close(); // Ensure iterator is closed even if an error occurs
+            }
+        } */
     }
 
-    fetchLimitedFields = (asset, includeTimeStamp = false) => {
+    fetchFields = (asset, includeTimeStamp = false) => {
         for (let i = 0; i < asset.length; i++) {
             const obj = asset[i];
             asset[i] = {
@@ -63,6 +106,136 @@ class SuperContract extends PrimaryContract {
         }
 
         return asset;
+    };
+
+    async queryAllBlockedDonors(ctx, args) {
+        try {
+            this.verifyClientOrgMatchesPeerOrg(ctx);
+            const parsedArgs = JSON.parse(args);
+            const superId = parsedArgs.username;
+            let resultsIterator = await ctx.stub.getPrivateDataByRange(privateCollection, '', '');
+            let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
+
+            let permissionedAssets = [];
+            for (let i = 0; i < assets.length; i++) {
+                const obj = assets[i];
+                if ('permissionGranted' in obj.Record && obj.Record.permissionGranted.includes(superId)) {
+                    permissionedAssets.push(assets[i]);
+                }
+            }
+
+            return this.fetchFields(permissionedAssets);
+        } catch (error) {
+            console.error(error);
+            return { error: error };
+        }
+    };
+
+    async queryDonorsForBagId(ctx, args) {
+        let parsedArgs = JSON.parse(args);
+
+        let assets = await this.queryAllDonors(ctx);
+        console.debug("Received ", assets.length, " entries");
+        // console.debug("Sample asset: ", typeof(assets));
+        // console.debug(assets[0]);
+
+        for (let i = 0; i < assets.length; i++) {
+            let donationHistory = assets[i].donationHistory;
+            // console.debug("Donor ", assets[i].donorId, ": ", donationHistory);
+            if (donationHistory !== null) {
+                const numberOfDonations = Object.keys(donationHistory).length;
+                console.debug("For donor, ", assets[i].donorId, ", donation history length: ", numberOfDonations);
+                if (numberOfDonations > 0) {
+                    let currentDonation;
+                    for (let j = 0; j < numberOfDonations; j++) {
+                        currentDonation = donationHistory['donation' + (j + 1)];
+                        // console.debug("Searching donation ", currentDonation);
+                        if (currentDonation['status'] === 'successful' && currentDonation['bloodBagUnitNo'] == parsedArgs.bloodBagUnitNo && currentDonation['bloodBagSegmentNo'] == parsedArgs.bloodBagSegmentNo) {
+                            console.debug("Donor found: ", assets[i].donorId);
+                            return assets[i].donorId;
+                        }
+                    }
+                }
+
+            }
+        }
+        console.debug("Donor for bag not found");
+        return null;   
+    };
+
+    async updateDonorMedicalDetailsForBlocking(ctx, args) {
+        args = JSON.parse(args);
+        let donorId = args.donorId;
+        let newAlert = true;
+        let newIsDiseased = true;
+        let newDonationStatus = 'blocked';
+        let isDataChanged = false;
+
+        const donor = await PrimaryContract.prototype.readDonor(ctx, donorId);
+
+        if (donor.alert !== newAlert) {
+            donor.alert = newAlert;
+            isDataChanged = true;
+        }
+
+        if (donor.isDiseased !== newIsDiseased) {
+            donor.isDiseased = newIsDiseased;
+            isDataChanged = true;
+        }
+
+        if (donor.donationStatus !== newDonationStatus) {
+            donor.donationStatus = newDonationStatus;
+            isDataChanged = true;
+        }
+
+
+        if (isDataChanged === false) return;
+
+        const buffer = Buffer.from(JSON.stringify(donor));
+        await ctx.stub.putState(donorId, buffer);
+    };
+
+    async blockDonorOfBag(ctx, args) {
+        try {
+            const parsedArgs = JSON.parse(args);
+            const transientMap = ctx.stub.getTransient();
+            const transient = transientMap.get("transientData");
+            // console.debug(transientMap);
+            // console.debug(transient);
+            // console.debug(transient.toString());
+            if (!transient) {
+                throw new Error("No transient data");
+            }
+            const reasonsJson = JSON.parse(transient.toString());
+            // console.debug(reasonsJson, "> reasons extracted: ", reasonsJson.reasons);
+            // this.verifyClientOrgMatchesPeerOrg(ctx);
+
+            const donorId = await this.queryDonorsForBagId(ctx, args);
+            if (donorId !== null) {
+                // console.debug("Received donor ID from query: ", donorId);
+                // console.debug("Received donor ID from query string: ", donorId.toString());
+                const donor = await PrimaryContract.prototype.readDonor(ctx, donorId);
+                console.debug("Donor object read: ", donor);            
+                
+                let changedMedicalDetails = { donorId: donorId, alert: true, isDiseased: true, donationStatus: 'blocked' };
+                await this.updateDonorMedicalDetailsForBlocking(ctx, JSON.stringify(changedMedicalDetails));
+                
+                const date = new Date().toISOString().split("T")[0];
+                const blockedDonor = new BlockedDonor(donor, date, 365, reasonsJson.reasons, parsedArgs.username, parsedArgs.bloodBagUnitNo, parsedArgs.bloodBagSegmentNo);
+                const plainBlockedDonor = JSON.parse(JSON.stringify(blockedDonor));
+                console.debug("Putting blocked donor to ledger: ", plainBlockedDonor);
+                console.debug("Type: ", typeof(plainBlockedDonor));
+                await ctx.stub.putPrivateData(privateCollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainBlockedDonor))));
+
+                return { status: "success" };
+            } else {
+                console.debug("Check blood bag ID. Donor not found.");
+                return { status: "error", error: "Donor not found" };
+            }
+        } catch (error) {
+            console.error(error);
+            return { status: "error", error: error };
+        }
     };
 }
 
