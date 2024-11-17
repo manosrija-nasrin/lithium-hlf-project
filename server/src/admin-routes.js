@@ -46,16 +46,18 @@ exports.createDonor = async (req, res) => {
   }
 
   const dat = JSON.parse(data);
-  let doctors;
+  let doctors, supers;
   // Set up and connect to Fabric Gateway
   networkObj = await network.connectToNetwork(dat.changedBy);
 
 
   if (dat.changedBy === 'hosp1admin') {
     doctors = await network.getAllDoctorsByHospitalId(networkObj, 1);
+    supers = await network.getAllSupersByHospitalId(networkObj, 1);
   }
   else if (dat.changedBy === 'hosp2admin') {
     doctors = await network.getAllDoctorsByHospitalId(networkObj, 2);
+    supers = await network.getAllSupersByHospitalId(networkObj, 2);
   }
 
   let response;
@@ -67,6 +69,21 @@ exports.createDonor = async (req, res) => {
     }
 
     let args = { donorId: dat.donorId, doctorId: doc.id };
+    args = [JSON.stringify(args)];
+    response = await network.invoke(networkObj, false, 'DonorContract:grantAccessToDoctor', args);
+
+    if (response.error) {
+      res.status(500).send(response.error);
+    }
+  }
+
+  for (let doc of supers) {
+    if (!doc.id) {
+      console.error("Super ID is undefined for a super.");
+      continue;
+    }
+
+    let args = { donorId: dat.donorId, doctorId: doc.id };  // TODO: Implement a new function for supers
     args = [JSON.stringify(args)];
     response = await network.invoke(networkObj, false, 'DonorContract:grantAccessToDoctor', args);
 

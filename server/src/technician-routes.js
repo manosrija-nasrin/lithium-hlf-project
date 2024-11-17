@@ -12,17 +12,16 @@ const url = require('url');
 exports.readBloodBag = async (req, res) => {
   const userRole = req.headers.role;
   await validateRole([ROLE_TECHNICIAN], userRole, res);
-  let args = req.body;
-  console.log(args);
-  args = [JSON.stringify(args)];
-  let bagArgs = [JSON.stringify({ bloodBagSegmentNo: '108', bloodBagUnitNo: '108' })];
+  const rawArgs = req.body;
+  console.debug(rawArgs);
+  let args = [JSON.stringify(rawArgs)];
   const networkObj = await network.connectToNetwork(req.headers.username);
-  // const response = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:readBag', args);
-  const response1 = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryDonorsForBagId', bagArgs);
-  // console.log(response);
-  console.log("for bag ID 108, ", response1);
-  // (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
-  res.status(200).send(response1);
+  const response = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:readBag', args);
+  // const response1 = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryDonorsForBagId', args);
+  console.log(response);
+  // console.debug("For bag ", rawArgs.bloodBagSegmentNo, response1.toString());
+  (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
+  // res.status(200).send(response1);
 }
 
 exports.bloodTestOfBloodBags = async (req, res) => {
@@ -144,7 +143,7 @@ exports.crossMatchResults = async (req, res) => {
   const responseString = response instanceof Buffer ? response.toString('utf8') : response;
   console.log('Response string:', responseString);
   const ans = JSON.parse(responseString);
-  console.log(ans);
+  console.log(responseString);
 
   if (ans.crossmatch === 'false') {
     console.log("CROSS MATCH FAILED FOR THIS BAG. FINDING NEW BAG");
@@ -160,14 +159,29 @@ exports.crossMatchResults = async (req, res) => {
     if (args.irregularAntiBody == "true") reasons.push("Irregular Antibodies");
 
     // search for bagId in donor history
+    // let donorId;
+    // let blockedDonorResponse = await databaseRoutes.getDonorOfBloodBag(bloodBagUnitNo, bloodBagSegmentNo, hospName);
+    // if (blockedDonorResponse.length > 0) {
+    //   donorId = blockedDonorResponse[0]["DonatedBy"];
+    // } else {
+    //   donorId = "";
+    //   console.error("Donor not found");
+    // }
+
     let blockDonorArgs = [JSON.stringify({ bloodBagUnitNo: bloodBagUnitNo, bloodBagSegmentNo: bloodBagSegmentNo, username: req.headers.username }), JSON.stringify({ transientData: { reasons: reasons } })];
     // Set up and connect to Fabric Gateway using the username in header
     let donorNetworkObj = await network.connectToNetwork(req.headers.username);
 
-    const response = await network.invokePDCWriteTransaction(donorNetworkObj, capitalize(userRole) + 'Contract:blockDonorOfBag', blockDonorArgs);
+    const response = await network.invokePDCWriteTransaction(donorNetworkObj, 'SuperContract:blockDonorOfBag', blockDonorArgs);
+    console.debug("Response from network for blocking donor", response.toString());
+    const blockedResponse = JSON.parse(response.toString());
 
-    if (response.status === "error") {
+    if (blockedResponse.status === "error") {
       console.error("Failed to block donor of bagId: %v", bagId);
+    } else {
+      console.debug("Status", blockedResponse.status);
+      await databaseRoutes.updateCrossMatchStatus(bloodBagUnitNo, bloodBagSegmentNo, hospName, ans.crossmatch);
+      console.debug("Successfully done");
     }
 
     //res.status(200).json({ success: false, message: "Blood Cross Match failed. Finding new bag..." });

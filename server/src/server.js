@@ -89,8 +89,8 @@ app.post("/login", async (req, res) => {
     if (username.includes("DOC") && role === ROLE_DOCTOR) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
-      console.log("got this from redis", value);
-      console.log("got this as pw", password);
+      console.debug("got this from redis", value);
+      console.debug("got this as pw", password);
       user = value === password;
       redisClient.quit();
     }
@@ -98,8 +98,8 @@ app.post("/login", async (req, res) => {
     if (username.includes("SUP") && role === ROLE_SUPER) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
-      console.log("got this from redis", value);
-      console.log("got this as pw", password);
+      console.debug("got this from redis", value);
+      console.debug("got this as pw", password);
       user = value === password;
       redisClient.quit();
     }
@@ -107,8 +107,8 @@ app.post("/login", async (req, res) => {
     if (username.includes("admin") && role === ROLE_ADMIN) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
-      console.log("got this from redis", value);
-      console.log("got this as pw", password);
+      console.debug("got this from redis", value);
+      console.debug("got this as pw", password);
       user = value === password;
       redisClient.quit();
     }
@@ -116,8 +116,8 @@ app.post("/login", async (req, res) => {
     if (username.includes("TECH") && role === ROLE_TECHNICIAN) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
-      console.log("got this from redis", value);
-      console.log("got this as pw", password);
+      console.debug("got this from redis", value);
+      console.debug("got this as pw", password);
       user = value === password;
       redisClient.quit();
     }

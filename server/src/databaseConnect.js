@@ -1,6 +1,7 @@
 var mysql = require('mysql');
 
 let connection;
+const crossMatchTable = 'HLFPendingCrossMatchBloodBags';
 
 function handleDisconnect() {
     connection = mysql.createConnection({
@@ -69,8 +70,107 @@ function createBloodTable() {
     });
 }
 
+///////////////////////////// CROSS MATCH TABLE /////////////////////////////////////////////
+
+function createPendingCrossmatchBloodBags() {
+    const sql = `
+       CREATE TABLE IF NOT EXISTS ${crossMatchTable} (
+	    BagUnitNo VARCHAR(100),
+	    BagSegmentNo VARCHAR(100),
+	    HospitalName VARCHAR(100),
+        DonatedBy VARCHAR(10),
+        CrossMatched VARCHAR(100),
+	    PRIMARY KEY (BagUnitNo, BagSegmentNo),
+	    FOREIGN KEY (HospitalName) REFERENCES Hospital(HospitalName)
+	);
+    `;
+
+    connection.query(sql, (error, result) => {
+        if (error) {
+            console.error('Error creating table:', error);
+            return;
+        }
+        console.log('Table created successfully');
+    });
+}
+
+exports.insertDonatedBloodBagForCrossMatch = async function name(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy) {
+    // TODO: Insert blood bag donated but pending crossmatch
+    const sql = `INSERT INTO ${crossMatchTable}(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy, CrossMatched)
+            VALUES (?, ?, ?, ?, 'false')`;
+    try {
+        // Execute SQL query
+        const result = await new Promise((resolve, reject) => {
+            connection.query(sql, [BagUnitNo, BagSegmentNo, HospitalName, DonatedBy], (error, result) => {
+                if (error) {
+                    console.error('Error inserting Blood:', error);
+                    reject(error);
+                    return;
+                }
+                console.log('Blood record created successfully in cross-match table');
+                resolve(result);
+            });
+        });
+        return result;
+    } catch (error) {
+        // Handle SQL query execution error
+        console.error('Error inserting Blood:', error);
+        throw error;
+    }
+}
+
+exports.getDonorOfBloodBag = async function (BagUnitNo, BagSegmentNo, HospitalName) {
+    const sql = `SELECT DonatedBy
+                FROM ${crossMatchTable}
+                WHERE BagUnitNo=? AND BagSegmentNo=? AND HospitalName=? AND CrossMatched='false'`;
+    try {
+        // Execute SQL query
+        const result = await new Promise((resolve, reject) => {
+            connection.query(sql, [BagUnitNo, BagSegmentNo, HospitalName], (error, result) => {
+                if (error) {
+                    console.error('Error finding Blood Bag:', error);
+                    reject(error);
+                    return;
+                }
+                console.log('Blood records fetched successfully:', result);
+                resolve(result);
+            });
+        });
+        return result;
+    } catch (error) {
+        // Handle SQL query execution error
+        console.error('Error fetching Blood:', error);
+        throw error;
+    }
+}
+
+exports.updateCrossMatchStatus = async function (BagUnitNo, BagSegmentNo, HospitalName, Status) {
+    const crossMatchStatus = Status === 'false' ? 'failed' : 'passed';
+    const sql = `
+        UPDATE HLFBloodStore SET CrossMatched = '${crossMatchStatus}'
+        WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ? AND CrossMatched = 'false';
+        `;
+    try {
+        const result = await new Promise((resolve, reject) => {
+            connection.query(sql, [BagUnitNo, BagSegmentNo, HospitalName], (error, result) => {
+                if (error) {
+                    console.error('Error updating blood:', error);
+                    reject(error);
+                    return;
+                }
+                console.log('Blood updation Successful:', result);
+                resolve(result);
+            });
+        });
+        return result;
+    } catch (error) {
+        // Handle SQL query execution error
+        console.log('Blood allocation updated successfully');
+        throw error;
+    }
+}
+
 exports.insertBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup) {
-    console.log("IN DB");
     console.log(BagUnitNo + " " + BagSegmentNo + " " + HospitalName);
     const sql = `
         INSERT INTO HLFBloodStore(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, Allocated, AllocatedTo, CrossMatched,Donated,DonationDate)
