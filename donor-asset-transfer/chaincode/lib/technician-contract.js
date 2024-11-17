@@ -36,29 +36,39 @@ class TechnicianContract extends PrimaryContract {
     }
 
     fetchLimitedFields(assets, includeTimeStamp = false) {
-        for (let i = 0; i < assets.length && assets[i].Key.includes("PID"); i++) {
-            const obj = assets[i];
-            assets[i] = {
-                donorId: obj.Key,
-                donationHistory: 'donationHistory' in obj.Record ? obj.Record.donationHistory : null,
-            };
-            if (includeTimeStamp)
-                assets[i].Timestamp = obj.Timestamp;
+        try {
+            const newAssets = [];
+            console.debug("Asset list length", assets.length);
+            for (let i = 0; i < assets.length && assets[i].Key.includes("PID"); i++) {
+                const obj = assets[i];
+                const newObj = {
+                    donorId: obj.Key,
+                    donationHistory: 'donationHistory' in obj.Record ? obj.Record.donationHistory : null,
+                };
+                // console.debug("Object:", obj.Record.donationHistory);
+                // console.debug("Keys:", Object.keys(obj.Record.donationHistory));
+                if (includeTimeStamp)
+                    newObj.Timestamp = obj.Timestamp;
+                newAssets.push(newObj);
+            }
+    
+            return newAssets;
+        } catch (error) {
+            console.error("Error while fetching limited fields", error);
         }
-
-        return assets;
     };
 
     async queryAllDonors(ctx) {
         let resultsIterator;
+        const assets = [];
 
         try {
             resultsIterator = await ctx.stub.getStateByRange('', '');
-            const assets = [];
             while (true) {
                 const res = await resultsIterator.next();
                 if (res.value && res.value.value) {
                     const key = res.value.key;
+                    // console.debug("Key:", key);
                     let value;
                     try {
                         value = JSON.parse(res.value.value.toString('utf8'));
@@ -67,67 +77,37 @@ class TechnicianContract extends PrimaryContract {
                         value = res.value.value.toString('utf8');
                     }
                     const timestamp = res.value.timestamp;
-                    assets.push({ Key: key, Record: value, Timestamp: timestamp });
+                    if (key && key.startsWith("PID"))
+                        assets.push({ Key: key, Record: value, Timestamp: timestamp });
                 }
                 if (res.done) {
-                    break;
+                    await resultsIterator.close();
+                    console.debug("All done, fetched ", assets.length, " donor records.");
+                    const limitedAssets = this.fetchLimitedFields(assets);
+                    return limitedAssets;
                 }
             }
-            return this.fetchLimitedFields(assets);
         } catch (error) {
             console.error('Error during query: ', error);
             throw new Error('Failed to query donors');
-        } finally {
+        } /* finally {
             if (resultsIterator) {
                 await resultsIterator.close(); // Ensure iterator is closed even if an error occurs
             }
-        }
+        } */
     }
 
-    async queryDonorsInBatches(ctx, batchSize = 50) {
-        const allResults = [];
-        let startKey = '';
-        let endKey = '';
-
-        while (true) {
-            const iterator = await ctx.stub.getStateByRange(startKey, endKey);
-            const batchResults = [];
-            let count = 0;
-
-            while (count < batchSize) {
-                const res = await iterator.next();
-                if (res.value && res.value.value) {
-                    const key = res.value.key;
-                    let value;
-                    try {
-                        value = JSON.parse(res.value.value.toString('utf8'));
-                    } catch (error) {
-                        value = res.value.value.toString('utf8');
-                    }
-                    const timestamp = res.value.timestamp;
-                    batchResults.push({ Key: key, Record: value, Timestamp: timestamp });
-                }
-                if (res.done) {
-                    await iterator.close();
-                    console.info("Reading complete");
-                    allResults = allResults.concat(batchResults);
-                    return this.fetchLimitedFields(allResults);
-                }
-                count++;
-            }
-            await iterator.close();
-            startKey = batchResults[batchResults.length - 1].Key;
-            allResults.push(...batchResults);
-        }
-    }
-
-    queryDonorsForBagId(ctx, args) {
+    async queryDonorsForBagId(ctx, args) {
         let parsedArgs = JSON.parse(args);
 
-        let assets = this.queryAllDonors(ctx);
+        let assets = await this.queryAllDonors(ctx);
+        console.debug("Received ", assets.length, " entries");
+        // console.debug("Sample asset: ", typeof(assets));
+        // console.debug(assets[0]);
 
         for (let i = 0; i < assets.length; i++) {
             let donationHistory = assets[i].donationHistory;
+            // console.debug("Donor ", assets[i].donorId, ": ", donationHistory);
             if (donationHistory !== null) {
                 const numberOfDonations = Object.keys(donationHistory).length;
                 console.debug("For donor, ", assets[i].donorId, ", donation history length: ", numberOfDonations);
@@ -135,8 +115,9 @@ class TechnicianContract extends PrimaryContract {
                     let currentDonation;
                     for (let j = 0; j < numberOfDonations; j++) {
                         currentDonation = donationHistory['donation' + (j + 1)];
-                        console.debug("Searching donation ", currentDonation);
+                        // console.debug("Searching donation ", currentDonation);
                         if (currentDonation['status'] === 'successful' && currentDonation['bloodBagUnitNo'] == parsedArgs.bloodBagUnitNo && currentDonation['bloodBagSegmentNo'] == parsedArgs.bloodBagSegmentNo) {
+                            console.debug("Donor found: ", assets[i].donorId);
                             return assets[i].donorId;
                         }
                     }
@@ -144,8 +125,8 @@ class TechnicianContract extends PrimaryContract {
 
             }
         }
-
-        throw new Error("Bag not found");
+        console.debug("Donor for bag not found");
+        return null;    // 
     }
 
     async blockDonorOfBag(ctx, args) {
@@ -153,14 +134,18 @@ class TechnicianContract extends PrimaryContract {
             const parsedArgs = JSON.parse(args);
             const transientMap = ctx.stub.getTransient();
             const transient = transientMap.get("transientData");
+            console.debug(transientMap);
+            console.debug(transient);
             if (!transient) {
                 throw new Error("No transient data");
             }
             const reasonsJson = JSON.parse(transient.toString());
+            const donorId = reasonsJson.donorId;
             console.debug(reasonsJson, "> reasons extracted: ", reasonsJson.reasons);
+            console.debug(reasonsJson, "> donor extracted: ", reasonsJson.donorId);
             this.verifyClientOrgMatchesPeerOrg(ctx);
 
-            const donorId = this.queryDonorsForBagId(ctx, args);
+            // const donorId = this.queryDonorsForBagId(ctx, args);
             let changedMedicalDetails = { donorId: donorId, alert: true, isDiseased: true, donationStatus: 'blocked' };
             const donor = new Donor(PrimaryContract.prototype.readDonor(ctx, donorId));
 
@@ -175,7 +160,6 @@ class TechnicianContract extends PrimaryContract {
             console.error(error);
             return { status: "error", error: error };
         }
-
     }
 }
 
