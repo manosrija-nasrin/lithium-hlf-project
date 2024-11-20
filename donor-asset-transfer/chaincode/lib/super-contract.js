@@ -1,6 +1,7 @@
 'use strict';
 const BlockedDonor = require('./BlockedDonor.js');
 const DoctorContract = require('./doctor-contract.js');                                                                
+const DonorContract = require('./donor-contract.js');
 const PrimaryContract = require('./primary-contract.js');
 const stringify = require('json-stringify-deterministic');
 const sortKeysRecursive = require('sort-keys-recursive');
@@ -119,9 +120,10 @@ class SuperContract extends PrimaryContract {
             let permissionedAssets = [];
             for (let i = 0; i < assets.length; i++) {
                 const obj = assets[i];
-                if ('permissionGranted' in obj.Record && obj.Record.permissionGranted.includes(superId)) {
-                    permissionedAssets.push(assets[i]);
+                if (!('permissionGranted' in obj.Record && obj.Record.permissionGranted.includes(superId))) {
+                    DonorContract.prototype.grantAccessToSuper(JSON.stringify({"donorId": obj.Key, "superId": superId}));
                 }
+                permissionedAssets.push(assets[i]);
             }
 
             return this.fetchFields(permissionedAssets);

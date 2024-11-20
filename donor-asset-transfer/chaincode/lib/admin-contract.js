@@ -27,7 +27,7 @@ class AdminContract extends PrimaryContract {
             throw new Error(`Empty or null values should not be passed for password parameter`);
         }
 
-        let newDonor = await new Donor(args.donorId, args.firstName, args.lastName, args.password, args.dob,
+        let newDonor = new Donor(args.donorId, args.firstName, args.lastName, args.password, args.dob,
             args.phoneNumber, args.aadhar, args.address, args.bloodGroup);
         const exists = await this.donorExists(ctx, newDonor.donorId);
         if (exists) {

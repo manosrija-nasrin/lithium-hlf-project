@@ -32,6 +32,7 @@ import { MOCapprovalComponent } from './doctor/MOCapproval.component';
 import { SuperComponent } from './super/super.component';
 import { BlockedDonorListForSuperComponent } from './super/blocked-donor-list-for-super/blocked-donor-list-for-super.component';
 import { SuperRegisterComponent } from './super/super-register/super-register.component';
+import { SuperListForAdminComponent } from './admin/super-list-for-admin/super-list-for-admin.component';
 
 const routes: Routes = [
   {
@@ -111,6 +112,11 @@ const routes: Routes = [
   {
     path: 'super/:superId',
     component: SuperComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'super/view/:adminId',
+    component: SuperListForAdminComponent,
     canActivate: [AuthGuard]
   },
   {

@@ -119,6 +119,10 @@ class DoctorContract extends AdminContract {
             status = 'ineligible';
             reason = 'Under-weight';
         }
+        else if (donor.donationStatus && donor.donationStatus === 'blocked') {
+            status = 'ineligible';
+            reason = 'Donor blocked';
+        }
         else {
             status = 'in progress';
         }

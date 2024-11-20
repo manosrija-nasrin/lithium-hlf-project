@@ -278,7 +278,8 @@ exports.getAllSupersByHospitalId = async function (networkObj, hospitalId) {
       if (identities[i].type === 'client') {
         tmp.id = identities[i].id;
         tmp.role = identities[i].type;
-        attributes = identities[i].attrs;
+        let attributes = identities[i].attrs;
+        console.debug("Attributes", attributes);
         // Doctor object will consist of firstName and lastName
         for (let j = 0; j < attributes.length; j++) {
           if (attributes[j].name.endsWith('Name') || attributes[j].name === 'role' || attributes[j].name === 'registration' || attributes[j].name === 'address' || attributes[j].name === 'phoneNumber' || attributes[j].name === 'emergPhoneNumber') {
@@ -291,8 +292,7 @@ exports.getAllSupersByHospitalId = async function (networkObj, hospitalId) {
     }
   } catch (error) {
     console.error(`Unable to get all supers : ${error}`);
-    const response = {};
-    response.error = error;
+    const response = {"error": error};
     return response;
   }
   return result.filter(

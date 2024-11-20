@@ -287,7 +287,7 @@ app.get(
   authenticateJWT,
   superRoutes.getBlockedDonors
 );
-app.post("/supers/:hospitalId([0-9]+)/_all", authenticateJWT, adminRoutes.getSupersByHospitalId);
+app.get("/supers/:hospitalId([0-9]+)/_all", authenticateJWT, adminRoutes.getSupersByHospitalId);
 
 /////////////////////////////////// Technician Routes //////////////////////////////////
 app.get(

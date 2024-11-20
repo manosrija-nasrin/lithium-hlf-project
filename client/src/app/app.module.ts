@@ -50,6 +50,7 @@ import { BlockedDonorListForSuperComponent } from './super/blocked-donor-list-fo
 import { SuperComponent } from './super/super.component';
 import { SuperService } from './super/super.service';
 import { SuperRegisterComponent } from './super/super-register/super-register.component';
+import { SuperListForAdminComponent } from './admin/super-list-for-admin/super-list-for-admin.component';
 
 const components = [
   AppComponent,
@@ -71,6 +72,7 @@ const components = [
   DonorListForAdminComponent,
   DoctorComponent,
   DoctorRegisterComponent,
+  SuperListForAdminComponent,
   TechnicianRegisterComponent,
   ToolbarComponent,
   ToolbarButtonComponent,

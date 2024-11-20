@@ -157,7 +157,7 @@ class DonorContract extends PrimaryContract {
     async grantAccessToSuper(ctx, args) {
         args = JSON.parse(args);
         let donorId = args.donorId;
-        let superId = args.doctorId;
+        let superId = args.superId;
 
         const donor = await this.readDonor(ctx, donorId);
 
