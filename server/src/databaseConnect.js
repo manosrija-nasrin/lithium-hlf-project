@@ -421,7 +421,7 @@ exports.donateBloodRecord = async function (SlipNumber, HospitalName) {
 function queryHLFBloodTable() {
     connection.query('SELECT * FROM HLFBloodStore;', (error, results, fields) => {
         if (error) throw error;
-        console.log('bloodBagStore table:', results);
+        // console.log('bloodBagStore table:', results);
     });
 }
 

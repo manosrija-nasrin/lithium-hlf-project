@@ -5,6 +5,7 @@ const DonorContract = require('./donor-contract.js');
 const PrimaryContract = require('./primary-contract.js');
 const stringify = require('json-stringify-deterministic');
 const sortKeysRecursive = require('sort-keys-recursive');
+const { Certificate } = require('@fidm/x509');
 const privateCollection = 'blockedDonorPrivateCollection';
 
 class SuperContract extends PrimaryContract {
@@ -12,10 +13,49 @@ class SuperContract extends PrimaryContract {
     verifyClientOrgMatchesPeerOrg(ctx) {
         const clientMSPID = ctx.clientIdentity.getMSPID();
         const peerMSPID = ctx.stub.getMspID();
-
+        console.debug("Creator: ", ctx.stub.getCreator());
         if (clientMSPID !== peerMSPID) {
             throw new Error('client from org %v is not authorized to read or write private data from an org ' + clientMSPID + ' peer ' + peerMSPID);
         }
+    }
+
+    // Extract and deserialize the identity
+    async getTxnCreatorIdentity(ctx) {
+        const txnCreator = ctx.stub.getCreator();
+        const idBytes = txnCreator.idBytes;
+    
+        // Convert Uint8Array to a string (PEM format)
+        const pemCert = Buffer.from(idBytes).toString('utf8');
+    
+        console.debug("PEM Certificate:\n", pemCert);
+    
+        // Parse the certificate using @fidm/x509
+        const cert = Certificate.fromPEM(Buffer.from(pemCert));
+    
+        // Extract relevant identity details
+        const identity = {
+            mspid: txnCreator.mspid,
+            subject: cert.subject.commonName,
+            issuer: cert.issuer.commonName,
+            validity: {
+                start: cert.validFrom,
+                end: cert.validTo,
+            },
+        };
+    
+        return identity;
+    }
+
+    checkSuperIdentity(ctx, username) {
+        const txnCreator = ctx.stub.getCreator();
+        console.debug("Txn Creator: ", txnCreator);
+        console.debug("Txn Creator via Function: ", this.getTxnCreatorIdentity(ctx));
+        console.debug("Client ID: ", ctx.clientIdentity.getID());
+        console.debug("Client MSP ID: ", ctx.clientIdentity.getMSPID());
+        console.debug("Peer MSP ID: ", ctx.stub.getMspID());
+        if (username.includes("SUP")) {
+            return true;
+        } else return false;
     }
 
     fetchLimitedFields(assets, includeTimeStamp = false) {
@@ -111,22 +151,20 @@ class SuperContract extends PrimaryContract {
 
     async queryAllBlockedDonors(ctx, args) {
         try {
-            this.verifyClientOrgMatchesPeerOrg(ctx);
+            // this.verifyClientOrgMatchesPeerOrg(ctx);
             const parsedArgs = JSON.parse(args);
             const superId = parsedArgs.username;
+
+            if (superId === undefined || superId === null || superId === '') {
+                return { error: "Super ID not provided"};
+            } else if (!this.checkSuperIdentity(ctx, superId)) {
+                return { error: "Permission not granted to "+ superId};
+            }
+
             let resultsIterator = await ctx.stub.getPrivateDataByRange(privateCollection, '', '');
             let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
 
-            let permissionedAssets = [];
-            for (let i = 0; i < assets.length; i++) {
-                const obj = assets[i];
-                if (!('permissionGranted' in obj.Record && obj.Record.permissionGranted.includes(superId))) {
-                    DonorContract.prototype.grantAccessToSuper(JSON.stringify({"donorId": obj.Key, "superId": superId}));
-                }
-                permissionedAssets.push(assets[i]);
-            }
-
-            return this.fetchFields(permissionedAssets);
+            return this.fetchFields(assets);
         } catch (error) {
             console.error(error);
             return { error: error };

@@ -46,23 +46,32 @@ exports.createDonor = async (req, res) => {
   }
 
   const dat = JSON.parse(data);
-  let doctors, supers;
+  let doctorsOne, doctorsTwo, supersOne, supersTwo, allDoctors = [], allSupers = [];
   // Set up and connect to Fabric Gateway
   networkObj = await network.connectToNetwork(dat.changedBy);
+  let networkObjTwo = await network.connectToNetwork(dat.changedBy === 'hosp2admin' ? 'hosp1admin' : 'hosp2admin');
 
+  // grant permissions to all doctors and supers
+  // if (dat.changedBy === 'hosp1admin') {
+    doctorsOne = await network.getAllDoctorsByHospitalId(networkObj, 1);
+    supersOne = await network.getAllSupersByHospitalId(networkObj, 1);
+  // }
+  // else if (dat.changedBy === 'hosp2admin') {
+    doctorsTwo = await network.getAllDoctorsByHospitalId(networkObjTwo, 2);
+    supersTwo = await network.getAllSupersByHospitalId(networkObjTwo, 2);
+  // }
 
-  if (dat.changedBy === 'hosp1admin') {
-    doctors = await network.getAllDoctorsByHospitalId(networkObj, 1);
-    supers = await network.getAllSupersByHospitalId(networkObj, 1);
-  }
-  else if (dat.changedBy === 'hosp2admin') {
-    doctors = await network.getAllDoctorsByHospitalId(networkObj, 2);
-    supers = await network.getAllSupersByHospitalId(networkObj, 2);
-  }
+  allDoctors = allDoctors.concat(doctorsOne);
+  allDoctors = allDoctors.concat(doctorsTwo);
+  allSupers = allSupers.concat(supersOne);
+  allSupers = allSupers.concat(supersTwo);
+
+  // console.debug(typeof allSupers);
+  // console.debug(allSupers);
 
   let response;
   // Invoke the smart contract function
-  for (let doc of doctors) {
+  for (let doc of allDoctors) {
     if (!doc.id) {
       console.error("Doctor ID is undefined for a doctor.");
       continue;
@@ -77,15 +86,15 @@ exports.createDonor = async (req, res) => {
     }
   }
 
-  for (let doc of supers) {
-    if (!doc.id) {
+  for (let sup of allSupers) {
+    if (!sup.id) {
       console.error("Super ID is undefined for a super.");
       continue;
     }
 
-    let args = { donorId: dat.donorId, doctorId: doc.id };  // TODO: Implement a new function for supers
+    let args = { donorId: dat.donorId, superId: sup.id };  // TODO: Implement a new function for supers
     args = [JSON.stringify(args)];
-    response = await network.invoke(networkObj, false, 'DonorContract:grantAccessToDoctor', args);
+    response = await network.invoke(networkObj, false, 'DonorContract:grantAccessToSuper', args);
 
     if (response.error) {
       res.status(500).send(response.error);
@@ -212,6 +221,7 @@ exports.getSupersByHospitalId = async (req, res) => {
   const networkObj = await network.connectToNetwork(userId);
   // Use the gateway and identity service to get all users enrolled by the CA
   const response = await network.getAllSupersByHospitalId(networkObj, hospitalId);
+  console.debug("Supers:", response);
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
 };
 
@@ -226,10 +236,65 @@ exports.getAllDonors = async (req, res) => {
   await validateRole([ROLE_ADMIN, ROLE_DOCTOR], userRole, res);
   // Set up and connect to Fabric Gateway using the username in header
   const networkObj = await network.connectToNetwork(req.headers.username);
+  const networkObjOne = await network.connectToNetwork('hosp1admin');
+  const networkObjTwo = await network.connectToNetwork('hosp2admin');
   // Invoke the smart contract function
   const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllDonors',
     userRole === ROLE_DOCTOR ? req.headers.username : '');
+
+  let doctorsOne, doctorsTwo, supersOne, supersTwo, allDoctors = [], allSupers = [];
+
+  // grant permissions to all doctors and supers
+  doctorsOne = await network.getAllDoctorsByHospitalId(networkObjOne, 1);
+  supersOne = await network.getAllSupersByHospitalId(networkObjOne, 1);
+  doctorsTwo = await network.getAllDoctorsByHospitalId(networkObjTwo, 2);
+  supersTwo = await network.getAllSupersByHospitalId(networkObjTwo, 2);
+
+  allDoctors = allDoctors.concat(doctorsOne);
+  allDoctors = allDoctors.concat(doctorsTwo);
+  allSupers = allSupers.concat(supersOne);
+  allSupers = allSupers.concat(supersTwo);
+
   const parsedResponse = await JSON.parse(response);
+  console.debug(allSupers);
+  // console.debug(allDoctors);
+  // console.debug(parsedResponse);
+/*
+  for (let donor of parsedResponse) {
+    let donorId = donor.donorId;
+    console.debug(donorId);
+    // Invoke the smart contract function
+    for (let doc of allDoctors) {
+      if (!doc.id) {
+        console.error("Doctor ID is undefined for a doctor.");
+        break;
+      }
+
+      let args = { donorId: donorId, doctorId: doc.id };
+      args = [JSON.stringify(args)];
+      let responseDoctor = await network.invoke(networkObj, false, 'DonorContract:grantAccessToDoctor', args);
+
+      if (responseDoctor.error) {
+        console.error(responseDoctor.error);
+      }
+    }
+
+    for (let sup of allSupers) {
+      if (!sup.id) {
+        console.error("Super ID is undefined for a super.");
+        break;
+      }
+
+      let args = { donorId: donorId, superId: sup.id };  // TODO: Implement a new function for supers
+      args = [JSON.stringify(args)];
+      let responseSuper = await network.invoke(networkObj, false, 'DonorContract:grantAccessToSuper', args);
+
+      if (responseSuper.error) {
+        console.error(responseSuper.error);
+      }
+    }
+  }
+*/
   res.status(200).send(parsedResponse);
 };
 
