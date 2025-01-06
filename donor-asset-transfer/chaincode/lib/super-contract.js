@@ -52,7 +52,7 @@ class SuperContract extends PrimaryContract {
         console.debug("Txn Creator via Function: ", this.getTxnCreatorIdentity(ctx));
         console.debug("Client ID: ", ctx.clientIdentity.getID());
         console.debug("Client MSP ID: ", ctx.clientIdentity.getMSPID());
-        console.debug("Peer MSP ID: ", ctx.stub.getMspID());
+        console.debug("Peer MSP ID: ", ctx.stub.getMspID()); // 
         if (username.includes("SUP")) {
             return true;
         } else return false;

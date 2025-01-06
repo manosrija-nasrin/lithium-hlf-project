@@ -48,13 +48,13 @@ exports.createDonor = async (req, res) => {
   const dat = JSON.parse(data);
   let doctorsOne, doctorsTwo, supersOne, supersTwo, allDoctors = [], allSupers = [];
   // Set up and connect to Fabric Gateway
-  networkObj = await network.connectToNetwork(dat.changedBy);
-  let networkObjTwo = await network.connectToNetwork(dat.changedBy === 'hosp2admin' ? 'hosp1admin' : 'hosp2admin');
+  let networkObjOne = await network.connectToNetwork('hosp1admin');
+  let networkObjTwo = await network.connectToNetwork('hosp2admin');
 
   // grant permissions to all doctors and supers
   // if (dat.changedBy === 'hosp1admin') {
-    doctorsOne = await network.getAllDoctorsByHospitalId(networkObj, 1);
-    supersOne = await network.getAllSupersByHospitalId(networkObj, 1);
+    doctorsOne = await network.getAllDoctorsByHospitalId(networkObjOne, 1);
+    supersOne = await network.getAllSupersByHospitalId(networkObjOne, 1);
   // }
   // else if (dat.changedBy === 'hosp2admin') {
     doctorsTwo = await network.getAllDoctorsByHospitalId(networkObjTwo, 2);
