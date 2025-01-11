@@ -3,7 +3,7 @@
  */
 
 // Bring common classes into scope, and Fabric SDK network class
-const {ROLE_ADMIN, ROLE_DOCTOR, ROLE_DONOR, capitalize, getMessage, validateRole} = require('../utils.js');
+const {ROLE_ADMIN, ROLE_DOCTOR, ROLE_DONOR, capitalize, getMessage, validateRole, ROLE_SUPER} = require('../utils.js');
 const network = require('../../donor-asset-transfer/application-javascript/app.js');
 
 
@@ -15,12 +15,12 @@ const network = require('../../donor-asset-transfer/application-javascript/app.j
 exports.getDonorById = async (req, res) => {
   // User role from the request header is validated
   const userRole = req.headers.role;
-  await validateRole([ROLE_DOCTOR, ROLE_DONOR], userRole, res);
+  await validateRole([ROLE_DOCTOR, ROLE_DONOR, ROLE_SUPER], userRole, res);
   const donorId = req.params.donorId;
   // Set up and connect to Fabric Gateway
   const networkObj = await network.connectToNetwork(req.headers.username);
   // Invoke the smart contract function
-  const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:readDonor', donorId);
+  const response = await network.invoke(networkObj, true, 'DoctorContract:readDonor', donorId);
   (response.error) ? res.status(400).send(response.error) : res.status(200).send(JSON.parse(response));
 };
 

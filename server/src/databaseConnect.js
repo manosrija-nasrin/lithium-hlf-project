@@ -1,32 +1,33 @@
-var mysql      = require('mysql');
+var mysql = require('mysql');
 
 let connection;
+const crossMatchTable = 'HLFPendingCrossMatchBloodBags';
 
 function handleDisconnect() {
-  connection = mysql.createConnection({
-    host     : 'blqj8qqclqzg8w7dk5bs-mysql.services.clever-cloud.com',
-    user     : 'ubzi27y7l0wv8xkr',
-    password : 'UqE0X6WhPSZZvw71ybHi',
-    database : 'blqj8qqclqzg8w7dk5bs'
-  });
+    connection = mysql.createConnection({
+        host: 'blqj8qqclqzg8w7dk5bs-mysql.services.clever-cloud.com',
+        user: 'ubzi27y7l0wv8xkr',
+        password: 'UqE0X6WhPSZZvw71ybHi',
+        database: 'blqj8qqclqzg8w7dk5bs'
+    });
 
-  connection.connect(err => {
-    if (err) {
-      console.error('Error connecting to database:', err);
-      setTimeout(handleDisconnect, 2000); // Retry after 2 seconds
-    }
-    console.log('Connected to the database');
-    queryHLFBloodTable();
-    
-  });
+    connection.connect(err => {
+        if (err) {
+            console.error('Error connecting to database:', err);
+            setTimeout(handleDisconnect, 2000); // Retry after 2 seconds
+        }
+        console.log('Connected to the database');
+        queryHLFBloodTable();
 
-  connection.on('error', err => {
-    if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-      handleDisconnect(); // Reconnect on connection lost
-    } else {
-      throw err;
-    }
-  });
+    });
+
+    connection.on('error', err => {
+        if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+            handleDisconnect(); // Reconnect on connection lost
+        } else {
+            throw err;
+        }
+    });
 }
 
 handleDisconnect();
@@ -50,16 +51,16 @@ function createBloodTable() {
 	    DateOfExpiry DATE,
 	    Quantity INT,
 	    BloodGroup VARCHAR(7),
-            Allocated VARCHAR(100),
-            CrossMatched VARCHAR(100),
-            AllocatedTo VARCHAR(100),
-            Donated VARCHAR(100),
-            DonationDate VARCHAR(100),
+        Allocated VARCHAR(100),
+        CrossMatched VARCHAR(100),
+        AllocatedTo VARCHAR(100),
+        Donated VARCHAR(100),
+        DonationDate VARCHAR(100),
 	    PRIMARY KEY (BagUnitNo, BagSegmentNo),
 	    FOREIGN KEY (HospitalName) REFERENCES Hospital(HospitalName)
 	);
     `;
-    
+
     connection.query(sql, (error, result) => {
         if (error) {
             console.error('Error creating table:', error);
@@ -69,8 +70,107 @@ function createBloodTable() {
     });
 }
 
+///////////////////////////// CROSS MATCH TABLE /////////////////////////////////////////////
+
+function createPendingCrossmatchBloodBags() {
+    const sql = `
+       CREATE TABLE IF NOT EXISTS ${crossMatchTable} (
+	    BagUnitNo VARCHAR(100),
+	    BagSegmentNo VARCHAR(100),
+	    HospitalName VARCHAR(100),
+        DonatedBy VARCHAR(10),
+        CrossMatched VARCHAR(100),
+	    PRIMARY KEY (BagUnitNo, BagSegmentNo),
+	    FOREIGN KEY (HospitalName) REFERENCES Hospital(HospitalName)
+	);
+    `;
+
+    connection.query(sql, (error, result) => {
+        if (error) {
+            console.error('Error creating table:', error);
+            return;
+        }
+        console.log('Table created successfully');
+    });
+}
+
+exports.insertDonatedBloodBagForCrossMatch = async function name(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy) {
+    // TODO: Insert blood bag donated but pending crossmatch
+    const sql = `INSERT INTO ${crossMatchTable}(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy, CrossMatched)
+            VALUES (?, ?, ?, ?, 'false')`;
+    try {
+        // Execute SQL query
+        const result = await new Promise((resolve, reject) => {
+            connection.query(sql, [BagUnitNo, BagSegmentNo, HospitalName, DonatedBy], (error, result) => {
+                if (error) {
+                    console.error('Error inserting Blood:', error);
+                    reject(error);
+                    return;
+                }
+                console.log('Blood record created successfully in cross-match table');
+                resolve(result);
+            });
+        });
+        return result;
+    } catch (error) {
+        // Handle SQL query execution error
+        console.error('Error inserting Blood:', error);
+        throw error;
+    }
+}
+
+exports.getDonorOfBloodBag = async function (BagUnitNo, BagSegmentNo, HospitalName) {
+    const sql = `SELECT DonatedBy
+                FROM ${crossMatchTable}
+                WHERE BagUnitNo=? AND BagSegmentNo=? AND HospitalName=? AND CrossMatched='false'`;
+    try {
+        // Execute SQL query
+        const result = await new Promise((resolve, reject) => {
+            connection.query(sql, [BagUnitNo, BagSegmentNo, HospitalName], (error, result) => {
+                if (error) {
+                    console.error('Error finding Blood Bag:', error);
+                    reject(error);
+                    return;
+                }
+                console.log('Blood records fetched successfully:', result);
+                resolve(result);
+            });
+        });
+        return result;
+    } catch (error) {
+        // Handle SQL query execution error
+        console.error('Error fetching Blood:', error);
+        throw error;
+    }
+}
+
+exports.updateCrossMatchStatus = async function (BagUnitNo, BagSegmentNo, HospitalName, Status) {
+    const crossMatchStatus = Status === 'false' ? 'failed' : 'passed';
+    const sql = `
+        UPDATE HLFBloodStore SET CrossMatched = '${crossMatchStatus}'
+        WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ? AND CrossMatched = 'false';
+        `;
+    try {
+        const result = await new Promise((resolve, reject) => {
+            connection.query(sql, [BagUnitNo, BagSegmentNo, HospitalName], (error, result) => {
+                if (error) {
+                    console.error('Error updating blood:', error);
+                    reject(error);
+                    return;
+                }
+                console.log('Blood updation Successful:', result);
+                resolve(result);
+            });
+        });
+        return result;
+    } catch (error) {
+        // Handle SQL query execution error
+        console.log('Blood allocation updated successfully');
+        throw error;
+    }
+}
+
 exports.insertBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup) {
-    console.log("IN DB");
     console.log(BagUnitNo + " " + BagSegmentNo + " " + HospitalName);
     const sql = `
         INSERT INTO HLFBloodStore(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, Allocated, AllocatedTo, CrossMatched,Donated,DonationDate)
@@ -98,9 +198,9 @@ exports.insertBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, Dat
     }
 };
 
-exports.getBloodByExpiry = async function (HospitalName, BloodGroup, X){
-        const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-        const sql = `
+exports.getBloodByExpiry = async function (HospitalName, BloodGroup, X) {
+    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+    const sql = `
         SELECT BagUnitNo,BagSegmentNo FROM
         (SELECT * FROM HLFBloodStore
         WHERE Allocated = 'false' AND BloodGroup = ? AND HospitalName = ? AND DateOfExpiry >= ?
@@ -108,7 +208,7 @@ exports.getBloodByExpiry = async function (HospitalName, BloodGroup, X){
         LIMIT ?) AS DATA
        
         `;
-        try {
+    try {
         // Execute SQL query
         const result = await new Promise((resolve, reject) => {
             connection.query(sql, [BloodGroup, HospitalName, today, X], (error, result) => {
@@ -118,7 +218,7 @@ exports.getBloodByExpiry = async function (HospitalName, BloodGroup, X){
                     return;
                 }
                 console.log('Blood records fetched successfully:', result);
-            resolve(result);
+                resolve(result);
             });
         });
         return result;
@@ -129,13 +229,13 @@ exports.getBloodByExpiry = async function (HospitalName, BloodGroup, X){
     }
 }
 
-exports.allocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, SlipNo){
-        const sql = `
+exports.allocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, SlipNo) {
+    const sql = `
         UPDATE HLFBloodStore SET Allocated = 'true', AllocatedTo = ?
         WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ?;
         `;
-        try {
-        
+    try {
+
         const result = await new Promise((resolve, reject) => {
             connection.query(sql, [SlipNo, BagUnitNo, BagSegmentNo, HospitalName], (error, result) => {
                 if (error) {
@@ -144,7 +244,7 @@ exports.allocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, S
                     return;
                 }
                 console.log('Blood selection Successfully:', result);
-            resolve(result);
+                resolve(result);
             });
         });
         return result;
@@ -155,15 +255,15 @@ exports.allocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, S
     }
 }
 
-exports.bagInfo = async function (BloodBagUnitNo, BloodBagSegmentNo, HospitalName){
-        const sql = `
+exports.bagInfo = async function (BloodBagUnitNo, BloodBagSegmentNo, HospitalName) {
+    const sql = `
         SELECT BloodGroup,AllocatedTo FROM HLFBloodStore
         WHERE BagUnitNo=? AND BagSegmentNo =? AND HospitalName =?;  
         `;
-        try {
+    try {
         // Execute SQL query
         const result = await new Promise((resolve, reject) => {
-            console.log(BloodBagUnitNo+" "+BloodBagSegmentNo+" "+HospitalName);
+            console.log(BloodBagUnitNo + " " + BloodBagSegmentNo + " " + HospitalName);
             connection.query(sql, [BloodBagUnitNo, BloodBagSegmentNo, HospitalName], (error, result) => {
                 if (error) {
                     console.error('Error finding bag info:', error);
@@ -171,10 +271,10 @@ exports.bagInfo = async function (BloodBagUnitNo, BloodBagSegmentNo, HospitalNam
                     return;
                 }
                 console.log('Bag Info fetched successfully', result);
-            resolve(result);
+                resolve(result);
             });
         });
-        return {data:result};
+        return { data: result };
     } catch (error) {
         // Handle SQL query execution error
         console.error('Error fetching Blood:', error);
@@ -182,7 +282,7 @@ exports.bagInfo = async function (BloodBagUnitNo, BloodBagSegmentNo, HospitalNam
     }
 }
 
-exports.slips = async function(HospitalName) {
+exports.slips = async function (HospitalName) {
     const sql = `
         SELECT DISTINCT(AllocatedTo) FROM HLFBloodStore
         WHERE Allocated="true" AND Donated = "false" AND HospitalName = ?;
@@ -211,13 +311,13 @@ exports.slips = async function(HospitalName) {
 };
 
 
-exports.deAllocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName){
-        const sql = `
+exports.deAllocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName) {
+    const sql = `
         UPDATE HLFBloodStore SET Allocated = 'false', AllocatedTo = '', CrossMatched='false'
         WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ?;
         `;
-        try {
-        
+    try {
+
         const result = await new Promise((resolve, reject) => {
             connection.query(sql, [BagUnitNo, BagSegmentNo, HospitalName], (error, result) => {
                 if (error) {
@@ -226,7 +326,7 @@ exports.deAllocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName)
                     return;
                 }
                 console.log('Blood allocation updated successfully', result);
-            resolve(result);
+                resolve(result);
             });
         });
         return result;
@@ -237,13 +337,13 @@ exports.deAllocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName)
     }
 }
 
-exports.addCrossMatch = async function (BagUnitNo, BagSegmentNo, HospitalName){
-        const sql = `
+exports.addCrossMatch = async function (BagUnitNo, BagSegmentNo, HospitalName) {
+    const sql = `
         UPDATE HLFBloodStore SET  CrossMatched = 'true'
         WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ?;
         `;
-        try {
-        
+    try {
+
         const result = await new Promise((resolve, reject) => {
             connection.query(sql, [BagUnitNo, BagSegmentNo, HospitalName], (error, result) => {
                 if (error) {
@@ -252,7 +352,7 @@ exports.addCrossMatch = async function (BagUnitNo, BagSegmentNo, HospitalName){
                     return;
                 }
                 console.log('Blood updated successfully', result);
-            resolve(result);
+                resolve(result);
             });
         });
         return result;
@@ -264,23 +364,23 @@ exports.addCrossMatch = async function (BagUnitNo, BagSegmentNo, HospitalName){
 }
 
 
-exports.deleteBloodRecord = async function (BagUnitNo, BagSegmentNo, HospitalName){
-        const DonationDate = new Date().toISOString().split('T')[0];
-        const sql = `
+exports.deleteBloodRecord = async function (BagUnitNo, BagSegmentNo, HospitalName) {
+    const DonationDate = new Date().toISOString().split('T')[0];
+    const sql = `
         UPDATE HLFBloodStore SET  Donated = 'true', DonationDate = ?
         WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ?;
         `;
-        try {
-        
+    try {
+
         const result = await new Promise((resolve, reject) => {
-            connection.query(sql, [DonationDate,BagUnitNo, BagSegmentNo, HospitalName], (error, result) => {
+            connection.query(sql, [DonationDate, BagUnitNo, BagSegmentNo, HospitalName], (error, result) => {
                 if (error) {
                     console.error('Error deleting blood:', error);
                     reject(error);
                     return;
                 }
                 console.log('Blood deleted successfully', result);
-            resolve(result);
+                resolve(result);
             });
         });
         return result;
@@ -291,14 +391,14 @@ exports.deleteBloodRecord = async function (BagUnitNo, BagSegmentNo, HospitalNam
     }
 }
 
-exports.donateBloodRecord = async function (SlipNumber, HospitalName){
-        const DonationDate = new Date().toISOString().split('T')[0];
-        const sql = `
+exports.donateBloodRecord = async function (SlipNumber, HospitalName) {
+    const DonationDate = new Date().toISOString().split('T')[0];
+    const sql = `
         UPDATE HLFBloodStore SET  Donated = 'true', DonationDate = ?
         WHERE AllocatedTo = ? AND HospitalName = ?;
         `;
-        try {
-        
+    try {
+
         const result = await new Promise((resolve, reject) => {
             connection.query(sql, [DonationDate, SlipNumber, HospitalName], (error, result) => {
                 if (error) {
@@ -307,7 +407,7 @@ exports.donateBloodRecord = async function (SlipNumber, HospitalName){
                     return;
                 }
                 console.log('Blood donated successfully', result);
-            resolve(result);
+                resolve(result);
             });
         });
         return result;
@@ -320,9 +420,9 @@ exports.donateBloodRecord = async function (SlipNumber, HospitalName){
 
 function queryHLFBloodTable() {
     connection.query('SELECT * FROM HLFBloodStore;', (error, results, fields) => {
-  if (error) throw error;
-  console.log('bloodBagStore table:', results);
-});
+        if (error) throw error;
+        // console.log('bloodBagStore table:', results);
+    });
 }
 
 ///////////////////////////// CREATE HOSPITAL /////////////////////////////////////////////
@@ -337,7 +437,7 @@ function createHospitalTable() {
 	    Address VARCHAR(50)
             );
     `;
-    
+
     connection.query(sql, (error, result) => {
         if (error) {
             console.error('Error creating table:', error);
@@ -348,7 +448,7 @@ function createHospitalTable() {
 }
 
 ///////////////////////////// INSERT HOSPITAL /////////////////////////////////////////////
-exports.insertHospital= async (req, res) => {
+exports.insertHospital = async (req, res) => {
     console.log(req.body);
     const { HospitalName, City, Area, Latitude, Longitude, Address } = req.body;
 
@@ -382,43 +482,43 @@ function insertHospitalAsync(HospitalName, City, Area, Latitude, Longitude, Addr
 
 
 ////////////////////////////////// QUERY ALL HOSPITALS ///////////////////////////////////////
-exports.queryHospital=async (req, res) => {
-  try {
-    const results = await queryHospitalTable();
-    //console.log(results);
-    res.status(200).json(results);
-  } catch (error) {
-    console.error('Error handling request:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
+exports.queryHospital = async (req, res) => {
+    try {
+        const results = await queryHospitalTable();
+        //console.log(results);
+        res.status(200).json(results);
+    } catch (error) {
+        console.error('Error handling request:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 }
 
 async function queryHospitalTable() {
-  try {
-    const results = await new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM Hospital;', (error, results, fields) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(results);
-        }
-      });
-    });
+    try {
+        const results = await new Promise((resolve, reject) => {
+            connection.query('SELECT * FROM Hospital;', (error, results, fields) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(results);
+                }
+            });
+        });
 
-    console.log('Hospital table:', results);
-    return results;
-  } catch (error) {
-    console.error('Error querying Hospital table:', error);
-    throw error;
-  }
+        console.log('Hospital table:', results);
+        return results;
+    } catch (error) {
+        console.error('Error querying Hospital table:', error);
+        throw error;
+    }
 }
 
 ///////////////////////////////////////// QUERY STOCKS BELOW THRESHOLD /////////////////////////////
-exports.getStocksBelowThreshold=async (req, res) => {
-  try {
-    const threshold = req.query.threshold;
-    console.log(threshold);
-    const sql = `
+exports.getStocksBelowThreshold = async (req, res) => {
+    try {
+        const threshold = req.query.threshold;
+        console.log(threshold);
+        const sql = `
       SELECT h.HospitalName, bg.GroupType AS BloodGroup, COALESCE(SUM(CASE WHEN bb.Allocated != 'true' THEN bb.Quantity ELSE 0 END), 0) AS TotalBloodQuantity
       FROM Hospital h
       CROSS JOIN BloodGroups bg
@@ -428,51 +528,51 @@ exports.getStocksBelowThreshold=async (req, res) => {
       HAVING TotalBloodQuantity < ?;
     `;
 
-    const results = await new Promise((resolve, reject) => {
-      connection.query(sql, [threshold], (error, results, fields) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(results);
-        }
-      });
-    });
+        const results = await new Promise((resolve, reject) => {
+            connection.query(sql, [threshold], (error, results, fields) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(results);
+                }
+            });
+        });
 
-    console.log('Result:', results);
-    res.json(results);
-  } catch (error) {
-    console.error('Error querying stocks below threshold:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
+        console.log('Result:', results);
+        res.json(results);
+    } catch (error) {
+        console.error('Error querying stocks below threshold:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 }
 
 
 ///////////////////////////////////////// CREATE AND QUERY BLOODGROUPS TABLE /////////////////////////////
 function createBloodGroupTable() {
-	const sql1 =`CREATE TABLE BloodGroups (GroupType VARCHAR(3) PRIMARY KEY);`;
-	connection.query(sql1, (error, result) => {
-		if (error) {
-		    console.error('Error creating BloodGroups table:', error);
-		    return;
-		}
-		console.log('BloodGroups table created successfully');
-	    });
+    const sql1 = `CREATE TABLE BloodGroups (GroupType VARCHAR(3) PRIMARY KEY);`;
+    connection.query(sql1, (error, result) => {
+        if (error) {
+            console.error('Error creating BloodGroups table:', error);
+            return;
+        }
+        console.log('BloodGroups table created successfully');
+    });
 
-	const sql2=`INSERT INTO BloodGroups (GroupType) VALUES ('A+'), ('A-'), ('B+'), ('B-'), ('AB+'), ('AB-'), ('O+'), ('O-');`;
-	connection.query(sql2,(error, result) => {
-		if (error) {
-		    console.error('Error inserting blood groups:', error);
-		    return;
-		}
-		console.log('Blood groups created successfully');
-	    });
+    const sql2 = `INSERT INTO BloodGroups (GroupType) VALUES ('A+'), ('A-'), ('B+'), ('B-'), ('AB+'), ('AB-'), ('O+'), ('O-');`;
+    connection.query(sql2, (error, result) => {
+        if (error) {
+            console.error('Error inserting blood groups:', error);
+            return;
+        }
+        console.log('Blood groups created successfully');
+    });
 }
 
 
 function queryBloodGroupTable() {
     connection.query('SELECT * FROM BloodGroups;', (error, results, fields) => {
-  if (error) throw error;
-  console.log('BloodGroups table:', results);
-});
+        if (error) throw error;
+        console.log('BloodGroups table:', results);
+    });
 }
 

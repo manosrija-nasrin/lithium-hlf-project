@@ -1,0 +1,114 @@
+Script started on 2024-10-30 15:08:20+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="133" LINES="30"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd[K[Kcd donor-asset-transfer/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mdonor-asset-transfer $[00m cd application-typescript/sr[K[K
+]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m npm install
+[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm install\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K[K-\[K|[K/[K[K-\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K[K-\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a 
+good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.[K
+\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported[K
+|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m glob@7.2.3: Glob versions prior to v9 are no longer supported[K
+|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead[K
+|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead[K
+/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other optio
+ns.[K
+-[K\[K|[K/[K]0;node-gyp-[K\[K|[K/[K-[K\[K|[K/[K-[K]0;Windows PowerShell\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[K/-[K\[K|[K/[K[K
+> off-chain-data@1.0.0 prepare[K
+> npm run build[K
+[K
+[K]0;npm]0;npm prefix]0;npm]0;npm run build[25l
+> off-chain-data@1.0.0 build
+> tsc[23X[21;1H[?25h[K]0;C:\windows\system32\cmd.exe [K[K
+added 164 packages, and audited 165 packages in 25s[K
+[K
+40 packages are looking for funding[K
+  run `npm fund` for details[K
+[K
+found [1m[92m0[m vulnerabilities[K
+[K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m npm start listen
+[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start listen
+> off-chain-data@1.0.0 start
+> node ./dist/app listen
+
+[KStarting event listening from block [33m0n[m
+Last processed transaction ID within block: [90mundefined[m
+
+Unexpected application error: GatewayError: 14 UNAVAILABLE: No connection established. Last error: connect ECONNREFUSED 127.0.0.1:705
+1 (2024-10-30T09:39:26.471Z)
+    at newGatewayError [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabric-
+gateway\dist\gatewayerror.js:54:12[90m)[m[K
+    at rethrowGrpcError [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabric
+-gateway\dist\client.js:126:50[90m)[m[K
+    at Object.next [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabric-gate
+way\dist\client.js:119:17[90m)[m[K
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[m[K
+    at async Object.next [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabri
+c-gateway\dist\blockeventsrequest.js:107:28[90m)[m[K
+    at async main [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mdist\listen.js:83:30[90m)[m[K
+    at async main [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mdist\app.js:34:13[90m)[m {[K
+  code: [33m14[m,[K
+  details: [],
+  cause: Error: 14 UNAVAILABLE: No connection established. Last error: connect ECONNREFUSED 127.0.0.1:7051 (2024-10-30T09:39:26.471Z)
+      at callErrorFromStatus [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@grpc[24m\grpc-js\
+build\src\call.js:31:19[90m)[m[K
+      at Object.onReceiveStatus [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@grpc[24m\grpc-
+js\build\src\client.js:421:73[90m)[m[K
+      at Object.onReceiveStatus [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@grpc[24m\grpc-
+js\build\src\client-interceptors.js:323:181[90m)[m[K
+      at [90mF:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@grpc[24m\grpc-js\build\src\resolving-c
+all.js:129:78
+  [90m    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)[m[K
+  for call at
+      at Client.makeBidiStreamRequest [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@grpc[24m
+\grpc-js\build\src\client.js:405:32[90m)[m[K[4m
+[24m      at #makeBidiStreamRequest [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledge[24m
+[4mr[24m\fabric-gateway\dist\client.js:79:47[90m)[4m[m[K
+[24m      at GatewayClientImpl.blockEvents [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyp[24m
+[4merledger[24m\fabric-gateway\dist\client.js:69:43[90m)[4m[m[K
+[24m      at BlockEventsRequestImpl.getEvents [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@[24m
+[4mhyperledger[24m\fabric-gateway\dist\blockeventsrequest.js:49:40[90m)[4m[m[K[24m
+      at async main [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mdist\listen.js:78:24[90m)[m[K
+      at async main [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mdist\app.js:34:13[90m)[m {[K
+    code: [33m14[m,[K
+    details: [32m'No connection established. Last error: connect ECONNREFUSED 127.0.0.1:7051 (2024-10-30T09:39:26.471Z)'[m,[K
+    metadata: Metadata { internalRepr: Map(0) {}, options: {} }
+  }
+}
+[K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m npm start listen
+[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start listen
+> off-chain-data@1.0.0 start
+> node ./dist/app listen
+
+[KStarting event listening from block [33m0n[m
+Last processed transaction ID within block: [90mundefined[m
+
+Unexpected application error: Error: Unexpected status response: 404
+    at getBlock [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabric-gateway
+\dist\blockeventsrequest.js:117:15[90m)[m[K
+    at [90mF:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabric-gateway\dist\bloc
+keventsrequest.js:51:109
+    at Object.next [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabric-gate
+way\dist\blockeventsrequest.js:110:24[90m)[m[K
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[m[K
+    at async main [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mdist\listen.js:83:30[90m)[m[K
+    at async main [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mdist\app.js:34:13[90m)[m[K
+[K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m npm start listen
+[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start listen
+> off-chain-data@1.0.0 start
+> node ./dist/app listen
+
+[KStarting event listening from block [33m0n[m
+Last processed transaction ID within block: [90mundefined[m
+
+Unexpected application error: Error: Unexpected status response: 404
+    at getBlock [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabric-gateway
+\dist\blockeventsrequest.js:117:15[90m)[m[K
+    at [90mF:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabric-gateway\dist\bloc
+keventsrequest.js:51:109
+    at Object.next [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mnode_modules\[4m@hyperledger[24m\fabric-gate
+way\dist\blockeventsrequest.js:110:24[90m)[m[K
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[m[K
+    at async main [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mdist\listen.js:83:30[90m)[m[K
+    at async main [90m(F:\blood-data-management-system\donor-asset-transfer\application-typescript\[mdist\app.js:34:13[90m)[m[K
+[K[K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mapplication-typescript $[00m exit
+exit
+
+Script done on 2024-10-30 15:52:40+05:30 [COMMAND_EXIT_CODE="1"]

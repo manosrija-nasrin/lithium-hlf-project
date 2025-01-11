@@ -9,6 +9,9 @@ node_modules/
 
 .gitignore
 
+# credentials
+credentials/
+
 # channel artifacts
 channel-artifacts/
 organizations/peerOrganizations

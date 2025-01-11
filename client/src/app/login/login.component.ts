@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
   public error = { message: '' };
 
   constructor(private authService: AuthService,
-              private router: Router,
-              private readonly modal: NgbModal
+    private router: Router,
+    private readonly modal: NgbModal
   ) { }
 
   ngOnInit(): void {
@@ -74,6 +74,13 @@ export class LoginComponent implements OnInit {
             (err: any) => this.error.message = err.message
           );
         break;
+      case RoleEnum.SUPER:
+        this.authService.loginSuperUser(new HospitalUser(this.role, this.hospitalId, this.username, this.pwd))
+          .subscribe(
+            (res: any) => this.afterSuccessfulLogin(res),
+            (err: any) => this.error.message = err.message
+          );
+        break;
     }
   }
 
@@ -101,6 +108,6 @@ export class LoginComponent implements OnInit {
 
     this.resetFields();
 
-    this.router.navigate([ '/', role, userId]);
+    this.router.navigate(['/', role, userId]);
   }
 }
