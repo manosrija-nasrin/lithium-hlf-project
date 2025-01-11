@@ -27,7 +27,7 @@ class AdminContract extends PrimaryContract {
             throw new Error(`Empty or null values should not be passed for password parameter`);
         }
 
-        let newDonor = await new Donor(args.donorId, args.firstName, args.lastName, args.password, args.dob,
+        let newDonor = new Donor(args.donorId, args.firstName, args.lastName, args.password, args.dob,
             args.phoneNumber, args.aadhar, args.address, args.bloodGroup);
         const exists = await this.donorExists(ctx, newDonor.donorId);
         if (exists) {
@@ -88,22 +88,20 @@ class AdminContract extends PrimaryContract {
     }
 
     fetchLimitedFields = asset => {
-    let newArray = [];
-    for (let i = 0; i < asset.length; i++) 
-    {
-      const obj = asset[i];
-      if(obj.Key && obj.Key.startsWith('PID'))
-      {         
-	newArray.push({
-        donorId: obj.Key,
-        firstName: obj.Record.firstName,
-        lastName: obj.Record.lastName,
-        phoneNumber: obj.Record.phoneNumber,
-        aadhar: obj.Record.aadhar
-            });
-     }
+        let newArray = [];
+        for (let i = 0; i < asset.length; i++) {
+            const obj = asset[i];
+            if (obj.Key && obj.Key.startsWith('PID')) {
+                newArray.push({
+                    donorId: obj.Key,
+                    firstName: obj.Record.firstName,
+                    lastName: obj.Record.lastName,
+                    phoneNumber: obj.Record.phoneNumber,
+                    aadhar: obj.Record.aadhar
+                });
+            }
+        }
+        return newArray;
     }
-    return newArray;
-}
 }
 module.exports = AdminContract;

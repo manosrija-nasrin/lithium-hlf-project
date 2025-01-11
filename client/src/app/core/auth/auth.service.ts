@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 import { tap } from 'rxjs/operators';
 
@@ -22,10 +22,14 @@ export class AuthService {
     return this.http.post<any>(this.loginUrl, adminUser);
   }
 
+  public loginSuperUser(superUser: HospitalUser): any {
+    return this.http.post<any>(this.loginUrl, superUser);
+  }
+
   public loginDoctorUser(doctorUser: HospitalUser): any {
     return this.http.post<any>(this.loginUrl, doctorUser);
   }
-  
+
   public loginTechnicianUser(technicianUser: HospitalUser): any {
     return this.http.post<any>(this.loginUrl, technicianUser);
   }

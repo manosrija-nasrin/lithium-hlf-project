@@ -3,11 +3,11 @@
  */
 
 // Bring common classes into scope, and Fabric SDK network class
-const {ROLE_DOCTOR, capitalize, getMessage, validateRole} = require('../utils.js');
+const { ROLE_DOCTOR, capitalize, getMessage, validateRole } = require('../utils.js');
 const network = require('../../donor-asset-transfer/application-javascript/app.js');
 const network1 = require('../../receiver-asset-transfer/application-javascript/app.js');
 const databaseRoutes = require('./databaseConnect');
-const url=require('url');
+const url = require('url');
 
 
 /**
@@ -22,7 +22,7 @@ exports.updateDonorMedicalDetails = async (req, res) => {
   let args = req.body;
   args.donorId = req.params.donorId;
   args.changedBy = req.headers.username;
-  args= [JSON.stringify(args)];
+  args = [JSON.stringify(args)];
   // Set up and connect to Fabric Gateway
   const networkObj = await network.connectToNetwork(req.headers.username);
   // Invoke the smart contract function
@@ -30,30 +30,33 @@ exports.updateDonorMedicalDetails = async (req, res) => {
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(getMessage(false, 'Successfully Updated Donor.'));
 };
 
-exports.screenDonor = async (req,res) => {
+exports.screenDonor = async (req, res) => {
   const userRole = req.headers.role;
   await validateRole([ROLE_DOCTOR], userRole, res);
-  let args=req.body;
+  let args = req.body;
   console.log(args);
-  args= [JSON.stringify(args)];
+  args = [JSON.stringify(args)];
   const networkObj = await network.connectToNetwork(req.headers.username);
   // Invoke the smart contract function
   const response = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:screenDonor', args);
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(getMessage(false, 'Screening successful.'));
 }
 
-exports.collectBlood = async (req,res) => {
+exports.collectBlood = async (req, res) => {
   const userRole = req.headers.role;
   await validateRole([ROLE_DOCTOR], userRole, res);
-  let args=req.body;
+  let args = req.body;
+  const rawArgs = args;
   console.log(args);
-  args= [JSON.stringify(args)];
+  args = [JSON.stringify(args)];
   const networkObj = await network.connectToNetwork(req.headers.username);
   // Invoke the smart contract function
   const response = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:bloodCollection', args);
-  let parsedVAL=JSON.parse(response);
-  console.log("HELLO"+parsedVAL);
+  let parsedVAL = JSON.parse(response);
+  // console.log("HELLO" + parsedVAL);
+  const hospitalName = rawArgs.doctorId.startsWith("HOSP1") ? "hospital 1" : (rawArgs.doctorId.startsWith("HOSP2") ? "hospital 2" : "hospital 3");
   await databaseRoutes.insertBlood(parsedVAL.bloodBagUnitNo, parsedVAL.bloodBagSegmentNo, parsedVAL.hospName, parsedVAL.dateOfCollection, parsedVAL.dateOfExpiry, parsedVAL.quantity, parsedVAL.bloodGroup);
+  await databaseRoutes.insertDonatedBloodBagForCrossMatch(rawArgs.bloodBagUnitNo, rawArgs.bloodBagSegmentNo, hospitalName, rawArgs.donorId);
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(getMessage(false, 'Blood Collection successful.'));
 }
 /**
@@ -74,7 +77,7 @@ exports.getDoctorById = async (req, res) => {
   const response = await network.getAllDoctorsByHospitalId(networkObj, hospitalId);
   // Filter the result using the doctorId
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(response.filter(
-    function(response) {
+    function (response) {
       return response.id === doctorId;
     },
   )[0]);
@@ -88,11 +91,11 @@ exports.MOCapproval = async (req, res) => {
   const doc = parsedUrl.query.doctorId;
   console.log(doc);
   const hospitalName = doc.startsWith("HOSP1") ? "hospital 1" : (doc.startsWith("HOSP2") ? "hospital 2" : "hospital 3");
-  
-  
-  let leftforapproval =await databaseRoutes.slips(hospitalName);
+
+
+  let leftforapproval = await databaseRoutes.slips(hospitalName);
   let leftForApprovalSlipNos = leftforapproval.data.map(item => item.AllocatedTo);
-  
+
   const networkObj = await network1.connectToNetwork(req.headers.username);
   const resultArray = [];
 
@@ -105,11 +108,11 @@ exports.MOCapproval = async (req, res) => {
     if (response && !response.error && response !== 'null') {
       try {
         //let jsonResponse = JSON.parse(response);
-        
+
         const responseString = response instanceof Buffer ? response.toString('utf8') : response;
         console.log('Response string:', responseString);
         const ans = JSON.parse(responseString);
-        ans.slipNumber=slipNo;
+        ans.slipNumber = slipNo;
         resultArray.push(ans);
       } catch (error) {
         console.error('Failed to parse response:', response);
@@ -123,17 +126,17 @@ exports.MOCapproval = async (req, res) => {
 exports.sendMOCapproval = async (req, res) => {
   const userRole = req.headers.role;
   await validateRole([ROLE_DOCTOR], userRole, res);
-  let args=req.body;
-  const doc=args.doctorId;
-  const slipNumber=args.slipNumber;
+  let args = req.body;
+  const doc = args.doctorId;
+  const slipNumber = args.slipNumber;
   const hospitalName = doc.startsWith("HOSP1") ? "hospital 1" : (doc.startsWith("HOSP2") ? "hospital 2" : "hospital 3");
   console.log(args);
-  args=[JSON.stringify(args)];
+  args = [JSON.stringify(args)];
   const networkObj = await network1.connectToNetwork(req.headers.username);
   const response = await network1.invoke(networkObj, false, capitalize(userRole) + 'Contract:sendMOCapproval', args);
   console.log(response);
   //update database for final-dispatch
-  await databaseRoutes.donateBloodRecord(slipNumber,hospitalName);
+  await databaseRoutes.donateBloodRecord(slipNumber, hospitalName);
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
 }
 

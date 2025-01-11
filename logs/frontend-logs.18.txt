@@ -1,0 +1,447 @@
+Script started on 2024-11-20 09:13:46+05:30 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd c
+client/      config/      credentials/ 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd client/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m nm s[K[K[Kpm start
+[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[25l
+> panel@0.0.0 start[40X
+> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[6;1H[?25h[K]0;C:\windows\system32\cmd.exe ]0;ng serve[36m-[m Generating browser application bundles...[36m-[m Generating browser application bundles...[1m[91m(node:10372) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is dep
+recated.[m[K[1m[91m
+(Use `node --trace-deprecation ...` to show where the warning was created)[m[K[36m
+\[m Generating browser application bundles (phase: building)...[K[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
+[1m[97m
+Initial Chunk Files[m   | [1m[97mNames[m         |      [1m[97mSize[m[30X[92m
+vendor.js[m             | vendor        |   [96m3.89 MB[m[30X[92m
+main.js[m               | main          | [96m599.30 kB[m[30X[92m
+styles.css, styles.js[m | styles        | [96m563.71 kB[m[30X[92m
+polyfills.js[m          | polyfills     | [96m484.61 kB[m[30X[92m
+runtime.js[m            | runtime       |   [96m6.15 kB[m[30X
+[79X[1m[97m
+ [m                     | [1m[97mInitial Total[m |   [1m[97m5.50 MB[m[30X
+[79X
+Build at: [1m[97m2024-11-20T03:46:44.085Z[m - Hash: [1m[97m98782022c3905a5a2885[m - Time: [1m[97m45583[mms[25l[22;1H** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+[113X
+[113X[92m
+√[m Compiled successfully.[89X
+[?25h[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
+[1m[97m
+Initial Chunk Files[m   | [1m[97mNames[m  |      [1m[97mSize[22m[92m
+main.js[m               | main   | [96m599.64 kB[92m
+styles.css, styles.js[m | styles | [96m563.71 kB[m
+[42X
+3 unchanged chunks[24X
+
+Build at: [1m[97m2024-11-20T05:35:17.623Z[m - Hash: [1m[97mfe0ce49cdae8219391e0[m - Time: [1m[97m3945[mms[K
+
+[92m√[m Compiled successfully.[K
+[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[32m√[m Browser application bundle generation complete.
+
+[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
+[92mmain.js[m             | main  | [96m612.58 kB[m[K
+
+4 unchanged chunks
+
+Build at: [1m[97m2024-11-20T05:36:54.094Z[m - Hash: [1m[97m26d137fccf878d32b2cc[m - Time: [1m[97m3309[mms[K
+
+[92m√[m Compiled successfully.[K
+[1m[91m    [m
+[1m[91m    Error: [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m1[m - [91merror[90m NG8001: [m'app-toolbar' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m14[m - [91merror[90m NG8002: [mCan't bind to 'text' since it isn't a
+ known property of 'app-toolbar'.
+[1m[91m    1. If 'app-toolbar' is an Angular component and it has 'text' input, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[m[K
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m             ~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-a[m[K[1m[91mdmin/super-list-for-admin.component.html[m:[93m2[m:[93m3[m - [91merror[90m NG8001: [m'app-toolbar-button' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar-button' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to s[m
+[1m[91muppress this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m2[m   <app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>[K
+[1m[91m    [30m[101m [m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m29[m:[93m43[m - [91merror[90m NG8004: [mNo pipe found with name 'async'.    
+[1m[91m    [m[K
+[1m[91m    [30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
+[1m[91m    [30m[101m  [m [91m                                          ~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [m[K
+[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
+
+[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
+[92mmain.js[m             | main  | [96m612.58 kB[m[K
+
+4 unchanged chunks
+
+Build at: [1m[97m2024-11-20T05:38:08.930Z[m - Hash: [1m[97mc3d85b3ff986d97cafa9[m - Time: [1m[97m824[mms[K
+
+[92m√[m Compiled successfully.[K
+[1m[91m    [m
+[1m[91m    Error: [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m1[m - [91merror[90m NG8001: [m'app-toolbar' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m14[m - [91merror[90m NG8002: [mCan't bind to 'text' since it isn't a
+ known property of 'app-toolbar'.
+[1m[91m    1. If 'app-toolbar' is an Angular component and it has 'text' input, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[m[K
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m             ~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-a[m[K[1m[91mdmin/super-list-for-admin.component.html[m:[93m2[m:[93m3[m - [91merror[90m NG8001: [m'app-toolbar-button' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar-button' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to s[m
+[1m[91muppress this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m2[m   <app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>[K
+[1m[91m    [30m[101m [m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m29[m:[93m43[m - [91merror[90m NG8004: [mNo pipe found with name 'async'.    
+[1m[91m    [m[K
+[1m[91m    [30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
+[1m[91m    [30m[101m  [m [91m                                          ~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [m[K
+[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
+
+[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
+[92mmain.js[m             | main  | [96m612.58 kB[m[K
+
+4 unchanged chunks
+
+Build at: [1m[97m2024-11-20T05:38:54.135Z[m - Hash: [1m[97m9816edcfb20cbf830463[m - Time: [1m[97m711[mms[K
+
+[92m√[m Compiled successfully.[K
+[1m[91m    [m
+[1m[91m    Error: [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m1[m - [91merror[90m NG8001: [m'app-toolbar' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m14[m - [91merror[90m NG8002: [mCan't bind to 'text' since it isn't a
+ known property of 'app-toolbar'.
+[1m[91m    1. If 'app-toolbar' is an Angular component and it has 'text' input, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[m[K
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m             ~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-a[m[K[1m[91mdmin/super-list-for-admin.component.html[m:[93m2[m:[93m3[m - [91merror[90m NG8001: [m'app-toolbar-button' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar-button' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to s[m
+[1m[91muppress this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m2[m   <app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>[K
+[1m[91m    [30m[101m [m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m29[m:[93m43[m - [91merror[90m NG8004: [mNo pipe found with name 'async'.    
+[1m[91m    [m[K
+[1m[91m    [30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
+[1m[91m    [30m[101m  [m [91m                                          ~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [m[K
+[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
+
+[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
+[92mmain.js[m             | main  | [96m612.58 kB[m[K
+
+4 unchanged chunks
+
+Build at: [1m[97m2024-11-20T05:41:40.460Z[m - Hash: [1m[97mc3d85b3ff986d97cafa9[m - Time: [1m[97m557[mms[K
+
+[92m√[m Compiled successfully.[K
+[1m[91m    [m
+[1m[91m    Error: [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m1[m - [91merror[90m NG8001: [m'app-toolbar' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m14[m - [91merror[90m NG8002: [mCan't bind to 'text' since it isn't a
+ known property of 'app-toolbar'.
+[1m[91m    1. If 'app-toolbar' is an Angular component and it has 'text' input, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[m[K
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m             ~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-a[m[K[1m[91mdmin/super-list-for-admin.component.html[m:[93m2[m:[93m3[m - [91merror[90m NG8001: [m'app-toolbar-button' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar-button' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to s[m
+[1m[91muppress this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m2[m   <app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>[K
+[1m[91m    [30m[101m [m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m29[m:[93m43[m - [91merror[90m NG8004: [mNo pipe found with name 'async'.    
+[1m[91m    [m[K
+[1m[91m    [30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
+[1m[91m    [30m[101m  [m [91m                                          ~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [m[K
+[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
+
+[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
+[92mmain.js[m             | main  | [96m612.58 kB[m[K
+
+4 unchanged chunks
+
+Build at: [1m[97m2024-11-20T05:41:45.235Z[m - Hash: [1m[97m9816edcfb20cbf830463[m - Time: [1m[97m553[mms[K
+
+[92m√[m Compiled successfully.[K
+[1m[91m    [m
+[1m[91m    Error: [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m1[m - [91merror[90m NG8001: [m'app-toolbar' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m14[m - [91merror[90m NG8002: [mCan't bind to 'text' since it isn't a
+ known property of 'app-toolbar'.
+[1m[91m    1. If 'app-toolbar' is an Angular component and it has 'text' input, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress[m
+[1m[91m this message.[m
+[1m[91m    3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[m[K
+[1m[91m    [m[K
+[1m[91m    [30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[1m[91m    [30m[101m [m [91m             ~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-a[m[K[1m[91mdmin/super-list-for-admin.component.html[m:[93m2[m:[93m3[m - [91merror[90m NG8001: [m'app-toolbar-button' is not a known el
+ement:
+[1m[91m    1. If 'app-toolbar-button' is an Angular component, then verify that it is part of this module.[m[K[1m[91m
+    2. If 'app-toolbar-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to s[m
+[1m[91muppress this message.[m
+[1m[91m    [m[K
+[1m[91m    [30m[101m2[m   <app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>[K
+[1m[91m    [30m[101m [m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m29[m:[93m43[m - [91merror[90m NG8004: [mNo pipe found with name 'async'.    
+[1m[91m    [m[K
+[1m[91m    [30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
+[1m[91m    [30m[101m  [m [91m                                          ~~~~~[m[K
+[1m[91m    [m[K
+[1m[91m      [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[1m[91m        [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1m[91m        Error occurs in the template of component SuperListForAdminComponent.[m[K
+[1m[91m    [m[K
+]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
+[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[25l
+> panel@0.0.0 start[40X
+> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[6;1H[?25h[K]0;C:\windows\system32\cmd.exe ]0;ng serve[36m-[m Generating browser application bundles...[36m-[m Generating browser application bundles...[1m[91m(node:6708) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is depr
+ecated.[m[K[1m[91m
+(Use `node --trace-deprecation ...` to show where the warning was created)[m[K[36m
+\[m Generating browser application bundles (phase: building)...[K[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[32m√[m Browser application bundle generation complete.
+[1m[97m
+Initial Chunk Files[m   | [1m[97mNames[m         |      [1m[97mSize[m[K[92m
+styles.css, styles.js[m | styles        | [96m563.71 kB[m[K[92m
+polyfills.js[m          | polyfills     | [96m343.95 kB[m[K[92m
+vendor.js[m             | vendor        | [96m342.28 kB[m[K[92m
+runtime.js[m            | runtime       |   [96m6.15 kB[m[K[92m
+main.js[m               | main          |   [96m1.75 kB[m[K
+[K[1m[97m
+ [m                     | [1m[97mInitial Total[m |   [1m[97m1.23 MB[m[K
+[K
+Build at: [1m[97m2024-11-20T05:55:47.604Z[m - Hash: [1m[97m27fb603e3424d45b123c[m - Time: [1m[97m39199[mms[K
+[K[91m
+Error: [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m1[m - [91merror[90m NG8001: [m'app-toolbar' is not a known elemen
+t:[K[91m
+1. If 'app-toolbar' is an Angular component, then verify that it is part of this module.[m[K[91m
+2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress thi
+s message.[m[K
+[K[30m[101m
+1[m <app-toolbar text="Admin {{adminId}}">[K[30m[101m
+ [m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[K[91m
+  [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K[91m
+    [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[91m    [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[91m    Error occurs in the template of component SuperListForAdminComponent.[m[K
+[96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m1[m:[93m14[m - [91merror[90m NG8002: [mCan't bind to 'text' since it isn't a kno
+wn property of 'app-toolbar'.
+[91m1. If 'app-toolbar' is an Angular component and it has 'text' input, then verify that it is part of this module.[m[K[91m
+2. If 'app-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress thi[m
+[91ms message.[m
+[91m3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[m[K
+
+[30m[101m1[m <app-toolbar text="Admin {{adminId}}">[K
+[30m[101m [m [91m             ~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[91m  [96msrc/app/admin/super-l[1m[91mist-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[91m    [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[91m    [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[91m    Error occurs in the template of component SuperListForAdminComponent.[m[K
+[96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m2[m:[93m3[m - [91merror[90m NG8001: [m'app-toolbar-button' is not a known elemen
+t:
+[91m1. If 'app-toolbar-button' is an Angular component, then verify that it is part of this module.[m[K[91m
+2. If 'app-toolbar-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppr[m
+[91mess this message.[m
+
+[30m[101m2[m   <app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>[K
+[30m[101m [m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[91m  [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[91m    [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[91m    [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[91m    Error occurs in the template of component SuperListForAdminComponent.[m[K
+[96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.html[m:[93m29[m:[93m43[m - [91merror[90m NG8004: [mNo pipe found with name 'async'.        
+
+[30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
+[30m[101m  [m [91m[33X[m[33C[K[1m[91m         ~~~~~[m
+
+[91m  [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
+[91m    [30m[101m11[m   templateUrl: './super-list-for-admin.component.html',[K
+[91m    [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[91m    Error occurs in the template of component SuperListForAdminComponent.[m[K
+
+
+
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
+
+[1m[97mInitial Chunk Files[m   | [1m[97mNames[m  |      [1m[97mSize[m[K
+[92mstyles.css, styles.js[m | styles | [96m563.71 kB[m[K
+
+4 unchanged chunks
+
+Build at: [1m[97m2024-11-20T06:07:44.142Z[m - Hash: [1m[97m69386d7aa6f8adafa54c[m - Time: [1m[97m1506[mms[K
+
+[91mError: [96msrc/app/app.module.ts[m:[93m76[m:[93m3[m - [91merror[90m TS1005: [m',' expected.[K
+
+[30m[101m76[m   TechnicianRegisterComponent,[K
+[30m[101m  [m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+
+
+[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
+
+[1m[97mInitial Chunk Files[m | [1m[97mNames[m     |      [1m[97mSize[m[K
+[92mvendor.js[m           | vendor    |   [96m3.89 MB[m[K
+[92mmain.js[m             | main      | [96m613.83 kB[m[K
+[92mpolyfills.js[m        | polyfills | [96m484.61 kB[m[K
+
+2 unchanged chunks
+
+Build at: [1m[97m2024-11-20T06:07:59.146Z[m - Hash: [1m[97m3f55fc418c5c2d5f6610[m - Time: [1m[97m11796[mms[K
+
+[92m√[m Compiled successfully.[K
+]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m exit
+exit
+
+Script done on 2024-11-20 12:29:16+05:30 [COMMAND_EXIT_CODE="1"]

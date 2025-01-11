@@ -29,6 +29,10 @@ import { BloodRequestComponent } from './technician/bloodrequest.component';
 import { ReadAllocatedBloodBagComponent } from './technician/readallocatedbloodbag.component';
 import { LTapprovalComponent } from './technician/LTapproval.component';
 import { MOCapprovalComponent } from './doctor/MOCapproval.component';
+import { SuperComponent } from './super/super.component';
+import { BlockedDonorListForSuperComponent } from './super/blocked-donor-list-for-super/blocked-donor-list-for-super.component';
+import { SuperRegisterComponent } from './super/super-register/super-register.component';
+import { SuperListForAdminComponent } from './admin/super-list-for-admin/super-list-for-admin.component';
 
 const routes: Routes = [
   {
@@ -43,72 +47,92 @@ const routes: Routes = [
   {
     path: 'donor/edit/:self',
     component: DonorEditComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
   {
     path: 'donor/:donorId/details/personal/edit',
     component: DonorDetailsPersonalEditComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
   {
     path: 'donor/:donorId/details/medical/edit',
     component: DonorDetailsMedicalEditComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
   {
     path: 'donor/:donorId',
     component: DonorComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
-   {
+  {
     path: 'donor/view/:adminId',
     component: DonorListForAdminComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
   {
     path: 'donor/:donorId/:doctorId',
-    component:DonorComponent,
-    canActivate: [ AuthGuard ]
+    component: DonorComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'doctor/register',
     component: DoctorRegisterComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
   {
     path: 'doctor/view/:adminId',
     component: DoctorListForAdminComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
   {
     path: 'doctor/:doctorId/MOCapproval',
     component: MOCapprovalComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
   {
     path: 'technician/view/:adminId',
     component: TechnicianListForAdminComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
   {
     path: 'technician/register',
     component: TechnicianRegisterComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'super/register',
+    component: SuperRegisterComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'doctor/:doctorId',
     component: DoctorComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
-   {
+  {
+    path: 'super/:superId',
+    component: SuperComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'super/view/:adminId',
+    component: SuperListForAdminComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'technician/:technicianId',
     component: TechnicianComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
   },
   {
     path: 'doctor/:doctorId/donors',
     component: DonorListForDoctorComponent,
-    canActivate: [ AuthGuard ]
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'super/:superId/blockedlist',
+    component: BlockedDonorListForSuperComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'donor/screen/:donorId/:doctorId/:dob',
@@ -121,27 +145,27 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path : 'technician/:technicianId/readbloodbag',
+    path: 'technician/:technicianId/readbloodbag',
     component: ReadBloodBagComponent,
     canActivate: [AuthGuard]
   },
   {
-    path : 'technician/:technicianId/readallocatedbloodbag',
+    path: 'technician/:technicianId/readallocatedbloodbag',
     component: ReadAllocatedBloodBagComponent,
     canActivate: [AuthGuard]
   },
   {
-    path : 'technician/:technicianId/addcrossmatchedbag',
+    path: 'technician/:technicianId/addcrossmatchedbag',
     component: BloodCrossMatchComponent,
     canActivate: [AuthGuard]
   },
   {
-    path : 'technician/:technicianId/bloodrequest',
+    path: 'technician/:technicianId/bloodrequest',
     component: BloodRequestComponent,
     canActivate: [AuthGuard]
   },
   {
-    path : 'technician/:technicianId/LTapproval',
+    path: 'technician/:technicianId/LTapproval',
     component: LTapprovalComponent,
     canActivate: [AuthGuard]
   },
@@ -172,7 +196,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [FormsModule,RouterModule.forRoot(routes)],
+  imports: [FormsModule, RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

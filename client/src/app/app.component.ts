@@ -30,10 +30,14 @@ export class AppComponent implements OnDestroy {
     return this.authService.getRole() === RoleEnum.DOCTOR;
   }
 
+  public isSuper(): boolean {
+    return this.authService.getRole() === RoleEnum.SUPER;
+  }
+
   public isAdmin(): boolean {
     return this.authService.getRole() === RoleEnum.ADMIN;
   }
-  
+
   public isTechnician(): boolean {
     return this.authService.getRole() === RoleEnum.TECHNICIAN;
   }

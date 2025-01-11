@@ -1,8 +1,6 @@
 'use strict';
 
 const { Contract } = require('fabric-contract-api');
-let Donor = require('./Donor.js');
-let Bag = require('./Bag.js');
 let initLedgerMaster = require('./initLedgerMaster.json');
 let initLedgerDonor = require('./initLedgerDonor.json');
 
@@ -16,13 +14,13 @@ class PrimaryContract extends Contract {
             console.info('Added <--> ', initLedgerDonor[i]);
         }
         console.info('============= END : Initialize Ledger ===========');
-        
+
         console.info('============= START : Initialize Ledger ===========');
         for (let i = 0; i < initLedgerMaster.length; i++) {
-            if(initLedgerMaster[i]["type"]=="tempRecord")
-                await ctx.stub.putState('T' + initLedgerMaster[i]["bloodBagUnitNo"] +"S"+ initLedgerMaster[i]["bloodBagSegmentNo"], Buffer.from(JSON.stringify(initLedgerMaster[i])));
+            if (initLedgerMaster[i]["type"] == "tempRecord")
+                await ctx.stub.putState('T' + initLedgerMaster[i]["bloodBagUnitNo"] + "S" + initLedgerMaster[i]["bloodBagSegmentNo"], Buffer.from(JSON.stringify(initLedgerMaster[i])));
             else
-                await ctx.stub.putState('F' + initLedgerMaster[i]["bloodBagUnitNo"]+"S"+ initLedgerMaster[i]["bloodBagSegmentNo"], Buffer.from(JSON.stringify(initLedgerMaster[i])));
+                await ctx.stub.putState('F' + initLedgerMaster[i]["bloodBagUnitNo"] + "S" + initLedgerMaster[i]["bloodBagSegmentNo"], Buffer.from(JSON.stringify(initLedgerMaster[i])));
         }
         console.info('============= END : Initialize Ledger ===========');
     }
@@ -68,20 +66,20 @@ class PrimaryContract extends Contract {
             bloodBagUnitNo: asset.bloodBagUnitNo,
             bloodBagSegmentNo: asset.bloodBagSegmentNo,
             type: asset.type,
-            dateOfCollection:asset.dateOfCollection,
-            dateOfExpiry:asset.dateOfExpiry,
+            dateOfCollection: asset.dateOfCollection,
+            dateOfExpiry: asset.dateOfExpiry,
             quantity: asset.quantity,
             bloodGroup: asset.bloodGroup,
             hospName: asset.hospName
         });
         return asset;
     }
-    
+
     async donorExists(ctx, donorId) {
         const buffer = await ctx.stub.getState(donorId);
         return (!!buffer && buffer.length > 0);
     }
-    
+
     async bagExists(ctx, bagId) {
         const buffer = await ctx.stub.getState(bagId);
         return (!!buffer && buffer.length > 0);
@@ -117,8 +115,8 @@ class PrimaryContract extends Contract {
                 allResults.push(jsonRes);
             }
             if (res.done) {
-                console.log('end of data');
                 await iterator.close();
+                console.log('end of data');
                 console.info(allResults);
                 return allResults;
             }

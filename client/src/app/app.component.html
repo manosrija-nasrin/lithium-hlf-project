@@ -11,6 +11,10 @@
         <a class="nav-link fa fa-user" [routerLink]="['/', 'donor', getUsername()]" routerLinkActive="active"
           [ngbTooltip]="getUsername()">&nbsp;Donor</a>
       </li>
+      <li *ngIf="isSuper()" class="nav-item">
+        <a class="nav-link fa fa-user" [routerLink]="['/', 'super', getUsername()]" routerLinkActive="active"
+          [ngbTooltip]="getUsername()">&nbsp;Super</a>
+      </li>
       <li *ngIf="isDoctor()" class="nav-item">
         <a class="nav-link fa fa-user-md" [routerLink]="['/', 'doctor', getUsername()]" routerLinkActive="active"
           [ngbTooltip]="getUsername()">&nbsp;Doctor</a>
@@ -20,13 +24,14 @@
           [ngbTooltip]="getUsername()">&nbsp;Admin</a>
       </li>
       <li *ngIf="isTechnician()" class="nav-item">
-        <a class="nav-link fa fa-user-circle" [routerLink]="['/', 'technician', getUsername()]" routerLinkActive="active"
-          [ngbTooltip]="getUsername()">&nbsp;Technician</a>
+        <a class="nav-link fa fa-user-circle" [routerLink]="['/', 'technician', getUsername()]"
+          routerLinkActive="active" [ngbTooltip]="getUsername()">&nbsp;Technician</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link fa fa-sign-in" *ngIf="!authService.loggedIn()" routerLink="/login" routerLinkActive="active">&nbsp;Login</a>
+        <a class="nav-link fa fa-sign-in" *ngIf="!authService.loggedIn()" routerLink="/login"
+          routerLinkActive="active">&nbsp;Login</a>
         <a class="nav-link fa fa-sign-out mr-2" style="cursor: pointer" *ngIf="authService.loggedIn()"
           (click)="logoutUser()">
           Logout

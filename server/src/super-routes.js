@@ -1,0 +1,53 @@
+/**
+ * @desc Doctor specific methods - API documentation in http://localhost:3002/ swagger editor.
+ */
+
+// Bring common classes into scope, and Fabric SDK network class
+const { capitalize, getMessage, validateRole, ROLE_SUPER } = require('../utils.js');
+const network = require('../../donor-asset-transfer/application-javascript/app.js');
+const network1 = require('../../receiver-asset-transfer/application-javascript/app.js');
+const databaseRoutes = require('./databaseConnect');
+const url = require('url');
+
+/**
+ * @param  {Request} req Role in the header
+ * @param  {Response} res 200 response with the json of all the assets(blocked donors) in the PDC
+ * @description Retrieves all the assets(blocked donors) in the ledger
+ */
+exports.getBlockedDonors = async (req, res) => {
+	// User role from the request header is validated
+	const userRole = req.headers.role;
+	await validateRole([ROLE_SUPER], userRole, res);
+	// Set up and connect to Fabric Gateway using the username in header
+	const networkObj = await network.connectToNetwork(req.headers.username);
+	// Invoke the smart contract function
+	const usernameArgs = { username: userRole === ROLE_SUPER ? req.headers.username : '' };
+	const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllBlockedDonors', JSON.stringify(usernameArgs));
+	const parsedResponse = await JSON.parse(response);
+	res.status(200).send(parsedResponse);
+};
+
+/**
+ * @param  {Request} req role in the header and hospitalId, doctorId in the url
+ * @param  {Response} res A 200 response if doctor is present else a 500 response with a error json
+ * @description This method retrives an existing doctor
+ */
+exports.getSuperById = async (req, res) => {
+	// User role from the request header is validated
+	const userRole = req.headers.role;
+	await validateRole([ROLE_SUPER], userRole, res);
+	const hospitalId = parseInt(req.params.hospitalId);
+	// Set up and connect to Fabric Gateway
+	const userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'hosp3admin';
+	const superId = req.params.superId;
+	const networkObj = await network.connectToNetwork(userId);
+	// Use the gateway and identity service to get all users enrolled by the CA
+	const response = await network.getAllSupersByHospitalId(networkObj, hospitalId);
+	console.log("Got all supers: ", response);
+	// Filter the result using the superId
+	(response.error) ? res.status(500).send(response.error) : res.status(200).send(response.filter(
+		function (responseObj) {
+			return responseObj.id === superId;
+		},
+	)[0]);
+};
