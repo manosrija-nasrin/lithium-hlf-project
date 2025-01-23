@@ -46,25 +46,23 @@ exports.createDonor = async (req, res) => {
   }
 
   const dat = JSON.parse(data);
-  let doctorsOne, doctorsTwo, supersOne, supersTwo, allDoctors = [], allSupers = [];
+  let doctorsOne, doctorsTwo, allDoctors = [], allSupers = [];
   // Set up and connect to Fabric Gateway
   let networkObjOne = await network.connectToNetwork('hosp1admin');
   let networkObjTwo = await network.connectToNetwork('hosp2admin');
+  let networkObjSuper = await network.connectToNetwork('superOrgadmin');
 
   // grant permissions to all doctors and supers
   // if (dat.changedBy === 'hosp1admin') {
     doctorsOne = await network.getAllDoctorsByHospitalId(networkObjOne, 1);
-    supersOne = await network.getAllSupersByHospitalId(networkObjOne, 1);
+    allSupers = await network.getAllSupers(networkObjSuper);
   // }
   // else if (dat.changedBy === 'hosp2admin') {
     doctorsTwo = await network.getAllDoctorsByHospitalId(networkObjTwo, 2);
-    supersTwo = await network.getAllSupersByHospitalId(networkObjTwo, 2);
   // }
 
   allDoctors = allDoctors.concat(doctorsOne);
   allDoctors = allDoctors.concat(doctorsTwo);
-  allSupers = allSupers.concat(supersOne);
-  allSupers = allSupers.concat(supersTwo);
 
   // console.debug(typeof allSupers);
   // console.debug(allSupers);
@@ -183,7 +181,7 @@ exports.createSuper = async (req, res) => {
     res.status(400).send(response.error);
   }
 
-  const networkObj = await network.connectToNetwork(req.headers.username);
+  const networkObj = await network.connectToNetwork('superOrgadmin');
   const donors = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllDonors',
     userRole === ROLE_SUPER ? req.headers.username : '');
   const parsedDonors = await JSON.parse(donors);
@@ -215,13 +213,36 @@ exports.getSupersByHospitalId = async (req, res) => {
   // User role from the request header is validated
   const userRole = req.headers.role;
   await validateRole([ROLE_ADMIN], userRole, res);
+  // Set up and connect to Fabric Gateway
+  userId = 'superOrgadmin';
+  
+  const networkObjSuper = await network.connectToNetwork(userId);
+  // Use the gateway and identity service to get all users enrolled by the CA
+  const response = await network.getAllSupers(networkObjSuper);
+
+  console.debug("Supers:", response);
+  (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
+};
+
+/**
+ * @param  {Request} req Role in the header and hospitalId in the url
+ * @param  {Response} res 200 response with array of all doctors else 500 with the error message
+ * @description Get all the doctors of the mentioned hospitalId
+ */
+exports.getDoctorsByHospitalId = async (req, res) => {
+  // User role from the request header is validated
+  const userRole = req.headers.role;
+  await validateRole([ROLE_ADMIN], userRole, res);
+  // Set up and connect to Fabric Gateway
   const hospitalId = parseInt(req.params.hospitalId);
   // Set up and connect to Fabric Gateway
-  userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'hosp3admin';
+  let userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'superOrgadmin';
+  
   const networkObj = await network.connectToNetwork(userId);
   // Use the gateway and identity service to get all users enrolled by the CA
-  const response = await network.getAllSupersByHospitalId(networkObj, hospitalId);
-  console.debug("Supers:", response);
+  const response = await network.getAllDoctorsByHospitalId(networkObj, hospitalId);
+
+  console.debug("Doctors:", response);
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
 };
 
@@ -238,6 +259,7 @@ exports.getAllDonors = async (req, res) => {
   const networkObj = await network.connectToNetwork(req.headers.username);
   const networkObjOne = await network.connectToNetwork('hosp1admin');
   const networkObjTwo = await network.connectToNetwork('hosp2admin');
+  const networkObjSuper = await network.connectToNetwork('superOrgadmin');
   // Invoke the smart contract function
   const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllDonors',
     userRole === ROLE_DOCTOR ? req.headers.username : '');
@@ -246,14 +268,10 @@ exports.getAllDonors = async (req, res) => {
 
   // grant permissions to all doctors and supers
   doctorsOne = await network.getAllDoctorsByHospitalId(networkObjOne, 1);
-  supersOne = await network.getAllSupersByHospitalId(networkObjOne, 1);
   doctorsTwo = await network.getAllDoctorsByHospitalId(networkObjTwo, 2);
-  supersTwo = await network.getAllSupersByHospitalId(networkObjTwo, 2);
-
+  allSupers = await network.getAllSupers(networkObjSuper);
   allDoctors = allDoctors.concat(doctorsOne);
   allDoctors = allDoctors.concat(doctorsTwo);
-  allSupers = allSupers.concat(supersOne);
-  allSupers = allSupers.concat(supersTwo);
 
   const parsedResponse = await JSON.parse(response);
   console.debug(allSupers);
@@ -304,7 +322,7 @@ exports.getTechniciansByHospitalId = async (req, res) => {
   await validateRole([ROLE_ADMIN], userRole, res);
   const hospitalId = parseInt(req.params.hospitalId);
   // Set up and connect to Fabric Gateway
-  userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'hosp3admin';
+  userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'superOrgadmin';
   const networkObj = await network.connectToNetwork(userId);
   // Use the gateway and identity service to get all users enrolled by the CA
   const response = await network.getAllTechniciansByHospitalId(networkObj, hospitalId);

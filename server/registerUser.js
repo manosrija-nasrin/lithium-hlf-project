@@ -7,7 +7,7 @@ const FabricCAServices = require('fabric-ca-client');
 const path = require('path');
 const {buildCAClient, registerAndEnrollUser} = require('../donor-asset-transfer/application-javascript/CAUtil.js');
 const walletPath = path.join(__dirname, '../donor-asset-transfer/application-javascript/wallet');
-const {buildCCPHosp1, buildCCPHosp2, buildWallet, buildCCPHosp3} = require('../donor-asset-transfer/application-javascript/AppUtil.js');
+const {buildCCPHosp1, buildCCPHosp2, buildWallet, buildCCPSuperOrg} = require('../donor-asset-transfer/application-javascript/AppUtil.js');
 let mspOrg;
 let adminUserId;
 let caClient;
@@ -23,7 +23,17 @@ exports.enrollRegisterUser = async function(hospitalId, userId, attributes) {
     const wallet = await buildWallet(Wallets, walletPath);
     hospitalId = parseInt(hospitalId);
 
-    if (hospitalId === 1) {
+    if (userId.includes("SUP")) {
+      // build an in memory object with the network configuration (also known as a connection profile)
+      const ccp = buildCCPSuperOrg();
+
+      // build an instance of the fabric ca services client based on
+      // the information in the network configuration
+      caClient = buildCAClient(FabricCAServices, ccp, 'ca.superOrg.lithium.com');
+
+      mspOrg = 'superOrgMSP';
+      adminUserId = 'superOrgadmin';
+    } else if (hospitalId === 1) {
       // build an in memory object with the network configuration (also known as a connection profile)
       const ccp = buildCCPHosp1();
 
@@ -43,16 +53,6 @@ exports.enrollRegisterUser = async function(hospitalId, userId, attributes) {
 
       mspOrg = 'hosp2MSP';
       adminUserId = 'hosp2admin';
-    } else if (hospitalId === 3) {
-      // build an in memory object with the network configuration (also known as a connection profile)
-      const ccp = buildCCPHosp3();
-
-      // build an instance of the fabric ca services client based on
-      // the information in the network configuration
-      caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp3.lithium.com');
-
-      mspOrg = 'hosp3MSP';
-      adminUserId = 'hosp3admin';
     }
     // enrolls users to Hospital 1 and adds the user to the wallet
     await registerAndEnrollUser(caClient, wallet, mspOrg, userId, adminUserId, attributes);

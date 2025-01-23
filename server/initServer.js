@@ -4,6 +4,7 @@ const fs = require('fs');
 
 const {enrollAdminHosp1} = require('./enrollAdmin-Hospital1'); // Import function to enroll admin for Hospital 1
 const {enrollAdminHosp2} = require('./enrollAdmin-Hospital2'); // Import function to enroll admin for Hospital 2
+const {enrollAdminSuperOrg} = require('./enrollAdmin-SuperOrg'); // Import function to enroll admin for Hospital 2
 const {enrollRegisterUser} = require('./registerUser'); // Import function to enroll and register a user
 const {createRedisClient} = require('./utils'); // Import utility function to create a Redis client
 
@@ -42,7 +43,13 @@ async function initRedis() {
   redisClient = redis.createClient(redisUrl); // Create Redis client for Hospital 2
   redisClient.AUTH(redisPassword); // Authenticate Redis client
   redisClient.SET('hosp2admin', redisPassword); // Set admin credentials in Redis
-  console.log('Done'); // Log completion message
+  redisClient.QUIT(); // Quit the Redis client
+
+  redisUrl = 'redis://127.0.0.1:6381';
+  redisPassword = 'superOrglithium';
+  redisClient = redis.createClient(redisUrl); // Create Redis client for Hospital 2
+  redisClient.AUTH(redisPassword); // Authenticate Redis client
+  redisClient.SET('superOrgadmin', redisPassword); // Set admin credentials in Redis
   redisClient.QUIT(); // Quit the Redis client
   return;
 }
@@ -60,6 +67,27 @@ async function enrollAndRegisterDoctors() {
       const redisClient = createRedisClient(doctors[i].hospitalId); // Create a Redis client for each hospital
       (await redisClient).SET('HOSP' + doctors[i].hospitalId + '-' + 'DOC' + doctors[i].registration, 'password'); // Set doctor credentials in Redis
       await enrollRegisterUser(doctors[i].hospitalId, 'HOSP' + doctors[i].hospitalId + '-' + 'DOC' + doctors[i].registration, JSON.stringify(attr)); // Enroll and register each doctor
+      (await redisClient).QUIT(); // Quit the Redis client
+    }
+  } catch (error) {
+    console.log(error); // Log any errors
+  }
+};
+
+/**
+ * @description Create doctors in both organizations based on the initDoctors JSON
+ */
+async function enrollAndRegisterSupers() {
+  try {
+    const jsonString = fs.readFileSync('./initSupers.json'); // Read JSON file containing doctor data
+    console.debug(jsonString);
+    const supers = JSON.parse(jsonString); // Parse the JSON file
+    for (let i = 0; i < supers.length; i++) {
+      const attr = {fullName: supers[i].fullName, address: supers[i].address, phoneNumber: supers[i].phoneNumber, emergPhoneNumber: supers[i].emergPhoneNumber, role: 'super', registration: supers[i].registration}; // Create attributes for each doctor
+      supers[i].hospitalId = parseInt(supers[i].hospitalId); // Convert hospitalId to integer
+      const redisClient = createRedisClient(supers[i].hospitalId); // Create a Redis client for each hospital
+      (await redisClient).SET('HOSP' + supers[i].hospitalId + '-' + 'SUP' + supers[i].registration, 'password'); // Set doctor credentials in Redis
+      await enrollRegisterUser(supers[i].hospitalId, 'HOSP' + supers[i].hospitalId + '-' + 'SUP' + supers[i].registration, JSON.stringify(attr)); // Enroll and register each doctor
       (await redisClient).QUIT(); // Quit the Redis client
     }
   } catch (error) {
@@ -91,9 +119,11 @@ async function enrollAndRegisterTechnicians() {
 async function main() {
   // await enrollAdminHosp1();
   // await enrollAdminHosp2();
+  // await enrollAdminSuperOrg();
   // await initLedger();
   // await initRedis();
   // await enrollAndRegisterDoctors();
+  // await enrollAndRegisterSupers();
   // await enrollAndRegisterTechnicians();
 }
 

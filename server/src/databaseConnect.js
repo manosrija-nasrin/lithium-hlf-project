@@ -17,8 +17,7 @@ function handleDisconnect() {
             setTimeout(handleDisconnect, 2000); // Retry after 2 seconds
         }
         console.log('Connected to the database');
-        queryHLFBloodTable();
-
+        // queryHLFBloodTable();
     });
 
     connection.on('error', err => {
@@ -421,7 +420,7 @@ exports.donateBloodRecord = async function (SlipNumber, HospitalName) {
 function queryHLFBloodTable() {
     connection.query('SELECT * FROM HLFBloodStore;', (error, results, fields) => {
         if (error) throw error;
-        // console.log('bloodBagStore table:', results);
+        console.log('bloodBagStore table:', results);
     });
 }
 

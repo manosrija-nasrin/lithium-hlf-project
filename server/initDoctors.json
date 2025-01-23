@@ -9,26 +9,10 @@
     },
     {
         "hospitalId": "2",
-        "fullName": "Everhart Hall",
-        "address": "45/B HUnger Street, KOlkata-700090",
-        "phoneNumber": "9073765654",
-        "emergPhoneNumber": "8679236566",
-        "registration": "84989234"
-    },
-    {
-        "hospitalId": "1",
-        "fullName": "Peter Leavitt",
-        "address": "12/C/1 Newtown, Kolkata-700009",
-        "phoneNumber": "9008096755",
-        "emergPhoneNumber": "9657834555",
-        "registration": "822849"
-    },
-    {
-        "hospitalId": "2",
         "fullName": "Jeremy Stone",
         "address": "41B Burrabazar Road, Kolkata-700014",
         "phoneNumber": "89112332455",
         "emergPhoneNumber": "9425688988",
-        "registration": "39834849"
+        "registration": "32850"
     }
 ]

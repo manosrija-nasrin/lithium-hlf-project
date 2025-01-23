@@ -1,10 +1,10 @@
 /**
- * @desc Add admin of SuperOrg. Execute node addSuperOrg.js to execute
+ * @desc Add admin of SuperOrg. Execute `node addSuperOrg.js` to execute
  */
 
 
 /* eslint-disable new-cap */
-const {enrollAdminSuperOrg} = require('./enrollAdmin-superOrg');
+const {enrollAdminSuperOrg} = require('./enrollAdmin-SuperOrg');
 const redis = require('redis');
 
 /**

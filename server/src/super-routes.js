@@ -3,11 +3,8 @@
  */
 
 // Bring common classes into scope, and Fabric SDK network class
-const { capitalize, getMessage, validateRole, ROLE_SUPER } = require('../utils.js');
+const { capitalize, validateRole, ROLE_SUPER } = require('../utils.js');
 const network = require('../../donor-asset-transfer/application-javascript/app.js');
-const network1 = require('../../receiver-asset-transfer/application-javascript/app.js');
-const databaseRoutes = require('./databaseConnect');
-const url = require('url');
 
 /**
  * @param  {Request} req Role in the header
@@ -19,7 +16,7 @@ exports.getBlockedDonors = async (req, res) => {
 	const userRole = req.headers.role;
 	await validateRole([ROLE_SUPER], userRole, res);
 	// Set up and connect to Fabric Gateway using the username in header
-	const networkObj = await network.connectToNetwork(req.headers.username);
+	const networkObj = await network.connectToSuperNetwork(req.headers.username);
 	// Invoke the smart contract function
 	const usernameArgs = { username: userRole === ROLE_SUPER ? req.headers.username : '' };
 	const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllBlockedDonors', JSON.stringify(usernameArgs));
@@ -36,13 +33,12 @@ exports.getSuperById = async (req, res) => {
 	// User role from the request header is validated
 	const userRole = req.headers.role;
 	await validateRole([ROLE_SUPER], userRole, res);
-	const hospitalId = parseInt(req.params.hospitalId);
 	// Set up and connect to Fabric Gateway
-	const userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'hosp3admin';
+	const userId = 'superOrgadmin';
 	const superId = req.params.superId;
-	const networkObj = await network.connectToNetwork(userId);
+	const networkObjSuper = await network.connectToSuperNetwork(userId);
 	// Use the gateway and identity service to get all users enrolled by the CA
-	const response = await network.getAllSupersByHospitalId(networkObj, hospitalId);
+	const response = await network.getAllSupers(networkObjSuper);
 	console.log("Got all supers: ", response);
 	// Filter the result using the superId
 	(response.error) ? res.status(500).send(response.error) : res.status(200).send(response.filter(
