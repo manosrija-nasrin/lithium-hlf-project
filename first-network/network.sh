@@ -426,17 +426,17 @@ function networkDown() {
   COMPOSE_CA_FILES="-f compose/${COMPOSE_FILE_CA} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_CA}"
   COMPOSE_FILES="${COMPOSE_BASE_FILES} ${COMPOSE_REDIS_FILES} ${COMPOSE_COUCH_FILES} ${COMPOSE_CA_FILES}"
 
-  # stop hosp3 containers also in addition to hosp1 and hosp2, in case we were running sample to add hosp3
-  COMPOSE_HOSP3_BASE_FILES="-f addHosp3/compose/${COMPOSE_FILE_HOSP3_BASE} -f addHosp3/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_HOSP3_BASE}"
-  COMPOSE_HOSP3_REDIS_FILES="-f addHosp3/compose/${COMPOSE_FILE_HOSP3_REDIS} -f addHosp3/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_HOSP3_REDIS}"
-  COMPOSE_HOSP3_COUCH_FILES="-f addHosp3/compose/${COMPOSE_FILE_HOSP3_COUCH} -f addHosp3/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_HOSP3_COUCH}"
-  COMPOSE_HOSP3_CA_FILES="-f addHosp3/compose/${COMPOSE_FILE_HOSP3_CA} -f addHosp3/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_HOSP3_CA}"
-  COMPOSE_HOSP3_FILES="${COMPOSE_HOSP3_BASE_FILES} ${COMPOSE_HOSP3_REDIS_FILES} ${COMPOSE_HOSP3_COUCH_FILES} ${COMPOSE_HOSP3_CA_FILES}"
+  # stop superOrg containers also in addition to hosp1 and hosp2, in case we were running sample to add superOrg
+  COMPOSE_SUPER_BASE_FILES="-f addSuperOrg/compose/${COMPOSE_FILE_SUPER_BASE} -f addSuperOrg/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_SUPER_BASE}"
+  COMPOSE_SUPER_REDIS_FILES="-f addSuperOrg/compose/${COMPOSE_FILE_SUPER_REDIS} -f addSuperOrg/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_SUPER_REDIS}"
+  COMPOSE_SUPER_COUCH_FILES="-f addSuperOrg/compose/${COMPOSE_FILE_SUPER_COUCH} -f addSuperOrg/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_SUPER_COUCH}"
+  COMPOSE_SUPER_CA_FILES="-f addSuperOrg/compose/${COMPOSE_FILE_SUPER_CA} -f addSuperOrg/compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_SUPER_CA}"
+  COMPOSE_SUPER_FILES="${COMPOSE_SUPER_BASE_FILES} ${COMPOSE_SUPER_REDIS_FILES} ${COMPOSE_SUPER_COUCH_FILES} ${COMPOSE_SUPER_CA_FILES}"
 
   if [ "${CONTAINER_CLI}" == "docker" ]; then
-    DOCKER_SOCK=$DOCKER_SOCK ${CONTAINER_CLI_COMPOSE} ${COMPOSE_FILES} ${COMPOSE_HOSP3_FILES} down --volumes --remove-orphans
+    DOCKER_SOCK=$DOCKER_SOCK ${CONTAINER_CLI_COMPOSE} ${COMPOSE_FILES} ${COMPOSE_SUPER_FILES} down --volumes --remove-orphans
   elif [ "${CONTAINER_CLI}" == "podman" ]; then
-    ${CONTAINER_CLI_COMPOSE} ${COMPOSE_FILES} ${COMPOSE_HOSP3_FILES} down --volumes
+    ${CONTAINER_CLI_COMPOSE} ${COMPOSE_FILES} ${COMPOSE_SUPER_FILES} down --volumes
   else
     fatalln "Container CLI  ${CONTAINER_CLI} not supported"
   fi
@@ -457,7 +457,7 @@ function networkDown() {
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/hosp1/msp organizations/fabric-ca/hosp1/tls-cert.pem organizations/fabric-ca/hosp1/ca-cert.pem organizations/fabric-ca/hosp1/IssuerPublicKey organizations/fabric-ca/hosp1/IssuerRevocationPublicKey organizations/fabric-ca/hosp1/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/hosp2/msp organizations/fabric-ca/hosp2/tls-cert.pem organizations/fabric-ca/hosp2/ca-cert.pem organizations/fabric-ca/hosp2/IssuerPublicKey organizations/fabric-ca/hosp2/IssuerRevocationPublicKey organizations/fabric-ca/hosp2/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/ordererOrg/msp organizations/fabric-ca/ordererOrg/tls-cert.pem organizations/fabric-ca/ordererOrg/ca-cert.pem organizations/fabric-ca/ordererOrg/IssuerPublicKey organizations/fabric-ca/ordererOrg/IssuerRevocationPublicKey organizations/fabric-ca/ordererOrg/fabric-ca-server.db'
-    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf addHosp3/fabric-ca/hosp3/msp addHosp3/fabric-ca/hosp3/tls-cert.pem addHosp3/fabric-ca/hosp3/ca-cert.pem addHosp3/fabric-ca/hosp3/IssuerPublicKey addHosp3/fabric-ca/hosp3/IssuerRevocationPublicKey addHosp3/fabric-ca/hosp3/fabric-ca-server.db'
+    ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf addSuperOrg/fabric-ca/superOrg/msp addSuperOrg/fabric-ca/superOrg/tls-cert.pem addSuperOrg/fabric-ca/superOrg/ca-cert.pem addSuperOrg/fabric-ca/superOrg/IssuerPublicKey addSuperOrg/fabric-ca/superOrg/IssuerRevocationPublicKey addSuperOrg/fabric-ca/superOrg/fabric-ca-server.db'
     # remove channel and script artifacts
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf channel-artifacts log.txt *.tar.gz'
   fi
@@ -473,14 +473,14 @@ COMPOSE_FILE_REDIS=compose-redis.yaml
 COMPOSE_FILE_COUCH=compose-couch.yaml
 # certificate authorities compose file
 COMPOSE_FILE_CA=compose-ca.yaml
-# use this as the default docker-compose yaml definition for hosp3
-COMPOSE_FILE_HOSP3_BASE=compose-hosp3.yaml
+# use this as the default docker-compose yaml definition for superOrg
+COMPOSE_FILE_SUPER_BASE=compose-superOrg.yaml
 # use this as docker compose file for redis
-COMPOSE_FILE_HOSP3_REDIS=compose-redis-hosp3.yaml
-# use this as the docker compose couch file for hosp3
-COMPOSE_FILE_HOSP3_COUCH=compose-couch-hosp3.yaml
+COMPOSE_FILE_SUPER_REDIS=compose-redis-superOrg.yaml
+# use this as the docker compose couch file for superOrg
+COMPOSE_FILE_SUPER_COUCH=compose-couch-superOrg.yaml
 # certificate authorities compose file
-COMPOSE_FILE_HOSP3_CA=compose-ca-hosp3.yaml
+COMPOSE_FILE_SUPER_CA=compose-ca-superOrg.yaml
 
 # Obtain the OS and Architecture string that will be used to select the correct
 # native binaries for your platform, e.g., darwin-amd64 or linux-amd64

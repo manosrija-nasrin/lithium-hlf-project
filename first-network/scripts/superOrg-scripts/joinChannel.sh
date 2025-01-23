@@ -7,7 +7,7 @@
 
 # This script is designed to be run by addSuperOrg.sh as the
 # second step of the Adding an Org to a Channel tutorial.
-# It joins the hosp3 peers to the channel previously setup in
+# It joins the superOrg peers to the channel previously setup in
 # the test network tutorial.
 
 CHANNEL_NAME="$1"
@@ -23,8 +23,8 @@ MAX_RETRY=5
 
 # import environment variables
 # test network home var targets to first-network folder
-# the reason we use a var here is considering with hosp3 specific folder
-# when invoking this for hosp3 as first-network/scripts/hosp3-scripts
+# the reason we use a var here is considering with superOrg specific folder
+# when invoking this for superOrg as first-network/scripts/superOrg-scripts
 # the value is changed from default as $PWD (first-network)
 # to ${PWD}/.. to make the import works
 export TEST_NETWORK_HOME="${PWD}/.."
@@ -55,7 +55,7 @@ setAnchorPeer() {
   ${TEST_NETWORK_HOME}/scripts/setAnchorPeer.sh $ORG $CHANNEL_NAME
 }
 
-setGlobals 3
+setGlobals superOrg
 BLOCKFILE="${TEST_NETWORK_HOME}/channel-artifacts/${CHANNEL_NAME}.block"
 
 echo "Fetching channel config block from orderer..."
@@ -66,11 +66,11 @@ res=$?
 cat log.txt
 verifyResult $res "Fetching config block from orderer has failed"
 
-infoln "Joining hosp3 peer to the channel..."
-joinChannel 3
+infoln "Joining superOrg peer to the channel..."
+joinChannel superOrg
 
-infoln "Setting anchor peer for hosp3..."
-setAnchorPeer 3
+infoln "Setting anchor peer for superOrg..."
+setAnchorPeer superOrg
 
 successln "Channel '$CHANNEL_NAME' joined"
 successln "SuperOrg peer successfully added to network"

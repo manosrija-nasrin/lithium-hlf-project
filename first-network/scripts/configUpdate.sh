@@ -7,8 +7,8 @@
 
 # import utils
 # test network home var targets to test network folder
-# the reason we use a var here is considering with hosp3 specific folder
-# when invoking this for hosp3 as first-network/scripts/hosp3-scripts
+# the reason we use a var here is considering with superOrg specific folder
+# when invoking this for superOrg as first-network/scripts/superOrg-scripts
 # the value is changed from default as $PWD(first-network)
 # to .. as relative path to make the import works
 TEST_NETWORK_HOME=${TEST_NETWORK_HOME:-${PWD}}

@@ -7,8 +7,8 @@
 
 # import utils
 # test network home var targets to test network folder
-# the reason we use a var here is considering with hosp3 specific folder
-# when invoking this for hosp3 as first-network/scripts/hosp3-scripts
+# the reason we use a var here is considering with superOrg specific folder
+# when invoking this for superOrg as first-network/scripts/superOrg-scripts
 # the value is changed from default as $PWD(first-network)
 # to .. as relative path to make the import works
 TEST_NETWORK_HOME=${TEST_NETWORK_HOME:-${PWD}}
@@ -20,19 +20,19 @@ createAnchorPeerUpdate() {
   infoln "Fetching channel config for channel $CHANNEL_NAME"
   fetchChannelConfig $ORG $CHANNEL_NAME ${TEST_NETWORK_HOME}/channel-artifacts/${CORE_PEER_LOCALMSPID}config.json
 
-  infoln "Generating anchor peer update transaction for Org${ORG} on channel $CHANNEL_NAME"
+  infoln "Generating anchor peer update transaction for ${ORG} on channel $CHANNEL_NAME"
 
-  if [ $ORG -eq 1 ]; then
+  if [ "$ORG" = "hosp1" ]; then
     HOST="peer0.hosp1.lithium.com"
     PORT=7051
-  elif [ $ORG -eq 2 ]; then
+  elif [ "$ORG" = "hosp2" ]; then
     HOST="peer0.hosp2.lithium.com"
     PORT=9051
-  elif [ $ORG -eq 3 ]; then
-    HOST="peer0.hosp3.lithium.com"
+  elif [ "$ORG" = "superOrg" ]; then
+    HOST="peer0.superOrg.lithium.com"
     PORT=11051
   else
-    errorln "Org${ORG} unknown"
+    errorln "${ORG} unknown"
   fi
 
   set -x

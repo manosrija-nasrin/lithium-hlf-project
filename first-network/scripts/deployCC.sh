@@ -75,44 +75,58 @@ PACKAGE_ID=$(peer lifecycle chaincode calculatepackageid ${CC_NAME}.tar.gz)
 
 ## Install chaincode on peer0.hosp1 and peer0.hosp2
 infoln "Installing chaincode on peer0.hosp1..."
-installChaincode 1
+installChaincode hosp1
 infoln "Install chaincode on peer0.hosp2..."
-installChaincode 2
+installChaincode hosp2
+infoln "Install chaincode on peer0.superOrg..."
+installChaincode superOrg
 
 resolveSequence
 
 ## query whether the chaincode is installed
-queryInstalled 1
+queryInstalled hosp1
 
 ## approve the definition for hosp1
-approveForMyOrg 1
+approveForMyOrg hosp1
 
 ## check whether the chaincode definition is ready to be committed
 ## expect hosp1 to have approved and hosp2 not to
-checkCommitReadiness 1 "\"hosp1MSP\": true" "\"hosp2MSP\": false"
-checkCommitReadiness 2 "\"hosp1MSP\": true" "\"hosp2MSP\": false"
+checkCommitReadiness hosp1 "\"hosp1MSP\": true" "\"hosp2MSP\": false" "\"superOrgMSP\": false"
+checkCommitReadiness hosp2 "\"hosp1MSP\": true" "\"hosp2MSP\": false" "\"superOrgMSP\": false"
+checkCommitReadiness superOrg "\"hosp1MSP\": true" "\"hosp2MSP\": false" "\"superOrgMSP\": false"
 
 ## now approve also for hosp2
-approveForMyOrg 2
+approveForMyOrg hosp2
 
 ## check whether the chaincode definition is ready to be committed
 ## expect them both to have approved
-checkCommitReadiness 1 "\"hosp1MSP\": true" "\"hosp2MSP\": true"
-checkCommitReadiness 2 "\"hosp1MSP\": true" "\"hosp2MSP\": true"
+checkCommitReadiness hosp1 "\"hosp1MSP\": true" "\"hosp2MSP\": true" "\"superOrgMSP\": false"
+checkCommitReadiness hosp2 "\"hosp1MSP\": true" "\"hosp2MSP\": true" "\"superOrgMSP\": false"
+checkCommitReadiness superOrg "\"hosp1MSP\": true" "\"hosp2MSP\": true" "\"superOrgMSP\": false"
+
+## finally approve for superOrg
+approveForMyOrg superOrg
+
+## check whether the chaincode definition is ready to be committed
+## expect them to have approved
+checkCommitReadiness hosp1 "\"hosp1MSP\": true" "\"hosp2MSP\": true" "\"superOrgMSP\": true"
+checkCommitReadiness hosp2 "\"hosp1MSP\": true" "\"hosp2MSP\": true" "\"superOrgMSP\": true"
+checkCommitReadiness superOrg "\"hosp1MSP\": true" "\"hosp2MSP\": true" "\"superOrgMSP\": true"
 
 ## now that we know for sure both orgs have approved, commit the definition
-commitChaincodeDefinition 1 2
+commitChaincodeDefinition hosp1 hosp2 superOrg
 
 ## query on both orgs to see that the definition committed successfully
-queryCommitted 1
-queryCommitted 2
+queryCommitted hosp1
+queryCommitted hosp2
+queryCommitted superOrg
 
 ## Invoke the chaincode - this does require that the chaincode have the 'initLedger'
 ## method defined
 if [ "$CC_INIT_FCN" = "NA" ]; then
   infoln "Chaincode initialization is not required"
 else
-  chaincodeInvokeInit 1 2
+  chaincodeInvokeInit hosp1 hosp2 superOrg
 fi
 
 exit 0
