@@ -99,7 +99,7 @@ class PrimaryContract extends Contract {
 
             if (res.value && res.value.value.toString()) {
                 let jsonRes = {};
-                console.log(res.value.value.toString('utf8'));
+                // console.log(res.value.value.toString('utf8'));
 
                 if (isHistory && isHistory === true) {
                     jsonRes.Timestamp = res.value.timestamp;
@@ -117,7 +117,7 @@ class PrimaryContract extends Contract {
             if (res.done) {
                 await iterator.close();
                 console.log('end of data');
-                console.info(allResults);
+                console.info("INFO: " + allResults.length + " records fetched.");
                 return allResults;
             }
         }

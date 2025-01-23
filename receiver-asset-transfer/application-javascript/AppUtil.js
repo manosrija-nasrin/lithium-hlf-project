@@ -50,10 +50,10 @@ exports.buildCCPHosp2 = () => {
  * @description Creates a connection profile and returns the network config to Hospital 3. Reads the JSON file created
  * @description When CA is created there is a json for each hospital which specfies the connection profile.
  */
-exports.buildCCPHosp3 = () => {
+exports.buildCCPSuperOrg = () => {
   // load the common connection configuration file
   const ccpPath = path.resolve(__dirname, '..', '..', 'first-network',
-    'organizations', 'peerOrganizations', 'hosp3.lithium.com', 'connection-hosp3.json');
+    'organizations', 'peerOrganizations', 'superOrg.lithium.com', 'connection-superOrg.json');
   const fileExists = fs.existsSync(ccpPath);
   if (!fileExists) {
     throw new Error(`no such file or directory: ${ccpPath}`);

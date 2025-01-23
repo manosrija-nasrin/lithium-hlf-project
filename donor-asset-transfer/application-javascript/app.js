@@ -2,20 +2,60 @@ const { Gateway, Wallets } = require('fabric-network');
 const FabricCAServices = require('fabric-ca-client');
 const path = require('path');
 const { buildCAClient, registerAndEnrollUser, deleteAndRevokeUser } = require('./CAUtil.js');
-const { buildCCPHosp3, buildCCPHosp2, buildCCPHosp1, buildWallet } = require('./AppUtil.js');
+const { buildCCPSuperOrg, buildCCPHosp2, buildCCPHosp1, buildWallet } = require('./AppUtil.js');
 const http = require('http');
 
 const channelName = 'hospitalchannel';
 const chaincodeName = 'donor';
 const mspOrg1 = 'hosp1MSP';
 const mspOrg2 = 'hosp2MSP';
-const mspOrg3 = 'hosp3MSP';
+const mspOrg3 = 'superOrgMSP';
 const walletPath = path.join(__dirname, 'wallet');
 const caUrl = 'https://localhost:7054';
 
 exports.connectToNetwork = async function (doctorID) {
   const gateway = new Gateway();
   const ccp = buildCCPHosp1();
+
+  try {
+    const walletPath = path.join(process.cwd(), '../donor-asset-transfer/application-javascript/wallet/');
+
+    const wallet = await buildWallet(Wallets, walletPath);
+
+    const userExists = await wallet.get(doctorID);
+    if (!userExists) {
+      console.log('An identity for the doctorID: ' + doctorID + ' does not exist in the wallet');
+      console.log('Create the doctorID before retrying');
+      const response = {};
+      response.error = 'An identity for the user ' + doctorID + ' does not exist in the wallet. Register ' + doctorID + ' first';
+      return response;
+    }
+
+    await gateway.connect(ccp, { wallet, identity: doctorID, discovery: { enabled: true, asLocalhost: true } });
+
+    const network = await gateway.getNetwork(channelName);
+
+    const contract = network.getContract(chaincodeName);
+
+    const networkObj = {
+      contract: contract,
+      network: network,
+      gateway: gateway,
+    };
+    console.log('Succesfully connected to the network.');
+    return networkObj;
+  } catch (error) {
+    console.log(`Error processing transaction. ${error}`);
+    console.log(error.stack);
+    const response = {};
+    response.error = error;
+    return response;
+  }
+};
+
+exports.connectToSuperNetwork = async function (doctorID) {
+  const gateway = new Gateway();
+  const ccp = buildCCPSuperOrg();
 
   try {
     const walletPath = path.join(process.cwd(), '../donor-asset-transfer/application-javascript/wallet/');
@@ -87,18 +127,7 @@ exports.invokePDCWriteTransaction = async function (networkObj, func, args = '')
       let transientData = JSON.parse(args[1]);
       console.log(parsedArgs);
       console.log(transientData);
-      /*
-      [
-      '{"bloodBagUnitNo":"108","bloodBagSegmentNo":"108","username":"HOSP1-TECH123"}',
-      '{"transientData":{"reasons":["Malaria","Syphilis"]}}'
-      ]
-      {
-        bloodBagUnitNo: '108',
-        bloodBagSegmentNo: '108',
-        username: 'HOSP1-TECH123'
-      }
-      { transientData: { reasons: [ 'Malaria', 'Syphilis' ] } }
-       */
+
       if ('transientData' in transientData) {
         // transientMap.set("transientData", Buffer.from(JSON.stringify(transientData['transientData'])));
         let wrappedTransientData = {'transientData': Buffer.from(JSON.stringify(transientData['transientData']))};
@@ -131,7 +160,11 @@ exports.registerUser = async function (attributes) {
   try {
     const wallet = await buildWallet(Wallets, walletPath);
     // TODO: Must be handled in a config file instead of using if
-    if (hospitalId === 1) {
+    if (userId.includes("SUP")) {
+      const ccp = buildCCPSuperOrg();
+      const caClient = buildCAClient(FabricCAServices, ccp, 'ca.superOrg.lithium.com');
+      await registerAndEnrollUser(caClient, wallet, mspOrg3, userId, 'superOrgadmin', attributes);
+    } else if (hospitalId === 1) {
       const ccp = buildCCPHosp1();
       const caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp1.lithium.com');
       await registerAndEnrollUser(caClient, wallet, mspOrg1, userId, 'hosp1admin', attributes);
@@ -139,11 +172,7 @@ exports.registerUser = async function (attributes) {
       const ccp = buildCCPHosp2();
       const caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp2.lithium.com');
       await registerAndEnrollUser(caClient, wallet, mspOrg2, userId, 'hosp2admin', attributes);
-    } else if (hospitalId === 3) {
-      const ccp = buildCCPHosp3();
-      const caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp3.lithium.com');
-      await registerAndEnrollUser(caClient, wallet, mspOrg3, userId, 'hosp3admin', attributes);
-    }
+    } 
     console.log(`Successfully registered user: + ${userId}`);
     const response = 'Successfully registered user: ' + userId;
     return response;
@@ -165,7 +194,11 @@ exports.deleteUser = async function (userId, hospitalId, adminUserId) {
     let response;
 
     // Determine the CCP, CA client, and MSP ID based on the hospitalId
-    if (hospId === 1) {
+    if (userId.includes("SUP")) {
+      const ccp = buildCCPSuperOrg();
+      const caClient = buildCAClient(FabricCAServices, ccp, 'ca.superOrg.lithium.com');
+      response = await deleteAndRevokeUser(caClient, wallet, userId, adminUserId);
+    } else if (hospId === 1) {
       console.log('hello');
       const ccp = buildCCPHosp1();
       const caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp1.lithium.com');
@@ -174,10 +207,6 @@ exports.deleteUser = async function (userId, hospitalId, adminUserId) {
     } else if (hospId === 2) {
       const ccp = buildCCPHosp2();
       const caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp2.lithium.com');
-      response = await deleteAndRevokeUser(caClient, wallet, userId, adminUserId);
-    } else if (hospId === 3) {
-      const ccp = buildCCPHosp3();
-      const caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp3.lithium.com');
       response = await deleteAndRevokeUser(caClient, wallet, userId, adminUserId);
     } else {
       response = { error: 'Error! Invalid hospitalId.' };
@@ -247,7 +276,22 @@ async function checkEnrollmentStatus(caUrl, userId) {
   });
 }
 
-exports.getAllSupersByHospitalId = async function (networkObj, hospitalId) {
+/**
+ * 
+ * Attributes [
+  { name: 'fullName', value: 'Sudha Murthy', ecert: true },
+  { name: 'address', value: 'Hospital2, Earth', ecert: true },
+  { name: 'phoneNumber', value: '8526147845', ecert: true },
+  { name: 'emergPhoneNumber', value: '9874563354', ecert: true },
+  { name: 'role', value: 'super', ecert: true },
+  { name: 'registration', value: '', ecert: true },
+  { name: 'hf.EnrollmentID', value: 'HOSP2-SUP12227', ecert: true },
+  { name: 'hf.Type', value: 'client', ecert: true },
+  { name: 'hf.Affiliation', value: '', ecert: true }
+]
+ */
+
+exports.getAllSupers = async function (networkObj) {
   // Get the User from the identity context
 
   const users = networkObj.gateway.identityContext.user;
@@ -255,16 +299,8 @@ exports.getAllSupersByHospitalId = async function (networkObj, hospitalId) {
   const result = [];
   try {
     // TODO: Must be handled in a config file instead of using if
-    if (hospitalId === 1) {
-      const ccp = buildCCPHosp1();
-      caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp1.lithium.com');
-    } else if (hospitalId === 2) {
-      const ccp = buildCCPHosp2();
-      caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp2.lithium.com');
-    } else if (hospitalId === 3) {
-      const ccp = buildCCPHosp3();
-      caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp3.lithium.com');
-    }
+    const ccp = buildCCPSuperOrg();
+    caClient = buildCAClient(FabricCAServices, ccp, 'ca.superOrg.lithium.com');
 
     // Use the identity service to get the user enrolled using the respective CA
     const idService = caClient.newIdentityService();
@@ -316,9 +352,10 @@ exports.getAllDoctorsByHospitalId = async function (networkObj, hospitalId) {
     } else if (hospitalId === 2) {
       const ccp = buildCCPHosp2();
       caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp2.lithium.com');
-    } else if (hospitalId === 3) {
-      const ccp = buildCCPHosp3();
-      caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp3.lithium.com');
+    }
+     else if (hospitalId === 3) {
+      const ccp = buildCCPSuperOrg();
+      caClient = buildCAClient(FabricCAServices, ccp, 'ca.superOrg.lithium.com');
     }
 
     // Use the identity service to get the user enrolled using the respective CA
@@ -372,9 +409,10 @@ exports.getAllTechniciansByHospitalId = async function (networkObj, hospitalId) 
     } else if (hospitalId === 2) {
       const ccp = buildCCPHosp2();
       caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp2.lithium.com');
-    } else if (hospitalId === 3) {
-      const ccp = buildCCPHosp3();
-      caClient = buildCAClient(FabricCAServices, ccp, 'ca.hosp3.lithium.com');
+    }
+     else if (hospitalId === 3) {
+      const ccp = buildCCPSuperOrg();
+      caClient = buildCAClient(FabricCAServices, ccp, 'ca.superOrg.lithium.com');
     }
 
     // Use the identity service to get the user enrolled using the respective CA

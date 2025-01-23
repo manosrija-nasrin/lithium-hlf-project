@@ -7,6 +7,7 @@ const stringify = require('json-stringify-deterministic');
 const sortKeysRecursive = require('sort-keys-recursive');
 const { Certificate } = require('@fidm/x509');
 const privateCollection = 'blockedDonorPrivateCollection';
+const HOSP_SUPERS = ["HOSP1-SUP12226", "HOSP2-SUP12227"];
 
 class SuperContract extends PrimaryContract {
     // verifyClientOrgMatchesPeerOrg is an internal function used verify client org id and matches peer org id.
@@ -49,11 +50,11 @@ class SuperContract extends PrimaryContract {
     checkSuperIdentity(ctx, username) {
         const txnCreator = ctx.stub.getCreator();
         console.debug("Txn Creator: ", txnCreator);
-        console.debug("Txn Creator via Function: ", this.getTxnCreatorIdentity(ctx));
-        console.debug("Client ID: ", ctx.clientIdentity.getID());
-        console.debug("Client MSP ID: ", ctx.clientIdentity.getMSPID());
-        console.debug("Peer MSP ID: ", ctx.stub.getMspID()); // 
-        if (username.includes("SUP")) {
+        // console.debug("Txn Creator via Function: ", this.getTxnCreatorIdentity(ctx));
+        // console.debug("Client ID: ", ctx.clientIdentity.getID());
+        // console.debug("Client MSP ID: ", ctx.clientIdentity.getMSPID());
+        console.debug("Peer MSP ID: /", ctx.stub.getMspID() + "/"); // 
+        if (username.includes("SUP") && HOSP_SUPERS.includes(username)) {
             return true;
         } else return false;
     }
@@ -152,19 +153,23 @@ class SuperContract extends PrimaryContract {
     async queryAllBlockedDonors(ctx, args) {
         try {
             // this.verifyClientOrgMatchesPeerOrg(ctx);
-            const parsedArgs = JSON.parse(args);
-            const superId = parsedArgs.username;
+            const msp = ctx.stub.getMspID() + "";
+            
+            if (msp.trim() == "superOrgMSP") {
+                const parsedArgs = JSON.parse(args);
+                const superId = parsedArgs.username;
 
-            if (superId === undefined || superId === null || superId === '') {
-                return { error: "Super ID not provided"};
-            } else if (!this.checkSuperIdentity(ctx, superId)) {
-                return { error: "Permission not granted to "+ superId};
+                if (superId === undefined || superId === null || superId === '') {
+                    return { error: "Super ID not provided"};
+                } else if (!this.checkSuperIdentity(ctx, superId)) {
+                    return { error: "Permission not granted to "+ superId};
+                }
+
+                let resultsIterator = await ctx.stub.getPrivateDataByRange(privateCollection, '', '');
+                let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
+
+                return this.fetchFields(assets);
             }
-
-            let resultsIterator = await ctx.stub.getPrivateDataByRange(privateCollection, '', '');
-            let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
-
-            return this.fetchFields(assets);
         } catch (error) {
             console.error(error);
             return { error: error };
@@ -240,9 +245,6 @@ class SuperContract extends PrimaryContract {
             const parsedArgs = JSON.parse(args);
             const transientMap = ctx.stub.getTransient();
             const transient = transientMap.get("transientData");
-            // console.debug(transientMap);
-            // console.debug(transient);
-            // console.debug(transient.toString());
             if (!transient) {
                 throw new Error("No transient data");
             }
@@ -259,13 +261,18 @@ class SuperContract extends PrimaryContract {
                 
                 let changedMedicalDetails = { donorId: donorId, alert: true, isDiseased: true, donationStatus: 'blocked' };
                 await this.updateDonorMedicalDetailsForBlocking(ctx, JSON.stringify(changedMedicalDetails));
-                
-                const date = new Date().toISOString().split("T")[0];
-                const blockedDonor = new BlockedDonor(donor, date, 365, reasonsJson.reasons, parsedArgs.username, parsedArgs.bloodBagUnitNo, parsedArgs.bloodBagSegmentNo);
-                const plainBlockedDonor = JSON.parse(JSON.stringify(blockedDonor));
-                console.debug("Putting blocked donor to ledger: ", plainBlockedDonor);
-                console.debug("Type: ", typeof(plainBlockedDonor));
-                await ctx.stub.putPrivateData(privateCollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainBlockedDonor))));
+                const msp = ctx.stub.getMspID() + "";
+            
+                if (msp.trim() == "superOrgMSP") {
+                    // PDC Write operations only on authorized peers
+                    console.debug("MSP: " + ctx.stub.getMspID());
+                    const date = new Date().toISOString().split("T")[0];
+                    const blockedDonor = new BlockedDonor(donor, date, 365, reasonsJson.reasons, parsedArgs.username, parsedArgs.bloodBagUnitNo, parsedArgs.bloodBagSegmentNo);
+                    const plainBlockedDonor = JSON.parse(JSON.stringify(blockedDonor));
+                    console.debug("Putting blocked donor to ledger: ", plainBlockedDonor);
+                    console.debug("Type: ", typeof(plainBlockedDonor));
+                    await ctx.stub.putPrivateData(privateCollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainBlockedDonor))));
+                }
 
                 return { status: "success" };
             } else {
