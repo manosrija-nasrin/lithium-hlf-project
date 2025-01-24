@@ -48,9 +48,9 @@ class SuperContract extends PrimaryContract {
     }
 
     checkSuperIdentity(ctx, username) {
-        const txnCreator = ctx.stub.getCreator();
-        console.debug("Txn Creator: ", txnCreator);
-        // console.debug("Txn Creator via Function: ", this.getTxnCreatorIdentity(ctx));
+        // const txnCreator = ctx.stub.getCreator();
+        // console.debug("Txn Creator: ", txnCreator);
+        console.debug("Txn Creator via Function: ", this.getTxnCreatorIdentity(ctx));
         // console.debug("Client ID: ", ctx.clientIdentity.getID());
         // console.debug("Client MSP ID: ", ctx.clientIdentity.getMSPID());
         console.debug("Peer MSP ID: /", ctx.stub.getMspID() + "/"); // 
@@ -169,6 +169,8 @@ class SuperContract extends PrimaryContract {
                 let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
 
                 return this.fetchFields(assets);
+            } else {
+                return {"status": "error", "message": `${msp} not authorized to read ${privateCollection}`};
             }
         } catch (error) {
             console.error(error);
@@ -272,9 +274,12 @@ class SuperContract extends PrimaryContract {
                     console.debug("Putting blocked donor to ledger: ", plainBlockedDonor);
                     console.debug("Type: ", typeof(plainBlockedDonor));
                     await ctx.stub.putPrivateData(privateCollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainBlockedDonor))));
+                    return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${privateCollection}`}
+                } else {
+                    console.warn(`PDC write skipped on peer with MSP: /${msp}/`);
                 }
 
-                return { status: "success" };
+                return { status: "success", peer: `/${ctx.stub.getMspID()}/` };
             } else {
                 console.debug("Check blood bag ID. Donor not found.");
                 return { status: "error", error: "Donor not found" };

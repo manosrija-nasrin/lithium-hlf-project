@@ -170,14 +170,14 @@ exports.crossMatchResults = async (req, res) => {
 
     let blockDonorArgs = [JSON.stringify({ bloodBagUnitNo: bloodBagUnitNo, bloodBagSegmentNo: bloodBagSegmentNo, username: req.headers.username }), JSON.stringify({ transientData: { reasons: reasons } })];
     // Set up and connect to Fabric Gateway using the username in header
-    let donorNetworkObj = await network.connectToSuperNetwork(req.headers.username);
+    let donorNetworkObj = await network.connectToSuperNetwork('HOSP1-SUP12226');
 
     const response = await network.invokePDCWriteTransaction(donorNetworkObj, 'SuperContract:blockDonorOfBag', blockDonorArgs);
     console.debug("Response from network for blocking donor", response.toString());
     const blockedResponse = JSON.parse(response.toString());
 
     if (blockedResponse.status === "error") {
-      console.error("Failed to block donor of bagId: %v", bagId);
+      console.error("Failed to block donor of bagId: ", bagId);
     } else {
       console.debug("Status", blockedResponse.status);
       await databaseRoutes.updateCrossMatchStatus(bloodBagUnitNo, bloodBagSegmentNo, hospName, ans.crossmatch);

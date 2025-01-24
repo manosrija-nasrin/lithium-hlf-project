@@ -131,7 +131,9 @@ exports.invokePDCWriteTransaction = async function (networkObj, func, args = '')
       if ('transientData' in transientData) {
         // transientMap.set("transientData", Buffer.from(JSON.stringify(transientData['transientData'])));
         let wrappedTransientData = {'transientData': Buffer.from(JSON.stringify(transientData['transientData']))};
-        const response = await contractObj.createTransaction(func).setTransient(wrappedTransientData).submit(JSON.stringify(parsedArgs));
+        const transaction = await contractObj.createTransaction(func);
+        transaction.setEndorsingOrganizations(['superOrgMSP']);
+        const response = transaction.setTransient(wrappedTransientData).submit(JSON.stringify(parsedArgs));
         await gatewayObj.disconnect();
         return response;
       } else {
