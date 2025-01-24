@@ -1,0 +1,672 @@
+Script started on 2025-01-22 11:57:05+05:30 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd first-network/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh up -ca
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb' [0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[0;34mCA_LOCAL_VERSION=v1.5.12[0m
+[0;34mCA_DOCKER_IMAGE_VERSION=v1.5.12[0m
+[33mWARN[0m[0000] Found orphan containers ([peer0.superOrg.lithium.com couchdb.superOrg.lithium.com redis.superOrg.lithium.com ca_superOrg ca_orderer ca_hosp1 ca_hosp2]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 2/0
+ [33m⠋[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.0s [0m
+ [33m⠋[0m Container orderer.lithium.com        Starting                                                                                [34m0.0s [0m
+ [33m⠋[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠙[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.1s [0m
+ [33m⠙[0m Container orderer.lithium.com        Starting                                                                                [34m0.1s [0m
+ [33m⠙[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.1s [0m
+ [33m⠙[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.1s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠙[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠹[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.2s [0m
+ [33m⠹[0m Container orderer.lithium.com        Starting                                                                                [34m0.2s [0m
+ [33m⠹[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.2s [0m
+ [33m⠹[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠹[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠸[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.3s [0m
+ [33m⠸[0m Container orderer.lithium.com        Starting                                                                                [34m0.3s [0m
+ [33m⠸[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.3s [0m
+ [33m⠸[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠸[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠼[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.4s [0m
+ [33m⠼[0m Container orderer.lithium.com        Starting                                                                                [34m0.4s [0m
+ [33m⠼[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.4s [0m
+ [33m⠼[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.4s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠼[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.4s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠴[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.5s [0m
+ [33m⠴[0m Container orderer.lithium.com        Starting                                                                                [34m0.5s [0m
+ [33m⠴[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.5s [0m
+ [33m⠴[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.5s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠴[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.5s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠦[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.6s [0m
+ [33m⠦[0m Container orderer.lithium.com        Starting                                                                                [34m0.6s [0m
+ [33m⠦[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.6s [0m
+ [33m⠦[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠦[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠧[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.7s [0m
+ [33m⠧[0m Container orderer.lithium.com        Starting                                                                                [34m0.7s [0m
+ [33m⠧[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.7s [0m
+ [33m⠧[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.7s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠧[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.7s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [33m⠇[0m Container orderer.lithium.com        Starting                                                                                [34m0.8s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [33m⠇[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.8s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠇[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.8s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [33m⠏[0m Container orderer.lithium.com        Starting                                                                                [34m0.9s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [33m⠏[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.9s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠏[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.9s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [33m⠋[0m Container orderer.lithium.com        Starting                                                                                [34m1.0s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [33m⠋[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m1.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m1.0s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [33m⠙[0m Container orderer.lithium.com        Starting                                                                                [34m1.1s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [33m⠙[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m1.1s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠙[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠙[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.2s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠹[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠹[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.3s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠸[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.3s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠸[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.4s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠼[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.4s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠼[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.5s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠴[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.5s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 7/7[0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m0.8s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.6s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.6s [0m
+[?25hCONTAINER ID   IMAGE                                                                                                                                                                         COMMAND                  CREATED        STATUS                       PORTS                                                                    NAMES
+1c4a47d99b68   dev-peer0.superorg.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-841ab85ef359da660087bc0a2dbcc3d63b571adc647efa8a438b2f35d736dc29   "docker-entrypoint.s…"   27 hours ago   Exited (0) 11 hours ago                                                                               dev-peer0.superOrg.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+eb7c6d45f04b   dev-peer0.superorg.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92-b1876f997f289ddaccadf7ddce1f2099d5f7aec49bf64cdb01e9ca9a39ccaf33      "docker-entrypoint.s…"   27 hours ago   Exited (0) 11 hours ago                                                                               dev-peer0.superOrg.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92
+e63f44e5e131   dev-peer0.hosp1.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-f4992d49edd26e64d981d70a8e1737672d76d4bdcfd504b1ded544f2efc01126      "docker-entrypoint.s…"   27 hours ago   Exited (0) 11 hours ago                                                                               dev-peer0.hosp1.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+6508a14b4629   dev-peer0.hosp2.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-8847a78c9d6215d31635cc11508ee3e69b87f7aac1bc0945f283eb9ccb28daaf      "docker-entrypoint.s…"   27 hours ago   Exited (0) 11 hours ago                                                                               dev-peer0.hosp2.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+0665b731b75e   dev-peer0.hosp1.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92-c0decc545eb0922ce582553b481819847009ad327667e15e957a18f062071e2f         "docker-entrypoint.s…"   27 hours ago   Exited (0) 11 hours ago                                                                               dev-peer0.hosp1.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92
+25e731d0ba1e   dev-peer0.hosp2.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92-ae25e84e335f214ba3200e966710544afd2d56d399ff574e29a505bf7e882d97         "docker-entrypoint.s…"   27 hours ago   Exited (0) 11 hours ago                                                                               dev-peer0.hosp2.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92
+73984d94ee6c   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        37 hours ago   Exited (0) 11 hours ago                                                                               peer0.superOrg.lithium.com
+46ea240b63c7   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   37 hours ago   Exited (0) 11 hours ago                                                                               couchdb.superOrg.lithium.com
+1099d49df9d2   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   37 hours ago   Exited (0) 11 hours ago                                                                               redis.superOrg.lithium.com
+28c22ee6c73f   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   37 hours ago   Exited (255) 2 minutes ago   7054/tcp, 0.0.0.0:11054->11054/tcp                                       ca_superOrg
+940fc606538c   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        37 hours ago   Up Less than a second        0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.hosp2.lithium.com
+84281a0da5fa   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        37 hours ago   Up Less than a second        0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.hosp1.lithium.com
+9d1575f57160   hyperledger/fabric-orderer:latest                                                                                                                                             "orderer"                37 hours ago   Up 1 second                  0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.lithium.com
+4b902acb1270   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   37 hours ago   Up 1 second                  0.0.0.0:6380->6379/tcp                                                   redis.hosp2.lithium.com
+bc4052744b41   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   37 hours ago   Up 1 second                  4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp                               couchdb.hosp2.lithium.com
+5db10f9d2cf5   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   37 hours ago   Up 1 second                  0.0.0.0:6379->6379/tcp                                                   redis.hosp1.lithium.com
+8f6e5d53d8af   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   37 hours ago   Up 1 second                  4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp                               couchdb.hosp1.lithium.com
+a7723b90b074   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   37 hours ago   Exited (255) 2 minutes ago   0.0.0.0:9054->9054/tcp, 7054/tcp, 0.0.0.0:19054->19054/tcp               ca_orderer
+fe30199ed162   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   37 hours ago   Exited (255) 2 minutes ago   0.0.0.0:7054->7054/tcp, 0.0.0.0:17054->17054/tcp                         ca_hosp1
+3b00faf32026   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   37 hours ago   Exited (255) 2 minutes ago   0.0.0.0:8054->8054/tcp, 7054/tcp, 0.0.0.0:18054->18054/tcp               ca_hosp2
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m cd ./addSuperOrg/
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m ./addSuperOrg.sh up -ca
+[0;34mUsing docker and docker-compose[0m
+[0;34mAdding superOrg to channel 'hospitalchannel' with '10' seconds and CLI delay of '3' seconds and using database 'couchdb'[0m
+
+[0;34mBringing up SuperOrg peer[0m
+[33mWARN[0m[0000] Found orphan containers ([ca_superOrg peer0.hosp2.lithium.com peer0.hosp1.lithium.com orderer.lithium.com redis.hosp2.lithium.com couchdb.hosp2.lithium.com redis.hosp1.lithium.com couchdb.hosp1.lithium.com ca_orderer ca_hosp1 ca_hosp2]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 1/0
+ [33m⠋[0m Container couchdb.superOrg.lithium.com  Starting                                                                             [34m0.1s [0m
+ [33m⠋[0m Container redis.superOrg.lithium.com    Starting                                                                             [34m0.1s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com    [32mCreated[0m                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [33m⠙[0m Container couchdb.superOrg.lithium.com  Starting                                                                             [34m0.2s [0m
+ [33m⠙[0m Container redis.superOrg.lithium.com    Starting                                                                             [34m0.2s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com    [32mCreated[0m                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [33m⠹[0m Container couchdb.superOrg.lithium.com  Starting                                                                             [34m0.3s [0m
+ [33m⠹[0m Container redis.superOrg.lithium.com    Starting                                                                             [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com    [32mCreated[0m                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [33m⠸[0m Container couchdb.superOrg.lithium.com  Starting                                                                             [34m0.4s [0m
+ [33m⠸[0m Container redis.superOrg.lithium.com    Starting                                                                             [34m0.4s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com    [32mCreated[0m                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [33m⠼[0m Container couchdb.superOrg.lithium.com  Starting                                                                             [34m0.5s [0m
+ [33m⠼[0m Container redis.superOrg.lithium.com    Starting                                                                             [34m0.5s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com    [32mCreated[0m                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [32m✔[0m Container couchdb.superOrg.lithium.com  [32mStarted[0m                                                                              [34m0.5s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com    [32mStarted[0m                                                                              [34m0.5s [0m
+ [33m⠙[0m Container peer0.superOrg.lithium.com    Starting                                                                             [34m0.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [32m✔[0m Container couchdb.superOrg.lithium.com  [32mStarted[0m                                                                              [34m0.5s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com    [32mStarted[0m                                                                              [34m0.5s [0m
+ [33m⠹[0m Container peer0.superOrg.lithium.com    Starting                                                                             [34m0.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [32m✔[0m Container couchdb.superOrg.lithium.com  [32mStarted[0m                                                                              [34m0.5s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com    [32mStarted[0m                                                                              [34m0.5s [0m
+ [33m⠸[0m Container peer0.superOrg.lithium.com    Starting                                                                             [34m0.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [32m✔[0m Container couchdb.superOrg.lithium.com  [32mStarted[0m                                                                              [34m0.5s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com    [32mStarted[0m                                                                              [34m0.5s [0m
+ [33m⠼[0m Container peer0.superOrg.lithium.com    Starting                                                                             [34m0.9s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/3[0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com  [32mStarted[0m                                                                              [34m0.5s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com    [32mStarted[0m                                                                              [34m0.5s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com    [32mStarted[0m                                                                              [34m0.9s [0m
+[?25h[0;34mGenerating and submitting config tx to add SuperOrg[0m
+[0;34mCreating config transaction to add superOrg to network[0m
+[0;34mUsing organization hosp1[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c hospitalchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2025-01-22 11:58:47.629 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-01-22 11:58:47.632 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 68
+[34m2025-01-22 11:58:47.632 IST 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 4
+[34m2025-01-22 11:58:47.635 IST 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 4
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config_block.json
+++ res=0
+++ jq -s '.[0] * {"channel_group":{"groups":{"Application":{"groups": {"superOrgMSP":.[1]}}}}}' /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config.json /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/superOrg.json
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/modified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id hospitalchannel --original /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config_update.pb
+configtxlator: error: Error computing update: error computing config update: no differences detected between original and updated config
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"hospitalchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"",' '"isolated_data":' '{},' '"read_set":' null, '"write_set":' null '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/superOrg_update_in_envelope.pb
+[0;34mSigning config transaction[0m
+[0;34mUsing organization hosp1[0m
+++ peer channel signconfigtx -f /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/superOrg_update_in_envelope.pb
+[34m2025-01-22 11:58:53.576 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[0;34mSubmitting transaction from a different peer (peer0.hosp2) which also signs it[0m
+[0;34mUsing organization hosp2[0m
+++ peer channel update -f /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/superOrg_update_in_envelope.pb -c hospitalchannel -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2025-01-22 11:58:54.802 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+Error: got unexpected status: BAD_REQUEST -- error applying config update to existing channel 'hospitalchannel': error authorizing update: ConfigUpdate for channel '' but envelope for channel 'hospitalchannel'
+[0;32mConfig transaction to add superOrg to network submitted[0m
+[0;34mJoining SuperOrg peers to network[0m
+[0;34mUsing organization superOrg[0m
+Fetching channel config block from orderer...
+++ peer channel fetch 0 /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/hospitalchannel.block -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c hospitalchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+++ res=0
+[34m2025-01-22 11:58:56.341 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-01-22 11:58:56.348 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[0;34mJoining superOrg peer to the channel...[0m
+[0;34mUsing organization superOrg[0m
+++ peer channel join -b /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/hospitalchannel.block
+++ res=1
+++ peer channel join -b /mnt/f/blood-data-management-system/first-network/addSuperOrg/../channel-artifacts/hospitalchannel.block
+^C
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m cd ..
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m cd .../addSuperOrg.sh up -ca[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pcd ./addSuperOrg/./network.sh up -ca
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb' [0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[0;34mCA_LOCAL_VERSION=v1.5.12[0m
+[0;34mCA_DOCKER_IMAGE_VERSION=v1.5.12[0m
+[33mWARN[0m[0000] Found orphan containers ([peer0.superOrg.lithium.com couchdb.superOrg.lithium.com redis.superOrg.lithium.com ca_superOrg ca_orderer ca_hosp1 ca_hosp2]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 7/0
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mRunning[0m                                                                                 [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mRunning[0m                                                                                 [34m0.0s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mRunning[0m                                                                                 [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mRunning[0m                                                                                 [34m0.0s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mRunning[0m                                                                                 [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mRunning[0m                                                                                 [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mRunning[0m                                                                                 [34m0.0s [0m
+[?25hCONTAINER ID   IMAGE                                                                                                                                                                         COMMAND                  CREATED              STATUS                       PORTS                                                                    NAMES
+0c0065f7b56e   dev-peer0.superorg.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-841ab85ef359da660087bc0a2dbcc3d63b571adc647efa8a438b2f35d736dc29   "docker-entrypoint.s…"   41 seconds ago       Up 40 seconds                                                                                         dev-peer0.superOrg.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+d8a172e6fe75   dev-peer0.superorg.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92-b1876f997f289ddaccadf7ddce1f2099d5f7aec49bf64cdb01e9ca9a39ccaf33      "docker-entrypoint.s…"   43 seconds ago       Up 42 seconds                                                                                         dev-peer0.superOrg.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92
+991e55384098   dev-peer0.hosp2.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-8847a78c9d6215d31635cc11508ee3e69b87f7aac1bc0945f283eb9ccb28daaf      "docker-entrypoint.s…"   About a minute ago   Up About a minute                                                                                     dev-peer0.hosp2.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+daeed36d9d10   dev-peer0.hosp1.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-f4992d49edd26e64d981d70a8e1737672d76d4bdcfd504b1ded544f2efc01126      "docker-entrypoint.s…"   About a minute ago   Up About a minute                                                                                     dev-peer0.hosp1.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+b0ffa94e1427   dev-peer0.hosp2.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92-ae25e84e335f214ba3200e966710544afd2d56d399ff574e29a505bf7e882d97         "docker-entrypoint.s…"   About a minute ago   Up About a minute                                                                                     dev-peer0.hosp2.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92
+a65bbf5bf4cd   dev-peer0.hosp1.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92-c0decc545eb0922ce582553b481819847009ad327667e15e957a18f062071e2f         "docker-entrypoint.s…"   About a minute ago   Up About a minute                                                                                     dev-peer0.hosp1.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92
+73984d94ee6c   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        37 hours ago         Up 43 seconds                7051/tcp, 0.0.0.0:11051->11051/tcp                                       peer0.superOrg.lithium.com
+46ea240b63c7   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   37 hours ago         Up 44 seconds                4369/tcp, 9100/tcp, 0.0.0.0:9984->5984/tcp                               couchdb.superOrg.lithium.com
+1099d49df9d2   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   37 hours ago         Up 44 seconds                0.0.0.0:6381->6379/tcp                                                   redis.superOrg.lithium.com
+28c22ee6c73f   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   37 hours ago         Exited (255) 4 minutes ago   7054/tcp, 0.0.0.0:11054->11054/tcp                                       ca_superOrg
+940fc606538c   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        37 hours ago         Up About a minute            0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.hosp2.lithium.com
+84281a0da5fa   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        37 hours ago         Up About a minute            0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.hosp1.lithium.com
+9d1575f57160   hyperledger/fabric-orderer:latest                                                                                                                                             "orderer"                37 hours ago         Up 2 minutes                 0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.lithium.com
+4b902acb1270   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   37 hours ago         Up 2 minutes                 0.0.0.0:6380->6379/tcp                                                   redis.hosp2.lithium.com
+bc4052744b41   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   37 hours ago         Up 2 minutes                 4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp                               couchdb.hosp2.lithium.com
+5db10f9d2cf5   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   37 hours ago         Up 2 minutes                 0.0.0.0:6379->6379/tcp                                                   redis.hosp1.lithium.com
+8f6e5d53d8af   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   37 hours ago         Up 2 minutes                 4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp                               couchdb.hosp1.lithium.com
+a7723b90b074   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   37 hours ago         Exited (255) 4 minutes ago   0.0.0.0:9054->9054/tcp, 7054/tcp, 0.0.0.0:19054->19054/tcp               ca_orderer
+fe30199ed162   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   37 hours ago         Exited (255) 4 minutes ago   0.0.0.0:7054->7054/tcp, 0.0.0.0:17054->17054/tcp                         ca_hosp1
+3b00faf32026   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   37 hours ago         Exited (255) 4 minutes ago   0.0.0.0:8054->8054/tcp, 7054/tcp, 0.0.0.0:18054->18054/tcp               ca_hosp2
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker start ca_orderer ca_hosp1 ca_hosp1[K2
+ca_orderer
+ca_hosp1
+ca_hosp2
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker start ca_superOrg
+ca_superOrg
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export PATH=${PWD}/../bin:$PATH
+_PEER_ADDRESS=localhost:7051]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export FABRIC_CFG_PATH=$PWD/../config/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ENABLED=true
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_LOCALMSPID="hosp1MSP"
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls/ca.crt
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_ADDRESS=localhost:7051
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m peer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:queryAllBlockedDonors","Args":["{\"username\": \"HOSP1-SUP12226\"}"]}'[C[C[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[1P"HOSP1-SUP12226\"}"]}'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P"}"]}'[C[C[C[1P]}'[1P]}'[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@c[1@h[1@e[1@c[1@k[1@S[1@u[1@p[1@e[1@r[1@I[1@d[1@e[1@n[1P[1@n[1@t[1@i[1@t[1@y
+Error: chaincode argument error: invalid character ':' after array element
+Usage:
+  peer chaincode query [flags]
+
+Flags:
+  -C, --channelID string               The channel on which this command should be executed
+      --connectionProfile string       Connection profile that provides the necessary connection information for the network. Note: currently only supported for providing peer connection information
+  -c, --ctor string                    Constructor message for the chaincode in JSON format (default "{}")
+  -h, --help                           help for query
+  -x, --hex                            If true, output the query value byte array in hexadecimal. Incompatible with --raw
+  -n, --name string                    Name of the chaincode
+      --peerAddresses stringArray      The addresses of the peers to connect to
+  -r, --raw                            If true, output the query value as raw bytes, otherwise format as a printable string
+      --tlsRootCertFiles stringArray   If TLS is enabled, the paths to the TLS root cert files of the peers to connect to. The order and number of certs specified should match the --peerAddresses flag
+
+Global Flags:
+      --cafile string                       Path to file containing PEM-encoded trusted certificate(s) for the ordering endpoint
+      --certfile string                     Path to file containing PEM-encoded X509 public key to use for mutual TLS communication with the orderer endpoint
+      --clientauth                          Use mutual TLS when communicating with the orderer endpoint
+      --connTimeout duration                Timeout for client to connect (default 3s)
+      --keyfile string                      Path to file containing PEM-encoded private key to use for mutual TLS communication with the orderer endpoint
+  -o, --orderer string                      Ordering service endpoint
+      --ordererTLSHostnameOverride string   The hostname override to use when validating the TLS connection to the orderer
+      --tls                                 Use TLS when communicating with the orderer endpoint
+      --tlsHandshakeTimeShift duration      The amount of time to shift backwards for certificate expiration checks during TLS handshakes with the orderer endpoint
+      --transient string                    Transient map of arguments in JSON encoding
+
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m peer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:checkSuperIdentity","Args":["username": "HOSP1-SUP12226"]}'[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpeer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:checkSuperIdentity","Args":["username": "HOSP1-SUP12226"]}'[1P[C[C[C[C[C[C[C[C[C[C[C[C[1P"HOSP1-SUP12226"]}'[1P"HOSP1-SUP12226"]}'[1PHOSP1-SUP12226"]}'[1P"HOSP1-SUP12226"]}'[1P"HOSP1-SUP12226"]}'[1P"HOSP1-SUP12226"]}'[1P"HOSP1-SUP12226"]}'[1P"HOSP1-SUP12226"]}'[1P"HOSP1-SUP12226"]}'[1P"HOSP1-SUP12226"]}'[1P"HOSP1-SUP12226"]}'[1PHOSP1-SUP12226"]}'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P}'
+Error: chaincode argument error: json: cannot unmarshal string into Go struct field .Args of type []string
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m peer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:checkSuperIdentity","Args":"HOSP1-SUP12226"}'["username": "HOSP1-SUP12226"]}'[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[78Pexport CORE_PEER_ADDRESS=localhost:7051
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpeer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:checkSuperIdentity","Args":["username": "HOSP1-SUP12226"]}'}]}'\"}]}'\"HOSP1-SUP12226\"}]}'[C[1@\[1@\[1@{
+Error: chaincode argument error: invalid character '\\' looking for beginning of object key string
+Usage:
+  peer chaincode query [flags]
+
+Flags:
+  -C, --channelID string               The channel on which this command should be executed
+      --connectionProfile string       Connection profile that provides the necessary connection information for the network. Note: currently only supported for providing peer connection information
+  -c, --ctor string                    Constructor message for the chaincode in JSON format (default "{}")
+  -h, --help                           help for query
+  -x, --hex                            If true, output the query value byte array in hexadecimal. Incompatible with --raw
+  -n, --name string                    Name of the chaincode
+      --peerAddresses stringArray      The addresses of the peers to connect to
+  -r, --raw                            If true, output the query value as raw bytes, otherwise format as a printable string
+      --tlsRootCertFiles stringArray   If TLS is enabled, the paths to the TLS root cert files of the peers to connect to. The order and number of certs specified should match the --peerAddresses flag
+
+Global Flags:
+      --cafile string                       Path to file containing PEM-encoded trusted certificate(s) for the ordering endpoint
+      --certfile string                     Path to file containing PEM-encoded X509 public key to use for mutual TLS communication with the orderer endpoint
+      --clientauth                          Use mutual TLS when communicating with the orderer endpoint
+      --connTimeout duration                Timeout for client to connect (default 3s)
+      --keyfile string                      Path to file containing PEM-encoded private key to use for mutual TLS communication with the orderer endpoint
+  -o, --orderer string                      Ordering service endpoint
+      --ordererTLSHostnameOverride string   The hostname override to use when validating the TLS connection to the orderer
+      --tls                                 Use TLS when communicating with the orderer endpoint
+      --tlsHandshakeTimeShift duration      The amount of time to shift backwards for certificate expiration checks during TLS handshakes with the orderer endpoint
+      --transient string                    Transient map of arguments in JSON encoding
+
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m peer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:checkSuperIdentity","Args":[{\"username\": \"HOSP1-SUP12226\"}]}'"]}'[C[1@"
+false
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh deployCC -c hospitalchannel -ccn donor -ccv 1 -cci initLedger -ccp "../donor-asset-transfer/chaincode" -ccl javascript -ccs 1  -ccep "OR('hosp1MSP.peer','hosp2MSP.peer','superOrgMSP.peer')" -cccg ../private-collections/private-collections.json[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  -ccep "OR('hosp1MSP.peer','hosp2MSP.peer','superOrgMSP.peer')" -cccg ../private-collections/private-collections.[1Pjson[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C5  -ccep "OR('hosp1MSP.peer','hosp2MSP.peer','superOrgMSP.peer')" -cccg ../private-collections/private-collections.json[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -cci initLedger -ccp "../donor-asset-transfer/chaincode" -ccl javascript -ccs 5  -ccep "OR('hosp1MSP.peer','hosp2MSP.peer','superOrgMSP.peer')" -cccg ../private-collections/private-collections.[1Pjson[A[A]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C5 -cci initLedger -ccp "../donor-asset-transfer/chaincode" -ccl javascript -ccs 5  -ccep "OR('hosp1MSP.peer','hosp2MSP.peer','superOrgMSP.peer')" -cccg ../private-collections/private-collections.json[A[A]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+
+[0;34mUsing docker and docker-compose[0m
+[0;34mdeploying chaincode on channel 'hospitalchannel'[0m
+executing with the following
+- CHANNEL_NAME: [0;32mhospitalchannel[0m
+- CC_NAME: [0;32mdonor[0m
+- CC_SRC_PATH: [0;32m../donor-asset-transfer/chaincode[0m
+- CC_SRC_LANGUAGE: [0;32mjavascript[0m
+- CC_VERSION: [0;32m5[0m
+- CC_SEQUENCE: [0;32m5[0m
+- CC_END_POLICY: [0;32mOR('hosp1MSP.peer','hosp2MSP.peer','superOrgMSP.peer')[0m
+- CC_COLL_CONFIG: [0;32m../private-collections/private-collections.json[0m
+- CC_INIT_FCN: [0;32minitLedger[0m
+- DELAY: [0;32m3[0m
+- MAX_RETRY: [0;32m5[0m
+- VERBOSE: [0;32mfalse[0m
+executing with the following
+- CC_NAME: [0;32mdonor[0m
+- CC_SRC_PATH: [0;32m../donor-asset-transfer/chaincode[0m
+- CC_SRC_LANGUAGE: [0;32mjavascript[0m
+- CC_VERSION: [0;32m5[0m
++ '[' false = true ']'
++ peer lifecycle chaincode package donor.tar.gz --path ../donor-asset-transfer/chaincode --lang node --label donor_5
++ res=0
+[0;32mChaincode is packaged[0m
+[0;34mInstalling chaincode on peer0.hosp1...[0m
+[0;34mUsing organization hosp1[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2$'
++ test 1 -ne 0
++ peer lifecycle chaincode install donor.tar.gz
++ res=0
+[34m2025-01-22 12:39:43.703 IST 0001 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Installed remotely: response:<status:200 payload:"\nHdonor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2\022\007donor_5" > 
+[34m2025-01-22 12:39:43.717 IST 0002 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Chaincode code package identifier: donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2
+[0;32mChaincode is installed on peer0.hosp1[0m
+[0;34mInstall chaincode on peer0.hosp2...[0m
+[0;34mUsing organization hosp2[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2$'
++ test 1 -ne 0
++ peer lifecycle chaincode install donor.tar.gz
++ res=0
+[34m2025-01-22 12:40:21.843 IST 0001 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Installed remotely: response:<status:200 payload:"\nHdonor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2\022\007donor_5" > 
+[34m2025-01-22 12:40:21.846 IST 0002 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Chaincode code package identifier: donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2
+[0;32mChaincode is installed on peer0.hosp2[0m
+[0;34mInstall chaincode on peer0.superOrg...[0m
+[0;34mUsing organization superOrg[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2$'
++ test 1 -ne 0
++ peer lifecycle chaincode install donor.tar.gz
++ res=0
+[34m2025-01-22 12:40:59.884 IST 0001 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Installed remotely: response:<status:200 payload:"\nHdonor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2\022\007donor_5" > 
+[34m2025-01-22 12:40:59.891 IST 0002 INFO[0m [cli.lifecycle.chaincode] [34;1msubmitInstallProposal[0m -> Chaincode code package identifier: donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2
+[0;32mChaincode is installed on peer0.superOrg[0m
+[0;34mUsing organization hosp1[0m
++ peer lifecycle chaincode queryinstalled --output json
++ jq -r 'try (.installed_chaincodes[].package_id)'
++ grep '^donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2$'
++ res=0
+donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2
+[0;32mQuery installed successful on peer0.hosp1 on channel[0m
+[0;34mUsing organization hosp1[0m
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID hospitalchannel --name donor --version 5 --package-id donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json
++ res=0
+[34m2025-01-22 12:41:06.117 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [5133d8fe433464d88d430dfac661c28c4d5120386ee21b290a3bc3991de4f5f5] committed with status (VALID) at localhost:7051
+[0;32mChaincode definition approved on peer0.hosp1 on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp1[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.hosp1 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.hosp1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": false,
+		"superOrgMSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.hosp1 on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp2[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.hosp2 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.hosp2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": false,
+		"superOrgMSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.hosp2 on channel 'hospitalchannel'[0m
+[0;34mUsing organization superOrg[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.superOrg on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.superOrg, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": false,
+		"superOrgMSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.superOrg on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp2[0m
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID hospitalchannel --name donor --version 5 --package-id donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json
++ res=0
+[34m2025-01-22 12:41:21.917 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [f9061d5cd21bd4a27cf8259f6549ed7af2124603e75e269707905484b3634553] committed with status (VALID) at localhost:9051
+[0;32mChaincode definition approved on peer0.hosp2 on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp1[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.hosp1 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.hosp1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true,
+		"superOrgMSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.hosp1 on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp2[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.hosp2 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.hosp2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true,
+		"superOrgMSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.hosp2 on channel 'hospitalchannel'[0m
+[0;34mUsing organization superOrg[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.superOrg on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.superOrg, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true,
+		"superOrgMSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.superOrg on channel 'hospitalchannel'[0m
+[0;34mUsing organization superOrg[0m
++ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID hospitalchannel --name donor --version 5 --package-id donor_5:a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json
++ res=0
+[34m2025-01-22 12:41:37.100 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [f6fc38e67fe5ed9e77a76eebc40b81773bd7f4a03c3b53b9a4d6cd82ae529986] committed with status (VALID) at localhost:11051
+[0;32mChaincode definition approved on peer0.superOrg on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp1[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.hosp1 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.hosp1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true,
+		"superOrgMSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.hosp1 on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp2[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.hosp2 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.hosp2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true,
+		"superOrgMSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.hosp2 on channel 'hospitalchannel'[0m
+[0;34mUsing organization superOrg[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.superOrg on channel 'hospitalchannel'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.superOrg, Retry after 3 seconds.[0m
++ peer lifecycle chaincode checkcommitreadiness --channelID hospitalchannel --name donor --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json --output json
++ res=0
+{
+	"approvals": {
+		"hosp1MSP": true,
+		"hosp2MSP": true,
+		"superOrgMSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.superOrg on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp1[0m
+[0;34mUsing organization hosp2[0m
+[0;34mUsing organization superOrg[0m
++ peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem --channelID hospitalchannel --name donor --peerAddresses localhost:7051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/tlsca/tlsca.hosp1.lithium.com-cert.pem --peerAddresses localhost:9051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/tlsca/tlsca.hosp2.lithium.com-cert.pem --peerAddresses localhost:11051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem --version 5 --sequence 5 --init-required --signature-policy 'OR('\''hosp1MSP.peer'\'','\''hosp2MSP.peer'\'','\''superOrgMSP.peer'\'')' --collections-config ../private-collections/private-collections.json
++ res=0
+[34m2025-01-22 12:41:52.687 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [faafa3e59dfcef854b177c5496d5a10bb477baf0c05f77f79537cb866b9c6bcc] committed with status (VALID) at localhost:11051
+[34m2025-01-22 12:41:52.691 IST 0002 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [faafa3e59dfcef854b177c5496d5a10bb477baf0c05f77f79537cb866b9c6bcc] committed with status (VALID) at localhost:9051
+[34m2025-01-22 12:41:52.691 IST 0003 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [faafa3e59dfcef854b177c5496d5a10bb477baf0c05f77f79537cb866b9c6bcc] committed with status (VALID) at localhost:7051
+[0;32mChaincode definition committed on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp1[0m
+[0;34mQuerying chaincode definition on peer0.hosp1 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to Query committed status on peer0.hosp1, Retry after 3 seconds.[0m
++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
++ res=0
+Committed chaincode definition for chaincode 'donor' on channel 'hospitalchannel':
+Version: 5, Sequence: 5, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [hosp1MSP: true, hosp2MSP: true, superOrgMSP: true]
+[0;32mQuery chaincode definition successful on peer0.hosp1 on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp2[0m
+[0;34mQuerying chaincode definition on peer0.hosp2 on channel 'hospitalchannel'...[0m
+[0;34mAttempting to Query committed status on peer0.hosp2, Retry after 3 seconds.[0m
++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
++ res=0
+Committed chaincode definition for chaincode 'donor' on channel 'hospitalchannel':
+Version: 5, Sequence: 5, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [hosp1MSP: true, hosp2MSP: true, superOrgMSP: true]
+[0;32mQuery chaincode definition successful on peer0.hosp2 on channel 'hospitalchannel'[0m
+[0;34mUsing organization superOrg[0m
+[0;34mQuerying chaincode definition on peer0.superOrg on channel 'hospitalchannel'...[0m
+[0;34mAttempting to Query committed status on peer0.superOrg, Retry after 3 seconds.[0m
++ peer lifecycle chaincode querycommitted --channelID hospitalchannel --name donor
++ res=0
+Committed chaincode definition for chaincode 'donor' on channel 'hospitalchannel':
+Version: 5, Sequence: 5, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [hosp1MSP: true, hosp2MSP: true, superOrgMSP: true]
+[0;32mQuery chaincode definition successful on peer0.superOrg on channel 'hospitalchannel'[0m
+[0;34mUsing organization hosp1[0m
+[0;34mUsing organization hosp2[0m
+[0;34mUsing organization superOrg[0m
++ infoln 'invoke fcn call:{"function":"initLedger","Args":[]}'
++ println '\033[0;34minvoke fcn call:{"function":"initLedger","Args":[]}\033[0m'
++ echo -e '\033[0;34minvoke fcn call:{"function":"initLedger","Args":[]}\033[0m'
+[0;34minvoke fcn call:{"function":"initLedger","Args":[]}[0m
++ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem -C hospitalchannel -n donor --peerAddresses localhost:7051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/tlsca/tlsca.hosp1.lithium.com-cert.pem --peerAddresses localhost:9051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/tlsca/tlsca.hosp2.lithium.com-cert.pem --peerAddresses localhost:11051 --tlsRootCertFiles /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem --isInit -c '{"function":"initLedger","Args":[]}'
++ res=0
+[34m2025-01-22 12:42:09.905 IST 0001 INFO[0m [chaincodeCmd] [34;1mchaincodeInvokeOrQuery[0m -> Chaincode invoke successful. result: status:200 
+[0;32mInvoke transaction successful on peer0.hosp1 peer0.hosp2 peer0.superOrg on channel 'hospitalchannel'[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls ./.[K[K./private-collections/private-collections.json 
+[0m[01;32m../private-collections/private-collections.json[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls ../private-collections/private-collections.json [C[C[C[1@-[1@l[1@ 
+-rwxrwxrwx 1 nasrin nasrin 1404 Jan 22 12:37 [0m[01;32m../private-collections/private-collections.json[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export PATH=${PWD}/../bin:$PATH
+C_CFG_PATH=${PWD}/../co]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export FABRIC_CFG_PATH=${PWD}/../config/
+port CORE_P]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ENABLED=true
+ort CO]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_LOCALMSPID=superOrgMSP
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls/ca.crt
+rt COR]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/superOrg.lithium.com/users/Admin@superOrg.lithium.com/msp
+port CO]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_ADDRESS=localhost:11051
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m peer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:queryAllBlockedDonors","Args":["{\"username\": \"HOSP1-SUP12226\"}"]}'
+[]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps } [K[K| grep ca-superOrg
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps | grep ca-superOrg '[C[C[K'[K;" ;[1@"
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps | grep "ca-superOrg" ;[C[C[C[1@ [1@-[1@a
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps
+CONTAINER ID   IMAGE                                                                                                                                                                         COMMAND                  CREATED             STATUS             PORTS                                                                    NAMES
+3d7f0576c86a   dev-peer0.hosp2.lithium.com-donor_5-a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2-60ab948b66f5653e9288d8b145be47d27170573c16d76c68a685855a04d67d5f         "docker-entrypoint.s…"   16 minutes ago      Up 16 minutes                                                                               dev-peer0.hosp2.lithium.com-donor_5-a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2
+fa87d2f15ecb   dev-peer0.hosp1.lithium.com-donor_5-a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2-1fde0a3d5e7d2bca2b185a76bb5057fc65e7406849bfd9d75223251f564ffbb2         "docker-entrypoint.s…"   16 minutes ago      Up 16 minutes                                                                               dev-peer0.hosp1.lithium.com-donor_5-a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2
+aa4c625db47a   dev-peer0.superorg.lithium.com-donor_5-a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2-6a02951857165e9c7ee30aa76d05b872bf2525d6783acad4656fa3233e1c6f89      "docker-entrypoint.s…"   16 minutes ago      Up 16 minutes                                                                               dev-peer0.superOrg.lithium.com-donor_5-a42d5180db7f7b1f3cf5af122e470cd75904a35ff592f28c2185d099890935a2
+0c0065f7b56e   dev-peer0.superorg.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-841ab85ef359da660087bc0a2dbcc3d63b571adc647efa8a438b2f35d736dc29   "docker-entrypoint.s…"   About an hour ago   Up About an hour                                                                            dev-peer0.superOrg.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+991e55384098   dev-peer0.hosp2.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-8847a78c9d6215d31635cc11508ee3e69b87f7aac1bc0945f283eb9ccb28daaf      "docker-entrypoint.s…"   About an hour ago   Up About an hour                                                                            dev-peer0.hosp2.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+daeed36d9d10   dev-peer0.hosp1.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-f4992d49edd26e64d981d70a8e1737672d76d4bdcfd504b1ded544f2efc01126      "docker-entrypoint.s…"   About an hour ago   Up About an hour                                                                            dev-peer0.hosp1.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+73984d94ee6c   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        38 hours ago        Up About an hour   7051/tcp, 0.0.0.0:11051->11051/tcp                                       peer0.superOrg.lithium.com
+46ea240b63c7   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   38 hours ago        Up About an hour   4369/tcp, 9100/tcp, 0.0.0.0:9984->5984/tcp                               couchdb.superOrg.lithium.com
+1099d49df9d2   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   38 hours ago        Up About an hour   0.0.0.0:6381->6379/tcp                                                   redis.superOrg.lithium.com
+28c22ee6c73f   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   38 hours ago        Up 58 minutes      7054/tcp, 0.0.0.0:11054->11054/tcp                                       ca_superOrg
+940fc606538c   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        38 hours ago        Up About an hour   0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.hosp2.lithium.com
+84281a0da5fa   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        38 hours ago        Up About an hour   0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.hosp1.lithium.com
+9d1575f57160   hyperledger/fabric-orderer:latest                                                                                                                                             "orderer"                38 hours ago        Up About an hour   0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.lithium.com
+4b902acb1270   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   38 hours ago        Up About an hour   0.0.0.0:6380->6379/tcp                                                   redis.hosp2.lithium.com
+bc4052744b41   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   38 hours ago        Up About an hour   4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp                               couchdb.hosp2.lithium.com
+5db10f9d2cf5   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   38 hours ago        Up About an hour   0.0.0.0:6379->6379/tcp                                                   redis.hosp1.lithium.com
+8f6e5d53d8af   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   38 hours ago        Up About an hour   4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp                               couchdb.hosp1.lithium.com
+a7723b90b074   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   38 hours ago        Up 59 minutes      0.0.0.0:9054->9054/tcp, 7054/tcp, 0.0.0.0:19054->19054/tcp               ca_orderer
+fe30199ed162   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   38 hours ago        Up 59 minutes      0.0.0.0:7054->7054/tcp, 0.0.0.0:17054->17054/tcp                         ca_hosp1
+3b00faf32026   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   38 hours ago        Up 59 minutes      0.0.0.0:8054->8054/tcp, 7054/tcp, 0.0.0.0:18054->18054/tcp               ca_hosp2
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps -a | grep "ca-superOrg" ;[K[K
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps -a | grep "ca-superOrg"[K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps -a | grep "ca-superOrg"[K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps -a | grep "ca-superOrg"[K -a | grep "ca-superOrg"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m docker ps -a | grep "ca-superOrg"[C[1PsuperOrg"_superOrg"
+28c22ee6c73f   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   38 hours ago        Up 59 minutes      7054/tcp, 0.0.0.0:11054->11054/tcp                                       [01;31m[Kca_superOrg[m[K
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m curl[K[K[K[Kw[Kpu[King --h[K[K[K[K[K[K[K[K[K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m exit
+exit
+
+Script done on 2025-01-22 13:23:50+05:30 [COMMAND_EXIT_CODE="0"]
