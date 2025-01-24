@@ -29,10 +29,11 @@ infoln "Using ${CONTAINER_CLI} and ${CONTAINER_CLI_COMPOSE}"
 # Print the usage message
 function printHelp () {
   echo "Usage: "
-  echo "  addSuperOrg.sh up|down|generate [-c <channel name>] [-t <timeout>] [-d <delay>] [-f <docker-compose-file>] [-s <dbtype>]"
+  echo "  addSuperOrg.sh up|start|down|generate [-c <channel name>] [-t <timeout>] [-d <delay>] [-f <docker-compose-file>] [-s <dbtype>]"
   echo "  addSuperOrg.sh -h|--help (print this message)"
   echo "    <mode> - one of 'up', 'down', or 'generate'"
   echo "      - 'up' - add superOrg to the sample network. You need to bring up the test network and create a channel first."
+  echo "      - 'start' - start containers for the superOrg"
   echo "      - 'down' - bring down the test network and superOrg nodes"
   echo "      - 'generate' - generate required certificates and org definition"
   echo "    -c <channel name> - test network channel name (defaults to \"mychannel\")"
@@ -48,10 +49,12 @@ function printHelp () {
   echo "	addSuperOrg.sh generate"
   echo "	addSuperOrg.sh up"
   echo "	addSuperOrg.sh up -c mychannel -s couchdb"
+  echo "	addSuperOrg.sh start"
   echo "	addSuperOrg.sh down"
   echo
   echo "Taking all defaults:"
   echo "	addSuperOrg.sh up"
+  echo "	addSuperOrg.sh start"
   echo "	addSuperOrg.sh down"
 }
 
@@ -180,6 +183,12 @@ function networkDown () {
     ./network.sh down
 }
 
+# Bring up the superOrg containers
+function bringUpSuperOrgContainers() {
+  infoln "Bringing up SuperOrg peer"
+  SuperOrgUp
+}
+
 # Using crpto vs CA. default is cryptogen
 CRYPTO="cryptogen"
 # timeout duration - the duration the CLI should wait for a response from
@@ -268,6 +277,8 @@ elif [ "$MODE" == "down" ]; then
   EXPMODE="Stopping network"
 elif [ "$MODE" == "generate" ]; then
   EXPMODE="Generating certs and organization definition for SuperOrg"
+elif [ "$MODE" == "start" ]; then
+  EXPMODE="Start the docker containers"
 else
   printHelp
   exit 1
@@ -281,6 +292,8 @@ elif [ "${MODE}" == "down" ]; then ## Clear the network
 elif [ "${MODE}" == "generate" ]; then ## Generate Artifacts
   generateSuperOrg
   generateSuperOrgDefinition
+elif [ "${MODE}" == "start" ]; then ## Start containers
+  bringUpSuperOrgContainers
 else
   printHelp
   exit 1

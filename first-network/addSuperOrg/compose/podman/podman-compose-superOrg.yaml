@@ -7,7 +7,8 @@ version: "3.7"
 
 volumes:
   peer0.superOrg.lithium.com:
-
+  peer1.superOrg.lithium.com:
+  peer2.superOrg.lithium.com:
 networks:
   hospital:
     name: hospital
@@ -46,5 +47,75 @@ services:
     command: peer node start
     ports:
       - 11051:11051
+    networks:
+      - test
+  peer1.superOrg.lithium.com:
+    container_name: peer1.superOrg.lithium.com
+    image: hyperledger/fabric-peer:latest
+    labels:
+      service: hyperledger-fabric
+    environment:
+      - FABRIC_CFG_PATH=/etc/hyperledger/peercfg
+      #Generic peer variables
+      - FABRIC_LOGGING_SPEC=INFO
+      #- FABRIC_LOGGING_SPEC=DEBUG
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_PROFILE_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
+      # Peer specific variables
+      - CORE_PEER_ID=peer1.superOrg.lithium.com
+      - CORE_PEER_ADDRESS=peer1.superOrg.lithium.com:12051
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/msp
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:12051
+      - CORE_PEER_CHAINCODEADDRESS=peer1.superOrg.lithium.com:12052
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:12052
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.superOrg.lithium.com:12051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.superOrg.lithium.com:12051
+      - CORE_PEER_LOCALMSPID=superOrgMSP
+    volumes:
+      - ../peercfg:/etc/hyperledger/peercfg
+      - ../../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com:/etc/hyperledger/fabric
+      - peer1.superOrg.lithium.com:/var/hyperledger/production
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: peer node start
+    ports:
+      - 12051:12051
+    networks:
+      - test
+  peer2.superOrg.lithium.com:
+    container_name: peer2.superOrg.lithium.com
+    image: hyperledger/fabric-peer:latest
+    labels:
+      service: hyperledger-fabric
+    environment:
+      - FABRIC_CFG_PATH=/etc/hyperledger/peercfg
+      #Generic peer variables
+      - FABRIC_LOGGING_SPEC=INFO
+      #- FABRIC_LOGGING_SPEC=DEBUG
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_PROFILE_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
+      # Peer specific variables
+      - CORE_PEER_ID=peer2.superOrg.lithium.com
+      - CORE_PEER_ADDRESS=peer2.superOrg.lithium.com:13051
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/msp
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:13051
+      - CORE_PEER_CHAINCODEADDRESS=peer2.superOrg.lithium.com:13052
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:13052
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer2.superOrg.lithium.com:13051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer2.superOrg.lithium.com:13051
+      - CORE_PEER_LOCALMSPID=superOrgMSP
+    volumes:
+      - ../peercfg:/etc/hyperledger/peercfg
+      - ../../organizations/peerOrganizations/superOrg.lithium.com/peers/peer2.superOrg.lithium.com:/etc/hyperledger/fabric
+      - peer2.superOrg.lithium.com:/var/hyperledger/production
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: peer node start
+    ports:
+      - 13051:13051
     networks:
       - test
