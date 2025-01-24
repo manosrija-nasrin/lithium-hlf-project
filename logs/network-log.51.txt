@@ -1,0 +1,193 @@
+Script started on 2025-01-24 09:59:02+05:30 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd first-network/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./[K[Kexport PATH=${PWD}/../bin:$PATH
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export FABRIC_CFG_PATH=${PWD}/../config/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ENABLED=true
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_LOCALMSPID=superOrgMSP
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls/ca.crt
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/superOrg.lithium.com/users/Admin@superOrg.lithium.com/msp
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_ADDRESS=localhost:11051
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m cd ./addSuperOrg/
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m export FABRIC_CA_CLIENT_HOME=${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m fabric-ca-client register --caname ca-superOrg --id.name peer1 --id.secret peer1pw --id.type peer --tls.certfiles "${PWD}/fabric-ca/superOrg/tls-cert.pem"
+2025/01/24 10:24:07 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/fabric-ca-client-config.yaml
+2025/01/24 10:24:07 [INFO] TLS Enabled
+2025/01/24 10:24:08 [INFO] TLS Enabled
+Password: peer1pw
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m fabric-ca-client enroll -u https://peer1:peer1pw@localhost:11054 --caname ca-superOrg -M "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp" --tls.certfiles "${PWD}/fabric-ca/superOrg/tls-cert.pem"
+2025/01/24 10:25:48 [INFO] TLS Enabled
+2025/01/24 10:25:48 [INFO] generating key: &{A:ecdsa S:256}
+2025/01/24 10:25:48 [INFO] encoded CSR
+2025/01/24 10:25:49 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/signcerts/cert.pem
+2025/01/24 10:25:49 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/cacerts/localhost-11054-ca-superOrg.pem
+2025/01/24 10:25:49 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/IssuerPublicKey
+2025/01/24 10:25:49 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/IssuerRevocationPublicKey
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m fabric-ca-client enroll -u https://peer1:peer1pw@localhost:11054 --caname ca-superOrg -M "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls" --enrollment.profile tls --csr.hosts peer1.superOrg.lithium.com --csr.hosts localhost --tls.certfiles "${PWD}/fabric-ca/superOrg/tls-cert.pem"
+2025/01/24 10:26:58 [INFO] TLS Enabled
+2025/01/24 10:26:58 [INFO] generating key: &{A:ecdsa S:256}
+2025/01/24 10:26:58 [INFO] encoded CSR
+2025/01/24 10:26:59 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/signcerts/cert.pem
+2025/01/24 10:26:59 [INFO] Stored TLS root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/tlscacerts/tls-localhost-11054-ca-superOrg.pem
+2025/01/24 10:26:59 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/IssuerPublicKey
+2025/01/24 10:26:59 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/IssuerRevocationPublicKey
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/ca.crt"
+{PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/signcerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/server.crt"
+cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/keystore/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/server.key"
+cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/msp/tlscacerts/ca.crt"
+cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem"
+cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/cacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/ca/ca.superOrg.lithium.com-cert.pem"]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/signcerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/server.crt"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/keystore/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/server.key"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/msp/tlscacerts/ca.crt"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/cacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/ca/ca.superOrg.lithium.com-cert.pem"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/msp/config.yaml" "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/config.yaml"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m ls
+[0m[01;32mREADME.md[0m       [01;32mccp-generate.sh[0m    [01;32mccp-template.yaml[0m  [01;32mconfigtx.yaml[0m  [01;32mlog.txt[0m
+[01;32maddSuperOrg.sh[0m  [01;32mccp-template.json[0m  [34;42mcompose[0m            [34;42mfabric-ca[0m      [01;32msuperOrg-crypto.yaml[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m docker compose up -d peer1su[K[K.supr[Ker[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m docker-compose -f compose/compose-superOrg.yaml up -d peer1.superOrg.lithium.com
+[1A[1B[0G[?25l[+] Running 0/0
+ [33m⠋[0m Volume "docker_peer1.superOrg.lithium.com"  Creating                                                                         [34m0.0s [0m
+[?25h[33mWARN[0m[0000] Found orphan containers ([couchdb.superOrg.lithium.com redis.superOrg.lithium.com ca_superOrg peer0.hosp2.lithium.com peer0.hosp1.lithium.com orderer.lithium.com redis.hosp2.lithium.com couchdb.hosp2.lithium.com redis.hosp1.lithium.com couchdb.hosp1.lithium.com ca_orderer ca_hosp1 ca_hosp2]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1A[0G[?25l[34m[+] Running 1/1[0m
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠋[0m Container peer1.superOrg.lithium.com        Creating                                                                         [34m0.1s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠙[0m Container peer1.superOrg.lithium.com        Creating                                                                         [34m0.2s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠹[0m Container peer1.superOrg.lithium.com        Creating                                                                         [34m0.3s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠸[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m0.4s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠼[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m0.5s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠴[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m0.6s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠦[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m0.7s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠧[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m0.8s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠇[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m0.9s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠏[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.0s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠋[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.1s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠙[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.2s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠹[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.3s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠸[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.4s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠼[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.5s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠴[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.6s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠦[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.7s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠧[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.8s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠇[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m1.9s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠏[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m2.0s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠋[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m2.1s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [33m⠙[0m Container peer1.superOrg.lithium.com        Starting                                                                         [34m2.2s [0m
+[?25h[1A[1A[1A[0G[?25l[34m[+] Running 2/2[0m
+ [32m✔[0m Volume "docker_peer1.superOrg.lithium.com"  [32mCreated[0m                                                                          [34m0.0s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com        [32mStarted[0m                                                                          [34m2.3s [0m
+[?25h]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m docker ps | grep peer1.superOrg
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m docker ps | grep peer1.superOrg.;ithium.cpm[K[Kom[1Pithium.comlithium.com
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m docker ps | grep peer1.superOrg.lithium.com[1@-[1@a[1@ 
+a0fe547a7cb1   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        51 seconds ago      Exited (1) 48 seconds ago                                                                            [01;31m[Kpeer1.superOrg.lithium.com[m[K
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m docker ps -a | grep peer1.superOrg.lithium.com[C[1P peer1.superOrg.lithium.com[1P peer1.superOrg.lithium.com[1P peer1.superOrg.lithium.com[1P peer1.superOrg.lithium.com[1Ppeer1.superOrg.lithium.com[1P peer1.superOrg.lithium.com[1Ppeer1.superOrg.lithium.com[1P peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Ppeer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct peer1.superOrg.lithium.com
+peer1.superOrg.lithium.com
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m docker start peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@ps -a | grep[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m docker ps | grep peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pstart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@ps -a | grep[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pstart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4@ps | grep[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kdocker ps | grep peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pstart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@ps -a | grep[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-compose -f compose/compose-superOrg.yaml up -d peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kdocker-compose -f compose/compose-superOrg.yaml up -d peer1.superOrg.lithium.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29P[1@d[1@o[1@c[1@k[1P[1P[1P[1P[1@c[1@o[1@[[1P[1@m[5@pose/[1@d[6@ocker/[1@d[1@o[13@cker-compose-[1@s[12@uperOrg.yaml
+[33mWARN[0m[0000] The "DOCKER_SOCK" variable is not set. Defaulting to a blank string. 
+[33mWARN[0m[0000] The "DOCKER_SOCK" variable is not set. Defaulting to a blank string. 
+invalid spec: :/host/var/run/docker.sock: empty section between colons
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m export DOCKER_SOCK=docker
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m export SOCK="${DOCKER_HOST:-/var/run/docker.sock}"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m export DOCKER_SOCK="${SOCK##unix://}"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m CRYPTO="cryptogen"
+uration ]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m # timeout duration - the duration the CLI should wait for a response from
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m # another container before giving up
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m CLI_TIMEOUT=10
+ult for ]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m #default for delay
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m CLI_DELAY=3
+annel na]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m # channel name defaults to "mychannel"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m CHANNEL_NAME="hospitalchannel"
+ this as]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m # use this as the docker compose couch file
+OMPO]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m COMPOSE_FILE_COUCH_BASE=compose/compose-couch-superOrg.yaml
+POSE]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m COMPOSE_FILE_COUCH_SUPER=compose/${CONTAINER_CLI}/${CONTAINER_CLI}-compose-couch-superOrg.yaml
+cker-com]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m # use this as the default docker-compose yaml definition
+MPOS]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m COMPOSE_FILE_BASE=compose/compose-superOrg.yaml
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m COMPOSE_FILE_SUPER=compose/${CONTAINER_CLI}/${CONTAINER_CLI}-compose-superOrg.yaml
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m # certificate authorities compose file
+MPOS]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m COMPOSE_FILE_CA_BASE=compose/compose-ca-superOrg.yaml
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m COMPOSE_FILE_CA_SUPER=compose/${CONTAINER_CLI}/${CONTAINER_CLI}-compose-ca-superOrg.yaml
+MPOSE_FI]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m # redis compose file
+LE_R]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m COMPOSE_FILE_REDIS_BASE=compose/compose-redis-superOrg.yaml
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m COMPOSE_FILE_REDIS_SUPER=compose/${CONTAINER_CLI}/${CONTAINER_CLI}-compose-redis-superOrg.yaml
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m # database
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m DATABASE="couchdb"
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m echo $DATABASE 
+couchdb
+]0;nasrin@LAPTOP-F30RQ071 [01;34maddSuperOrg $[00m ./addSuperOrg.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@.[1@ 
+[0;34mUsing docker and docker-compose[0m
+Usage: 
+  addSuperOrg.sh up|down|generate [-c <channel name>] [-t <timeout>] [-d <delay>] [-f <docker-compose-file>] [-s <dbtype>]
+  addSuperOrg.sh -h|--help (print this message)
+    <mode> - one of 'up', 'down', or 'generate'
+      - 'up' - add superOrg to the sample network. You need to bring up the test network and create a channel first.
+      - 'down' - bring down the test network and superOrg nodes
+      - 'generate' - generate required certificates and org definition
+    -c <channel name> - test network channel name (defaults to "mychannel")
+    -ca <use CA> -  Use a CA to generate the crypto material
+    -t <timeout> - CLI timeout duration in seconds (defaults to 10)
+    -d <delay> - delay duration in seconds (defaults to 3)
+    -s <dbtype> - the database backend to use: goleveldb (default) or couchdb
+    -verbose - verbose mode
+
+Typically, one would first generate the required certificates and 
+genesis block, then bring up the network. e.g.:
+
+	addSuperOrg.sh generate
+	addSuperOrg.sh up
+	addSuperOrg.sh up -c mychannel -s couchdb
+	addSuperOrg.sh down
+
+Taking all defaults:
+	addSuperOrg.sh up
+	addSuperOrg.sh down
+
+Script done on 2025-01-24 10:48:03+05:30 [COMMAND_EXIT_CODE="0"]
