@@ -38,14 +38,25 @@
     {
       "name": "blockedDonorPrivateCollection",
       "policy": "OR('superOrgMSP.member')",
-      "requiredPeerCount": 1,
-      "maxPeerCount": 3,
+      "requiredPeerCount": 0,
+      "maxPeerCount": 1,
       "blockToLive":1000000,
       "memberOnlyRead": true,
       "memberOnlyWrite": true,
       "endorsementPolicy": {
        "signaturePolicy": "OR('superOrgMSP.member')"
      }
+   },
+   {
+    "name": "pendingBlockedBagsCollection",
+    "policy": "OR('superOrgMSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 1,
+    "blockToLive":1000000,
+    "memberOnlyRead": true,
+    "memberOnlyWrite": false,
+    "endorsementPolicy": {
+     "signaturePolicy": "OR('superOrgMSP.member')"
    }
+ }
 ]
-   

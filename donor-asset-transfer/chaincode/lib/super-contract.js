@@ -1,12 +1,11 @@
 'use strict';
 const BlockedDonor = require('./BlockedDonor.js');
-const DoctorContract = require('./doctor-contract.js');                                                                
-const DonorContract = require('./donor-contract.js');
 const PrimaryContract = require('./primary-contract.js');
 const stringify = require('json-stringify-deterministic');
 const sortKeysRecursive = require('sort-keys-recursive');
 const { Certificate } = require('@fidm/x509');
-const privateCollection = 'blockedDonorPrivateCollection';
+const blockedDonorPrivateCollection = 'blockedDonorPrivateCollection';
+const pendingBlockedBagsPrivateCollection = 'pendingBlockedBagsCollection';
 const HOSP_SUPERS = ["HOSP1-SUP12226", "HOSP2-SUP12227"];
 
 class SuperContract extends PrimaryContract {
@@ -121,7 +120,7 @@ class SuperContract extends PrimaryContract {
         } */
     }
 
-    fetchFields = (asset, includeTimeStamp = false) => {
+    fetchFields (asset, includeTimeStamp = false) {
         for (let i = 0; i < asset.length; i++) {
             const obj = asset[i];
             asset[i] = {
@@ -149,6 +148,26 @@ class SuperContract extends PrimaryContract {
 
         return asset;
     };
+    // const blockingData = {"blockedOn": date, "blockedTenure": 365, "reasons": reasonsJson.reasons, "blockedBy": parsedArgs.username, 
+    // "bloodBagUnitNo": parsedArgs.bloodBagUnitNo, "bloodBagSegmentNo": parsedArgs.bloodBagSegmentNo};
+    fetchFieldsForPendingBlockedDonors (assets, includeTimeStamp = false) {
+        for (let i = 0; i < assets.length; i++) {
+            const obj = assets[i];
+            assets[i] = {
+                bagId: obj.Key,
+                blockedOn: obj.Record.blockedOn,
+                blockedTenure: obj.Record.blockedTenure,
+                blockedBy: obj.Record.blockedBy,
+                bloodBagUnitNo: obj.Record.bloodBagUnitNo,
+                bloodBagSegmentNo: obj.Record.bloodBagSegmentNo,
+                reasons: obj.Record.reasons,
+            };
+            if (includeTimeStamp) {
+                assets[i].Timestamp = obj.Timestamp;
+            }
+        }
+        return assets;
+    }
 
     async queryAllBlockedDonors(ctx, args) {
         try {
@@ -165,12 +184,12 @@ class SuperContract extends PrimaryContract {
                     return { error: "Permission not granted to "+ superId};
                 }
 
-                let resultsIterator = await ctx.stub.getPrivateDataByRange(privateCollection, '', '');
+                let resultsIterator = await ctx.stub.getPrivateDataByRange(blockedDonorPrivateCollection, '', '');
                 let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
 
                 return this.fetchFields(assets);
             } else {
-                return {"status": "error", "message": `${msp} not authorized to read ${privateCollection}`};
+                return {"status": "error", "message": `${msp} not authorized to read ${blockedDonorPrivateCollection}`};
             }
         } catch (error) {
             console.error(error);
@@ -244,17 +263,8 @@ class SuperContract extends PrimaryContract {
 
     async blockDonorOfBag(ctx, args) {
         try {
-            const parsedArgs = JSON.parse(args);
-            const transientMap = ctx.stub.getTransient();
-            const transient = transientMap.get("transientData");
-            if (!transient) {
-                throw new Error("No transient data");
-            }
-            const reasonsJson = JSON.parse(transient.toString());
-            // console.debug(reasonsJson, "> reasons extracted: ", reasonsJson.reasons);
-            // this.verifyClientOrgMatchesPeerOrg(ctx);
-
             const donorId = await this.queryDonorsForBagId(ctx, args);
+            const parsedArgs = JSON.parse(args);
             if (donorId !== null) {
                 // console.debug("Received donor ID from query: ", donorId);
                 // console.debug("Received donor ID from query string: ", donorId.toString());
@@ -268,13 +278,13 @@ class SuperContract extends PrimaryContract {
                 if (msp.trim() == "superOrgMSP") {
                     // PDC Write operations only on authorized peers
                     console.debug("MSP: " + ctx.stub.getMspID());
-                    const date = new Date().toISOString().split("T")[0];
-                    const blockedDonor = new BlockedDonor(donor, date, 365, reasonsJson.reasons, parsedArgs.username, parsedArgs.bloodBagUnitNo, parsedArgs.bloodBagSegmentNo);
+                    // const date = new Date().toISOString().split("T")[0];
+                    const blockedDonor = new BlockedDonor(donor, parsedArgs.blockedOn, parsedArgs.blockedTenure, parsedArgs.reasons, parsedArgs.blockedBy, parsedArgs.bloodBagUnitNo, parsedArgs.bloodBagSegmentNo);
                     const plainBlockedDonor = JSON.parse(JSON.stringify(blockedDonor));
                     console.debug("Putting blocked donor to ledger: ", plainBlockedDonor);
                     console.debug("Type: ", typeof(plainBlockedDonor));
-                    await ctx.stub.putPrivateData(privateCollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainBlockedDonor))));
-                    return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${privateCollection}`}
+                    await ctx.stub.putPrivateData(blockedDonorPrivateCollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainBlockedDonor))));
+                    return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${blockedDonorPrivateCollection}`}
                 } else {
                     console.warn(`PDC write skipped on peer with MSP: /${msp}/`);
                 }
@@ -287,6 +297,48 @@ class SuperContract extends PrimaryContract {
         } catch (error) {
             console.error(error);
             return { status: "error", error: error };
+        }
+    };
+    
+    async blockPendingDonors(ctx, args) {
+        try {
+            // this.verifyClientOrgMatchesPeerOrg(ctx);
+            const msp = ctx.stub.getMspID() + "";
+            
+            if (msp.trim() == "superOrgMSP") {
+                const parsedArgs = JSON.parse(args);
+                const superId = parsedArgs.username;
+
+                if (superId === undefined || superId === null || superId === '') {
+                    return { error: "Super ID not provided"};
+                } else if (!this.checkSuperIdentity(ctx, superId)) {
+                    return { error: "Permission not granted to "+ superId};
+                }
+
+                let resultsIterator = await ctx.stub.getPrivateDataByRange(pendingBlockedBagsPrivateCollection, '', '');
+                let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
+
+                const pendingBagsForBlocking = this.fetchFieldsForPendingBlockedDonors(assets);
+                console.debug(`Received ${pendingBagsForBlocking.length} entries`);
+                let blockedDonorCount = 0;
+                for (let i = 0; i < pendingBagsForBlocking.length; i++) {
+                    let responseJson = await this.blockDonorOfBag(ctx, JSON.stringify(pendingBagsForBlocking[i]));
+                    let response = JSON.parse(responseJson);
+                    console.debug(response);
+                    if (response.status == "success") {
+                        const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingBlockedBagsPrivateCollection, pendingBagsForBlocking[i].bagId);
+                        console.debug(deletePendingBagResponse);
+                        blockedDonorCount++;
+                    }
+                }
+                return {"status": "success", "message": `Blocked ${blockedDonorCount} out of ${pendingBagsForBlocking.length} donors via ${msp}`}
+
+            } else {
+                return {"status": "error", "message": `${msp} not authorized to read ${pendingBlockedBagsPrivateCollection}`};
+            }
+        } catch (error) {
+            console.error(error);
+            return { error: error };
         }
     };
 }

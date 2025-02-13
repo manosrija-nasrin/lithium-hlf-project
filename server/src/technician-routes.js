@@ -168,12 +168,12 @@ exports.crossMatchResults = async (req, res) => {
     //   console.error("Donor not found");
     // }
 
-    let blockDonorArgs = [JSON.stringify({ bloodBagUnitNo: bloodBagUnitNo, bloodBagSegmentNo: bloodBagSegmentNo, username: req.headers.username }), JSON.stringify({ transientData: { reasons: reasons } })];
+    const blockDonorArgs = [JSON.stringify({ bloodBagUnitNo: bloodBagUnitNo, bloodBagSegmentNo: bloodBagSegmentNo, username: req.headers.username }), JSON.stringify({ transientData: { reasons: reasons } })];
     // Set up and connect to Fabric Gateway using the username in header
-    let donorNetworkObj = await network.connectToSuperNetwork('HOSP1-SUP12226');
+    let donorNetworkObj = await network.connectToNetwork(req.headers.username);
 
-    const response = await network.invokePDCWriteTransaction(donorNetworkObj, 'SuperContract:blockDonorOfBag', blockDonorArgs);
-    console.debug("Response from network for blocking donor", response.toString());
+    const response = await network.invoke(donorNetworkObj, false, capitalize(userRole) + 'Contract:addBagsToBeBlocked', blockDonorArgs);
+    console.debug("Response from network for adding pending block ooperations", response.toString());
     const blockedResponse = JSON.parse(response.toString());
 
     if (blockedResponse.status === "error") {

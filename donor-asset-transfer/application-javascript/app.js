@@ -94,57 +94,75 @@ exports.connectToSuperNetwork = async function (doctorID) {
 };
 
 exports.invoke = async function (networkObj, isQuery, func, args = '') {
+  const contractObj = networkObj.contract;
+  const gatewayObj = networkObj.gateway;
+  let response = null;
   try {
     if (isQuery === true) {
-      const response = await networkObj.contract.evaluateTransaction(func, args);
+      response = await contractObj.evaluateTransaction(func, args);
       console.log(response);
-      await networkObj.gateway.disconnect();
-      return response;
     } else {
       if (args) {
-        args = JSON.parse(args[0]);
-        args = JSON.stringify(args);
+        let parsedArgs = JSON.parse(args[0]);
+        let transientData = args.length > 1 ? JSON.parse(args[1]) : {};
+        console.debug(parsedArgs);
+        console.debug(transientData);
+  
+        const transaction = await contractObj.createTransaction(func);
+        if ('transientData' in transientData) {
+          // transientMap.set("transientData", Buffer.from(JSON.stringify(transientData['transientData'])));
+          let wrappedTransientData = {'transientData': Buffer.from(JSON.stringify(transientData['transientData']))};
+          response = transaction.setTransient(wrappedTransientData).submit(JSON.stringify(parsedArgs));
+        } else {
+          // submit wihtout transient data  
+          response = transaction.submit(JSON.stringify(parsedArgs));
+          // throw new Error("No transientData field in args[1]");
+        }
+      } else {
+        throw new Error("No args found");
       }
-      const response = await networkObj.contract.submitTransaction(func, args);
-      await networkObj.gateway.disconnect();
-      return response;
     }
   } catch (error) {
-    const response = { error: error };
+    response = { error: error };
     console.error(`Failed to submit transaction: ${error}`);
+  } finally {
+    await gatewayObj.disconnect();
     return response;
   }
 };
 
 exports.invokePDCWriteTransaction = async function (networkObj, func, args = '') {
+  const contractObj = networkObj.contract;
+  const gatewayObj = networkObj.gateway;
+  let response = null;
   try {
-    const contractObj = networkObj.contract;
-    const gatewayObj = networkObj.gateway;
     // const transientMap = new Map();  //  not required
     console.log(args);
-    if (args && args.length > 1) {
+    if (args) {
       let parsedArgs = JSON.parse(args[0]);
-      let transientData = JSON.parse(args[1]);
-      console.log(parsedArgs);
-      console.log(transientData);
+      let transientData = args.length > 1 ? JSON.parse(args[1]) : {};
+      console.debug(parsedArgs);
+      console.debug(transientData);
 
+      const transaction = await contractObj.createTransaction(func);
+      transaction.setEndorsingOrganizations(['superOrgMSP']);
       if ('transientData' in transientData) {
         // transientMap.set("transientData", Buffer.from(JSON.stringify(transientData['transientData'])));
         let wrappedTransientData = {'transientData': Buffer.from(JSON.stringify(transientData['transientData']))};
-        const transaction = await contractObj.createTransaction(func);
-        transaction.setEndorsingOrganizations(['superOrgMSP']);
-        const response = transaction.setTransient(wrappedTransientData).submit(JSON.stringify(parsedArgs));
-        await gatewayObj.disconnect();
-        return response;
+        response = transaction.setTransient(wrappedTransientData).submit(JSON.stringify(parsedArgs));
       } else {
-        throw new Error("No transientData field in args[1]");
+        // submit wihtout transient data  
+        response = transaction.submit(JSON.stringify(parsedArgs));
+        // throw new Error("No transientData field in args[1]");
       }
     } else {
-      throw new Error("Pass transient data in args[1]");
+      throw new Error("No args found");
     }
   } catch (error) {
-    const response = { error: error };
+    response = { error: error };
     console.error(`Failed to submit transaction: ${error}`);
+  } finally {
+    await gatewayObj.disconnect();
     return response;
   }
 }

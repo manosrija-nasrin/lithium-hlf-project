@@ -17,11 +17,15 @@ exports.getBlockedDonors = async (req, res) => {
 	await validateRole([ROLE_SUPER], userRole, res);
 	// Set up and connect to Fabric Gateway using the username in header
 	const networkObj = await network.connectToSuperNetwork(req.headers.username);
-	// Invoke the smart contract function
 	const usernameArgs = { username: userRole === ROLE_SUPER ? req.headers.username : '' };
+	const blockPendingDonorsResponse = await network.invokePDCWriteTransaction(networkObj, capitalize(userRole) + 'Contract:blockPendingDonors', [JSON.stringify(usernameArgs)]);
+	console.debug(JSON.parse(blockPendingDonorsResponse));
+	// Invoke the smart contract function
 	const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllBlockedDonors', JSON.stringify(usernameArgs));
+	console.debug(JSON.parse(response));
 	const parsedResponse = await JSON.parse(response);
 	res.status(200).send(parsedResponse);
+	// res.status(200s).send({"status": "failed"});
 };
 
 /**
