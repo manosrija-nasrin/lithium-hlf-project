@@ -27,7 +27,7 @@ class SuperContract extends PrimaryContract {
         // Convert Uint8Array to a string (PEM format)
         const pemCert = Buffer.from(idBytes).toString('utf8');
     
-        console.debug("PEM Certificate:\n", pemCert);
+        // console.debug("PEM Certificate:\n", pemCert);
     
         // Parse the certificate using @fidm/x509
         const cert = Certificate.fromPEM(Buffer.from(pemCert));
@@ -218,7 +218,7 @@ class SuperContract extends PrimaryContract {
                         // console.debug("Searching donation ", currentDonation);
                         if (currentDonation['status'] === 'successful' && currentDonation['bloodBagUnitNo'] == parsedArgs.bloodBagUnitNo && currentDonation['bloodBagSegmentNo'] == parsedArgs.bloodBagSegmentNo) {
                             console.debug("Donor found: ", assets[i].donorId);
-                            return assets[i].donorId;
+                            return {status: "success", donorId: assets[i].donorId};
                         }
                     }
                 }
@@ -226,7 +226,7 @@ class SuperContract extends PrimaryContract {
             }
         }
         console.debug("Donor for bag not found");
-        return null;   
+        return {status: "error", message: "Donor for bag not found", donorId: null};   
     };
 
     async updateDonorMedicalDetailsForBlocking(ctx, args) {
@@ -263,13 +263,13 @@ class SuperContract extends PrimaryContract {
 
     async blockDonorOfBag(ctx, args) {
         try {
-            const donorId = await this.queryDonorsForBagId(ctx, args);
             const parsedArgs = JSON.parse(args);
+            // const donorId = await this.queryDonorsForBagId(ctx, args);
+            const donorId = parsedArgs.donorId;
+            const donor = parsedArgs.donor;            
             if (donorId !== null) {
                 // console.debug("Received donor ID from query: ", donorId);
                 // console.debug("Received donor ID from query string: ", donorId.toString());
-                const donor = await PrimaryContract.prototype.readDonor(ctx, donorId);
-                console.debug("Donor object read: ", donor);            
                 
                 let changedMedicalDetails = { donorId: donorId, alert: true, isDiseased: true, donationStatus: 'blocked' };
                 await this.updateDonorMedicalDetailsForBlocking(ctx, JSON.stringify(changedMedicalDetails));
@@ -318,20 +318,40 @@ class SuperContract extends PrimaryContract {
                 let resultsIterator = await ctx.stub.getPrivateDataByRange(pendingBlockedBagsPrivateCollection, '', '');
                 let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
 
-                const pendingBagsForBlocking = this.fetchFieldsForPendingBlockedDonors(assets);
+                let pendingBagsForBlocking = this.fetchFieldsForPendingBlockedDonors(assets);
                 console.debug(`Received ${pendingBagsForBlocking.length} entries`);
-                let blockedDonorCount = 0;
+                let blockedBagsCount = 0;
+                const blockedDonorDetails = [];
+                const keysToDelete = [];
                 for (let i = 0; i < pendingBagsForBlocking.length; i++) {
-                    let responseJson = await this.blockDonorOfBag(ctx, JSON.stringify(pendingBagsForBlocking[i]));
-                    let response = JSON.parse(responseJson);
+                    let bag = pendingBagsForBlocking[i];
+                    let response = await this.queryDonorsForBagId(ctx, JSON.stringify(bag));
                     console.debug(response);
+                    const donorId = "donorId" in response ? response.donorId : null;
+                    if (donorId !== null)   {
+                        const donor = await PrimaryContract.prototype.readDonor(ctx, donorId);
+                        console.debug("Donor object read: ", donor); 
+                        let blockedDonorDetail = {
+                            ...bag,
+                            donorId: donorId,
+                            donor: donor
+                        };
+                        blockedDonorDetails.push(blockedDonorDetail);
+                        keysToDelete.push(bag.bagId); // delete the key
+                    } /* else {
+                        keysToDelete.push(bag.bagId); // donor not found
+                    } */
+                }
+                for (let i = 0; i < blockedDonorDetails.length; i++) {
+                    let blockedDonorDetail = blockedDonorDetails[i];
+                    let response = await this.blockDonorOfBag(ctx, JSON.stringify(blockedDonorDetail));
                     if (response.status == "success") {
-                        const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingBlockedBagsPrivateCollection, pendingBagsForBlocking[i].bagId);
+                        const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingBlockedBagsPrivateCollection, blockedDonorDetail.bagId);
                         console.debug(deletePendingBagResponse);
-                        blockedDonorCount++;
+                        blockedBagsCount++;
                     }
                 }
-                return {"status": "success", "message": `Blocked ${blockedDonorCount} out of ${pendingBagsForBlocking.length} donors via ${msp}`}
+                return {"status": "success", "message": `Blocked ${blockedBagsCount} out of ${pendingBagsForBlocking.length} donors via ${msp}`}
 
             } else {
                 return {"status": "error", "message": `${msp} not authorized to read ${pendingBlockedBagsPrivateCollection}`};
