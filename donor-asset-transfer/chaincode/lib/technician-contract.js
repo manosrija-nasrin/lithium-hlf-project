@@ -52,7 +52,11 @@ class TechnicianContract extends PrimaryContract {
             return { status: "error", error: error };
         }
     };
-    
+    async testDeletion(ctx, args) {
+        await ctx.stub.putPrivateData(pendingBlockedBagsPrivateCollection, 'TEMPBAG', Buffer.from("This is to be deleted"));
+        const response = await ctx.stub.deletePrivateData(pendingBlockedBagsPrivateCollection, 'TEMPBAG');
+        console.debug(response.toString());
+    }
 }
 
 module.exports = TechnicianContract;

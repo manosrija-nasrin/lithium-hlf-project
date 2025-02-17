@@ -299,6 +299,38 @@ class SuperContract extends PrimaryContract {
             return { status: "error", error: error };
         }
     };
+
+    async getAllPendingBags(ctx, args) {
+        try {
+            // this.verifyClientOrgMatchesPeerOrg(ctx);
+            const msp = ctx.stub.getMspID() + "";
+            
+            if (msp.trim() == "superOrgMSP") {
+                const parsedArgs = JSON.parse(args);
+                const superId = parsedArgs.username;
+
+                if (superId === undefined || superId === null || superId === '') {
+                    return { error: "Super ID not provided"};
+                } else if (!this.checkSuperIdentity(ctx, superId)) {
+                    return { error: "Permission not granted to "+ superId};
+                }
+                let resultsIterator = await ctx.stub.getPrivateDataByRange(pendingBlockedBagsPrivateCollection, '', '');
+                let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
+
+                let pendingBagsForBlocking = this.fetchFieldsForPendingBlockedDonors(assets);
+                console.debug(`Received ${pendingBagsForBlocking.length} entries`);
+
+                let pendingBagIds = [];
+                for (let i = 0; i < pendingBagsForBlocking.length; i++) {
+                    pendingBagIds.push(pendingBagsForBlocking[i].bagId);
+                }
+                return { status: "success", pendingBags: pendingBagIds, count: pendingBagIds.length };
+            }
+        } catch (error) {
+            console.error(error);
+            return { status: "error", error: error };
+        }
+    };
     
     async blockPendingDonors(ctx, args) {
         try {
@@ -315,16 +347,28 @@ class SuperContract extends PrimaryContract {
                     return { error: "Permission not granted to "+ superId};
                 }
 
-                let resultsIterator = await ctx.stub.getPrivateDataByRange(pendingBlockedBagsPrivateCollection, '', '');
-                let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
-
-                let pendingBagsForBlocking = this.fetchFieldsForPendingBlockedDonors(assets);
-                console.debug(`Received ${pendingBagsForBlocking.length} entries`);
+                const pendingBagRecordsForBlocking = [];
+                const invalidBags = [];
+                const pendingBagIds = parsedArgs.pendingBags;
+                const pendingBags = [];
+                for (let i = 0; i < pendingBagIds.length; i++) {
+                    // don't use getPrivateDataByRange: https://lists.lfdecentralizedtrust.org/g/fabric/topic/85330623#10296
+                    let responseBytes = await ctx.stub.getPrivateData(pendingBlockedBagsPrivateCollection, pendingBagIds[i]);
+                    try {
+                        let responseJson = JSON.parse(responseBytes.toString());
+                        pendingBagRecordsForBlocking.push(responseJson);
+                        pendingBags.push(pendingBagIds[i]);
+                    } catch (error) {
+                        console.debug(`${pendingBagIds[i]} is not a valid bag ID. Skipping...`);
+                        invalidBags.push(pendingBagIds[i]);
+                    }
+                }
+                
+                console.debug(`Received ${pendingBagRecordsForBlocking.length} entries`);
                 let blockedBagsCount = 0;
                 const blockedDonorDetails = [];
-                const keysToDelete = [];
-                for (let i = 0; i < pendingBagsForBlocking.length; i++) {
-                    let bag = pendingBagsForBlocking[i];
+                for (let i = 0; i < pendingBagRecordsForBlocking.length; i++) {
+                    let bag = pendingBagRecordsForBlocking[i];
                     let response = await this.queryDonorsForBagId(ctx, JSON.stringify(bag));
                     console.debug(response);
                     const donorId = "donorId" in response ? response.donorId : null;
@@ -334,31 +378,36 @@ class SuperContract extends PrimaryContract {
                         let blockedDonorDetail = {
                             ...bag,
                             donorId: donorId,
-                            donor: donor
+                            donor: donor,
+                            bagId: pendingBags[i]
                         };
                         blockedDonorDetails.push(blockedDonorDetail);
-                        keysToDelete.push(bag.bagId); // delete the key
-                    } /* else {
-                        keysToDelete.push(bag.bagId); // donor not found
-                    } */
+                    } 
                 }
                 for (let i = 0; i < blockedDonorDetails.length; i++) {
-                    let blockedDonorDetail = blockedDonorDetails[i];
-                    let response = await this.blockDonorOfBag(ctx, JSON.stringify(blockedDonorDetail));
+                    const blockedDonorDetail = blockedDonorDetails[i];
+                    const response = await this.blockDonorOfBag(ctx, JSON.stringify(blockedDonorDetail));
                     if (response.status == "success") {
+                        console.debug("Bag to be deleted: " + pendingBags[i]);
                         const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingBlockedBagsPrivateCollection, blockedDonorDetail.bagId);
-                        console.debug(deletePendingBagResponse);
+                        console.debug(deletePendingBagResponse.toString());
                         blockedBagsCount++;
                     }
                 }
-                return {"status": "success", "message": `Blocked ${blockedBagsCount} out of ${pendingBagsForBlocking.length} donors via ${msp}`}
+
+                for (let i = 0; i < invalidBags.length; i++) {
+                    const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingBlockedBagsPrivateCollection, invalidBags[i]);
+                    console.debug(deletePendingBagResponse.toString());
+                    blockedBagsCount++;
+                }
+                return {status: "success", message: `Blocked ${blockedBagsCount} out of ${pendingBagRecordsForBlocking.length} donors via ${msp}`}
 
             } else {
-                return {"status": "error", "message": `${msp} not authorized to read ${pendingBlockedBagsPrivateCollection}`};
+                return {status: "error", message: `${msp} not authorized to read ${pendingBlockedBagsPrivateCollection}`};
             }
         } catch (error) {
             console.error(error);
-            return { error: error };
+            return { status: "error", error: error };
         }
     };
 }

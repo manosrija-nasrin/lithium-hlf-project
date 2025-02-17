@@ -16,15 +16,27 @@ exports.getBlockedDonors = async (req, res) => {
 	const userRole = req.headers.role;
 	await validateRole([ROLE_SUPER], userRole, res);
 	// Set up and connect to Fabric Gateway using the username in header
-	const networkObj = await network.connectToSuperNetwork(req.headers.username);
-	const usernameArgs = { username: userRole === ROLE_SUPER ? req.headers.username : '' };
-	const blockPendingDonorsResponse = await network.invokePDCWriteTransaction(networkObj, capitalize(userRole) + 'Contract:blockPendingDonors', [JSON.stringify(usernameArgs)]);
-	console.debug(JSON.parse(blockPendingDonorsResponse));
-	// Invoke the smart contract function
-	const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllBlockedDonors', JSON.stringify(usernameArgs));
-	console.debug(JSON.parse(response));
-	const parsedResponse = await JSON.parse(response);
-	res.status(200).send(parsedResponse);
+	let networkObj = await network.connectToSuperNetwork(req.headers.username);
+	const usernameArgs = { username: userRole === ROLE_SUPER ? req.headers.username : ''};
+	const getPendingBagsResponse = await network.invokePDCTransaction(networkObj, true, capitalize(userRole) + 'Contract:getAllPendingBags', [JSON.stringify(usernameArgs)]);
+	try {
+		const getPendingBagsResponseJson = JSON.parse(getPendingBagsResponse);
+		console.debug(getPendingBagsResponseJson);
+		if (getPendingBagsResponseJson.count > 0) {
+			const blockPendingDonorsRequestArgs = {...usernameArgs, pendingBags: getPendingBagsResponseJson.pendingBags };
+			networkObj = await network.connectToSuperNetwork(req.headers.username);
+			const blockPendingDonorsResponse = await network.invokePDCTransaction(networkObj, false, capitalize(userRole) + 'Contract:blockPendingDonors', [JSON.stringify(blockPendingDonorsRequestArgs)]);
+			console.debug(JSON.parse(blockPendingDonorsResponse));
+		}
+		// Invoke the smart contract function
+		networkObj = await network.connectToSuperNetwork(req.headers.username);
+		const response = await network.invokePDCTransaction(networkObj, true, capitalize(userRole) + 'Contract:queryAllBlockedDonors', JSON.stringify(usernameArgs));
+		// console.debug(JSON.parse(response));
+		const parsedResponse = JSON.parse(response);
+		res.status(200).send(parsedResponse);
+	} catch (error) {
+		res.status(500).send({status: "error", message: error});
+	}
 	// res.status(200s).send({"status": "failed"});
 };
 

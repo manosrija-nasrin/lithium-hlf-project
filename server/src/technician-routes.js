@@ -87,6 +87,10 @@ exports.readAllocatedBloodBag = async (req, res) => {
   const networkObj = await network1.connectToNetwork(req.headers.username);
   const response = await network1.invoke(networkObj, false, capitalize(userRole) + 'Contract:readBagsForSlipNumber', args);
   console.log(response);
+  let donorNetworkObj = await network.connectToNetwork(req.headers.username);
+
+  // const bagsResponse = await network.invoke(donorNetworkObj, false, capitalize(userRole) + 'Contract:testDeletion', args);
+  // console.debug("Response from network for adding pending block operations", bagsResponse.toString());
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
 
 }
@@ -172,8 +176,8 @@ exports.crossMatchResults = async (req, res) => {
     // Set up and connect to Fabric Gateway using the username in header
     let donorNetworkObj = await network.connectToNetwork(req.headers.username);
 
-    const response = await network.invoke(donorNetworkObj, false, capitalize(userRole) + 'Contract:addBagsToBeBlocked', blockDonorArgs);
-    console.debug("Response from network for adding pending block ooperations", response.toString());
+    const response = await network.invokePDCTransaction(donorNetworkObj, false, capitalize(userRole) + 'Contract:addBagsToBeBlocked', blockDonorArgs);
+    console.debug("Response from network for adding pending block operations", response.toString());
     const blockedResponse = JSON.parse(response.toString());
 
     if (blockedResponse.status === "error") {
