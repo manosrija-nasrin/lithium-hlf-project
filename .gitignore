@@ -11,6 +11,12 @@ node_modules/
 
 # credentials
 credentials/
+msp/
+tls/
+*.pem
+*.crt
+*.key
+*.db
 
 # channel artifacts
 channel-artifacts/
