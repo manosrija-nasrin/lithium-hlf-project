@@ -20,8 +20,10 @@ tls/
 
 # channel artifacts
 channel-artifacts/
+organizations/fabric-ca/superOrg
 organizations/peerOrganizations
 organizations/ordererOrganizations
+first-network/addSuperOrg/fabric-ca/
 
 # dependencies
 /node_modules
