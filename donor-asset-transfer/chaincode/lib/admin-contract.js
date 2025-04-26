@@ -28,7 +28,7 @@ class AdminContract extends PrimaryContract {
         }
 
         let newDonor = new Donor(args.donorId, args.firstName, args.lastName, args.password, args.dob,
-            args.phoneNumber, args.aadhar, args.address, args.bloodGroup);
+            args.phoneNumber, args.aadhar, args.address, args.bloodGroup, args.sex);
         const exists = await this.donorExists(ctx, newDonor.donorId);
         if (exists) {
             throw new Error(`The donor ${newDonor.donorId} already exists`);
@@ -44,6 +44,7 @@ class AdminContract extends PrimaryContract {
             donorId: donorId,
             firstName: asset.firstName,
             lastName: asset.lastName,
+            sex: asset.sex,
             phoneNumber: asset.phoneNumber,
             aadhar: asset.aadhar
         });

@@ -33,6 +33,7 @@ export interface DonorRecord {
   aadhar: string;
   phoneNumber: string;
   bloodGroup: string;
+  sex: string,
   alert: boolean;
   isDiseased: boolean;
   creditCard: string;
@@ -52,6 +53,7 @@ export class DonorViewRecord {
   aadhar = '';
   phoneNumber = '';
   bloodGroup = '';
+  sex = '';
   alert = false;
   isDiseased = false;
   creditCard = '';
@@ -70,6 +72,7 @@ export class DonorViewRecord {
     this.aadhar = donorRecord.aadhar;
     this.phoneNumber = donorRecord.phoneNumber;
     this.bloodGroup = donorRecord.bloodGroup;
+    this.sex = donorRecord.sex;
     this.alert = donorRecord.alert;
     this.isDiseased = donorRecord.isDiseased;
     this.creditCard = donorRecord.creditCard;
@@ -81,7 +84,7 @@ export class DonorViewRecord {
   }
 }
 
-export class DonorBlocked implements DonorRecord {
+export class DonorDeferred implements DonorRecord {
   donorId: string;
   firstName: string;
   lastName: string;
@@ -90,6 +93,7 @@ export class DonorBlocked implements DonorRecord {
   aadhar: string;
   phoneNumber: string;
   bloodGroup: string;
+  sex: string;
   alert: boolean;
   isDiseased: boolean;
   creditCard: string;
@@ -98,11 +102,11 @@ export class DonorBlocked implements DonorRecord {
   docType: string;
   changedBy: string;
   Timestamp: Timestamp;
-  blockedDate: string;
-  blockedReason: string;
-  blockedTenure: number;
+  deferredDate: string;
+  deferredReason: string;
+  deferredTenure: number;
 
-  constructor(readonly donorRecord: DonorRecord, blockedDate: string, blockedReason: string, blockedTenure: number) {
+  constructor(readonly donorRecord: DonorRecord, deferredDate: string, deferredReason: string, deferredTenure: number) {
     this.donorId = donorRecord.donorId;
     this.firstName = donorRecord.firstName;
     this.lastName = donorRecord.lastName;
@@ -111,6 +115,7 @@ export class DonorBlocked implements DonorRecord {
     this.aadhar = donorRecord.aadhar;
     this.phoneNumber = donorRecord.phoneNumber;
     this.bloodGroup = donorRecord.bloodGroup;
+    this.sex = donorRecord.sex;
     this.alert = donorRecord.alert;
     this.isDiseased = donorRecord.isDiseased;
     this.creditCard = donorRecord.creditCard;
@@ -119,9 +124,9 @@ export class DonorBlocked implements DonorRecord {
     this.docType = donorRecord.docType;
     this.changedBy = donorRecord.changedBy;
     this.Timestamp = donorRecord.Timestamp;
-    this.blockedDate = blockedDate;
-    this.blockedReason = blockedReason;
-    this.blockedTenure = blockedTenure;
+    this.deferredDate = deferredDate;
+    this.deferredReason = deferredReason;
+    this.deferredTenure = deferredTenure;
   }
 }
 
@@ -132,6 +137,7 @@ export class DonorAdminViewRecord {
   docType = '';
   aadhar = '';
   phoneNumber = '';
+  sex = '';
 
   constructor(readonly donorRecord: DonorRecord) {
     this.donorId = donorRecord.donorId;
@@ -140,6 +146,7 @@ export class DonorAdminViewRecord {
     this.docType = donorRecord.docType;
     this.aadhar = donorRecord.aadhar;
     this.phoneNumber = donorRecord.phoneNumber;
+    this.sex = donorRecord.sex;
   }
 }
 
@@ -148,6 +155,7 @@ export class DonorDoctorViewRecord {
   firstName = '';
   lastName = '';
   bloodGroup = '';
+  sex = '';
   alert = false;
   isDiseased = false;
   creditCard = '';
@@ -159,6 +167,7 @@ export class DonorDoctorViewRecord {
     this.firstName = donorRecord.firstName;
     this.lastName = donorRecord.lastName;
     this.bloodGroup = donorRecord.bloodGroup;
+    this.sex = donorRecord.sex;
     this.alert = donorRecord.alert;
     this.isDiseased = donorRecord.isDiseased;
     this.creditCard = donorRecord.creditCard;

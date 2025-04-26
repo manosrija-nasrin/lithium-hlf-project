@@ -2,6 +2,9 @@
 let Bag = require('./Bag.js');
 const AdminContract = require('./admin-contract.js');
 const PrimaryContract = require("./primary-contract.js");
+const stringify = require('json-stringify-deterministic');
+const sortKeysRecursive = require('sort-keys-recursive');
+const pendingCUECollection = 'pendingCUECollection';
 
 class DoctorContract extends AdminContract {
     async readDonor(ctx, donorId) {
@@ -19,6 +22,7 @@ class DoctorContract extends AdminContract {
             dob: asset.dob,
             bloodGroup: asset.bloodGroup,
             alert: asset.alert,
+            sex: asset.sex,
             isDiseased: asset.isDiseased,
             creditCard: asset.creditCard,
             donationStatus: asset.donationStatus,
@@ -91,9 +95,23 @@ class DoctorContract extends AdminContract {
         const dateOfLastDonation = numberOfDonationsMade > 0 ? donor.donationHistory['donation' + (numberOfDonationsMade)]['dateOfDonation'] : null;
         const duration = (dateOfLastDonation != null) ? (new Date(dod_date) - new Date(dateOfLastDonation)) / (1000 * 60 * 60 * 24) : null;
 
+        let pulse = parseInt(args.pulse);
         let systolic = parseInt(args.systolic);
         let diastolic = parseInt(args.diastolic);
+        let haemoglobin = parseFloat(args.haemoglobin);
         let weight = parseInt(args.weight);
+        let haemophiliaA = args.haemophiliaA;
+        let haemophiliaB = args.haemophiliaB;
+        let anaemia = args.anaemia;
+        let hypertension = args.hypertension;
+        let cardiovascular = args.cardiovascular;
+        let asthma = args.asthma;
+
+        let alert = false;
+        let deferDonor = false;
+        let deferredBy = args.doctorId;
+        let deferredReasons = [];
+        let deferredTenure = 0; // in days
 
         if (age < 18 || age > 60) {
             status = 'ineligible';
@@ -107,6 +125,10 @@ class DoctorContract extends AdminContract {
             status = 'ineligible';
             reason = 'Unhealthy';
         }
+        else if (pulse < 60 || pulse > 100) {
+            status = 'ineligible';
+            reason = 'Abnormal Pulse';
+        }
         else if (systolic < 110 || systolic > 140) {
             status = 'ineligible';
             reason = 'Abnormal Systolic Pressure';
@@ -119,26 +141,108 @@ class DoctorContract extends AdminContract {
             status = 'ineligible';
             reason = 'Under-weight';
         }
-        else if (donor.donationStatus && donor.donationStatus === 'blocked') {
+        else if ((donor.sex.startsWith('F') && haemoglobin < 12.0) || (donor.sex.startsWith('M') && haemoglobin < 13.0)) {
             status = 'ineligible';
-            reason = 'Donor blocked';
+            reason = 'Very Low Haemoglobin Levels';
+            alert = true;
+        }
+        else if (donor.donationStatus && donor.donationStatus.includes('deferred')) {
+            status = 'ineligible';
+            reason = 'Donor ' + donor.donationStatus;
         }
         else {
             status = 'in progress';
         }
-
-        if (status == 'ineligible') {
+        if (haemophiliaA == "true" || haemophiliaB == "true") {
+            status = 'deferred permanently';
+            reason = 'Coagulation Factor Deficiencies';
+            deferDonor = true;
+            deferredReasons.push(reason);
+            deferredTenure = 100000000;
+        }
+        if (cardiovascular == "true") {
+            status = 'deferred permanently';
+            reason = 'Cardiovascular Diseases';
+            deferDonor = true;
+            deferredReasons.push(reason);
+            deferredTenure = 100000000;
+        }
+        if (asthma == "true" || asthma == "temp-defer") {
+            status = asthma == "true" ? 'deferred permanently' : 'deferred temporarily';
+            reason = asthma == "true" ? 'Chronic Asthma' : "Acute Asthma";
+            deferDonor = true;
+            deferredReasons.push(reason);
+            deferredTenure = asthma == "true" ? 100000000 : 365;
+        }
+        if (hypertension == "true") {
+            status = 'deferred permanently';
+            reason = 'Hypertension';
+            deferDonor = true;
+            deferredReasons.push(reason);
+            deferredTenure = 100000000;
+        }
+        if (anaemia == "true" || anaemia == "temp-defer") {
+            status = anaemia == "true" ? 'deferred permanently' : 'deferred temporarily';
+            reason = 'Anaemia';
+            deferDonor = true;
+            deferredReasons.push(reason);
+            deferredTenure = anaemia == "true" ? 100000000 : 365;
+        }
+        donor.alert = alert;
+        if (status == 'ineligible' || status.startsWith('deferred')) {
             donor.donationHistory['donation' + (numberOfDonationsMade + 1)] = { 'dateOfDonation': dod_date, 'status': "failed", 'reason': reason, 'screenedBy': args.doctorId };
-            donor.donationStatus = "failed";
+            donor.donationStatus = status == "ineligible" ? "failed" : status;
         }
         else {
             donor.donationHistory['donation' + (numberOfDonationsMade + 1)] = { 'dateOfDonation': dod_date, 'status': status, 'screenedBy': args.doctorId };
             donor.donationStatus = "in progress";
         }
+        let response = { "status": "success", "deferDonor": deferDonor };
+        if (deferDonor == true) {
+            response = {
+                ...response,
+                deferredStatus: status,
+                deferredBy: deferredBy,
+                deferredReasons: deferredReasons,
+                deferredTenure: deferredTenure,
+            };
+            donor.alert = true;
+        }
         const buffer = Buffer.from(JSON.stringify(donor));
-        await ctx.stub.putState(donorId, buffer);
-
+        const result = await ctx.stub.putState(donorId, buffer);
+        return response;
     }
+
+    async addDonorToBeDeferred(ctx, args) {
+        try {
+            const parsedArgs = JSON.parse(args);
+            const transientMap = ctx.stub.getTransient();
+            const transient = transientMap.get("transientData");
+            if (!transient) {
+                throw new Error("No transient data");
+            }
+            const reasonsJson = JSON.parse(transient.toString());
+
+            const msp = ctx.stub.getMspID() + "";
+
+            // PDC Write operations only on authorized peers
+            console.debug("MSP: " + ctx.stub.getMspID());
+            const date = new Date().toISOString().split("T")[0];
+            const donorId = parsedArgs.donorId;
+            const deferredData = {
+                "deferredOn": date, "deferredTenure": reasonsJson.deferredTenure, "reasons": reasonsJson.deferredReasons, "deferredBy": parsedArgs.username,
+                "deferredStatus": parsedArgs.deferredStatus
+            };
+            const plainDeferralData = JSON.parse(JSON.stringify(deferredData));
+            console.debug("Putting deferred donor to ledger: ", plainDeferralData);
+            console.debug("Type: ", typeof (plainDeferralData));
+            await ctx.stub.putPrivateData(pendingCUECollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainDeferralData))));
+            return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${pendingCUECollection}` }
+        } catch (error) {
+            console.error(error);
+            return { status: "error", error: error };
+        }
+    };
 
     async updateDonorMedicalDetails(ctx, args) {
         args = JSON.parse(args);

@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { AuthService } from '../core/auth/auth.service';
-import { HospitalUser, User } from '../User';
-import { BrowserStorageFields, RoleEnum } from '../utils';
+import { HospitalUser } from '../User';
+import { RoleEnum } from '../utils';
 
 @Component({
   selector: 'app-login',
@@ -68,11 +68,12 @@ export class LoginComponent implements OnInit {
           );
         break;
       case RoleEnum.DONOR:
-        this.authService.loginDonorUser(new User(this.role, this.username, this.pwd, this.newPwd))
-          .subscribe(
-            (res: any) => this.afterSuccessfulLogin(res),
-            (err: any) => this.error.message = err.message
-          );
+        // this.authService.loginDonorUser(new User(this.role, this.username, this.pwd, this.newPwd))
+        //   .subscribe(
+        //     (res: any) => this.afterSuccessfulLogin(res),
+        //     (err: any) => this.error.message = err.message
+        //   );
+        // do nothing
         break;
       case RoleEnum.SUPER:
         this.authService.loginSuperUser(new HospitalUser(this.role, this.hospitalId, this.username, this.pwd))

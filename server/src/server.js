@@ -283,9 +283,9 @@ app.get(
   superRoutes.getSuperById
 );
 app.get(
-  "/supers/:hospitalId([0-9]+)/:superId(HOSP[0-9]+-SUP[0-9]+)/blockedlist",
+  "/supers/:hospitalId([0-9]+)/:superId(HOSP[0-9]+-SUP[0-9]+)/deferredlist",
   authenticateJWT,
-  superRoutes.getBlockedDonors
+  superRoutes.getDeferredDonors
 );
 app.get("/supers/:hospitalId([0-9]+)/_all", authenticateJWT, adminRoutes.getSupersByHospitalId);
 

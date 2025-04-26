@@ -41,6 +41,7 @@ class PrimaryContract extends Contract {
             phoneNumber: asset.phoneNumber,
             aadhar: asset.aadhar,
             address: asset.address,
+            sex: asset.sex,
             bloodGroup: asset.bloodGroup,
             donationHistory: asset.donationHistory,
             alert: asset.alert,

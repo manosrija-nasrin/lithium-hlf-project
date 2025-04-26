@@ -2,7 +2,7 @@
 const PrimaryContract = require('./primary-contract.js');
 const stringify = require('json-stringify-deterministic');
 const sortKeysRecursive = require('sort-keys-recursive');
-const pendingBlockedBagsPrivateCollection = 'pendingBlockedBagsCollection';
+const pendingCUECollection = 'pendingCUECollection';
 
 class TechnicianContract extends PrimaryContract {
     async readBag(ctx, args) {
@@ -22,7 +22,7 @@ class TechnicianContract extends PrimaryContract {
         return asset;
     }
 
-    async addBagsToBeBlocked(ctx, args) {
+    async addBagsToBeDeferred(ctx, args) {
         try {
             const parsedArgs = JSON.parse(args);
             const transientMap = ctx.stub.getTransient();
@@ -39,23 +39,26 @@ class TechnicianContract extends PrimaryContract {
             // PDC Write operations only on authorized peers
             console.debug("MSP: " + ctx.stub.getMspID());
             const date = new Date().toISOString().split("T")[0];
-            const bagId = parsedArgs.bloodBagUnitNo + "T" + parsedArgs.bloodBagSegmentNo;
-            const blockingData = {"blockedOn": date, "blockingTenure": 365, "reasons": reasonsJson.reasons, "blockedBy": parsedArgs.username, 
-                "bloodBagUnitNo": parsedArgs.bloodBagUnitNo, "bloodBagSegmentNo": parsedArgs.bloodBagSegmentNo};
-            const plainBlockingData = JSON.parse(JSON.stringify(blockingData));
-            console.debug("Putting blocked donor to ledger: ", plainBlockingData);
-            console.debug("Type: ", typeof(plainBlockingData));
-            await ctx.stub.putPrivateData(pendingBlockedBagsPrivateCollection, bagId, Buffer.from(stringify(sortKeysRecursive(plainBlockingData))));
-            return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${pendingBlockedBagsPrivateCollection}`}
+            const bagId = parsedArgs.bloodBagUnitNo + "-" + parsedArgs.bloodBagSegmentNo;
+            const deferredData = {
+                "deferredOn": date, "deferredTenure": reasonsJson.deferredStatus, "reasons": reasonsJson.deferredReasons, "deferredBy": parsedArgs.username,
+                "bloodBagUnitNo": parsedArgs.bloodBagUnitNo, "bloodBagSegmentNo": parsedArgs.bloodBagSegmentNo,
+                "deferredStatus": parsedArgs.deferredStatus
+            };
+            const plainDeferralData = JSON.parse(JSON.stringify(deferredData));
+            console.debug("Putting deferred bag to ledger: ", plainDeferralData);
+            console.debug("Type: ", typeof (plainDeferralData));
+            await ctx.stub.putPrivateData(pendingCUECollection, bagId, Buffer.from(stringify(sortKeysRecursive(plainDeferralData))));
+            return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${pendingCUECollection}` }
         } catch (error) {
             console.error(error);
             return { status: "error", error: error };
         }
     };
     async testDeletion(ctx, args) {
-        await ctx.stub.putPrivateData(pendingBlockedBagsPrivateCollection, 'TEMPBAG', Buffer.from("This is to be deleted"));
-        const response = await ctx.stub.deletePrivateData(pendingBlockedBagsPrivateCollection, 'TEMPBAG');
-        console.debug(response.toString());
+        // await ctx.stub.putPrivateData(pendingCUECollection, 'TEMPBAG', Buffer.from("This is to be deleted"));
+        // const response = await ctx.stub.deletePrivateData(pendingCUECollection, 'TEMPBAG');
+        console.debug("Not implemented yet");
     }
 }
 

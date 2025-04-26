@@ -1,13 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { Subscription } from 'rxjs';
 
-import { DonorService } from '../donor.service';
-import { DonorRecord } from '../donor';
-import { RoleEnum } from '../../utils';
 import { AuthService } from '../../core/auth/auth.service';
+import { RoleEnum } from '../../utils';
+import { DonorRecord } from '../donor';
+import { DonorService } from '../donor.service';
 
 @Component({
   selector: 'app-donor-new',
@@ -23,15 +23,21 @@ export class DonorEditComponent implements OnInit, OnDestroy {
   private allSub = new Subscription();
 
   public bloodGroupTypes = [
-    {id: 'A+', name: 'A +'},
-    {id: 'A-', name: 'A -'},
-    {id: 'B+', name: 'B +'},
-    {id: 'B-', name: 'B -'},
-    {id: 'AB+', name: 'AB +'},
-    {id: 'AB-', name: 'AB -'},
-    {id: 'O+', name: 'O +'},
-    {id: 'O-', name: 'O -'}
+    { id: 'A+', name: 'A +' },
+    { id: 'A-', name: 'A -' },
+    { id: 'B+', name: 'B +' },
+    { id: 'B-', name: 'B -' },
+    { id: 'AB+', name: 'AB +' },
+    { id: 'AB-', name: 'AB -' },
+    { id: 'O+', name: 'O +' },
+    { id: 'O-', name: 'O -' }
   ];
+
+  public sexCategories = [
+    { id: 'M', name: 'Male' },
+    { id: 'F', name: 'Female' },
+    { id: 'T', name: 'Transgender' }
+  ]
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -44,10 +50,11 @@ export class DonorEditComponent implements OnInit, OnDestroy {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       address: ['', Validators.required],
-      dob: ['', [ Validators.required]],
+      dob: ['', [Validators.required]],
       phoneNumber: ['', Validators.required],
       aadhar: ['', Validators.required],
       bloodGroup: ['', Validators.required],
+      sex: ['', Validators.required],
       alert: [''],
       isDiseased: [''],
       creditCard: [''],
@@ -64,7 +71,7 @@ export class DonorEditComponent implements OnInit, OnDestroy {
       })
     );
   }
-  
+
   public isEditForm(): boolean {
     return !this.isNew();
   }
@@ -150,20 +157,20 @@ export class DonorEditComponent implements OnInit, OnDestroy {
     this.newDonorData = null;
     this.router.navigate(['/', 'admin', this.getAdminUsername()]);
   }
-  
-  public toggleAlert(): void {
-  if (this.isDoctor() && !this.isNew()) {
-    const currentValue = this.form.get('alert')!.value;
-    this.form.get('alert')!.setValue(currentValue === 'true' ? 'false' : 'true');
-  }
-}
 
-public toggleIsDiseased(): void {
-  if (this.isDoctor() && !this.isNew()) {
-    const currentValue = this.form.get('isDiseased')!.value;
-    this.form.get('isDiseased')!.setValue(currentValue === 'true' ? 'false' : 'true');
+  public toggleAlert(): void {
+    if (this.isDoctor() && !this.isNew()) {
+      const currentValue = this.form.get('alert')!.value;
+      this.form.get('alert')!.setValue(currentValue === 'true' ? 'false' : 'true');
+    }
   }
-}
+
+  public toggleIsDiseased(): void {
+    if (this.isDoctor() && !this.isNew()) {
+      const currentValue = this.form.get('isDiseased')!.value;
+      this.form.get('isDiseased')!.setValue(currentValue === 'true' ? 'false' : 'true');
+    }
+  }
 
 
   private setTitle(): void {
@@ -179,7 +186,8 @@ public toggleIsDiseased(): void {
         address: record.address,
         dob: record.dob,
         phoneNumber: record.phoneNumber,
-        aadhar: record.aadhar
+        aadhar: record.aadhar,
+        sex: record.sex,
       });
     }
     else {

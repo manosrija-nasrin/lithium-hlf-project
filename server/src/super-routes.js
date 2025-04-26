@@ -8,34 +8,34 @@ const network = require('../../donor-asset-transfer/application-javascript/app.j
 
 /**
  * @param  {Request} req Role in the header
- * @param  {Response} res 200 response with the json of all the assets(blocked donors) in the PDC
- * @description Retrieves all the assets(blocked donors) in the ledger
+ * @param  {Response} res 200 response with the json of all the assets(deferred donors) in the PDC
+ * @description Retrieves all the assets(deferred donors) in the ledger
  */
-exports.getBlockedDonors = async (req, res) => {
+exports.getDeferredDonors = async (req, res) => {
 	// User role from the request header is validated
 	const userRole = req.headers.role;
 	await validateRole([ROLE_SUPER], userRole, res);
 	// Set up and connect to Fabric Gateway using the username in header
 	let networkObj = await network.connectToSuperNetwork(req.headers.username);
-	const usernameArgs = { username: userRole === ROLE_SUPER ? req.headers.username : ''};
+	const usernameArgs = { username: userRole === ROLE_SUPER ? req.headers.username : '' };
 	const getPendingBagsResponse = await network.invokePDCTransaction(networkObj, true, capitalize(userRole) + 'Contract:getAllPendingBags', [JSON.stringify(usernameArgs)]);
 	try {
 		const getPendingBagsResponseJson = JSON.parse(getPendingBagsResponse);
 		console.debug(getPendingBagsResponseJson);
 		if (getPendingBagsResponseJson.count > 0) {
-			const blockPendingDonorsRequestArgs = {...usernameArgs, pendingBags: getPendingBagsResponseJson.pendingBags };
+			const deferPendingDonorsRequestArgs = { ...usernameArgs, pendingBags: getPendingBagsResponseJson.pendingBags };
 			networkObj = await network.connectToSuperNetwork(req.headers.username);
-			const blockPendingDonorsResponse = await network.invokePDCTransaction(networkObj, false, capitalize(userRole) + 'Contract:blockPendingDonors', [JSON.stringify(blockPendingDonorsRequestArgs)]);
-			console.debug(JSON.parse(blockPendingDonorsResponse));
+			const deferPendingDonorsResponse = await network.invokePDCTransaction(networkObj, false, capitalize(userRole) + 'Contract:deferPendingDonors', [JSON.stringify(deferPendingDonorsRequestArgs)]);
+			console.debug(JSON.parse(deferPendingDonorsResponse));
 		}
 		// Invoke the smart contract function
 		networkObj = await network.connectToSuperNetwork(req.headers.username);
-		const response = await network.invokePDCTransaction(networkObj, true, capitalize(userRole) + 'Contract:queryAllBlockedDonors', JSON.stringify(usernameArgs));
+		const response = await network.invokePDCTransaction(networkObj, true, capitalize(userRole) + 'Contract:queryAllDeferredDonors', JSON.stringify(usernameArgs));
 		// console.debug(JSON.parse(response));
 		const parsedResponse = JSON.parse(response);
 		res.status(200).send(parsedResponse);
 	} catch (error) {
-		res.status(500).send({status: "error", message: error});
+		res.status(500).send({ status: "error", message: error });
 	}
 	// res.status(200s).send({"status": "failed"});
 };

@@ -1,8 +1,8 @@
 // screendonor.component.ts
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-screendonor',
@@ -35,27 +35,84 @@ import { HttpClient } from '@angular/common/http';
         </div>
 
         <div class="form-group">
-          <label for="systolic">Systolic Pressure:</label>
+          <label for="pulse">Pulse (per minute): </label>
+          <input type="text" id="pulse" formControlName="pulse" required>
+        </div>
+
+        <div class="form-group">
+          <label for="systolic">Systolic Pressure (mmHg):</label>
           <input type="text" id="systolic" formControlName="systolic" required>
         </div>
 
         <div class="form-group">
-          <label for="diastolic">Diastolic Pressure:</label>
+          <label for="diastolic">Diastolic Pressure (mmHg):</label>
           <input type="text" id="diastolic" formControlName="diastolic" required>
         </div>
 
         <div class="form-group">
+          <label for="haemoglobin">Haemoglobin Level (in g/dl):</label>
+          <input type="text" id="haemoglobin" formControlName="haemoglobin" required>
+        </div>
+        <div class="form-group">
           <label for="weight">Weight:</label>
           <input type="text" id="weight" formControlName="weight" required>
+        </div>
+
+        <div class="form-group">
+          <label for="anaemia">Anaemia:</label>
+          <select formControlName="anaemia">
+            <option value="true">Chronic</option>
+            <option value="temp-defer">Under Investigation</option>
+            <option value="false">Not present</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="haemophiliaA">Haemophilia A:</label>
+          <select formControlName="haemophiliaA">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="haemophiliaB">Haemophilia B:</label>
+          <select formControlName="haemophiliaB">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cardiovascular">Cardiovascular Disease:</label>
+          <select formControlName="cardiovascular">
+            <option value="true">Symptomatic</option>
+            <option value="false">Asymptomatic</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="hypertension">Hypertension:</label>
+          <select formControlName="hypertension">
+            <option value="true">Hypertensive heart/renal disease</option>
+            <option value="false">Recently started taking medication</option>
+            <option value="false">Not present</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="asthma">Asthma:</label>
+          <select formControlName="asthma">
+            <option value="true">Chronic Symptomatic</option>
+            <option value="temp-defer">Asthma with acute exacerbation</option>
+            <option value="false">Asymptomatic</option>
+          </select>
         </div>
 
         <button type="submit" [disabled]="screeningForm.invalid">Submit</button>
       </form>
     </div>
     
-    
-    
-
   `,
   styles: [`
     .container {
@@ -94,6 +151,15 @@ import { HttpClient } from '@angular/common/http';
       background-color: #ccc;
       cursor: not-allowed;
     }
+    
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
   `]
 })
 export class ScreenDonorComponent implements OnInit {
@@ -117,15 +183,23 @@ export class ScreenDonorComponent implements OnInit {
       donorId: [this.donorId, Validators.required],
       doctorId: [this.doctorId, Validators.required],
       dob: [this.dob, Validators.required],
+      pulse: ['', Validators.required],
       systolic: ['', Validators.required],
       diastolic: ['', Validators.required],
+      haemoglobin: ['', Validators.required],
+      anaemia: ['', Validators.required],
       weight: ['', Validators.required],
+      haemophiliaA: ['', Validators.required],
+      haemophiliaB: ['', Validators.required],
+      cardiovascular: ['', Validators.required],
+      hypertension: ['', Validators.required],
+      asthma: ['', Validators.required],
     });
   }
 
   onSubmit() {
     console.log('Form submitted:', this.screeningForm.value);
-    
+
     const apiUrl = 'http://localhost:3001/doctor/screendonor/' + this.screeningForm.value.doctorId;
 
     this.http.post(apiUrl, this.screeningForm.value)

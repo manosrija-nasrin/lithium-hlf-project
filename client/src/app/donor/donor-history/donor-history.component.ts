@@ -3,10 +3,10 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 import { Observable, Subscription } from 'rxjs';
 
-import { DonorService } from '../donor.service';
-import { DisplayVal, DonorViewRecord } from '../donor';
-import { RoleEnum } from '../../utils';
 import { AuthService } from '../../core/auth/auth.service';
+import { RoleEnum } from '../../utils';
+import { DisplayVal, DonorViewRecord } from '../donor';
+import { DonorService } from '../donor.service';
 
 @Component({
   selector: 'app-donor-history',
@@ -25,6 +25,7 @@ export class DonorHistoryComponent implements OnInit, OnDestroy {
     new DisplayVal(DonorViewRecord.prototype.lastName, 'Last Name'),
     new DisplayVal(DonorViewRecord.prototype.dob, 'Date of Birth'),
     new DisplayVal(DonorViewRecord.prototype.bloodGroup, 'Blood Group'),
+    new DisplayVal(DonorViewRecord.prototype.sex, 'Sex'),
   ];
 
   constructor(
@@ -38,7 +39,8 @@ export class DonorHistoryComponent implements OnInit, OnDestroy {
       this.headerNames.push(
         new DisplayVal(DonorViewRecord.prototype.address, 'Address'),
         new DisplayVal(DonorViewRecord.prototype.phoneNumber, 'Contact number'),
-        new DisplayVal(DonorViewRecord.prototype.aadhar, 'Aadhar number')
+        new DisplayVal(DonorViewRecord.prototype.aadhar, 'Aadhar number'),
+        new DisplayVal(DonorViewRecord.prototype.sex, 'Sex')
       );
     }
     this.headerNames.push(
@@ -67,7 +69,7 @@ export class DonorHistoryComponent implements OnInit, OnDestroy {
     return this.authService.getRole() === RoleEnum.DONOR;
   }
 
-  public convertToDate(val: any): string{
+  public convertToDate(val: any): string {
     return new Date(val.seconds.low * 1000).toDateString();
   }
 }

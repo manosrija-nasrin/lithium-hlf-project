@@ -1,62 +1,62 @@
 [
-    {
-      "name": "hosp1-hosp2-PrivateCollection",
-      "policy": "OR('hosp1MSP.member', 'hosp2MSP.member')",
-      "requiredPeerCount": 0,
-      "maxPeerCount": 1,
-      "blockToLive":0,
-      "memberOnlyRead": true,
-      "memberOnlyWrite": false,
-      "endorsementPolicy": {
-       "signaturePolicy": "OR('hosp1MSP.member', 'hosp2MSP.member')"
-     }
-   },
-    {
-      "name": "hosp1-PrivateCollection",
-      "policy": "OR('hosp1MSP.member')",
-      "requiredPeerCount": 0,
-      "maxPeerCount": 1,
-      "blockToLive":0,
-      "memberOnlyRead": true,
-      "memberOnlyWrite": false,
-      "endorsementPolicy": {
-        "signaturePolicy": "OR('hosp1MSP.member')"
-      }
-    },
-    {
-      "name": "hosp2-PrivateCollection",
-      "policy": "OR('hosp2MSP.member')",
-      "requiredPeerCount": 0,
-      "maxPeerCount": 1,
-      "blockToLive":0,
-      "memberOnlyRead": true,
-      "memberOnlyWrite": false,
-      "endorsementPolicy": {
-        "signaturePolicy": "OR('hosp2MSP.member')"
-      }
-    }, 
-    {
-      "name": "blockedDonorPrivateCollection",
-      "policy": "OR('superOrgMSP.member')",
-      "requiredPeerCount": 0,
-      "maxPeerCount": 1,
-      "blockToLive":1000000,
-      "memberOnlyRead": true,
-      "memberOnlyWrite": true,
-      "endorsementPolicy": {
-       "signaturePolicy": "OR('superOrgMSP.member')"
-     }
-   },
-   {
-    "name": "pendingBlockedBagsCollection",
-    "policy": "OR('superOrgMSP.member')",
-    "requiredPeerCount": 2,
-    "maxPeerCount": 3,
-    "blockToLive":1000000,
+  {
+    "name": "hosp1-hosp2-PrivateCollection",
+    "policy": "OR('hosp1MSP.member', 'hosp2MSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 1,
+    "blockToLive": 0,
     "memberOnlyRead": true,
     "memberOnlyWrite": false,
     "endorsementPolicy": {
-     "signaturePolicy": "OR('superOrgMSP.member')"
-   }
- }
+      "signaturePolicy": "OR('hosp1MSP.member', 'hosp2MSP.member')"
+    }
+  },
+  {
+    "name": "hosp1-PrivateCollection",
+    "policy": "OR('hosp1MSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 1,
+    "blockToLive": 0,
+    "memberOnlyRead": true,
+    "memberOnlyWrite": false,
+    "endorsementPolicy": {
+      "signaturePolicy": "OR('hosp1MSP.member')"
+    }
+  },
+  {
+    "name": "hosp2-PrivateCollection",
+    "policy": "OR('hosp2MSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 1,
+    "blockToLive": 0,
+    "memberOnlyRead": true,
+    "memberOnlyWrite": false,
+    "endorsementPolicy": {
+      "signaturePolicy": "OR('hosp2MSP.member')"
+    }
+  },
+  {
+    "name": "deferredDonorPrivateCollection",
+    "policy": "OR('superOrgMSP.member')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 1,
+    "blockToLive": 1000000,
+    "memberOnlyRead": true,
+    "memberOnlyWrite": true,
+    "endorsementPolicy": {
+      "signaturePolicy": "OR('superOrgMSP.member')"
+    }
+  },
+  {
+    "name": "pendingCUECollection",
+    "policy": "OR('superOrgMSP.member')",
+    "requiredPeerCount": 2,
+    "maxPeerCount": 3,
+    "blockToLive": 1000000,
+    "memberOnlyRead": true,
+    "memberOnlyWrite": false,
+    "endorsementPolicy": {
+      "signaturePolicy": "OR('superOrgMSP.member')"
+    }
+  }
 ]

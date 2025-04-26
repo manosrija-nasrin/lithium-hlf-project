@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
@@ -24,7 +24,7 @@ export class SuperService {
     return this.http.get(this.superURL + `/${hospitalId}/${supId}`);
   }
 
-  public getBlockedDonors(hospitalId: string, supId: string): Observable<any> {
-    return this.http.get(this.superURL + `/${hospitalId}/${supId}/blockedlist`);
+  public getDeferredDonors(hospitalId: string, supId: string): Observable<any> {
+    return this.http.get(this.superURL + `/${hospitalId}/${supId}/deferredlist`);
   }
 }

@@ -1,38 +1,38 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
-import { DonorComponent } from './donor/donor.component';
-import { DoctorComponent } from './doctor/doctor.component';
-import { TechnicianComponent } from './technician/technician.component';
+import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
+import { DoctorListForAdminComponent } from './admin/doctor-list-for-admin/doctor-list-for-admin.component';
+import { DonorListForAdminComponent } from './admin/donor-list-for-admin/donor-list-for-admin.component';
+import { GetStocksBelowThresholdComponent } from './admin/GetStocksBelowThreshold.component';
+import { InsertHospitalComponent } from './admin/InsertHospital.component';
+import { SuperListForAdminComponent } from './admin/super-list-for-admin/super-list-for-admin.component';
+import { TechnicianListForAdminComponent } from './admin/technician-list-for-admin/technician-list-for-admin.component';
+import { ViewAllHospitalsComponent } from './admin/ViewAllHospitals.component';
 import { AuthGuard } from './core/auth/auth.guard';
-import { DonorEditComponent } from './donor/donor-register/donor-edit.component';
+import { BloodCollectionComponent } from './doctor/bloodcollection.component';
 import { DoctorRegisterComponent } from './doctor/doctor-register/doctor-register.component';
-import { TechnicianRegisterComponent } from './technician/technician-register/technician-register.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import { DonorListForDoctorComponent } from './doctor/donor-list-for-doctor/donor-list-for-doctor.component';
+import { MOCapprovalComponent } from './doctor/MOCapproval.component';
+import { ScreenDonorComponent } from './doctor/screendonor.component';
 import { DonorDetailsMedicalEditComponent } from './donor/donor-details-medical-edit/donor-details-medical-edit.component';
 import { DonorDetailsPersonalEditComponent } from './donor/donor-details-personal-edit/donor-details-personal-edit.component';
-import { DoctorListForAdminComponent } from './admin/doctor-list-for-admin/doctor-list-for-admin.component';
-import { TechnicianListForAdminComponent } from './admin/technician-list-for-admin/technician-list-for-admin.component';
-import { DonorListForAdminComponent } from './admin/donor-list-for-admin/donor-list-for-admin.component';
-import { DonorListForDoctorComponent } from './doctor/donor-list-for-doctor/donor-list-for-doctor.component';
-import { ViewAllHospitalsComponent } from './admin/ViewAllHospitals.component';
-import { InsertHospitalComponent } from './admin/InsertHospital.component';
-import { GetStocksBelowThresholdComponent } from './admin/GetStocksBelowThreshold.component';
+import { DonorEditComponent } from './donor/donor-register/donor-edit.component';
+import { DonorComponent } from './donor/donor.component';
 import { GeoButtonComponent } from './donor/Geobutton/geo-button.component';
-import { ScreenDonorComponent } from './doctor/screendonor.component';
-import { BloodCollectionComponent } from './doctor/bloodcollection.component';
-import { ReadBloodBagComponent } from './technician/readbloodbag.component';
-import { BloodCrossMatchComponent } from './technician/crossmatchedblood.component';
+import { LoginComponent } from './login/login.component';
 import { ReceiverComponent } from './receiver/receiver.component';
-import { BloodRequestComponent } from './technician/bloodrequest.component';
-import { ReadAllocatedBloodBagComponent } from './technician/readallocatedbloodbag.component';
-import { LTapprovalComponent } from './technician/LTapproval.component';
-import { MOCapprovalComponent } from './doctor/MOCapproval.component';
-import { SuperComponent } from './super/super.component';
-import { BlockedDonorListForSuperComponent } from './super/blocked-donor-list-for-super/blocked-donor-list-for-super.component';
+import { DeferredDonorListForSuperComponent } from './super/deferred-donor-list-for-super/deferred-donor-list-for-super.component';
 import { SuperRegisterComponent } from './super/super-register/super-register.component';
-import { SuperListForAdminComponent } from './admin/super-list-for-admin/super-list-for-admin.component';
+import { SuperComponent } from './super/super.component';
+import { BloodRequestComponent } from './technician/bloodrequest.component';
+import { BloodCrossMatchComponent } from './technician/crossmatchedblood.component';
+import { LTapprovalComponent } from './technician/LTapproval.component';
+import { ReadAllocatedBloodBagComponent } from './technician/readallocatedbloodbag.component';
+import { ReadBloodBagComponent } from './technician/readbloodbag.component';
+import { TechnicianRegisterComponent } from './technician/technician-register/technician-register.component';
+import { TechnicianComponent } from './technician/technician.component';
 
 const routes: Routes = [
   {
@@ -130,8 +130,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'super/:superId/blockedlist',
-    component: BlockedDonorListForSuperComponent,
+    path: 'super/:superId/deferredlist',
+    component: DeferredDonorListForSuperComponent,
     canActivate: [AuthGuard]
   },
   {

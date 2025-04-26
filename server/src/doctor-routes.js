@@ -35,11 +35,40 @@ exports.screenDonor = async (req, res) => {
   await validateRole([ROLE_DOCTOR], userRole, res);
   let args = req.body;
   console.log(args);
-  args = [JSON.stringify(args)];
+  let argsArr = [JSON.stringify(args)];
   const networkObj = await network.connectToNetwork(req.headers.username);
   // Invoke the smart contract function
-  const response = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:screenDonor', args);
-  (response.error) ? res.status(500).send(response.error) : res.status(200).send(getMessage(false, 'Screening successful.'));
+  const responseBytes = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:screenDonor', argsArr);
+  const response = JSON.parse(responseBytes.toString());
+  // TODO: Check whether donor should be deferred : if yes, execute a PDC write
+  // {"status":"success","deferDonor":true,"deferredStatus":"deferred permanently","deferredBy":"HOSP1-DOC32849","deferredReasons":["Coagulation Factor Deficiencies"],"deferredTenure":100000000}
+  if ("deferDonor" in response && (response.deferDonor == true || response.deferDonor == "true")) {
+    console.log("About to defer donor");
+    const deferDonorArgs = [JSON.stringify({
+      donorId: args.donorId,
+      username: response.deferredBy,
+      deferredStatus: response.deferredStatus,
+    }), JSON.stringify({
+      transientData: {
+        deferredReasons: response.deferredReasons,
+        deferredTenure: response.deferredTenure,
+      }
+    })
+    ];
+
+    let donorNetworkObj = await network.connectToNetwork(req.headers.username);
+
+    const deferredResponseBytes = await network.invokePDCTransaction(donorNetworkObj, false, capitalize(userRole) + 'Contract:addDonorToBeDeferred', deferDonorArgs);
+    console.debug("Response from network for adding pending defer operations", response.toString());
+    const deferredResponse = JSON.parse(deferredResponseBytes.toString());
+
+    if (deferredResponse.status === "error") {
+      console.error("Failed to defer donor with ID: ", args.donorId);
+    } else {
+      console.debug("Status", deferredResponse.status);
+    }
+  }
+  (response.error || response.deferDonor == "true") ? res.status(500).send(response.error) : res.status(200).send(getMessage(false, 'Screening successful.'));
 }
 
 exports.collectBlood = async (req, res) => {

@@ -90,7 +90,7 @@ exports.readAllocatedBloodBag = async (req, res) => {
   let donorNetworkObj = await network.connectToNetwork(req.headers.username);
 
   // const bagsResponse = await network.invoke(donorNetworkObj, false, capitalize(userRole) + 'Contract:testDeletion', args);
-  // console.debug("Response from network for adding pending block operations", bagsResponse.toString());
+  // console.debug("Response from network for adding pending defer operations", bagsResponse.toString());
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
 
 }
@@ -157,33 +157,24 @@ exports.crossMatchResults = async (req, res) => {
 
     if (args.malaria == "true") reasons.push("Malaria");
     if (args.syphilis == "true") reasons.push("Syphilis");
-    if (args.hcv == "true") reasons.push("HCV");
+    if (args.hiv == "true") reasons.push("HIV");
     if (args.hepatitisB == "true") reasons.push("Hepatitis B");
+    if (args.hepatitisC == "true") reasons.push("Hepatitis C");
     if (args.ABORhGrouping == "false") reasons.push("ABORh Grouping");
     if (args.irregularAntiBody == "true") reasons.push("Irregular Antibodies");
 
-    // search for bagId in donor history
-    // let donorId;
-    // let blockedDonorResponse = await databaseRoutes.getDonorOfBloodBag(bloodBagUnitNo, bloodBagSegmentNo, hospName);
-    // if (blockedDonorResponse.length > 0) {
-    //   donorId = blockedDonorResponse[0]["DonatedBy"];
-    // } else {
-    //   donorId = "";
-    //   console.error("Donor not found");
-    // }
-
-    const blockDonorArgs = [JSON.stringify({ bloodBagUnitNo: bloodBagUnitNo, bloodBagSegmentNo: bloodBagSegmentNo, username: req.headers.username }), JSON.stringify({ transientData: { reasons: reasons } })];
+    const deferDonorArgs = [JSON.stringify({ bloodBagUnitNo: bloodBagUnitNo, bloodBagSegmentNo: bloodBagSegmentNo, username: req.headers.username, deferredStatus: "deferred permanently" }), JSON.stringify({ transientData: { deferredReasons: reasons, deferredTenure: 100000000 } })];
     // Set up and connect to Fabric Gateway using the username in header
     let donorNetworkObj = await network.connectToNetwork(req.headers.username);
 
-    const response = await network.invokePDCTransaction(donorNetworkObj, false, capitalize(userRole) + 'Contract:addBagsToBeBlocked', blockDonorArgs);
-    console.debug("Response from network for adding pending block operations", response.toString());
-    const blockedResponse = JSON.parse(response.toString());
+    const response = await network.invokePDCTransaction(donorNetworkObj, false, capitalize(userRole) + 'Contract:addBagsToBeDeferred', deferDonorArgs);
+    console.debug("Response from network for adding pending defer operations", response.toString());
+    const deferredResponse = JSON.parse(response.toString());
 
-    if (blockedResponse.status === "error") {
-      console.error("Failed to block donor of bagId: ", bagId);
+    if (deferredResponse.status === "error") {
+      console.error("Failed to defer donor of bagId: ", bagId);
     } else {
-      console.debug("Status", blockedResponse.status);
+      console.debug("Status", deferredResponse.status);
       await databaseRoutes.updateCrossMatchStatus(bloodBagUnitNo, bloodBagSegmentNo, hospName, ans.crossmatch);
       console.debug("Successfully done");
     }

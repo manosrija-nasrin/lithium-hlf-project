@@ -1,11 +1,11 @@
 'use strict';
-const BlockedDonor = require('./BlockedDonor.js');
+const DeferredDonor = require('./DeferredDonor.js');
 const PrimaryContract = require('./primary-contract.js');
 const stringify = require('json-stringify-deterministic');
 const sortKeysRecursive = require('sort-keys-recursive');
 const { Certificate } = require('@fidm/x509');
-const blockedDonorPrivateCollection = 'blockedDonorPrivateCollection';
-const pendingBlockedBagsPrivateCollection = 'pendingBlockedBagsCollection';
+const deferredDonorPrivateCollection = 'deferredDonorPrivateCollection';
+const pendingCUECollection = 'pendingCUECollection';
 const HOSP_SUPERS = ["HOSP1-SUP12226", "HOSP2-SUP12227"];
 
 class SuperContract extends PrimaryContract {
@@ -23,15 +23,15 @@ class SuperContract extends PrimaryContract {
     async getTxnCreatorIdentity(ctx) {
         const txnCreator = ctx.stub.getCreator();
         const idBytes = txnCreator.idBytes;
-    
+
         // Convert Uint8Array to a string (PEM format)
         const pemCert = Buffer.from(idBytes).toString('utf8');
-    
+
         // console.debug("PEM Certificate:\n", pemCert);
-    
+
         // Parse the certificate using @fidm/x509
         const cert = Certificate.fromPEM(Buffer.from(pemCert));
-    
+
         // Extract relevant identity details
         const identity = {
             mspid: txnCreator.mspid,
@@ -42,7 +42,7 @@ class SuperContract extends PrimaryContract {
                 end: cert.validTo,
             },
         };
-    
+
         return identity;
     }
 
@@ -74,7 +74,7 @@ class SuperContract extends PrimaryContract {
                     newObj.Timestamp = obj.Timestamp;
                 newAssets.push(newObj);
             }
-    
+
             return newAssets;
         } catch (error) {
             console.error("Error while fetching limited fields", error);
@@ -120,7 +120,7 @@ class SuperContract extends PrimaryContract {
         } */
     }
 
-    fetchFields (asset, includeTimeStamp = false) {
+    fetchFields(asset, includeTimeStamp = false) {
         for (let i = 0; i < asset.length; i++) {
             const obj = asset[i];
             asset[i] = {
@@ -130,14 +130,15 @@ class SuperContract extends PrimaryContract {
                 dob: obj.Record.dob,
                 bloodGroup: obj.Record.bloodGroup,
                 alert: obj.Record.alert,
+                sex: obj.Record.sex,
                 isDiseased: obj.Record.isDiseased,
                 creditCard: obj.Record.creditCard,
                 donationHistory: obj.Record.donationHistory,
                 donationStatus: obj.Record.donationStatus,
-                blockedBy: obj.Record.blockedBy,
-                blockedDate: obj.Record.blockedDate,
-                blockedReason: obj.Record.blockedReason,
-                blockedTenure: obj.Record.blockedTenure,
+                deferredBy: obj.Record.deferredBy,
+                deferredDate: obj.Record.deferredDate,
+                deferredReason: obj.Record.deferredReason,
+                deferredTenure: obj.Record.deferredTenure,
                 bloodBagUnitNo: obj.Record.bloodBagUnitNo,
                 bloodBagSegmentNo: obj.Record.bloodBagSegmentNo
             };
@@ -148,16 +149,17 @@ class SuperContract extends PrimaryContract {
 
         return asset;
     };
-    // const blockingData = {"blockedOn": date, "blockedTenure": 365, "reasons": reasonsJson.reasons, "blockedBy": parsedArgs.username, 
+    // const deferredData = {"deferredOn": date, "deferredTenure": 365, "reasons": reasonsJson.reasons, "deferredBy": parsedArgs.username, 
     // "bloodBagUnitNo": parsedArgs.bloodBagUnitNo, "bloodBagSegmentNo": parsedArgs.bloodBagSegmentNo};
-    fetchFieldsForPendingBlockedDonors (assets, includeTimeStamp = false) {
+    fetchFieldsForPendingDeferredDonors(assets, includeTimeStamp = false) {
         for (let i = 0; i < assets.length; i++) {
             const obj = assets[i];
             assets[i] = {
-                bagId: obj.Key,
-                blockedOn: obj.Record.blockedOn,
-                blockedTenure: obj.Record.blockedTenure,
-                blockedBy: obj.Record.blockedBy,
+                recordId: obj.Key,
+                deferredStatus: obj.Record.deferredStatus,
+                deferredOn: obj.Record.deferredOn,
+                deferredTenure: obj.Record.deferredTenure,
+                deferredBy: obj.Record.deferredBy,
                 bloodBagUnitNo: obj.Record.bloodBagUnitNo,
                 bloodBagSegmentNo: obj.Record.bloodBagSegmentNo,
                 reasons: obj.Record.reasons,
@@ -169,27 +171,27 @@ class SuperContract extends PrimaryContract {
         return assets;
     }
 
-    async queryAllBlockedDonors(ctx, args) {
+    async queryAllDeferredDonors(ctx, args) {
         try {
             // this.verifyClientOrgMatchesPeerOrg(ctx);
             const msp = ctx.stub.getMspID() + "";
-            
+
             if (msp.trim() == "superOrgMSP") {
                 const parsedArgs = JSON.parse(args);
                 const superId = parsedArgs.username;
 
                 if (superId === undefined || superId === null || superId === '') {
-                    return { error: "Super ID not provided"};
+                    return { error: "Super ID not provided" };
                 } else if (!this.checkSuperIdentity(ctx, superId)) {
-                    return { error: "Permission not granted to "+ superId};
+                    return { error: "Permission not granted to " + superId };
                 }
 
-                let resultsIterator = await ctx.stub.getPrivateDataByRange(blockedDonorPrivateCollection, '', '');
+                let resultsIterator = await ctx.stub.getPrivateDataByRange(deferredDonorPrivateCollection, '', '');
                 let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
 
                 return this.fetchFields(assets);
             } else {
-                return {"status": "error", "message": `${msp} not authorized to read ${blockedDonorPrivateCollection}`};
+                return { "status": "error", "message": `${msp} not authorized to read ${deferredDonorPrivateCollection}` };
             }
         } catch (error) {
             console.error(error);
@@ -218,7 +220,7 @@ class SuperContract extends PrimaryContract {
                         // console.debug("Searching donation ", currentDonation);
                         if (currentDonation['status'] === 'successful' && currentDonation['bloodBagUnitNo'] == parsedArgs.bloodBagUnitNo && currentDonation['bloodBagSegmentNo'] == parsedArgs.bloodBagSegmentNo) {
                             console.debug("Donor found: ", assets[i].donorId);
-                            return {status: "success", donorId: assets[i].donorId};
+                            return { status: "success", donorId: assets[i].donorId };
                         }
                     }
                 }
@@ -226,15 +228,15 @@ class SuperContract extends PrimaryContract {
             }
         }
         console.debug("Donor for bag not found");
-        return {status: "error", message: "Donor for bag not found", donorId: null};   
+        return { status: "error", message: "Donor for bag not found", donorId: null };
     };
 
-    async updateDonorMedicalDetailsForBlocking(ctx, args) {
+    async updateDonorMedicalDetailsForDeferral(ctx, args) {
         args = JSON.parse(args);
         let donorId = args.donorId;
         let newAlert = true;
         let newIsDiseased = true;
-        let newDonationStatus = 'blocked';
+        let newDonationStatus = args.donationStatus;
         let isDataChanged = false;
 
         const donor = await PrimaryContract.prototype.readDonor(ctx, donorId);
@@ -261,30 +263,30 @@ class SuperContract extends PrimaryContract {
         await ctx.stub.putState(donorId, buffer);
     };
 
-    async blockDonorOfBag(ctx, args) {
+    async deferDonorOfBag(ctx, args) {
         try {
             const parsedArgs = JSON.parse(args);
             // const donorId = await this.queryDonorsForBagId(ctx, args);
             const donorId = parsedArgs.donorId;
-            const donor = parsedArgs.donor;            
+            const donor = parsedArgs.donor;
             if (donorId !== null) {
                 // console.debug("Received donor ID from query: ", donorId);
                 // console.debug("Received donor ID from query string: ", donorId.toString());
-                
-                let changedMedicalDetails = { donorId: donorId, alert: true, isDiseased: true, donationStatus: 'blocked' };
-                await this.updateDonorMedicalDetailsForBlocking(ctx, JSON.stringify(changedMedicalDetails));
+
+                let changedMedicalDetails = { donorId: donorId, alert: true, isDiseased: true, donationStatus: parsedArgs.deferredStatus };
+                await this.updateDonorMedicalDetailsForDeferral(ctx, JSON.stringify(changedMedicalDetails));
                 const msp = ctx.stub.getMspID() + "";
-            
+
                 if (msp.trim() == "superOrgMSP") {
                     // PDC Write operations only on authorized peers
                     console.debug("MSP: " + ctx.stub.getMspID());
                     // const date = new Date().toISOString().split("T")[0];
-                    const blockedDonor = new BlockedDonor(donor, parsedArgs.blockedOn, parsedArgs.blockedTenure, parsedArgs.reasons, parsedArgs.blockedBy, parsedArgs.bloodBagUnitNo, parsedArgs.bloodBagSegmentNo);
-                    const plainBlockedDonor = JSON.parse(JSON.stringify(blockedDonor));
-                    console.debug("Putting blocked donor to ledger: ", plainBlockedDonor);
-                    console.debug("Type: ", typeof(plainBlockedDonor));
-                    await ctx.stub.putPrivateData(blockedDonorPrivateCollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainBlockedDonor))));
-                    return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${blockedDonorPrivateCollection}`}
+                    const deferredDonor = new DeferredDonor(donor, parsedArgs.deferredStatus, parsedArgs.deferredOn, parsedArgs.deferredTenure, parsedArgs.reasons, parsedArgs.deferredBy, parsedArgs.bloodBagUnitNo, parsedArgs.bloodBagSegmentNo);
+                    const plainDeferredDonor = JSON.parse(JSON.stringify(deferredDonor));
+                    console.debug("Putting deferred donor to ledger: ", plainDeferredDonor);
+                    console.debug("Type: ", typeof (plainDeferredDonor));
+                    await ctx.stub.putPrivateData(deferredDonorPrivateCollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainDeferredDonor))));
+                    return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${deferredDonorPrivateCollection}` }
                 } else {
                     console.warn(`PDC write skipped on peer with MSP: /${msp}/`);
                 }
@@ -304,25 +306,25 @@ class SuperContract extends PrimaryContract {
         try {
             // this.verifyClientOrgMatchesPeerOrg(ctx);
             const msp = ctx.stub.getMspID() + "";
-            
+
             if (msp.trim() == "superOrgMSP") {
                 const parsedArgs = JSON.parse(args);
                 const superId = parsedArgs.username;
 
                 if (superId === undefined || superId === null || superId === '') {
-                    return { error: "Super ID not provided"};
+                    return { error: "Super ID not provided" };
                 } else if (!this.checkSuperIdentity(ctx, superId)) {
-                    return { error: "Permission not granted to "+ superId};
+                    return { error: "Permission not granted to " + superId };
                 }
-                let resultsIterator = await ctx.stub.getPrivateDataByRange(pendingBlockedBagsPrivateCollection, '', '');
+                let resultsIterator = await ctx.stub.getPrivateDataByRange(pendingCUECollection, '', '');
                 let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
 
-                let pendingBagsForBlocking = this.fetchFieldsForPendingBlockedDonors(assets);
-                console.debug(`Received ${pendingBagsForBlocking.length} entries`);
+                let pendingBagsForDeferral = this.fetchFieldsForPendingDeferredDonors(assets);
+                console.debug(`Received ${pendingBagsForDeferral.length} entries`);
 
                 let pendingBagIds = [];
-                for (let i = 0; i < pendingBagsForBlocking.length; i++) {
-                    pendingBagIds.push(pendingBagsForBlocking[i].bagId);
+                for (let i = 0; i < pendingBagsForDeferral.length; i++) {
+                    pendingBagIds.push(pendingBagsForDeferral[i].recordId);
                 }
                 return { status: "success", pendingBags: pendingBagIds, count: pendingBagIds.length };
             }
@@ -331,79 +333,85 @@ class SuperContract extends PrimaryContract {
             return { status: "error", error: error };
         }
     };
-    
-    async blockPendingDonors(ctx, args) {
+
+    async deferPendingDonors(ctx, args) {
         try {
             // this.verifyClientOrgMatchesPeerOrg(ctx);
             const msp = ctx.stub.getMspID() + "";
-            
+
             if (msp.trim() == "superOrgMSP") {
                 const parsedArgs = JSON.parse(args);
                 const superId = parsedArgs.username;
 
                 if (superId === undefined || superId === null || superId === '') {
-                    return { error: "Super ID not provided"};
+                    return { error: "Super ID not provided" };
                 } else if (!this.checkSuperIdentity(ctx, superId)) {
-                    return { error: "Permission not granted to "+ superId};
+                    return { error: "Permission not granted to " + superId };
                 }
 
-                const pendingBagRecordsForBlocking = [];
+                const pendingBagRecordsForDeferral = [];
                 const invalidBags = [];
                 const pendingBagIds = parsedArgs.pendingBags;
                 const pendingBags = [];
                 for (let i = 0; i < pendingBagIds.length; i++) {
                     // don't use getPrivateDataByRange: https://lists.lfdecentralizedtrust.org/g/fabric/topic/85330623#10296
-                    let responseBytes = await ctx.stub.getPrivateData(pendingBlockedBagsPrivateCollection, pendingBagIds[i]);
+                    let responseBytes = await ctx.stub.getPrivateData(pendingCUECollection, pendingBagIds[i]);
                     try {
                         let responseJson = JSON.parse(responseBytes.toString());
-                        pendingBagRecordsForBlocking.push(responseJson);
+                        pendingBagRecordsForDeferral.push(responseJson);
                         pendingBags.push(pendingBagIds[i]);
                     } catch (error) {
                         console.debug(`${pendingBagIds[i]} is not a valid bag ID. Skipping...`);
                         invalidBags.push(pendingBagIds[i]);
                     }
                 }
-                
-                console.debug(`Received ${pendingBagRecordsForBlocking.length} entries`);
-                let blockedBagsCount = 0;
-                const blockedDonorDetails = [];
-                for (let i = 0; i < pendingBagRecordsForBlocking.length; i++) {
-                    let bag = pendingBagRecordsForBlocking[i];
-                    let response = await this.queryDonorsForBagId(ctx, JSON.stringify(bag));
-                    console.debug(response);
-                    const donorId = "donorId" in response ? response.donorId : null;
-                    if (donorId !== null)   {
+
+                console.debug(`Received ${pendingBagRecordsForDeferral.length} entries`);
+                let deferredBagsCount = 0;
+                const deferredDonorDetails = [];
+                for (let i = 0; i < pendingBagRecordsForDeferral.length; i++) {
+                    let bag = pendingBagRecordsForDeferral[i];
+                    let donorId = null;
+                    if (!pendingBagIds[i].startsWith("PID")) {
+                        let response = await this.queryDonorsForBagId(ctx, JSON.stringify(bag));
+                        console.debug(response);
+                        donorId = "donorId" in response ? response.donorId : null;
+                    } else {
+                        donorId = pendingBagIds[i];
+                    }
+                    if (donorId !== null) {
                         const donor = await PrimaryContract.prototype.readDonor(ctx, donorId);
-                        console.debug("Donor object read: ", donor); 
-                        let blockedDonorDetail = {
+                        console.debug("Donor object read: ", donor);
+                        let deferredDonorDetail = {
                             ...bag,
                             donorId: donorId,
                             donor: donor,
-                            bagId: pendingBags[i]
+                            bagId: pendingBags[i].startsWith("PID") ? null : pendingBagIds[i],
+                            recordId: pendingBags[i]
                         };
-                        blockedDonorDetails.push(blockedDonorDetail);
-                    } 
+                        deferredDonorDetails.push(deferredDonorDetail);
+                    }
                 }
-                for (let i = 0; i < blockedDonorDetails.length; i++) {
-                    const blockedDonorDetail = blockedDonorDetails[i];
-                    const response = await this.blockDonorOfBag(ctx, JSON.stringify(blockedDonorDetail));
+                for (let i = 0; i < deferredDonorDetails.length; i++) {
+                    const deferredDonorDetail = deferredDonorDetails[i];
+                    const response = await this.deferDonorOfBag(ctx, JSON.stringify(deferredDonorDetail));
                     if (response.status == "success") {
                         console.debug("Bag to be deleted: " + pendingBags[i]);
-                        const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingBlockedBagsPrivateCollection, blockedDonorDetail.bagId);
+                        const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingCUECollection, deferredDonorDetail.recordId);
                         console.debug(deletePendingBagResponse.toString());
-                        blockedBagsCount++;
+                        deferredBagsCount++;
                     }
                 }
 
                 for (let i = 0; i < invalidBags.length; i++) {
-                    const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingBlockedBagsPrivateCollection, invalidBags[i]);
+                    const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingCUECollection, invalidBags[i]);
                     console.debug(deletePendingBagResponse.toString());
-                    blockedBagsCount++;
+                    deferredBagsCount++;
                 }
-                return {status: "success", message: `Blocked ${blockedBagsCount} out of ${pendingBagRecordsForBlocking.length} donors via ${msp}`}
+                return { status: "success", message: `Deferred ${deferredBagsCount} out of ${pendingBagRecordsForDeferral.length} donors via ${msp}` }
 
             } else {
-                return {status: "error", message: `${msp} not authorized to read ${pendingBlockedBagsPrivateCollection}`};
+                return { status: "error", message: `${msp} not authorized to read ${pendingCUECollection}` };
             }
         } catch (error) {
             console.error(error);

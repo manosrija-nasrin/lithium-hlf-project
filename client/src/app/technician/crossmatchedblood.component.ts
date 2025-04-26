@@ -1,7 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-crossmatch-blood',
@@ -48,8 +48,8 @@ import { HttpClient } from '@angular/common/http';
     </div>
 
     <div class="form-group">
-      <label for="hcv">HCV:</label>
-      <select formControlName="hcv">
+      <label for="hiv">HIV:</label>
+      <select formControlName="hiv">
         <option value="true">Yes</option>
         <option value="false">No</option>
       </select>
@@ -58,6 +58,14 @@ import { HttpClient } from '@angular/common/http';
     <div class="form-group">
       <label for="hepatitisB">Hepatitis B:</label>
       <select formControlName="hepatitisB">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="hepatitisC">Hepatitis C:</label>
+      <select formControlName="hepatitisC">
         <option value="true">Yes</option>
         <option value="false">No</option>
       </select>
@@ -180,7 +188,7 @@ export class BloodCrossMatchComponent implements OnInit {
   bloodTestForm!: FormGroup;
   technicianId!: string;
 
-  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -194,8 +202,9 @@ export class BloodCrossMatchComponent implements OnInit {
       bloodBagSegmentNo: ['', Validators.required],
       malaria: [null, Validators.required],
       syphilis: [null, Validators.required],
-      hcv: [null, Validators.required],
+      hiv: [null, Validators.required],
       hepatitisB: [null, Validators.required],
+      hepatitisC: [null, Validators.required],
       ABORhGrouping: [null, Validators.required],
       irregularAntiBody: [null, Validators.required],
     });
@@ -204,20 +213,20 @@ export class BloodCrossMatchComponent implements OnInit {
   submitForm() {
     if (this.bloodTestForm.valid) {
       console.log('Form submitted:', this.bloodTestForm.value);
-    
-    const apiUrl = 'http://localhost:3001/technician/crossmatchblood';
 
-    this.http.post(apiUrl, this.bloodTestForm.value)
-      .subscribe(
-        (response) => {
-          console.log('API Response:', response);
-          this.apiResponse = response;
-        },
-        (error) => {
-          console.error('API Error:', error);
-          this.apiResponse = error;
-        }
-      );
+      const apiUrl = 'http://localhost:3001/technician/crossmatchblood';
+
+      this.http.post(apiUrl, this.bloodTestForm.value)
+        .subscribe(
+          (response) => {
+            console.log('API Response:', response);
+            this.apiResponse = response;
+          },
+          (error) => {
+            console.error('API Error:', error);
+            this.apiResponse = error;
+          }
+        );
     }
   }
 }

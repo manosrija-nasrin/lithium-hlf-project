@@ -37,10 +37,16 @@
                   <input type="date" class="form-control" name="dob" formControlName="dob"
                     placeholder="Enter your date of birth." [readonly]="isEditForm()">
                 </div>
+                <div class="form-group">
+                  <label for="sex">Sex</label>
+                  <ng-select name="sex" formControlName="sex" placeholder="Enter your sex" [items]="sexCategories"
+                    bindLabel="name" bindValue="id">
+                  </ng-select>
+                </div>
                 <div *ngIf="isNew()" class="form-group">
                   <label for="bloodGroup">Blood group</label>
-                  <ng-select name="bloodGroup" formControlName="bloodGroup"
-                    placeholder="Select your blood group." [items]="bloodGroupTypes" bindLabel="name" bindValue="id">
+                  <ng-select name="bloodGroup" formControlName="bloodGroup" placeholder="Select your blood group."
+                    [items]="bloodGroupTypes" bindLabel="name" bindValue="id">
                   </ng-select>
                 </div>
                 <div class="form-group">
@@ -51,22 +57,24 @@
               </ng-container>
               <ng-container *ngIf="isDoctor() && !isNew()">
                 <div class="form-group">
-		<label for="alert">Alert</label>
-		<select class="form-control" name="alert" formControlName="alert" [disabled]="!isDoctor() || isNew()">
-		<option value="true">True</option>
-		<option value="false">False</option>
-		</select>
-		</div>
-		<div class="form-group">
-		<label for="isDiseased">Is Diseased</label>
-		<select class="form-control" name="isDiseased" formControlName="isDiseased" [disabled]="!isDoctor() || isNew()">
-		<option value="true">True</option>
-		<option value="false">False</option>
-		</select>
-		</div>
+                  <label for="alert">Alert</label>
+                  <select class="form-control" name="alert" formControlName="alert" [disabled]="!isDoctor() || isNew()">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="isDiseased">Is Diseased</label>
+                  <select class="form-control" name="isDiseased" formControlName="isDiseased"
+                    [disabled]="!isDoctor() || isNew()">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                  </select>
+                </div>
               </ng-container>
               <div *ngIf="newDonorData">
-                <p class="alert alert-success">New donor's credentials: {{newDonorData.id}} - {{newDonorData.password}}</p>
+                <p class="alert alert-success">New donor's credentials: {{newDonorData.id}} - {{newDonorData.password}}
+                </p>
               </div>
               <div class="form-group form-buttons">
                 <ng-container *ngIf="!newDonorData">
@@ -76,7 +84,7 @@
                     Cancel
                   </a>
                 </ng-container>
-                  <button *ngIf="newDonorData" class="btn btn-secondary" type="button" (click)="reset()">OK</button>
+                <button *ngIf="newDonorData" class="btn btn-secondary" type="button" (click)="reset()">OK</button>
               </div>
               <div *ngIf="error">
                 <p class="alert alert-danger">{{error.message}}</p>
