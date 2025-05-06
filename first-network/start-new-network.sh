@@ -39,13 +39,22 @@ function register_and_enroll_peer() {
   fabric-ca-client enroll -u https://$PEER_NAME:$PEER_PW@localhost:11054 --caname ca-superOrg -M "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls" --enrollment.profile tls --csr.hosts $PEER_NAME.superOrg.lithium.com --csr.hosts localhost --tls.certfiles "${PWD}/fabric-ca/superOrg/tls-cert.pem"
 
   # Copy certificates
-  for cert in tlsca/tlsca.superOrg.lithium.com-cert.pem msp/cacerts/ca.superOrg.lithium.com-cert.pem; do
-    cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/$cert" "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/$cert"
-  done
+  # for cert in tlsca/tlsca.superOrg.lithium.com-cert.pem msp/cacerts/ca.superOrg.lithium.com-cert.pem; do
+  #   cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/$cert" "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/$cert"
+  # done
+
+  cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/ca.crt"
+  cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/signcerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/server.crt"
+  cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/keystore/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/server.key"
+  cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/msp/tlscacerts/ca.crt"
+  cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem"
+  cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/msp/cacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/ca/ca.superOrg.lithium.com-cert.pem"
+
+  cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/msp/config.yaml" "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/msp/config.yaml"
 
   # Copy TLS certs
-  cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/msp/tlscacerts/ca.crt"
-  cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/msp/config.yaml" "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/msp/config.yaml"
+  # cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/tls/tlscacerts/"* "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/msp/tlscacerts/ca.crt"
+  # cp "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/msp/config.yaml" "${PWD}/../organizations/peerOrganizations/superOrg.lithium.com/peers/$PEER_NAME.superOrg.lithium.com/msp/config.yaml"
 }
 
 # Register and enroll peers
