@@ -1,0 +1,1261 @@
+Script started on 2025-04-30 08:46:49+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m ./ne[K[K[K[Kcd first-network/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ,.[K[K./network.sh don[Kwn
+[0;34mUsing docker and docker-compose[0m
+[0;34mStopping network[0m
+[1A[1B[0G[?25l[+] Running 0/13
+ [33m⠋[0m Container ca_hosp2                    Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container ca_superOrg                 Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container redis.hosp1.lithium.com     Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container peer2.superOrg.lithium.com  Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container peer0.hosp1.lithium.com     Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container ca_orderer                  Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container peer0.hosp2.lithium.com     Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container ca_hosp1                    Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container redis.superOrg.lithium.com  Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container redis.hosp2.lithium.com     Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container peer1.superOrg.lithium.com  Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container orderer.lithium.com         Removing                                                                               [34m0.1s [0m
+ [33m⠋[0m Container peer0.superOrg.lithium.com  Removing                                                                               [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 0/13
+ [33m⠙[0m Container ca_hosp2                    Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container ca_superOrg                 Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container redis.hosp1.lithium.com     Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container peer2.superOrg.lithium.com  Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container peer0.hosp1.lithium.com     Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container ca_orderer                  Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container peer0.hosp2.lithium.com     Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container ca_hosp1                    Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container redis.superOrg.lithium.com  Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container redis.hosp2.lithium.com     Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container peer1.superOrg.lithium.com  Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container orderer.lithium.com         Removing                                                                               [34m0.2s [0m
+ [33m⠙[0m Container peer0.superOrg.lithium.com  Removing                                                                               [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 8/13
+ [32m✔[0m Container ca_hosp2                    [32mRemoved[0m                                                                                [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                 [32mRemoved[0m                                                                                [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com     [32mRemoved[0m                                                                                [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com  [32mRemoved[0m                                                                                [34m0.3s [0m
+ [33m⠹[0m Container peer0.hosp1.lithium.com     Removing                                                                               [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                  [32mRemoved[0m                                                                                [34m0.3s [0m
+ [33m⠹[0m Container peer0.hosp2.lithium.com     Removing                                                                               [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                    [32mRemoved[0m                                                                                [34m0.2s [0m
+ [33m⠹[0m Container redis.superOrg.lithium.com  Removing                                                                               [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com     [32mRemoved[0m                                                                                [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com  [32mRemoved[0m                                                                                [34m0.3s [0m
+ [33m⠹[0m Container orderer.lithium.com         Removing                                                                               [34m0.3s [0m
+ [33m⠹[0m Container peer0.superOrg.lithium.com  Removing                                                                               [34m0.3s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 13/16[0m
+ [32m✔[0m Container ca_hosp2                      [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                   [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com       [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com       [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com       [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                      [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com       [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com           [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [33m⠋[0m Container couchdb.superOrg.lithium.com  Removing                                                                             [34m0.1s [0m
+ [33m⠋[0m Container couchdb.hosp1.lithium.com     Removing                                                                             [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp2.lithium.com     Stopping                                                                             [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 15/16
+ [32m✔[0m Container ca_hosp2                      [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                   [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com       [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com       [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com       [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                      [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com       [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com           [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com    [32mRemoved[0m                                                                              [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com  [32mRemoved[0m                                                                              [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com     [32mRemoved[0m                                                                              [34m0.1s [0m
+ [33m⠙[0m Container couchdb.hosp2.lithium.com     Removing                                                                             [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 23/26
+ [32m✔[0m Container ca_hosp2                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                     [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com    [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com       [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com       [32mRemoved[0m                                                                            [34m0.2s [0m
+ [33m⠋[0m Volume docker_peer2.superOrg.lithium.com  Removing                                                                           [34m0.1s [0m
+ [32m✔[0m Volume docker_peer1.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer2.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer3.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer4.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [33m⠋[0m Volume docker_peer0.superOrg.lithium.com  Removing                                                                           [34m0.1s [0m
+ [32m✔[0m Volume compose_orderer.lithium.com        [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp2.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp1.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [33m⠋[0m Network compose_default                   Removing                                                                           [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 25/26
+ [32m✔[0m Container ca_hosp2                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                     [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com    [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com       [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com       [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Volume docker_peer2.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume docker_peer1.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer2.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer3.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer4.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume docker_peer0.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume compose_orderer.lithium.com        [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp2.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp1.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [33m⠙[0m Network compose_default                   Removing                                                                           [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 25/26
+ [32m✔[0m Container ca_hosp2                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                     [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com    [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com       [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com       [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Volume docker_peer2.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume docker_peer1.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer2.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer3.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer4.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume docker_peer0.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume compose_orderer.lithium.com        [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp2.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp1.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [33m⠹[0m Network compose_default                   Removing                                                                           [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 25/26
+ [32m✔[0m Container ca_hosp2                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                     [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com    [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com       [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com       [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Volume docker_peer2.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume docker_peer1.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer2.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer3.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer4.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume docker_peer0.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume compose_orderer.lithium.com        [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp2.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp1.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [33m⠸[0m Network compose_default                   Removing                                                                           [34m0.3s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 25/26
+ [32m✔[0m Container ca_hosp2                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                     [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com    [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com       [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com       [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Volume docker_peer2.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume docker_peer1.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer2.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer3.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer4.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume docker_peer0.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume compose_orderer.lithium.com        [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp2.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp1.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [33m⠼[0m Network compose_default                   Removing                                                                           [34m0.4s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 25/26
+ [32m✔[0m Container ca_hosp2                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                     [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com    [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com       [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com       [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Volume docker_peer2.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume docker_peer1.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer2.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer3.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer4.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume docker_peer0.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume compose_orderer.lithium.com        [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp2.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp1.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [33m⠴[0m Network compose_default                   Removing                                                                           [34m0.5s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 25/26
+ [32m✔[0m Container ca_hosp2                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                     [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com    [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com       [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com       [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Volume docker_peer2.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume docker_peer1.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer2.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer3.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer4.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume docker_peer0.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume compose_orderer.lithium.com        [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp2.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp1.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [33m⠦[0m Network compose_default                   Removing                                                                           [34m0.6s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 25/26
+ [32m✔[0m Container ca_hosp2                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                     [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com    [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com       [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com       [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Volume docker_peer2.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume docker_peer1.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer2.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer3.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer4.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume docker_peer0.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume compose_orderer.lithium.com        [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp2.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp1.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [33m⠧[0m Network compose_default                   Removing                                                                           [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 26/26[0m
+ [32m✔[0m Container ca_hosp2                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container ca_superOrg                     [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer2.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_orderer                      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container ca_hosp1                        [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container redis.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com         [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container peer1.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container orderer.lithium.com             [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container peer0.superOrg.lithium.com      [32mRemoved[0m                                                                            [34m0.3s [0m
+ [32m✔[0m Container couchdb.superOrg.lithium.com    [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com       [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com       [32mRemoved[0m                                                                            [34m0.2s [0m
+ [32m✔[0m Volume docker_peer2.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume docker_peer1.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer2.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer3.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_orderer4.lithium.com       [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume docker_peer0.superOrg.lithium.com  [32mRemoved[0m                                                                            [34m0.1s [0m
+ [32m✔[0m Volume compose_orderer.lithium.com        [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp2.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Volume compose_peer0.hosp1.lithium.com    [32mRemoved[0m                                                                            [34m0.0s [0m
+ [32m✔[0m Network compose_default                   [32mRemoved[0m                                                                            [34m0.8s [0m
+[?25hdocker_orderer.lithium.com
+docker_peer0.hosp1.lithium.com
+docker_peer0.hosp2.lithium.com
+[0;34mRemoving remaining containers[0m
+d0fd58e081ff
+0201540306fb
+1fde4190a589
+[0;34mRemoving generated chaincode docker images[0m
+Untagged: dev-peer0.superorg.lithium.com-donor_6-88adc3ddf91271850fc07341983e3f0d7f931fffbbc8b1b62b0f5945fb90643d-6513cdeb4809e30dc1769569a5af23b340dcd57077c4ac044df71cdedafe3c5a:latest
+Deleted: sha256:3e1ef29bed3b1e490c3cf393a7f6e10ba41a461f3505bba86c8a60e7c98e0877
+Deleted: sha256:af52f620190e2f9a24018884bd10a80dd1f6514fac1a01ffda89099a12f6d557
+Deleted: sha256:8a98cb3b15cf94b55d5ba0b74ee916c1cd22fe6d13ba398745ce57587c761bc7
+Deleted: sha256:497a7825781d7eaaff139b2ace218e86da4ed7b45331a5a7c78f9a76d8f2d913
+Untagged: dev-peer0.hosp2.lithium.com-donor_6-88adc3ddf91271850fc07341983e3f0d7f931fffbbc8b1b62b0f5945fb90643d-f01c43fea51877b30de098dec2f0c407fdc757cab14e853a5e48ef31929773d7:latest
+Deleted: sha256:0b06cd6373dcf469e7d17d1ea7e87bb0a28156a7798348f6d16745240bd3a785
+Deleted: sha256:af86af6e426546c25f79af54580738bffee037c40a33350033c31d2041051f5c
+Deleted: sha256:a6f4bca5fe7425304b98b4a6a5bb90b7af4a6de91dcdc5105309140c03f7827d
+Deleted: sha256:df5c3b2e5f907bbbbf4e6c53775155a95aa525381c9b5a548da54f241df8f063
+Untagged: dev-peer0.hosp1.lithium.com-donor_6-88adc3ddf91271850fc07341983e3f0d7f931fffbbc8b1b62b0f5945fb90643d-db8bc1b5bbbbc5fbd6080ac8e9fa47e08c2d3054911c39939453623f73af962c:latest
+Deleted: sha256:3cab51922066569b3a1096dbc63c6e17df2c491370f4a43960203ccdbbc80d42
+Deleted: sha256:e00ad4fd3b4296c1499fd3bcc173ffc0ce5870d0374aba3eb9a0daf2ff9e152d
+Deleted: sha256:da7709147560fbf1bceb94f23ebd3940f1f532cd5c8626d5f0345035dc926973
+Deleted: sha256:73928c4d7277dbce6b7d884661385711b055d8d2704f0505406aa445d7878646
+Untagged: dev-peer1.superorg.lithium.com-donor_5-55817a5a49600d5cee1580afb214060bf02820fe18554944c0ce068eb207a148-f914ef772220b1cc3f17a2b212bf669b9bec98c6656b7e78b17e1b2425f65e95:latest
+Deleted: sha256:e581d726773a4f858109d05ccf71b30e9fa77237411b82265345906f2503c0b7
+Deleted: sha256:8df998090cfdb92f22d99dfa5c64a3d03fd2e68027145b582bb80f1ea26c8a3e
+Deleted: sha256:9410fcae4cdfc89e2d4e4ccddae305f9eb44499e9f4c8d25d7b3fa09476d089b
+Deleted: sha256:76eff0e59172c247b87ee10dc11a667ba0ace5da2c3fb0176b149830f49cf9fa
+Untagged: dev-peer2.superorg.lithium.com-donor_5-55817a5a49600d5cee1580afb214060bf02820fe18554944c0ce068eb207a148-dbce8d13f15ec51446052aa48ba890d87708620c80729491e51dc02561ed6731:latest
+Deleted: sha256:4e38dd42b81b5ee234fcaf94aeebd65a3775595810a3ca1070b420e7ca49920a
+Deleted: sha256:b8b630faee8a8ec04df6e8e172549f99cdce4b1233591d0369488b2719903ced
+Deleted: sha256:66bddb8cd6856431e8c766c3913fc6fb3f861aada71b9daf0b186b115244f585
+Deleted: sha256:22f3c1defe72aff04be68d670c19059f2019fe0ab3e4a2b452eb47070011e469
+Untagged: dev-peer0.superorg.lithium.com-donor_5-55817a5a49600d5cee1580afb214060bf02820fe18554944c0ce068eb207a148-344c5b9dfdcb15aa1d805579646a5e6da82395d578ddd1e0ca6b3f7ed0d633ad:latest
+Deleted: sha256:b193db0949a50410a8e89126b9d9dc6e74713f7fd79a620d847c311a2ece55be
+Deleted: sha256:9ded98749f6dd08085a951badff6d68bf1fa5456708d2c52893eaf9d9b83f9cb
+Deleted: sha256:bc91e69ac13ef6eeaa496077530425d3776a4f80aeaebf7c3a576d46010b3e2b
+Deleted: sha256:5dbb6ead172c26a086759fa2cdf4979246b1839d89c6a584b8bb769f96309320
+Untagged: dev-peer0.hosp2.lithium.com-donor_5-55817a5a49600d5cee1580afb214060bf02820fe18554944c0ce068eb207a148-5b0d51781c20be62a5c7afd784f910a8ebcf697f4080c3baaef5f261940b90d5:latest
+Deleted: sha256:57774cba337221d2302494656f7e05bbbd9cecba88b640093804ffc8b8a1d185
+Deleted: sha256:24162618c525976acb8df30ea53822452cd7d6f3c1ed05a4def8cfc04101f26b
+Deleted: sha256:6c7c3c79e5ed6136a7bbb631b1e50dee963554f7f596ac28cc20d51924c16c71
+Deleted: sha256:aa27c27c2124f89b256eb63cc9f5b6def1925fb574c4ade232341ca97306fd42
+Untagged: dev-peer0.hosp1.lithium.com-donor_5-55817a5a49600d5cee1580afb214060bf02820fe18554944c0ce068eb207a148-f950d8f583fe10e205baa99494a8bca12ae5946865c77db73bac92d2221e52a8:latest
+Deleted: sha256:4f70617eb94b8a310a483e2f1828c57951713747884c12536c6d9282f922fd0c
+Deleted: sha256:e94a1e2f13785b7b363e46968d74383d4e1789b5863c6cf3e19087d7185daa2a
+Deleted: sha256:412b815c618e4b962a54ac7d93d2ba6b5a0fc395d96b0c720a7652861366adee
+Deleted: sha256:77cfffbe46369912d514e689d2f1b7753918903061c486f77d42b5becab79aaa
+Untagged: dev-peer2.superorg.lithium.com-donor_4-fabb6fdaca501f2c7db5d560b39bcdcaa26759951ec6a5095325555bf0f63550-1e3afc217ff087cdc3601d8843bc7f7ff706337fc9adfc648ca1b8cf77531a8b:latest
+Deleted: sha256:c463689bca7ac513f318cf70af50424b87d11a9de95c65a6d5d3e461de8ea3c8
+Deleted: sha256:ce4ccf99fab7f1365da54427d12cfce4d8edadc9e55c2f40fc9473991929c216
+Deleted: sha256:146272481f0ad04eee7789c17d9ea888107d8eca984df402ecbefb3f567634c5
+Deleted: sha256:a4220697d8de7feb02cf370b8592984618964d94a5a8fa89263e3f58fb69b879
+Untagged: dev-peer1.superorg.lithium.com-donor_4-fabb6fdaca501f2c7db5d560b39bcdcaa26759951ec6a5095325555bf0f63550-eb06a32645cf7e1d72acd441cfdf1480e3ec0a5e8ae8ada903b27ee99b433792:latest
+Deleted: sha256:ae4962fae69a63656c7ec107ac9e6f2c31031902cf9c177b37b4c24621e1be07
+Deleted: sha256:e8ae23083df388a0a0c412967f24a6f28a89d39715c47c49fe165d5b36b4a161
+Deleted: sha256:621b6ea41b9c84889cef46b45a9611cd2678dc9ff7171f5512838cdfc8d38405
+Deleted: sha256:7814270477b237633f878ba5db35c581feee6ba54a79058c6de05bbca3dba1ee
+Untagged: dev-peer0.superorg.lithium.com-donor_4-fabb6fdaca501f2c7db5d560b39bcdcaa26759951ec6a5095325555bf0f63550-35833cb41c786b0dc2346f0b5216b68c288a2adc4e35031afa089764d1e4e944:latest
+Deleted: sha256:2dc060f9703f683b7c1759ee01fe29a0d8233ef1f268ed0819bf1b83c55dfaa0
+Deleted: sha256:fe7b749e0c961ec773510a728f61e936bd2e737422a4f1e3f20c333495a6fb5a
+Deleted: sha256:03228ca63c3a46c1570f370d6ac64f1c20e7199ab036f6cfe50a02ab1e101b14
+Deleted: sha256:d8459df41f9d9b33da10b9b9e1c85962dd3381140db41c7485d8ba322c960bb4
+Untagged: dev-peer0.hosp2.lithium.com-donor_4-fabb6fdaca501f2c7db5d560b39bcdcaa26759951ec6a5095325555bf0f63550-59ae914f17b31d5ecd0979dd9604bc511b05f5cfa88ea6e9b5cd5971727fc550:latest
+Deleted: sha256:422a5c2e14c81acf61bda33e1a1e937040d5c81f0463fb660fc3b3ec99be29d9
+Deleted: sha256:78b497fbe09402b425b7e63dd75a2b2cc47ff826d6a7ce1715518438a1898db3
+Deleted: sha256:3f8e28242844e956b03d34278debcba0ddb387f01429dffa2c53cb3d7821a5cd
+Deleted: sha256:6b414a2e2c7f9d78f1f9891d1764b16e683cf6ed736336976a18f0817827e673
+Untagged: dev-peer0.hosp1.lithium.com-donor_4-fabb6fdaca501f2c7db5d560b39bcdcaa26759951ec6a5095325555bf0f63550-5aaa0de68881c7d86f6e456477667d0638d762baabe65e87ab1550b73f0bbf53:latest
+Deleted: sha256:180cadc87861970fc24face20d8634a5eb8253963fbb6d4e75e5491dfb65b863
+Deleted: sha256:6c48eb87ad31620448cc73f70e7b1b29ecf9f156b7a692e30b6b0f714dc7e5ea
+Deleted: sha256:7c45d6bd6bb1cd6230ff83384f1cad74ebedb16c21926aea72cfdb91781f2c71
+Deleted: sha256:768382568a56bd49f55825c1233825517dc4d3f0ff0eeb6a219d5e2cd71e2bab
+Untagged: dev-peer1.superorg.lithium.com-donor_3-0f7d6830f4fa66c28a75a8b9707b29ef17845fe45966c637fa9ee00caad0f48c-4a0b5bda85c3a89f5f5e532962bc0b57c79d63a4da99329756bb1a3ae2df7d30:latest
+Deleted: sha256:9a13fda46687a2a6890d6f392b0ccb0d2273265099f29b9922255c0a72c96fa6
+Deleted: sha256:a8b5818cb59cdd1a11771178f4e8ee10efd75572ad59c5ab1bd77c5392744b38
+Deleted: sha256:3c553f0dc162c02ae38889c2b640478363a6fbc47adfea625951a6f5d8d33aca
+Deleted: sha256:4ea06de384801924a0cb9776bdd69439c68ce6568fb3ebf1858695c5d4a8613c
+Untagged: dev-peer2.superorg.lithium.com-donor_3-0f7d6830f4fa66c28a75a8b9707b29ef17845fe45966c637fa9ee00caad0f48c-399085e65dee700a9d55d2fd8d60e110afd22170ed04b1c6a2aa1b9790fbb698:latest
+Deleted: sha256:940c893b5dfedd372b4adbec4e2738bc2a77d976e3335b5c6351d7324f3fb0d5
+Deleted: sha256:323898f182b3e8a24f2d207c59f1fad46b5a3599562978cd20d6815f4ac840ac
+Deleted: sha256:c30eb0413bea25253c96e9d58aa5221a9a79f29871a137bc49b2cb965954b1f0
+Deleted: sha256:d85eba48d4c26d0be9cfc8a76c1c4933102496bdb5c110532c9fab377b7eb447
+Untagged: dev-peer0.superorg.lithium.com-donor_3-0f7d6830f4fa66c28a75a8b9707b29ef17845fe45966c637fa9ee00caad0f48c-54b5fc2d262393dac853f7bc059998d5ca3cecaaa68f43bc8ff472337232b7d4:latest
+Deleted: sha256:b34eeadb9b0d968969c474551728d6f4e06c2c019e8ad64efc9d89887ab4195d
+Deleted: sha256:c1dd732c2f2c1f977361060a10ce4a4206b147bb5c8f6d424a8a59f2f8e6171c
+Deleted: sha256:8c6b05f13c45eebc1e04d144301fa699eeba4acc9d6786d263550acbeaffb57f
+Deleted: sha256:6a8e32cfdcdb71e6389d8a563297910a75bae2ba4c1e91577f6a758141e57d51
+Untagged: dev-peer0.hosp2.lithium.com-donor_3-0f7d6830f4fa66c28a75a8b9707b29ef17845fe45966c637fa9ee00caad0f48c-70e5b13c10b6677dbbc1fca70b6a6e1f46487bfb7b61b068734350864da16266:latest
+Deleted: sha256:5c21b2535fc341949740bd8c64375c7ec19e97aeaf0e17d55adab472f2dbd84b
+Deleted: sha256:bfe764f608042a93b8396ac9353e32b7521d81edd1df6e7b60555402d3558b5a
+Deleted: sha256:1676d9de80ea3e2ee192ffdfabab99c9cd903243e16964a3123a4581ac35e3ef
+Deleted: sha256:82c72a5faf0a7cecc881e42a23fe935700af03bfc625ae80cea36fb45c09abba
+Untagged: dev-peer0.hosp1.lithium.com-donor_3-0f7d6830f4fa66c28a75a8b9707b29ef17845fe45966c637fa9ee00caad0f48c-1c113b8f6dbb88adf55505c247eaa5866e62fac0fcbce938d9a944b16fab2062:latest
+Deleted: sha256:c2f40a79f07dfc323df4a0d090a62ae5b0ad708a7cde0e52e3726a37b1c32de9
+Deleted: sha256:ff91fff1596e9a6491627ecfa320431b3cf75d94ce0f4620a2c3ed56d3869df0
+Deleted: sha256:7f1305544f67d879bb40d2c12ed12b3060719df800b8c8f9792fe58b72d80f6b
+Deleted: sha256:012ffb7e102fc3bc0e5c9145b56a037c3d95264facff0141542a3d135e4b5e41
+Untagged: dev-peer2.superorg.lithium.com-donor_2-dd8118beba87738776a6cc266e60fb8fcaab4a0ca6ab444f51895259d987e5b6-1798ee6d676134d5de06ad7495566439042b836aee6f48b0934e643a51c578a3:latest
+Deleted: sha256:ca273756d8cd7fa589257e280acc2605d2bf750be3a8600b8c9cf64d276fb4ba
+Deleted: sha256:d33bff5f7c76612c4236a41b04ad414171bec5154ee1168a957d6b43d237b3ab
+Deleted: sha256:1726460f003c91626cf42ea422a45f1b6ef75e206733976ce4acd4c84707a6a3
+Deleted: sha256:c1cfd9dac86fedfee1e310b5347c0bc9fa42041973248c2f248565e1afc68064
+Untagged: dev-peer1.superorg.lithium.com-donor_2-dd8118beba87738776a6cc266e60fb8fcaab4a0ca6ab444f51895259d987e5b6-b13aa712c8dfd110910d1ca321c8ef3d9071b11d1e6a377daff07949f2e63998:latest
+Deleted: sha256:37e4061e8e0322bb9821c8124f13ca9997a2ff83484688a119188d98dcf89cad
+Deleted: sha256:eb07bfd634172b68a585c44d9fe8658ca804bf191df5f3648a739889ac1fd8ae
+Deleted: sha256:84f135d954e0b6e890b70a7b2a58568982c3e897169baba981444360a357f11f
+Deleted: sha256:fc767066b8870ea51eca46bfb8dc5153d62221d01171ab28cf8f401926466a2b
+Untagged: dev-peer0.superorg.lithium.com-donor_2-dd8118beba87738776a6cc266e60fb8fcaab4a0ca6ab444f51895259d987e5b6-593f38b8a71b88e12e3c434052d35bfa9217568ecfe23fea00323e1e29b4afd6:latest
+Deleted: sha256:fb532faa7dd6aedb13b14dead24167ffe4cb20aaeeb5a4b0c94a959b27c2dfc9
+Deleted: sha256:875d8f3990bc9b8962a6e41b1f962af55d80a1734e6acf5ac0cca2d96f5049d6
+Deleted: sha256:109a493cb901f15f3aba58fd8fc3bbae58ffb2d76797e736df2f02157ba24011
+Deleted: sha256:fdeb09cc5f2ad9be6943ccf9a189e771f98c13854f5d67621cd101544214cf0d
+Untagged: dev-peer0.hosp2.lithium.com-donor_2-dd8118beba87738776a6cc266e60fb8fcaab4a0ca6ab444f51895259d987e5b6-e8143023d0d58e9a5e13020f904bb3d29ba3fa42d6cb52ac4ab9a1d42815cdb2:latest
+Deleted: sha256:24f39f628976c070e3b428de798dd95062070ad9e40700be62c4bb7d52262e93
+Deleted: sha256:e5dd24d66a3ccf610109412baf7dd7c7daa8f77bcece6309ddaf55d7b2753636
+Deleted: sha256:45fed85847fae28ef6b4ed8396e7fb48db09b36571473df3a688102d6ee195a2
+Deleted: sha256:ab992b2ba85f61dbec351a223c169e0ebc84bfc4997876e6782e4a15ed594ff2
+Untagged: dev-peer0.hosp1.lithium.com-donor_2-dd8118beba87738776a6cc266e60fb8fcaab4a0ca6ab444f51895259d987e5b6-917503c14f25cc5cc041333613ee3bda7fa4c4404c81e9a487f677a2b0fb7895:latest
+Deleted: sha256:75526f2c93a4ebebaac68bf40966c171be243995acb09980890e902e100c573b
+Deleted: sha256:b2a16ea4959bca6fc9cdca7a1116df04e3a3bbb03543336824231ecd6ae5233a
+Deleted: sha256:ac56c9fedf997d4bd916db7fe01e4681c9f68257152e13ca2aa6e4913ba6dfa2
+Deleted: sha256:0a88e41509bcb81e4cc96fec3b919beb038035d54427c9113a02dba7a0ad2acb
+Untagged: dev-peer1.superorg.lithium.com-receiver_1-04c108398b11662f03054fb85426d649ee5bccac3fe1a3216a9f8a31a4c28a48-8aaf3cba144cbd3b6a7a01aaac7c7e0836252a7b4d180f402273929a4177c7bd:latest
+Deleted: sha256:2b3306c37d6dcd5971c117fad390a594bf013de5c9e2db2fb12bb8c705eb8bb3
+Deleted: sha256:a3bb9c166380c7f08cf0da90efcba43d103ba6f737f4790cd2da46f33d0bca9e
+Deleted: sha256:bdb9d9defa715bc6bbcef135faf7c1224b1f7dbf2e9de9d93d023959d4ae5fd8
+Deleted: sha256:2f5e3b8ae024fbb8f4429d819fca5848ddba1db8eec11a6bfa4b2531ec4f5029
+Untagged: dev-peer2.superorg.lithium.com-receiver_1-04c108398b11662f03054fb85426d649ee5bccac3fe1a3216a9f8a31a4c28a48-3e59b974d67553286c2394448e29e8f898a4df6651144071b8e1b6b949456245:latest
+Deleted: sha256:17b5f1ab0770a03bef79a2a39260bd5864268ce492cdc93cc775a9da29d5471f
+Deleted: sha256:0d60a10320573c98b74718237085e59bff003b44142a36f1236a70fb071b0e8b
+Deleted: sha256:358e4c6e6ff74bd28d35cd1c57de39dc9e673b7a45e6a87543019ea720052b6f
+Deleted: sha256:ea7c55777b8fe00f1d2f904ca4893203add33d9b117c732ce1134d9fa575399b
+Untagged: dev-peer2.superorg.lithium.com-donor_1-811d4b7761482447c01b3a49965cb74b3ece130a5494894a72d72a39382f57bc-f8642d56e6b92ace1ae50dd094e7d72e559dddefb5c7ee660757fcf6fe3399b8:latest
+Deleted: sha256:480a2baccc25eed4e17263aea44b04c80637a2d42417ea728081a51a58d507f4
+Deleted: sha256:c9484203e3a2e8397e99a1a2f7bef08bcbc1fb98bc72d5c9f8b991c89402f6b3
+Deleted: sha256:16e91b290b27b7499424008bd3ab222c709e02a66f88de7941c90dc9a82aedb7
+Deleted: sha256:cb1d092335081d3ed592f140d694ed1c7e7dac94a77b0e9a35cfa4785f17299d
+Untagged: dev-peer1.superorg.lithium.com-donor_1-811d4b7761482447c01b3a49965cb74b3ece130a5494894a72d72a39382f57bc-68836e2111a985d12873c4ae755972f6f912eadd1c4e450ecd6933c53070c52f:latest
+Deleted: sha256:80207cdd2aa6510a17c38434a65ce2a26681c12b0b067e50301c22386ab71d79
+Deleted: sha256:db4bae5d25ed0354f10501319705bee751107c9a8e3d795951d948e67a517f95
+Deleted: sha256:99293aa4f559a930be6265f1076a3a2504075634b5b079523a551a3fcdc4ef4a
+Deleted: sha256:70473c66904f5025ec0b48cf3ac0445f1766fcdd1f2e46c9726d81d118394f84
+Untagged: dev-peer0.superorg.lithium.com-receiver_1-04c108398b11662f03054fb85426d649ee5bccac3fe1a3216a9f8a31a4c28a48-bb8224f92525f8ab9a97ab98a398e11adfae3d1279a462fce1f6ab80c20aac14:latest
+Deleted: sha256:bb75d5f1c5d87709f847915c4cafcf191e65794ef06dbf515b6c52947eec7337
+Deleted: sha256:8ac82c0c2e77d89ffc3ffc8c9c9c639c3a3b16c1759ccef2761f173b29406639
+Deleted: sha256:a169a1726f3be8221fa9c8a5a966b1fbd7bbc483c97314fc4f637aa7d03dec9c
+Deleted: sha256:5c650404b0aace33ee18a739dc4ef747211efed67fdefcab3ec6ec47a87a26ff
+Untagged: dev-peer0.hosp2.lithium.com-receiver_1-04c108398b11662f03054fb85426d649ee5bccac3fe1a3216a9f8a31a4c28a48-2d6cd1306f52c5a51eb3298f0f63f395a4b369cb1f6482b1b56743b51b991a48:latest
+Deleted: sha256:4f49b98e2a991560f18087d5e51dce348f5d072963fdf65de50e1a01cf669809
+Deleted: sha256:20c74fd0fa1b7318d881201c7cce737c97f40a8df6c9bb5e46e3ed187eb17161
+Deleted: sha256:4222053d40469f38c298d798dd3cca297f69d6d0cab46ee0d8144d359044bd3a
+Deleted: sha256:4b9d17b5433e95fe17ff4c5ae873010d67d920ba942249e3b3f5b1fa3ba12f6e
+Untagged: dev-peer0.hosp1.lithium.com-receiver_1-04c108398b11662f03054fb85426d649ee5bccac3fe1a3216a9f8a31a4c28a48-aa8d7c91786fb9c385735d473d744c32d62251d683403c8a84eecdf0a037ff43:latest
+Deleted: sha256:e3527c460cc418af538f96b9ce68472733662720deef90e34ddb025afeddcff4
+Deleted: sha256:469b2cb1ebea5cfd17510f929920a01bdd1ac0f3cc6fb6906edd77436d7dcd7f
+Deleted: sha256:351ce26f60d4ac68caff0ef7ce764dadfe949467089b7ce56b565ca6fe53291c
+Deleted: sha256:26af6317fe48eec19f25e0b6a093e2a4eb6778c3c6f550b0c1fec8199c15fe2e
+Untagged: dev-peer0.superorg.lithium.com-donor_1-811d4b7761482447c01b3a49965cb74b3ece130a5494894a72d72a39382f57bc-7d12be75dae46bea6cf27888ed7722ff531ca4a942089d00217e03f6548689e3:latest
+Deleted: sha256:cab748013dfa63ccb45e6fccac6e530823384400619dec35383fed0c3f18d5e1
+Deleted: sha256:eae5b215095e0c8d2abfd3da4f17387ad5aaca9cfa207e750ff91a9487945db0
+Deleted: sha256:ccf55526e65acd8523b1c3c6c6902236397fefc3eb3661b159d687f2bc9b47a8
+Deleted: sha256:09ea19bfd4b3b0dca110b923a89549429bf1a2b94443fa5e5ba5da5f558bd04c
+Untagged: dev-peer0.hosp2.lithium.com-donor_1-811d4b7761482447c01b3a49965cb74b3ece130a5494894a72d72a39382f57bc-f9c2a19fb74d80ac1362b87e95980cb5b754ba8991d5490d09803b69e82861af:latest
+Deleted: sha256:0166269bcd7c03a569bb3c3c661567486f5dd5c6856d163007d0dc971c5502c6
+Deleted: sha256:d148463d0092247a257941bd78934a7ade7b18148e9932c39bddd2ec27b8d3e0
+Deleted: sha256:a049c1503031bc62016ed1c589ff77c553d53fc0903db47a7c8e2a93d9436e6d
+Deleted: sha256:b96bb9baf65e841ed18d5378f3a5adcc24e0ecf3bd63e087940b8cbe04fc5f69
+Untagged: dev-peer0.hosp1.lithium.com-donor_1-811d4b7761482447c01b3a49965cb74b3ece130a5494894a72d72a39382f57bc-13bc9f2e2aad24ff14012ebd22c5d1f21e7c56a04001e41b1cdcd341916a2569:latest
+Deleted: sha256:18d2b8aafda797c85fb7cb9402d9ee2a16980b90ba5c8553067cc398784631df
+Deleted: sha256:79a0797fa1d323b8ee3b99fc267abf8c7a18b76090e519500871efbf520f878f
+Deleted: sha256:6e88f732ac0596ce88b96567f3709995a9fa1327d9e398935facfaa9bc3e3906
+Deleted: sha256:20b33aa949f7dd3507c854705a784333fd32ac8a297df19e2e46d5117a0c76af
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m cd [K[K[K[H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./[K[K./network.sh downcd first-network/exit[Kcd first-network/./network.sh down[K./start-new-network.sh 
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb' with crypto from 'Certificate Authorities'[0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[0;34mCA_LOCAL_VERSION=v1.5.12[0m
+[0;34mCA_DOCKER_IMAGE_VERSION=v1.5.12[0m
+[0;34mGenerating certificates using Fabric CA[0m
+[1A[1B[0G[?25l[+] Running 0/3
+ [33m⠋[0m Container ca_hosp1    Creating                                                                                               [34m0.1s [0m
+ [33m⠋[0m Container ca_orderer  Creating                                                                                               [34m0.1s [0m
+ [33m⠋[0m Container ca_hosp2    Creating                                                                                               [34m0.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/3[0m
+ [32m✔[0m Container ca_hosp1    [32mCreated[0m                                                                                                [34m0.2s [0m
+ [32m✔[0m Container ca_orderer  [32mCreated[0m                                                                                                [34m0.1s [0m
+ [32m✔[0m Container ca_hosp2    [32mCreated[0m                                                                                                [34m0.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠙[0m Container ca_hosp1    Starting                                                                                               [34m0.3s [0m
+ [33m⠙[0m Container ca_orderer  Starting                                                                                               [34m0.3s [0m
+ [33m⠙[0m Container ca_hosp2    Starting                                                                                               [34m0.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠹[0m Container ca_hosp1    Starting                                                                                               [34m0.4s [0m
+ [33m⠹[0m Container ca_orderer  Starting                                                                                               [34m0.4s [0m
+ [33m⠹[0m Container ca_hosp2    Starting                                                                                               [34m0.4s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠸[0m Container ca_hosp1    Starting                                                                                               [34m0.5s [0m
+ [33m⠸[0m Container ca_orderer  Starting                                                                                               [34m0.5s [0m
+ [33m⠸[0m Container ca_hosp2    Starting                                                                                               [34m0.5s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠼[0m Container ca_hosp1    Starting                                                                                               [34m0.6s [0m
+ [33m⠼[0m Container ca_orderer  Starting                                                                                               [34m0.6s [0m
+ [33m⠼[0m Container ca_hosp2    Starting                                                                                               [34m0.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠴[0m Container ca_hosp1    Starting                                                                                               [34m0.7s [0m
+ [33m⠴[0m Container ca_orderer  Starting                                                                                               [34m0.7s [0m
+ [33m⠴[0m Container ca_hosp2    Starting                                                                                               [34m0.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠦[0m Container ca_hosp1    Starting                                                                                               [34m0.8s [0m
+ [33m⠦[0m Container ca_orderer  Starting                                                                                               [34m0.8s [0m
+ [33m⠦[0m Container ca_hosp2    Starting                                                                                               [34m0.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [33m⠧[0m Container ca_hosp1    Starting                                                                                               [34m0.9s [0m
+ [32m✔[0m Container ca_orderer  [32mStarted[0m                                                                                                [34m0.8s [0m
+ [32m✔[0m Container ca_hosp2    [32mStarted[0m                                                                                                [34m0.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/3[0m
+ [32m✔[0m Container ca_hosp1    [32mStarted[0m                                                                                                [34m0.9s [0m
+ [32m✔[0m Container ca_orderer  [32mStarted[0m                                                                                                [34m0.8s [0m
+ [32m✔[0m Container ca_hosp2    [32mStarted[0m                                                                                                [34m0.8s [0m
+[?25h[0;34mCreating Hosp1 Identities[0m
+[0;34mEnrolling the CA admin (Hosp1)[0m
++ fabric-ca-client enroll -u https://hosp1admin:hosp1lithium@localhost:7054 --caname ca-hosp1 --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2025/04/30 08:50:35 [INFO] Created a default configuration file at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:50:35 [INFO] TLS Enabled
+2025/04/30 08:50:35 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:50:35 [INFO] encoded CSR
+2025/04/30 08:50:36 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:50:36 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/msp/cacerts/localhost-7054-ca-hosp1.pem
+2025/04/30 08:50:36 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:50:36 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering peer0[0m
++ fabric-ca-client register --caname ca-hosp1 --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2025/04/30 08:50:37 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:50:37 [INFO] TLS Enabled
+2025/04/30 08:50:37 [INFO] TLS Enabled
+Password: peer0pw
+[0;34mRegistering user[0m
++ fabric-ca-client register --caname ca-hosp1 --id.name user1 --id.secret user1pw --id.type client --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2025/04/30 08:50:38 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:50:38 [INFO] TLS Enabled
+2025/04/30 08:50:38 [INFO] TLS Enabled
+Password: user1pw
+[0;34mRegistering the org admin[0m
++ fabric-ca-client register --caname ca-hosp1 --id.name hosp1hosp1admin --id.secret hosp1adminpw --id.type admin --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2025/04/30 08:50:40 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:50:40 [INFO] TLS Enabled
+2025/04/30 08:50:40 [INFO] TLS Enabled
+Password: hosp1adminpw
+[0;34mGenerating the peer0 msp[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-hosp1 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2025/04/30 08:50:41 [INFO] TLS Enabled
+2025/04/30 08:50:41 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:50:41 [INFO] encoded CSR
+2025/04/30 08:50:42 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:50:42 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp/cacerts/localhost-7054-ca-hosp1.pem
+2025/04/30 08:50:42 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:50:42 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the peer0-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-hosp1 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls --enrollment.profile tls --csr.hosts peer0.hosp1.lithium.com --csr.hosts localhost --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2025/04/30 08:50:43 [INFO] TLS Enabled
+2025/04/30 08:50:43 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:50:43 [INFO] encoded CSR
+2025/04/30 08:50:44 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls/signcerts/cert.pem
+2025/04/30 08:50:44 [INFO] Stored TLS root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls/tlscacerts/tls-localhost-7054-ca-hosp1.pem
+2025/04/30 08:50:44 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls/IssuerPublicKey
+2025/04/30 08:50:44 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the user msp[0m
++ fabric-ca-client enroll -u https://user1:user1pw@localhost:7054 --caname ca-hosp1 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2025/04/30 08:50:45 [INFO] TLS Enabled
+2025/04/30 08:50:45 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:50:45 [INFO] encoded CSR
+2025/04/30 08:50:45 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:50:45 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp/cacerts/localhost-7054-ca-hosp1.pem
+2025/04/30 08:50:46 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:50:46 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/User1@hosp1.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the org admin msp[0m
++ fabric-ca-client enroll -u https://hosp1hosp1admin:hosp1adminpw@localhost:7054 --caname ca-hosp1 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp1/ca-cert.pem
+2025/04/30 08:50:47 [INFO] TLS Enabled
+2025/04/30 08:50:47 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:50:47 [INFO] encoded CSR
+2025/04/30 08:50:47 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:50:47 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp/cacerts/localhost-7054-ca-hosp1.pem
+2025/04/30 08:50:47 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:50:47 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mCreating Hosp2 Identities[0m
+[0;34mEnrolling the CA admin (Hosp2)[0m
++ fabric-ca-client enroll -u https://hosp2admin:hosp2lithium@localhost:8054 --caname ca-hosp2 --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2025/04/30 08:50:48 [INFO] Created a default configuration file at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:50:49 [INFO] TLS Enabled
+2025/04/30 08:50:49 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:50:49 [INFO] encoded CSR
+2025/04/30 08:50:49 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:50:49 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/msp/cacerts/localhost-8054-ca-hosp2.pem
+2025/04/30 08:50:49 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:50:49 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering peer0[0m
++ fabric-ca-client register --caname ca-hosp2 --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2025/04/30 08:50:50 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:50:50 [INFO] TLS Enabled
+2025/04/30 08:50:50 [INFO] TLS Enabled
+Password: peer0pw
+[0;34mRegistering user[0m
++ fabric-ca-client register --caname ca-hosp2 --id.name user1 --id.secret user1pw --id.type client --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2025/04/30 08:50:52 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:50:52 [INFO] TLS Enabled
+2025/04/30 08:50:52 [INFO] TLS Enabled
+Password: user1pw
+[0;34mRegistering the org admin[0m
++ fabric-ca-client register --caname ca-hosp2 --id.name hosp2hosp2admin --id.secret hosp2adminpw --id.type admin --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2025/04/30 08:50:54 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:50:54 [INFO] TLS Enabled
+2025/04/30 08:50:54 [INFO] TLS Enabled
+Password: hosp2adminpw
+[0;34mGenerating the peer0 msp[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:8054 --caname ca-hosp2 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2025/04/30 08:50:55 [INFO] TLS Enabled
+2025/04/30 08:50:55 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:50:55 [INFO] encoded CSR
+2025/04/30 08:50:56 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:50:56 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp/cacerts/localhost-8054-ca-hosp2.pem
+2025/04/30 08:50:56 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:50:56 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the peer0-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:8054 --caname ca-hosp2 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls --enrollment.profile tls --csr.hosts peer0.hosp2.lithium.com --csr.hosts localhost --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2025/04/30 08:50:57 [INFO] TLS Enabled
+2025/04/30 08:50:57 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:50:57 [INFO] encoded CSR
+2025/04/30 08:50:57 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls/signcerts/cert.pem
+2025/04/30 08:50:57 [INFO] Stored TLS root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls/tlscacerts/tls-localhost-8054-ca-hosp2.pem
+2025/04/30 08:50:57 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls/IssuerPublicKey
+2025/04/30 08:50:57 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/peers/peer0.hosp2.lithium.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the user msp[0m
++ fabric-ca-client enroll -u https://user1:user1pw@localhost:8054 --caname ca-hosp2 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2025/04/30 08:50:59 [INFO] TLS Enabled
+2025/04/30 08:50:59 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:50:59 [INFO] encoded CSR
+2025/04/30 08:50:59 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:50:59 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp/cacerts/localhost-8054-ca-hosp2.pem
+2025/04/30 08:50:59 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:50:59 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/User1@hosp2.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the org admin msp[0m
++ fabric-ca-client enroll -u https://hosp2hosp2admin:hosp2adminpw@localhost:8054 --caname ca-hosp2 -M /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/hosp2/ca-cert.pem
+2025/04/30 08:51:01 [INFO] TLS Enabled
+2025/04/30 08:51:01 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:51:01 [INFO] encoded CSR
+2025/04/30 08:51:01 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:51:01 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp/cacerts/localhost-8054-ca-hosp2.pem
+2025/04/30 08:51:01 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:51:01 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/hosp2.lithium.com/users/Admin@hosp2.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mCreating Orderer Org Identities[0m
+[0;34mEnrolling the CA admin[0m
++ fabric-ca-client enroll -u https://admin:adminpw@localhost:9054 --caname ca-orderer --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2025/04/30 08:51:03 [INFO] Created a default configuration file at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:51:03 [INFO] TLS Enabled
+2025/04/30 08:51:03 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:51:03 [INFO] encoded CSR
+2025/04/30 08:51:03 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:51:03 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/msp/cacerts/localhost-9054-ca-orderer.pem
+2025/04/30 08:51:03 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/msp/IssuerPublicKey
+2025/04/30 08:51:03 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering orderer[0m
++ fabric-ca-client register --caname ca-orderer --id.name orderer --id.secret ordererpw --id.type orderer --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2025/04/30 08:51:05 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:51:05 [INFO] TLS Enabled
+2025/04/30 08:51:05 [INFO] TLS Enabled
+Password: ordererpw
+[0;34mRegistering the orderer admin[0m
++ fabric-ca-client register --caname ca-orderer --id.name ordererAdmin --id.secret ordererAdminpw --id.type admin --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2025/04/30 08:51:06 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:51:06 [INFO] TLS Enabled
+2025/04/30 08:51:07 [INFO] TLS Enabled
+Password: ordererAdminpw
+[0;34mGenerating the orderer msp[0m
++ fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2025/04/30 08:51:08 [INFO] TLS Enabled
+2025/04/30 08:51:08 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:51:08 [INFO] encoded CSR
+2025/04/30 08:51:08 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:51:08 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/cacerts/localhost-9054-ca-orderer.pem
+2025/04/30 08:51:08 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:51:08 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the orderer-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls --enrollment.profile tls --csr.hosts orderer.lithium.com --csr.hosts localhost --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2025/04/30 08:51:10 [INFO] TLS Enabled
+2025/04/30 08:51:10 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:51:10 [INFO] encoded CSR
+2025/04/30 08:51:10 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls/signcerts/cert.pem
+2025/04/30 08:51:10 [INFO] Stored TLS root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls/tlscacerts/tls-localhost-9054-ca-orderer.pem
+2025/04/30 08:51:10 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls/IssuerPublicKey
+2025/04/30 08:51:10 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the admin msp[0m
++ fabric-ca-client enroll -u https://ordererAdmin:ordererAdminpw@localhost:9054 --caname ca-orderer -M /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/organizations/fabric-ca/ordererOrg/ca-cert.pem
+2025/04/30 08:51:12 [INFO] TLS Enabled
+2025/04/30 08:51:12 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:51:12 [INFO] encoded CSR
+2025/04/30 08:51:12 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:51:12 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp/cacerts/localhost-9054-ca-orderer.pem
+2025/04/30 08:51:12 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp/IssuerPublicKey
+2025/04/30 08:51:12 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/users/Admin@lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating CCP files for Hosp1 and Hosp2[0m
+[33mWARN[0m[0000] Found orphan containers ([ca_hosp1 ca_orderer ca_hosp2]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 3/8
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp2.lithium.com      Creating                                                                            [34m0.0s [0m
+ [33m⠋[0m Container redis.hosp1.lithium.com        Creating                                                                            [34m0.0s [0m
+ [33m⠋[0m Container redis.hosp2.lithium.com        Creating                                                                            [34m0.0s [0m
+ [33m⠋[0m Container orderer.lithium.com            Creating                                                                            [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp1.lithium.com      Creating                                                                            [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/8
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [33m⠙[0m Container couchdb.hosp2.lithium.com      Creating                                                                            [34m0.1s [0m
+ [33m⠙[0m Container redis.hosp1.lithium.com        Creating                                                                            [34m0.1s [0m
+ [33m⠙[0m Container redis.hosp2.lithium.com        Creating                                                                            [34m0.1s [0m
+ [33m⠙[0m Container orderer.lithium.com            Creating                                                                            [34m0.1s [0m
+ [33m⠙[0m Container couchdb.hosp1.lithium.com      Creating                                                                            [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/8
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [33m⠹[0m Container couchdb.hosp2.lithium.com      Creating                                                                            [34m0.2s [0m
+ [33m⠹[0m Container redis.hosp1.lithium.com        Creating                                                                            [34m0.2s [0m
+ [33m⠹[0m Container redis.hosp2.lithium.com        Creating                                                                            [34m0.2s [0m
+ [33m⠹[0m Container orderer.lithium.com            Creating                                                                            [34m0.2s [0m
+ [33m⠹[0m Container couchdb.hosp1.lithium.com      Creating                                                                            [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 8/10[0m
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com      [32mCreated[0m                                                                             [34m0.2s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com        [32mCreated[0m                                                                             [34m0.2s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com        [32mCreated[0m                                                                             [34m0.2s [0m
+ [32m✔[0m Container orderer.lithium.com            [32mCreated[0m                                                                             [34m0.3s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com      [32mCreated[0m                                                                             [34m0.2s [0m
+ [33m⠋[0m Container peer0.hosp1.lithium.com        Creating                                                                            [34m0.1s [0m
+ [33m⠋[0m Container peer0.hosp2.lithium.com        Creating                                                                            [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [33m⠸[0m Container couchdb.hosp2.lithium.com      Starting                                                                            [34m0.4s [0m
+ [33m⠸[0m Container redis.hosp1.lithium.com        Starting                                                                            [34m0.4s [0m
+ [33m⠸[0m Container redis.hosp2.lithium.com        Starting                                                                            [34m0.4s [0m
+ [33m⠸[0m Container orderer.lithium.com            Starting                                                                            [34m0.4s [0m
+ [33m⠸[0m Container couchdb.hosp1.lithium.com      Starting                                                                            [34m0.4s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [33m⠼[0m Container couchdb.hosp2.lithium.com      Starting                                                                            [34m0.5s [0m
+ [33m⠼[0m Container redis.hosp1.lithium.com        Starting                                                                            [34m0.5s [0m
+ [33m⠼[0m Container redis.hosp2.lithium.com        Starting                                                                            [34m0.5s [0m
+ [33m⠼[0m Container orderer.lithium.com            Starting                                                                            [34m0.5s [0m
+ [33m⠼[0m Container couchdb.hosp1.lithium.com      Starting                                                                            [34m0.5s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [33m⠴[0m Container couchdb.hosp2.lithium.com      Starting                                                                            [34m0.6s [0m
+ [33m⠴[0m Container redis.hosp1.lithium.com        Starting                                                                            [34m0.6s [0m
+ [33m⠴[0m Container redis.hosp2.lithium.com        Starting                                                                            [34m0.6s [0m
+ [33m⠴[0m Container orderer.lithium.com            Starting                                                                            [34m0.6s [0m
+ [33m⠴[0m Container couchdb.hosp1.lithium.com      Starting                                                                            [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [33m⠦[0m Container couchdb.hosp2.lithium.com      Starting                                                                            [34m0.7s [0m
+ [33m⠦[0m Container redis.hosp1.lithium.com        Starting                                                                            [34m0.7s [0m
+ [33m⠦[0m Container redis.hosp2.lithium.com        Starting                                                                            [34m0.7s [0m
+ [33m⠦[0m Container orderer.lithium.com            Starting                                                                            [34m0.7s [0m
+ [33m⠦[0m Container couchdb.hosp1.lithium.com      Starting                                                                            [34m0.7s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [33m⠧[0m Container couchdb.hosp2.lithium.com      Starting                                                                            [34m0.8s [0m
+ [33m⠧[0m Container redis.hosp1.lithium.com        Starting                                                                            [34m0.8s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com        [32mStarted[0m                                                                             [34m0.8s [0m
+ [33m⠧[0m Container orderer.lithium.com            Starting                                                                            [34m0.8s [0m
+ [33m⠧[0m Container couchdb.hosp1.lithium.com      Starting                                                                            [34m0.8s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [33m⠇[0m Container redis.hosp1.lithium.com        Starting                                                                            [34m0.9s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com        [32mStarted[0m                                                                             [34m0.8s [0m
+ [33m⠇[0m Container orderer.lithium.com            Starting                                                                            [34m0.9s [0m
+ [33m⠇[0m Container couchdb.hosp1.lithium.com      Starting                                                                            [34m0.9s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com        [32mCreated[0m                                                                             [34m0.1s [0m
+ [33m⠙[0m Container peer0.hosp2.lithium.com        Starting                                                                            [34m0.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 7/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [33m⠏[0m Container redis.hosp1.lithium.com        Starting                                                                            [34m1.0s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com        [32mStarted[0m                                                                             [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com            [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [33m⠙[0m Container peer0.hosp1.lithium.com        Starting                                                                            [34m0.8s [0m
+ [33m⠹[0m Container peer0.hosp2.lithium.com        Starting                                                                            [34m0.8s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 8/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com        [32mStarted[0m                                                                             [34m1.1s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com        [32mStarted[0m                                                                             [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com            [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [33m⠹[0m Container peer0.hosp1.lithium.com        Starting                                                                            [34m0.9s [0m
+ [33m⠸[0m Container peer0.hosp2.lithium.com        Starting                                                                            [34m0.9s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 8/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com        [32mStarted[0m                                                                             [34m1.1s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com        [32mStarted[0m                                                                             [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com            [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [33m⠸[0m Container peer0.hosp1.lithium.com        Starting                                                                            [34m1.0s [0m
+ [33m⠼[0m Container peer0.hosp2.lithium.com        Starting                                                                            [34m1.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 8/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com        [32mStarted[0m                                                                             [34m1.1s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com        [32mStarted[0m                                                                             [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com            [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [33m⠼[0m Container peer0.hosp1.lithium.com        Starting                                                                            [34m1.1s [0m
+ [33m⠴[0m Container peer0.hosp2.lithium.com        Starting                                                                            [34m1.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 9/10
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com        [32mStarted[0m                                                                             [34m1.1s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com        [32mStarted[0m                                                                             [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com            [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [33m⠴[0m Container peer0.hosp1.lithium.com        Starting                                                                            [34m1.2s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com        [32mStarted[0m                                                                             [34m1.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 10/10[0m
+ [32m✔[0m Volume "docker_peer0.hosp1.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_peer0.hosp2.lithium.com"  [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Volume "docker_orderer.lithium.com"      [32mCreated[0m                                                                             [34m0.0s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container redis.hosp1.lithium.com        [32mStarted[0m                                                                             [34m1.1s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com        [32mStarted[0m                                                                             [34m0.8s [0m
+ [32m✔[0m Container orderer.lithium.com            [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com      [32mStarted[0m                                                                             [34m0.9s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com        [32mStarted[0m                                                                             [34m1.2s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com        [32mStarted[0m                                                                             [34m1.1s [0m
+[?25hCONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS                  PORTS                                                                    NAMES
+4243ff1e3579   hyperledger/fabric-peer:latest      "peer node start"        1 second ago     Up Less than a second   0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.hosp2.lithium.com
+99c5c64dab66   hyperledger/fabric-peer:latest      "peer node start"        1 second ago     Up Less than a second   0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.hosp1.lithium.com
+4faea4eb7ed4   hyperledger/fabric-orderer:latest   "orderer"                1 second ago     Up 1 second             0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.lithium.com
+b0b271515167   redis:latest                        "docker-entrypoint.s…"   1 second ago     Up 1 second             0.0.0.0:6379->6379/tcp                                                   redis.hosp1.lithium.com
+7c1112fa1ad6   couchdb:3.3.3                       "tini -- /docker-ent…"   1 second ago     Up 1 second             4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp                               couchdb.hosp1.lithium.com
+021418b2cc56   redis:latest                        "docker-entrypoint.s…"   1 second ago     Up 1 second             0.0.0.0:6380->6379/tcp                                                   redis.hosp2.lithium.com
+a975a608041c   couchdb:3.3.3                       "tini -- /docker-ent…"   1 second ago     Up 1 second             4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp                               couchdb.hosp2.lithium.com
+7d6342877a72   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   46 seconds ago   Up 45 seconds           0.0.0.0:7054->7054/tcp, 0.0.0.0:17054->17054/tcp                         ca_hosp1
+78a5e80d1b37   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   46 seconds ago   Up 45 seconds           0.0.0.0:9054->9054/tcp, 7054/tcp, 0.0.0.0:19054->19054/tcp               ca_orderer
+095cb8df945e   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   46 seconds ago   Up 45 seconds           0.0.0.0:8054->8054/tcp, 7054/tcp, 0.0.0.0:18054->18054/tcp               ca_hosp2
+[0;34mUsing docker and docker-compose[0m
+[0;34mCreating channel 'hospitalchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb [0m
+Network Running Already
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'hospitalchannel.block'[0m
+[0;34mUsing organization hosp1[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile ChannelUsingRaft -outputBlock ./channel-artifacts/hospitalchannel.block -channelID hospitalchannel
+[34m2025-04-30 08:51:22.952 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2025-04-30 08:51:22.992 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2025-04-30 08:51:22.992 IST 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2025-04-30 08:51:22.992 IST 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2025-04-30 08:51:23.323 IST 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2025-04-30 08:51:23.323 IST 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating application channel genesis block
+[34m2025-04-30 08:51:23.338 IST 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[0;34mCreating channel hospitalchannel[0m
+[0;34mAdding orderers[0m
++ . scripts/orderer.sh hospitalchannel
++ '[' 0 -eq 1 ']'
++ res=0
+Status: 201
+{
+	"name": "hospitalchannel",
+	"url": "/participation/v1/channels/hospitalchannel",
+	"consensusRelation": "consenter",
+	"status": "active",
+	"height": 1
+}
+
+[0;32mChannel 'hospitalchannel' created[0m
+[0;34mJoining hosp1 peer to the channel...[0m
+[0;34mUsing organization hosp1[0m
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=0
+[34m2025-04-30 08:51:41.176 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:51:41.370 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mJoining hosp2 peer to the channel...[0m
+[0;34mUsing organization hosp2[0m
++ peer channel join -b ./channel-artifacts/hospitalchannel.block
++ res=0
+[34m2025-04-30 08:51:47.301 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:51:47.539 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mSetting anchor peer for hosp1...[0m
+[0;34mUsing organization hosp1[0m
+[0;34mFetching channel config for channel hospitalchannel[0m
+[0;34mUsing organization hosp1[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c hospitalchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2025-04-30 08:51:50.090 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:51:50.164 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[34m2025-04-30 08:51:50.164 IST 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 0
+[34m2025-04-30 08:51:50.166 IST 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for hosp1 on channel hospitalchannel[0m
+++ jq '.channel_group.groups.Application.groups.hosp1MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.hosp1.lithium.com","port": 7051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id hospitalchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"hospitalchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"hospitalchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.hosp1.lithium.com",' '"port":' 7051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPanchors.tx
+[34m2025-04-30 08:51:59.801 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:51:59.896 IST 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'hosp1MSP' on channel 'hospitalchannel'[0m
+[0;34mSetting anchor peer for hosp2...[0m
+[0;34mUsing organization hosp2[0m
+[0;34mFetching channel config for channel hospitalchannel[0m
+[0;34mUsing organization hosp2[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c hospitalchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2025-04-30 08:52:02.385 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:52:02.400 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[34m2025-04-30 08:52:02.401 IST 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 1
+[34m2025-04-30 08:52:02.403 IST 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for hosp2 on channel hospitalchannel[0m
+++ jq '.channel_group.groups.Application.groups.hosp2MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.hosp2.lithium.com","port": 9051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id hospitalchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"hospitalchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"hospitalchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.hosp2.lithium.com",' '"port":' 9051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPanchors.tx
+[34m2025-04-30 08:52:09.389 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:52:09.447 IST 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'hosp2MSP' on channel 'hospitalchannel'[0m
+[0;32mChannel 'hospitalchannel' joined[0m
+[0;34mUsing docker and docker-compose[0m
+[0;34mCreating channel 'receiverchannel'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb [0m
+Network Running Already
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'receiverchannel.block'[0m
+[0;34mUsing organization hosp1[0m
+/mnt/f/blood-data-management-system/first-network/../bin/configtxgen
++ '[' 0 -eq 1 ']'
++ configtxgen -profile ChannelUsingRaft -outputBlock ./channel-artifacts/receiverchannel.block -channelID receiverchannel
+[34m2025-04-30 08:52:10.780 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2025-04-30 08:52:10.796 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> orderer type: etcdraft
+[34m2025-04-30 08:52:10.796 IST 0003 INFO[0m [common.tools.configtxgen.localconfig] [34;1mcompleteInitialization[0m -> Orderer.EtcdRaft.Options unset, setting to tick_interval:"500ms" election_tick:10 heartbeat_tick:1 max_inflight_blocks:5 snapshot_interval_size:16777216 
+[34m2025-04-30 08:52:10.796 IST 0004 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoad[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/configtx/configtx.yaml
+[34m2025-04-30 08:52:10.941 IST 0005 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Generating genesis block
+[34m2025-04-30 08:52:10.941 IST 0006 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Creating application channel genesis block
+[34m2025-04-30 08:52:10.945 IST 0007 INFO[0m [common.tools.configtxgen] [34;1mdoOutputBlock[0m -> Writing genesis block
++ res=0
+[0;34mCreating channel receiverchannel[0m
+[0;34mAdding orderers[0m
++ . scripts/orderer.sh receiverchannel
++ '[' 0 -eq 1 ']'
++ res=0
+[34m2025-04-30 08:52:09.389 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:52:09.447 IST 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+Status: 201
+{
+	"name": "receiverchannel",
+	"url": "/participation/v1/channels/receiverchannel",
+	"consensusRelation": "consenter",
+	"status": "active",
+	"height": 1
+}
+
+[0;32mChannel 'receiverchannel' created[0m
+[0;34mJoining hosp1 peer to the channel...[0m
+[0;34mUsing organization hosp1[0m
++ peer channel join -b ./channel-artifacts/receiverchannel.block
++ res=0
+[34m2025-04-30 08:52:21.190 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:52:21.365 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mJoining hosp2 peer to the channel...[0m
+[0;34mUsing organization hosp2[0m
++ peer channel join -b ./channel-artifacts/receiverchannel.block
++ res=0
+[34m2025-04-30 08:52:26.523 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:52:26.671 IST 0002 INFO[0m [channelCmd] [34;1mexecuteJoin[0m -> Successfully submitted proposal to join channel
+[0;34mSetting anchor peer for hosp1...[0m
+[0;34mUsing organization hosp1[0m
+[0;34mFetching channel config for channel receiverchannel[0m
+[0;34mUsing organization hosp1[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c receiverchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2025-04-30 08:52:28.623 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:52:28.632 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[34m2025-04-30 08:52:28.632 IST 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 0
+[34m2025-04-30 08:52:28.634 IST 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 0
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for hosp1 on channel receiverchannel[0m
+++ jq '.channel_group.groups.Application.groups.hosp1MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.hosp1.lithium.com","port": 7051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id receiverchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"receiverchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"receiverchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp1MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.hosp1.lithium.com",' '"port":' 7051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp1MSPanchors.tx
+[34m2025-04-30 08:52:35.761 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:52:35.816 IST 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'hosp1MSP' on channel 'receiverchannel'[0m
+[0;34mSetting anchor peer for hosp2...[0m
+[0;34mUsing organization hosp2[0m
+[0;34mFetching channel config for channel receiverchannel[0m
+[0;34mUsing organization hosp2[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+++ peer channel fetch config /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com -c receiverchannel --tls --cafile /mnt/f/blood-data-management-system/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
+[34m2025-04-30 08:52:37.794 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:52:37.804 IST 0002 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[34m2025-04-30 08:52:37.806 IST 0003 INFO[0m [channelCmd] [34;1mfetch[0m -> Retrieving last config block: 1
+[34m2025-04-30 08:52:37.807 IST 0004 INFO[0m [cli.common] [34;1mreadBlock[0m -> Received block: 1
+[0;34mDecoding config block to JSON and isolating config to /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json[0m
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.pb --type common.Block --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ jq '.data.data[0].payload.data.config' /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_block.json
+++ res=0
+[0;34mGenerating anchor peer update transaction for hosp2 on channel receiverchannel[0m
+++ jq '.channel_group.groups.Application.groups.hosp2MSP.values += {"AnchorPeers":{"mod_policy": "Admins","value":{"anchor_peers": [{"host": "peer0.hosp2.lithium.com","port": 9051}]},"version": "0"}}' /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json
+++ res=0
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPconfig.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPmodified_config.json --type common.Config --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb
+++ configtxlator compute_update --channel_id receiverchannel --original /mnt/f/blood-data-management-system/first-network/channel-artifacts/original_config.pb --updated /mnt/f/blood-data-management-system/first-network/channel-artifacts/modified_config.pb --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb
+++ configtxlator proto_decode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.pb --type common.ConfigUpdate --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ jq .
++++ cat /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update.json
+++ echo '{"payload":{"header":{"channel_header":{"channel_id":"receiverchannel", "type":2}},"data":{"config_update":{' '"channel_id":' '"receiverchannel",' '"isolated_data":' '{},' '"read_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '},' '"write_set":' '{' '"groups":' '{' '"Application":' '{' '"groups":' '{' '"hosp2MSP":' '{' '"groups":' '{},' '"mod_policy":' '"Admins",' '"policies":' '{' '"Admins":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Endorsement":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Readers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '},' '"Writers":' '{' '"mod_policy":' '"",' '"policy":' null, '"version":' '"0"' '}' '},' '"values":' '{' '"AnchorPeers":' '{' '"mod_policy":' '"Admins",' '"value":' '{' '"anchor_peers":' '[' '{' '"host":' '"peer0.hosp2.lithium.com",' '"port":' 9051 '}' ']' '},' '"version":' '"0"' '},' '"MSP":' '{' '"mod_policy":' '"",' '"value":' null, '"version":' '"0"' '}' '},' '"version":' '"1"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '},' '"mod_policy":' '"",' '"policies":' '{},' '"values":' '{},' '"version":' '"0"' '}' '}}}}'
+++ configtxlator proto_encode --input /mnt/f/blood-data-management-system/first-network/channel-artifacts/config_update_in_envelope.json --type common.Envelope --output /mnt/f/blood-data-management-system/first-network/channel-artifacts/hosp2MSPanchors.tx
+[34m2025-04-30 08:52:44.369 IST 0001 INFO[0m [channelCmd] [34;1mInitCmdFactory[0m -> Endorser and orderer connections initialized
+[34m2025-04-30 08:52:44.416 IST 0002 INFO[0m [channelCmd] [34;1mupdate[0m -> Successfully submitted channel update
+[0;32mAnchor peer set for org 'hosp2MSP' on channel 'receiverchannel'[0m
+[0;32mChannel 'receiverchannel' joined[0m
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating certificates using Fabric CA[0m
+[1A[1B[0G[?25l[+] Running 0/1
+ [33m⠋[0m Network compose_default  Creating                                                                                            [34m0.1s [0m
+[?25h[33mWARN[0m[0000] Found orphan containers ([peer0.hosp2.lithium.com peer0.hosp1.lithium.com orderer.lithium.com redis.hosp1.lithium.com couchdb.hosp1.lithium.com redis.hosp2.lithium.com couchdb.hosp2.lithium.com ca_hosp1 ca_orderer ca_hosp2]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1A[0G[?25l[34m[+] Running 1/2[0m
+ [32m✔[0m Network compose_default  [32mCreated[0m                                                                                             [34m0.1s [0m
+ [33m⠋[0m Container ca_superOrg    Creating                                                                                            [34m0.1s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Network compose_default  [32mCreated[0m                                                                                             [34m0.1s [0m
+ [33m⠙[0m Container ca_superOrg    Creating                                                                                            [34m0.2s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Network compose_default  [32mCreated[0m                                                                                             [34m0.1s [0m
+ [33m⠹[0m Container ca_superOrg    Starting                                                                                            [34m0.3s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Network compose_default  [32mCreated[0m                                                                                             [34m0.1s [0m
+ [33m⠸[0m Container ca_superOrg    Starting                                                                                            [34m0.4s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Network compose_default  [32mCreated[0m                                                                                             [34m0.1s [0m
+ [33m⠼[0m Container ca_superOrg    Starting                                                                                            [34m0.5s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Network compose_default  [32mCreated[0m                                                                                             [34m0.1s [0m
+ [33m⠴[0m Container ca_superOrg    Starting                                                                                            [34m0.6s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Network compose_default  [32mCreated[0m                                                                                             [34m0.1s [0m
+ [33m⠦[0m Container ca_superOrg    Starting                                                                                            [34m0.7s [0m
+[?25h[1A[1A[1A[0G[?25l[34m[+] Running 2/2[0m
+ [32m✔[0m Network compose_default  [32mCreated[0m                                                                                             [34m0.1s [0m
+ [32m✔[0m Container ca_superOrg    [32mStarted[0m                                                                                             [34m0.7s [0m
+[?25h[0;34mCreating SuperOrg Identities[0m
+[0;34mEnrolling the CA admin[0m
++ fabric-ca-client enroll -u https://superOrgadmin:superOrglithium@localhost:11054 --caname ca-superOrg --tls.certfiles /mnt/f/blood-data-management-system/first-network/addSuperOrg/fabric-ca/superOrg/tls-cert.pem
+2025/04/30 08:53:01 [INFO] Created a default configuration file at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:53:01 [INFO] TLS Enabled
+2025/04/30 08:53:01 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:53:01 [INFO] encoded CSR
+2025/04/30 08:53:01 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:53:01 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/msp/cacerts/localhost-11054-ca-superOrg.pem
+2025/04/30 08:53:01 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:53:01 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mRegistering peer0[0m
++ fabric-ca-client register --caname ca-superOrg --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles /mnt/f/blood-data-management-system/first-network/addSuperOrg/fabric-ca/superOrg/tls-cert.pem
+2025/04/30 08:53:02 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:53:02 [INFO] TLS Enabled
+2025/04/30 08:53:02 [INFO] TLS Enabled
+Password: peer0pw
+[0;34mRegistering user[0m
++ fabric-ca-client register --caname ca-superOrg --id.name user1 --id.secret user1pw --id.type client --tls.certfiles /mnt/f/blood-data-management-system/first-network/addSuperOrg/fabric-ca/superOrg/tls-cert.pem
+2025/04/30 08:53:04 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:53:04 [INFO] TLS Enabled
+2025/04/30 08:53:04 [INFO] TLS Enabled
+Password: user1pw
+[0;34mRegistering the org admin[0m
++ fabric-ca-client register --caname ca-superOrg --id.name superOrgsuperOrgadmin --id.secret superOrgsuperOrglithium --id.type admin --tls.certfiles /mnt/f/blood-data-management-system/first-network/addSuperOrg/fabric-ca/superOrg/tls-cert.pem
+2025/04/30 08:53:06 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:53:06 [INFO] TLS Enabled
+2025/04/30 08:53:06 [INFO] TLS Enabled
+Password: superOrgsuperOrglithium
+[0;34mGenerating the peer0 msp[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:11054 --caname ca-superOrg -M /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/addSuperOrg/fabric-ca/superOrg/tls-cert.pem
+2025/04/30 08:53:07 [INFO] TLS Enabled
+2025/04/30 08:53:07 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:53:07 [INFO] encoded CSR
+2025/04/30 08:53:07 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:53:07 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/msp/cacerts/localhost-11054-ca-superOrg.pem
+2025/04/30 08:53:07 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:53:07 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the peer0-tls certificates, use --csr.hosts to specify Subject Alternative Names[0m
++ fabric-ca-client enroll -u https://peer0:peer0pw@localhost:11054 --caname ca-superOrg -M /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls --enrollment.profile tls --csr.hosts peer0.superOrg.lithium.com --csr.hosts localhost --tls.certfiles /mnt/f/blood-data-management-system/first-network/addSuperOrg/fabric-ca/superOrg/tls-cert.pem
+2025/04/30 08:53:09 [INFO] TLS Enabled
+2025/04/30 08:53:09 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:53:09 [INFO] encoded CSR
+2025/04/30 08:53:09 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls/signcerts/cert.pem
+2025/04/30 08:53:09 [INFO] Stored TLS root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls/tlscacerts/tls-localhost-11054-ca-superOrg.pem
+2025/04/30 08:53:09 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls/IssuerPublicKey
+2025/04/30 08:53:09 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls/IssuerRevocationPublicKey
+[0;34mGenerating the user msp[0m
++ fabric-ca-client enroll -u https://user1:user1pw@localhost:11054 --caname ca-superOrg -M /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/users/User1@superOrg.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/addSuperOrg/fabric-ca/superOrg/tls-cert.pem
+2025/04/30 08:53:10 [INFO] TLS Enabled
+2025/04/30 08:53:10 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:53:10 [INFO] encoded CSR
+2025/04/30 08:53:11 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/users/User1@superOrg.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:53:11 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/users/User1@superOrg.lithium.com/msp/cacerts/localhost-11054-ca-superOrg.pem
+2025/04/30 08:53:11 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/users/User1@superOrg.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:53:11 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/users/User1@superOrg.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating the org admin msp[0m
++ fabric-ca-client enroll -u https://superOrgsuperOrgadmin:superOrgsuperOrglithium@localhost:11054 --caname ca-superOrg -M /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/users/Admin@superOrg.lithium.com/msp --tls.certfiles /mnt/f/blood-data-management-system/first-network/addSuperOrg/fabric-ca/superOrg/tls-cert.pem
+2025/04/30 08:53:12 [INFO] TLS Enabled
+2025/04/30 08:53:12 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:53:12 [INFO] encoded CSR
+2025/04/30 08:53:12 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/users/Admin@superOrg.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:53:12 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/users/Admin@superOrg.lithium.com/msp/cacerts/localhost-11054-ca-superOrg.pem
+2025/04/30 08:53:12 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/users/Admin@superOrg.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:53:12 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/users/Admin@superOrg.lithium.com/msp/IssuerRevocationPublicKey
+[0;34mGenerating CCP files for SuperOrg[0m
+/mnt/f/blood-data-management-system/first-network/addSuperOrg/../../bin/configtxgen
+[0;34mGenerating SuperOrg organization definition[0m
++ configtxgen -printOrg superOrgMSP
+[34m2025-04-30 08:53:14.332 IST 0001 INFO[0m [common.tools.configtxgen] [34;1mmain[0m -> Loading configuration
+[34m2025-04-30 08:53:14.343 IST 0002 INFO[0m [common.tools.configtxgen.localconfig] [34;1mLoadTopLevel[0m -> Loaded configuration: /mnt/f/blood-data-management-system/first-network/addSuperOrg/configtx.yaml
++ res=0
+Registering and enrolling peer1
+2025/04/30 08:53:16 [INFO] Configuration file location: /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/fabric-ca-client-config.yaml
+2025/04/30 08:53:16 [INFO] TLS Enabled
+2025/04/30 08:53:16 [INFO] TLS Enabled
+Password: peer1pw
+2025/04/30 08:53:18 [INFO] TLS Enabled
+2025/04/30 08:53:18 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:53:18 [INFO] encoded CSR
+2025/04/30 08:53:18 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/signcerts/cert.pem
+2025/04/30 08:53:19 [INFO] Stored root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/cacerts/localhost-11054-ca-superOrg.pem
+2025/04/30 08:53:19 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/IssuerPublicKey
+2025/04/30 08:53:19 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp/IssuerRevocationPublicKey
+2025/04/30 08:53:20 [INFO] TLS Enabled
+2025/04/30 08:53:20 [INFO] generating key: &{A:ecdsa S:256}
+2025/04/30 08:53:20 [INFO] encoded CSR
+2025/04/30 08:53:20 [INFO] Stored client certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/signcerts/cert.pem
+2025/04/30 08:53:20 [INFO] Stored TLS root CA certificate at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/tlscacerts/tls-localhost-11054-ca-superOrg.pem
+2025/04/30 08:53:20 [INFO] Stored Issuer public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/IssuerPublicKey
+2025/04/30 08:53:20 [INFO] Stored Issuer revocation public key at /mnt/f/blood-data-management-system/first-network/organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/IssuerRevocationPublicKey
+cp: cannot stat '/mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem': No such file or directory
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem
+ls: cannot access '/mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem': No such file or directory
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+ls: cannot access '/mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tlsca/': No such file or directory
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tlsca/[K[K[K[K[K[K
+[0m[34;42mmsp[0m  [34;42mtls[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tl[K[Kmsp
+[0m[01;32mIssuerPublicKey[0m  [01;32mIssuerRevocationPublicKey[0m  [34;42mcacerts[0m  [34;42mkeystore[0m  [34;42msigncerts[0m  [34;42muser[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/msp[K[K[Ktls
+[0m[01;32mIssuerPublicKey[0m  [01;32mIssuerRevocationPublicKey[0m  [34;42mcacerts[0m  [34;42mkeystore[0m  [34;42msigncerts[0m  [34;42mtlscacerts[0m  [34;42muser[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/tlscacerts/
+[0m[01;32mtls-localhost-11054-ca-superOrg.pem[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls -lr organizations/peerOrganizations/o[Khosp1.lithium.com/peers/peer0.hosp1.lithium.com/
+total 0
+drwxrwxrwx 1 nasrin nasrin 4096 Apr 30 08:50 [0m[34;42mtls[0m
+drwxrwxrwx 1 nasrin nasrin 4096 Apr 30 08:50 [34;42mmsp[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls -lr organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium.com/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer1.superOrg.lithium.com/tls/tlscacerts/[C[C[C[C[C[1P.superOrg.lithium.com/tls/tlscacerts/[C[C[C[C[C[C[C[C[C[C[C[C[C[C0.superOrg.lithium.com/tls/tlscacerts/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[0m[01;32mtls-localhost-11054-ca-superOrg.pem[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ls /mnt/f/blood-data-management-system/first-network/addSuperOrg/../organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls/tlscacerts/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[0m[34;42mmsp[0m  [34;42mtls[0m
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m cou[K[K[Ks[K. ./f[Kstart-new-network.sh 
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb' [0m
+^CError on line 15
+
+Script done on 2025-04-30 12:28:56+05:30 [COMMAND_EXIT_CODE="1"]

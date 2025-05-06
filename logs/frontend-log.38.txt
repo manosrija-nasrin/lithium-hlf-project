@@ -1,0 +1,892 @@
+Script started on 2025-05-02 07:16:47+05:30 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd client/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start
+> panel@0.0.0 start
+> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve
+
+[K]0;C:\WINDOWS\system32\cmd.exe ]0;ng serve[36m- [mGenerating browser application bundles...[31m[1m(node:10360) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is dep[m
+[31m[1m[31;133Hprecated.[22m[K[m
+[31m[1m(Use `node --trace-deprecation ...` to show where the warning was created)[m[K
+[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K
+[92mvendor.js[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[K[m
+[92mmain.js[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m641.06 kB[K[m
+[92mstyles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[m
+[92mpolyfills.js[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[K[m
+[92mruntime.js[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[m
+
+[1m [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.54 MB[22m[K
+
+Build at: [37m[1m2025-05-02T01:50:47.938Z[m - Hash: [37m[1mfb667caabe607930c9c9[m - Time: [37m[1m65013[mms[K
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m  [2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[14C | [22mmain  [2m | [96m[22m641.00 kB[K[m
+[92mstyles.css, styles.js[m[2m | [22mstyles[2m | [96m[22m563.71 kB[K[m
+
+3 unchanged chunks
+
+Build at: [37m[1m2025-05-02T01:54:16.732Z[m - Hash: [37m[1ma937d233a04200b25252[m - Time: [37m[1m6894[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.24 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T01:54:21.101Z[m - Hash: [37m[1md3892156896c43fc334e[m - Time: [37m[1m4127[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.32 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T01:55:05.741Z[m - Hash: [37m[1m369c16761ba6244f47ca[m - Time: [37m[1m3135[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.36 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T01:56:27.586Z[m - Hash: [37m[1me255d4dc70c14f584059[m - Time: [37m[1m3407[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.28 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T01:56:52.587Z[m - Hash: [37m[1ma1cc046c9d63206e389b[m - Time: [37m[1m2821[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[8;31;133t[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.32 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:55:05.741Z[m - Hash: [37m[1m369c16761ba6244f47ca[m - Time: [37m[1m3135[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.36 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:56:27.586Z[m - Hash: [37m[1me255d4dc70c14f584059[m - Time: [37m[1m3407[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.28 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:56:52.587Z[m - Hash: [37m[1ma1cc046c9d63206e389b[m - Time: [37m[1m2821[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K[?25h[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.32 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:55:05.741Z[m - Hash: [37m[1m369c16761ba6244f47ca[m - Time: [37m[1m3135[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.36 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:56:27.586Z[m - Hash: [37m[1me255d4dc70c14f584059[m - Time: [37m[1m3407[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.28 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:56:52.587Z[m - Hash: [37m[1ma1cc046c9d63206e389b[m - Time: [37m[1m2821[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K
+[K[31;1H[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.28 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T01:57:18.608Z[m - Hash: [37m[1mfcef418a88a502679836[m - Time: [37m[1m2811[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.43 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T01:58:12.783Z[m - Hash: [37m[1m9cb9c9a1ae3eff3164e7[m - Time: [37m[1m8420[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.28 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:56:52.587Z[m - Hash: [37m[1ma1cc046c9d63206e389b[m - Time: [37m[1m2821[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.28 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:57:18.608Z[m - Hash: [37m[1mfcef418a88a502679836[m - Time: [37m[1m2811[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.43 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:58:12.783Z[m - Hash: [37m[1m9cb9c9a1ae3eff3164e7[m - Time: [37m[1m8420[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.48 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T01:59:28.180Z[m - Hash: [37m[1m77fdd0c34d719283389f[m - Time: [37m[1m3587[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.28 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:57:18.608Z[m - Hash: [37m[1mfcef418a88a502679836[m - Time: [37m[1m2811[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.43 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:58:12.783Z[m - Hash: [37m[1m9cb9c9a1ae3eff3164e7[m - Time: [37m[1m8420[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.48 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:59:28.180Z[m - Hash: [37m[1m77fdd0c34d719283389f[m - Time: [37m[1m3587[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K
+[K[31;1H[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.56 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T02:00:17.136Z[m - Hash: [37m[1m692907c8d27e131048db[m - Time: [37m[1m3939[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.43 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:58:12.783Z[m - Hash: [37m[1m9cb9c9a1ae3eff3164e7[m - Time: [37m[1m8420[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.48 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:59:28.180Z[m - Hash: [37m[1m77fdd0c34d719283389f[m - Time: [37m[1m3587[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.56 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T02:00:17.136Z[m - Hash: [37m[1m692907c8d27e131048db[m - Time: [37m[1m3939[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K[?25h[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.43 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:58:12.783Z[m - Hash: [37m[1m9cb9c9a1ae3eff3164e7[m - Time: [37m[1m8420[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.48 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:59:28.180Z[m - Hash: [37m[1m77fdd0c34d719283389f[m - Time: [37m[1m3587[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.56 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T02:00:17.136Z[m - Hash: [37m[1m692907c8d27e131048db[m - Time: [37m[1m3939[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K
+[K[31;1H[?25h[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.43 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:58:12.783Z[m - Hash: [37m[1m9cb9c9a1ae3eff3164e7[m - Time: [37m[1m8420[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.48 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:59:28.180Z[m - Hash: [37m[1m77fdd0c34d719283389f[m - Time: [37m[1m3587[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.56 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T02:00:17.136Z[m - Hash: [37m[1m692907c8d27e131048db[m - Time: [37m[1m3939[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K[?25h[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.43 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:58:12.783Z[m - Hash: [37m[1m9cb9c9a1ae3eff3164e7[m - Time: [37m[1m8420[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.48 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T01:59:28.180Z[m - Hash: [37m[1m77fdd0c34d719283389f[m - Time: [37m[1m3587[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m641.56 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T02:00:17.136Z[m - Hash: [37m[1m692907c8d27e131048db[m - Time: [37m[1m3939[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K
+[K[31;1H[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.56 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T06:21:27.652Z[m - Hash: [37m[1m4040b343dc24e739a68a[m - Time: [37m[1m6360[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m641.99 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T06:22:41.330Z[m - Hash: [37m[1m6be6d225ed45f492cd47[m - Time: [37m[1m3739[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m642.25 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T06:23:23.101Z[m - Hash: [37m[1m44930c98da2f77851e1b[m - Time: [37m[1m6502[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m642.24 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T06:24:28.923Z[m - Hash: [37m[1m7a5e7aedc51e02e4dad1[m - Time: [37m[1m5598[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m642.30 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T06:26:27.051Z[m - Hash: [37m[1m948d1ec1d2a3f2db1476[m - Time: [37m[1m6705[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K
+[92mvendor.js[m[2m[10C | [22mvendor[2m | [22m  [96m3.91 MB[K[m
+[92mmain.js[m[2m[12C | [22mmain  [2m | [96m[22m628.59 kB[K[m
+
+3 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:20:50.373Z[m - Hash: [37m[1m2e3cfd51f53d941fa929[m - Time: [37m[1m5870[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m59[m:[93m1 [m- [91merror [90mNG5002: [mUnexpected closing tag "div". It may happen when the tag
+[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
+[31;133Hd-end-tags
+[31m[1m    [m[K
+[31m[1m    [7m59[m </div>[K
+[31m[1m    [7m  [m [91m~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K
+[92mvendor.js[m[2m[10C | [22mvendor[2m | [22m  [96m3.89 MB[K[m
+[92mmain.js[m[2m[12C | [22mmain  [2m | [96m[22m642.73 kB[K[m
+
+3 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:23:04.234Z[m - Hash: [37m[1m87f1e190f9f7a1243ca0[m - Time: [37m[1m3801[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[36m| [mGenerating browser application bundles (phase: building)...[K[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m665.56 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:26:46.312Z[m - Hash: [37m[1m40a0b2fbb7b7965fc4ae[m - Time: [37m[1m20994[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician-add-tti-results/add-tti-result.component.html[m:[93m10[m:[93m8 [m- [91merror [90mNG8002: [mCan't bind to 'formGroup'
+[31;133H' since it isn't a known property of 'form'.
+[31m[1m    [m[K
+[31m[1m    [7m10[m  <form [formGroup]="ttiResultForm" (submit)="submitForm()">[K
+[31m[1m    [7m  [m        [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician-add-tti-results/add-tti-result.component.ts[m:[93m8[m:[93m15[K[m
+[31m[1m        [7m8[m  templateUrl: './add-tti-result.component.html',[K
+[31m[1m        [7m [m[15X[96m[15C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component AddTtiResultComponent.[m[K
+[31m[1m    [m[K
+[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m666.02 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:26:54.346Z[m - Hash: [37m[1m0014adf04348c41c9738[m - Time: [37m[1m7749[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician-add-tti-results/add-tti-result.component.html[m:[93m10[m:[93m8 [m- [91merror [90mNG8002: [mCan't bind to 'formGroup'
+[31;133H' since it isn't a known property of 'form'.
+[31m[1m    [m[K
+[31m[1m    [7m10[m  <form [formGroup]="ttiResultForm" (submit)="submitForm()">[K
+[31m[1m    [7m  [m        [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician-add-tti-results/add-tti-result.component.ts[m:[93m8[m:[93m15[K[m
+[31m[1m        [7m8[m  templateUrl: './add-tti-result.component.html',[K
+[31m[1m        [7m [m[15X[96m[15C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component AddTtiResultComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m666.80 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:27:18.388Z[m - Hash: [37m[1m42fffd76d7f582b09681[m - Time: [37m[1m1606[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m666.64 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:27:22.411Z[m - Hash: [37m[1m3acd6927df722ef2cfd8[m - Time: [37m[1m1913[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m664.41 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:27:42.917Z[m - Hash: [37m[1m5357d3808c6e7847293d[m - Time: [37m[1m1246[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:28:44.574Z[m - Hash: [37m[1m5357d3808c6e7847293d[m - Time: [37m[1m7272[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m664.13 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:28:48.908Z[m - Hash: [37m[1mbb073b942bc1742f9f06[m - Time: [37m[1m1835[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K
+[92mvendor.js[m[2m[10C | [22mvendor[2m | [22m  [96m3.91 MB[K[m
+[92mmain.js[m[2m[12C | [22mmain  [2m | [96m[22m650.27 kB[K[m
+
+3 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:29:09.232Z[m - Hash: [37m[1m3b97a94191087ffedfd5[m - Time: [37m[1m5164[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Blood Bag Details" icon="plus" [routerLink]="['addbloodbag']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:29:38.511Z[m - Hash: [37m[1m3b97a94191087ffedfd5[m - Time: [37m[1m929[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[K[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m673.84 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:40:30.607Z[m - Hash: [37m[1mfd6edb6c469c64baf0bc[m - Time: [37m[1m16688[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[36m\ [mGenerating browser application bundles (phase: building)...[K[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m674.40 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:41:46.541Z[m - Hash: [37m[1mc06778cb09be7868191f[m - Time: [37m[1m5881[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[K[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m674.35 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:41:55.121Z[m - Hash: [37m[1m322ce036d58efae4aba8[m - Time: [37m[1m7617[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:41:59.944Z[m - Hash: [37m[1m322ce036d58efae4aba8[m - Time: [37m[1m4584[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m674.34 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:42:07.004Z[m - Hash: [37m[1m9568326f2240afe93696[m - Time: [37m[1m4916[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m674.49 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:42:20.962Z[m - Hash: [37m[1mef450b4fe755c6dbd4d4[m - Time: [37m[1m5007[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m674.49 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:43:16.207Z[m - Hash: [37m[1m08ead876bfd250a616eb[m - Time: [37m[1m2033[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m674.50 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:43:20.243Z[m - Hash: [37m[1m3a453ef681eac40c1087[m - Time: [37m[1m2288[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m674.50 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:43:28.788Z[m - Hash: [37m[1m2af0c6c156485b3d7a5b[m - Time: [37m[1m1443[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m674.50 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:43:34.178Z[m - Hash: [37m[1meaac61ce44d0d78058d6[m - Time: [37m[1m1553[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-t
+[31;133Htoolbar-link"
+[31m[1m    [m[K
+[31m[1m    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K
+[31m[1m    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[m
+[31m[1m        [7m15[m   templateUrl: './technician.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component TechnicianComponent.[m[K
+[31m[1m    [m[K
+[?25l[31m[1m[H    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K[31m[1m
+    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[31m[1m
+    [m[K[31m[1m
+      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[31m[1m
+        [7m15[m   templateUrl: './technician.component.html',[K[31m[1m
+        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+        Error occurs in the template of component TechnicianComponent.[m[K[31m[1m
+    [m[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m674.50 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T07:43:34.178Z[m - Hash: [37m[1meaac61ce44d0d78058d6[m - Time: [37m[1m1553[mms[K
+[K[92m
+√ [mCompiled successfully.[K[31m[1m
+    [m[K[31m[1m
+    Error: [96msrc/app/technician/technician.component.html[m:[93m52[m:[93m3 [m- [91merror [90mNG5002: [mOnly void and foreign elements can be self closed "app-toolbar-link"[K[31m[1m
+    [m[K[31m[1m
+    [7m52[m   <app-toolbar-link text="Add Health Indicator Test Results" icon="plus" [routerLink]="['addhealthindicators']" />[K[31m[1m
+    [7m  [m   [91m~~~~~~~~~~~~~~~~~[K[31m[1m
+    [m[K[31m[1m
+      [96msrc/app/technician/technician.component.ts[m:[93m15[m:[93m16[K[31m[1m
+        [7m15[m   templateUrl: './technician.component.html',[K[31m[1m
+        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+        Error occurs in the template of component TechnicianComponent.[m[K[31m[1m
+    [m[K
+[K[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K
+[92mvendor.js[m[2m[10C | [22mvendor[2m | [22m  [96m3.89 MB[K[m
+[92mmain.js[m[2m[12C | [22mmain  [2m | [96m[22m689.09 kB[K[m
+
+3 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:44:09.600Z[m - Hash: [37m[1mecae6e637e46de41ee78[m - Time: [37m[1m3614[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m689.09 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:44:48.208Z[m - Hash: [37m[1m6c3356d7c5acdaf7e9d2[m - Time: [37m[1m6462[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m689.81 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-02T07:45:16.977Z[m - Hash: [37m[1m9ccec17c3e9fda8462ea[m - Time: [37m[1m1653[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[H[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K[92m
+vendor.js[10X[m[2m[10C | [22mvendor[2m | [22m  [96m3.89 MB[K[92m
+main.js[12X[m[2m[12C | [22mmain  [2m | [96m[22m689.09 kB[K[m
+[K
+3 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T07:44:09.600Z[m - Hash: [37m[1mecae6e637e46de41ee78[m - Time: [37m[1m3614[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m689.09 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T07:44:48.208Z[m - Hash: [37m[1m6c3356d7c5acdaf7e9d2[m - Time: [37m[1m6462[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m689.81 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-02T07:45:16.977Z[m - Hash: [37m[1m9ccec17c3e9fda8462ea[m - Time: [37m[1m1653[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K
+[K[31;1H[?25h[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m exit
+exit
+
+Script done on 2025-05-02 13:22:27+05:30 [COMMAND_EXIT_CODE="1"]
