@@ -3,7 +3,8 @@
  */
 
 // Bring common classes into scope, and Fabric SDK network class
-const { ROLE_ADMIN, ROLE_DOCTOR, ROLE_SUPER, ROLE_TECHNICIAN, capitalize, getMessage, validateRole, createRedisClient } = require('../utils.js');
+const { ROLE_ADMIN, ROLE_DOCTOR, ROLE_SUPER, ROLE_TECHNICIAN, capitalize,
+  getMessage, validateRole, createRedisClient } = require('../utils.js');
 const network = require('../../donor-asset-transfer/application-javascript/app.js');
 
 exports.createDonor = async (req, res) => {
@@ -11,14 +12,16 @@ exports.createDonor = async (req, res) => {
   const userRole = req.headers.role;
   await validateRole([ROLE_ADMIN], userRole, res);
   // Set up and connect to Fabric Gateway using the username in header
-  let networkObj = await network.connectToNetwork(req.headers.username);
+  const networkObj = await network.connectToNetwork(req.headers.username);
 
   // Generally we create donor id by ourself so if donor id is not present in the request then fetch last id
   // from ledger and increment it by one. Since we follow donor id pattern as "PID0", "PID1", ...
   // 'slice' method omits first three letters and take number
   if (!('donorId' in req.body) || req.body.donorId === null || req.body.donorId === '') {
-    const lastId = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:getLatestDonorId');
-    req.body.donorId = 'PID' + (parseInt(lastId.slice(3)) + 1);
+    // const generatedHealthId = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:generateHealthId');
+    // const lastId = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:getLatestDonorId');
+    // req.body.donorId = 'PID' + (parseInt(lastId.slice(3)) + 1);
+    req.body.donorId = '';
   }
 
   // When password is not provided in the request while creating a donor record.
@@ -34,7 +37,7 @@ exports.createDonor = async (req, res) => {
   // Invoke the smart contract function
   const createDonorRes = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:createDonor', args);
   if (createDonorRes.error) {
-    res.status(400).send(response.error);
+    res.status(400).send(res.error);
   }
 
   // Enrol and register the user with the CA and adds the user to the wallet.
@@ -46,19 +49,19 @@ exports.createDonor = async (req, res) => {
   }
 
   const dat = JSON.parse(data);
-  let doctorsOne, doctorsTwo, allDoctors = [], allSupers = [];
+  let allDoctors = []; let allSupers = [];
   // Set up and connect to Fabric Gateway
-  let networkObjOne = await network.connectToNetwork('hosp1admin');
-  let networkObjTwo = await network.connectToNetwork('hosp2admin');
-  let networkObjSuper = await network.connectToNetwork('superOrgadmin');
+  const networkObjOne = await network.connectToNetwork('hosp1admin');
+  const networkObjTwo = await network.connectToNetwork('hosp2admin');
+  const networkObjSuper = await network.connectToNetwork('superOrgadmin');
 
   // grant permissions to all doctors and supers
   // if (dat.changedBy === 'hosp1admin') {
-  doctorsOne = await network.getAllDoctorsByHospitalId(networkObjOne, 1);
+  const doctorsOne = await network.getAllDoctorsByHospitalId(networkObjOne, 1);
   allSupers = await network.getAllSupers(networkObjSuper);
   // }
   // else if (dat.changedBy === 'hosp2admin') {
-  doctorsTwo = await network.getAllDoctorsByHospitalId(networkObjTwo, 2);
+  const doctorsTwo = await network.getAllDoctorsByHospitalId(networkObjTwo, 2);
   // }
 
   allDoctors = allDoctors.concat(doctorsOne);
@@ -69,9 +72,9 @@ exports.createDonor = async (req, res) => {
 
   let response;
   // Invoke the smart contract function
-  for (let doc of allDoctors) {
+  for (const doc of allDoctors) {
     if (!doc.id) {
-      console.error("Doctor ID is undefined for a doctor.");
+      console.error('Doctor ID is undefined for a doctor.');
       continue;
     }
 
@@ -84,9 +87,9 @@ exports.createDonor = async (req, res) => {
     }
   }
 
-  for (let sup of allSupers) {
+  for (const sup of allSupers) {
     if (!sup.id) {
-      console.error("Super ID is undefined for a super.");
+      console.error('Super ID is undefined for a super.');
       continue;
     }
 
@@ -136,7 +139,7 @@ exports.createDoctor = async (req, res) => {
 
   for (const donor of parsedDonors) {
     if (!donor.donorId) {
-      console.error("Donor ID is undefined for a donor.");
+      console.error('Donor ID is undefined for a donor.');
       continue; // Skip to the next iteration
     }
 
@@ -188,7 +191,7 @@ exports.createSuper = async (req, res) => {
 
   for (const donor of parsedDonors) {
     if (!donor.donorId) {
-      console.error("Donor ID is undefined for a donor.");
+      console.error('Donor ID is undefined for a donor.');
       continue; // Skip to the next iteration
     }
 
@@ -220,7 +223,7 @@ exports.getSupersByHospitalId = async (req, res) => {
   // Use the gateway and identity service to get all users enrolled by the CA
   const response = await network.getAllSupers(networkObjSuper);
 
-  console.debug("Supers:", response);
+  console.debug('Supers:', response);
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
 };
 
@@ -236,13 +239,13 @@ exports.getDoctorsByHospitalId = async (req, res) => {
   // Set up and connect to Fabric Gateway
   const hospitalId = parseInt(req.params.hospitalId);
   // Set up and connect to Fabric Gateway
-  let userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'superOrgadmin';
+  const userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'superOrgadmin';
 
   const networkObj = await network.connectToNetwork(userId);
   // Use the gateway and identity service to get all users enrolled by the CA
   const response = await network.getAllDoctorsByHospitalId(networkObj, hospitalId);
 
-  console.debug("Doctors:", response);
+  console.debug('Doctors:', response);
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(response);
 };
 
@@ -257,62 +260,12 @@ exports.getAllDonors = async (req, res) => {
   await validateRole([ROLE_ADMIN, ROLE_DOCTOR], userRole, res);
   // Set up and connect to Fabric Gateway using the username in header
   const networkObj = await network.connectToNetwork(req.headers.username);
-  const networkObjOne = await network.connectToNetwork('hosp1admin');
-  const networkObjTwo = await network.connectToNetwork('hosp2admin');
-  const networkObjSuper = await network.connectToNetwork('superOrgadmin');
   // Invoke the smart contract function
   const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllDonors',
     userRole === ROLE_DOCTOR ? req.headers.username : '');
 
-  let doctorsOne, doctorsTwo, supersOne, supersTwo, allDoctors = [], allSupers = [];
-
   // grant permissions to all doctors and supers
-  doctorsOne = await network.getAllDoctorsByHospitalId(networkObjOne, 1);
-  doctorsTwo = await network.getAllDoctorsByHospitalId(networkObjTwo, 2);
-  allSupers = await network.getAllSupers(networkObjSuper);
-  allDoctors = allDoctors.concat(doctorsOne);
-  allDoctors = allDoctors.concat(doctorsTwo);
-
   const parsedResponse = await JSON.parse(response);
-  console.debug(allSupers);
-  // console.debug(allDoctors);
-  // console.debug(parsedResponse);
-  /*
-    for (let donor of parsedResponse) {
-      let donorId = donor.donorId;
-      console.debug(donorId);
-      // Invoke the smart contract function
-      for (let doc of allDoctors) {
-        if (!doc.id) {
-          console.error("Doctor ID is undefined for a doctor.");
-          break;
-        }
-  
-        let args = { donorId: donorId, doctorId: doc.id };
-        args = [JSON.stringify(args)];
-        let responseDoctor = await network.invoke(networkObj, false, 'DonorContract:grantAccessToDoctor', args);
-  
-        if (responseDoctor.error) {
-          console.error(responseDoctor.error);
-        }
-      }
-  
-      for (let sup of allSupers) {
-        if (!sup.id) {
-          console.error("Super ID is undefined for a super.");
-          break;
-        }
-  
-        let args = { donorId: donorId, superId: sup.id };  // TODO: Implement a new function for supers
-        args = [JSON.stringify(args)];
-        let responseSuper = await network.invoke(networkObj, false, 'DonorContract:grantAccessToSuper', args);
-  
-        if (responseSuper.error) {
-          console.error(responseSuper.error);
-        }
-      }
-    }
-  */
   res.status(200).send(parsedResponse);
 };
 

@@ -20,7 +20,7 @@ async function initLedger() {
     let i = 0;
     for (i = 0; i < donors.length; i++) {
       const attr = { firstName: donors[i].firstName, lastName: donors[i].lastName, role: 'donor' }; // Create attributes for each donor
-      await enrollRegisterUser('1', 'PID' + i, JSON.stringify(attr)); // Enroll and register each donor
+      await enrollRegisterUser('1', donors[i].healthId, JSON.stringify(attr)); // Enroll and register each donor
     }
   } catch (err) {
     console.log(err); // Log any errors
@@ -117,14 +117,14 @@ async function enrollAndRegisterTechnicians() {
  * @description Need not run this manually, included as a prestart in package.json
  */
 async function main() {
-  // await enrollAdminHosp1();
-  // await enrollAdminHosp2();
-  // await enrollAdminSuperOrg();
-  // await initLedger();
-  // await initRedis();
-  // await enrollAndRegisterDoctors();
-  // await enrollAndRegisterSupers();
-  // await enrollAndRegisterTechnicians();
+  await enrollAdminHosp1();
+  await enrollAdminHosp2();
+  await enrollAdminSuperOrg();
+  await initLedger();
+  await initRedis();
+  await enrollAndRegisterDoctors();
+  await enrollAndRegisterSupers();
+  await enrollAndRegisterTechnicians();
 }
 
 main(); // Execute the main function
