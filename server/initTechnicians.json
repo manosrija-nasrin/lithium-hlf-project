@@ -1,10 +1,18 @@
 [
- {
+    {
         "hospitalId": "1",
         "fullName": "Dibya Panja",
         "address": "Police Line, Burdwan-713103",
         "phoneNumber": "9897567763",
         "emergPhoneNumber": "8687626199",
         "registration": "123"
+    },
+    {
+        "hospitalId": "2",
+        "fullName": "Roman Armstrong",
+        "address": "Police Line, Burdwan-713103",
+        "phoneNumber": "9897567458",
+        "emergPhoneNumber": "8684526199",
+        "registration": "124"
     }
 ]

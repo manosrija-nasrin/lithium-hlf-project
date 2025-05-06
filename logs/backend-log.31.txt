@@ -1,0 +1,416 @@
+Script started on 2025-02-11 13:05:11+05:30 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd server/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm sat[K[Ktart
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> donor-application@1.0.0 prestart
+> node initServer.js[8;1H[?25h[K[?25l[K
+> donor-application@1.0.0 start
+> node node_modules/nodemon/bin/nodemon.js src/server.js[12;1H[K[?25h[33m[nodemon] 1.19.4
+[m[33m[nodemon] to restart at any time, enter `rs`
+[nodemon] watching dir(s): *.*
+[nodemon] watching extensions: js,mjs,json[32m
+[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+Connected to the database
+::1 - - [11/Feb/2025:08:00:57 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [11/Feb/2025:08:00:58 +0000] "POST /login HTTP/1.1" 200 384 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:00:58 +0000] "OPTIONS /supers/2/HOSP2-SUP12227 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.lithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Connected to the database
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Attributes [
+  { name: [32m'hf.Revoker'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m}[K
+]
+Attributes [
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Everhart Hall'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Got all supers:  [
+  {
+    id: [32m'HOSP2-SUP12227'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Everhart Hall'[m,[K
+    address: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    phoneNumber: [32m'9073765654'[m,[K
+    emergPhoneNumber: [32m'8679236566'[m,[K
+    registration: [32m'12227'[K[m
+  },
+  {
+    id: [32m'HOSP1-SUP12226'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Peter Leavitt'[m,[K
+    address: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    phoneNumber: [32m'9008096755'[m,[K
+    emergPhoneNumber: [32m'9657834555'[m,[K
+    registration: [32m'12226'[K[m
+  }
+]
+::1 - - [11/Feb/2025:08:01:00 +0000] "GET /supers/2/HOSP2-SUP12227 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:01:02 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:01:02 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+F:\blood-data-management-system\server\src\super-routes.js:20
+        const blockPendingDonorsResponse = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:blockPendingDonors
+[31;133Hs', JSON.stringify(usernameArgs));
+                                                                                                                                     [32;267H
+                  ^
+
+ReferenceError: Cannot access 'usernameArgs' before initialization
+    at exports.getBlockedDonors [90m(F:\blood-data-management-system\server\[msrc\super-routes.js:20:145[90m)[K[m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[m
+
+Node.js v20.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[m
+[32m[nodemon] restarting due to changes...[m
+[32m[nodemon] starting `node src/server.js`[m
+[?25l[8;31;133t[H    address: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    phoneNumber: [32m'9008096755'[m,[K
+    emergPhoneNumber: [32m'9657834555'[m,[K
+    registration: [32m'12226'[K[m
+  }[K
+][K
+::1 - - [11/Feb/2025:08:01:00 +0000] "GET /supers/2/HOSP2-SUP12227 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:01:02 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:01:02 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.lithium.com\connection-superOrg.json[K
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\[K
+Succesfully connected to the network.[K
+F:\blood-data-management-system\server\src\super-routes.js:20[K
+        const blockPendingDonorsResponse = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:blockPendingDonors', JSON.stringify(usernameArgs));[K
+                                                                                                                                                       ^[K
+[K
+ReferenceError: Cannot access 'usernameArgs' before initialization[K
+    at exports.getBlockedDonors [90m(F:\blood-data-management-system\server\[msrc\super-routes.js:20:145[90m)[K
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K[m
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+[K[?25hBackend server running on 3001
+::1 - - [11/Feb/2025:08:02:26 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[30;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:02:26 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[30;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:02:26 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[30;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:02:26 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[30;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[30;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+[?25l[HLoaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.lithium.com\connection-superOrg.json[K
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\[K
+Succesfully connected to the network.[K
+F:\blood-data-management-system\server\src\super-routes.js:20[K
+        const blockPendingDonorsResponse = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:blockPendingDonors', JSON.stringify(usernameArgs));[K
+                                                                                                                                                       ^[K
+[K
+ReferenceError: Cannot access 'usernameArgs' before initialization[K
+    at exports.getBlockedDonors [90m(F:\blood-data-management-system\server\[msrc\super-routes.js:20:145[90m)[K
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K[m
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+::1 - - [11/Feb/2025:08:02:26 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:02:26 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:02:26 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:02:26 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.lithium.com\connection-superOrg.json[K
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\[K
+[K
+[K[31;1H[?25hConnected to the database
+Succesfully connected to the network.
+<Buffer 7b 22 65 72 72 6f 72 22 3a 7b 7d 7d>
+<Buffer 7b 22 65 72 72 6f 72 22 3a 7b 7d 7d>
+2025-02-11T08:02:28.578Z - [31merror[m: [Endorser]: sendProposal[peer0.superOrg.lithium.com:11051] - rejecting with: Error: Broadcast Clien
+[31;133Hnt peer0.superOrg.lithium.com:11051 grpcs://localhost:11051 is not connected
+2025-02-11T08:02:28.581Z - [31merror[m: [SingleQueryHandler]: evaluate: message=Query failed. Errors: ["Error: Broadcast Client peer0.super
+[31;133HrOrg.lithium.com:11051 grpcs://localhost:11051 is not connected","Error: Peer peer1.superOrg.lithium.com:12051 is not running chaincod
+[31;133Hde donor","Error: Peer peer2.superOrg.lithium.com:13051 is not running chaincode donor"], stack=FabricError: Query failed. Errors: ["E
+[31;133HError: Broadcast Client peer0.superOrg.lithium.com:11051 grpcs://localhost:11051 is not connected","Error: Peer peer1.superOrg.lithium
+[31;133Hm.com:12051 is not running chaincode donor","Error: Peer peer2.superOrg.lithium.com:13051 is not running chaincode donor"]
+    at SingleQueryHandler.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-n
+[31;133Hnetwork\lib\impl\query\singlequeryhandler.js:70:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Transaction.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-ne
+[31;133Hetwork\lib\transaction.js:322:25)
+    at async exports.invoke (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:99:24)
+    at async exports.getBlockedDonors (F:\blood-data-management-system\server\src\super-routes.js:24:19), name=FabricError
+Failed to submit transaction: FabricError: Query failed. Errors: ["Error: Broadcast Client peer0.superOrg.lithium.com:11051 grpcs://l
+[31;133Hlocalhost:11051 is not connected","Error: Peer peer1.superOrg.lithium.com:12051 is not running chaincode donor","Error: Peer peer2.sup
+[31;133HperOrg.lithium.com:13051 is not running chaincode donor"]
+undefined:1
+[object Object]
+ ^
+
+SyntaxError: "[object Object]" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at exports.getBlockedDonors [90m(F:\blood-data-management-system\server\[msrc\super-routes.js:25:36[90m)[K[m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[m
+
+Node.js v20.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[m
+rs
+[32m[nodemon] starting `node src/server.js`[m
+Backend server running on 3001
+::1 - - [11/Feb/2025:08:12:44 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Connected to the database
+got this from redis password
+got this as pw password
+::1 - - [11/Feb/2025:08:12:44 +0000] "POST /login HTTP/1.1" 200 384 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:12:44 +0000] "OPTIONS /supers/2/HOSP2-SUP12227 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows
+[31;133Hs NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Attributes [
+  { name: [32m'hf.Revoker'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m}[K
+]
+Attributes [
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Everhart Hall'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Got all supers:  [
+  {
+    id: [32m'HOSP2-SUP12227'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Everhart Hall'[m,[K
+    address: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    phoneNumber: [32m'9073765654'[m,[K
+    emergPhoneNumber: [32m'8679236566'[m,[K
+    registration: [32m'12227'[K[m
+  },
+  {
+    id: [32m'HOSP1-SUP12226'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Peter Leavitt'[m,[K
+    address: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    phoneNumber: [32m'9008096755'[m,[K
+    emergPhoneNumber: [32m'9657834555'[m,[K
+    registration: [32m'12226'[K[m
+  }
+]
+::1 - - [11/Feb/2025:08:12:45 +0000] "GET /supers/2/HOSP2-SUP12227 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:12:55 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:12:55 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 65 72 72 6f 72 22 3a 7b 7d 7d>
+<Buffer 7b 22 65 72 72 6f 72 22 3a 7b 7d 7d>
+2025-02-11T08:12:55.665Z - [31merror[m: [Endorser]: sendProposal[peer0.superOrg.lithium.com:11051] - rejecting with: Error: Broadcast Clien
+[31;133Hnt peer0.superOrg.lithium.com:11051 grpcs://localhost:11051 is not connected
+2025-02-11T08:12:55.667Z - [31merror[m: [SingleQueryHandler]: evaluate: message=Query failed. Errors: ["Error: Broadcast Client peer0.super
+[31;133HrOrg.lithium.com:11051 grpcs://localhost:11051 is not connected","Error: Peer peer1.superOrg.lithium.com:12051 is not running chaincod
+[31;133Hde donor","Error: Peer peer2.superOrg.lithium.com:13051 is not running chaincode donor"], stack=FabricError: Query failed. Errors: ["E
+[31;133HError: Broadcast Client peer0.superOrg.lithium.com:11051 grpcs://localhost:11051 is not connected","Error: Peer peer1.superOrg.lithium
+[31;133Hm.com:12051 is not running chaincode donor","Error: Peer peer2.superOrg.lithium.com:13051 is not running chaincode donor"]
+    at SingleQueryHandler.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-n
+[31;133Hnetwork\lib\impl\query\singlequeryhandler.js:70:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Transaction.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-ne
+[31;133Hetwork\lib\transaction.js:322:25)
+    at async exports.invoke (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:99:24)
+    at async exports.getBlockedDonors (F:\blood-data-management-system\server\src\super-routes.js:24:19), name=FabricError
+Failed to submit transaction: FabricError: Query failed. Errors: ["Error: Broadcast Client peer0.superOrg.lithium.com:11051 grpcs://l
+[31;133Hlocalhost:11051 is not connected","Error: Peer peer1.superOrg.lithium.com:12051 is not running chaincode donor","Error: Peer peer2.sup
+[31;133HperOrg.lithium.com:13051 is not running chaincode donor"]
+undefined:1
+[object Object]
+ ^
+
+SyntaxError: "[object Object]" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at exports.getBlockedDonors [90m(F:\blood-data-management-system\server\[msrc\super-routes.js:25:36[90m)[K[m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[m
+
+Node.js v20.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[m
+rs
+[32m[nodemon] starting `node src/server.js`[m
+Backend server running on 3001
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+::1 - - [11/Feb/2025:08:29:48 +0000] "OPTIONS /supers/2/HOSP2-SUP12227 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows
+[31;133Hs NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:29:48 +0000] "GET /supers/2/HOSP2-SUP12227 HTTP/1.1" 403 50 "http://localhost:4200/" "Mozilla/5.0 (Windows NT
+[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:29:48 +0000] "OPTIONS /token HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [11/Feb/2025:08:29:48 +0000] "POST /token HTTP/1.1" 403 9 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+[31;133H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Connected to the database
+[?25l[HFailed to submit transaction: FabricError: Query failed. Errors: ["Error: Broadcast Client peer0.superOrg.lithium.com:11051 grpcs://localhost:11051 is not connected","Error: Peer peer1.superOrg.lithium.com:12051 is not running chaincode donor","Error: Peer peer2.superOrg.lithium.com:13051 is not running chaincode donor"][K
+undefined:1[K
+[object Object][K
+ ^[K
+[K
+SyntaxError: "[object Object]" is not valid JSON[K
+    at JSON.parse (<anonymous>)[K
+    at exports.getBlockedDonors [90m(F:\blood-data-management-system\server\[msrc\super-routes.js:25:36[90m)[K
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K[m
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[m
+rs[K[32m
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K
+Connected to the database[K
+Connected to the database[K
+Connected to the database[K
+::1 - - [11/Feb/2025:08:29:48 +0000] "OPTIONS /supers/2/HOSP2-SUP12227 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:29:48 +0000] "GET /supers/2/HOSP2-SUP12227 HTTP/1.1" 403 50 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:29:48 +0000] "OPTIONS /token HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:29:48 +0000] "POST /token HTTP/1.1" 403 9 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+Connected to the database[K
+[K[?25h[?25l[HFailed to submit transaction: FabricError: Query failed. Errors: ["Error: Broadcast Client peer0.superOrg.lithium.com:11051 grpcs://localhost:11051 is not connected","Error: Peer peer1.superOrg.lithium.com:12051 is not running chaincode donor","Error: Peer peer2.superOrg.lithium.com:13051 is not running chaincode donor"][K
+undefined:1[K
+[object Object][K
+ ^[K
+[K
+SyntaxError: "[object Object]" is not valid JSON[K
+    at JSON.parse (<anonymous>)[K
+    at exports.getBlockedDonors [90m(F:\blood-data-management-system\server\[msrc\super-routes.js:25:36[90m)[K
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K[m
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[m
+rs[K[32m
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K
+Connected to the database[K
+Connected to the database[K
+Connected to the database[K
+::1 - - [11/Feb/2025:08:29:48 +0000] "OPTIONS /supers/2/HOSP2-SUP12227 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:29:48 +0000] "GET /supers/2/HOSP2-SUP12227 HTTP/1.1" 403 50 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:29:48 +0000] "OPTIONS /token HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [11/Feb/2025:08:29:48 +0000] "POST /token HTTP/1.1" 403 9 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+Connected to the database[K
+[K
+[K[31;1H[?25hConnected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+F:\blood-data-management-system\server\src\databaseConnect.js:27
+            throw err;
+            ^
+
+Error: read ECONNRESET
+[90m    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) [m{[K
+  errno: [33m-4077[m,[K
+  code: [32m'ECONNRESET'[m,[K
+  syscall: [32m'read'[m,[K
+  fatal: [33mtrue[K[m
+}
+
+Node.js v20.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[m
+exit^C[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m exit
+exit
+
+Script done on 2025-02-11 14:49:08+05:30 [COMMAND_EXIT_CODE="1"]

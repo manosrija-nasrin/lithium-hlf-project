@@ -58,7 +58,7 @@ exports.registerAndEnrollUser = async (caClient, wallet, orgMspId, userId, admin
     const phoneNumber = attributes.phoneNumber;
     const emergPhoneNumber = attributes.emergPhoneNumber;
     const role = attributes.role;
-    const registration = (role === 'doctor')|| (role === 'technician')? attributes.registration : '';
+    const registration = (role === 'doctor' || role === 'technician' || role === 'super')? attributes.registration : '';
 
     const secret = await caClient.register({
       affiliation: affiliation,

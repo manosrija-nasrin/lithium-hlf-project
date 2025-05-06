@@ -1,0 +1,38 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+---
+################################################################################
+#
+#   Section: Organizations
+#
+#   - This section defines the different organizational identities which will
+#   be referenced later in the configuration.
+#
+################################################################################
+Organizations:
+  - &superOrg
+    # DefaultOrg defines the organization which is used in the sampleconfig
+    # of the fabric.git development environment
+    Name: superOrgMSP
+
+    # ID to load the MSP definition as
+    ID: superOrgMSP
+
+    MSPDir: ../organizations/peerOrganizations/superOrg.lithium.com/msp
+
+    Policies:
+      Readers:
+        Type: Signature
+        Rule: "OR('superOrgMSP.admin', 'superOrgMSP.peer', 'superOrgMSP.client')"
+      Writers:
+        Type: Signature
+        Rule: "OR('superOrgMSP.admin', 'superOrgMSP.client')"
+      Admins:
+        Type: Signature
+        Rule: "OR('superOrgMSP.admin')"
+      Endorsement:
+        Type: Signature
+        Rule: "OR('superOrgMSP.peer')"

@@ -50,6 +50,7 @@ class TechnicianContract extends PrimaryContract {
           await ctx.stub.putState(slipNo, Buffer.from(JSON.stringify(asset)));
         }
       }
+
       return { crossmatch: "false" };
     } else {
       await this.healthyReceiver(ctx, JSON.stringify(args));

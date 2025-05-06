@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# This script is designed to be run by addHosp3.sh as the
+# This script is designed to be run by addSuperOrg.sh as the
 # first step of the Adding an Org to a Channel tutorial.
 # It creates and submits a configuration transaction to
 # add hosp3 to the test network
@@ -38,7 +38,7 @@ fetchChannelConfig 1 ${CHANNEL_NAME} ${TEST_NETWORK_HOME}/channel-artifacts/conf
 
 # Modify the configuration to append the new org
 set -x
-jq -s '.[0] * {"channel_group":{"groups":{"Application":{"groups": {"Hosp3MSP":.[1]}}}}}' ${TEST_NETWORK_HOME}/channel-artifacts/config.json ${TEST_NETWORK_HOME}/organizations/peerOrganizations/hosp3.lithium.com/hosp3.json > ${TEST_NETWORK_HOME}/channel-artifacts/modified_config.json
+jq -s '.[0] * {"channel_group":{"groups":{"Application":{"groups": {"SuperOrgMSP":.[1]}}}}}' ${TEST_NETWORK_HOME}/channel-artifacts/config.json ${TEST_NETWORK_HOME}/organizations/peerOrganizations/hosp3.lithium.com/hosp3.json > ${TEST_NETWORK_HOME}/channel-artifacts/modified_config.json
 { set +x; } 2>/dev/null
 
 # Compute a config update, based on the differences between config.json and modified_config.json, write it as a transaction to hosp3_update_in_envelope.pb

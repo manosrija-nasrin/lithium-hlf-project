@@ -1,0 +1,1939 @@
+Script started on 2025-01-20 18:07:34+05:30 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd sr[Kerver/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start[K]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start[K]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> donor-application@1.0.0 prestart
+> node initServer.js[8;1H[?25h[KLoaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+An identity for the admin user already exists in the wallet
+msg: Successfully enrolled admin user hosp1admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+An identity for the admin user already exists in the wallet
+msg: Successfully enrolled admin user hosp2admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.lithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Failed to enroll admin user : Error: Calling enroll endpoint failed with error [AggregateError]
+msg: Successfully enrolled admin user superOrgadmin and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+An identity for the user PID0 already exists in the wallet
+Failed to register user PID0 : Error: An identity for the user PID0 already exists in the wallet
+Failed to register user "PID0": Error: Failed to register user PID0
+\[K[?9001l[?1004l[K]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> donor-application@1.0.0 prestart
+> node initServer.js[6;1H[?25h[KLoaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Failed to enroll admin user : Error: Calling enroll endpoint failed with error [AggregateError]
+msg: Successfully enrolled admin user hosp1admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Failed to enroll admin user : Error: Calling enroll endpoint failed with error [AggregateError]
+msg: Successfully enrolled admin user hosp2admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.lithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Failed to enroll admin user : Error: Calling enroll endpoint failed with error [AggregateError]
+msg: Successfully enrolled admin user superOrgadmin and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+An identity for the admin user hosp1admin does not exist in the wallet
+Failed to register user PID0 : Error: An identity for the admin user hosp1admin does not exist in the wallet
+Failed to register user "PID0": Error: Failed to register user PID0
+[K[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> donor-application@1.0.0 prestart
+> node initServer.js[6;1H[?25h[KLoaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Successfully enrolled admin user and imported it into the wallet
+msg: Successfully enrolled admin user hosp1admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Successfully enrolled admin user and imported it into the wallet
+msg: Successfully enrolled admin user hosp2admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.lithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Successfully enrolled admin user and imported it into the wallet
+msg: Successfully enrolled admin user superOrgadmin and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Successfully registered and enrolled user PID0 and imported it into the wallet
+msg: Successfully enrolled user PID0 and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Successfully registered and enrolled user PID1 and imported it into the wallet
+msg: Successfully enrolled user PID1 and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Successfully registered and enrolled user PID2 and imported it into the wallet
+msg: Successfully enrolled user PID2 and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+(node:6524) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 timeout listeners added to [TLSSocket]. Use e
+[31;133Hemitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+Successfully registered and enrolled user PID3 and imported it into the wallet
+msg: Successfully enrolled user PID3 and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Successfully registered and enrolled user PID4 and imported it into the wallet
+msg: Successfully enrolled user PID4 and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Successfully registered and enrolled user PID5 and imported it into the wallet
+msg: Successfully enrolled user PID5 and imported it into the wallet
+Done
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Successfully registered and enrolled user HOSP1-DOC32849 and imported it into the wallet
+msg: Successfully enrolled user HOSP1-DOC32849 and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
+[31;133Hium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+Successfully registered and enrolled user HOSP2-DOC32850 and imported it into the wallet
+msg: Successfully enrolled user HOSP2-DOC32850 and imported it into the wallet
+<Buffer 5b 0d 0a 09 7b 0d 0a 09 09 22 68 6f 73 70 69 74 61 6c 49 64 22 3a 20 22 32 22 2c 0d 0a 09 09 22 66 75 6c 6c 4e 61 6d 65 22 3a
+[31;133Ha 20 22 45 76 65 72 68 61 ... 371 more bytes>
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Successfully registered and enrolled user HOSP2-SUP12227 and imported it into the wallet
+msg: Successfully enrolled user HOSP2-SUP12227 and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Successfully registered and enrolled user HOSP1-SUP12226 and imported it into the wallet
+msg: Successfully enrolled user HOSP1-SUP12226 and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Successfully registered and enrolled user HOSP1-TECH123 and imported it into the wallet
+msg: Successfully enrolled user HOSP1-TECH123 and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
+[31;133Hium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+Successfully registered and enrolled user HOSP2-TECH124 and imported it into the wallet
+msg: Successfully enrolled user HOSP2-TECH124 and imported it into the wallet
+[K
+> donor-application@1.0.0 start
+> node node_modules/nodemon/bin/nodemon.js src/server.js
+
+[33m[nodemon] 1.19.4[m
+[33m[nodemon] to restart at any time, enter `rs`[m
+[33m[nodemon] watching dir(s): *.*[m
+[33m[nodemon] watching extensions: js,mjs,json[m
+[32m[nodemon] starting `node src/server.js`[m
+Backend server running on 3001
+Connected to the database
+[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Error connecting to database: Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:409:13[90m)[K[m
+[90m    at Object.onceWrapper (node:events:628:28)[m
+[90m    at Socket.emit (node:events:514:28)[m
+[90m    at Socket._onTimeout (node:net:589:8)[m
+[90m    at listOnTimeout (node:internal/timers:573:17)[m
+[90m    at process.processTimers (node:internal/timers:514:7)[m
+    --------------------
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
+    at Protocol.handshake [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:51:23[90m)[K[m
+    at Connection.connect [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:116:18[90m)[K[m
+    at handleDisconnect [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:14:16[90m)[K[m
+    at Object.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:35:1[90m)[K[m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1241:14)[m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)[m
+[90m    at Module.load (node:internal/modules/cjs/loader:1091:32)[m
+[90m    at Module._load (node:internal/modules/cjs/loader:938:12)[m
+[90m    at Module.require (node:internal/modules/cjs/loader:1115:19) [m{[K
+  errorno: [32m'ETIMEDOUT'[m,[K
+  code: [32m'ETIMEDOUT'[m,[K
+  syscall: [32m'connect'[m,[K
+  fatal: [33mtrue[K[m
+}
+Connected to the database
+Error creating BloodGroups table: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:212:16[90m)[K[m
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:138:13[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createBloodGroupTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:555:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:21:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Protocol.handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:369:14[90m)       [32;1H[m
+    at Connection._handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:418:18[90m) [m{[K
+  code: [32m'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR'[m,[K
+  fatal: [33mfalse[K[m
+}
+Error inserting blood groups: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:212:16[90m)[K[m
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:138:13[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createBloodGroupTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:564:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:21:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Protocol.handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:369:14[90m)       [32;1H[m
+    at Connection._handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:418:18[90m) [m{[K
+  code: [32m'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR'[m,[K
+  fatal: [33mfalse[K[m
+}
+Error creating table: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:212:16[90m)[K[m
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:138:13[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createBloodTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:66:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:22:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Protocol.handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:369:14[90m)       [32;1H[m
+    at Connection._handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:418:18[90m) [m{[K
+  code: [32m'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR'[m,[K
+  fatal: [33mfalse[K[m
+}
+Error creating table: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:212:16[90m)[K[m
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:138:13[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createHospitalTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:443:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:23:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Protocol.handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:369:14[90m)       [32;1H[m
+    at Connection._handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:418:18[90m) [m{[K
+  code: [32m'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR'[m,[K
+  fatal: [33mfalse[K[m
+}
+Error connecting to database: Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:409:13[90m)[K[m
+[90m    at Object.onceWrapper (node:events:628:28)[m
+[90m    at Socket.emit (node:events:514:28)[m
+[90m    at Socket._onTimeout (node:net:589:8)[m
+[90m    at listOnTimeout (node:internal/timers:573:17)[m
+[90m    at process.processTimers (node:internal/timers:514:7)[m
+    --------------------
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
+    at Protocol.handshake [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:51:23[90m)[K[m
+    at Connection.connect [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:116:18[90m)[K[m
+    at Timeout.handleDisconnect [as _onTimeout] [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:14:16[90m)[K[m
+[90m    at listOnTimeout (node:internal/timers:573:17)[m
+[90m    at process.processTimers (node:internal/timers:514:7) [m{[K
+  errorno: [32m'ETIMEDOUT'[m,[K
+  code: [32m'ETIMEDOUT'[m,[K
+  syscall: [32m'connect'[m,[K
+  fatal: [33mtrue[K[m
+}
+Connected to the database
+Error creating BloodGroups table: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:212:16[90m)[K[m
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:138:13[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createBloodGroupTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:555:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:21:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Protocol.handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:369:14[90m)       [32;1H[m
+    at Connection._handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:418:18[90m) [m{[K
+  code: [32m'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR'[m,[K
+  fatal: [33mfalse[K[m
+}
+Error inserting blood groups: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:212:16[90m)[K[m
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:138:13[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createBloodGroupTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:564:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:21:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Protocol.handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:369:14[90m)       [32;1H[m
+    at Connection._handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:418:18[90m) [m{[K
+  code: [32m'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR'[m,[K
+  fatal: [33mfalse[K[m
+}
+Error creating table: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:212:16[90m)[K[m
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:138:13[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createBloodTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:66:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:22:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Protocol.handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:369:14[90m)       [32;1H[m
+    at Connection._handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:418:18[90m) [m{[K
+  code: [32m'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR'[m,[K
+  fatal: [33mfalse[K[m
+}
+Error creating table: Error: Cannot enqueue Query after fatal error.
+    at Protocol._validateEnqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:212:16[90m)[K[m
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:138:13[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createHospitalTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:443:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:23:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Protocol.handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:369:14[90m)       [32;1H[m
+    at Connection._handleNetworkError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:418:18[90m) [m{[K
+  code: [32m'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR'[m,[K
+  fatal: [33mfalse[K[m
+}
+Connected to the database
+Error creating BloodGroups table: Error: ER_TABLE_EXISTS_ERROR: Table 'BloodGroups' already exists
+    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
+    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
+    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
+    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
+    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
+    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
+    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
+    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+[90m    at Socket.emit (node:events:514:28)[m
+[90m    at addChunk (node:internal/streams/readable:376:12)[m
+    --------------------
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createBloodGroupTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:555:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:21:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Sequence.OkPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:92:8[90m)[K[m
+    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
+    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m) [m{[K
+  code: [32m'ER_TABLE_EXISTS_ERROR'[m,[K
+  errno: [33m1050[m,[K
+  sqlMessage: [32m"Table 'BloodGroups' already exists"[m,[K
+  sqlState: [32m'42S01'[m,[K
+  index: [33m0[m,[K
+  sql: [32m'CREATE TABLE BloodGroups (GroupType VARCHAR(3) PRIMARY KEY);'[K[m
+}
+Error inserting blood groups: Error: ER_DUP_ENTRY: Duplicate entry 'A+' for key 'BloodGroups.PRIMARY'
+    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
+    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
+    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
+    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
+    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
+    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
+    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
+    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+[90m    at Socket.emit (node:events:514:28)[m
+[90m    at addChunk (node:internal/streams/readable:376:12)[m
+    --------------------
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createBloodGroupTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:564:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:21:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Sequence.OkPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:92:8[90m)[K[m
+    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
+    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m) [m{[K
+  code: [32m'ER_DUP_ENTRY'[m,[K
+  errno: [33m1062[m,[K
+  sqlMessage: [32m"Duplicate entry 'A+' for key 'BloodGroups.PRIMARY'"[m,[K
+  sqlState: [32m'23000'[m,[K
+  index: [33m0[m,[K
+  sql: [32m"INSERT INTO BloodGroups (GroupType) VALUES ('A+'), ('A-'), ('B+'), ('B-'), ('AB+'), ('AB-'), ('O+'), ('O-');"[K[m
+}
+Error creating table: Error: ER_TABLE_EXISTS_ERROR: Table 'HLFBloodStore' already exists
+    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
+    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
+    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
+    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
+    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
+    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
+    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
+    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+[90m    at Socket.emit (node:events:514:28)[m
+[90m    at addChunk (node:internal/streams/readable:376:12)[m
+    --------------------
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createBloodTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:66:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:22:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Sequence.OkPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:92:8[90m)[K[m
+    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
+    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m) [m{[K
+  code: [32m'ER_TABLE_EXISTS_ERROR'[m,[K
+  errno: [33m1050[m,[K
+  sqlMessage: [32m"Table 'HLFBloodStore' already exists"[m,[K
+  sqlState: [32m'42S01'[m,[K
+  index: [33m0[m,[K
+  sql: [32m'\n' [m+[K
+    [32m'       CREATE TABLE HLFBloodStore (\n' [m+[K
+    [32m'\t    BagUnitNo VARCHAR(100),\n' [m+[K
+    [32m'\t    BagSegmentNo VARCHAR(100),\n' [m+[K
+    [32m'\t    HospitalName VARCHAR(100),\n' [m+[K
+    [32m'\t    DateOfCollection DATE,\n' [m+[K
+    [32m'\t    DateOfExpiry DATE,\n' [m+[K
+    [32m'\t    Quantity INT,\n' [m+[K
+    [32m'\t    BloodGroup VARCHAR(7),\n' [m+[K
+    [32m'        Allocated VARCHAR(100),\n' [m+[K
+    [32m'        CrossMatched VARCHAR(100),\n' [m+[K
+    [32m'        AllocatedTo VARCHAR(100),\n' [m+[K
+    [32m'        Donated VARCHAR(100),\n' [m+[K
+    [32m'        DonationDate VARCHAR(100),\n' [m+[K
+    [32m'\t    PRIMARY KEY (BagUnitNo, BagSegmentNo),\n' [m+[K
+    [32m'\t    FOREIGN KEY (HospitalName) REFERENCES Hospital(HospitalName)\n' [m+[K
+    [32m'\t);\n' [m+[K
+    [32m'    '[K[m
+}
+Error creating table: Error: ER_TABLE_EXISTS_ERROR: Table 'Hospital' already exists
+    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
+    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
+    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
+    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
+    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
+    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
+    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
+    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+[90m    at Socket.emit (node:events:514:28)[m
+[90m    at addChunk (node:internal/streams/readable:376:12)[m
+    --------------------
+    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
+    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
+    at createHospitalTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:443:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:23:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Sequence.OkPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:92:8[90m)[K[m
+    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
+    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m) [m{[K
+  code: [32m'ER_TABLE_EXISTS_ERROR'[m,[K
+  errno: [33m1050[m,[K
+  sqlMessage: [32m"Table 'Hospital' already exists"[m,[K
+  sqlState: [32m'42S01'[m,[K
+  index: [33m0[m,[K
+  sql: [32m'\n' [m+[K
+    [32m'       CREATE TABLE Hospital (\n' [m+[K
+    [32m'\t    HospitalName VARCHAR(100) PRIMARY KEY,\n' [m+[K
+    [32m'\t    City VARCHAR(50),\n' [m+[K
+    [32m'\t    Area VARCHAR(50),\n' [m+[K
+    [32m'\t    Latitude VARCHAR(50),\n' [m+[K
+    [32m'\t    Longitude VARCHAR(50),\n' [m+[K
+    [32m'\t    Address VARCHAR(50)\n' [m+[K
+    [32m'            );\n' [m+[K
+    [32m'    '[K[m
+}
+[32m[nodemon] restarting due to changes...[m
+
+[?25l[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[m[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+[?25l[8;31;133t[H    at createHospitalTable [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:443:16[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:23:9[90m)[K[m
+    at Handshake.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
+    at Handshake._callback [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:488:16[90m)[K[m
+    at Sequence.end [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:83:24[90m)[K[m
+    at Sequence.OkPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:92:8[90m)[K[m
+    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
+    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m) [m{[K
+  code: [32m'ER_TABLE_EXISTS_ERROR'[m,[K
+  errno: [33m1050[m,[K
+  sqlMessage: [32m"Table 'Hospital' already exists"[m,[K
+  sqlState: [32m'42S01'[m,[K
+  index: [33m0[m,[K
+  sql: [32m'\n' [m+[K
+    [32m'       CREATE TABLE Hospital (\n' [m+[K
+    [32m'\t    HospitalName VARCHAR(100) PRIMARY KEY,\n' [m+[K
+    [32m'\t    City VARCHAR(50),\n' [m+[K
+    [32m'\t    Area VARCHAR(50),\n' [m+[K
+    [32m'\t    Latitude VARCHAR(50),\n' [m+[K
+    [32m'\t    Longitude VARCHAR(50),\n' [m+[K
+    [32m'\t    Address VARCHAR(50)\n' [m+[K
+    [32m'            );\n' [m+[K
+    [32m'    '[K[m
+}[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K
+[K[?25h[32m[nodemon] restarting due to changes...[m
+[?25l
+[30;1H[?25h[32m[nodemon] restarting due to changes...
+[m[32m[nodemon] starting `node src/server.js`[m
+Backend server running on 3001
+Connected to the database
+[32m[nodemon] restarting due to changes...[m
+[?25l
+[30;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+[?25l[H  code: [32m'ER_TABLE_EXISTS_ERROR'[m,[K
+  errno: [33m1050[m,[K
+  sqlMessage: [32m"Table 'Hospital' already exists"[m,[K
+  sqlState: [32m'42S01'[m,[K
+  index: [33m0[m,[K
+  sql: [32m'\n' [m+[K
+    [32m'       CREATE TABLE Hospital (\n' [m+[K
+    [32m'\t    HospitalName VARCHAR(100) PRIMARY KEY,\n' [m+[K
+    [32m'\t    City VARCHAR(50),\n' [m+[K
+    [32m'\t    Area VARCHAR(50),\n' [m+[K
+    [32m'\t    Latitude VARCHAR(50),\n' [m+[K
+    [32m'\t    Longitude VARCHAR(50),\n' [m+[K
+    [32m'\t    Address VARCHAR(50)\n' [m+[K
+    [32m'            );\n' [m+[K
+    [32m'    '[K[m
+}[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+[K
+[K[31;1H[?25hConnected to the database
+bloodBagStore table: [
+  RowDataPacket {
+    BagUnitNo: [32m'10'[m,[K
+    BagSegmentNo: [32m'10'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-12T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-09T18:30:00.000Z[m,[K
+    Quantity: [33m150[m,[K
+    BloodGroup: [32m'O+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'101'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'100'[m,[K
+    BagSegmentNo: [32m'23'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-15T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-13T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'O+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'101'[m,[K
+    BagSegmentNo: [32m'101'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-15T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-13T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'O-'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'102'[m,[K
+    BagSegmentNo: [32m'102'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'A-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'17'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'104'[m,[K
+    BagSegmentNo: [32m'104'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'AB-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'99'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'105'[m,[K
+    BagSegmentNo: [32m'105'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'A-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'93'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'1059'[m,[K
+    BagSegmentNo: [32m'1059'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-29T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-26T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'O+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'106'[m,[K
+    BagSegmentNo: [32m'106'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'B-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'18'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'107'[m,[K
+    BagSegmentNo: [32m'107'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'A+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'19'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'108'[m,[K
+    BagSegmentNo: [32m'108'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'31'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'109'[m,[K
+    BagSegmentNo: [32m'109'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'21'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'110'[m,[K
+    BagSegmentNo: [32m'110'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-22T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-19T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'O+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'1002'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'111'[m,[K
+    BagSegmentNo: [32m'111'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'17'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'113'[m,[K
+    BagSegmentNo: [32m'113'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'A-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'17'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'114'[m,[K
+    BagSegmentNo: [32m'114'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'21'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'115'[m,[K
+    BagSegmentNo: [32m'115'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'O+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'116'[m,[K
+    BagSegmentNo: [32m'116'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'22'[m,
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'117'[m,[K
+    BagSegmentNo: [32m'117'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-17T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'94'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'120'[m,[K
+    BagSegmentNo: [32m'120'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-22T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-19T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'15'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'130'[m,[K
+    BagSegmentNo: [32m'130'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-22T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-19T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'15'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'140'[m,[K
+    BagSegmentNo: [32m'140'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-10-23T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-02-20T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'B-'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'140'[m,[K
+    BagSegmentNo: [32m'30'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-09T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-07T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'14'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-20'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'20'[m,[K
+    BagSegmentNo: [32m'20'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-12T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-09T18:30:00.000Z[m,[K
+    Quantity: [33m80[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'1002'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'201'[m,[K
+    BagSegmentNo: [32m'201'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-13T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-10T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'O+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'101'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'202'[m,[K
+    BagSegmentNo: [32m'202'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-11-05T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-05T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'A+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'203'[m,[K
+    BagSegmentNo: [32m'203'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-11-05T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-05T18:30:00.000Z[m,[K
+    Quantity: [33m200[m,[K
+    BloodGroup: [32m'AB-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'99'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'204'[m,[K
+    BagSegmentNo: [32m'204'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-11-05T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-05T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'A-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'96'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'205'[m,[K
+    BagSegmentNo: [32m'205'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-11-05T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-05T18:30:00.000Z[m,[K
+    Quantity: [33m200[m,[K
+    BloodGroup: [32m'O-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'98'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'210'[m,[K
+    BagSegmentNo: [32m'210'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-11-05T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-05T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'A-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'97'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'29'[m,[K
+    BagSegmentNo: [32m'29'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-18T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-15T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'1003'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'30'[m,[K
+    BagSegmentNo: [32m'30'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-12T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-09T18:30:00.000Z[m,[K
+    Quantity: [33m100[m,[K
+    BloodGroup: [32m'ab+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'2222'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-05-30'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'300'[m,[K
+    BagSegmentNo: [32m'300'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-25T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-22T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'O+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'301'[m,[K
+    BagSegmentNo: [32m'301'[m,[K
+    HospitalName: [32m'hospital 2'[m,[K
+    DateOfCollection: [35m2024-11-16T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-16T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'A-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'92'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'302'[m,[K
+    BagSegmentNo: [32m'302'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-11-16T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-16T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'310'[m,[K
+    BagSegmentNo: [32m'310'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-11-05T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-05T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'AB-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'85'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'38'[m,[K
+    BagSegmentNo: [32m'120'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-28T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-25T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'30'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-08'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'400'[m,[K
+    BagSegmentNo: [32m'39'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-07T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-05T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'A+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-08'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'420'[m,[K
+    BagSegmentNo: [32m'16'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-05T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-03T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'421'[m,[K
+    BagSegmentNo: [32m'56'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-09-05T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-01-03T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'54'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'444'[m,[K
+    BagSegmentNo: [32m'444'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-26T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-23T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'15'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'450'[m,[K
+    BagSegmentNo: [32m'450'[m,[K
+    HospitalName: [32m'hospital 2'[m,[K
+    DateOfCollection: [35m2024-11-16T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-16T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'460'[m,[K
+    BagSegmentNo: [32m'460'[m,[K
+    HospitalName: [32m'hospital 2'[m,[K
+    DateOfCollection: [35m2024-11-16T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-16T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'B-'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'465'[m,[K
+    BagSegmentNo: [32m'465'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-11-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-19T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'AB-'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'470'[m,[K
+    BagSegmentNo: [32m'470'[m,[K
+    HospitalName: [32m'hospital 2'[m,[K
+    DateOfCollection: [35m2024-11-16T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-16T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'A-'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'472'[m,[K
+    BagSegmentNo: [32m'472'[m,[K
+    HospitalName: [32m'hospital 2'[m,[K
+    DateOfCollection: [35m2024-11-16T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-16T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'AB-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'89'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'475'[m,[K
+    BagSegmentNo: [32m'475'[m,[K
+    HospitalName: [32m'hospital 2'[m,[K
+    DateOfCollection: [35m2024-11-16T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-16T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'AB-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'55'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'480'[m,[K
+    BagSegmentNo: [32m'480'[m,[K
+    HospitalName: [32m'hospital 2'[m,[K
+    DateOfCollection: [35m2024-11-16T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-16T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'550'[m,[K
+    BagSegmentNo: [32m'550'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-12-17T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-04-16T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'A-'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'590'[m,[K
+    BagSegmentNo: [32m'590'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-25T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-22T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'O+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'1002'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'600'[m,[K
+    BagSegmentNo: [32m'600'[m,[K
+    HospitalName: [32m'hospital 2'[m,[K
+    DateOfCollection: [35m2024-11-19T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-03-19T18:30:00.000Z[m,[K
+    Quantity: [33m400[m,[K
+    BloodGroup: [32m'AB-'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'63'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-12-18'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'640'[m,[K
+    BagSegmentNo: [32m'640'[m,[K
+    HospitalName: [32m'hospital 2'[m,[K
+    DateOfCollection: [35m2024-12-17T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2025-04-16T18:30:00.000Z[m,[K
+    Quantity: [33m300[m,[K
+    BloodGroup: [32m'AB-'[m,[K
+    Allocated: [32m'false'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m''[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'660'[m,[K
+    BagSegmentNo: [32m'76'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-18T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-15T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'O+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'1003'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'80'[m,[K
+    BagSegmentNo: [32m'80'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-12T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-09T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'25'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },
+  RowDataPacket {
+    BagUnitNo: [32m'990'[m,[K
+    BagSegmentNo: [32m'990'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-17T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-14T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'1003'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  }
+]
+[?25l[H  },[K
+  RowDataPacket {[K
+    BagUnitNo: [32m'80'[m,[K
+    BagSegmentNo: [32m'80'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-12T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-09T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'25'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },[K
+  RowDataPacket {[K
+    BagUnitNo: [32m'990'[m,[K
+    BagSegmentNo: [32m'990'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-17T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-14T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'1003'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  }[K
+][K
+[K[?25h[32m[nodemon] restarting due to changes...[m
+[?25l
+[30;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+[?25l[H    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-12T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-09T18:30:00.000Z[m,[K
+    Quantity: [33m500[m,[K
+    BloodGroup: [32m'B+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'25'[m,[K
+    Donated: [32m'false'[m,[K
+    DonationDate: [32m''[K[m
+  },[K
+  RowDataPacket {[K
+    BagUnitNo: [32m'990'[m,[K
+    BagSegmentNo: [32m'990'[m,[K
+    HospitalName: [32m'hospital 1'[m,[K
+    DateOfCollection: [35m2024-05-17T18:30:00.000Z[m,[K
+    DateOfExpiry: [35m2024-09-14T18:30:00.000Z[m,[K
+    Quantity: [33m350[m,[K
+    BloodGroup: [32m'AB+'[m,[K
+    Allocated: [32m'true'[m,[K
+    CrossMatched: [32m'false'[m,[K
+    AllocatedTo: [32m'1003'[m,[K
+    Donated: [32m'true'[m,[K
+    DonationDate: [32m'2024-09-10'[K[m
+  }[K
+][K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K
+[K
+[K[31;1H[?25hConnected to the database
+[32m[nodemon] restarting due to changes...[m
+
+[?25l[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[m[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+rs
+[32m[nodemon] starting `node src/server.js`[m
+Backend server running on 3001
+Connected to the database
+^C\[K[K[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> donor-application@1.0.0 prestart
+> node initServer.js[6;1H[?25h[KDone
+Done
+[?25l[K
+> donor-application@1.0.0 start
+> node node_modules/nodemon/bin/nodemon.js src/server.js[12;1H[K[?25h[33m[nodemon] 1.19.4
+[m[33m[nodemon] to restart at any time, enter `rs`
+[nodemon] watching dir(s): *.*
+[nodemon] watching extensions: js,mjs,json[32m
+[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+[32m[nodemon] restarting due to changes...
+[m[32m[nodemon] starting `node src/server.js`
+[m[32m[nodemon] restarting due to changes...
+[m[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+::1 - - [20/Jan/2025:14:00:00 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+got this from redis superOrglithium
+got this as pw superOrglithium
+::1 - - [20/Jan/2025:14:00:00 +0000] "POST /login HTTP/1.1" 200 381 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [20/Jan/2025:14:00:05 +0000] "OPTIONS /supers/3/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [20/Jan/2025:14:00:05 +0000] "OPTIONS /supers/3/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; 
+[31;133H Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Attributes [
+  { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Revoker'[m, value: [32m'1' [m}[K
+]
+Attributes [
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Everhart Hall'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Supers: []
+::1 - - [20/Jan/2025:14:00:06 +0000] "GET /supers/3/_all HTTP/1.1" 200 2 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win6
+[31;133H64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Attributes [
+  { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Revoker'[m, value: [32m'1' [m}[K
+]
+Attributes [
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Everhart Hall'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Supers: []
+::1 - - [20/Jan/2025:14:00:07 +0000] "GET /supers/3/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win6
+[31;133H64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+[?25l[8;31;133t[H    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },[K
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+][K
+Attributes [[K
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {[K
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },[K
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+][K
+Supers: [][K
+::1 - - [20/Jan/2025:14:00:07 +0000] "GET /supers/3/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+[K[?25h::1 - - [20/Jan/2025:14:01:51 +0000] "OPTIONS /doctors/3/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0;
+[30;133H; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [20/Jan/2025:14:01:51 +0000] "OPTIONS /doctors/3/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0;
+[30;133H; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[30;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[30;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Attributes [
+  { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Revoker'[m, value: [32m'1' [m}[K
+]
+Attributes [
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Everhart Hall'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Supers: []
+::1 - - [20/Jan/2025:14:01:51 +0000] "GET /doctors/3/_all HTTP/1.1" 200 2 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
+[30;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[30;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[30;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Attributes [
+  { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Revoker'[m, value: [32m'1' [m}[K
+]
+Attributes [
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Everhart Hall'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Supers: []
+::1 - - [20/Jan/2025:14:01:52 +0000] "GET /doctors/3/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
+[30;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+[?25l[H    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },[K
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+][K
+Attributes [[K
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {[K
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },[K
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+][K
+Supers: [][K
+::1 - - [20/Jan/2025:14:01:52 +0000] "GET /doctors/3/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+[K
+[K[31;1H[?25h[?25l[H    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },[K
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+][K
+Attributes [[K
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {[K
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },[K
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+][K
+Supers: [][K
+::1 - - [20/Jan/2025:14:01:52 +0000] "GET /doctors/3/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+[K[?25h::1 - - [20/Jan/2025:14:02:02 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
+[30;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [20/Jan/2025:14:02:02 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[30;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [20/Jan/2025:14:02:11 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[30;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+got this from redis hosp1lithium
+got this as pw hosp1lithium
+::1 - - [20/Jan/2025:14:02:11 +0000] "POST /login HTTP/1.1" 200 373 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[30;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [20/Jan/2025:14:02:12 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[30;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [20/Jan/2025:14:02:12 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[30;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[30;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[30;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[30;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[30;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+An identity for the doctorID: supeOrgadmin does not exist in the wallet
+Create the doctorID before retrying
+2025-01-20T14:02:13.567Z - [31merror[m: [SingleQueryHandler]: evaluate: message=Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com
+[30;133Hm:7051 is not running chaincode donor"], stack=FabricError: Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com:7051 is not ru
+[30;133Hunning chaincode donor"]
+    at SingleQueryHandler.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-n
+[30;133Hnetwork\lib\impl\query\singlequeryhandler.js:70:23)
+    at async Transaction.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-ne
+[30;133Hetwork\lib\transaction.js:322:25)
+    at async exports.invoke (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:59:24)
+    at async exports.getAllDonors (F:\blood-data-management-system\server\src\admin-routes.js:244:20), name=FabricError
+Failed to submit transaction: FabricError: Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com:7051 is not running chaincode 
+[30;133H donor"]
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[30;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
+[30;133Hium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257
+  const users = networkObj.gateway.identityContext.user;
+                                   ^
+
+TypeError: Cannot read properties of undefined (reading 'identityContext')
+    at exports.getAllSupers (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257:36)
+    at exports.getAllDonors [90m(F:\blood-data-management-system\server\[msrc\admin-routes.js:252:29[90m)[K[m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[m
+
+Node.js v20.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[m
+[?25l[HAn identity for the doctorID: supeOrgadmin does not exist in the wallet[K
+Create the doctorID before retrying[K
+2025-01-20T14:02:13.567Z - [31merror[m: [SingleQueryHandler]: evaluate: message=Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com:7051 is not running chaincode donor"], stack=FabricError: Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com:7051 is not running chaincode donor"][K
+    at SingleQueryHandler.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-network\lib\impl\query\singlequeryhandler.js:70:23)[K
+    at async Transaction.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-network\lib\transaction.js:322:25)[K
+    at async exports.invoke (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:59:24)[K
+    at async exports.getAllDonors (F:\blood-data-management-system\server\src\admin-routes.js:244:20), name=FabricError[K
+Failed to submit transaction: FabricError: Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com:7051 is not running chaincode donor"][K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a CA Client named ca-hosp1[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithium.com\connection-hosp2.json[K
+Built a CA Client named ca-hosp2[K
+F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257[K
+  const users = networkObj.gateway.identityContext.user;[K
+                                   ^[K
+[K
+TypeError: Cannot read properties of undefined (reading 'identityContext')[K
+    at exports.getAllSupers (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257:36)[K
+    at exports.getAllDonors [90m(F:\blood-data-management-system\server\[msrc\admin-routes.js:252:29[90m)[K
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K[m
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[m
+[K
+[K[31;1H[?25h[?25l[HAn identity for the doctorID: supeOrgadmin does not exist in the wallet[K
+Create the doctorID before retrying[K
+2025-01-20T14:02:13.567Z - [31merror[m: [SingleQueryHandler]: evaluate: message=Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com:7051 is not running chaincode donor"], stack=FabricError: Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com:7051 is not running chaincode donor"][K
+    at SingleQueryHandler.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-network\lib\impl\query\singlequeryhandler.js:70:23)[K
+    at async Transaction.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-network\lib\transaction.js:322:25)[K
+    at async exports.invoke (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:59:24)[K
+    at async exports.getAllDonors (F:\blood-data-management-system\server\src\admin-routes.js:244:20), name=FabricError[K
+Failed to submit transaction: FabricError: Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com:7051 is not running chaincode donor"][K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a CA Client named ca-hosp1[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithium.com\connection-hosp2.json[K
+Built a CA Client named ca-hosp2[K
+F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257[K
+  const users = networkObj.gateway.identityContext.user;[K
+                                   ^[K
+[K
+TypeError: Cannot read properties of undefined (reading 'identityContext')[K
+    at exports.getAllSupers (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257:36)[K
+    at exports.getAllDonors [90m(F:\blood-data-management-system\server\[msrc\admin-routes.js:252:29[90m)[K
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K[m
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[m
+[K[?25h[32m[nodemon] restarting due to changes...[m
+[32m[nodemon] starting `node src/server.js`[m
+[32m[nodemon] restarting due to changes...[m
+[?25l
+[30;1H[?25h[32m[nodemon] starting `node src/server.js`
+[m[?25l[Hnning chaincode donor"][K
+    at SingleQueryHandler.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-network\lib\impl\query\singlequeryhandler.js:70:23)[K
+    at async Transaction.evaluate (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-network\lib\transaction.js:322:25)[K
+    at async exports.invoke (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:59:24)[K
+    at async exports.getAllDonors (F:\blood-data-management-system\server\src\admin-routes.js:244:20), name=FabricError[K
+Failed to submit transaction: FabricError: Query failed. Errors: ["Error: Peer peer0.hosp1.lithium.com:7051 is not running chaincode donor"][K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a CA Client named ca-hosp1[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithium.com\connection-hosp2.json[K
+Built a CA Client named ca-hosp2[K
+F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257[K
+  const users = networkObj.gateway.identityContext.user;[K
+                                   ^[K
+[K
+TypeError: Cannot read properties of undefined (reading 'identityContext')[K
+    at exports.getAllSupers (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257:36)[K
+    at exports.getAllDonors [90m(F:\blood-data-management-system\server\[msrc\admin-routes.js:252:29[90m)[K
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K[m
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+[K
+[K[31;1H[?25hBackend server running on 3001
+Connected to the database
+[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] restarting due to changes...
+[m[32m[nodemon] starting `node src/server.js`[m
+Backend server running on 3001
+Connected to the database
+::1 - - [20/Jan/2025:15:52:32 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
+[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [20/Jan/2025:15:52:32 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+::1 - - [20/Jan/2025:15:52:37 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+got this from redis [1mnull[22m
+got this as pw hosp1lithium
+::1 - - [20/Jan/2025:15:52:39 +0000] "POST /login HTTP/1.1" 400 43 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64
+[31;133H4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+[?25l[H                                   ^[K
+[K
+TypeError: Cannot read properties of undefined (reading 'identityContext')[K
+    at exports.getAllSupers (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257:36)[K
+    at exports.getAllDonors [90m(F:\blood-data-management-system\server\[msrc\admin-routes.js:252:29[90m)[K
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K[m
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K
+::1 - - [20/Jan/2025:15:52:32 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [20/Jan/2025:15:52:32 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [20/Jan/2025:15:52:37 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+got this from redis [1mnull[22m[K
+got this as pw hosp1lithium[K
+::1 - - [20/Jan/2025:15:52:39 +0000] "POST /login HTTP/1.1" 400 43 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+[K[?25h[?25l[H                                   ^[K
+[K
+TypeError: Cannot read properties of undefined (reading 'identityContext')[K
+    at exports.getAllSupers (F:\blood-data-management-system\donor-asset-transfer\application-javascript\app.js:257:36)[K
+    at exports.getAllDonors [90m(F:\blood-data-management-system\server\[msrc\admin-routes.js:252:29[90m)[K
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K[m
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K[32m
+[nodemon] restarting due to changes...[K
+[nodemon] restarting due to changes...[K
+[nodemon] starting `node src/server.js`[K[m
+Backend server running on 3001[K
+Connected to the database[K
+::1 - - [20/Jan/2025:15:52:32 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [20/Jan/2025:15:52:32 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+::1 - - [20/Jan/2025:15:52:37 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+got this from redis [1mnull[22m[K
+got this as pw hosp1lithium[K
+::1 - - [20/Jan/2025:15:52:39 +0000] "POST /login HTTP/1.1" 400 43 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"[K
+[K
+[K[31;1H[?25h^C[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
+WSL 1 is not supported. Please upgrade to WSL 2 or above.
+Could not determine Node.js install directory
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
+WSL 1 is not supported. Please upgrade to WSL 2 or above.
+Could not determine Node.js install directory
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m exot[K[Kit
+exit
+
+Script done on 2025-01-20 21:23:02+05:30 [COMMAND_EXIT_CODE="1"]

@@ -6,14 +6,14 @@ const {Gateway, Wallets} = require('fabric-network');
 const FabricCAServices = require('fabric-ca-client');
 const path = require('path');
 const {buildCAClient, registerAndEnrollUser, deleteAndRevokeUser} = require('./CAUtil.js');
-const {buildCCPHosp3, buildCCPHosp2, buildCCPHosp1, buildWallet} = require('./AppUtil.js');
+const {buildCCPSuperOrg, buildCCPHosp2, buildCCPHosp1, buildWallet} = require('./AppUtil.js');
 const http = require('http');
 
 const channelName = 'receiverchannel';
 const chaincodeName = 'receiver';
 const mspOrg1 = 'hosp1MSP';
 const mspOrg2 = 'hosp2MSP';
-const mspOrg3 = 'hosp3MSP';
+const mspOrg3 = 'superOrgMSP';
 const walletPath = path.join(__dirname, 'wallet');
 const caUrl = 'https://localhost:7054'; 
 
@@ -45,7 +45,7 @@ exports.connectToNetwork = async function(doctorID) {
 
     /**
     * setup the gateway instance
-    * he user will now be able to create connections to the fabric network and be able to
+    * the user will now be able to create connections to the fabric network and be able to
     * submit transactions and query. All transactions submitted by this gateway will be
     * signed by this user using the credentials stored in the wallet.
     */

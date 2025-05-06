@@ -1,10 +1,10 @@
 /**
- * @desc Add admin of Hosp3. Execute node addHosp3.js to execute
+ * @desc Add admin of SuperOrg. Execute node addSuperOrg.js to execute
  */
 
 
 /* eslint-disable new-cap */
-const {enrollAdminHosp3} = require('./enrollAdmin-Hospital3');
+const {enrollAdminSuperOrg} = require('./enrollAdmin-superOrg');
 const redis = require('redis');
 
 /**
@@ -12,10 +12,10 @@ const redis = require('redis');
  */
 async function initRedis3() {
   redisUrl = 'redis://127.0.0.1:6381';
-  redisPassword = 'hosp3lithium';
+  redisPassword = 'superOrglithium';
   redisClient = redis.createClient(redisUrl);
   redisClient.AUTH(redisPassword);
-  redisClient.SET('hosp3admin', redisPassword);
+  redisClient.SET('superOrgadmin', redisPassword);
   console.log('Done');
   redisClient.QUIT();
   return;
@@ -25,7 +25,7 @@ async function initRedis3() {
  * @description enrol admin of hospital 3
  */
 async function main() {
-  await enrollAdminHosp3();
+  await enrollAdminSuperOrg();
   await initRedis3();
 }
 

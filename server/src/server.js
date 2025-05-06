@@ -366,7 +366,7 @@ app.get(
 app.get(
   "/doctors/:hospitalId([0-9]+)/_all",
   authenticateJWT,
-  adminRoutes.getSupersByHospitalId
+  adminRoutes.getDoctorsByHospitalId
 );
 app.patch(
   "/donors/:donorId/grant/:doctorId",

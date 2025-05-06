@@ -1,0 +1,19 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+networks:
+  hospital:
+    name: hospital
+    external: true
+
+services:
+  redis3:
+    image: "redis:latest"
+    container_name: redis.superOrg.lithium.com
+    command: redis-server --requirepass superOrglithium
+    ports:
+      - "6381:6379"
+    networks:
+      - hospital

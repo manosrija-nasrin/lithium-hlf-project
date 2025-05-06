@@ -1,0 +1,67 @@
+Script started on 2025-02-28 18:10:29+05:30 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd server/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> donor-application@1.0.0 prestart
+> node initServer.js[8;1H[?25h[KLoaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+An identity for the admin user already exists in the wallet
+msg: Successfully enrolled admin user hosp1admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+An identity for the admin user already exists in the wallet
+msg: Successfully enrolled admin user hosp2admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.lithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+An identity for the admin user already exists in the wallet
+msg: Successfully enrolled admin user superOrgadmin and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Failed to register user PID0 : Error: fabric-ca request register failed with errors [[ { code: 20, message: 'Authentication failure' } ]]
+Failed to register user "PID0": Error: Failed to register user PID0
+\[K[K[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start
+> donor-application@1.0.0 prestart
+> node initServer.js
+
+[KLoaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+An identity for the admin user already exists in the wallet
+msg: Successfully enrolled admin user hosp1admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
+[31;133Hium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+An identity for the admin user already exists in the wallet
+msg: Successfully enrolled admin user hosp2admin and imported it into the wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+An identity for the admin user already exists in the wallet
+msg: Successfully enrolled admin user superOrgadmin and imported it into the wallet
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+Failed to register user PID0 : Error: fabric-ca request register failed with errors [[ { code: 20, message: 'Authentication failure' 
+[31;133H } ]]
+Failed to register user "PID0": Error: Failed to register user PID0
+[K[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m code ../../project-hlf.code-workspace 
+Updating VS Code Server to version e54c774e0add60467559eb0d1e229c6452cf8447
+Removing previous installation...
+Installing VS Code Server for Linux x64 (e54c774e0add60467559eb0d1e229c6452cf8447)
+Downloading:     ^C
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m code[K[K[K[Kbash
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m exit
+exit
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m exit
+exit
+
+Script done on 2025-03-01 21:22:17+05:30 [COMMAND_EXIT_CODE="0"]

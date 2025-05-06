@@ -1,0 +1,233 @@
+Script started on 2025-01-21 08:42:55+05:30 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd first-network/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh up -ca
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb' [0m
+[0;34mLOCAL_VERSION=v2.5.9[0m
+[0;34mDOCKER_IMAGE_VERSION=v2.5.9[0m
+[0;34mCA_LOCAL_VERSION=v1.5.12[0m
+[0;34mCA_DOCKER_IMAGE_VERSION=v1.5.12[0m
+[33mWARN[0m[0000] Found orphan containers ([peer0.superOrg.lithium.com couchdb.superOrg.lithium.com redis.superOrg.lithium.com ca_superOrg ca_orderer ca_hosp1 ca_hosp2]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 2/0
+ [33m⠋[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.0s [0m
+ [33m⠋[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠋[0m Container orderer.lithium.com        Starting                                                                                [34m0.0s [0m
+ [33m⠋[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠙[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.1s [0m
+ [33m⠙[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.1s [0m
+ [33m⠙[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠙[0m Container orderer.lithium.com        Starting                                                                                [34m0.1s [0m
+ [33m⠙[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.1s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠹[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.2s [0m
+ [33m⠹[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.2s [0m
+ [33m⠹[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠹[0m Container orderer.lithium.com        Starting                                                                                [34m0.2s [0m
+ [33m⠹[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.2s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠸[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.3s [0m
+ [33m⠸[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.3s [0m
+ [33m⠸[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠸[0m Container orderer.lithium.com        Starting                                                                                [34m0.3s [0m
+ [33m⠸[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.3s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠼[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.4s [0m
+ [33m⠼[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.4s [0m
+ [33m⠼[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.4s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠼[0m Container orderer.lithium.com        Starting                                                                                [34m0.4s [0m
+ [33m⠼[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.4s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠴[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.5s [0m
+ [33m⠴[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.5s [0m
+ [33m⠴[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.5s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠴[0m Container orderer.lithium.com        Starting                                                                                [34m0.5s [0m
+ [33m⠴[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.5s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠦[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.6s [0m
+ [33m⠦[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.6s [0m
+ [33m⠦[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠦[0m Container orderer.lithium.com        Starting                                                                                [34m0.6s [0m
+ [33m⠦[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.6s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠧[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.7s [0m
+ [33m⠧[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.7s [0m
+ [33m⠧[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.7s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠧[0m Container orderer.lithium.com        Starting                                                                                [34m0.7s [0m
+ [33m⠧[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.7s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠇[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.8s [0m
+ [33m⠇[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.8s [0m
+ [33m⠇[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.8s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠇[0m Container orderer.lithium.com        Starting                                                                                [34m0.8s [0m
+ [33m⠇[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.8s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠏[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m0.9s [0m
+ [33m⠏[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m0.9s [0m
+ [33m⠏[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m0.9s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠏[0m Container orderer.lithium.com        Starting                                                                                [34m0.9s [0m
+ [33m⠏[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m0.9s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/7
+ [33m⠋[0m Container redis.hosp1.lithium.com    Starting                                                                                [34m1.0s [0m
+ [33m⠋[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m1.0s [0m
+ [33m⠋[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m1.0s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠋[0m Container orderer.lithium.com        Starting                                                                                [34m1.0s [0m
+ [33m⠋[0m Container redis.hosp2.lithium.com    Starting                                                                                [34m1.0s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠙[0m Container couchdb.hosp2.lithium.com  Starting                                                                                [34m1.1s [0m
+ [33m⠙[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m1.1s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+ [33m⠙[0m Container orderer.lithium.com        Starting                                                                                [34m1.1s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠹[0m Container couchdb.hosp1.lithium.com  Starting                                                                                [34m1.2s [0m
+ [33m⠙[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.2s [0m
+ [33m⠹[0m Container orderer.lithium.com        Starting                                                                                [34m1.2s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mCreated[0m                                                                                 [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/7
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.3s [0m
+ [33m⠹[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.3s [0m
+ [33m⠸[0m Container orderer.lithium.com        Starting                                                                                [34m1.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠙[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.3s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.3s [0m
+ [33m⠸[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.4s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠹[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.4s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.3s [0m
+ [33m⠼[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.5s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠸[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.5s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.3s [0m
+ [33m⠴[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.6s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠼[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.6s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.3s [0m
+ [33m⠦[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.7s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠴[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.7s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 5/7
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.3s [0m
+ [33m⠧[0m Container peer0.hosp2.lithium.com    Starting                                                                                [34m1.8s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠦[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.8s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 6/7
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.9s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [33m⠧[0m Container peer0.hosp1.lithium.com    Starting                                                                                [34m1.9s [0m
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 7/7[0m
+ [32m✔[0m Container redis.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp2.lithium.com  [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container couchdb.hosp1.lithium.com  [32mStarted[0m                                                                                 [34m1.3s [0m
+ [32m✔[0m Container peer0.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.9s [0m
+ [32m✔[0m Container orderer.lithium.com        [32mStarted[0m                                                                                 [34m1.3s [0m
+ [32m✔[0m Container redis.hosp2.lithium.com    [32mStarted[0m                                                                                 [34m1.1s [0m
+ [32m✔[0m Container peer0.hosp1.lithium.com    [32mStarted[0m                                                                                 [34m1.9s [0m
+[?25hCONTAINER ID   IMAGE                                                                                                                                                                         COMMAND                  CREATED       STATUS                       PORTS                                                                    NAMES
+9b2773828434   dev-peer0.hosp2.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92-ae25e84e335f214ba3200e966710544afd2d56d399ff574e29a505bf7e882d97         "docker-entrypoint.s…"   8 hours ago   Exited (0) 6 hours ago                                                                                dev-peer0.hosp2.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92
+61c59f0981ed   dev-peer0.superorg.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92-b1876f997f289ddaccadf7ddce1f2099d5f7aec49bf64cdb01e9ca9a39ccaf33      "docker-entrypoint.s…"   8 hours ago   Exited (0) 6 hours ago                                                                                dev-peer0.superOrg.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92
+3f7f1fead004   dev-peer0.hosp1.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92-c0decc545eb0922ce582553b481819847009ad327667e15e957a18f062071e2f         "docker-entrypoint.s…"   8 hours ago   Exited (0) 6 hours ago                                                                                dev-peer0.hosp1.lithium.com-donor_4-e267623aadec2ec0cd6e5a61b94cc69f35a8e5f071a7936dccfc7d52c33e8c92
+bfcff7fc61ac   dev-peer0.hosp2.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-8847a78c9d6215d31635cc11508ee3e69b87f7aac1bc0945f283eb9ccb28daaf      "docker-entrypoint.s…"   9 hours ago   Exited (0) 6 hours ago                                                                                dev-peer0.hosp2.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+ae0f1c5bc30a   dev-peer0.superorg.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-841ab85ef359da660087bc0a2dbcc3d63b571adc647efa8a438b2f35d736dc29   "docker-entrypoint.s…"   9 hours ago   Exited (0) 6 hours ago                                                                                dev-peer0.superOrg.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+7dd65e8a45a3   dev-peer0.hosp1.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333-f4992d49edd26e64d981d70a8e1737672d76d4bdcfd504b1ded544f2efc01126      "docker-entrypoint.s…"   9 hours ago   Exited (0) 6 hours ago                                                                                dev-peer0.hosp1.lithium.com-receiver_1-0187f676af1da91a31d8d40fc5f3c9ce482e80790de699dc0f38e33eaba0f333
+73984d94ee6c   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        9 hours ago   Exited (0) 6 hours ago                                                                                peer0.superOrg.lithium.com
+46ea240b63c7   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   9 hours ago   Exited (0) 6 hours ago                                                                                couchdb.superOrg.lithium.com
+1099d49df9d2   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   9 hours ago   Exited (0) 6 hours ago                                                                                redis.superOrg.lithium.com
+28c22ee6c73f   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   9 hours ago   Exited (255) 4 minutes ago   7054/tcp, 0.0.0.0:11054->11054/tcp                                       ca_superOrg
+940fc606538c   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        9 hours ago   Up Less than a second        0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:9445->9445/tcp                 peer0.hosp2.lithium.com
+84281a0da5fa   hyperledger/fabric-peer:latest                                                                                                                                                "peer node start"        9 hours ago   Up Less than a second        0.0.0.0:7051->7051/tcp, 0.0.0.0:9444->9444/tcp                           peer0.hosp1.lithium.com
+9d1575f57160   hyperledger/fabric-orderer:latest                                                                                                                                             "orderer"                9 hours ago   Up 1 second                  0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp, 0.0.0.0:9443->9443/tcp   orderer.lithium.com
+4b902acb1270   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   9 hours ago   Up 1 second                  0.0.0.0:6380->6379/tcp                                                   redis.hosp2.lithium.com
+bc4052744b41   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   9 hours ago   Up 1 second                  4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp                               couchdb.hosp2.lithium.com
+5db10f9d2cf5   redis:latest                                                                                                                                                                  "docker-entrypoint.s…"   9 hours ago   Up 1 second                  0.0.0.0:6379->6379/tcp                                                   redis.hosp1.lithium.com
+8f6e5d53d8af   couchdb:3.3.3                                                                                                                                                                 "tini -- /docker-ent…"   9 hours ago   Up 1 second                  4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp                               couchdb.hosp1.lithium.com
+a7723b90b074   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   9 hours ago   Exited (255) 4 minutes ago   0.0.0.0:9054->9054/tcp, 7054/tcp, 0.0.0.0:19054->19054/tcp               ca_orderer
+fe30199ed162   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   9 hours ago   Exited (255) 4 minutes ago   0.0.0.0:7054->7054/tcp, 0.0.0.0:17054->17054/tcp                         ca_hosp1
+3b00faf32026   hyperledger/fabric-ca:latest                                                                                                                                                  "sh -c 'fabric-ca-se…"   9 hours ago   Exited (255) 4 minutes ago   0.0.0.0:8054->8054/tcp, 7054/tcp, 0.0.0.0:18054->18054/tcp               ca_hosp2
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export PATH=${PWD}/../bin:$PATH
+C_CF]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export FABRIC_CFG_PATH=$PWD/../config/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ENABLED=true
+CORE]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_LOCALMSPID="hosp1MSP"
+CORE]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/hosp1.lithium.com/peers/peer0.hosp1.lithium .com/tls/ca.crt
+export C]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/hosp1.lithium.com/users/Admin@hosp1.lithium.com/msp
+ CORE]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_ADDRESS=localhost:7051
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m peer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:queryAllBlockedDonors","Args":["{\"username\": \"HOSP1-SUP12226\"}"]}'
+{"error":{}}
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m peer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:queryAllBlockedDonors","Args":["{\"username\": \"HOSP1-SUP12226\"}"]}'
+{"error":{}}
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export PATH=${PWD}/../bin:$PATH
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export FABRIC_CFG_PATH=${PWD}/../config/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ENABLED=true
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_LOCALMSPID=superOrgMSP
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls/ca.crt
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/superOrg.lithium.com/users/Admin@superOrg.lithium.com/msp
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_ADDRESS=localhost:11051
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m 
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m export CORE_PEER_ADDRESS=localhost:11051MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/superOrg.lithium.com/users/Admin@superOrg.lithium.com/msp[A]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CTLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/superOrg.lithium.com/peers/peer0.superOrg.lithium.com/tls/ca.crt[A[C[C[C[C[C[C[C[C[C[C[C[CLOCALMSPID=superOrgMSP[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6PTLS_ENABLED=true[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CFABRIC_CFG_PATH=${PWD}/../config/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9PPATH=${PWD}/../bin:$PATH[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpeer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:queryAllBlockedDonors","Args":["{\"username\": \"HOSP1-SUP12226\"}"]}'[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[78Pexport CORE_PEER_ADDRESS=localhost:7051
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpeer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.lithium.com --tls --cafile "${PWD}/organizations/ordererOrganizations/lithium.com/orderers/orderer.lithium.com/msp/tlscacerts/tlsca.lithium.com-cert.pem" -C hospitalchannel -n donor -c '{"function":"SuperContract:queryAllBlockedDonors","Args":["{\"username\": \"HOSP1-SUP12226\"}"]}'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+
+[]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [K]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m exit
+exit
+
+Script done on 2025-01-22 01:02:01+05:30 [COMMAND_EXIT_CODE="0"]

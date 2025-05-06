@@ -1,0 +1,18 @@
+[
+	{
+		"hospitalId": "2",
+		"fullName": "Everhart Hall",
+		"address": "45/B Hunger Street, Kolkata-700090",
+		"phoneNumber": "9073765654",
+		"emergPhoneNumber": "8679236566",
+		"registration": "12227"
+	},
+	{
+		"hospitalId": "1",
+		"fullName": "Peter Leavitt",
+		"address": "12/C/1 Newtown, Kolkata-700009",
+		"phoneNumber": "9008096755",
+		"emergPhoneNumber": "9657834555",
+		"registration": "12226"
+	}
+]

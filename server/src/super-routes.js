@@ -3,11 +3,8 @@
  */
 
 // Bring common classes into scope, and Fabric SDK network class
-const { capitalize, getMessage, validateRole, ROLE_SUPER } = require('../utils.js');
+const { capitalize, validateRole, ROLE_SUPER } = require('../utils.js');
 const network = require('../../donor-asset-transfer/application-javascript/app.js');
-const network1 = require('../../receiver-asset-transfer/application-javascript/app.js');
-const databaseRoutes = require('./databaseConnect');
-const url = require('url');
 
 /**
  * @param  {Request} req Role in the header
@@ -19,12 +16,28 @@ exports.getBlockedDonors = async (req, res) => {
 	const userRole = req.headers.role;
 	await validateRole([ROLE_SUPER], userRole, res);
 	// Set up and connect to Fabric Gateway using the username in header
-	const networkObj = await network.connectToNetwork(req.headers.username);
-	// Invoke the smart contract function
-	const usernameArgs = { username: userRole === ROLE_SUPER ? req.headers.username : '' };
-	const response = await network.invoke(networkObj, true, capitalize(userRole) + 'Contract:queryAllBlockedDonors', JSON.stringify(usernameArgs));
-	const parsedResponse = await JSON.parse(response);
-	res.status(200).send(parsedResponse);
+	let networkObj = await network.connectToSuperNetwork(req.headers.username);
+	const usernameArgs = { username: userRole === ROLE_SUPER ? req.headers.username : ''};
+	const getPendingBagsResponse = await network.invokePDCTransaction(networkObj, true, capitalize(userRole) + 'Contract:getAllPendingBags', [JSON.stringify(usernameArgs)]);
+	try {
+		const getPendingBagsResponseJson = JSON.parse(getPendingBagsResponse);
+		console.debug(getPendingBagsResponseJson);
+		if (getPendingBagsResponseJson.count > 0) {
+			const blockPendingDonorsRequestArgs = {...usernameArgs, pendingBags: getPendingBagsResponseJson.pendingBags };
+			networkObj = await network.connectToSuperNetwork(req.headers.username);
+			const blockPendingDonorsResponse = await network.invokePDCTransaction(networkObj, false, capitalize(userRole) + 'Contract:blockPendingDonors', [JSON.stringify(blockPendingDonorsRequestArgs)]);
+			console.debug(JSON.parse(blockPendingDonorsResponse));
+		}
+		// Invoke the smart contract function
+		networkObj = await network.connectToSuperNetwork(req.headers.username);
+		const response = await network.invokePDCTransaction(networkObj, true, capitalize(userRole) + 'Contract:queryAllBlockedDonors', JSON.stringify(usernameArgs));
+		// console.debug(JSON.parse(response));
+		const parsedResponse = JSON.parse(response);
+		res.status(200).send(parsedResponse);
+	} catch (error) {
+		res.status(500).send({status: "error", message: error});
+	}
+	// res.status(200s).send({"status": "failed"});
 };
 
 /**
@@ -36,13 +49,12 @@ exports.getSuperById = async (req, res) => {
 	// User role from the request header is validated
 	const userRole = req.headers.role;
 	await validateRole([ROLE_SUPER], userRole, res);
-	const hospitalId = parseInt(req.params.hospitalId);
 	// Set up and connect to Fabric Gateway
-	const userId = hospitalId === 1 ? 'hosp1admin' : hospitalId === 2 ? 'hosp2admin' : 'hosp3admin';
+	const userId = 'superOrgadmin';
 	const superId = req.params.superId;
-	const networkObj = await network.connectToNetwork(userId);
+	const networkObjSuper = await network.connectToSuperNetwork(userId);
 	// Use the gateway and identity service to get all users enrolled by the CA
-	const response = await network.getAllSupersByHospitalId(networkObj, hospitalId);
+	const response = await network.getAllSupers(networkObjSuper);
 	console.log("Got all supers: ", response);
 	// Filter the result using the superId
 	(response.error) ? res.status(500).send(response.error) : res.status(200).send(response.filter(

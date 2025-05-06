@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# This script is designed to be run by addHosp3.sh as the
+# This script is designed to be run by addSuperOrg.sh as the
 # second step of the Adding an Org to a Channel tutorial.
 # It joins the hosp3 peers to the channel previously setup in
 # the test network tutorial.
@@ -47,7 +47,7 @@ joinChannel() {
     COUNTER=$(expr $COUNTER + 1)
 	done
 	cat log.txt
-	verifyResult $res "After $MAX_RETRY attempts, peer0.org${ORG} has failed to join channel '$CHANNEL_NAME' "
+	verifyResult $res "After $MAX_RETRY attempts, peer0.${ORG} has failed to join channel '$CHANNEL_NAME' "
 }
 
 setAnchorPeer() {
@@ -73,4 +73,4 @@ infoln "Setting anchor peer for hosp3..."
 setAnchorPeer 3
 
 successln "Channel '$CHANNEL_NAME' joined"
-successln "Hosp3 peer successfully added to network"
+successln "SuperOrg peer successfully added to network"

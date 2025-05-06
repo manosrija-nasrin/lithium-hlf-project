@@ -31,10 +31,10 @@ exports.buildCCPHosp2 = () => {
   return ccp;
 };
 
-exports.buildCCPHosp3 = () => {
+exports.buildCCPSuperOrg = () => {
   
   const ccpPath = path.resolve(__dirname, '..', '..', 'first-network',
-    'organizations', 'peerOrganizations', 'hosp3.lithium.com', 'connection-hosp3.json');
+    'organizations', 'peerOrganizations', 'superOrg.lithium.com', 'connection-superOrg.json');
   const fileExists = fs.existsSync(ccpPath);
   if (!fileExists) {
     throw new Error(`no such file or directory: ${ccpPath}`);

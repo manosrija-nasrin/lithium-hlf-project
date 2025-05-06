@@ -18,7 +18,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 ORDERER_CA=${DIR}/first-network/organizations/ordererOrganizations/lithium.com/tlsca/tlsca.lithium.com-cert.pem
 PEER0_HOSP1_CA=${DIR}/first-network/organizations/peerOrganizations/hosp1.lithium.com/tlsca/tlsca.hosp1.lithium.com-cert.pem
 PEER0_HOSP2_CA=${DIR}/first-network/organizations/peerOrganizations/hosp2.lithium.com/tlsca/tlsca.hosp2.lithium.com-cert.pem
-PEER0_HOSP3_CA=${DIR}/first-network/organizations/peerOrganizations/hosp3.lithium.com/tlsca/tlsca.hosp3.lithium.com-cert.pem
+PEER0_SUPER_CA=${DIR}/first-network/organizations/peerOrganizations/superOrg.lithium.com/tlsca/tlsca.superOrg.lithium.com-cert.pem
 
 
 if [[ ${ORG,,} == "hosp1" || ${ORG,,} == "digibank" ]]; then
@@ -50,7 +50,7 @@ echo "CORE_PEER_TLS_ENABLED=true"
 echo "ORDERER_CA=${ORDERER_CA}"
 echo "PEER0_HOSP1_CA=${PEER0_HOSP1_CA}"
 echo "PEER0_HOSP2_CA=${PEER0_HOSP2_CA}"
-echo "PEER0_HOSP3_CA=${PEER0_HOSP3_CA}"
+echo "PEER0_SUPER_CA=${PEER0_SUPER_CA}"
 
 echo "CORE_PEER_MSPCONFIGPATH=${CORE_PEER_MSPCONFIGPATH}"
 echo "CORE_PEER_ADDRESS=${CORE_PEER_ADDRESS}"

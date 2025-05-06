@@ -1,0 +1,777 @@
+Script started on 2025-02-14 10:40:58+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m c ser[K[K[K[K[Ks[Kcs[Kd server/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> donor-application@1.0.0 prestart
+> node initServer.js[8;1H[?25h[K[?25l[K
+> donor-application@1.0.0 start
+> node node_modules/nodemon/bin/nodemon.js src/server.js[12;1H[K[?25h[33m[nodemon] 1.19.4
+[m[33m[nodemon] to restart at any time, enter `rs`
+[nodemon] watching dir(s): *.*
+[nodemon] watching extensions: js,mjs,json[32m
+[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+Connected to the database
+::1 - - [14/Feb/2025:05:23:33 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [14/Feb/2025:05:23:34 +0000] "POST /login HTTP/1.1" 200 384 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:23:34 +0000] "OPTIONS /supers/2/HOSP2-SUP12227 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.lithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Attributes [
+  { name: [32m'hf.Revoker'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m}[K
+]
+Attributes [
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Everhart Hall'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Got all supers:  [
+  {
+    id: [32m'HOSP2-SUP12227'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Everhart Hall'[m,[K
+    address: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    phoneNumber: [32m'9073765654'[m,[K
+    emergPhoneNumber: [32m'8679236566'[m,[K
+    registration: [32m'12227'[K[m
+  },
+  {
+    id: [32m'HOSP1-SUP12226'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Peter Leavitt'[m,[K
+    address: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    phoneNumber: [32m'9008096755'[m,[K
+    emergPhoneNumber: [32m'9657834555'[m,[K
+    registration: [32m'12226'[K[m
+  }
+]
+::1 - - [14/Feb/2025:05:23:35 +0000] "GET /supers/2/HOSP2-SUP12227 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:23:36 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:23:36 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+[ [32m'{"username":"HOSP2-SUP12227"}' [m]
+{ username: [32m'HOSP2-SUP12227' [m}[K
+{}
+{ error: {} }
+<Buffer 5b 7b 22 64 6f 6e 6f 72 49 64 22 3a 22 50 49 44 31 30 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 54 72 65 6e 74 22 2c 22 6c
+[31;133Hc 61 73 74 4e 61 6d 65 22 ... 1602 more bytes>
+[
+  {
+    donorId: [32m'PID10'[m,[K
+    firstName: [32m'Trent'[m,[K
+    lastName: [32m'Nguyen'[m,[K
+    dob: [32m'2001-02-13'[m,[K
+    bloodGroup: [32m'A-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'ABORh Grouping'[m, [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'107'[m,[K
+    bloodBagSegmentNo: [32m'110'[K[m
+  },
+  {
+    donorId: [32m'PID18'[m,[K
+    firstName: [32m'Urmila'[m,[K
+    lastName: [32m'Thakur'[m,[K
+    dob: [32m'1982-05-13'[m,[K
+    bloodGroup: [32m'A+'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'560'[m,[K
+    bloodBagSegmentNo: [32m'560'[K[m
+  },
+  {
+    donorId: [32m'PID20'[m,[K
+    firstName: [32m'Romilda'[m,[K
+    lastName: [32m'Vane'[m,[K
+    dob: [32m'1995-03-02'[m,[K
+    bloodGroup: [32m'B-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP1-TECH123'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'412'[m,[K
+    bloodBagSegmentNo: [32m'412'[K[m
+  }
+]
+::1 - - [14/Feb/2025:05:23:39 +0000] "GET /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 
+[31;133H (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+[ [32m'{"username":"HOSP2-SUP12227"}' [m]
+{ username: [32m'HOSP2-SUP12227' [m}[K
+{}
+{ error: {} }
+<Buffer 5b 7b 22 64 6f 6e 6f 72 49 64 22 3a 22 50 49 44 31 30 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 54 72 65 6e 74 22 2c 22 6c
+[31;133Hc 61 73 74 4e 61 6d 65 22 ... 1602 more bytes>
+[
+  {
+    donorId: [32m'PID10'[m,[K
+    firstName: [32m'Trent'[m,[K
+    lastName: [32m'Nguyen'[m,[K
+    dob: [32m'2001-02-13'[m,[K
+    bloodGroup: [32m'A-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'ABORh Grouping'[m, [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'107'[m,[K
+    bloodBagSegmentNo: [32m'110'[K[m
+  },
+  {
+    donorId: [32m'PID18'[m,[K
+    firstName: [32m'Urmila'[m,[K
+    lastName: [32m'Thakur'[m,[K
+    dob: [32m'1982-05-13'[m,[K
+    bloodGroup: [32m'A+'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'560'[m,[K
+    bloodBagSegmentNo: [32m'560'[K[m
+  },
+  {
+    donorId: [32m'PID20'[m,[K
+    firstName: [32m'Romilda'[m,[K
+    lastName: [32m'Vane'[m,[K
+    dob: [32m'1995-03-02'[m,[K
+    bloodGroup: [32m'B-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP1-TECH123'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'412'[m,[K
+    bloodBagSegmentNo: [32m'412'[K[m
+  }
+]
+::1 - - [14/Feb/2025:05:23:42 +0000] "GET /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 
+[31;133H (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+::1 - - [14/Feb/2025:05:39:29 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
+[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:39:29 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:39:36 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [14/Feb/2025:05:39:36 +0000] "POST /login HTTP/1.1" 200 384 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:39:36 +0000] "OPTIONS /supers/2/HOSP2-SUP12227 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows
+[31;133Hs NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Attributes [
+  { name: [32m'hf.Revoker'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m}[K
+]
+Attributes [
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Everhart Hall'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Got all supers:  [
+  {
+    id: [32m'HOSP2-SUP12227'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Everhart Hall'[m,[K
+    address: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    phoneNumber: [32m'9073765654'[m,[K
+    emergPhoneNumber: [32m'8679236566'[m,[K
+    registration: [32m'12227'[K[m
+  },
+  {
+    id: [32m'HOSP1-SUP12226'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Peter Leavitt'[m,[K
+    address: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    phoneNumber: [32m'9008096755'[m,[K
+    emergPhoneNumber: [32m'9657834555'[m,[K
+    registration: [32m'12226'[K[m
+  }
+]
+::1 - - [14/Feb/2025:05:39:37 +0000] "GET /supers/2/HOSP2-SUP12227 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:39:38 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:39:38 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+[ [32m'{"username":"HOSP2-SUP12227"}' [m]
+{ username: [32m'HOSP2-SUP12227' [m}[K
+{}
+{ error: {} }
+<Buffer 5b 7b 22 64 6f 6e 6f 72 49 64 22 3a 22 50 49 44 31 30 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 54 72 65 6e 74 22 2c 22 6c
+[31;133Hc 61 73 74 4e 61 6d 65 22 ... 1602 more bytes>
+[
+  {
+    donorId: [32m'PID10'[m,[K
+    firstName: [32m'Trent'[m,[K
+    lastName: [32m'Nguyen'[m,[K
+    dob: [32m'2001-02-13'[m,[K
+    bloodGroup: [32m'A-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'ABORh Grouping'[m, [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'107'[m,[K
+    bloodBagSegmentNo: [32m'110'[K[m
+  },
+  {
+    donorId: [32m'PID18'[m,[K
+    firstName: [32m'Urmila'[m,[K
+    lastName: [32m'Thakur'[m,[K
+    dob: [32m'1982-05-13'[m,[K
+    bloodGroup: [32m'A+'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'560'[m,[K
+    bloodBagSegmentNo: [32m'560'[K[m
+  },
+  {
+    donorId: [32m'PID20'[m,[K
+    firstName: [32m'Romilda'[m,[K
+    lastName: [32m'Vane'[m,[K
+    dob: [32m'1995-03-02'[m,[K
+    bloodGroup: [32m'B-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP1-TECH123'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'412'[m,[K
+    bloodBagSegmentNo: [32m'412'[K[m
+  }
+]
+::1 - - [14/Feb/2025:05:39:41 +0000] "GET /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 
+[31;133H (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+[ [32m'{"username":"HOSP2-SUP12227"}' [m]
+{ username: [32m'HOSP2-SUP12227' [m}[K
+{}
+{ error: {} }
+<Buffer 5b 7b 22 64 6f 6e 6f 72 49 64 22 3a 22 50 49 44 31 30 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 54 72 65 6e 74 22 2c 22 6c
+[31;133Hc 61 73 74 4e 61 6d 65 22 ... 1602 more bytes>
+[
+  {
+    donorId: [32m'PID10'[m,[K
+    firstName: [32m'Trent'[m,[K
+    lastName: [32m'Nguyen'[m,[K
+    dob: [32m'2001-02-13'[m,[K
+    bloodGroup: [32m'A-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'ABORh Grouping'[m, [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'107'[m,[K
+    bloodBagSegmentNo: [32m'110'[K[m
+  },
+  {
+    donorId: [32m'PID18'[m,[K
+    firstName: [32m'Urmila'[m,[K
+    lastName: [32m'Thakur'[m,[K
+    dob: [32m'1982-05-13'[m,[K
+    bloodGroup: [32m'A+'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'560'[m,[K
+    bloodBagSegmentNo: [32m'560'[K[m
+  },
+  {
+    donorId: [32m'PID20'[m,[K
+    firstName: [32m'Romilda'[m,[K
+    lastName: [32m'Vane'[m,[K
+    dob: [32m'1995-03-02'[m,[K
+    bloodGroup: [32m'B-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP1-TECH123'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'412'[m,[K
+    bloodBagSegmentNo: [32m'412'[K[m
+  }
+]
+::1 - - [14/Feb/2025:05:39:43 +0000] "GET /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 
+[31;133H (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Connected to the database
+::1 - - [14/Feb/2025:05:49:04 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
+[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:49:04 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:49:10 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [14/Feb/2025:05:49:10 +0000] "POST /login HTTP/1.1" 200 384 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:49:10 +0000] "OPTIONS /supers/2/HOSP2-SUP12227 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows
+[31;133Hs NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Attributes [
+  { name: [32m'hf.Revoker'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+  { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+  { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m}[K
+]
+Attributes [
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Everhart Hall'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9073765654'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'8679236566'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-SUP12227'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Attributes [
+  { name: [32m'fullName'[m, value: [32m'Peter Leavitt'[m, ecert: [33mtrue [m},[K
+  {
+    name: [32m'address'[m,[K
+    value: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    ecert: [33mtrue[K[m
+  },
+  { name: [32m'phoneNumber'[m, value: [32m'9008096755'[m, ecert: [33mtrue [m},[K
+  { name: [32m'emergPhoneNumber'[m, value: [32m'9657834555'[m, ecert: [33mtrue [m},[K
+  { name: [32m'role'[m, value: [32m'super'[m, ecert: [33mtrue [m},[K
+  { name: [32m'registration'[m, value: [32m'12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-SUP12226'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+  { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+]
+Got all supers:  [
+  {
+    id: [32m'HOSP2-SUP12227'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Everhart Hall'[m,[K
+    address: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    phoneNumber: [32m'9073765654'[m,[K
+    emergPhoneNumber: [32m'8679236566'[m,[K
+    registration: [32m'12227'[K[m
+  },
+  {
+    id: [32m'HOSP1-SUP12226'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Peter Leavitt'[m,[K
+    address: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    phoneNumber: [32m'9008096755'[m,[K
+    emergPhoneNumber: [32m'9657834555'[m,[K
+    registration: [32m'12226'[K[m
+  }
+]
+::1 - - [14/Feb/2025:05:49:11 +0000] "GET /supers/2/HOSP2-SUP12227 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:49:12 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+::1 - - [14/Feb/2025:05:49:12 +0000] "OPTIONS /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/
+[31;133H/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+[ [32m'{"username":"HOSP2-SUP12227"}' [m]
+{ username: [32m'HOSP2-SUP12227' [m}[K
+{}
+{
+  status: [32m'success'[m,[K
+  message: [32m'Blocked 0 out of 1 donors via superOrgMSP'[K[m
+}
+<Buffer 5b 7b 22 64 6f 6e 6f 72 49 64 22 3a 22 50 49 44 31 30 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 54 72 65 6e 74 22 2c 22 6c
+[31;133Hc 61 73 74 4e 61 6d 65 22 ... 1602 more bytes>
+[
+  {
+    donorId: [32m'PID10'[m,[K
+    firstName: [32m'Trent'[m,[K
+    lastName: [32m'Nguyen'[m,[K
+    dob: [32m'2001-02-13'[m,[K
+    bloodGroup: [32m'A-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'ABORh Grouping'[m, [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'107'[m,[K
+    bloodBagSegmentNo: [32m'110'[K[m
+  },
+  {
+    donorId: [32m'PID18'[m,[K
+    firstName: [32m'Urmila'[m,[K
+    lastName: [32m'Thakur'[m,[K
+    dob: [32m'1982-05-13'[m,[K
+    bloodGroup: [32m'A+'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'560'[m,[K
+    bloodBagSegmentNo: [32m'560'[K[m
+  },
+  {
+    donorId: [32m'PID20'[m,[K
+    firstName: [32m'Romilda'[m,[K
+    lastName: [32m'Vane'[m,[K
+    dob: [32m'1995-03-02'[m,[K
+    bloodGroup: [32m'B-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP1-TECH123'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'412'[m,[K
+    bloodBagSegmentNo: [32m'412'[K[m
+  }
+]
+::1 - - [14/Feb/2025:05:49:15 +0000] "GET /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 
+[31;133H (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+[ [32m'{"username":"HOSP2-SUP12227"}' [m]
+{ username: [32m'HOSP2-SUP12227' [m}[K
+{}
+{
+  status: [32m'success'[m,[K
+  message: [32m'Blocked 0 out of 1 donors via superOrgMSP'[K[m
+}
+<Buffer 5b 7b 22 64 6f 6e 6f 72 49 64 22 3a 22 50 49 44 31 30 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 54 72 65 6e 74 22 2c 22 6c
+[31;133Hc 61 73 74 4e 61 6d 65 22 ... 1602 more bytes>
+[
+  {
+    donorId: [32m'PID10'[m,[K
+    firstName: [32m'Trent'[m,[K
+    lastName: [32m'Nguyen'[m,[K
+    dob: [32m'2001-02-13'[m,[K
+    bloodGroup: [32m'A-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'ABORh Grouping'[m, [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'107'[m,[K
+    bloodBagSegmentNo: [32m'110'[K[m
+  },
+  {
+    donorId: [32m'PID18'[m,[K
+    firstName: [32m'Urmila'[m,[K
+    lastName: [32m'Thakur'[m,[K
+    dob: [32m'1982-05-13'[m,[K
+    bloodGroup: [32m'A+'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP2-TECH124'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria'[m, [32m'Syphilis' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'560'[m,[K
+    bloodBagSegmentNo: [32m'560'[K[m
+  },
+  {
+    donorId: [32m'PID20'[m,[K
+    firstName: [32m'Romilda'[m,[K
+    lastName: [32m'Vane'[m,[K
+    dob: [32m'1995-03-02'[m,[K
+    bloodGroup: [32m'B-'[m,[K
+    alert: [33mtrue[m,[K
+    isDiseased: [33mtrue[m,[K
+    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP1-TECH123'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'412'[m,[K
+    bloodBagSegmentNo: [32m'412'[K[m
+  }
+]
+::1 - - [14/Feb/2025:05:49:17 +0000] "GET /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 
+[31;133H (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+F:\blood-data-management-system\server\src\databaseConnect.js:27
+            throw err;
+            ^
+
+Error: read ECONNRESET
+[90m    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) [m{[K
+  errno: [33m-4077[m,[K
+  code: [32m'ECONNRESET'[m,[K
+  syscall: [32m'read'[m,[K
+  fatal: [33mtrue[K[m
+}
+
+Node.js v20.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[m
+[?25l[8;34;133t[H    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP1-TECH123'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'412'[m,[K
+    bloodBagSegmentNo: [32m'412'[K[m
+  }[K
+][K
+::1 - - [14/Feb/2025:05:49:17 +0000] "GET /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"[K
+Connected to the database[K
+Connected to the database[K
+Connected to the database[K
+Connected to the database[K
+F:\blood-data-management-system\server\src\databaseConnect.js:27[K
+            throw err;[K
+            ^[K
+[K
+Error: read ECONNRESET[K[90m
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) [m{[K
+  errno: [33m-4077[m,[K
+  code: [32m'ECONNRESET'[m,[K
+  syscall: [32m'read'[m,[K
+  fatal: [33mtrue[K[m
+}[K
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[m
+[K
+[K
+[K[32;1H[?25h[?25l[H    creditCard: [32m'500'[m,[K
+    donationHistory: { donation1: [36m[Object] [m},[K
+    donationStatus: [32m'blocked'[m,[K
+    blockedBy: [32m'HOSP1-TECH123'[m,[K
+    blockedDate: [32m'2025-01-24'[m,[K
+    blockedReason: [ [32m'Malaria' [m],[K
+    blockedTenure: [33m365[m,[K
+    bloodBagUnitNo: [32m'412'[m,[K
+    bloodBagSegmentNo: [32m'412'[K[m
+  }[K
+][K
+::1 - - [14/Feb/2025:05:49:17 +0000] "GET /supers/2/HOSP2-SUP12227/blockedlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"[K
+Connected to the database[K
+Connected to the database[K
+Connected to the database[K
+Connected to the database[K
+F:\blood-data-management-system\server\src\databaseConnect.js:27[K
+            throw err;[K
+            ^[K
+[K
+Error: read ECONNRESET[K[90m
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) [m{[K
+  errno: [33m-4077[m,[K
+  code: [32m'ECONNRESET'[m,[K
+  syscall: [32m'read'[m,[K
+  fatal: [33mtrue[K[m
+}[K
+[K
+Node.js v20.9.0[K[31m
+[nodemon] app crashed - waiting for file changes before starting...[K[m
+[K[?25h^C\[K[K[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m exit
+exit
+
+Script done on 2025-02-14 14:03:30+05:30 [COMMAND_EXIT_CODE="58"]
