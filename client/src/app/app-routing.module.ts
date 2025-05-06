@@ -28,9 +28,12 @@ import { SuperRegisterComponent } from './super/super-register/super-register.co
 import { SuperComponent } from './super/super.component';
 import { BloodRequestComponent } from './technician/bloodrequest.component';
 import { BloodCrossMatchComponent } from './technician/crossmatchedblood.component';
+import { DonorStatusCheckComponent } from './technician/donorstatuscheck.component';
 import { LTapprovalComponent } from './technician/LTapproval.component';
 import { ReadAllocatedBloodBagComponent } from './technician/readallocatedbloodbag.component';
 import { ReadBloodBagComponent } from './technician/readbloodbag.component';
+import { AddHealthIndicatorResultsComponent } from './technician/technician-add-health-indicators/add-health-indicators.component';
+import { AddTtiResultComponent } from './technician/technician-add-tti-results/add-tti-result.component';
 import { TechnicianRegisterComponent } from './technician/technician-register/technician-register.component';
 import { TechnicianComponent } from './technician/technician.component';
 
@@ -130,6 +133,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'doctor/:doctorId/checkdonorstatus',
+    component: DonorStatusCheckComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'super/:superId/deferredlist',
     component: DeferredDonorListForSuperComponent,
     canActivate: [AuthGuard]
@@ -147,6 +155,21 @@ const routes: Routes = [
   {
     path: 'technician/:technicianId/readbloodbag',
     component: ReadBloodBagComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'technician/:technicianId/addttiresults',
+    component: AddTtiResultComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'technician/:technicianId/checkdonorstatus',
+    component: DonorStatusCheckComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'technician/:technicianId/addhealthindicators',
+    component: AddHealthIndicatorResultsComponent,
     canActivate: [AuthGuard]
   },
   {

@@ -1,6 +1,6 @@
 <app-toolbar text="Technician {{technicianId}}"></app-toolbar>
-  <app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>
-  <br><br><br>
+<app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>
+<br><br><br>
 
 
 <div class="sidebar-layout-bottom-row p-3 container-fluid">
@@ -40,17 +40,22 @@
       </div>
     </div>
   </div>
-  
+
   <app-toolbar-link text="View Blood Bag Details" icon="plus" [routerLink]="['readbloodbag']">
   </app-toolbar-link>
   <br><br>
   <app-toolbar-link text="Blood Request Registration" icon="plus" [routerLink]="['bloodrequest']">
   </app-toolbar-link>
-   <app-toolbar-link text="Add Cross-Match Results" icon="plus" [routerLink]="['addcrossmatchedbag']">
+  <app-toolbar-link text="Add Cross-Match Results" icon="plus" [routerLink]="['addcrossmatchedbag']">
   </app-toolbar-link>
-  <app-toolbar-link text="Laboratary Test Approval" icon="plus" [routerLink]="['LTapproval']">
+  <app-toolbar-link text="Add TTI Test Results" icon="plus" [routerLink]="['addttiresults']"></app-toolbar-link>
+  <app-toolbar-link text="Add Health Indicator Test Results" icon="plus"
+    [routerLink]="['addhealthindicators']"></app-toolbar-link>
+  <app-toolbar-link text="Laboratory Test Approval" icon="plus" [routerLink]="['LTapproval']">
+  </app-toolbar-link>
+  <app-toolbar-link text="Check Donor Deferral Status" icon="plus" [routerLink]="['checkdonorstatus']">
   </app-toolbar-link>
   <app-toolbar-link text="Check Status of Blood Request" icon="plus" [routerLink]="['readallocatedbloodbag']">
   </app-toolbar-link>
-<br><br><br>
+  <br><br><br>
 </div>

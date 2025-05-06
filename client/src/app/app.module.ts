@@ -45,9 +45,12 @@ import { SuperComponent } from './super/super.component';
 import { SuperService } from './super/super.service';
 import { BloodRequestComponent } from './technician/bloodrequest.component';
 import { BloodCrossMatchComponent } from './technician/crossmatchedblood.component';
+import { DonorStatusCheckComponent } from './technician/donorstatuscheck.component';
 import { LTapprovalComponent } from './technician/LTapproval.component';
 import { ReadAllocatedBloodBagComponent } from './technician/readallocatedbloodbag.component';
 import { ReadBloodBagComponent } from './technician/readbloodbag.component';
+import { AddHealthIndicatorResultsComponent } from './technician/technician-add-health-indicators/add-health-indicators.component';
+import { AddTtiResultComponent } from './technician/technician-add-tti-results/add-tti-result.component';
 import { TechnicianRegisterComponent } from './technician/technician-register/technician-register.component';
 import { TechnicianComponent } from './technician/technician.component';
 import { TechnicianService } from './technician/technician.service';
@@ -68,6 +71,7 @@ const components = [
   DonorListForDoctorComponent,
   DoctorListForDonorComponent,
   DoctorListForAdminComponent,
+  DonorStatusCheckComponent,
   TechnicianListForAdminComponent,
   DonorListForAdminComponent,
   DoctorComponent,
@@ -91,8 +95,9 @@ const components = [
   BloodRequestComponent,
   ReadAllocatedBloodBagComponent,
   LTapprovalComponent,
-  MOCapprovalComponent
-
+  MOCapprovalComponent,
+  AddTtiResultComponent,
+  AddHealthIndicatorResultsComponent
 ];
 
 const pipes = [
