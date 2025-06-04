@@ -34,7 +34,8 @@ class TechnicianContract extends PrimaryContract {
     if (
       args.malaria == "true" ||
       args.syphilis == "true" ||
-      args.hcv == "true" ||
+      args.hiv == "true" ||
+      args.hepatitisC == "true" ||
       args.hepatitisB == "true" ||
       args.ABORhGrouping == "false" ||
       args.irregularAntiBody == "true"

@@ -13,6 +13,7 @@
     "author": "Jathin",
     "license": "Apache-2.0",
     "dependencies": {
+        "donor-application": "file:",
         "fabric-ca-client": "^2.2.0",
         "fabric-network": "^2.2.0",
         "redis": "^3.0.2"
