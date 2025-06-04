@@ -2,16 +2,23 @@
 
 const { Contract } = require('fabric-contract-api');
 let initLedgerMaster = require('./initLedgerMaster.json');
-let initLedgerDonor = require('./initLedgerDonor.json');
+let initLedgerPatient = require('./initLedgerPatient.json');
 
 class PrimaryContract extends Contract {
 
     async initLedger(ctx) {
         console.info('============= START : Initialize Ledger ===========');
-        for (let i = 0; i < initLedgerDonor.length; i++) {
-            initLedgerDonor[i].docType = 'donor';
-            await ctx.stub.putState('PID' + i, Buffer.from(JSON.stringify(initLedgerDonor[i])));
-            console.info('Added <--> ', initLedgerDonor[i]);
+        for (let i = 0; i < initLedgerPatient.length; i++) {
+            initLedgerPatient[i].docType = 'patient';
+            try {
+                let healthId = initLedgerPatient[i].healthId;
+                await ctx.stub.putState(healthId, Buffer.from(JSON.stringify(initLedgerPatient[i])));
+            } catch (err) {
+                console.error('Error in generating patient ID:', err);
+                healthId = this.generateHealthId();
+                await ctx.stub.putState(healthId, Buffer.from(JSON.stringify(initLedgerPatient[i])));
+            }
+            console.info('Added <--> ', initLedgerPatient[i]);
         }
         console.info('============= END : Initialize Ledger ===========');
 
@@ -25,16 +32,16 @@ class PrimaryContract extends Contract {
         console.info('============= END : Initialize Ledger ===========');
     }
 
-    async readDonor(ctx, donorId) {
-        const exists = await this.donorExists(ctx, donorId);
+    async readPatient(ctx, healthId) {
+        const exists = await this.patientExists(ctx, healthId);
         if (!exists) {
-            throw new Error(`The donor ${donorId} does not exist`);
+            throw new Error(`The patient ${healthId} does not exist`);
         }
 
-        const buffer = await ctx.stub.getState(donorId);
+        const buffer = await ctx.stub.getState(healthId);
         let asset = JSON.parse(buffer.toString());
         asset = ({
-            donorId: donorId,
+            healthId: healthId,
             firstName: asset.firstName,
             lastName: asset.lastName,
             dob: asset.dob,
@@ -43,12 +50,15 @@ class PrimaryContract extends Contract {
             address: asset.address,
             sex: asset.sex,
             bloodGroup: asset.bloodGroup,
+            medicalHistory: asset.medicalHistory,
             donationHistory: asset.donationHistory,
             alert: asset.alert,
             isDiseased: asset.isDiseased,
-            creditCard: asset.creditCard,
+            healthCreditPoints: asset.healthCreditPoints,
             donationStatus: asset.donationStatus,
             permissionGranted: asset.permissionGranted,
+            deferredDetails: asset.deferredDetails,
+            creationTimestamp: asset.creationTimestamp,
             password: asset.password,
             pwdTemp: asset.pwdTemp
         });
@@ -76,8 +86,8 @@ class PrimaryContract extends Contract {
         return asset;
     }
 
-    async donorExists(ctx, donorId) {
-        const buffer = await ctx.stub.getState(donorId);
+    async patientExists(ctx, healthId) {
+        const buffer = await ctx.stub.getState(healthId);
         return (!!buffer && buffer.length > 0);
     }
 
@@ -89,11 +99,11 @@ class PrimaryContract extends Contract {
     async getQueryResultForQueryString(ctx, queryString) {
         let resultsIterator = await ctx.stub.getQueryResult(queryString);
         console.info('getQueryResultForQueryString <--> ', resultsIterator);
-        let results = await this.getAllDonorResults(resultsIterator, false);
+        let results = await this.getAllPatientResults(resultsIterator, false);
         return JSON.stringify(results);
     }
 
-    async getAllDonorResults(iterator, isHistory) {
+    async getAllPatientResults(iterator, isHistory) {
         let allResults = [];
         while (true) {
             let res = await iterator.next();
@@ -119,6 +129,7 @@ class PrimaryContract extends Contract {
                 await iterator.close();
                 console.log('end of data');
                 console.info("INFO: " + allResults.length + " records fetched.");
+                // console.debug(allResults)
                 return allResults;
             }
         }

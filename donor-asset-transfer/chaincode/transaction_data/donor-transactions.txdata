@@ -1,15 +1,15 @@
 [
     {
-        "transactionName": "donorExists",
-        "transactionLabel": "A test donorExists transaction",
+        "transactionName": "patientExists",
+        "transactionLabel": "A test patientExists transaction",
         "arguments": [
             "001"
         ],
         "transientData": {}
     },
     {
-        "transactionName": "createDonor",
-        "transactionLabel": "A test createDonor transaction",
+        "transactionName": "createPatient",
+        "transactionLabel": "A test createPatient transaction",
         "arguments": [
             "001",
             "some value"
@@ -17,16 +17,16 @@
         "transientData": {}
     },
     {
-        "transactionName": "readDonor",
-        "transactionLabel": "A test readDonor transaction",
+        "transactionName": "readPatient",
+        "transactionLabel": "A test readPatient transaction",
         "arguments": [
             "001"
         ],
         "transientData": {}
     },
     {
-        "transactionName": "updateDonor",
-        "transactionLabel": "A test updateDonor transaction",
+        "transactionName": "updatePatient",
+        "transactionLabel": "A test updatePatient transaction",
         "arguments": [
             "001",
             "some other value"
@@ -34,8 +34,8 @@
         "transientData": {}
     },
     {
-        "transactionName": "deleteDonor",
-        "transactionLabel": "A test deleteDonor transaction",
+        "transactionName": "deletePatient",
+        "transactionLabel": "A test deletePatient transaction",
         "arguments": [
             "001"
         ],

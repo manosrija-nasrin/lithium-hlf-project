@@ -1,7 +1,7 @@
 {
     "name": "donor-application",
     "version": "1.0.0",
-    "description": "Donor application implemented in JavaScript",
+    "description": "Patient application implemented in JavaScript",
     "engines": {
         "node": ">=12",
         "npm": ">=5"
@@ -13,6 +13,7 @@
     "author": "Jathin",
     "license": "Apache-2.0",
     "dependencies": {
+        "donor-application": "file:",
         "fabric-ca-client": "^2.2.0",
         "fabric-network": "^2.2.0",
         "redis": "^3.0.2"

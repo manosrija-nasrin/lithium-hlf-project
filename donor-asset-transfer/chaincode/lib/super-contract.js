@@ -1,10 +1,10 @@
 'use strict';
-const DeferredDonor = require('./DeferredDonor.js');
+const DeferredPatient = require('./DeferredPatient.js');
 const PrimaryContract = require('./primary-contract.js');
 const stringify = require('json-stringify-deterministic');
 const sortKeysRecursive = require('sort-keys-recursive');
 const { Certificate } = require('@fidm/x509');
-const deferredDonorPrivateCollection = 'deferredDonorPrivateCollection';
+const deferredPatientPrivateCollection = 'deferredDonorPrivateCollection';
 const pendingCUECollection = 'pendingCUECollection';
 const HOSP_SUPERS = ["HOSP1-SUP12226", "HOSP2-SUP12227"];
 
@@ -49,7 +49,7 @@ class SuperContract extends PrimaryContract {
     checkSuperIdentity(ctx, username) {
         // const txnCreator = ctx.stub.getCreator();
         // console.debug("Txn Creator: ", txnCreator);
-        console.debug("Txn Creator via Function: ", this.getTxnCreatorIdentity(ctx));
+        // console.debug("Txn Creator via Function: ", this.getTxnCreatorIdentity(ctx));
         // console.debug("Client ID: ", ctx.clientIdentity.getID());
         // console.debug("Client MSP ID: ", ctx.clientIdentity.getMSPID());
         console.debug("Peer MSP ID: /", ctx.stub.getMspID() + "/"); // 
@@ -62,11 +62,12 @@ class SuperContract extends PrimaryContract {
         try {
             const newAssets = [];
             console.debug("Asset list length", assets.length);
-            for (let i = 0; i < assets.length && assets[i].Key.includes("PID"); i++) {
+            for (let i = 0; i < assets.length && assets[i].Key.match(/^[0-9]{12}$/); i++) {
                 const obj = assets[i];
                 const newObj = {
-                    donorId: obj.Key,
+                    healthId: obj.Key,
                     donationHistory: 'donationHistory' in obj.Record ? obj.Record.donationHistory : null,
+                    sensitiveMedicalHistory: 'sensitiveMedicalHistory' in obj.Record ? obj.Record.sensitiveMedicalHistory : {},
                 };
                 // console.debug("Object:", obj.Record.donationHistory);
                 // console.debug("Keys:", Object.keys(obj.Record.donationHistory));
@@ -81,7 +82,7 @@ class SuperContract extends PrimaryContract {
         }
     };
 
-    async queryAllDonors(ctx) {
+    async queryAllPatients(ctx) {
         let resultsIterator;
         const assets = [];
 
@@ -100,19 +101,19 @@ class SuperContract extends PrimaryContract {
                         value = res.value.value.toString('utf8');
                     }
                     const timestamp = res.value.timestamp;
-                    if (key && key.startsWith("PID"))
+                    if (key && key.match(/^[0-9]{12}$/))
                         assets.push({ Key: key, Record: value, Timestamp: timestamp });
                 }
                 if (res.done) {
                     await resultsIterator.close();
-                    console.debug("All done, fetched ", assets.length, " donor records.");
+                    console.debug("All done, fetched ", assets.length, " patient records.");
                     const limitedAssets = this.fetchLimitedFields(assets);
                     return limitedAssets;
                 }
             }
         } catch (error) {
             console.error('Error during query: ', error);
-            throw new Error('Failed to query donors');
+            throw new Error('Failed to query patients');
         } /* finally {
             if (resultsIterator) {
                 await resultsIterator.close(); // Ensure iterator is closed even if an error occurs
@@ -120,11 +121,12 @@ class SuperContract extends PrimaryContract {
         } */
     }
 
-    fetchFields(asset, includeTimeStamp = false) {
-        for (let i = 0; i < asset.length; i++) {
-            const obj = asset[i];
-            asset[i] = {
-                donorId: obj.Key,
+    fetchFields(assets, includeTimeStamp = false) {
+        let assetsWithLimitedFields = [];
+        for (let i = 0; i < assets.length; i++) {
+            let obj = assets[i];
+            obj = {
+                healthId: obj.Key,
                 firstName: obj.Record.firstName,
                 lastName: obj.Record.lastName,
                 dob: obj.Record.dob,
@@ -132,10 +134,11 @@ class SuperContract extends PrimaryContract {
                 alert: obj.Record.alert,
                 sex: obj.Record.sex,
                 isDiseased: obj.Record.isDiseased,
-                creditCard: obj.Record.creditCard,
+                healthCreditPoints: obj.Record.healthCreditPoints,
                 donationHistory: obj.Record.donationHistory,
                 donationStatus: obj.Record.donationStatus,
-                deferredBy: obj.Record.deferredBy,
+                deferredAt: obj.Record.deferredAt,
+                sensitiveMedicalHistory: obj.Record.sensitiveMedicalHistory,
                 deferredDate: obj.Record.deferredDate,
                 deferredReason: obj.Record.deferredReason,
                 deferredTenure: obj.Record.deferredTenure,
@@ -143,15 +146,16 @@ class SuperContract extends PrimaryContract {
                 bloodBagSegmentNo: obj.Record.bloodBagSegmentNo
             };
             if (includeTimeStamp) {
-                asset[i].Timestamp = obj.Timestamp;
+                obj.Timestamp = obj.Timestamp;
             }
+            assetsWithLimitedFields.push(obj);
         }
 
-        return asset;
+        return assetsWithLimitedFields;
     };
-    // const deferredData = {"deferredOn": date, "deferredTenure": 365, "reasons": reasonsJson.reasons, "deferredBy": parsedArgs.username, 
+    // const deferredData = {"deferredOn": date, "deferredTenure": 365, "reasons": reasonsJson.reasons, "deferredAt": parsedArgs.username, 
     // "bloodBagUnitNo": parsedArgs.bloodBagUnitNo, "bloodBagSegmentNo": parsedArgs.bloodBagSegmentNo};
-    fetchFieldsForPendingDeferredDonors(assets, includeTimeStamp = false) {
+    fetchFieldsForPendingDeferredPatients(assets, includeTimeStamp = false) {
         for (let i = 0; i < assets.length; i++) {
             const obj = assets[i];
             assets[i] = {
@@ -159,10 +163,11 @@ class SuperContract extends PrimaryContract {
                 deferredStatus: obj.Record.deferredStatus,
                 deferredOn: obj.Record.deferredOn,
                 deferredTenure: obj.Record.deferredTenure,
-                deferredBy: obj.Record.deferredBy,
+                deferredAt: obj.Record.deferredAt,
                 bloodBagUnitNo: obj.Record.bloodBagUnitNo,
                 bloodBagSegmentNo: obj.Record.bloodBagSegmentNo,
                 reasons: obj.Record.reasons,
+                results: obj.Record.results,
             };
             if (includeTimeStamp) {
                 assets[i].Timestamp = obj.Timestamp;
@@ -171,7 +176,7 @@ class SuperContract extends PrimaryContract {
         return assets;
     }
 
-    async queryAllDeferredDonors(ctx, args) {
+    async queryAllDeferredPatients(ctx, args) {
         try {
             // this.verifyClientOrgMatchesPeerOrg(ctx);
             const msp = ctx.stub.getMspID() + "";
@@ -186,12 +191,12 @@ class SuperContract extends PrimaryContract {
                     return { error: "Permission not granted to " + superId };
                 }
 
-                let resultsIterator = await ctx.stub.getPrivateDataByRange(deferredDonorPrivateCollection, '', '');
-                let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
+                let resultsIterator = await ctx.stub.getPrivateDataByRange(deferredPatientPrivateCollection, '', '');
+                let assets = await PrimaryContract.prototype.getAllPatientResults(resultsIterator.iterator, false);
 
-                return this.fetchFields(assets);
+                return this.fetchFields(assets).filter(asset => asset.isDiseased === true || asset.isDiseased === 'true');
             } else {
-                return { "status": "error", "message": `${msp} not authorized to read ${deferredDonorPrivateCollection}` };
+                return { "status": "error", "message": `${msp} not authorized to read ${deferredPatientPrivateCollection}` };
             }
         } catch (error) {
             console.error(error);
@@ -199,102 +204,192 @@ class SuperContract extends PrimaryContract {
         }
     };
 
-    async queryDonorsForBagId(ctx, args) {
+    async queryPatientsForBagId(ctx, args) {
         let parsedArgs = JSON.parse(args);
 
-        let assets = await this.queryAllDonors(ctx);
-        console.debug("Received ", assets.length, " entries");
+        let assets = await this.queryAllPatients(ctx);
+        console.debug("Received ", assets.length, " entries in queryPatientsForBagId");
         // console.debug("Sample asset: ", typeof(assets));
         // console.debug(assets[0]);
 
         for (let i = 0; i < assets.length; i++) {
             let donationHistory = assets[i].donationHistory;
-            // console.debug("Donor ", assets[i].donorId, ": ", donationHistory);
+            // console.debug("Patient ", assets[i].healthId, ": ", donationHistory);
             if (donationHistory !== null) {
                 const numberOfDonations = Object.keys(donationHistory).length;
-                console.debug("For donor, ", assets[i].donorId, ", donation history length: ", numberOfDonations);
+                console.debug("For patient, ", assets[i].healthId, ", donation history length: ", numberOfDonations);
                 if (numberOfDonations > 0) {
                     let currentDonation;
                     for (let j = 0; j < numberOfDonations; j++) {
                         currentDonation = donationHistory['donation' + (j + 1)];
                         // console.debug("Searching donation ", currentDonation);
-                        if (currentDonation['status'] === 'successful' && currentDonation['bloodBagUnitNo'] == parsedArgs.bloodBagUnitNo && currentDonation['bloodBagSegmentNo'] == parsedArgs.bloodBagSegmentNo) {
-                            console.debug("Donor found: ", assets[i].donorId);
-                            return { status: "success", donorId: assets[i].donorId };
+                        if (currentDonation['status'] === 'successful' && currentDonation['bloodBagUnitNo'] == parsedArgs.bloodBagUnitNo
+                            && currentDonation['bloodBagSegmentNo'] == parsedArgs.bloodBagSegmentNo) {
+                            console.debug("Patient found: ", assets[i].healthId);
+
+                            return { status: "success", healthId: assets[i].healthId };
                         }
                     }
                 }
 
             }
         }
-        console.debug("Donor for bag not found");
-        return { status: "error", message: "Donor for bag not found", donorId: null };
+        console.debug("Patient for bag not found: ", parsedArgs.bloodBagUnitNo, parsedArgs.bloodBagSegmentNo, parsedArgs.bagId);
+        return { status: "error", message: "Patient for bag not found", healthId: null };
     };
 
-    async updateDonorMedicalDetailsForDeferral(ctx, args) {
-        args = JSON.parse(args);
-        let donorId = args.donorId;
-        let newAlert = true;
-        let newIsDiseased = true;
-        let newDonationStatus = args.donationStatus;
-        let isDataChanged = false;
+    async updatePatientMedicalDetailsForDeferral(ctx, args) {
+        try {
+            args = JSON.parse(args);
+            const healthId = args.healthId;
+            const newAlert = true;
+            const newIsDiseased = true;
+            const newDonationStatus = args.donationStatus;
+            const deferredOn = args.deferredOn;
+            const deferredTenure = args.deferredTenure;
+            const deferredAt = args.deferredAt;
+            let isDataChanged = false;
 
-        const donor = await PrimaryContract.prototype.readDonor(ctx, donorId);
+            const patient = await PrimaryContract.prototype.readPatient(ctx, healthId);
 
-        if (donor.alert !== newAlert) {
-            donor.alert = newAlert;
-            isDataChanged = true;
+            if (patient.alert !== newAlert) {
+                patient.alert = newAlert;
+                isDataChanged = true;
+            }
+
+            if (patient.isDiseased !== newIsDiseased) {
+                patient.isDiseased = newIsDiseased;
+                isDataChanged = true;
+            }
+
+            if (patient.donationStatus !== newDonationStatus) {
+                patient.donationStatus = newDonationStatus;
+                isDataChanged = true;
+            }
+
+            let donationHistory = patient.donationHistory;
+            if (donationHistory !== null) {
+                const numberOfDonations = Object.keys(donationHistory).length;
+                console.debug("For patient, ", patient.healthId, ", donation history length: ", numberOfDonations);
+                if (numberOfDonations > 0) {
+                    let currentDonation;
+                    for (let j = numberOfDonations - 1; j >= 0; j--) {
+                        currentDonation = donationHistory['donation' + (j + 1)];
+                        // console.debug("Searching donation ", currentDonation);
+                        if (currentDonation['status'] === 'successful' && currentDonation['bloodBagUnitNo'] == args.bloodBagUnitNo
+                            && currentDonation['bloodBagSegmentNo'] == args.bloodBagSegmentNo) {
+                            isDataChanged = true;
+                            patient.donationHistory['donation' + (j + 1)]['status'] = 'failed (blood bag discarded)';
+                            console.debug("staus changed for donor " + healthId + " bag: " + args.bloodBagSegmentNo + " " + args.bloodBagUnitNo);
+                        }
+                    }
+                }
+
+            }
+
+            if (isDataChanged === true) {
+                patient.deferredDetails = {
+                    deferredOn: deferredOn,
+                    deferredAt: deferredAt,
+                    deferredTenure: deferredTenure,
+                }
+                const buffer = Buffer.from(JSON.stringify(patient));
+                await ctx.stub.putState(healthId, buffer);
+            }
+            return { status: "success", message: `Patient ${healthId} medical details updated successfully`, patient: JSON.stringify(patient) };
+        } catch (error) {
+            console.error("Error updating patient medical details for deferral: ", error);
+            return { status: "error", error: error.message };
         }
-
-        if (donor.isDiseased !== newIsDiseased) {
-            donor.isDiseased = newIsDiseased;
-            isDataChanged = true;
-        }
-
-        if (donor.donationStatus !== newDonationStatus) {
-            donor.donationStatus = newDonationStatus;
-            isDataChanged = true;
-        }
-
-
-        if (isDataChanged === false) return;
-
-        const buffer = Buffer.from(JSON.stringify(donor));
-        await ctx.stub.putState(donorId, buffer);
     };
 
-    async deferDonorOfBag(ctx, args) {
+
+
+    async updateSensitiveMedicalHistory(ctx, args) {
         try {
             const parsedArgs = JSON.parse(args);
-            // const donorId = await this.queryDonorsForBagId(ctx, args);
-            const donorId = parsedArgs.donorId;
-            const donor = parsedArgs.donor;
-            if (donorId !== null) {
-                // console.debug("Received donor ID from query: ", donorId);
-                // console.debug("Received donor ID from query string: ", donorId.toString());
+            const healthId = parsedArgs.healthId;
+            const deferredPatientBytes = await ctx.stub.getPrivateData(deferredPatientPrivateCollection, healthId);
+            let deferredPatient;
+            let numberOfMedicalTestRecords = 0;
+            if (!!deferredPatientBytes && deferredPatientBytes.length > 0) {
+                deferredPatient = DeferredPatient.fromBytes(deferredPatientBytes);
+                // record exists, update the sensitive medical history array (insert a new record)
+                console.debug("Updating sensitive medical history for deferred patient: ", healthId);
+                numberOfMedicalTestRecords = Object.keys(deferredPatient.sensitiveMedicalHistory).length;
+                deferredPatient.sensitiveMedicalHistory['test' + (numberOfMedicalTestRecords + 1)] = {
+                    'dateOfTest': parsedArgs.dateOfTest,
+                    'testedAt': parsedArgs.testedAt, 'results': parsedArgs.results
+                };
+            } else {
+                let sensitiveMedicalHistory = {};
+                sensitiveMedicalHistory['test' + (numberOfMedicalTestRecords + 1)] = {
+                    'dateOfTest': parsedArgs.dateOfTest,
+                    'testedAt': parsedArgs.testedAt, 'results': parsedArgs.results
+                };
+                const patient = await PrimaryContract.prototype.readPatient(ctx, healthId);
+                deferredPatient = new DeferredPatient(patient, parsedArgs.deferredStatus, parsedArgs.deferredOn,
+                    parsedArgs.deferredTenure, parsedArgs.reasons, parsedArgs.deferredAt, sensitiveMedicalHistory);
+            }
+            await ctx.stub.putPrivateData(deferredPatientPrivateCollection, healthId, Buffer.from(JSON.stringify(deferredPatient)));
+            return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${deferredPatientPrivateCollection}` }
+        } catch (error) {
+            console.error("Error occurred in sensitive medical history update: ", error);
+            return { status: "error", error: error };
+        }
+    }
 
-                let changedMedicalDetails = { donorId: donorId, alert: true, isDiseased: true, donationStatus: parsedArgs.deferredStatus };
-                await this.updateDonorMedicalDetailsForDeferral(ctx, JSON.stringify(changedMedicalDetails));
+    async deferPatientOfBag(ctx, args) {
+        try {
+            const parsedArgs = JSON.parse(args);
+            const healthId = parsedArgs.healthId;
+            let patient = parsedArgs.patient;
+            if (healthId !== null && parsedArgs.reasons && parsedArgs.reasons !== null) {
+                let changedMedicalDetails = {
+                    healthId: healthId, alert: true, isDiseased: true, donationStatus: parsedArgs.deferredStatus,
+                    deferredOn: parsedArgs.deferredOn, deferredTenure: parsedArgs.deferredTenure,
+                    deferredAt: parsedArgs.deferredAt, bloodBagUnitNo: parsedArgs.bloodBagUnitNo,
+                    bloodBagSegmentNo: parsedArgs.bloodBagSegmentNo
+                };
+
+                const numberOfMedicalTestRecords = 0;
+                let sensitiveMedicalHistory = {};
+                sensitiveMedicalHistory['test' + (numberOfMedicalTestRecords + 1)] = {
+                    'dateOfTest': parsedArgs.deferredOn,
+                    'testedAt': parsedArgs.deferredAt, 'results': parsedArgs.results
+                };
+
+                const response = await this.updatePatientMedicalDetailsForDeferral(ctx, JSON.stringify(changedMedicalDetails));
+                let changedPatient = null;
+                if (response.status && response.status === "success" && response.patient) changedPatient = JSON.parse(response.patient);
                 const msp = ctx.stub.getMspID() + "";
 
                 if (msp.trim() == "superOrgMSP") {
                     // PDC Write operations only on authorized peers
                     console.debug("MSP: " + ctx.stub.getMspID());
                     // const date = new Date().toISOString().split("T")[0];
-                    const deferredDonor = new DeferredDonor(donor, parsedArgs.deferredStatus, parsedArgs.deferredOn, parsedArgs.deferredTenure, parsedArgs.reasons, parsedArgs.deferredBy, parsedArgs.bloodBagUnitNo, parsedArgs.bloodBagSegmentNo);
-                    const plainDeferredDonor = JSON.parse(JSON.stringify(deferredDonor));
-                    console.debug("Putting deferred donor to ledger: ", plainDeferredDonor);
-                    console.debug("Type: ", typeof (plainDeferredDonor));
-                    await ctx.stub.putPrivateData(deferredDonorPrivateCollection, donorId, Buffer.from(stringify(sortKeysRecursive(plainDeferredDonor))));
-                    return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${deferredDonorPrivateCollection}` }
+                    patient = (changedPatient === null || changedPatient === undefined) ? patient : changedPatient;
+                    const deferredPatient = new DeferredPatient(patient, parsedArgs.deferredStatus, parsedArgs.deferredOn,
+                        parsedArgs.deferredTenure, parsedArgs.reasons, parsedArgs.deferredAt, sensitiveMedicalHistory);
+                    const plainDeferredPatient = JSON.parse(JSON.stringify(deferredPatient));
+                    console.debug("Putting deferred patient to ledger: ", plainDeferredPatient);
+                    console.debug("Type: ", typeof (plainDeferredPatient));
+                    await ctx.stub.putPrivateData(deferredPatientPrivateCollection, healthId, Buffer.from(stringify(sortKeysRecursive(plainDeferredPatient))));
+                    return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${deferredPatientPrivateCollection}` }
                 } else {
                     console.warn(`PDC write skipped on peer with MSP: /${msp}/`);
                 }
 
                 return { status: "success", peer: `/${ctx.stub.getMspID()}/` };
+            } else if (healthId !== null && parsedArgs.reasons === null) {
+                let sensitiveMedicalHistoryArgs = {
+                    healthId: healthId, dateOfTest: parsedArgs.deferredOn,
+                    testedAt: parsedArgs.deferredAt, results: parsedArgs.results
+                }
+                return await this.updateSensitiveMedicalHistory(ctx, JSON.stringify(sensitiveMedicalHistoryArgs));
             } else {
-                console.debug("Check blood bag ID. Donor not found.");
-                return { status: "error", error: "Donor not found" };
+                console.debug("Check blood bag ID. Patient not found.");
+                return { status: "error", error: "Patient not found" };
             }
         } catch (error) {
             console.error(error);
@@ -317,10 +412,10 @@ class SuperContract extends PrimaryContract {
                     return { error: "Permission not granted to " + superId };
                 }
                 let resultsIterator = await ctx.stub.getPrivateDataByRange(pendingCUECollection, '', '');
-                let assets = await PrimaryContract.prototype.getAllDonorResults(resultsIterator.iterator, false);
+                let assets = await PrimaryContract.prototype.getAllPatientResults(resultsIterator.iterator, false);
 
-                let pendingBagsForDeferral = this.fetchFieldsForPendingDeferredDonors(assets);
-                console.debug(`Received ${pendingBagsForDeferral.length} entries`);
+                let pendingBagsForDeferral = this.fetchFieldsForPendingDeferredPatients(assets);
+                console.debug(`Received ${pendingBagsForDeferral.length} entries in pending CUE collection`);
 
                 let pendingBagIds = [];
                 for (let i = 0; i < pendingBagsForDeferral.length; i++) {
@@ -334,7 +429,7 @@ class SuperContract extends PrimaryContract {
         }
     };
 
-    async deferPendingDonors(ctx, args) {
+    async deferPendingPatients(ctx, args) {
         try {
             // this.verifyClientOrgMatchesPeerOrg(ctx);
             const msp = ctx.stub.getMspID() + "";
@@ -366,38 +461,39 @@ class SuperContract extends PrimaryContract {
                     }
                 }
 
-                console.debug(`Received ${pendingBagRecordsForDeferral.length} entries`);
+                console.debug(`Received ${pendingBagRecordsForDeferral.length} entries for deferral`);
                 let deferredBagsCount = 0;
-                const deferredDonorDetails = [];
+                const deferredPatientDetails = [];
                 for (let i = 0; i < pendingBagRecordsForDeferral.length; i++) {
                     let bag = pendingBagRecordsForDeferral[i];
-                    let donorId = null;
-                    if (!pendingBagIds[i].startsWith("PID")) {
-                        let response = await this.queryDonorsForBagId(ctx, JSON.stringify(bag));
+                    console.debug("Bag to be deferred: ", bag);
+                    let healthId = null;
+                    if (pendingBagIds[i].startsWith("T") || pendingBagIds[i].includes("-")) {
+                        let response = await this.queryPatientsForBagId(ctx, JSON.stringify(bag));
                         console.debug(response);
-                        donorId = "donorId" in response ? response.donorId : null;
+                        healthId = "healthId" in response ? response.healthId : null;
                     } else {
-                        donorId = pendingBagIds[i];
+                        healthId = pendingBagIds[i];
                     }
-                    if (donorId !== null) {
-                        const donor = await PrimaryContract.prototype.readDonor(ctx, donorId);
-                        console.debug("Donor object read: ", donor);
-                        let deferredDonorDetail = {
+                    if (healthId !== null) {
+                        const patient = await PrimaryContract.prototype.readPatient(ctx, healthId);
+                        console.debug("Patient object read: ", patient);
+                        let deferredPatientDetail = {
                             ...bag,
-                            donorId: donorId,
-                            donor: donor,
-                            bagId: pendingBags[i].startsWith("PID") ? null : pendingBagIds[i],
+                            healthId: healthId,
+                            patient: patient,
+                            bagId: pendingBagIds[i].startsWith("T") || pendingBagIds[i].includes("-") ? pendingBagIds[i] : null,
                             recordId: pendingBags[i]
                         };
-                        deferredDonorDetails.push(deferredDonorDetail);
+                        deferredPatientDetails.push(deferredPatientDetail);
                     }
                 }
-                for (let i = 0; i < deferredDonorDetails.length; i++) {
-                    const deferredDonorDetail = deferredDonorDetails[i];
-                    const response = await this.deferDonorOfBag(ctx, JSON.stringify(deferredDonorDetail));
+                for (let i = 0; i < deferredPatientDetails.length; i++) {
+                    const deferredPatientDetail = deferredPatientDetails[i];
+                    const response = await this.deferPatientOfBag(ctx, JSON.stringify(deferredPatientDetail));
                     if (response.status == "success") {
                         console.debug("Bag to be deleted: " + pendingBags[i]);
-                        const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingCUECollection, deferredDonorDetail.recordId);
+                        const deletePendingBagResponse = await ctx.stub.deletePrivateData(pendingCUECollection, deferredPatientDetail.recordId);
                         console.debug(deletePendingBagResponse.toString());
                         deferredBagsCount++;
                     }
@@ -408,7 +504,7 @@ class SuperContract extends PrimaryContract {
                     console.debug(deletePendingBagResponse.toString());
                     deferredBagsCount++;
                 }
-                return { status: "success", message: `Deferred ${deferredBagsCount} out of ${pendingBagRecordsForDeferral.length} donors via ${msp}` }
+                return { status: "success", message: `Deferred ${deferredBagsCount} out of ${pendingBagRecordsForDeferral.length} patients via ${msp}` }
 
             } else {
                 return { status: "error", message: `${msp} not authorized to read ${pendingCUECollection}` };
@@ -418,6 +514,64 @@ class SuperContract extends PrimaryContract {
             return { status: "error", error: error };
         }
     };
+
+    async patientExists(ctx, healthId) {
+        const buffer = await ctx.stub.getPrivateData(deferredPatientPrivateCollection, healthId);
+        return (!!buffer && buffer.length > 0);
+    }
+
+    async readPatient(ctx, healthId) {
+        const exists = await this.patientExists(ctx, healthId);
+        if (!exists) {
+            throw new Error(`The patient ${healthId} does not exist`);
+        }
+
+        const buffer = await ctx.stub.getPrivateData(deferredPatientPrivateCollection, healthId);
+        let asset = DeferredPatient.fromBytes(buffer);
+        asset = ({
+            healthId: healthId,
+            firstName: asset.firstName,
+            lastName: asset.lastName,
+            dob: asset.dob,
+            phoneNumber: asset.phoneNumber,
+            aadhar: asset.aadhar,
+            address: asset.address,
+            sex: asset.sex,
+            bloodGroup: asset.bloodGroup,
+            medicalHistory: asset.medicalHistory,
+            donationHistory: asset.donationHistory,
+            sensitiveMedicalHistory: asset.sensitiveMedicalHistory,
+            alert: asset.alert,
+            isDiseased: asset.isDiseased,
+            healthCreditPoints: asset.healthCreditPoints,
+            donationStatus: asset.donationStatus,
+            creationTimestamp: asset.creationTimestamp,
+            deferredDetails: asset.deferredDetails,
+            deferredAt: asset.deferredAt,
+            deferredOn: asset.deferredDate,
+            deferredTenure: asset.deferredTenure,
+            deferredReason: asset.deferredReason,
+        });
+        return asset;
+    }
+
+    async checkIfPatientIsDeferred(ctx, args) {
+        try {
+            let ar = JSON.parse(args);
+            let healthId = ar.healthId;
+            let asset = await PrimaryContract.prototype.readPatient(ctx, healthId);
+            if (asset.isDiseased === true || asset.isDiseased === "true") {
+                let deferredDate = !!asset.deferredDetails ? asset.deferredDetails.deferredOn : "Unknown";
+                let deferredAt = !!asset.deferredDetails ? asset.deferredDetails.deferredAt : "Unknown";
+                return { status: "success", message: "Patient is deferred as tested on " + deferredDate + " at location " + deferredAt, patient: asset };
+            } else {
+                return { status: "success", message: "Patient is not deferred." };
+            }
+        } catch (error) {
+            console.error(error);
+            return { status: "error", message: "Patient does not exist", error: error };
+        }
+    }
 }
 
 module.exports = SuperContract;
