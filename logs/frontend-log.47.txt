@@ -1,0 +1,1515 @@
+Script started on 2025-05-25 07:16:52+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd client/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m c[Knpm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> panel@0.0.0 start
+> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[9;1H[?25h[K]0;C:\WINDOWS\system32\cmd.exe ]0;ng serve[36m- [mGenerating browser application bundles...[31m[1m(node:16216) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)[m
+[K[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+[?25l[1m
+Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[92m[22m
+vendor.js[12X[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[92m
+main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m696.73 kB[92m
+styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[92m
+polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[92m
+runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[m[1m[21;1H [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.60 MB[22m[23;1HBuild at: [37m[1m2025-05-25T01:51:47.113Z[m - Hash: [37m[1mdc78c44d6371d5069869[m - Time: [37m[1m63129[mms[?25h[?25l[25;1H** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[92m[28;1H√ [mCompiled successfully.
+[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+[1m
+Initial Chunk Files[22m  [2m | [22m[1mNames[22m [2m | [22m     [1mSize[92m[22m
+vendor.js[12X[m[2m[12C | [22mvendor[2m | [22m  [96m3.91 MB[m
+[92mmain.js[m[2m[14C | [22mmain  [2m | [96m[22m683.40 kB[K[m
+[92mstyles.css, styles.js[m[2m | [22mstyles[2m | [96m[22m563.71 kB[K[m
+
+2 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:52:31.890Z[m - Hash: [37m[1m8c78b43edb5e1686b191[m - Time: [37m[1m8451[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/donorstatuscheck.component.ts[m:[93m93[m:[93m95 [m- [91merror [90mTS2304: [mCannot find name 'AuthService'.[K
+[31m[1m    [m[K
+[31m[1m    [7m93[m  constructor(private fb: FormBuilder, private http: HttpClient, private readonly authService: AuthService) { }[K
+[31m[1m    [7m  [m[95X[91m[95C~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K
+[92mvendor.js[m[2m[10C | [22mvendor[2m | [22m  [96m3.89 MB[K[m
+[92mmain.js[m[2m[12C | [22mmain  [2m | [96m[22m697.13 kB[K[m
+
+3 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:53:01.288Z[m - Hash: [37m[1m937882f21c1cbaaf8659[m - Time: [37m[1m7189[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/donorstatuscheck.component.ts[m:[93m106[m:[93m38 [m- [91merror [90mTS2339: [mProperty 'getUserRole' does not exist on type 'Aut
+[31;133HthService'.
+[31m[1m    [m[K
+[31m[1m    [7m106[m                 const userRole = this.authService.getUserRole();[K
+[31m[1m    [7m   [m[51X[91m[51C~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.19 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:53:14.641Z[m - Hash: [37m[1md598f11a2c02b73b8558[m - Time: [37m[1m4950[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/donorstatuscheck.component.ts[m:[93m106[m:[93m38 [m- [91merror [90mTS2339: [mProperty 'getUserRole' does not exist on type 'Aut
+[31;133HthService'.
+[31m[1m    [m[K
+[31m[1m    [7m106[m                 const userRole = this.authService.getUserRole();[K
+[31m[1m    [7m   [m[51X[91m[51C~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.19 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:53:28.641Z[m - Hash: [37m[1mb6f7a4088a569460201e[m - Time: [37m[1m4592[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[31m[1m    [m
+[31m[1m    Error: [96msrc/app/technician/donorstatuscheck.component.ts[m:[93m106[m:[93m38 [m- [91merror [90mTS2339: [mProperty 'getUserRole' does not exist on type 'Aut
+[31;133HthService'.
+[31m[1m    [m[K
+[31m[1m    [7m106[m                 const userRole = this.authService.getUserRole();[K
+[31m[1m    [7m   [m[51X[91m[51C~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:53:33.371Z[m - Hash: [37m[1mb6f7a4088a569460201e[m - Time: [37m[1m4496[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.19 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:53:56.643Z[m - Hash: [37m[1m84a29340f947b42bf0bc[m - Time: [37m[1m4775[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.19 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:54:03.620Z[m - Hash: [37m[1m63d6b443db904d4c90e2[m - Time: [37m[1m4939[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.15 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:54:16.587Z[m - Hash: [37m[1m884533cd86b13a97aa91[m - Time: [37m[1m5525[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.09 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:55:10.150Z[m - Hash: [37m[1m641a892de2d66bf1ce27[m - Time: [37m[1m6500[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.35 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:56:18.108Z[m - Hash: [37m[1m6666e64c0df40c5207f9[m - Time: [37m[1m5547[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.09 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:56:25.181Z[m - Hash: [37m[1m641a892de2d66bf1ce27[m - Time: [37m[1m4974[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.35 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:56:36.434Z[m - Hash: [37m[1m6402edb8eb9e94914a4e[m - Time: [37m[1m5132[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.46 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:57:12.423Z[m - Hash: [37m[1m47e043a7570ad956c158[m - Time: [37m[1m5148[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.53 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T01:58:15.607Z[m - Hash: [37m[1ma6a70effcc6a0169c9ff[m - Time: [37m[1m6823[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[8;31;133t[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.35 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T01:56:36.434Z[m - Hash: [37m[1m6402edb8eb9e94914a4e[m - Time: [37m[1m5132[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.46 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T01:57:12.423Z[m - Hash: [37m[1m47e043a7570ad956c158[m - Time: [37m[1m5148[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.53 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T01:58:15.607Z[m - Hash: [37m[1ma6a70effcc6a0169c9ff[m - Time: [37m[1m6823[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.46 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T02:00:09.766Z[m - Hash: [37m[1m082adddf82456452a154[m - Time: [37m[1m6288[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.41 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T02:00:15.510Z[m - Hash: [37m[1m0f76f1fc43cb1f21399e[m - Time: [37m[1m5493[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.84 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T02:01:12.952Z[m - Hash: [37m[1mab81c750f2e8ed734564[m - Time: [37m[1m2016[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.46 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T02:00:09.766Z[m - Hash: [37m[1m082adddf82456452a154[m - Time: [37m[1m6288[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.41 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T02:00:15.510Z[m - Hash: [37m[1m0f76f1fc43cb1f21399e[m - Time: [37m[1m5493[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.84 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T02:01:12.952Z[m - Hash: [37m[1mab81c750f2e8ed734564[m - Time: [37m[1m2016[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K
+[K[31;1H[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.50 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T02:24:08.038Z[m - Hash: [37m[1m4fc0df82429879f96441[m - Time: [37m[1m12011[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.04 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T02:24:26.067Z[m - Hash: [37m[1m84083f6b84e775907c9c[m - Time: [37m[1m5084[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.03 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T02:25:55.082Z[m - Hash: [37m[1m619559dd4ccbf79b3ba4[m - Time: [37m[1m6659[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.50 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T02:24:08.038Z[m - Hash: [37m[1m4fc0df82429879f96441[m - Time: [37m[1m12011[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.04 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T02:24:26.067Z[m - Hash: [37m[1m84083f6b84e775907c9c[m - Time: [37m[1m5084[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.03 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T02:25:55.082Z[m - Hash: [37m[1m619559dd4ccbf79b3ba4[m - Time: [37m[1m6659[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m696.96 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T02:28:30.650Z[m - Hash: [37m[1mde498b8600869bc8a2ea[m - Time: [37m[1m6821[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m696.97 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T02:29:21.484Z[m - Hash: [37m[1mfaad0be69df33564d115[m - Time: [37m[1m6134[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.03 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T02:29:47.010Z[m - Hash: [37m[1m38f24181396a8b844f06[m - Time: [37m[1m5394[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m696.96 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T02:28:30.650Z[m - Hash: [37m[1mde498b8600869bc8a2ea[m - Time: [37m[1m6821[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m696.97 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T02:29:21.484Z[m - Hash: [37m[1mfaad0be69df33564d115[m - Time: [37m[1m6134[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m697.03 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T02:29:47.010Z[m - Hash: [37m[1m38f24181396a8b844f06[m - Time: [37m[1m5394[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K
+[K[31;1H[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m697.15 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T05:59:25.134Z[m - Hash: [37m[1md2924ddc32f5cf7f250b[m - Time: [37m[1m19425[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T05:59:32.679Z[m - Hash: [37m[1md2924ddc32f5cf7f250b[m - Time: [37m[1m7309[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T05:59:35.046Z[m - Hash: [37m[1md2924ddc32f5cf7f250b[m - Time: [37m[1m2091[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m698.26 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T05:59:41.499Z[m - Hash: [37m[1m123ae6ddf0d1c8386b4c[m - Time: [37m[1m2552[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m698.66 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:00:08.091Z[m - Hash: [37m[1mf18ea6b9b0d708dae838[m - Time: [37m[1m2276[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'superId' does not exist on type 'DonorViewRecord'.     [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.superId}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m698.67 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:00:21.162Z[m - Hash: [37m[1m0732c760edb7b1681cbc[m - Time: [37m[1m1875[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorViewRecord'.  [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.deferredOn}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m700.41 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:00:39.737Z[m - Hash: [37m[1m1e612b1b05c16d834de3[m - Time: [37m[1m1624[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorViewRecord'.  [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.deferredOn}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m76[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m76[m                     <td>{{record.deferredAt}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m80[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredBy' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m80[m                     <td>{{record.deferredBy}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m700.42 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:01:02.939Z[m - Hash: [37m[1m7f0c4c3005a7663c2733[m - Time: [37m[1m3354[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorViewRecord'.  [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.deferredOn}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m76[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m76[m                     <td>{{record.deferredAt}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m80[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorViewRecord'.     [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m80[m                     <td>{{record.deferredReason}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m701.30 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:01:23.779Z[m - Hash: [37m[1md2df40f0935af7dca234[m - Time: [37m[1m1217[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorViewRecord'.  [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.deferredOn}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m76[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m76[m                     <td>{{record.deferredAt}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m80[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorViewRecord'.     [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m80[m                     <td>{{record.deferredReason}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m84[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredBy' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m84[m[K[18C[31m[1m   <td>{{record.deferredBy}}</td>[m
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m701.32 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:01:44.529Z[m - Hash: [37m[1mf78422710e41f978fded[m - Time: [37m[1m2275[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorViewRecord'.  [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.deferredOn}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m76[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m76[m                     <td>{{record.deferredAt}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m80[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorViewRecord'.     [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m80[m                     <td>{{record.deferredReason}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m84[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorViewReco
+[31;133Hord'.
+[31m[1m    [m[K
+[31m[1m    [7m84[m[K[5C[31m[1m                <td>{{record.sensitiveMedicalHistory}}</td>[m
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m706.41 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:02:21.951Z[m - Hash: [37m[1m439a214f074cc5b6aa8a[m - Time: [37m[1m2094[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorViewRecord'.  [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.deferredOn}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m76[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m76[m                     <td>{{record.deferredAt}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m80[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorViewRecord'.     [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m80[m                     <td>{{record.deferredReason}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m706.42 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:02:30.434Z[m - Hash: [37m[1md66fe41529058aaa00ce[m - Time: [37m[1m1516[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m706.42 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:02:32.468Z[m - Hash: [37m[1m64d387afcc80ea1325bd[m - Time: [37m[1m1711[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorViewRecord'.  [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.deferredOn}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m76[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m76[m                     <td>{{record.deferredAt}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m80[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorViewRecord'.     [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m80[m                     <td>{{record.deferredReason}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m85[m:[93m61 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorViewReco
+[31;133Hord'.
+[31m[1m    [m[K
+[31m[1m    [7m85[m[K[5C[31m[1m              <ng-container *ngFor="let test of (record.sensitiveMedicalHistory | keyvalue)">[m
+[31m[1m    [7m  [m[61X[91m[61C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m90[m:[93m48 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m90[m                           <li>Date of Test: {{ test.value['dateOfTest'] }}</li>[K
+[31m[1m    [7m  [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m91[m:[93m42 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m91[m                           <li>Status: {{ test.value['status'] }}</li>[K
+[31m[1m    [7m  [m[42X[91m[42C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m92[m:[93m46 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m92[m                           <li>Screened At: {{test.value['testedAt']}}</li>[K
+[31m[1m    [7m  [m[46X[91m[46C~~~~~~~~~~~~~~~~~~~~[31m[1m~~[m[K
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m94[m:[93m48 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m94[m                           <ng-container *ngIf="test.value['status'] === 'failed'; else successBlock">[K
+[31m[1m    [7m  [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m95[m:[93m43 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m95[m                             <li>Reason: {{test.value['reason']}}</li>[K
+[31m[1m    [7m  [m[43X[91m[43C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m103[m:[93m34 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m103[m                             <p>{{test.value['results']}}</p>[K
+[31m[1m    [7m   [m[34X[91m[34C~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~[31m[1m~~~~~~~~~~[m[K
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:02:40.641Z[m - Hash: [37m[1m64d387afcc80ea1325bd[m - Time: [37m[1m1015[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorViewRecord'.  [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.deferredOn}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m76[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m76[m                     <td>{{record.deferredAt}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m80[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorViewRecord'.     [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m80[m                     <td>{{record.deferredReason}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m85[m:[93m61 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorViewReco
+[31;133Hord'.
+[31m[1m    [m[K
+[31m[1m    [7m85[m[K[5C[31m[1m              <ng-container *ngFor="let test of (record.sensitiveMedicalHistory | keyvalue)">[m
+[31m[1m    [7m  [m[61X[91m[61C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m90[m:[93m48 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m90[m                           <li>Date of Test: {{ test.value['dateOfTest'] }}</li>[K
+[31m[1m    [7m  [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m91[m:[93m42 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m91[m                           <li>Status: {{ test.value['status'] }}</li>[K
+[31m[1m    [7m  [m[42X[91m[42C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m92[m:[93m46 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m92[m                           <li>Screened At: {{test.value['testedAt']}}</li>[K
+[31m[1m    [7m  [m[46X[91m[46C~~~~~~~~~~~~~~~~~~~~[31m[1m~~[m[K
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m94[m:[93m48 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m94[m                           <ng-container *ngIf="test.value['status'] === 'failed'; else successBlock">[K
+[31m[1m    [7m  [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m95[m:[93m43 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m95[m                             <li>Reason: {{test.value['reason']}}</li>[K
+[31m[1m    [7m  [m[43X[91m[43C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m103[m:[93m34 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m103[m                             <p>{{test.value['results']}}</p>[K
+[31m[1m    [7m   [m[34X[91m[34C~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~[31m[1m~~~~~~~~~~[m[K
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m72[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorViewRecord'.  [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m72[m                     <td>{{record.deferredOn}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m76[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorViewRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m76[m                     <td>{{record.deferredAt}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m80[m:[93m34 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorViewRecord'.     [32;1H
+[31m[1m    [m[K
+[31m[1m    [7m80[m                     <td>{{record.deferredReason}}</td>[K
+[31m[1m    [7m  [m[34X[91m[34C~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m85[m:[93m61 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorViewReco
+[31;133Hord'.
+[31m[1m    [m[K
+[31m[1m    [7m85[m[K[5C[31m[1m              <ng-container *ngFor="let test of (record.sensitiveMedicalHistory | keyvalue)">[m
+[31m[1m    [7m  [m[61X[91m[61C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m90[m:[93m48 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m90[m                           <li>Date of Test: {{ test.value['dateOfTest'] }}</li>[K
+[31m[1m    [7m  [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m91[m:[93m42 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m91[m                           <li>Status: {{ test.value['status'] }}</li>[K
+[31m[1m    [7m  [m[42X[91m[42C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m92[m:[93m46 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m92[m                           <li>Screened At: {{test.value['testedAt']}}</li>[K
+[31m[1m    [7m  [m[46X[91m[46C~~~~~~~~~~~~~~~~~~~~[31m[1m~~[m[K
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m94[m:[93m48 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m94[m                           <ng-container *ngIf="test.value['status'] === 'failed'; else successBlock">[K
+[31m[1m    [7m  [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m95[m:[93m43 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m95[m                             <li>Reason: {{test.value['reason']}}</li>[K
+[31m[1m    [7m  [m[43X[91m[43C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m103[m:[93m34 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m103[m                             <p>{{test.value['results']}}</p>[K
+[31m[1m    [7m   [m[34X[91m[34C~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~[31m[1m~~~~~~~~~~[m[K
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[?25l[31m[1m[H        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+        Error occurs in the template of component DonorComponent.[m[K[31m[1m
+    [96msrc/app/donor/donor.component.html[m:[93m94[m:[93m48 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K[31m[1m
+    [m[K[31m[1m
+    [7m94[m                           <ng-container *ngIf="test.value['status'] === 'failed'; else successBlock">[K[31m[1m
+    [7m  [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+    [m[K[31m[1m
+      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[31m[1m
+        [7m14[m   templateUrl: './donor.component.html',[K[31m[1m
+        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+        Error occurs in the template of component DonorComponent.[m[K[31m[1m
+    [96msrc/app/donor/donor.component.html[m:[93m95[m:[93m43 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K[31m[1m
+    [m[K[31m[1m
+    [7m95[m                             <li>Reason: {{test.value['reason']}}</li>[K[31m[1m
+    [7m  [m[43X[91m[43C~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+    [m[K[31m[1m
+      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[31m[1m
+        [7m14[m   templateUrl: './donor.component.html',[K[31m[1m
+        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+        Error occurs in the template of component DonorComponent.[m[K[31m[1m
+    [96msrc/app/donor/donor.component.html[m:[93m103[m:[93m34 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K[31m[1m
+    [m[K[31m[1m
+    [7m103[m                             <p>{{test.value['results']}}</p>[K[31m[1m
+    [7m   [m[34X[91m[34C~~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+    [m[K[31m[1m
+      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[31m[1m
+        [7m14[m   templateUrl: './donor.component.html',[K[31m[1m
+        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~[31m[1m~~~~~~~~~~[m[K[31m[1m
+        Error occurs in the template of component DonorComponent.[m[K[31m[1m
+    [m[K
+[K[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m706.54 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:04:26.568Z[m - Hash: [37m[1m1d90dd0b4c80108a32c5[m - Time: [37m[1m2035[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m85[m:[93m61 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorV
+[30;133HViewRecord'.
+[31m[1m    [m[K
+[31m[1m    [7m85[m                   <ng-container *ngFor="let test of (record.sensitiveMedicalHistory | keyvalue)">[K
+[31m[1m    [7m  [m[61X[91m[61C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m90[m:[93m48 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m90[m                           <li>Date of Test: {{ test.value['dateOfTest'] }}</li>[K
+[31m[1m    [7m  [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m91[m:[93m42 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m91[m                           <li>Status: {{ test.value['status'] }}</li>[K
+[31m[1m    [7m  [m[42X[91m[42C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m92[m:[93m46 [m- [91merror [90mTS2[K[m[31m[1m571: [mObject is of type 'unknown'.
+[31m[1m    [m[K
+[31m[1m    [7m92[m                           <li>Screened At: {{test.value['testedAt']}}</li>[K
+[31m[1m    [7m  [m[46X[91m[46C~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m94[m:[93m48 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m94[m                           <ng-container *ngIf="test.value['status'] === 'failed'; else successBlock">[K
+[31m[1m    [7m  [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m95[m:[93m43 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m95[m                             <li>Reason: {{test.value['reason']}}</li>[K
+[31m[1m    [7m  [m[43X[91m[43C~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m103[m:[93m34 [m- [91merror [90mTS2571: [mObject is of type 'unknown'.[K
+[31m[1m    [m[K
+[31m[1m    [7m103[m                             <p>{{test.value['results']}}</p>[K
+[31m[1m    [7m   [m[33X[31m[1m[33C ~~~~~~~~~~~~~~~~~~~~~[m[K
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
+[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DonorComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m706.59 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:04:36.952Z[m - Hash: [37m[1m0dc241a51b912906611f[m - Time: [37m[1m1923[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m706.95 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:05:04.005Z[m - Hash: [37m[1mb840e49447cde267c257[m - Time: [37m[1m1269[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m118[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m118[m     this.deferredOn = donorRecord.deferredOn || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m119[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m119[m     this.deferredReason = donorRecord.deferredReason || '';[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m120[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredTenure' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m120[m     this.deferredTenure = donorRecord.deferredTenure || 0;[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m121[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m121[m     this.deferredAt = donorRecord.deferredAt || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m707.16 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:05:30.983Z[m - Hash: [37m[1mc0915c43240e6d4446dc[m - Time: [37m[1m662[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m118[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m118[m     this.deferredOn = donorRecord.deferredOn || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m119[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m119[m     this.deferredReason = donorRecord.deferredReason || '';[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m120[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredTenure' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m120[m     this.deferredTenure = donorRecord.deferredTenure || 0;[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m121[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m121[m     this.deferredAt = donorRecord.deferredAt || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m174[m:[93m10 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorDeferred'.[K
+[31m[1m    [m[K
+[31m[1m    [7m174[m     this.sensitiveMedicalHistory = donorRecord.sensitiveMedicalHistory;[K
+[31m[1m    [7m   [m[10X[91m[10C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m174[m:[93m48 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m174[m     this.sensitiveMedicalHistory = donorRecord.sensitiveMedicalHistory;[K
+[31m[1m    [7m   [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:05:46.879Z[m - Hash: [37m[1mc0915c43240e6d4446dc[m - Time: [37m[1m482[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m118[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m118[m     this.deferredOn = donorRecord.deferredOn || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m119[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m119[m     this.deferredReason = donorRecord.deferredReason || '';[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m120[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredTenure' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m120[m     this.deferredTenure = donorRecord.deferredTenure || 0;[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m121[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m121[m     this.deferredAt = donorRecord.deferredAt || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m126[m:[93m14 [m- [91merror [90mTS2420: [mClass 'DonorDeferred' incorrectly implements interface 'DonorRecord'.[K
+[31m[1m      Property 'medicalHistory' is missing in type 'DonorDeferred' but required in type 'DonorRecord'.[m[K
+[31m[1m    [m[K
+[31m[1m    [7m126[m export class DonorDeferred implements DonorRecord {[K
+[31m[1m    [7m   [m[14X[91m[14C~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/donor/donor.ts[m:[93m71[m:[93m3[K[m
+[31m[1m        [7m71[m   medicalHistory: MedicalHistory;[K
+[31m[1m        [7m  [m   [96m~~~~~~~~~~~~~~[K[m
+[31m[1m        'medicalHistory' is declared here.[m[K
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m170[m:[93m10 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not e[K[31m[1mxist on type 'DonorDeferred'.[m
+[31m[1m    [m[K
+[31m[1m    [7m170[m     this.medicalHistory = donorRecord.medicalHistory;[K
+[31m[1m    [7m   [m[10X[91m[10C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m174[m:[93m48 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m174[m     this.sensitiveMedicalHistory = donorRecord.sensitiveMedicalHistory;[K
+[31m[1m    [7m   [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:05:55.004Z[m - Hash: [37m[1mc0915c43240e6d4446dc[m - Time: [37m[1m452[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m118[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m118[m     this.deferredOn = donorRecord.deferredOn || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m119[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m119[m     this.deferredReason = donorRecord.deferredReason || '';[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m120[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredTenure' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m120[m     this.deferredTenure = donorRecord.deferredTenure || 0;[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m121[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m121[m     this.deferredAt = donorRecord.deferredAt || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m175[m:[93m48 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m175[m     this.sensitiveMedicalHistory = donorRecord.sensitiveMedicalHistory;[K
+[31m[1m    [7m   [m[48X[91m[48C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:06:07.951Z[m - Hash: [37m[1mc0915c43240e6d4446dc[m - Time: [37m[1m563[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m119[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredOn' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m119[m     this.deferredOn = donorRecord.deferredOn || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m120[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredReason' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m120[m     this.deferredReason = donorRecord.deferredReason || '';[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m121[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'deferredTenure' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m121[m     this.deferredTenure = donorRecord.deferredTenure || 0;[K
+[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
+[31m[1m    [96msrc/app/donor/donor.ts[m:[93m122[m:[93m35 [m- [91merror [90mTS2339: [mProperty 'deferredAt' does not exist on type 'DonorRecord'.[K
+[31m[1m    [m[K
+[31m[1m    [7m122[m     this.deferredAt = donorRecord.deferredAt || '';[K
+[31m[1m    [7m   [m[35X[91m[35C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:06:31.069Z[m - Hash: [37m[1mc0915c43240e6d4446dc[m - Time: [37m[1m569[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m180[m:[93m5 [m- [91merror [90mTS2322: [mType 'MedicalHistory | undefined' is not assignable to type 'MedicalHistory'.[31;1H
+[31m[1m      Type 'undefined' is not assignable to type 'MedicalHistory'.[m[K
+[31m[1m    [m[K
+[31m[1m    [7m180[m     this.sensitiveMedicalHistory = donorRecord.sensitiveMedicalHistory;[K
+[31m[1m    [7m   [m     [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:06:55.735Z[m - Hash: [37m[1mc0915c43240e6d4446dc[m - Time: [37m[1m563[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:07:26.162Z[m - Hash: [37m[1mc0915c43240e6d4446dc[m - Time: [37m[1m503[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m707.82 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:08:00.991Z[m - Hash: [37m[1m04a82f76d4fd7eb3c952[m - Time: [37m[1m723[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m708.40 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:08:09.715Z[m - Hash: [37m[1m397e0d2eb29043fcc0f6[m - Time: [37m[1m1090[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m708.72 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:08:25.720Z[m - Hash: [37m[1m2739637280f2237714fb[m - Time: [37m[1m825[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m265[m:[93m10 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorSuperViewRec
+[30;133Hcord'.
+[31m[1m    [m[K
+[31m[1m    [7m265[m     this.sensitiveMedicalHistory = donorRecord.sensitiveMedicalHistory || {};[K
+[31m[1m    [7m   [m[10X[91m[10C~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m708.76 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:08:37.610Z[m - Hash: [37m[1md2cd091833d5f5a96b6a[m - Time: [37m[1m1023[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[HBuild at: [37m[1m2025-05-25T06:08:09.715Z[m - Hash: [37m[1m397e0d2eb29043fcc0f6[m - Time: [37m[1m1090[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m708.72 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T06:08:25.720Z[m - Hash: [37m[1m2739637280f2237714fb[m - Time: [37m[1m825[mms[K
+[K[92m
+√ [mCompiled successfully.[K[31m[1m
+    [m[K[31m[1m
+    Error: [96msrc/app/donor/donor.ts[m:[93m265[m:[93m10 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorSuperViewRecord'.[K[31m[1m
+    [m[K[31m[1m
+    [7m265[m     this.sensitiveMedicalHistory = donorRecord.sensitiveMedicalHistory || {};[K[31m[1m
+    [7m   [m[10X[91m[10C~~~~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+    [m[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m708.76 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T06:08:37.610Z[m - Hash: [37m[1md2cd091833d5f5a96b6a[m - Time: [37m[1m1023[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K
+[K[31;1H[?25h[?25l[HBuild at: [37m[1m2025-05-25T06:08:09.715Z[m - Hash: [37m[1m397e0d2eb29043fcc0f6[m - Time: [37m[1m1090[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m708.72 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T06:08:25.720Z[m - Hash: [37m[1m2739637280f2237714fb[m - Time: [37m[1m825[mms[K
+[K[92m
+√ [mCompiled successfully.[K[31m[1m
+    [m[K[31m[1m
+    Error: [96msrc/app/donor/donor.ts[m:[93m265[m:[93m10 [m- [91merror [90mTS2339: [mProperty 'sensitiveMedicalHistory' does not exist on type 'DonorSuperViewRecord'.[K[31m[1m
+    [m[K[31m[1m
+    [7m265[m     this.sensitiveMedicalHistory = donorRecord.sensitiveMedicalHistory || {};[K[31m[1m
+    [7m   [m[10X[91m[10C~~~~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+    [m[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m708.76 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T06:08:37.610Z[m - Hash: [37m[1md2cd091833d5f5a96b6a[m - Time: [37m[1m1023[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[36m/ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:10:20.120Z[m - Hash: [37m[1md2cd091833d5f5a96b6a[m - Time: [37m[1m6801[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.html[m:[93m25[m:[93m32 [m- [91merror [90mTS2551: [mProperty 'd
+[30;133HdeferredDate' does not exist on type 'DonorSuperViewRecord'. Did you mean 'deferredAt'?
+[31m[1m    [m[K
+[31m[1m    [7m25[m             <td>{{singleRecord.deferredDate}}</td>[K
+[31m[1m    [7m  [m[32X[91m[32C~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.ts[m:[93m9[m:[93m16[K[m
+[31m[1m        [7m9[m   templateUrl: './deferred-donor-list-for-super.component.html',[K
+[31m[1m        [7m [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DeferredDonorListForSuperComponent.[m[K
+[31m[1m    [m[K
+[?25l[31m[1m[H    [m[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m708.76 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T06:08:37.610Z[m - Hash: [37m[1md2cd091833d5f5a96b6a[m - Time: [37m[1m1023[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K
+5 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-25T06:10:20.120Z[m - Hash: [37m[1md2cd091833d5f5a96b6a[m - Time: [37m[1m6801[mms[K
+[K[92m
+√ [mCompiled successfully.[K[31m[1m
+    [m[K[31m[1m
+    Error: [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.html[m:[93m25[m:[93m32 [m- [91merror [90mTS2551: [mProperty 'deferredDate' does not exist on type 'DonorSuperViewRecord'. Did you mean 'deferredAt'?[K[31m[1m
+    [m[K[31m[1m
+    [7m25[m             <td>{{singleRecord.deferredDate}}</td>[K[31m[1m
+    [7m  [m[32X[91m[32C~~~~~~~~~~~~[K[31m[1m
+    [m[K[31m[1m
+      [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.ts[m:[93m9[m:[93m16[K[31m[1m
+        [7m9[m   templateUrl: './deferred-donor-list-for-super.component.html',[K[31m[1m
+        [7m [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[31m[1m
+        Error occurs in the template of component DeferredDonorListForSuperComponent.[m[K[31m[1m
+    [m[K
+[K
+[K[31;1H[?25h[36m- [mGenerating browser application bundles...[31m[1m    
+    Error: [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.ts[m:[93m20[m:[93m44 [m- [91merror [90mTS2339: [mProperty 'def
+[31;133HferredOn' does not exist on type 'DonorDeferred'.
+[31m[1m    [m[K
+[31m[1m    [7m20[m     new DisplayVal(DonorDeferred.prototype.deferredOn, 'Deferred On'),[K
+[31m[1m    [7m  [m[44X[91m[44C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m708.76 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:11:27.174Z[m - Hash: [37m[1m4b6c996236ea0908040e[m - Time: [37m[1m4365[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
+
+5 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:11:47.825Z[m - Hash: [37m[1m4b6c996236ea0908040e[m - Time: [37m[1m806[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.ts[m:[93m20[m:[93m44 [m- [91merror [90mTS2339: [mProperty 'def
+[31;133HferredOn' does not exist on type 'DonorDeferred'.
+[31m[1m    [m[K
+[31m[1m    [7m20[m     new DisplayVal(DonorDeferred.prototype.deferredOn, 'Deferred On'),[K
+[31m[1m    [7m  [m[44X[91m[44C~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m708.79 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:12:01.513Z[m - Hash: [37m[1m2427fc2794f00bdc273d[m - Time: [37m[1m4041[mms[K
+
+[92m√ [mCompiled successfully.[K
+[31m[1m    [m
+[31m[1m    Error: [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.html[m:[93m25[m:[93m32 [m- [91merror [90mTS2551: [mProperty 'd
+[31;133HdeferredDate' does not exist on type 'DonorSuperViewRecord'. Did you mean 'deferredAt'?
+[31m[1m    [m[K
+[31m[1m    [7m25[m             <td>{{singleRecord.deferredDate}}</td>[K
+[31m[1m    [7m  [m[32X[91m[32C~~~~~~~~~~~~[K[m
+[31m[1m    [m[K
+[31m[1m      [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.ts[m:[93m9[m:[93m16[K[m
+[31m[1m        [7m9[m   templateUrl: './deferred-donor-list-for-super.component.html',[K
+[31m[1m        [7m [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[31m[1m        Error occurs in the template of component DeferredDonorListForSuperComponent.[m[K
+[31m[1m    [m[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m708.78 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-25T06:12:28.488Z[m - Hash: [37m[1m6f2193095cf19cca6123[m - Time: [37m[1m1019[mms[K
+
+[92m√ [mCompiled successfully.[K
+^
+Script done on 2025-05-25 13:16:11+05:30 [COMMAND_EXIT_CODE="0"]

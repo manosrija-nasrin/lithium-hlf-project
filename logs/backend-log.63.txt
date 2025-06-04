@@ -1,0 +1,348 @@
+Script started on 2025-06-03 19:20:10+05:30 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd server/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m ./[K[Knpm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> patient-application@1.0.0 prestart
+> node initServer.js[9;1H[?25h[K[?25l[K
+> patient-application@1.0.0 start
+> node node_modules/nodemon/bin/nodemon.js src/server.js[13;1H[K[?25h[33m[nodemon] 1.19.4
+[m[33m[nodemon] to restart at any time, enter `rs`
+[nodemon] watching dir(s): *.*
+[nodemon] watching extensions: js,mjs,json[32m
+[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+Connected to the database
+::1 - - [03/Jun/2025:20:53:09 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [03/Jun/2025:20:53:10 +0000] "POST /login HTTP/1.1" 200 395 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:20:53:10 +0000] "OPTIONS /technicians/2/HOSP2-TECH124 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Win
+[31;133Hndows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
+[31;133Hium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+{
+  id: [32m'hosp2admin'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+    { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+    { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+    { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m},[K
+    { name: [32m'hf.Revoker'[m, value: [32m'1' [m},[K
+    { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+    { name: [32m'hf.GenCRL'[m, value: [32m'1' [m}[K
+  ],
+  max_enrollments: [33m-1[K[m
+}
+{
+  id: [32m'peer0'[m,[K
+  type: [32m'peer'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'peer0'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'peer'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m-1[K[m
+}
+{
+  id: [32m'user1'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m-1[K[m
+}
+{
+  id: [32m'hosp2hosp2admin'[m,[K
+  type: [32m'admin'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'hosp2hosp2admin'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'admin'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m-1[K[m
+}
+{
+  id: [32m'HOSP2-DOC32850'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m'Jeremy Stone'[m, ecert: [33mtrue [m},[K
+    {
+      name: [32m'address'[m,[K
+      value: [32m'41B Burrabazar Road, Kolkata-700014'[m,[K
+      ecert: [33mtrue[K[m
+    },
+    { name: [32m'phoneNumber'[m, value: [32m'89112332455'[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m'9425688988'[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m'32850'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-DOC32850'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'HOSP2-TECH124'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m'Roman Armstrong'[m, ecert: [33mtrue [m},[K
+    {
+      name: [32m'address'[m,[K
+      value: [32m'Police Line, Burdwan-713103'[m,[K
+      ecert: [33mtrue[K[m
+    },
+    { name: [32m'phoneNumber'[m, value: [32m'9897567458'[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m'8684526199'[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'technician'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m'124'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP2-TECH124'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'842886637084'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'842886637084'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'488960036682'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'488960036682'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'269487189928'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'269487189928'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'642808409215'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'642808409215'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'260137403551'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'260137403551'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'957190367116'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'957190367116'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+::1 - - [03/Jun/2025:20:53:11 +0000] "GET /technicians/2/HOSP2-TECH124 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows
+[31;133Hs NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:20:53:18 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
+[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:20:53:18 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:20:53:28 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [03/Jun/2025:20:53:28 +0000] "POST /login HTTP/1.1" 200 384 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:20:53:28 +0000] "OPTIONS /supers/1/HOSP1-SUP12226 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows
+[31;133Hs NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a CA Client named ca-superOrg
+Got all supers:  [
+  {
+    id: [32m'HOSP2-SUP12227'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Everhart Hall'[m,[K
+    address: [32m'45/B Hunger Street, Kolkata-700090'[m,[K
+    phoneNumber: [32m'9073765654'[m,[K
+    emergPhoneNumber: [32m'8679236566'[m,[K
+    registration: [32m'12227'[K[m
+  },
+  {
+    id: [32m'HOSP1-SUP12226'[m,[K
+    role: [32m'super'[m,[K
+    fullName: [32m'Peter Leavitt'[m,[K
+    address: [32m'12/C/1 Newtown, Kolkata-700009'[m,[K
+    phoneNumber: [32m'9008096755'[m,[K
+    emergPhoneNumber: [32m'9657834555'[m,[K
+    registration: [32m'12226'[K[m
+  }
+]
+::1 - - [03/Jun/2025:20:53:28 +0000] "GET /supers/1/HOSP1-SUP12226 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:20:53:30 +0000] "OPTIONS /supers/1/HOSP1-SUP12226/deferredlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla
+[31;133Ha/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:20:53:30 +0000] "OPTIONS /supers/1/HOSP1-SUP12226/deferredlist HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla
+[31;133Ha/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+{ status: [32m'success'[m, pendingBags: [], count: [33m0 [m}
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+::1 - - [03/Jun/2025:20:53:31 +0000] "GET /supers/1/HOSP1-SUP12226/deferredlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0
+[31;133H0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+{ status: [32m'success'[m, pendingBags: [], count: [33m0 [m}
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
+[31;133Hithium.com\connection-superOrg.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+::1 - - [03/Jun/2025:20:53:32 +0000] "GET /supers/1/HOSP1-SUP12226/deferredlist HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0
+[31;133H0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:21:02:41 +0000] "OPTIONS /patients/567812349112 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows N
+[31;133HNT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:21:02:41 +0000] "GET /patients/567812349112 HTTP/1.1" 403 50 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 1
+[31;133H10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:21:02:41 +0000] "OPTIONS /token HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+::1 - - [03/Jun/2025:21:02:41 +0000] "POST /token HTTP/1.1" 200 281 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 35 36 37 38 31 32 33 34 39 31 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 61
+[31;133H1 78 22 2c 22 6c 61 73 74 ... 696 more bytes>
+::1 - - [03/Jun/2025:21:02:42 +0000] "GET /patients/567812349112 HTTP/1.1" 200 746 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+^C\[K[K[?9001l[?1004le]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m exit
+exit
+
+Script done on 2025-06-04 03:03:11+05:30 [COMMAND_EXIT_CODE="58"]

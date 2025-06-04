@@ -1,0 +1,18 @@
+Script started on 2025-06-02 18:26:47+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd first-network/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m m[K./network.sh up -a[Kca && so[K[Kdocker statr [K[K[Krt ca_orderer ca_su[K[Khosp1 c_[Ka_hosp1[K2
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb' [0m
+^C
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh up -ca && docker start ca_orderer ca_hosp1 ca_hosp2
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb' [0m
+^C
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m ./network.sh up -ca && docker start ca_orderer ca_hosp1 ca_hosp2[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[0;34mUsing docker and docker-compose[0m
+[0;34mStarting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb' [0m
+^C
+]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m exit
+exit
+
+Script done on 2025-06-02 18:52:22+05:30 [COMMAND_EXIT_CODE="130"]

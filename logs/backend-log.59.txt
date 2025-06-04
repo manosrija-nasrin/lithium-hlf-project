@@ -1,0 +1,940 @@
+Script started on 2025-05-24 15:51:28+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd sr[Kerver/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m ./[K[Knpm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> donor-application@1.0.0 prestart
+> node initServer.js[9;1H[?25h[K[?25l[K
+> donor-application@1.0.0 start
+> node node_modules/nodemon/bin/nodemon.js src/server.js[13;1H[K[?25h[33m[nodemon] 1.19.4
+[m[33m[nodemon] to restart at any time, enter `rs`
+[nodemon] watching dir(s): *.*
+[nodemon] watching extensions: js,mjs,json[32m
+[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+Connected to the database
+::1 - - [24/May/2025:10:30:32 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:30:32 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:30:49 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [24/May/2025:10:30:50 +0000] "POST /login HTTP/1.1" 200 387 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:30:50 +0000] "OPTIONS /doctors/1/HOSP1-DOC32849 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+::1 - - [24/May/2025:10:30:51 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
+[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:30:52 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:30:52 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:30:54 +0000] "GET /donors/_all HTTP/1.1" 200 1491 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
+[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:30:54 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+[?25l[8;31;133t[Hs NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\[K
+Succesfully connected to the network.[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a CA Client named ca-hosp1[K
+::1 - - [24/May/2025:10:30:51 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+::1 - - [24/May/2025:10:30:52 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+::1 - - [24/May/2025:10:30:52 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\[K
+Succesfully connected to the network.[K
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>[K
+::1 - - [24/May/2025:10:30:54 +0000] "GET /donors/_all HTTP/1.1" 200 1491 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\[K
+Succesfully connected to the network.[K
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>[K
+::1 - - [24/May/2025:10:30:54 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+[K[?25h[?25l[Hs NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\[K
+Succesfully connected to the network.[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a CA Client named ca-hosp1[K
+::1 - - [24/May/2025:10:30:51 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+::1 - - [24/May/2025:10:30:52 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+::1 - - [24/May/2025:10:30:52 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\[K
+Succesfully connected to the network.[K
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>[K
+::1 - - [24/May/2025:10:30:54 +0000] "GET /donors/_all HTTP/1.1" 200 1491 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithium.com\connection-hosp1.json[K
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\[K
+Succesfully connected to the network.[K
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>[K
+::1 - - [24/May/2025:10:30:54 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+[K
+[K[31;1H[?25hConnected to the database
+::1 - - [24/May/2025:10:39:34 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:39:34 +0000] "GET /donors/_all HTTP/1.1" 403 50 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64
+[31;133H4; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:39:34 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:39:34 +0000] "GET /donors/_all HTTP/1.1" 403 50 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64
+[31;133H4; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:39:34 +0000] "OPTIONS /token HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:39:35 +0000] "POST /token HTTP/1.1" 200 283 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:39:35 +0000] "GET /donors/_all HTTP/1.1" 200 1491 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
+[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:39:36 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:39:37 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:39:38 +0000] "GET /donors/123456789012 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
+[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:39:48 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:39:49 +0000] "GET /donors/123456789012 HTTP/1.1" 200 475 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Connected to the database
+::1 - - [24/May/2025:10:40:38 +0000] "OPTIONS /doctors/1/HOSP1-DOC32849 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
+[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+::1 - - [24/May/2025:10:40:39 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
+[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:40:40 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:40:40 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:40:40 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:40:40 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:40:45 +0000] "OPTIONS /donors/567812349112 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 35 36 37 38 31 32 33 34 39 31 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 61
+[31;133H1 78 22 2c 22 6c 61 73 74 ... 293 more bytes>
+::1 - - [24/May/2025:10:40:45 +0000] "GET /donors/567812349112 HTTP/1.1" 200 343 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:40:48 +0000] "OPTIONS /doctors/1/HOSP1-DOC32849 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
+[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+::1 - - [24/May/2025:10:40:48 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
+[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:40:50 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:40:50 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:40:50 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:40:50 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:40:52 +0000] "OPTIONS /donors/235689784512 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 32 33 35 36 38 39 37 38 34 35 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4c 69
+[31;133H9 73 61 22 2c 22 6c 61 73 ... 170 more bytes>
+::1 - - [24/May/2025:10:40:52 +0000] "GET /donors/235689784512 HTTP/1.1" 200 220 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 32 33 35 36 38 39 37 38 34 35 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4c 69
+[31;133H9 73 61 22 2c 22 6c 61 73 ... 170 more bytes>
+::1 - - [24/May/2025:10:40:56 +0000] "GET /donors/235689784512 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
+[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:41:00 +0000] "OPTIONS /doctors/1/HOSP1-DOC32849 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
+[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+::1 - - [24/May/2025:10:41:00 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
+[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:41:02 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:41:02 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:41:02 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:41:02 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:41:03 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:41:03 +0000] "GET /donors/123456789012 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
+[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:41:04 +0000] "GET /donors/123456789012 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
+[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:41:13 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:41:13 +0000] "GET /donors/123456789012 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
+[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:42:15 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:42:16 +0000] "GET /donors/123456789012 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
+[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:42:53 +0000] "OPTIONS /doctors/1/HOSP1-DOC32849 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
+[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+::1 - - [24/May/2025:10:42:53 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
+[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:42:55 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:42:55 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:42:55 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:42:55 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:42:57 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:42:57 +0000] "GET /donors/123456789012 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
+[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:44:07 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:44:08 +0000] "GET /donors/123456789012 HTTP/1.1" 200 475 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:44:12 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:44:12 +0000] "GET /donors/123456789012 HTTP/1.1" 200 475 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:44:34 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+::1 - - [24/May/2025:10:44:35 +0000] "GET /donors/123456789012 HTTP/1.1" 200 475 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Connected to the database
+[32m[nodemon] restarting due to changes...[m
+
+[?25l[32m[31;1H[nodemon] restarting due to changes...
+[?25h[m[32m[nodemon] starting `node src/server.js`[m
+[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[m[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+::1 - - [24/May/2025:10:48:45 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:48:45 +0000] "GET /donors/123456789012 HTTP/1.1" 403 50 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.
+[31;133H.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:48:45 +0000] "OPTIONS /token HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:48:46 +0000] "POST /token HTTP/1.1" 403 9 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+[31;133H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:48:51 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
+[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:48:51 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:48:56 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [24/May/2025:10:48:56 +0000] "POST /login HTTP/1.1" 200 387 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:48:56 +0000] "OPTIONS /doctors/1/HOSP1-DOC32849 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
+[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+::1 - - [24/May/2025:10:48:57 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
+[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:48:58 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:48:58 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:48:58 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
+::1 - - [24/May/2025:10:48:59 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:49:00 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 425 more bytes>
+{
+  healthId: [32m'123456789012'[m,[K
+  firstName: [32m'Monica'[m,[K
+  lastName: [32m'Latte'[m,[K
+  dob: [32m'2002-08-12'[m,[K
+  bloodGroup: [32m'O+'[m,[K
+  alert: [32m'true'[m,[K
+  sex: [32m'Female'[m,[K
+  isDiseased: [32m'false'[m,[K
+  creditCard: [32m'700'[m,[K
+  donationStatus: [32m'-'[m,[K
+  donationHistory: {
+    donation1: {
+      bloodBagSegmentNo: [32m'50'[m,[K
+      bloodBagUnitNo: [32m'500'[m,[K
+      dateOfDonation: [32m'2022-5-13'[m,[K
+      quantity: [32m'350'[m,[K
+      status: [32m'successful'[K[m
+    },
+    donation2: {
+      bloodBagSegmentNo: [32m'10'[m,[K
+      bloodBagUnitNo: [32m'510'[m,[K
+      dateOfDonation: [32m'2023-5-13'[m,[K
+      quantity: [32m'350'[m,[K
+      status: [32m'successful'[K[m
+    }
+  }
+}
+::1 - - [24/May/2025:10:49:00 +0000] "GET /donors/123456789012 HTTP/1.1" 200 475 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+[?25l[H{[K
+  healthId: [32m'123456789012'[m,[K
+  firstName: [32m'Monica'[m,[K
+  lastName: [32m'Latte'[m,[K
+  dob: [32m'2002-08-12'[m,[K
+  bloodGroup: [32m'O+'[m,[K
+  alert: [32m'true'[m,[K
+  sex: [32m'Female'[m,[K
+  isDiseased: [32m'false'[m,[K
+  creditCard: [32m'700'[m,[K
+  donationStatus: [32m'-'[m,[K
+  donationHistory: {[K
+    donation1: {[K
+      bloodBagSegmentNo: [32m'50'[m,[K
+      bloodBagUnitNo: [32m'500'[m,[K
+      dateOfDonation: [32m'2022-5-13'[m,[K
+      quantity: [32m'350'[m,[K
+      status: [32m'successful'[K[m
+    },[K
+    donation2: {[K
+      bloodBagSegmentNo: [32m'10'[m,[K
+      bloodBagUnitNo: [32m'510'[m,[K
+      dateOfDonation: [32m'2023-5-13'[m,[K
+      quantity: [32m'350'[m,[K
+      status: [32m'successful'[K[m
+    }[K
+  }[K
+}[K
+::1 - - [24/May/2025:10:49:00 +0000] "GET /donors/123456789012 HTTP/1.1" 200 475 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+[K[?25h[?25l[H{[K
+  healthId: [32m'123456789012'[m,[K
+  firstName: [32m'Monica'[m,[K
+  lastName: [32m'Latte'[m,[K
+  dob: [32m'2002-08-12'[m,[K
+  bloodGroup: [32m'O+'[m,[K
+  alert: [32m'true'[m,[K
+  sex: [32m'Female'[m,[K
+  isDiseased: [32m'false'[m,[K
+  creditCard: [32m'700'[m,[K
+  donationStatus: [32m'-'[m,[K
+  donationHistory: {[K
+    donation1: {[K
+      bloodBagSegmentNo: [32m'50'[m,[K
+      bloodBagUnitNo: [32m'500'[m,[K
+      dateOfDonation: [32m'2022-5-13'[m,[K
+      quantity: [32m'350'[m,[K
+      status: [32m'successful'[K[m
+    },[K
+    donation2: {[K
+      bloodBagSegmentNo: [32m'10'[m,[K
+      bloodBagUnitNo: [32m'510'[m,[K
+      dateOfDonation: [32m'2023-5-13'[m,[K
+      quantity: [32m'350'[m,[K
+      status: [32m'successful'[K[m
+    }[K
+  }[K
+}[K
+::1 - - [24/May/2025:10:49:00 +0000] "GET /donors/123456789012 HTTP/1.1" 200 475 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
+[K
+[K[31;1H[?25h[32m[nodemon] restarting due to changes...
+[m[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+::1 - - [24/May/2025:10:51:38 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
+[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:51:38 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:51:45 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [24/May/2025:10:51:45 +0000] "POST /login HTTP/1.1" 200 395 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:51:45 +0000] "OPTIONS /technicians/1/HOSP1-TECH123 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Win
+[31;133Hndows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a CA Client named ca-hosp1
+{
+  id: [32m'hosp1admin'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'hf.IntermediateCA'[m, value: [32m'1' [m},[K
+    { name: [32m'hf.GenCRL'[m, value: [32m'1' [m},[K
+    { name: [32m'hf.Registrar.Attributes'[m, value: [32m'*' [m},[K
+    { name: [32m'hf.AffiliationMgr'[m, value: [32m'1' [m},[K
+    { name: [32m'hf.Registrar.Roles'[m, value: [32m'*' [m},[K
+    { name: [32m'hf.Registrar.DelegateRoles'[m, value: [32m'*' [m},[K
+    { name: [32m'hf.Revoker'[m, value: [32m'1' [m}[K
+  ],
+  max_enrollments: [33m-1[K[m
+}
+{
+  id: [32m'peer0'[m,[K
+  type: [32m'peer'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'peer0'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'peer'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m-1[K[m
+}
+{
+  id: [32m'user1'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'user1'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m-1[K[m
+}
+{
+  id: [32m'hosp1hosp1admin'[m,[K
+  type: [32m'admin'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'hosp1hosp1admin'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'admin'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m-1[K[m
+}
+{
+  id: [32m'123456789012'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'donor'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'123456789012'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'567812349112'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'donor'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'567812349112'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'987654321012'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'donor'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'987654321012'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'901212345678'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'donor'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'901212345678'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'235689784512'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'donor'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'235689784512'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'567812349012'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'donor'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'567812349012'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'HOSP1-DOC32849'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m'Brick Wall'[m, ecert: [33mtrue [m},[K
+    {
+      name: [32m'address'[m,[K
+      value: [32m'12 Basant Bose Road, Kolkata-700026'[m,[K
+      ecert: [33mtrue[K[m
+    },
+    { name: [32m'phoneNumber'[m, value: [32m'9897567763'[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m'8687626199'[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'doctor'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m'32849'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-DOC32849'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'HOSP1-TECH123'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m'Dibya Panja'[m, ecert: [33mtrue [m},[K
+    {
+      name: [32m'address'[m,[K
+      value: [32m'Police Line, Burdwan-713103'[m,[K
+      ecert: [33mtrue[K[m
+    },
+    { name: [32m'phoneNumber'[m, value: [32m'9897567763'[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m'8687626199'[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m'technician'[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m'123'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'HOSP1-TECH123'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'427068311100'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'427068311100'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+{
+  id: [32m'410540473531'[m,[K
+  type: [32m'client'[m,[K
+  affiliation: [32m''[m,[K
+  attrs: [
+    { name: [32m'fullName'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'address'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'phoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'emergPhoneNumber'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'role'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'registration'[m, value: [32m''[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.EnrollmentID'[m, value: [32m'410540473531'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Type'[m, value: [32m'client'[m, ecert: [33mtrue [m},[K
+    { name: [32m'hf.Affiliation'[m, value: [32m''[m, ecert: [33mtrue [m}[K
+  ],
+  max_enrollments: [33m1[K[m
+}
+::1 - - [24/May/2025:10:51:46 +0000] "GET /technicians/1/HOSP1-TECH123 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows
+[31;133Hs NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Connected to the database
+[32m[nodemon] restarting due to changes...[m
+[?25l
+[31;1H[?25h[32m[nodemon] starting `node src/server.js`
+[mBackend server running on 3001
+Connected to the database
+::1 - - [24/May/2025:10:57:05 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
+[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:05 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:15 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
+[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+got this from redis password
+got this as pw password
+::1 - - [24/May/2025:10:57:15 +0000] "POST /login HTTP/1.1" 200 387 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
+[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:15 +0000] "OPTIONS /doctors/2/HOSP2-DOC32850 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
+[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
+[31;133Hium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+::1 - - [24/May/2025:10:57:16 +0000] "GET /doctors/2/HOSP2-DOC32850 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
+[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:18 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:18 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1443 more bytes>
+::1 - - [24/May/2025:10:57:18 +0000] "GET /donors/_all HTTP/1.1" 200 1493 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
+[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1443 more bytes>
+::1 - - [24/May/2025:10:57:19 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
+[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:38 +0000] "OPTIONS /donors/567812349112 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 35 36 37 38 31 32 33 34 39 31 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 61
+[31;133H1 78 22 2c 22 6c 61 73 74 ... 315 more bytes>
+::1 - - [24/May/2025:10:57:38 +0000] "GET /donors/567812349112 HTTP/1.1" 200 365 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:45 +0000] "OPTIONS /donors/567812349112 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 35 36 37 38 31 32 33 34 39 31 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 61
+[31;133H1 78 22 2c 22 6c 61 73 74 ... 315 more bytes>
+::1 - - [24/May/2025:10:57:45 +0000] "GET /donors/567812349112 HTTP/1.1" 200 365 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:56 +0000] "OPTIONS /doctors/2/HOSP2-DOC32850 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
+[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
+[31;133Hium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+::1 - - [24/May/2025:10:57:57 +0000] "GET /doctors/2/HOSP2-DOC32850 HTTP/1.1" 200 196 "http://localhost:4200/" "Mozilla/5.0 (Windows 
+[31;133H NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:58 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:57:58 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1443 more bytes>
+::1 - - [24/May/2025:10:57:59 +0000] "GET /donors/_all HTTP/1.1" 200 1493 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
+[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1443 more bytes>
+::1 - - [24/May/2025:10:57:59 +0000] "GET /donors/_all HTTP/1.1" 200 1493 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
+[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:58:01 +0000] "OPTIONS /donors/123456789012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d 6f
+[31;133Hf 6e 69 63 61 22 2c 22 6c ... 445 more bytes>
+::1 - - [24/May/2025:10:58:01 +0000] "GET /donors/123456789012 HTTP/1.1" 200 495 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:58:07 +0000] "OPTIONS /doctors/2/HOSP2-DOC32850 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
+[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
+[31;133Hium.com\connection-hosp2.json
+Built a CA Client named ca-hosp2
+::1 - - [24/May/2025:10:58:08 +0000] "GET /doctors/2/HOSP2-DOC32850 HTTP/1.1" 200 196 "http://localhost:4200/" "Mozilla/5.0 (Windows 
+[31;133H NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:58:09 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:58:09 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
+[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+Succesfully connected to the network.
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1443 more bytes>
+::1 - - [24/May/2025:10:58:09 +0000] "GET /donors/_all HTTP/1.1" 200 1493 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
+[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
+[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1443 more bytes>
+::1 - - [24/May/2025:10:58:09 +0000] "GET /donors/_all HTTP/1.1" 200 1493 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
+[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+::1 - - [24/May/2025:10:58:22 +0000] "OPTIONS /donors/567812349012 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
+[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
+[31;133Hium.com\connection-hosp1.json
+Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
+Succesfully connected to the network.
+<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 35 36 37 38 31 32 33 34 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 48 61
+[31;133H1 72 72 79 22 2c 22 6c 61 ... 196 more bytes>
+::1 - - [24/May/2025:10:58:22 +0000] "GET /donors/567812349012 HTTP/1.1" 200 246 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
+[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+Connected to the database
+^C\[K[K[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m exit
+exit
+
+Script done on 2025-05-24 16:34:06+05:30 [COMMAND_EXIT_CODE="58"]

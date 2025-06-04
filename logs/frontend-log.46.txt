@@ -1,0 +1,300 @@
+Script started on 2025-05-24 15:51:43+05:30 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="133" LINES="32"]
+]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd client/
+]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
+> panel@0.0.0 start
+> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[9;1H[?25h[K]0;C:\WINDOWS\system32\cmd.exe ]0;ng serve[36m- [mGenerating browser application bundles...[31m[1m(node:16812) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)[m
+[K[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[32m√ [mBrowser application bundle generation complete.
+[?25l[1m
+Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[92m[22m
+styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[92m
+polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m343.95 kB[92m
+vendor.js[12X[m[2m[12C | [22mvendor       [2m | [96m[22m342.28 kB[92m
+runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[92m
+main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [22m  [96m1.75 kB[m[1m[21;1H [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m1.23 MB[22m[23;1HBuild at: [37m[1m2025-05-24T10:27:26.534Z[m - Hash: [37m[1m14299f66053ac26175c6[m - Time: [37m[1m41086[mms[?25h[?25l[91m[25;1HError: [96msrc/app/donor/donor.component.html[m:[93m130[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[91m[7m[29;1H130[m                         </ng-template>[91m[7m
+   [m[25X[91m[25C~~~~~~~~~~~~~~[32;1H  [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[?25h[m
+[91m    [7m14[m   templateUrl: './donor.component.html',[K
+[91m    [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[91m    Error occurs in the template of component DonorComponent.[m
+
+
+
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+[?25l[8;31;133t[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K[92m
+styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[92m
+polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m343.95 kB[K[92m
+vendor.js[12X[m[2m[12C | [22mvendor       [2m | [96m[22m342.28 kB[K[92m
+runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[92m
+main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [22m  [96m1.75 kB[K[m
+[K[1m
+ [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m1.23 MB[22m[K
+[K
+Build at: [37m[1m2025-05-24T10:27:26.534Z[m - Hash: [37m[1m14299f66053ac26175c6[m - Time: [37m[1m41086[mms[K
+[K[91m
+Error: [96msrc/app/donor/donor.component.html[m:[93m130[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[K
+[K[91m[7m
+130[m                         </ng-template>[K[91m[7m
+   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
+[K[91m
+  [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[91m
+    [7m14[m   templateUrl: './donor.component.html',[K[91m
+    [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[91m
+    Error occurs in the template of component DonorComponent.[K[m
+[K
+[K
+[K
+[K
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[K
+[K
+[K[?25h[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K[92m
+styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[92m
+polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m343.95 kB[K[92m
+vendor.js[12X[m[2m[12C | [22mvendor       [2m | [96m[22m342.28 kB[K[92m
+runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[92m
+main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [22m  [96m1.75 kB[K[m
+[K[1m
+ [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m1.23 MB[22m[K
+[K
+Build at: [37m[1m2025-05-24T10:27:26.534Z[m - Hash: [37m[1m14299f66053ac26175c6[m - Time: [37m[1m41086[mms[K
+[K[91m
+Error: [96msrc/app/donor/donor.component.html[m:[93m130[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[K
+[K[91m[7m
+130[m                         </ng-template>[K[91m[7m
+   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
+[K[91m
+  [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[91m
+    [7m14[m   templateUrl: './donor.component.html',[K[91m
+    [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[91m
+    Error occurs in the template of component DonorComponent.[K[m
+[K
+[K
+[K
+[K
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[K
+[K
+[K
+[K[31;1H[?25h[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start\[K[K
+> panel@0.0.0 start
+> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve
+
+]0;C:\WINDOWS\system32\cmd.exe ]0;ng serve[36m- [mGenerating browser application bundles...[31m[1m(node:8892) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is depr[m
+[31m[1m[31;133Hrecated.[22m[K[m
+[31m[1m(Use `node --trace-deprecation ...` to show where the warning was created)[m[K
+[36m\ [mGenerating browser application bundles (phase: building)...[K[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K
+[92mstyles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[m
+[92mpolyfills.js[m[2m[9C | [22mpolyfills    [2m | [96m[22m343.95 kB[K[m
+[92mvendor.js[m[2m[12C | [22mvendor       [2m | [96m[22m342.28 kB[K[m
+[92mruntime.js[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[m
+[92mmain.js[m[2m[14C | [22mmain[9X[2m[9C | [22m  [96m1.75 kB[K[m
+
+[1m [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m1.23 MB[22m[K
+
+Build at: [37m[1m2025-05-24T10:37:55.306Z[m - Hash: [37m[1m5e38705bd3e15ce73557[m - Time: [37m[1m16363[mms[K
+
+[91mError: [96msrc/app/donor/donor.component.html[m:[93m117[m:[93m44 [m- [91merror [90mTS7053: [mElement implicitly has an 'any' type because expression of type '"sc
+[31;133HcreenedAt"' can't be used to index type 'MedicalHistoryDetails'.
+[91m  Property 'screenedAt' does not exist on type 'MedicalHistoryDetails'.[m
+
+[91m[7m117[m                         <li>Screened At: {{test.value['screenedAt']}}</li>[K
+[91m[7m   [m[44X[91m[44C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+
+[91m  [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
+[91m    [7m14[m   templateUrl: './donor.component.html',[K
+[91m    [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[91m    Error occurs in the template of component DonorComponent.[m
+
+
+
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+[?25l[8;31;133t[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K[92m
+styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[92m
+polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m343.95 kB[K[92m
+vendor.js[12X[m[2m[12C | [22mvendor       [2m | [96m[22m342.28 kB[K[92m
+runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[92m
+main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [22m  [96m1.75 kB[K[m
+[K[1m
+ [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m1.23 MB[22m[K
+[K
+Build at: [37m[1m2025-05-24T10:37:55.306Z[m - Hash: [37m[1m5e38705bd3e15ce73557[m - Time: [37m[1m16363[mms[K
+[K[91m
+Error: [96msrc/app/donor/donor.component.html[m:[93m117[m:[93m44 [m- [91merror [90mTS7053: [mElement implicitly has an 'any' type because expression of type '"screenedAt"' can't be used to index type 'MedicalHistoryDetails'.[K[91m
+  Property 'screenedAt' does not exist on type 'MedicalHistoryDetails'.[K[m
+[K[91m[7m
+117[m                         <li>Screened At: {{test.value['screenedAt']}}</li>[K[91m[7m
+   [m[44X[91m[44C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[K[91m
+  [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[91m
+    [7m14[m   templateUrl: './donor.component.html',[K[91m
+    [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[91m
+    Error occurs in the template of component DonorComponent.[K[m
+[K
+[K
+[K
+[K
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[K
+[K
+[K[?25h[?25l[32m[H√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K[92m
+styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[92m
+polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m343.95 kB[K[92m
+vendor.js[12X[m[2m[12C | [22mvendor       [2m | [96m[22m342.28 kB[K[92m
+runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[92m
+main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [22m  [96m1.75 kB[K[m
+[K[1m
+ [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m1.23 MB[22m[K
+[K
+Build at: [37m[1m2025-05-24T10:37:55.306Z[m - Hash: [37m[1m5e38705bd3e15ce73557[m - Time: [37m[1m16363[mms[K
+[K[91m
+Error: [96msrc/app/donor/donor.component.html[m:[93m117[m:[93m44 [m- [91merror [90mTS7053: [mElement implicitly has an 'any' type because expression of type '"screenedAt"' can't be used to index type 'MedicalHistoryDetails'.[K[91m
+  Property 'screenedAt' does not exist on type 'MedicalHistoryDetails'.[K[m
+[K[91m[7m
+117[m                         <li>Screened At: {{test.value['screenedAt']}}</li>[K[91m[7m
+   [m[44X[91m[44C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
+[K[91m
+  [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[91m
+    [7m14[m   templateUrl: './donor.component.html',[K[91m
+    [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[91m
+    Error occurs in the template of component DonorComponent.[K[m
+[K
+[K
+[K
+[K
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[K
+[K
+[K
+[K[31;1H[?25h[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
+[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start
+> panel@0.0.0 start
+> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve
+
+[K]0;C:\WINDOWS\system32\cmd.exe ]0;ng serve[36m- [mGenerating browser application bundles...[31m[1m(node:18816) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is dep[m
+[31m[1m[31;133Hprecated.[22m[K[m
+[31m[1m(Use `node --trace-deprecation ...` to show where the warning was created)[m[K
+[36m\ [mGenerating browser application bundles (phase: building)...[K[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K
+[92mvendor.js[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[K[m
+[92mmain.js[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m696.73 kB[K[m
+[92mstyles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[m
+[92mpolyfills.js[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[K[m
+[92mruntime.js[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[m
+
+[1m [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.60 MB[22m[K
+
+Build at: [37m[1m2025-05-24T10:39:29.570Z[m - Hash: [37m[1mdc78c44d6371d5069869[m - Time: [37m[1m14169[mms[K
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m  [2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[14C | [22mmain  [2m | [96m[22m696.78 kB[K[m
+[92mstyles.css, styles.js[m[2m | [22mstyles[2m | [96m[22m563.71 kB[K[m
+
+3 unchanged chunks
+
+Build at: [37m[1m2025-05-24T10:42:15.204Z[m - Hash: [37m[1maad03200569b2f1263e8[m - Time: [37m[1m4469[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m696.78 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-24T10:44:07.220Z[m - Hash: [37m[1m729bc9987f0b0986f82d[m - Time: [37m[1m4220[mms[K
+
+[92m√ [mCompiled successfully.[K
+[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
+
+[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
+[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m696.73 kB[K[m
+
+4 unchanged chunks
+
+Build at: [37m[1m2025-05-24T10:44:33.420Z[m - Hash: [37m[1mfc04000813661a363449[m - Time: [37m[1m5506[mms[K
+
+[92m√ [mCompiled successfully.[K
+[?25l[8;31;133t[H[K[1m
+Initial Chunk Files[22m  [2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K[92m
+main.js[14X[m[2m[14C | [22mmain  [2m | [96m[22m696.78 kB[K[92m
+styles.css, styles.js[m[2m | [22mstyles[2m | [96m[22m563.71 kB[K[m
+[K
+3 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-24T10:42:15.204Z[m - Hash: [37m[1maad03200569b2f1263e8[m - Time: [37m[1m4469[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m696.78 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-24T10:44:07.220Z[m - Hash: [37m[1m729bc9987f0b0986f82d[m - Time: [37m[1m4220[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m696.73 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-24T10:44:33.420Z[m - Hash: [37m[1mfc04000813661a363449[m - Time: [37m[1m5506[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K[?25h[?25l[H[K[1m
+Initial Chunk Files[22m  [2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K[92m
+main.js[14X[m[2m[14C | [22mmain  [2m | [96m[22m696.78 kB[K[92m
+styles.css, styles.js[m[2m | [22mstyles[2m | [96m[22m563.71 kB[K[m
+[K
+3 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-24T10:42:15.204Z[m - Hash: [37m[1maad03200569b2f1263e8[m - Time: [37m[1m4469[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m696.78 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-24T10:44:07.220Z[m - Hash: [37m[1m729bc9987f0b0986f82d[m - Time: [37m[1m4220[mms[K
+[K[92m
+√ [mCompiled successfully.[K[32m
+√ [mBrowser application bundle generation complete.[K
+[K[1m
+Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
+main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m696.73 kB[K[m
+[K
+4 unchanged chunks[K
+[K
+Build at: [37m[1m2025-05-24T10:44:33.420Z[m - Hash: [37m[1mfc04000813661a363449[m - Time: [37m[1m5506[mms[K
+[K[92m
+√ [mCompiled successfully.[K
+[K
+[K[31;1H[?25h[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m exit
+exit
+
+Script done on 2025-05-24 16:34:11+05:30 [COMMAND_EXIT_CODE="1"]
