@@ -1,5 +1,5 @@
 /**
- * @desc This file creates a user named 'appUser' at Hospital 1. (Just for testing. Use the API to create a donor)
+ * @desc This file creates a user named 'appUser' at Hospital 1. (Just for testing. Use the API to create a patient)
  */
 
 const { Wallets } = require('fabric-network');

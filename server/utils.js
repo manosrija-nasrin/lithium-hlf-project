@@ -7,7 +7,7 @@ const util = require("util");
 
 exports.ROLE_ADMIN = "admin";
 exports.ROLE_DOCTOR = "doctor";
-exports.ROLE_DONOR = "donor";
+exports.ROLE_PATIENT = "patient";
 exports.ROLE_TECHNICIAN = "technician";
 exports.ROLE_SUPER = "super";
 
@@ -39,7 +39,7 @@ exports.getBagId = function (bloodBagUnitNo, bloodBagSegmentNo) {
  * @param  {String} reqRole The role to be validated
  * @param  {Response} res 401 is reqRole is not present n roles
  * @description Validation of the role
- * @example roles - 'donor|doctor' reqRole - 'admin' returns 401
+ * @example roles - 'patient|doctor' reqRole - 'admin' returns 401
  */
 exports.validateRole = async function (roles, reqRole, res) {
   if (

@@ -25,7 +25,7 @@ app.use(cors());
 app.listen(3001, () => console.log('Backend server running on 3001'));
 
 // Bring key classes into scope
-const donorRoutes = require('./donor-routes');
+const patientRoutes = require('./patient-routes');
 const doctorRoutes = require('./doctor-routes');
 const superRoutes = require('./super-routes');
 const technicianRoutes = require('./technician-routes');
@@ -37,7 +37,7 @@ const {
   ROLE_DOCTOR,
   ROLE_TECHNICIAN,
   ROLE_ADMIN,
-  ROLE_DONOR,
+  ROLE_PATIENT,
   CHANGE_TMP_PASSWORD,
 } = require('../utils');
 const { createRedisClient, capitalize, getMessage } = require('../utils');
@@ -122,7 +122,7 @@ app.post('/login', async (req, res) => {
       redisClient.quit();
     }
 
-    if (role === ROLE_DONOR) {
+    if (role === ROLE_PATIENT) {
       const networkObj = await network.connectToNetwork(username);
       const newPassword = req.body.newPassword;
 
@@ -134,7 +134,7 @@ app.post('/login', async (req, res) => {
         const response = await network.invoke(
           networkObj,
           true,
-          capitalize(role) + 'Contract:getDonorPassword',
+          capitalize(role) + 'Contract:getPatientPassword',
           username,
         );
         if (response.error) {
@@ -156,14 +156,14 @@ app.post('/login', async (req, res) => {
         }
       } else {
         let args = {
-          donorId: username,
+          healthId: username,
           newPassword: newPassword,
         };
         args = [JSON.stringify(args)];
         const response = await network.invoke(
           networkObj,
           false,
-          capitalize(role) + 'Contract:updateDonorPassword',
+          capitalize(role) + 'Contract:updatePatientPassword',
           args,
         );
         console.log('got this response on update pw', response);
@@ -194,7 +194,7 @@ app.post('/login', async (req, res) => {
   } catch (error) {
     // Handle any errors that occur within the try block
     console.error('Error occurred:', error);
-    res.status(500).send({ error: 'An unexpected error occurred.' });
+    // res.status(500).send({ error: 'An unexpected error occurred.' });
   }
 });
 
@@ -238,8 +238,8 @@ app.delete('/logout', (req, res) => {
 // //////////////////////////////// Admin Routes //////////////////////////////////////
 app.post('/doctors/register', authenticateJWT, adminRoutes.createDoctor);
 app.post('/supers/register', authenticateJWT, adminRoutes.createSuper);
-app.get('/donors/_all', authenticateJWT, adminRoutes.getAllDonors);
-app.post('/donors/register', authenticateJWT, adminRoutes.createDonor);
+app.get('/patients/_all', authenticateJWT, adminRoutes.getAllPatients);
+app.post('/patients/register', authenticateJWT, adminRoutes.createPatient);
 app.get(
   '/technicians/:hospitalId([0-9]+)/_all',
   authenticateJWT,
@@ -254,9 +254,9 @@ app.delete('/:adminId/delete/:Id', authenticateJWT, adminRoutes.deleteUser);
 
 // //////////////////////////////// Doctor Routes //////////////////////////////////////
 app.patch(
-  '/donors/:donorId/details/medical',
+  '/patients/:healthId/details/medical',
   authenticateJWT,
-  doctorRoutes.updateDonorMedicalDetails,
+  doctorRoutes.updatePatientMedicalDetails,
 );
 app.get(
   '/doctors/:hospitalId([0-9]+)/:doctorId(HOSP[0-9]+-DOC[0-9]+)',
@@ -264,9 +264,9 @@ app.get(
   doctorRoutes.getDoctorById,
 );
 app.post(
-  '/doctor/screendonor/:doctorId(HOSP[0-9]+-DOC[0-9]+)',
+  '/doctor/screenpatient/:doctorId(HOSP[0-9]+-DOC[0-9]+)',
   authenticateJWT,
-  doctorRoutes.screenDonor,
+  doctorRoutes.screenPatient,
 );
 app.post('/doctor/blood-collect', authenticateJWT, doctorRoutes.collectBlood);
 app.get('/doctor/MOCapproval', authenticateJWT, doctorRoutes.MOCapproval);
@@ -274,6 +274,13 @@ app.post(
   '/doctor/sendMOCapproval',
   authenticateJWT,
   doctorRoutes.sendMOCapproval,
+);
+app.get('/doctor/checkpatientstatus',
+  authenticateJWT, doctorRoutes.checkPatientStatus,
+);
+app.post('/doctor/:doctorId(HOSP[0-9]+-DOC[0-9]+)/request-access/:healthId',
+  authenticateJWT,
+  doctorRoutes.requestAccessToSensitiveData,
 );
 
 // //////////////////////////////// Super Routes //////////////////////////////////////
@@ -285,11 +292,15 @@ app.get(
 app.get(
   '/supers/:hospitalId([0-9]+)/:superId(HOSP[0-9]+-SUP[0-9]+)/deferredlist',
   authenticateJWT,
-  superRoutes.getDeferredDonors,
+  superRoutes.getDeferredPatients,
 );
 app.get('/supers/:hospitalId([0-9]+)/_all', authenticateJWT, adminRoutes.getSupersByHospitalId);
+app.get('/super/checkpatientstatus',
+  authenticateJWT, superRoutes.checkPatientStatus,
+);
+app.get('/super/request-approval', authenticateJWT, superRoutes.requestApproval);
 
-/////////////////////////////////// Technician Routes //////////////////////////////////
+// ///////////////////////////////// Technician Routes //////////////////////////////////
 app.get(
   '/technicians/:hospitalId([0-9]+)/:technicianId(HOSP[0-9]+-TECH[0-9]+)',
   authenticateJWT,
@@ -324,10 +335,10 @@ app.post(
   authenticateJWT,
   technicianRoutes.allocateBag,
 );
-app.get('/technician/checkdonorstatus',
-  authenticateJWT, technicianRoutes.checkDonorStatus,
+app.get('/technician/checkpatientstatus',
+  authenticateJWT, technicianRoutes.checkPatientStatus,
 );
-app.post('/technician/addttiresult', authenticateJWT, technicianRoutes.addTtiResults)
+app.post('/technician/addttiresult', authenticateJWT, technicianRoutes.addTtiResults);
 app.post(
   '/technician/crossmatchblood',
   authenticateJWT,
@@ -359,18 +370,24 @@ app.post(
   authenticateJWT,
   technicianRoutes.sendLTapproval,
 );
-
-// //////////////////////////////// Donor Routes //////////////////////////////////////
-app.get('/donors/:donorId', authenticateJWT, donorRoutes.getDonorById);
-app.patch(
-  '/donors/:donorId/details/personal',
+app.post(
+  '/technician/screenpatient/:doctorId(HOSP[0-9]+-TECH[0-9]+)',
   authenticateJWT,
-  donorRoutes.updateDonorPersonalDetails,
+  technicianRoutes.screenPatient,
+);
+app.post('/technician/blood-collect', authenticateJWT, technicianRoutes.collectBlood);
+
+// //////////////////////////////// Patient Routes //////////////////////////////////////
+app.get('/patients/:healthId', authenticateJWT, patientRoutes.getPatientById);
+app.patch(
+  '/patients/:healthId/details/personal',
+  authenticateJWT,
+  patientRoutes.updatePatientPersonalDetails,
 );
 app.get(
-  '/donors/:donorId/history',
+  '/patients/:healthId/history',
   authenticateJWT,
-  donorRoutes.getDonorHistoryById,
+  patientRoutes.getPatientHistoryById,
 );
 app.get(
   '/doctors/:hospitalId([0-9]+)/_all',
@@ -378,14 +395,14 @@ app.get(
   adminRoutes.getDoctorsByHospitalId,
 );
 app.patch(
-  '/donors/:donorId/grant/:doctorId',
+  '/patients/:healthId/grant/:doctorId',
   authenticateJWT,
-  donorRoutes.grantAccessToDoctor,
+  patientRoutes.grantAccessToDoctor,
 );
 app.patch(
-  '/donors/:donorId/revoke/:doctorId',
+  '/patients/:healthId/revoke/:doctorId',
   authenticateJWT,
-  donorRoutes.revokeAccessFromDoctor,
+  patientRoutes.revokeAccessFromDoctor,
 );
 
 ///////////////////////////////////DatabaseConnect Routes /////////////////////////////

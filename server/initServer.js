@@ -11,16 +11,16 @@ const { createRedisClient } = require('./utils'); // Import utility function to 
 const redis = require('redis'); // Import Redis library
 
 /**
- * @description Enrolls and registers the donors in the initLedger as users.
+ * @description Enrolls and registers the patients in the initLedger as users.
  */
 async function initLedger() {
   try {
-    const jsonString = fs.readFileSync('../donor-asset-transfer/chaincode/lib/initLedgerDonor.json'); // Read JSON file containing donor data
-    const donors = JSON.parse(jsonString); // Parse the JSON file
+    const jsonString = fs.readFileSync('../donor-asset-transfer/chaincode/lib/initLedgerPatient.json'); // Read JSON file containing patient data
+    const patients = JSON.parse(jsonString); // Parse the JSON file
     let i = 0;
-    for (i = 0; i < donors.length; i++) {
-      const attr = { firstName: donors[i].firstName, lastName: donors[i].lastName, role: 'donor' }; // Create attributes for each donor
-      await enrollRegisterUser('1', donors[i].healthId, JSON.stringify(attr)); // Enroll and register each donor
+    for (i = 0; i < patients.length; i++) {
+      const attr = { firstName: patients[i].firstName, lastName: patients[i].lastName, role: 'patient' }; // Create attributes for each patient
+      await enrollRegisterUser('1', patients[i].healthId, JSON.stringify(attr)); // Enroll and register each patient
     }
   } catch (err) {
     console.log(err); // Log any errors
@@ -113,18 +113,18 @@ async function enrollAndRegisterTechnicians() {
 };
 
 /**
- * @description Function to initialise the backend server, enrolls and register the admins and initLedger donors.
+ * @description Function to initialise the backend server, enrolls and register the admins and initLedger patients.
  * @description Need not run this manually, included as a prestart in package.json
  */
 async function main() {
-  await enrollAdminHosp1();
-  await enrollAdminHosp2();
-  await enrollAdminSuperOrg();
-  await initLedger();
-  await initRedis();
-  await enrollAndRegisterDoctors();
-  await enrollAndRegisterSupers();
-  await enrollAndRegisterTechnicians();
+  // await enrollAdminHosp1();
+  // await enrollAdminHosp2();
+  // await enrollAdminSuperOrg();
+  // await initLedger();
+  // await initRedis();
+  // await enrollAndRegisterDoctors();
+  // await enrollAndRegisterSupers();
+  // await enrollAndRegisterTechnicians();
 }
 
 main(); // Execute the main function
