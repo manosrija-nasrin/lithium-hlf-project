@@ -24,14 +24,14 @@ export class AddTtiResultComponent implements OnInit {
 
 		this.ttiResultForm = this.formBuilder.group({
 			technicianId: [this.technicianId, Validators.required],
-			healthId: [this.healthId, Validators.required, Validators.minLength(12), Validators.maxLength(12)],
+			healthId: [this.healthId, [Validators.required, Validators.minLength(12), Validators.maxLength(12)]],
 			datetime: [new Date().toISOString(), Validators.required],
 			//slipNumber: ['', Validators.required],
-			malaria: [null, Validators.required],
-			syphilis: [null, Validators.required],
-			hiv: [null, Validators.required],
-			hepatitisB: [null, Validators.required],
-			hepatitisC: [null, Validators.required],
+			malaria: [''],
+			syphilis: [''],
+			hiv: [''],
+			hepatitisB: [''],
+			hepatitisC: [''],
 		});
 	}
 
@@ -39,8 +39,7 @@ export class AddTtiResultComponent implements OnInit {
 		if (this.ttiResultForm.valid) {
 			console.log('Form submitted:', this.ttiResultForm.value);
 
-			const apiUrl = 'http://localhost:3001/technician/addttiresult'; // TODO: Add tti result API URL
-
+			const apiUrl = 'http://localhost:3001/technician/addttiresult';
 			this.http.post(apiUrl, this.ttiResultForm.value)
 				.subscribe(
 					(response) => {

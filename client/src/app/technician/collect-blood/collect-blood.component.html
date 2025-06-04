@@ -1,0 +1,27 @@
+<div class="blood-collection-form">
+	<div class="result" *ngIf="resultMessage"
+		[style.color]="resultMessage === 'Blood collection successful' ? 'green' : 'red'">
+		{{ resultMessage }}
+	</div>
+
+	<form [formGroup]="bloodCollectionForm" (submit)="submitForm()">
+		<label for="technicianId">Doctor ID:</label>
+		<input type="text" id="technicianId" formControlName="technicianId" [attr.disabled]="true">
+
+		<label for="healthId">Health ID:</label>
+		<input type="text" id="healthId" formControlName="healthId">
+
+		<label for="bloodBagUnitNo">Blood Bag Unit Number:</label>
+		<input type="text" id="bloodBagUnitNo" formControlName="bloodBagUnitNo">
+
+		<label for="bloodBagSegmentNo">Blood Bag Segment Number:</label>
+		<input type="text" id="bloodBagSegmentNo" formControlName="bloodBagSegmentNo">
+
+		<label for="quantity">Quantity:</label>
+		<input type="number" id="quantity" formControlName="quantity">
+
+		<button type="submit">Submit</button>
+	</form>
+
+
+</div>

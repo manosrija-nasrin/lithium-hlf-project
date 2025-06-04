@@ -1,0 +1,16 @@
+<div *ngIf="loading" class="loader"></div>
+<table *ngIf="!loading && requestData.length > 0; else noData">
+	<tbody>
+		<tr *ngFor="let request of requestData" class="card">
+			<td class="card-header"><b>Access Request Number:</b> {{ request.requestNumber }}</td>
+			<b>Request Details:</b><br>
+			<div><b>Requested By:</b> {{ request.doctorId }}</div>
+			<div><b>Requested For:</b> {{ request.healthId }}</div>
+			<div><b>Reason:</b> {{ request.reason }}</div>
+			<td class="button-container"><button (click)="sendPostRequest(request.requestNumber)">Approve</button></td>
+		</tr>
+	</tbody>
+</table>
+<ng-template #noData>
+	<h2 *ngIf="!loading">No pending approvals.</h2>
+</ng-template>

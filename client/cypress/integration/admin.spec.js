@@ -1,8 +1,8 @@
 describe("Test admin", () => {
   beforeEach(() => {
 
-    cy.fixture('donors').then((donors) => {
-      localStorage.setItem('newDonors', JSON.stringify(donors));
+    cy.fixture('patients').then((patients) => {
+      localStorage.setItem('newPatients', JSON.stringify(patients));
     });
 
     cy.visit("/login");
@@ -18,13 +18,13 @@ describe("Test admin", () => {
     cy.get('.mr-auto > .nav-item > .nav-link').should('contain', 'Admin');
   })
 
-  it("create a new donor", () => {
-    cy.get('[text="Create Donor"] > .btn-toolbar').click();
+  it("create a new patient", () => {
+    cy.get('[text="Create Patient"] > .btn-toolbar').click();
 
-    cy.url().should('include', '/donor/edit/new');
+    cy.url().should('include', '/patient/edit/new');
 
-    let newDonors = localStorage.getItem('newDonors');
-    // console.log(newDonors);
+    let newPatients = localStorage.getItem('newPatients');
+    // console.log(newPatients);
     cy.get(':nth-child(1) > .form-control').type("Kshitij");
     cy.get(':nth-child(2) > .form-control').type("Yelpale");
     cy.get(':nth-child(3) > .form-control').type("E031, Friedrich-Wilhelm-von-Steuben-Str. 90");
@@ -43,7 +43,7 @@ describe("Test admin", () => {
     cy.get(':nth-child(6) > .form-control').type("017669434050");
     cy.get(':nth-child(7) > .form-control').type("017669434050");
     cy.get('.btn-primary').click();
-    cy.get('.alert').contains("New donor's credentials:");
+    cy.get('.alert').contains("New patient's credentials:");
     cy.get('.btn').click();
     cy.url().should('include', '/admin/hosp1admin');
   });

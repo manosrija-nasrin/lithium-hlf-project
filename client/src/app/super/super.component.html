@@ -1,5 +1,5 @@
 <app-toolbar text="Super {{superId}}">
-  <app-toolbar-link text="View Deferred donors" icon="users" [routerLink]="['deferredlist']">
+  <app-toolbar-link text="View Deferred patients" icon="users" [routerLink]="['deferredlist']">
   </app-toolbar-link>
   <app-toolbar-button text="Refresh" icon="refresh" (click)="refresh()"></app-toolbar-button>
 </app-toolbar>
@@ -42,4 +42,6 @@
       </div>
     </div>
   </div>
+  <app-toolbar-link text="Check Patient Deferral Status" [routerLink]="['checkpatientstatus']">
+  </app-toolbar-link>
 </div>

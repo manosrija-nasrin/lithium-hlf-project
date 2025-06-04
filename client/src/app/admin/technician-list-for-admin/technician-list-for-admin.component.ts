@@ -3,18 +3,18 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 import { Observable, Subscription } from 'rxjs';
 
-import { TechnicianService } from '../../technician/technician.service';
-import { DisplayVal} from '../../donor/donor';
-import {TechnicianViewRecord} from '../../technician/technician';
 import { HttpClient } from '@angular/common/http';
+import { DisplayVal } from '../../patient/patient';
+import { TechnicianViewRecord } from '../../technician/technician';
+import { TechnicianService } from '../../technician/technician.service';
 
 @Component({
   selector: 'app-technician-list-for-admin',
   templateUrl: './technician-list-for-admin.component.html',
   styleUrls: ['./technician-list-for-admin.component.scss']
 })
-export class TechnicianListForAdminComponent implements OnInit, OnDestroy { 
-  public adminId:any;
+export class TechnicianListForAdminComponent implements OnInit, OnDestroy {
+  public adminId: any;
   public technicianRecords$?: Observable<Array<TechnicianViewRecord>>;
   private sub?: Subscription;
   public headerNames = [
@@ -31,7 +31,7 @@ export class TechnicianListForAdminComponent implements OnInit, OnDestroy {
     private readonly http: HttpClient
   ) { }
 
- ngOnInit(): void {
+  ngOnInit(): void {
     this.sub = this.route.params
       .subscribe((params: Params) => {
         this.adminId = params.adminId;
@@ -47,14 +47,14 @@ export class TechnicianListForAdminComponent implements OnInit, OnDestroy {
   }
 
   public refresh(): void {
-  if(this.adminId==='hosp1admin') {
-    this.technicianRecords$ = this.technicianService.getTechniciansByHospitalId(1);
+    if (this.adminId === 'hosp1admin') {
+      this.technicianRecords$ = this.technicianService.getTechniciansByHospitalId(1);
     }
-    else if(this.adminId==='hosp2admin') {
-     this.technicianRecords$ = this.technicianService.getTechniciansByHospitalId(2);
+    else if (this.adminId === 'hosp2admin') {
+      this.technicianRecords$ = this.technicianService.getTechniciansByHospitalId(2);
     }
     else {
-     this.technicianRecords$ = this.technicianService.getTechniciansByHospitalId(3);
+      this.technicianRecords$ = this.technicianService.getTechniciansByHospitalId(3);
     }
   }
 }

@@ -8,9 +8,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { AdminComponent } from './admin/admin.component';
 import { AdminService } from './admin/admin.service';
 import { DoctorListForAdminComponent } from './admin/doctor-list-for-admin/doctor-list-for-admin.component';
-import { DonorListForAdminComponent } from './admin/donor-list-for-admin/donor-list-for-admin.component';
 import { GetStocksBelowThresholdComponent } from './admin/GetStocksBelowThreshold.component';
 import { InsertHospitalComponent } from './admin/InsertHospital.component';
+import { PatientListForAdminComponent } from './admin/patient-list-for-admin/patient-list-for-admin.component';
 import { SuperListForAdminComponent } from './admin/super-list-for-admin/super-list-for-admin.component';
 import { TechnicianListForAdminComponent } from './admin/technician-list-for-admin/technician-list-for-admin.component';
 import { ViewAllHospitalsComponent } from './admin/ViewAllHospitals.component';
@@ -20,35 +20,38 @@ import { AuthGuard } from './core/auth/auth.guard';
 import { AuthService } from './core/auth/auth.service';
 import { TokenInterceptorService } from './core/auth/token-interceptor.service';
 import { BloodCollectionComponent } from './doctor/bloodcollection.component';
-import { DoctorListForDonorComponent } from './doctor/doctor-list-for-donor/doctor-list-for-donor.component';
+import { DoctorListForPatientComponent } from './doctor/doctor-list-for-patient/doctor-list-for-patient.component';
 import { DoctorRegisterComponent } from './doctor/doctor-register/doctor-register.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { DoctorService } from './doctor/doctor.service';
-import { DonorListForDoctorComponent } from './doctor/donor-list-for-doctor/donor-list-for-doctor.component';
 import { MOCapprovalComponent } from './doctor/MOCapproval.component';
-import { ScreenDonorComponent } from './doctor/screendonor.component';
-import { DonorDetailsMedicalEditComponent } from './donor/donor-details-medical-edit/donor-details-medical-edit.component';
-import { DonorDetailsPersonalEditComponent } from './donor/donor-details-personal-edit/donor-details-personal-edit.component';
-import { DonorHistoryComponent } from './donor/donor-history/donor-history.component';
-import { DonorEditComponent } from './donor/donor-register/donor-edit.component';
-import { DonorComponent } from './donor/donor.component';
-import { DonorService } from './donor/donor.service';
-import { GeoButtonComponent } from './donor/Geobutton/geo-button.component';
+import { PatientListForDoctorComponent } from './doctor/patient-list-for-doctor/patient-list-for-doctor.component';
+import { RequestAccessToSensitiveDataComponent } from './doctor/request-access-to-sensitive-data/request-access-to-sensitive-data.component';
+import { ScreenPatientComponent } from './doctor/screenpatient.component';
 import { LoadingPipe } from './loading.pipe';
 import { LoginComponent } from './login/login.component';
+import { GeoButtonComponent } from './patient/Geobutton/geo-button.component';
+import { PatientDetailsMedicalEditComponent } from './patient/patient-details-medical-edit/patient-details-medical-edit.component';
+import { PatientDetailsPersonalEditComponent } from './patient/patient-details-personal-edit/patient-details-personal-edit.component';
+import { PatientHistoryComponent } from './patient/patient-history/patient-history.component';
+import { PatientEditComponent } from './patient/patient-register/patient-edit.component';
+import { PatientComponent } from './patient/patient.component';
+import { PatientService } from './patient/patient.service';
 import { ReceiverComponent } from './receiver/receiver.component';
 import { SearchComboComponent, SearchService, SearchTextComponent } from './search';
 import { ToolbarButtonComponent, ToolbarComponent, ToolbarLinkComponent } from './sidebar';
-import { DeferredDonorListForSuperComponent } from './super/deferred-donor-list-for-super/deferred-donor-list-for-super.component';
+import { DeferredPatientListForSuperComponent } from './super/deferred-patient-list-for-super/deferred-patient-list-for-super.component';
 import { SuperRegisterComponent } from './super/super-register/super-register.component';
 import { SuperComponent } from './super/super.component';
 import { SuperService } from './super/super.service';
 import { BloodRequestComponent } from './technician/bloodrequest.component';
+import { TechnicianBloodCollectionComponent } from './technician/collect-blood/collect-blood.component';
 import { BloodCrossMatchComponent } from './technician/crossmatchedblood.component';
-import { DonorStatusCheckComponent } from './technician/donorstatuscheck.component';
 import { LTapprovalComponent } from './technician/LTapproval.component';
+import { PatientStatusCheckComponent } from './technician/patientstatuscheck.component';
 import { ReadAllocatedBloodBagComponent } from './technician/readallocatedbloodbag.component';
 import { ReadBloodBagComponent } from './technician/readbloodbag.component';
+import { TechnicianScreenPatientComponent } from './technician/screen-patient/screen-patient.component';
 import { AddHealthIndicatorResultsComponent } from './technician/technician-add-health-indicators/add-health-indicators.component';
 import { AddTtiResultComponent } from './technician/technician-add-tti-results/add-tti-result.component';
 import { TechnicianRegisterComponent } from './technician/technician-register/technician-register.component';
@@ -57,23 +60,23 @@ import { TechnicianService } from './technician/technician.service';
 
 const components = [
   AppComponent,
-  DeferredDonorListForSuperComponent,
+  DeferredPatientListForSuperComponent,
   SuperComponent,
   SuperRegisterComponent,
   LoginComponent,
   AdminComponent,
-  DonorComponent,
+  PatientComponent,
   TechnicianComponent,
-  DonorEditComponent,
-  DonorHistoryComponent,
-  DonorDetailsMedicalEditComponent,
-  DonorDetailsPersonalEditComponent,
-  DonorListForDoctorComponent,
-  DoctorListForDonorComponent,
+  PatientEditComponent,
+  PatientHistoryComponent,
+  PatientDetailsMedicalEditComponent,
+  PatientDetailsPersonalEditComponent,
+  PatientListForDoctorComponent,
+  DoctorListForPatientComponent,
   DoctorListForAdminComponent,
-  DonorStatusCheckComponent,
+  PatientStatusCheckComponent,
   TechnicianListForAdminComponent,
-  DonorListForAdminComponent,
+  PatientListForAdminComponent,
   DoctorComponent,
   DoctorRegisterComponent,
   SuperListForAdminComponent,
@@ -87,7 +90,7 @@ const components = [
   InsertHospitalComponent,
   GetStocksBelowThresholdComponent,
   GeoButtonComponent,
-  ScreenDonorComponent,
+  ScreenPatientComponent,
   BloodCollectionComponent,
   ReadBloodBagComponent,
   BloodCrossMatchComponent,
@@ -97,7 +100,11 @@ const components = [
   LTapprovalComponent,
   MOCapprovalComponent,
   AddTtiResultComponent,
-  AddHealthIndicatorResultsComponent
+  AddHealthIndicatorResultsComponent,
+  PatientHistoryComponent,
+  RequestAccessToSensitiveDataComponent,
+  TechnicianBloodCollectionComponent,
+  TechnicianScreenPatientComponent
 ];
 
 const pipes = [
@@ -115,7 +122,7 @@ const pipes = [
     NgSelectModule,
     NgbTooltipModule
   ],
-  providers: [AuthService, AuthGuard, SearchService, AdminService, DonorService, DoctorService, TechnicianService, SuperService,
+  providers: [AuthService, AuthGuard, SearchService, AdminService, PatientService, DoctorService, TechnicianService, SuperService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,

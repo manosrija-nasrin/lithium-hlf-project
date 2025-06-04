@@ -22,8 +22,8 @@ export class AppComponent implements OnDestroy {
     this.sub?.unsubscribe();
   }
 
-  public isDonor(): boolean {
-    return this.authService.getRole() === RoleEnum.DONOR;
+  public isPatient(): boolean {
+    return this.authService.getRole() === RoleEnum.PATIENT;
   }
 
   public isDoctor(): boolean {

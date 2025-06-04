@@ -24,7 +24,7 @@ export class SuperService {
     return this.http.get(this.superURL + `/${hospitalId}/${supId}`);
   }
 
-  public getDeferredDonors(hospitalId: string, supId: string): Observable<any> {
+  public getDeferredPatients(hospitalId: string, supId: string): Observable<any> {
     return this.http.get(this.superURL + `/${hospitalId}/${supId}/deferredlist`);
   }
 }

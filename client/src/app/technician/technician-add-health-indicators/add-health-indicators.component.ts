@@ -1,4 +1,4 @@
-// screendonor.component.ts
+// screenpatient.component.ts
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -23,19 +23,19 @@ export class AddHealthIndicatorResultsComponent implements OnInit {
 		});
 
 		this.healthIndicatorForm = this.fb.group({
-			healthId: ['', Validators.required, Validators.minLength(12), Validators.maxLength(12)],
+			healthId: ['', [Validators.required, Validators.minLength(12), Validators.maxLength(12)]],
 			technicianId: [this.technicianId, Validators.required],
 			pulse: ['', Validators.required],
 			systolic: ['', Validators.required],
 			diastolic: ['', Validators.required],
-			haemoglobin: ['', Validators.required],
-			anaemia: ['', Validators.required],
 			weight: ['', Validators.required],
-			haemophiliaA: ['', Validators.required],
-			haemophiliaB: ['', Validators.required],
-			cardiovascular: ['', Validators.required],
-			hypertension: ['', Validators.required],
-			asthma: ['', Validators.required],
+			haemoglobin: [''],
+			anaemia: [''],
+			haemophiliaA: [''],
+			haemophiliaB: [''],
+			cardiovascular: [''],
+			hypertension: [''],
+			asthma: [''],
 		});
 	}
 

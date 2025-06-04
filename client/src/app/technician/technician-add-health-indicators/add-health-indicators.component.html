@@ -1,6 +1,6 @@
 <div class="container">
 	<div *ngIf="apiResponse">
-		<ng-container *ngIf="apiResponse.success; else failureBlock">
+		<ng-container *ngIf="apiResponse.status === 'success'; else failureBlock">
 			<h4 [style.color]="'green'">Report added !!</h4>
 		</ng-container>
 		<ng-template #failureBlock>
