@@ -17,9 +17,8 @@ export class DeferredPatientListForSuperComponent implements OnInit {
     new DisplayVal(PatientSuperViewRecord.prototype.healthId, 'Health Id'),
     new DisplayVal(PatientSuperViewRecord.prototype.firstName, 'First Name'),
     new DisplayVal(PatientSuperViewRecord.prototype.lastName, 'Last Name'),
-    new DisplayVal(PatientSuperViewRecord.prototype.deferredOn, 'Deferred On'),
+    new DisplayVal(PatientSuperViewRecord.prototype.deferredDetails?.deferredOn, 'Deferred On'),
     new DisplayVal(PatientSuperViewRecord.prototype.deferredReason, 'Reason'),
-
   ];
 
   constructor(
@@ -40,5 +39,8 @@ export class DeferredPatientListForSuperComponent implements OnInit {
 
   public refresh(): void {
     this.patientRecordsObs$ = this.superService.getDeferredPatients(this.hospId, this.superId);
+    this.patientRecordsObs$.subscribe(records => {
+      console.log("Array:", records);
+    })
   }
 }

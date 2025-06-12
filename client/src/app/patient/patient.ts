@@ -43,13 +43,20 @@ export interface MedicalHistoryDetails {
   status: string,
   reason?: string,
   testedAt: string,
-  results: any
+  results: any,
+  message?: string,
 }
 
 export interface MedicalHistory {
   [medicalHistoryId: string]: MedicalHistoryDetails;
 }
 
+export interface DeferredDetails {
+  deferredOn: string;
+  deferredTenure: number;
+  deferredAt: string;
+  deferredBy: string;
+}
 export interface PatientRecord {
   healthId: string;
   firstName: string;
@@ -63,7 +70,7 @@ export interface PatientRecord {
   alert: boolean;
   isDiseased: boolean;
   healthCreditPoints: string;
-  donationStatus: string;
+  deferralStatus: string;
   donationHistory: DonationHistory;
   creationTimestamp: string;
   docType: string;
@@ -71,11 +78,17 @@ export interface PatientRecord {
   Timestamp: Timestamp;
   medicalHistory: MedicalHistory;
   sensitiveMedicalHistory?: MedicalHistory;
-  deferredOn?: string;
+  deferredDetails: DeferredDetails;
   deferredReason?: string;
-  deferredTenure?: number;
-  deferredAt?: string;
+  sensitiveDataPermissionGranted: string[];
 }
+
+const emptyDeferredDetails: DeferredDetails = {
+  deferredAt: '',
+  deferredOn: '',
+  deferredTenure: 0,
+  deferredBy: ''
+};
 
 export class PatientViewRecord {
   healthId = '';
@@ -90,18 +103,17 @@ export class PatientViewRecord {
   alert = false;
   isDiseased = false;
   healthCreditPoints = '';
-  donationStatus = '';
+  deferralStatus = '';
   donationHistory: DonationHistory = {};
   docType = '';
   changedBy = '';
   medicalHistory: MedicalHistory = {};
   creationTimestamp: string = '';
   Timestamp = '';
-  deferredOn = '';
   deferredReason = '';
-  deferredTenure = 0;
-  deferredAt = '';
   sensitiveMedicalHistory: MedicalHistory = {};
+  deferredDetails: DeferredDetails = emptyDeferredDetails;
+  sensitiveDataPermissionGranted: string[];
 
   constructor(readonly patientRecord: PatientRecord) {
     this.healthId = patientRecord.healthId;
@@ -116,18 +128,17 @@ export class PatientViewRecord {
     this.alert = patientRecord.alert;
     this.isDiseased = patientRecord.isDiseased;
     this.healthCreditPoints = patientRecord.healthCreditPoints;
-    this.donationStatus = patientRecord.donationStatus;
+    this.deferralStatus = patientRecord.deferralStatus;
     this.donationHistory = patientRecord.donationHistory;
     this.docType = patientRecord.docType;
     this.changedBy = patientRecord.changedBy;
     this.Timestamp = patientRecord.Timestamp ? new Date(patientRecord.Timestamp.seconds.low * 1000).toDateString() : '';
     this.creationTimestamp = patientRecord.creationTimestamp ? new Date(patientRecord.Timestamp.seconds.low * 1000).toDateString() : '';
     this.medicalHistory = patientRecord.medicalHistory;
-    this.deferredOn = patientRecord.deferredOn || '';
     this.deferredReason = patientRecord.deferredReason || '';
-    this.deferredTenure = patientRecord.deferredTenure || 0;
-    this.deferredAt = patientRecord.deferredAt || '';
-    this.sensitiveMedicalHistory = patientRecord.medicalHistory; // Assuming sensitive medical history is the same as medical history
+    this.deferredDetails = patientRecord.deferredDetails || emptyDeferredDetails;
+    this.sensitiveMedicalHistory = patientRecord.sensitiveMedicalHistory || {}; // Assuming sensitive medical history is the same as medical history
+    this.sensitiveDataPermissionGranted = patientRecord.sensitiveDataPermissionGranted || [];
   }
 }
 
@@ -145,18 +156,18 @@ export class PatientDeferred implements PatientRecord {
   isDiseased: boolean;
   healthCreditPoints: string;
   creationTimestamp: string;
-  donationStatus: string;
+  deferralStatus: string;
   donationHistory: DonationHistory;
   docType: string;
   changedBy: string;
   Timestamp: Timestamp;
-  deferredOn: string;
   deferredReason: string;
-  deferredTenure: number;
   sensitiveMedicalHistory?: MedicalHistory;
   medicalHistory: MedicalHistory;
+  deferredDetails: DeferredDetails;
+  sensitiveDataPermissionGranted: string[];
 
-  constructor(readonly patientRecord: PatientRecord, deferredOn: string, deferredReason: string, deferredTenure: number) {
+  constructor(readonly patientRecord: PatientRecord, deferredReason: string) {
     this.healthId = patientRecord.healthId;
     this.firstName = patientRecord.firstName;
     this.lastName = patientRecord.lastName;
@@ -170,19 +181,16 @@ export class PatientDeferred implements PatientRecord {
     this.isDiseased = patientRecord.isDiseased;
     this.healthCreditPoints = patientRecord.healthCreditPoints;
     this.creationTimestamp = patientRecord.creationTimestamp;
-    this.donationStatus = patientRecord.donationStatus;
+    this.deferralStatus = patientRecord.deferralStatus;
     this.donationHistory = patientRecord.donationHistory;
     this.docType = patientRecord.docType;
     this.changedBy = patientRecord.changedBy;
     this.Timestamp = patientRecord.Timestamp;
-    this.deferredOn = deferredOn;
     this.deferredReason = deferredReason;
-    this.deferredTenure = deferredTenure;
     this.medicalHistory = patientRecord.medicalHistory;
-    this.deferredOn = deferredOn;
-    this.deferredReason = deferredReason;
-    this.deferredTenure = deferredTenure;
     this.sensitiveMedicalHistory = patientRecord.sensitiveMedicalHistory;
+    this.deferredDetails = patientRecord.deferredDetails || emptyDeferredDetails;
+    this.sensitiveDataPermissionGranted = patientRecord.sensitiveDataPermissionGranted || [];
   }
 }
 
@@ -215,10 +223,11 @@ export class PatientDoctorViewRecord {
   alert = false;
   isDiseased = false;
   healthCreditPoints = '';
-  donationStatus = '';
+  deferralStatus = '';
   donationHistory = {};
   medicalHistory = {};
   creationTimestamp = '';
+  deferredDetails: DeferredDetails = emptyDeferredDetails;
 
   constructor(readonly patientRecord: PatientRecord) {
     this.healthId = patientRecord.healthId;
@@ -229,10 +238,11 @@ export class PatientDoctorViewRecord {
     this.alert = patientRecord.alert;
     this.isDiseased = patientRecord.isDiseased;
     this.healthCreditPoints = patientRecord.healthCreditPoints;
-    this.donationStatus = patientRecord.donationStatus;
+    this.deferralStatus = patientRecord.deferralStatus;
     this.donationHistory = patientRecord.donationHistory;
     this.medicalHistory = patientRecord.medicalHistory;
     this.creationTimestamp = patientRecord.creationTimestamp;
+    this.deferredDetails = patientRecord.deferredDetails || emptyDeferredDetails;
   }
 }
 
@@ -246,14 +256,13 @@ export class PatientSuperViewRecord {
   isDiseased = false;
   healthCreditPoints = '';
   creationTimestamp = '';
-  donationStatus = '';
+  deferralStatus = '';
   donationHistory = {};
   medicalHistory = {};
   deferredOn = '';
   deferredReason = '';
-  deferredTenure = 0;
-  deferredAt = '';
   sensitiveMedicalHistory: MedicalHistory = {};
+  deferredDetails: DeferredDetails = emptyDeferredDetails;
 
   constructor(readonly patientRecord: PatientRecord) {
     this.healthId = patientRecord.healthId;
@@ -264,23 +273,22 @@ export class PatientSuperViewRecord {
     this.alert = patientRecord.alert;
     this.isDiseased = patientRecord.isDiseased;
     this.healthCreditPoints = patientRecord.healthCreditPoints;
-    this.donationStatus = patientRecord.donationStatus;
+    this.deferralStatus = patientRecord.deferralStatus;
     this.creationTimestamp = patientRecord.creationTimestamp;
     this.donationHistory = patientRecord.donationHistory;
     this.medicalHistory = patientRecord.medicalHistory;
-    this.deferredOn = patientRecord.deferredOn || '';
     this.deferredReason = patientRecord.deferredReason || '';
-    this.deferredTenure = patientRecord.deferredTenure || 0;
-    this.deferredAt = patientRecord.deferredAt || '';
+    this.deferredOn = (patientRecord.deferredDetails && patientRecord.deferredDetails.deferredOn) || '';
     this.sensitiveMedicalHistory = patientRecord.sensitiveMedicalHistory || {};
+    this.deferredDetails = patientRecord.deferredDetails || emptyDeferredDetails;
   }
 }
 
 export class DisplayVal {
-  keyName: string | number | boolean | DonationHistory;
+  keyName: string | number | boolean | DonationHistory | MedicalHistory | DeferredDetails | undefined;
   displayName: string;
 
-  constructor(key: string | number | boolean | DonationHistory, value: string) {
+  constructor(key: string | number | boolean | DonationHistory | MedicalHistory | DeferredDetails | undefined, value: string) {
     this.keyName = key;
     this.displayName = value;
   }

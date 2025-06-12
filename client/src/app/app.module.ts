@@ -40,6 +40,7 @@ import { PatientService } from './patient/patient.service';
 import { ReceiverComponent } from './receiver/receiver.component';
 import { SearchComboComponent, SearchService, SearchTextComponent } from './search';
 import { ToolbarButtonComponent, ToolbarComponent, ToolbarLinkComponent } from './sidebar';
+import { AccessRequestApprovalComponent } from './super/access-request-dashboard/access-request-dashboard.component';
 import { DeferredPatientListForSuperComponent } from './super/deferred-patient-list-for-super/deferred-patient-list-for-super.component';
 import { SuperRegisterComponent } from './super/super-register/super-register.component';
 import { SuperComponent } from './super/super.component';
@@ -104,7 +105,8 @@ const components = [
   PatientHistoryComponent,
   RequestAccessToSensitiveDataComponent,
   TechnicianBloodCollectionComponent,
-  TechnicianScreenPatientComponent
+  TechnicianScreenPatientComponent,
+  AccessRequestApprovalComponent,
 ];
 
 const pipes = [

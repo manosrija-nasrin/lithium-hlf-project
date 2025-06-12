@@ -1,0 +1,36 @@
+.geo-btn {
+	background-color: #4CAF50;
+	color: white;
+	margin-top: 20px;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.geo-btn:hover {
+	background-color: #45a049;
+}
+
+.response-container {
+	margin-top: 20px;
+}
+
+.form-group {
+	margin-bottom: 10px;
+}
+
+.select-blood-group {
+	padding: 8px;
+	margin: 5px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.loading-message,
+.empty-response-message {
+	margin-top: 10px;
+	font-style: italic;
+}

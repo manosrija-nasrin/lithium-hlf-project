@@ -1,6 +1,7 @@
 <div class="container">
 	<div *ngIf="apiResponse">
-		<ng-container *ngIf="apiResponse.success; else failureBlock">
+		<ng-container
+			*ngIf="apiResponse.status === 'success' && apiResponse.donationStatus !== undefined && !apiResponse.donationStatus.startsWith('deferred'); else failureBlock">
 			<h4 [style.color]="'green'">Screening successful !!</h4>
 		</ng-container>
 		<ng-template #failureBlock>

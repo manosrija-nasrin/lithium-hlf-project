@@ -13,7 +13,7 @@ export class AddTtiResultComponent implements OnInit {
 	ttiResultForm!: FormGroup;
 	technicianId!: string;
 	healthId!: string;
-	datetime!: string;
+	// datetime!: string;
 
 	constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private http: HttpClient) { }
 
@@ -25,7 +25,7 @@ export class AddTtiResultComponent implements OnInit {
 		this.ttiResultForm = this.formBuilder.group({
 			technicianId: [this.technicianId, Validators.required],
 			healthId: [this.healthId, [Validators.required, Validators.minLength(12), Validators.maxLength(12)]],
-			datetime: [new Date().toISOString(), Validators.required],
+			// datetime: [new Date().toISOString(), Validators.required],
 			//slipNumber: ['', Validators.required],
 			malaria: [''],
 			syphilis: [''],

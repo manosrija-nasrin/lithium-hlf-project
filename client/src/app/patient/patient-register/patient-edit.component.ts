@@ -58,7 +58,7 @@ export class PatientEditComponent implements OnInit, OnDestroy {
       alert: [''],
       isDiseased: [''],
       healthCreditPoints: [''],
-      donationStatus: [''],
+      deferralStatus: [''],
       donationHistory: ['']
     });
   }
@@ -195,7 +195,7 @@ export class PatientEditComponent implements OnInit, OnDestroy {
         alert: record.alert,
         isDiseased: record.isDiseased,
         healthCreditPoints: record.healthCreditPoints,
-        donationStatus: record.donationStatus,
+        deferralStatus: record.deferralStatus,
         donationHistory: record.donationHistory
       });
     }

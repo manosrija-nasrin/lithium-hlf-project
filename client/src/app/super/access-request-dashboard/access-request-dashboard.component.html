@@ -1,13 +1,15 @@
 <div *ngIf="loading" class="loader"></div>
-<table *ngIf="!loading && requestData.length > 0; else noData">
+<table *ngIf="!loading && approvalData.length > 0; else noData">
 	<tbody>
-		<tr *ngFor="let request of requestData" class="card">
-			<td class="card-header"><b>Access Request Number:</b> {{ request.requestNumber }}</td>
-			<b>Request Details:</b><br>
-			<div><b>Requested By:</b> {{ request.doctorId }}</div>
+		<tr *ngFor="let request of approvalData" class="card">
+			<td class="card-header"><b>Access Request Number:</b> {{ request.requestId }}</td>
+			<b>Request Details:</b>
 			<div><b>Requested For:</b> {{ request.healthId }}</div>
+			<div><b>Requested By:</b> {{ request.requestor }}</div>
 			<div><b>Reason:</b> {{ request.reason }}</div>
-			<td class="button-container"><button (click)="sendPostRequest(request.requestNumber)">Approve</button></td>
+			<div><b>Status:</b> {{ request.status }}</div>
+			<td class="button-container"><button (click)="sendApprovalForRequest(request.requestId)">Approve</button>
+			</td>
 		</tr>
 	</tbody>
 </table>

@@ -5,7 +5,7 @@ import { Observable, Subscription } from 'rxjs';
 
 import { AuthService } from '../core/auth/auth.service';
 import { RoleEnum } from '../utils';
-import { DonationDetails, DonationHistory, PatientViewRecord } from './patient';
+import { DonationDetails, DonationHistory, MedicalHistory, PatientViewRecord } from './patient';
 import { PatientService } from './patient.service';
 
 
@@ -17,6 +17,10 @@ import { PatientService } from './patient.service';
 export class PatientComponent implements OnInit, OnDestroy {
   public healthID: any;
   public doctorID: any;
+  public username: string;
+  public sensitiveMedicalHistory: MedicalHistory | null;
+  public loadingSensitiveMedicalHistory: boolean;
+  public errorSensitiveMedicalHistory: any;
   public patientRecordObs?: Observable<PatientViewRecord>;
   public patientRecord: PatientViewRecord | undefined;
   private sub?: Subscription;
@@ -26,7 +30,12 @@ export class PatientComponent implements OnInit, OnDestroy {
     private readonly patientService: PatientService,
     private readonly authService: AuthService,
     private router: Router
-  ) { }
+  ) {
+    this.sensitiveMedicalHistory = null;
+    this.loadingSensitiveMedicalHistory = false;
+    this.errorSensitiveMedicalHistory = null;
+    this.username = authService.getUsername();
+  }
 
   ngOnInit(): void {
     this.sub = this.route.params
@@ -51,6 +60,27 @@ export class PatientComponent implements OnInit, OnDestroy {
         const quantity: string = specificDonationDetails.quantity;
       }
     }
+  }
+
+  viewSensitiveMedicalHistory(): void {
+    this.loadingSensitiveMedicalHistory = true;
+    this.errorSensitiveMedicalHistory = null;
+    this.patientService.getSensitiveMedicalHistory(this.healthID, this.username)
+      .subscribe({
+        next: (result) => {
+          console.log(result);
+          if (result.status === 'success') {
+            this.sensitiveMedicalHistory = result.sensitiveMedicalHistory;
+          } else if (result.status === 'error') {
+            this.errorSensitiveMedicalHistory = result.error;
+          }
+          this.loadingSensitiveMedicalHistory = false;
+        },
+        error: (err) => {
+          this.errorSensitiveMedicalHistory = 'Unable to fetch sensitive medical history.';
+          this.loadingSensitiveMedicalHistory = false;
+        }
+      });
   }
 
   ngOnDestroy(): void {

@@ -25,6 +25,7 @@ import { PatientHistoryComponent } from './patient/patient-history/patient-histo
 import { PatientEditComponent } from './patient/patient-register/patient-edit.component';
 import { PatientComponent } from './patient/patient.component';
 import { ReceiverComponent } from './receiver/receiver.component';
+import { AccessRequestApprovalComponent } from './super/access-request-dashboard/access-request-dashboard.component';
 import { DeferredPatientListForSuperComponent } from './super/deferred-patient-list-for-super/deferred-patient-list-for-super.component';
 import { SuperRegisterComponent } from './super/super-register/super-register.component';
 import { SuperComponent } from './super/super.component';
@@ -159,6 +160,11 @@ const routes: Routes = [
   {
     path: 'super/:superId/checkpatientstatus',
     component: PatientStatusCheckComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'super/:superId/access-requests',
+    component: AccessRequestApprovalComponent,
     canActivate: [AuthGuard]
   },
   {

@@ -22,11 +22,10 @@
             <td>{{singleRecord.healthId}}</td>
             <td>{{singleRecord.firstName}}</td>
             <td>{{singleRecord.lastName}}</td>
-            <td>{{singleRecord.deferredOn}}</td>
+            <td>{{singleRecord.deferredDetails.deferredOn}}</td>
             <td>{{singleRecord.deferredReason}}</td>
             <td>
               <a role="button" [routerLink]="['/patient/', singleRecord.healthId,superId]">View more</a>
-
             </td>
           </tr>
         </tbody>

@@ -36,6 +36,10 @@ export class PatientService {
     return this.http.patch(this.patientURL + `/${key}/details/medical`, data);
   }
 
+  public getSensitiveMedicalHistory(healthId: string, requestedBy: string): Observable<any> {
+    return this.http.get(this.patientURL + `/${healthId}/sensitive-medical-history?requestedBy=${requestedBy}`);
+  }
+
   public grantAccessToDoctor(healthId: string, doctorId: string): Observable<any> {
     return this.http.patch(this.patientURL + `/${healthId}/grant/${doctorId}`, {});
   }

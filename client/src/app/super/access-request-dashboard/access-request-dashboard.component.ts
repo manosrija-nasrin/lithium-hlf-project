@@ -2,35 +2,44 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, Injectable, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
+
+interface AccessRequestType {
+	healthId: string,
+	hospitalName: string,
+	reason: string,
+	requestId: number,
+	requestedTo: string,
+	requestor: string,
+	status: string
+}
 
 // Service
 @Injectable({
 	providedIn: 'root'
 })
 export class RequestApprovalService {
-	private apiUrl = 'http://localhost:3001/super/request-approval';  // Replace with your actual API endpoint
+	private apiUrl = `http://localhost:3001/super/get-access-requests`;
 
 	constructor(private http: HttpClient) { }
 
-	getApprovalData(superId: string): Observable<any> {
+	getAccessRequestsForSuper(superId: string): Observable<any> {
 		const url = `${this.apiUrl}?superId=${superId}`;
-		console.log(`Fetching approval data for super ID: ${superId}`); // Debug log
+		console.log(`Fetching access request data for super ID: ${superId}`); // Debug log
 		return this.http.get<any>(url).pipe(
 			catchError(this.handleError)
 		);
 	}
 
-	sendPostRequest(requestNumber: string, superId: string): Observable<any> {
-		const postUrl = 'http://localhost:3001/super/request-approval'; // Replace with your actual POST endpoint
-		// return this.http.post<any>(postUrl, { requestNumber, superId }).pipe(
-		// 	catchError(this.handleError),
-		// 	tap(() => {
-		// 		// Reload the page after the request completes
-		// 		location.reload();
-		// 	})
-		// );
-		console.log("Approve Request");
+	sendApprovalForRequest(requestId: number | string, superId: string): Observable<any> {
+		const postUrl = 'http://localhost:3001/super/' + superId + '/approve-access-request'; // Replace with your actual POST endpoint
+		return this.http.post<any>(postUrl, { requestId: requestId }).pipe(
+			catchError(this.handleError),
+			tap(() => {
+				// Reload the page after the request completes
+				location.reload();
+			})
+		);
 	}
 
 	private handleError(error: HttpErrorResponse) {
@@ -51,7 +60,7 @@ export class RequestApprovalService {
 	styleUrls: ['./access-request-dashboard.component.scss']
 })
 export class AccessRequestApprovalComponent implements OnInit {
-	approvalData!: any[];
+	approvalData!: AccessRequestType[];
 	errorMessage!: string;
 	superId!: string;
 	loading: boolean = true;
@@ -70,7 +79,7 @@ export class AccessRequestApprovalComponent implements OnInit {
 
 	loadApprovalData(): void {
 		this.loading = true;
-		this.requestApprovalService.getApprovalData(this.superId).subscribe(
+		this.requestApprovalService.getAccessRequestsForSuper(this.superId).subscribe(
 			data => {
 				this.approvalData = data;
 				this.loading = false;
@@ -82,8 +91,8 @@ export class AccessRequestApprovalComponent implements OnInit {
 		);
 	}
 
-	sendPostRequest(requestNumber: string): void {
-		this.requestApprovalService.sendPostRequest(requestNumber, this.superId).subscribe(
+	sendApprovalForRequest(requestNumber: string | number): void {
+		this.requestApprovalService.sendApprovalForRequest(requestNumber, this.superId).subscribe(
 			response => {
 				console.log('Post request sent successfully');
 			},

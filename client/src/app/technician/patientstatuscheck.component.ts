@@ -11,7 +11,7 @@ import { AuthService } from '../core/auth/auth.service';
 	<div class="patient-status-check-form-container">
 	  <form [formGroup]="patientStatusCheckForm" (ngSubmit)="submitForm()">
 		<div class="form-group">
-		<h3>Check Patient Deferral Status</h3>
+		<h3>Check Patient Health Status</h3>
 		  <label for="healthId">Health ID:</label>
 		  <input type="text" id="healthId" formControlName="healthId" minlength='12' maxlength='12' required />
 		</div>

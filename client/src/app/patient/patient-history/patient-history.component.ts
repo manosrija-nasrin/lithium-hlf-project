@@ -47,7 +47,7 @@ export class PatientHistoryComponent implements OnInit, OnDestroy {
       new DisplayVal(PatientViewRecord.prototype.alert, 'Alert'),
       new DisplayVal(PatientViewRecord.prototype.isDiseased, 'Is Diseased'),
       new DisplayVal(PatientViewRecord.prototype.healthCreditPoints, 'Health Credit Points'),
-      new DisplayVal(PatientViewRecord.prototype.donationStatus, 'Donation Status'),
+      new DisplayVal(PatientViewRecord.prototype.deferralStatus, 'Donation Status'),
       new DisplayVal(PatientViewRecord.prototype.donationHistory, 'Donation History')
     );
     this.sub = this.route.params

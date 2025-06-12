@@ -63,7 +63,7 @@ export interface PatientRecord {
   alert: boolean;
   isDiseased: boolean;
   healthCreditPoints: string;
-  donationStatus: string;
+  deferralStatus: string;
   donationHistory: DonationHistory;
   docType: string;
   changedBy: string;
@@ -89,7 +89,7 @@ export class PatientViewRecord {
   alert = false;
   isDiseased = false;
   healthCreditPoints = '';
-  donationStatus = '';
+  deferralStatus = '';
   donationHistory: DonationHistory = {};
   docType = '';
   changedBy = '';
@@ -114,7 +114,7 @@ export class PatientViewRecord {
     this.alert = patientRecord.alert;
     this.isDiseased = patientRecord.isDiseased;
     this.healthCreditPoints = patientRecord.healthCreditPoints;
-    this.donationStatus = patientRecord.donationStatus;
+    this.deferralStatus = patientRecord.deferralStatus;
     this.donationHistory = patientRecord.donationHistory;
     this.docType = patientRecord.docType;
     this.changedBy = patientRecord.changedBy;
@@ -141,7 +141,7 @@ export class PatientDeferred implements PatientRecord {
   alert: boolean;
   isDiseased: boolean;
   healthCreditPoints: string;
-  donationStatus: string;
+  deferralStatus: string;
   donationHistory: DonationHistory;
   docType: string;
   changedBy: string;
@@ -165,7 +165,7 @@ export class PatientDeferred implements PatientRecord {
     this.alert = patientRecord.alert;
     this.isDiseased = patientRecord.isDiseased;
     this.healthCreditPoints = patientRecord.healthCreditPoints;
-    this.donationStatus = patientRecord.donationStatus;
+    this.deferralStatus = patientRecord.deferralStatus;
     this.donationHistory = patientRecord.donationHistory;
     this.docType = patientRecord.docType;
     this.changedBy = patientRecord.changedBy;
@@ -210,7 +210,7 @@ export class PatientDoctorViewRecord {
   alert = false;
   isDiseased = false;
   healthCreditPoints = '';
-  donationStatus = '';
+  deferralStatus = '';
   donationHistory = {};
   medicalHistory = {};
 
@@ -223,7 +223,7 @@ export class PatientDoctorViewRecord {
     this.alert = patientRecord.alert;
     this.isDiseased = patientRecord.isDiseased;
     this.healthCreditPoints = patientRecord.healthCreditPoints;
-    this.donationStatus = patientRecord.donationStatus;
+    this.deferralStatus = patientRecord.deferralStatus;
     this.donationHistory = patientRecord.donationHistory;
     this.medicalHistory = patientRecord.medicalHistory;
   }
@@ -238,7 +238,7 @@ export class PatientSuperViewRecord {
   alert = false;
   isDiseased = false;
   healthCreditPoints = '';
-  donationStatus = '';
+  deferralStatus = '';
   donationHistory = {};
   medicalHistory = {};
   deferredOn = '';
@@ -256,7 +256,7 @@ export class PatientSuperViewRecord {
     this.alert = patientRecord.alert;
     this.isDiseased = patientRecord.isDiseased;
     this.healthCreditPoints = patientRecord.healthCreditPoints;
-    this.donationStatus = patientRecord.donationStatus;
+    this.deferralStatus = patientRecord.deferralStatus;
     this.donationHistory = patientRecord.donationHistory;
     this.medicalHistory = patientRecord.medicalHistory;
     this.deferredOn = patientRecord.deferredOn || '';
