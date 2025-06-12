@@ -38,6 +38,7 @@ class TechnicianContract extends PrimaryContract {
             isDiseased: asset.isDiseased,
             alert: asset.alert,
             deferredDetails: asset.deferredDetails,
+            deferralStatus: asset.deferralStatus,
             creationTimestamp: asset.creationTimestamp,
         });
         return asset;
@@ -49,9 +50,10 @@ class TechnicianContract extends PrimaryContract {
             const healthId = ar.healthId;
             const asset = await this.readPatient(ctx, healthId);
             if (asset.isDiseased === true || asset.isDiseased === "true") {
-                const deferredDate = !!asset.deferredDetails ? asset.deferredDetails.deferredOn : "Unknown";
+                const deferredOn = !!asset.deferredDetails ? asset.deferredDetails.deferredOn : "Unknown";
                 const deferredAt = !!asset.deferredDetails ? asset.deferredDetails.deferredAt : "Unknown";
-                return { status: "success", message: "Patient is deferred as tested on " + deferredDate + " at " + deferredAt, patient: asset };
+                const deferredStatus = asset.deferralStatus;
+                return { status: "success", message: `Patient is ${deferredStatus} as tested on ${deferredOn} at ${deferredAt}`, patient: asset };
             } else {
                 return { status: "success", message: "Patient is not deferred" };
             }
@@ -81,10 +83,12 @@ class TechnicianContract extends PrimaryContract {
             const bagId = "T" + parsedArgs.bloodBagUnitNo + "-" + parsedArgs.bloodBagSegmentNo; // T422-450
             const deferredAt = parsedArgs.username.toString().split('-')[0] === "HOSP1" ? "Hospital 1" : "Hospital 2";
             const deferredData = {
-                "deferredOn": date, "deferredTenure": reasonsJson.deferredTenure, "reasons": reasonsJson.deferredReasons,
+                "deferredOn": date, "deferredTenure": reasonsJson.deferredTenure,
+                "reasons": reasonsJson.deferredReasons,
                 "deferredAt": deferredAt,
                 "bloodBagUnitNo": parsedArgs.bloodBagUnitNo, "bloodBagSegmentNo": parsedArgs.bloodBagSegmentNo,
                 "deferredStatus": parsedArgs.deferredStatus, "bagId": bagId,
+                results: reasonsJson.results
             };
             const plainDeferralData = JSON.parse(JSON.stringify(deferredData));
             console.debug("Putting deferred bag to ledger: ", plainDeferralData);
@@ -103,9 +107,7 @@ class TechnicianContract extends PrimaryContract {
     }
 
     async addPendingAlarmingHistory(ctx, args) {
-        // TODO: similar to add pending blood bags
         // send alarming test results along with health Id to be inserted in the PDC
-
         try {
             const parsedArgs = JSON.parse(args);
             const transientMap = ctx.stub.getTransient();
@@ -125,7 +127,8 @@ class TechnicianContract extends PrimaryContract {
             // const bagId = parsedArgs.bloodBagUnitNo + "-" + parsedArgs.bloodBagSegmentNo;
 
             const deferredData = {
-                "deferredOn": date, "deferredTenure": reasonsJson.deferredTenure, "reasons": reasonsJson.deferredReasons,
+                "deferredOn": date, "deferredTenure": reasonsJson.deferredTenure,
+                "reasons": reasonsJson.deferredReasons,
                 "deferredAt": parsedArgs.deferredAt,
                 "deferredStatus": parsedArgs.deferredStatus, "healthId": parsedArgs.healthId,
                 "results": reasonsJson.results
@@ -136,7 +139,7 @@ class TechnicianContract extends PrimaryContract {
             // TODO: insert verification record in PDC
 
             await ctx.stub.putPrivateData(pendingCUECollection, parsedArgs.healthId, Buffer.from(stringify(sortKeysRecursive(plainDeferralData))));
-            return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${pendingCUECollection}` }
+            return { status: "success", peer: msp, message: `Data written to PDC ${pendingCUECollection}` }
         } catch (error) {
             console.error(error);
             return { status: "error", error: error };
@@ -172,34 +175,6 @@ class TechnicianContract extends PrimaryContract {
 
             console.debug("Test results: ", results)
 
-            if (pulse < 60 || pulse > 100) {
-                status = 'ineligible';
-                reason = 'Abnormal Pulse';
-            }
-            else if (systolic < 110 || systolic > 140) {
-                status = 'ineligible';
-                reason = 'Abnormal Systolic Pressure';
-            }
-            else if (diastolic < 70 || diastolic > 100) {
-                status = 'ineligible';
-                reason = 'Abnormal Diastolic Pressure';
-            }
-            else if (weight < 45) {
-                status = 'ineligible';
-                reason = 'Under-weight';
-            }
-            else if ((patient.sex.startsWith('F') && haemoglobin < 12.0) || (patient.sex.startsWith('M') && haemoglobin < 13.0)) {
-                status = 'ineligible';
-                reason = 'Very Low Haemoglobin Levels';
-                alert = true;
-            }
-            else if (patient.donationStatus && patient.donationStatus.includes('deferred')) {
-                status = 'ineligible';
-                reason = 'Patient ' + patient.donationStatus;
-            }
-            else {
-                status = 'complete';
-            }
             if (haemophiliaA == "true" || haemophiliaB == "true") {
                 status = 'deferred permanently';
                 reason = 'Coagulation Factor Deficiencies';
@@ -236,16 +211,16 @@ class TechnicianContract extends PrimaryContract {
                 deferredTenure = anaemia == "true" ? 100000000 : 365;
             }
             patient.alert = alert;
-            if (status == 'ineligible' || status.startsWith('deferred')) {
+            if (status.startsWith('deferred')) {
                 patient.medicalHistory['test' + (numberOfMedicalTestRecords + 1)] = {
                     'dateOfTest': dod_date,
                     'status': "alarming", 'reason': reason, 'testedAt': testLocation,
                     'results': results
                 };
                 if (status.startsWith("deferred")) {
-                    patient.donationStatus = "ineligible";
                     patient.isDiseased = "true";
                     patient.alert = "true";
+                    patient.deferralStatus = status;
                 }
             }
             else {
@@ -266,6 +241,8 @@ class TechnicianContract extends PrimaryContract {
                     healthId: healthId
                 };
                 patient.alert = true;
+            } else {
+                response.deferredStatus = patient.deferralStatus;
             }
             const buffer = Buffer.from(JSON.stringify(patient));
             const result = await ctx.stub.putState(healthId, buffer);
@@ -341,9 +318,9 @@ class TechnicianContract extends PrimaryContract {
                 reason = 'Very Low Haemoglobin Levels';
                 alert = true;
             }
-            else if (patient.donationStatus && patient.donationStatus.includes('deferred')) {
-                status = 'ineligible';
-                reason = 'Patient ' + patient.donationStatus;
+            else if (patient.deferralStatus && patient.deferralStatus.startsWith('deferred')) {
+                status = patient.deferralStatus;
+                reason = 'Patient ' + patient.deferralStatus;
             }
             else {
                 status = 'in progress';
@@ -384,7 +361,7 @@ class TechnicianContract extends PrimaryContract {
                 deferredTenure = anaemia == "true" ? 100000000 : 365;
             }
             patient.alert = alert;
-            if (status == 'ineligible' || status.startsWith('deferred')) {
+            if (status === 'ineligible' || status.startsWith('deferred')) {
                 patient.donationHistory['donation' + (numberOfDonationsMade + 1)] = {
                     'dateOfDonation': dod_date,
                     'status': "failed", 'reason': reason, 'screenedBy': technicianId
@@ -394,9 +371,9 @@ class TechnicianContract extends PrimaryContract {
                     'status': "alarming", 'reason': reason, 'testedAt': testLocation,
                     'results': results
                 };
-                patient.donationStatus = status == "ineligible" ? "failed" : status;
-            }
-            else {
+                console.log("Patient status:", status, patient.deferralStatus);
+                if (status.startsWith('deferred')) patient.deferralStatus = status;
+            } else {
                 patient.donationHistory['donation' + (numberOfDonationsMade + 1)] = {
                     'dateOfDonation': dod_date,
                     'status': status, 'screenedBy': technicianId
@@ -405,9 +382,9 @@ class TechnicianContract extends PrimaryContract {
                     'dateOfTest': dod_date,
                     'status': status, 'testedAt': testLocation, 'results': results
                 };
-                patient.donationStatus = "in progress";
+                patient.deferralStatus = "not deferred";
             }
-            let response = { "status": "success", "deferPatient": deferPatient };
+            let response = { "status": "success", donationStatus: status, deferPatient: deferPatient };
             if (deferPatient == true) {
                 response = {
                     ...response,
@@ -417,6 +394,8 @@ class TechnicianContract extends PrimaryContract {
                     deferredTenure: deferredTenure,
                 };
                 patient.alert = true;
+            } else {
+                response.deferredStatus = patient.deferralStatus;
             }
             const buffer = Buffer.from(JSON.stringify(patient));
             const result = await ctx.stub.putState(healthId, buffer);
@@ -469,8 +448,6 @@ class TechnicianContract extends PrimaryContract {
         patient.donationHistory['donation' + (numberOfDonation)]['status'] = "successful";
         patient.donationHistory['donation' + (numberOfDonation)]['collectedBy'] = args.technicianId;
         patient.healthCreditPoints = (parseInt(patient.healthCreditPoints) + args.quantity).toString();
-        patient.donationStatus = 'successful';
-
 
         const buffer = Buffer.from(JSON.stringify(patient));
         await ctx.stub.putState(healthId, buffer);

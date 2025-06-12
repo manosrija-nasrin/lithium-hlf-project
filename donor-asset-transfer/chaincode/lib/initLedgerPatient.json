@@ -9,10 +9,10 @@
         "address": "Albrechtstrasse 71, 86383 Stadtbergen",
         "bloodGroup": "O+",
         "sex": "Female",
-        "alert": "true",
+        "alert": "false",
         "isDiseased": "false",
         "healthCreditPoints": "700",
-        "donationStatus": "-",
+        "deferralStatus": "not deferred",
         "permissionGranted": [
             "hosp1admin",
             "hosp2admin",
@@ -28,6 +28,8 @@
         "donationHistory": {
             "donation1": {
                 "dateOfDonation": "2022-5-13",
+                "screenedBy": "HOSP1-TECH123",
+                "collectedBy": "HOSP1-TECH123",
                 "status": "successful",
                 "bloodBagUnitNo": "500",
                 "bloodBagSegmentNo": "50",
@@ -35,12 +37,19 @@
             },
             "donation2": {
                 "dateOfDonation": "2023-5-13",
+                "screenedBy": "HOSP1-TECH123",
+                "collectedBy": "HOSP1-TECH123",
                 "status": "successful",
                 "bloodBagUnitNo": "510",
                 "bloodBagSegmentNo": "10",
                 "quantity": "350"
             }
-        }
+        },
+        "sensitiveDataPermissionGranted": [
+            "HOSP1-SUP12226",
+            "HOSP2-SUP12227"
+        ],
+        "sensitiveDataRequests": []
     },
     {
         "healthId": "567812349112",
@@ -55,7 +64,7 @@
         "alert": "false",
         "isDiseased": "true",
         "healthCreditPoints": "350",
-        "donationStatus": "-",
+        "deferralStatus": "not deferred",
         "permissionGranted": [
             "hosp1admin",
             "hosp2admin",
@@ -70,13 +79,20 @@
         "deferralDetails": {},
         "donationHistory": {
             "donation1": {
-                "dateOfDonation": "2023-9-20",
+                "dateOfDonation": "2023-09-20",
+                "screenedBy": "HOSP2-TECH124",
+                "collectedBy": "HOSP2-TECH124",
                 "status": "successful",
                 "bloodBagUnitNo": "520",
                 "bloodBagSegmentNo": "15",
                 "quantity": "350"
             }
-        }
+        },
+        "sensitiveDataPermissionGranted": [
+            "HOSP1-SUP12226",
+            "HOSP2-SUP12227"
+        ],
+        "sensitiveDataRequests": []
     },
     {
         "healthId": "987654321012",
@@ -91,7 +107,7 @@
         "alert": "false",
         "isDiseased": "false",
         "healthCreditPoints": "0",
-        "donationStatus": "pending",
+        "deferralStatus": "not deferred",
         "permissionGranted": [
             "hosp1admin",
             "hosp2admin",
@@ -104,7 +120,12 @@
         "pwdTemp": true,
         "medicalHistory": {},
         "deferralDetails": {},
-        "donationHistory": {}
+        "donationHistory": {},
+        "sensitiveDataPermissionGranted": [
+            "HOSP1-SUP12226",
+            "HOSP2-SUP12227"
+        ],
+        "sensitiveDataRequests": []
     },
     {
         "healthId": "901212345678",
@@ -119,7 +140,7 @@
         "alert": "false",
         "isDiseased": "false",
         "healthCreditPoints": "900",
-        "donationStatus": "-",
+        "deferralStatus": "not deferred",
         "permissionGranted": [
             "hosp1admin",
             "hosp2admin",
@@ -134,11 +155,17 @@
         "deferralDetails": {},
         "donationHistory": {
             "donation1": {
-                "dateOfDonationRegistration": "2023-9-10",
+                "dateOfDonation": "2023-09-10",
                 "status": "failed",
+                "screenedBy": "HOSP1-TECH123",
                 "reason": "low pressure"
             }
-        }
+        },
+        "sensitiveDataPermissionGranted": [
+            "HOSP1-SUP12226",
+            "HOSP2-SUP12227"
+        ],
+        "sensitiveDataRequests": []
     },
     {
         "healthId": "235689784512",
@@ -153,7 +180,7 @@
         "alert": "true",
         "isDiseased": "false",
         "healthCreditPoints": "200",
-        "donationStatus": "pending",
+        "deferralStatus": "not deferred",
         "permissionGranted": [
             "hosp1admin",
             "hosp2admin",
@@ -166,7 +193,12 @@
         "pwdTemp": false,
         "medicalHistory": {},
         "deferralDetails": {},
-        "donationHistory": {}
+        "donationHistory": {},
+        "sensitiveDataPermissionGranted": [
+            "HOSP1-SUP12226",
+            "HOSP2-SUP12227"
+        ],
+        "sensitiveDataRequests": []
     },
     {
         "healthId": "567812349012",
@@ -181,7 +213,7 @@
         "alert": "true",
         "isDiseased": "false",
         "healthCreditPoints": "450",
-        "donationStatus": "successful",
+        "deferralStatus": "not deferred",
         "permissionGranted": [
             "hosp1admin",
             "hosp2admin",
@@ -194,6 +226,17 @@
         "pwdTemp": false,
         "medicalHistory": {},
         "deferralDetails": {},
-        "donationHistory": {}
+        "donationHistory": {
+            "donation1": {
+                "dateOfDonation": "2023-09-20",
+                "screenedBy": "HOSP2-TECH124",
+                "status": "pending"
+            }
+        },
+        "sensitiveDataPermissionGranted": [
+            "HOSP1-SUP12226",
+            "HOSP2-SUP12227"
+        ],
+        "sensitiveDataRequests": []
     }
 ]

@@ -19,20 +19,21 @@ class SuperContract extends PrimaryContract {
         }
     }
 
+    async getClientId(ctx) {
+        const clientIdentity = ctx.clientIdentity.getID();
+        let identity = clientIdentity.split('::');
+        identity = identity[1].split('/')[2].split('=');
+        console.log("Client ID:", identity[1].toString('utf8'));
+        return identity[1].toString('utf8');
+    }
+
     // Extract and deserialize the identity
     async getTxnCreatorIdentity(ctx) {
         const txnCreator = ctx.stub.getCreator();
         const idBytes = txnCreator.idBytes;
 
-        // Convert Uint8Array to a string (PEM format)
         const pemCert = Buffer.from(idBytes).toString('utf8');
-
-        // console.debug("PEM Certificate:\n", pemCert);
-
-        // Parse the certificate using @fidm/x509
         const cert = Certificate.fromPEM(Buffer.from(pemCert));
-
-        // Extract relevant identity details
         const identity = {
             mspid: txnCreator.mspid,
             subject: cert.subject.commonName,
@@ -43,15 +44,12 @@ class SuperContract extends PrimaryContract {
             },
         };
 
+        console.log("Txn Creator subject:", identity.subject);
+
         return identity;
     }
 
     checkSuperIdentity(ctx, username) {
-        // const txnCreator = ctx.stub.getCreator();
-        // console.debug("Txn Creator: ", txnCreator);
-        // console.debug("Txn Creator via Function: ", this.getTxnCreatorIdentity(ctx));
-        // console.debug("Client ID: ", ctx.clientIdentity.getID());
-        // console.debug("Client MSP ID: ", ctx.clientIdentity.getMSPID());
         console.debug("Peer MSP ID: /", ctx.stub.getMspID() + "/"); // 
         if (username.includes("SUP") && HOSP_SUPERS.includes(username)) {
             return true;
@@ -69,8 +67,6 @@ class SuperContract extends PrimaryContract {
                     donationHistory: 'donationHistory' in obj.Record ? obj.Record.donationHistory : null,
                     sensitiveMedicalHistory: 'sensitiveMedicalHistory' in obj.Record ? obj.Record.sensitiveMedicalHistory : {},
                 };
-                // console.debug("Object:", obj.Record.donationHistory);
-                // console.debug("Keys:", Object.keys(obj.Record.donationHistory));
                 if (includeTimeStamp)
                     newObj.Timestamp = obj.Timestamp;
                 newAssets.push(newObj);
@@ -135,15 +131,10 @@ class SuperContract extends PrimaryContract {
                 sex: obj.Record.sex,
                 isDiseased: obj.Record.isDiseased,
                 healthCreditPoints: obj.Record.healthCreditPoints,
+                deferredDetails: obj.Record.deferredDetails,
                 donationHistory: obj.Record.donationHistory,
-                donationStatus: obj.Record.donationStatus,
-                deferredAt: obj.Record.deferredAt,
-                sensitiveMedicalHistory: obj.Record.sensitiveMedicalHistory,
-                deferredDate: obj.Record.deferredDate,
+                deferralStatus: obj.Record.deferralStatus,
                 deferredReason: obj.Record.deferredReason,
-                deferredTenure: obj.Record.deferredTenure,
-                bloodBagUnitNo: obj.Record.bloodBagUnitNo,
-                bloodBagSegmentNo: obj.Record.bloodBagSegmentNo
             };
             if (includeTimeStamp) {
                 obj.Timestamp = obj.Timestamp;
@@ -244,7 +235,7 @@ class SuperContract extends PrimaryContract {
             const healthId = args.healthId;
             const newAlert = true;
             const newIsDiseased = true;
-            const newDonationStatus = args.donationStatus;
+            const newDonationStatus = args.deferralStatus;
             const deferredOn = args.deferredOn;
             const deferredTenure = args.deferredTenure;
             const deferredAt = args.deferredAt;
@@ -262,8 +253,8 @@ class SuperContract extends PrimaryContract {
                 isDataChanged = true;
             }
 
-            if (patient.donationStatus !== newDonationStatus) {
-                patient.donationStatus = newDonationStatus;
+            if (patient.deferralStatus !== newDonationStatus) {
+                patient.deferralStatus = newDonationStatus;
                 isDataChanged = true;
             }
 
@@ -328,8 +319,10 @@ class SuperContract extends PrimaryContract {
                     'testedAt': parsedArgs.testedAt, 'results': parsedArgs.results
                 };
                 const patient = await PrimaryContract.prototype.readPatient(ctx, healthId);
+                const alert = parsedArgs.deferredStatus === 'not deferred' ? false : true;
+                const isDiseased = parsedArgs.deferredStatus === 'not deferred' ? false : true;
                 deferredPatient = new DeferredPatient(patient, parsedArgs.deferredStatus, parsedArgs.deferredOn,
-                    parsedArgs.deferredTenure, parsedArgs.reasons, parsedArgs.deferredAt, sensitiveMedicalHistory);
+                    parsedArgs.deferredTenure, parsedArgs.reasons, parsedArgs.deferredAt, sensitiveMedicalHistory, undefined, undefined, alert, isDiseased);
             }
             await ctx.stub.putPrivateData(deferredPatientPrivateCollection, healthId, Buffer.from(JSON.stringify(deferredPatient)));
             return { status: "success", peer: ctx.stub.getMspID(), message: `Data written to PDC ${deferredPatientPrivateCollection}` }
@@ -344,24 +337,40 @@ class SuperContract extends PrimaryContract {
             const parsedArgs = JSON.parse(args);
             const healthId = parsedArgs.healthId;
             let patient = parsedArgs.patient;
-            if (healthId !== null && parsedArgs.reasons && parsedArgs.reasons !== null) {
+
+            console.debug('Patient about to be deferred:', JSON.stringify(patient));
+            console.debug('Parsed arguments received:', parsedArgs);
+            if (healthId !== null && parsedArgs.reasons !== undefined && parsedArgs.reasons !== null && parsedArgs.reasons.length > 0) {
                 let changedMedicalDetails = {
-                    healthId: healthId, alert: true, isDiseased: true, donationStatus: parsedArgs.deferredStatus,
+                    healthId: healthId, alert: true, isDiseased: true, deferralStatus: parsedArgs.deferredStatus,
                     deferredOn: parsedArgs.deferredOn, deferredTenure: parsedArgs.deferredTenure,
                     deferredAt: parsedArgs.deferredAt, bloodBagUnitNo: parsedArgs.bloodBagUnitNo,
                     bloodBagSegmentNo: parsedArgs.bloodBagSegmentNo
                 };
-
-                const numberOfMedicalTestRecords = 0;
-                let sensitiveMedicalHistory = {};
-                sensitiveMedicalHistory['test' + (numberOfMedicalTestRecords + 1)] = {
-                    'dateOfTest': parsedArgs.deferredOn,
-                    'testedAt': parsedArgs.deferredAt, 'results': parsedArgs.results
-                };
+                const patientExists = await this.patientExists(ctx, healthId);
+                if (patientExists) {
+                    patient = await this.readPatient(ctx, healthId);
+                    console.debug("Read patient from PDC", patient);
+                    if (patient.deferralStatus === 'deferred permanently' && parsedArgs.deferredStatus === 'deferred temporarily') {
+                        changedMedicalDetails.deferralStatus = patient.deferralStatus;
+                        parsedArgs.deferredStatus = patient.deferralStatus;
+                    }
+                }
+                let reasons = patient.deferredReason !== undefined ? patient.deferredReason + ',' + parsedArgs.reasons : parsedArgs.reasons;
+                let sensitiveMedicalHistory = patient.sensitiveMedicalHistory !== undefined ? patient.sensitiveMedicalHistory : {};
+                const numberOfMedicalTestRecords = Object.keys(sensitiveMedicalHistory).length;
+                console.debug("The deferred donor has a record with", numberOfMedicalTestRecords, "sensitive medical history");
+                if (parsedArgs.results !== undefined && parsedArgs.results.hiv !== undefined) {
+                    sensitiveMedicalHistory['test' + (numberOfMedicalTestRecords + 1)] = {
+                        'dateOfTest': parsedArgs.deferredOn,
+                        'testedAt': parsedArgs.deferredAt, 'results': parsedArgs.results
+                    };
+                }
 
                 const response = await this.updatePatientMedicalDetailsForDeferral(ctx, JSON.stringify(changedMedicalDetails));
                 let changedPatient = null;
-                if (response.status && response.status === "success" && response.patient) changedPatient = JSON.parse(response.patient);
+                if (response.status && response.status === "success" && response.patient)
+                    changedPatient = JSON.parse(response.patient);
                 const msp = ctx.stub.getMspID() + "";
 
                 if (msp.trim() == "superOrgMSP") {
@@ -370,7 +379,7 @@ class SuperContract extends PrimaryContract {
                     // const date = new Date().toISOString().split("T")[0];
                     patient = (changedPatient === null || changedPatient === undefined) ? patient : changedPatient;
                     const deferredPatient = new DeferredPatient(patient, parsedArgs.deferredStatus, parsedArgs.deferredOn,
-                        parsedArgs.deferredTenure, parsedArgs.reasons, parsedArgs.deferredAt, sensitiveMedicalHistory);
+                        parsedArgs.deferredTenure, reasons, parsedArgs.deferredAt, sensitiveMedicalHistory);
                     const plainDeferredPatient = JSON.parse(JSON.stringify(deferredPatient));
                     console.debug("Putting deferred patient to ledger: ", plainDeferredPatient);
                     console.debug("Type: ", typeof (plainDeferredPatient));
@@ -381,12 +390,31 @@ class SuperContract extends PrimaryContract {
                 }
 
                 return { status: "success", peer: `/${ctx.stub.getMspID()}/` };
-            } else if (healthId !== null && parsedArgs.reasons === null) {
+            } else if (healthId !== null && parsedArgs.reasons !== undefined && (parsedArgs.reasons === null || parsedArgs.reasons.length === 0)) {
                 let sensitiveMedicalHistoryArgs = {
                     healthId: healthId, dateOfTest: parsedArgs.deferredOn,
-                    testedAt: parsedArgs.deferredAt, results: parsedArgs.results
+                    testedAt: parsedArgs.deferredAt, results: parsedArgs.results,
+                    deferredStatus: parsedArgs.deferredStatus
                 }
-                return await this.updateSensitiveMedicalHistory(ctx, JSON.stringify(sensitiveMedicalHistoryArgs));
+                const patientExists = await this.patientExists(ctx, healthId);
+                if (patientExists) {
+                    const deferredPatient = await this.readPatient(ctx, healthId);
+                    const numberOfMedicalTestRecords = Object.keys(patient.medicalHistory).length;
+                    console.debug("Read patient from PDC", deferredPatient);
+                    if (parsedArgs.results !== undefined && parsedArgs.results.hiv !== undefined) {
+                        console.debug("Reasons not provided for deferral. Inserting into the sensitive medical history.");
+                        await this.updateSensitiveMedicalHistory(ctx, JSON.stringify(sensitiveMedicalHistoryArgs));
+                    } else {
+                        deferredPatient.medicalHistory['test' + (numberOfMedicalTestRecords + 1)] = {
+                            'dateOfTest': parsedArgs.dateOfTest,
+                            'testedAt': parsedArgs.testedAt, 'results': parsedArgs.results,
+                        };
+                        const plainDeferredPatient = JSON.parse(JSON.stringify(deferredPatient));
+                        console.log("Inserting into the non-sensitive medical history");
+                        await ctx.stub.putPrivateData(deferredPatientPrivateCollection, healthId, Buffer.from(stringify(sortKeysRecursive(plainDeferredPatient))));
+                        return { status: 'success', peer: ctx.stub.getMspID(), message: `Data written to PDC ${deferredPatientPrivateCollection}` };
+                    }
+                }
             } else {
                 console.debug("Check blood bag ID. Patient not found.");
                 return { status: "error", error: "Patient not found" };
@@ -528,7 +556,10 @@ class SuperContract extends PrimaryContract {
 
         const buffer = await ctx.stub.getPrivateData(deferredPatientPrivateCollection, healthId);
         let asset = DeferredPatient.fromBytes(buffer);
-        asset = ({
+        const superId = await this.getClientId(ctx);
+
+        console.debug("Patient record read", asset);
+        let newAsset = {
             healthId: healthId,
             firstName: asset.firstName,
             lastName: asset.lastName,
@@ -540,30 +571,35 @@ class SuperContract extends PrimaryContract {
             bloodGroup: asset.bloodGroup,
             medicalHistory: asset.medicalHistory,
             donationHistory: asset.donationHistory,
-            sensitiveMedicalHistory: asset.sensitiveMedicalHistory,
             alert: asset.alert,
             isDiseased: asset.isDiseased,
             healthCreditPoints: asset.healthCreditPoints,
-            donationStatus: asset.donationStatus,
+            deferralStatus: asset.deferralStatus,
             creationTimestamp: asset.creationTimestamp,
             deferredDetails: asset.deferredDetails,
-            deferredAt: asset.deferredAt,
-            deferredOn: asset.deferredDate,
-            deferredTenure: asset.deferredTenure,
+            sensitiveMedicalHistory: asset.sensitiveMedicalHistory,
+            sensitiveDataPermissionGranted: asset.sensitiveDataPermissionGranted,
+            sensitiveDataRequests: asset.sensitiveDataRequests,
             deferredReason: asset.deferredReason,
-        });
-        return asset;
+        };
+        if (asset.sensitiveDataPermissionGranted !== undefined && asset.sensitiveDataPermissionGranted.includes(superId)) {
+            newAsset.sensitiveMedicalHistory = asset.sensitiveMedicalHistory !== undefined ? asset.sensitiveMedicalHistory : {};
+        } else {
+            newAsset.sensitiveMedicalHistory = { message: "You do not have permission to view the sensitive medical history" };
+        }
+        return newAsset;
     }
 
     async checkIfPatientIsDeferred(ctx, args) {
         try {
             let ar = JSON.parse(args);
-            let healthId = ar.healthId;
-            let asset = await PrimaryContract.prototype.readPatient(ctx, healthId);
+            const healthId = ar.healthId;
+            const asset = await PrimaryContract.prototype.readPatient(ctx, healthId);
             if (asset.isDiseased === true || asset.isDiseased === "true") {
-                let deferredDate = !!asset.deferredDetails ? asset.deferredDetails.deferredOn : "Unknown";
-                let deferredAt = !!asset.deferredDetails ? asset.deferredDetails.deferredAt : "Unknown";
-                return { status: "success", message: "Patient is deferred as tested on " + deferredDate + " at location " + deferredAt, patient: asset };
+                const deferredOn = !!asset.deferredDetails ? asset.deferredDetails.deferredOn : "Unknown";
+                const deferredAt = !!asset.deferredDetails ? asset.deferredDetails.deferredAt : "Unknown";
+                const deferredStatus = !!asset.deferredDetails ? asset.deferredDetails.deferredStatus : asset.deferralStatus;
+                return { status: "success", message: `Patient is ${deferredStatus} as tested on ${deferredOn} at ${deferredAt}`, patient: asset };
             } else {
                 return { status: "success", message: "Patient is not deferred." };
             }
@@ -572,6 +608,99 @@ class SuperContract extends PrimaryContract {
             return { status: "error", message: "Patient does not exist", error: error };
         }
     }
+
+    async grantAccessToSensitiveData(ctx, args) {
+        try {
+            const parsedArgs = JSON.parse(args);
+            const healthId = parsedArgs.healthId;
+            const requestor = parsedArgs.requestor;
+            const requestedTo = parsedArgs.requestedTo;
+            const patient = await PrimaryContract.prototype.readPatient(ctx, healthId);
+            const deferredPatientExists = await this.patientExists(ctx, healthId);
+            let deferredPatient = patient;
+            if (deferredPatientExists) {
+                deferredPatient = await this.readPatient(ctx, healthId);
+            }
+            const clientId = await this.getClientId(ctx);
+            if (clientId !== requestedTo) {
+                return { status: 'error', message: clientId + 'is not authorized to grant access to ' + requestedTo };
+            } else {
+                if (patient.sensitiveDataPermissionGranted.includes(requestor)) {
+                    return { status: 'success', message: 'Access already granted to ' + requestor };
+                } else {
+                    patient.sensitiveDataPermissionGranted.push(requestor);
+                    patient.sensitiveDataRequests.push(parsedArgs);
+                    deferredPatient.sensitiveDataPermissionGranted.push(requestor);
+                    deferredPatient.sensitiveDataRequests.push(parsedArgs);
+                    const buffer = Buffer.from(JSON.stringify(patient));
+                    const bufferOfDeferredPatient = Buffer.from(JSON.stringify(deferredPatient));
+                    await ctx.stub.putState(healthId, buffer);
+                    await ctx.stub.putPrivateData(deferredPatientPrivateCollection, healthId, bufferOfDeferredPatient);
+                    console.debug("Access granted to ", requestor, " for patient ", healthId);
+                    return { status: 'success', message: 'Access granted to ' + requestor };
+                }
+            }
+        } catch (error) {
+            console.error("Error in grantAccessToSensitiveData:", error);
+            return { status: 'error', message: 'Could not grant access to ' + JSON.parse(args).requestor }
+        }
+    }
+
+    async revokeAccessToSensitiveData(ctx, args) {
+        try {
+            const parsedArgs = JSON.parse(args);
+            const healthId = parsedArgs.healthId;
+            const requestor = parsedArgs.requestor;
+            const requestedTo = parsedArgs.requestedTo;
+            const patient = await PrimaryContract.prototype.readPatient(ctx, healthId);
+            const clientId = await this.getClientId(ctx);
+            if (clientId !== requestedTo) {
+                return { status: 'error', message: clientId + ' is not authorized to revoke access for ' + requestedTo };
+            } else {
+                if (!patient.sensitiveDataPermissionGranted.includes(requestor)) {
+                    return { status: 'success', message: 'Access already revoked for ' + requestor };
+                } else {
+                    patient.sensitiveDataPermissionGranted = patient.sensitiveDataPermissionGranted.filter(id => id !== requestor);
+                    const buffer = Buffer.from(JSON.stringify(patient));
+                    await ctx.stub.putState(healthId, buffer);
+                    await ctx.stub.putPrivateData(deferredPatientPrivateCollection, healthId, buffer);
+                    console.debug("Access revoked from ", requestor, " for patient ", healthId);
+                    return { status: 'success', message: 'Access revoked from ' + requestor };
+                }
+            }
+        } catch (error) {
+            console.error("Error in revokeAccessToSensitiveData:", error);
+            return { status: 'error', message: 'Could not revoke access' };
+        }
+    }
+
+    async getSensitiveMedicalHistory(ctx, args) {
+        try {
+            const parsedArgs = JSON.parse(args);
+            const healthId = parsedArgs.healthId;
+            const requestedBy = parsedArgs.requestedBy;
+
+            const patient = await this.readPatient(ctx, healthId);
+
+            console.debug(patient.sensitiveDataPermissionGranted, requestedBy, patient.sensitiveDataPermissionGranted.includes(requestedBy));
+            console.debug(patient);
+            if (patient.sensitiveDataPermissionGranted.includes(requestedBy)) {
+                if (patient.sensitiveMedicalHistory && Object.keys(patient.sensitiveMedicalHistory).length > 0) {
+                    return { status: 'success', sensitiveMedicalHistory: patient.sensitiveMedicalHistory };
+                } else if (patient.sensitiveMedicalHistory && Object.keys(patient.sensitiveMedicalHistory).length === 0) {
+                    return { status: 'success', sensitiveMedicalHistory: { message: "No sensitive medical history available" } };
+                } else if (patient.sensitiveMedicalHistory === undefined) {
+                    return { status: 'error', error: { message: "Unknown error" } };
+                }
+            } else {
+                return { status: 'error', error: { message: "Permission not granted" } };
+            }
+        } catch (error) {
+            console.error("Error in getSensitiveMedicalHistory", error);
+            return { status: 'error', message: 'No data available', error: error };
+        }
+    }
+
 }
 
 module.exports = SuperContract;

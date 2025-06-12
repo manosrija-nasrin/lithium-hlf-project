@@ -53,7 +53,7 @@ exports.connectToNetwork = async function (doctorID) {
   }
 };
 
-exports.connectToSuperNetwork = async function (doctorID) {
+exports.connectToSuperNetwork = async function (superID) {
   const gateway = new Gateway();
   const ccp = buildCCPSuperOrg();
 
@@ -62,16 +62,16 @@ exports.connectToSuperNetwork = async function (doctorID) {
 
     const wallet = await buildWallet(Wallets, walletPath);
 
-    const userExists = await wallet.get(doctorID);
+    const userExists = await wallet.get(superID);
     if (!userExists) {
-      console.log('An identity for the doctorID: ' + doctorID + ' does not exist in the wallet');
-      console.log('Create the doctorID before retrying');
+      console.log('An identity for the superID: ' + superID + ' does not exist in the wallet');
+      console.log('Create the superID before retrying');
       const response = {};
-      response.error = 'An identity for the user ' + doctorID + ' does not exist in the wallet. Register ' + doctorID + ' first';
+      response.error = 'An identity for the user ' + superID + ' does not exist in the wallet. Register ' + superID + ' first';
       return response;
     }
 
-    await gateway.connect(ccp, { wallet, identity: doctorID, discovery: { enabled: true, asLocalhost: true } });
+    await gateway.connect(ccp, { wallet, identity: superID, discovery: { enabled: true, asLocalhost: true } });
 
     const network = await gateway.getNetwork(channelName);
 

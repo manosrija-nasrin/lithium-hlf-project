@@ -117,7 +117,7 @@ class PatientContract extends PrimaryContract {
                 isDiseased: obj.Record.isDiseased,
                 healthCreditPoints: obj.Record.healthCreditPoints,
                 donationHistory: obj.Record.donationHistory,
-                donationStatus: obj.Record.donationStatus
+                deferralStatus: obj.Record.deferralStatus
             };
             if (includeTimeStamp) {
                 asset[i].Timestamp = obj.Timestamp;

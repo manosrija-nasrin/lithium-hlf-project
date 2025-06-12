@@ -24,6 +24,7 @@ class PrimaryContract extends Contract {
 
         console.info('============= START : Initialize Ledger ===========');
         for (let i = 0; i < initLedgerMaster.length; i++) {
+            initLedgerMaster[i].docType = 'bag';
             if (initLedgerMaster[i]["type"] == "tempRecord")
                 await ctx.stub.putState('T' + initLedgerMaster[i]["bloodBagUnitNo"] + "S" + initLedgerMaster[i]["bloodBagSegmentNo"], Buffer.from(JSON.stringify(initLedgerMaster[i])));
             else
@@ -55,10 +56,12 @@ class PrimaryContract extends Contract {
             alert: asset.alert,
             isDiseased: asset.isDiseased,
             healthCreditPoints: asset.healthCreditPoints,
-            donationStatus: asset.donationStatus,
+            deferralStatus: asset.deferralStatus,
             permissionGranted: asset.permissionGranted,
             deferredDetails: asset.deferredDetails,
             creationTimestamp: asset.creationTimestamp,
+            sensitiveDataPermissionGranted: asset.sensitiveDataPermissionGranted,
+            sensitiveDataRequests: asset.sensitiveDataRequests,
             password: asset.password,
             pwdTemp: asset.pwdTemp
         });

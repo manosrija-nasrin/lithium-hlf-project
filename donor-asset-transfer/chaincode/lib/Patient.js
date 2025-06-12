@@ -1,7 +1,13 @@
 const crypto = require("crypto");
 
+const defaultPermissionToSensitiveData = ["HOSP1-SUP12226",
+  "HOSP2-SUP12227"];
+
 class Patient {
-  constructor(healthId, firstName, lastName, password, dob, phoneNumber, aadhar, address, bloodGroup, sex, donationHistory = {}, medicalHistory = {}, deferredDetails = {}, alert = "false", isDiseased = "false", healthCreditPoints = "0", donationStatus = "-"
+  constructor(healthId, firstName, lastName, password, dob, phoneNumber, aadhar, address,
+    bloodGroup, sex, donationHistory = {}, medicalHistory = {}, deferredDetails = {},
+    alert = "false", isDiseased = "false", healthCreditPoints = "0", deferralStatus = "-",
+    sensitiveDataRequests = []
   ) {
     this.healthId = healthId;
     this.firstName = firstName;
@@ -19,10 +25,12 @@ class Patient {
     this.alert = alert;
     this.isDiseased = isDiseased;
     this.healthCreditPoints = healthCreditPoints;
-    this.donationStatus = donationStatus;
+    this.deferralStatus = deferralStatus;
     this.creationTimestamp = new Date().toISOString();
     this.pwdTemp = true;
     this.permissionGranted = [];
+    this.sensitiveDataPermissionGranted = defaultPermissionToSensitiveData;
+    this.sensitiveDataRequests = sensitiveDataRequests;
     return this;
   }
 }

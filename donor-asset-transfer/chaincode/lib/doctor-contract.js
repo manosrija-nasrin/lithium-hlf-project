@@ -2,6 +2,7 @@
 let Bag = require('./Bag.js');
 const AdminContract = require('./admin-contract.js');
 const PrimaryContract = require("./primary-contract.js");
+const SuperContract = require("./super-contract.js");
 const stringify = require('json-stringify-deterministic');
 const sortKeysRecursive = require('sort-keys-recursive');
 const pendingCUECollection = 'pendingCUECollection';
@@ -14,8 +15,9 @@ class DoctorContract extends AdminContract {
         if (!permissionArray.includes(doctorId)) {
             throw new Error(`The doctor ${doctorId} does not have permission to patient ${healthId}`);
         }
-        asset = ({
+        const newAsset = {
             healthId: healthId,
+            aadhar: asset.aadhar,
             firstName: asset.firstName,
             lastName: asset.lastName,
             dob: asset.dob,
@@ -24,11 +26,15 @@ class DoctorContract extends AdminContract {
             sex: asset.sex,
             isDiseased: asset.isDiseased,
             healthCreditPoints: asset.healthCreditPoints,
-            donationStatus: asset.donationStatus,
+            deferralStatus: asset.deferralStatus,
             donationHistory: asset.donationHistory,
-            medicalHistory: asset.medicalHistory
-        });
-        return asset;
+            medicalHistory: asset.medicalHistory,
+            deferredDetails: asset.deferredDetails,
+            creationTimestamp: asset.creationTimestamp,
+            sensitiveDataPermissionGranted: asset.sensitiveDataPermissionGranted
+        };
+
+        return newAsset;
     }
 
     async createBag(ctx, args) {
@@ -72,7 +78,7 @@ class DoctorContract extends AdminContract {
         patient.donationHistory['donation' + (numberOfDonation)]['status'] = "successful";
         patient.donationHistory['donation' + (numberOfDonation)]['collectedBy'] = args.doctorId;
         patient.healthCreditPoints = (parseInt(patient.healthCreditPoints) + args.quantity).toString();
-        patient.donationStatus = 'successful';
+        patient.deferralStatus = 'successful';
 
 
         const buffer = Buffer.from(JSON.stringify(patient));
@@ -145,9 +151,9 @@ class DoctorContract extends AdminContract {
                 reason = 'Very Low Haemoglobin Levels';
                 alert = true;
             }
-            else if (patient.donationStatus && patient.donationStatus.includes('deferred')) {
+            else if (patient.deferralStatus && patient.deferralStatus.includes('deferred')) {
                 status = 'ineligible';
-                reason = 'Patient ' + patient.donationStatus;
+                reason = 'Patient ' + patient.deferralStatus;
             }
             else {
                 status = 'in progress';
@@ -198,7 +204,7 @@ class DoctorContract extends AdminContract {
                     'status': "alarming", 'reason': reason, 'testedAt': testLocation,
                     'results': results
                 };
-                patient.donationStatus = status == "ineligible" ? "failed" : status;
+                patient.deferralStatus = status == "ineligible" ? "failed" : status;
             }
             else {
                 patient.donationHistory['donation' + (numberOfDonationsMade + 1)] = {
@@ -209,7 +215,7 @@ class DoctorContract extends AdminContract {
                     'dateOfTest': dod_date,
                     'status': status, 'testedAt': testLocation, 'results': results
                 };
-                patient.donationStatus = "in progress";
+                patient.deferralStatus = "in progress";
             }
             let response = { "status": "success", "deferPatient": deferPatient };
             if (deferPatient == true) {
@@ -271,7 +277,7 @@ class DoctorContract extends AdminContract {
         let newAlert = args.alert;
         let newIsDiseased = args.isDiseased;
         let newCreditCard = args.healthCreditPoints;
-        let newDonationStatus = args.donationStatus;
+        let newDonationStatus = args.deferralStatus;
 
         const patient = await PrimaryContract.prototype.readPatient(ctx, healthId);
 
@@ -290,8 +296,8 @@ class DoctorContract extends AdminContract {
             isDataChanged = true;
         }
 
-        if (newDonationStatus !== null && newDonationStatus !== '' && patient.donationStatus !== newDonationStatus) {
-            patient.donationStatus = newDonationStatus;
+        if (newDonationStatus !== null && newDonationStatus !== '' && patient.deferralStatus !== newDonationStatus) {
+            patient.deferralStatus = newDonationStatus;
             isDataChanged = true;
         }
 
@@ -345,7 +351,7 @@ class DoctorContract extends AdminContract {
                 alert: obj.Record.alert,
                 isDiseased: obj.Record.isDiseased,
                 healthCreditPoints: obj.Record.healthCreditPoints,
-                donationStatus: obj.Record.donationStatus
+                deferralStatus: obj.Record.deferralStatus
             };
             if (includeTimeStamp) {
                 asset[i].Timestamp = obj.Timestamp;
@@ -362,60 +368,22 @@ class DoctorContract extends AdminContract {
         return identity[1].toString('utf8');
     }
 
-    async readPatient(ctx, healthId) {
-        let asset = await PrimaryContract.prototype.readPatient(ctx, healthId);
-        asset = ({
-            healthId: healthId,
-            firstName: asset.firstName,
-            lastName: asset.lastName,
-            dob: asset.dob,
-            phoneNumber: asset.phoneNumber,
-            aadhar: asset.aadhar,
-            address: asset.address,
-            sex: asset.sex,
-            bloodGroup: asset.bloodGroup,
-            isDiseased: asset.isDiseased,
-            alert: asset.alert,
-            deferredDetails: asset.deferredDetails,
-            medicalHistory: asset.medicalHistory,
-            donationHistory: asset.donationHistory,
-            healthCreditPoints: asset.healthCreditPoints,
-            donationStatus: asset.donationStatus,
-            creationTimestamp: asset.creationTimestamp,
-        });
-        return asset;
-    }
-
     async checkIfPatientIsDeferred(ctx, args) {
         try {
             const ar = JSON.parse(args);
             const healthId = ar.healthId;
-            const asset = await this.readPatient(ctx, healthId);
-            if (asset.isDiseased === true || asset.isDiseased === "true") {
-                const deferredDate = !!asset.deferredDetails ? asset.deferredDetails.deferredOn : "Unknown";
-                const deferredAt = !!asset.deferredDetails ? asset.deferredDetails.deferredAt : "Unknown";
-                return { status: "success", message: "Patient is deferred as tested on " + deferredDate + " at location " + deferredAt, patient: asset };
+            const patient = await this.readPatient(ctx, healthId);
+            if (patient.isDiseased === true || patient.isDiseased === "true") {
+                const deferredOn = !!patient.deferredDetails ? patient.deferredDetails.deferredOn : "Unknown";
+                const deferredAt = !!patient.deferredDetails ? patient.deferredDetails.deferredAt : "Unknown";
+                const deferredStatus = !!asset.deferredDetails ? asset.deferredDetails.deferredStatus : asset.deferralStatus;
+                return { status: "success", message: `Patient is ${deferredStatus} as tested on ${deferredOn} at ${deferredAt}`, patient: asset };
             } else {
                 return { status: "success", message: "Patient is not deferred" };
             }
         } catch (error) {
             console.error(error);
             return { status: "error", message: "Patient does not exist", error: error };
-        }
-    }
-
-    async requestAccessToSensitiveData(ctx, args) {
-        try {
-            const parsedArgs = JSON.parse(args);
-            const { healthId, doctorId, hospitalName, reason, requestedTo } = parsedArgs;
-            const patient = await PrimaryContract.prototype.readPatient(ctx, healthId);
-            // TODO: Implement logic to handle access request
-            // const buffer = Buffer.from(JSON.stringify(patient));
-            // await ctx.stub.putState(healthId, buffer);
-            return { status: "success", message: "Access granted to doctor " + doctorId };
-        } catch (error) {
-            console.error(error);
-            return { status: "error", message: error.message, error: error };
         }
     }
 }
