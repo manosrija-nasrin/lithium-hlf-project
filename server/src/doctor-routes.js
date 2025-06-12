@@ -1,9 +1,10 @@
+/* eslint-disable object-curly-spacing */
 /**
  * @desc Doctor specific methods - API documentation in http://localhost:3002/ swagger editor.
  */
 
 // Bring common classes into scope, and Fabric SDK network class
-const { ROLE_DOCTOR, capitalize, getMessage, validateRole } = require('../utils.js');
+const { ROLE_DOCTOR, capitalize, getMessage, validateRole, ROLE_PATIENT } = require('../utils.js');
 const network = require('../../donor-asset-transfer/application-javascript/app.js');
 const network1 = require('../../receiver-asset-transfer/application-javascript/app.js');
 const databaseRoutes = require('./databaseConnect');
@@ -188,52 +189,33 @@ exports.checkPatientStatus = async (req, res) => {
       [JSON.stringify({ healthId: healthId })]);
     const responseJson = JSON.parse(responseBytes);
     console.log(responseJson);
-    (responseJson.status === 'error') ? res.status(404).send('Patient not found') : res.status(200).send(responseJson);
+    (responseJson.status === 'error') ? res.status(404).json('Patient not found') : res.status(200).send(responseJson);
   } catch (error) {
     console.error('Error checking patient status:', error);
-    res.status(500).send({ status: 'error', message: error.message });
+    res.status(500).json({ status: 'error', message: error.message });
   }
 };
 
 exports.requestAccessToSensitiveData = async (req, res) => {
   try {
     const userRole = req.headers.role;
-    await validateRole([ROLE_DOCTOR], userRole, res);
+    await validateRole([ROLE_DOCTOR, ROLE_PATIENT], userRole, res);
     const args = req.body;
     const { healthId, doctorId, reason } = args;
     const hospitalName = doctorId.startsWith('HOSP1') ? 'Hospital 1' :
-      (healthId.startsWith('HOSP2') ? 'Hospital 2' : 'Hospital 3');
+      (doctorId.startsWith('HOSP2') ? 'Hospital 2' : 'Hospital 1');
     const requestedTo = hospitalName === 'Hospital 1' ? 'HOSP1-SUP12226' : 'HOSP2-SUP12227';
-    const argsArr = [JSON.stringify({
-      healthId: healthId,
-      doctorId: doctorId,
-      hospitalName: hospitalName,
-      reason: reason,
-      requestedTo: requestedTo,
-      ...args,
-    })];
-
-    const networkObj = await network.connectToNetwork(req.headers.username);
-    const responseBytes = await network.invoke(networkObj, false,
-      capitalize(userRole) + 'Contract:requestAccessToSensitiveData', argsArr);
-    const response = JSON.parse(responseBytes.toString());
-    console.debug('Response from network for requesting access to sensitive data:', response);
-    if (response.error) {
-      console.error('Error requesting access to sensitive data:', response.error);
-      return res.status(500).send({ status: 'error', message: response.error });
-    }
-    console.log('Access request response from network:', response);
 
     const dbResponse = await databaseRoutes.insertAccessRequest(
       healthId, doctorId, requestedTo, hospitalName, reason, 'View');
     if (dbResponse.error) {
       console.error('Error inserting access request into database:', dbResponse.error);
-      return res.status(500).send({ status: 'error', message: dbResponse.error });
+      res.status(500).json({ status: 'error', message: dbResponse.error });
     }
     console.log('Access request inserted into database successfully:', dbResponse);
-
+    res.status(200).json({ status: 'success', message: 'Access request inserted into database successfully' });
   } catch (error) {
     console.error('Error requesting access to sensitive data:', error);
-    res.status(500).send({ status: 'error', message: error.message });
+    res.status(500).json({ status: 'error', message: error.message });
   }
 };

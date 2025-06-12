@@ -123,3 +123,32 @@ exports.revokeAccessFromDoctor = async (req, res) => {
   const response = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:revokeAccessFromDoctor', args);
   (response.error) ? res.status(500).send(response.error) : res.status(200).send(getMessage(false, `Access revoked from ${doctorId}`));
 };
+
+exports.getSensitiveMedicalHistory = async (req, res) => {
+  try {
+    const userRole = req.headers.role;
+    await validateRole([ROLE_PATIENT, ROLE_DOCTOR, ROLE_SUPER], userRole, res);
+    const healthId = req.params.healthId;
+    const requestedBy = req.query.requestedBy;
+    const hospitalName = requestedBy.split('-')[0] === 'HOSP1' ? 'Hospital 1' : 'Hospital 2'
+
+    const argsArr = [JSON.stringify({
+      healthId: healthId,
+      requestedBy: requestedBy,
+    })];
+    const superId = hospitalName === 'Hospital 1' ? 'HOSP1-SUP12226' : 'HOSP2-SUP12227';
+    const networkObjSuper = await network.connectToSuperNetwork(superId);
+    const responseBytes = await network.invokePDCTransaction(networkObjSuper, true,
+      'SuperContract:getSensitiveMedicalHistory', argsArr);
+    const response = JSON.parse(responseBytes);
+    if (response.error) {
+      console.error('Error in patient-routes/getSensitiveMedicalHistory', response.error);
+      res.status(500).send({ status: 'error', error: response.error });
+    } else {
+      res.status(200).send(response);
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ status: 'error', error: error });
+  };
+}

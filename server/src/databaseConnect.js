@@ -4,6 +4,7 @@ var mysql = require('mysql');
 let connection;
 const crossMatchTable = 'HLFPendingCrossMatchBloodBags';
 const accessRequestTable = 'RequestAccessToSensitiveData';
+const hlfBloodStoreTable = 'HLFBloodStore';
 let retryCount = 0;
 /**
  * This function handles the connection to the MySQL database.
@@ -43,8 +44,7 @@ function handleDisconnect() {
         }
       };
       retry();
-    }
-    else {
+    } else {
       throw err;
     }
   });
@@ -63,7 +63,7 @@ handleDisconnect();
 
 function createBloodTable() {
   const sql = `
-       CREATE TABLE HLFBloodStore (
+       CREATE TABLE ${hlfBloodStoreTable} (
 	    BagUnitNo VARCHAR(100),
 	    BagSegmentNo VARCHAR(100),
 	    HospitalName VARCHAR(100),
@@ -90,10 +90,22 @@ function createBloodTable() {
   });
 };
 
+function deleteBloodTable() {
+  const sql = `DELETE * FROM ${hlfBloodStoreTable}`;
+  connection.query(sql, (error, _result) => {
+    if (error) {
+      console.error('Error creating table:', error);
+      return;
+    }
+    console.log('Table created successfully');
+  });
+}
+
 ///////////////////////////// ACCESS REQUEST TABLE /////////////////////////////////////////////
 function createAccessRequestTable() {
   const sql = `
       CREATE TABLE IF NOT EXISTS ${accessRequestTable} (
+      RequestId INT AUTO_INCREMENT,
 	    HealthId VARCHAR(100),
 	    Requestor VARCHAR(100),
       RequestedTo VARCHAR(100),
@@ -102,7 +114,7 @@ function createAccessRequestTable() {
       Reason VARCHAR(255),
       AccessLevel VARCHAR(50) DEFAULT 'View',
       Status VARCHAR(50) DEFAULT 'Pending',
-	    PRIMARY KEY (HealthId, Requestor, HospitalName),
+	    PRIMARY KEY (RequestId),
 	    FOREIGN KEY (HospitalName) REFERENCES Hospital(HospitalName)
 	);
     `;
@@ -116,7 +128,22 @@ function createAccessRequestTable() {
   });
 };
 
-function insertAccessRequest(HealthId, Requestor, RequestedTo, HospitalName, Reason, AccessLevel = 'View') {
+function deleteAccessRequestTable() {
+  const sql = `
+      DROP TABLE ${accessRequestTable};
+    `;
+
+  connection.query(sql, (error, _result) => {
+    if (error) {
+      console.error('Error deleting table:', error);
+      return;
+    }
+    console.log('Table deleted successfully');
+  });
+};
+
+
+exports.insertAccessRequest = async (HealthId, Requestor, RequestedTo, HospitalName, Reason, AccessLevel = 'View') => {
   const sql = `
         INSERT INTO ${accessRequestTable}(HealthId, Requestor, RequestedTo, HospitalName, RequestedOn, Reason, AccessLevel)
         VALUES (?, ?, ?, ?, NOW(), ?, ?);
@@ -133,6 +160,21 @@ function insertAccessRequest(HealthId, Requestor, RequestedTo, HospitalName, Rea
     });
   });
 };
+
+exports.queryAccessRequestTableByRequestId = async (RequestId) => {
+  const sql = `SELECT * FROM ${accessRequestTable} WHERE RequestId = ?;`;
+  return new Promise((resolve, reject) => {
+    connection.query(sql, [RequestId], (error, results) => {
+      if (error) {
+        console.error('Error querying access request table:', error);
+        reject(error);
+        return;
+      }
+      console.log('Access requests fetched successfully:', results);
+      resolve(results);
+    });
+  });
+}
 
 exports.queryAccessRequestTableByHealthId = async (HealthId) => {
   const sql = `SELECT * FROM ${accessRequestTable} WHERE HealthId = ?;`;
@@ -177,10 +219,10 @@ exports.queryAccessRequestTableByHealthIdAndRequestor = async (HealthId, Request
       resolve(results);
     });
   });
-}
+};
 
-exports.queryAccessRequestTableByRequestedTo = async (RequestedTo) => {
-  const sql = `SELECT * FROM ${accessRequestTable} WHERE RequestedTo = ?;`;
+exports.queryPendingAccessRequestTableByRequestedTo = async (RequestedTo) => {
+  const sql = `SELECT * FROM ${accessRequestTable} WHERE RequestedTo = ? AND Status = 'Pending';`;
   return new Promise((resolve, reject) => {
     connection.query(sql, [RequestedTo], (error, results) => {
       if (error) {
@@ -192,7 +234,43 @@ exports.queryAccessRequestTableByRequestedTo = async (RequestedTo) => {
       resolve(results);
     });
   });
-}
+};
+
+exports.approveAccessRequest = async (RequestId, RequestedTo) => {
+  const sql = `
+        UPDATE ${accessRequestTable} SET Status = 'Approved'
+        WHERE RequestId = ? AND RequestedTo = ? AND Status = 'Pending';
+        `;
+  return new Promise((resolve, reject) => {
+    connection.query(sql, [RequestId, RequestedTo], (error, results) => {
+      if (error) {
+        console.error('Error querying access request table:', error);
+        reject(error);
+        return;
+      }
+      console.log('Access requests fetched successfully:', results);
+      resolve(results);
+    });
+  });
+};
+
+exports.rejectAccessRequest = async (RequestId, RequestedTo) => {
+  const sql = `
+        UPDATE ${accessRequestTable} SET Status = 'Rejected'
+        WHERE RequestId = ? AND RequestedTo = ? AND Status = 'Pending';
+        `;
+  return new Promise((resolve, reject) => {
+    connection.query(sql, [RequestId, RequestedTo], (error, results) => {
+      if (error) {
+        console.error('Error querying access request table:', error);
+        reject(error);
+        return;
+      }
+      console.log('Access requests fetched successfully:', results);
+      resolve(results);
+    });
+  });
+};
 ///////////////////////////// CROSS MATCH TABLE /////////////////////////////////////////////
 
 function createPendingCrossmatchBloodBags() {
@@ -239,7 +317,7 @@ exports.insertDonatedBloodBagForCrossMatch = async function name(BagUnitNo, BagS
     console.error('Error inserting Blood:', error);
     throw error;
   }
-}
+};
 
 exports.getPatientOfBloodBag = async function (BagUnitNo, BagSegmentNo, HospitalName) {
   const sql = `SELECT DonatedBy
@@ -264,12 +342,12 @@ exports.getPatientOfBloodBag = async function (BagUnitNo, BagSegmentNo, Hospital
     console.error('Error fetching Blood:', error);
     throw error;
   }
-}
+};
 
 exports.updateCrossMatchStatus = async function (BagUnitNo, BagSegmentNo, HospitalName, Status) {
   const crossMatchStatus = Status === 'false' ? 'failed' : 'passed';
   const sql = `
-        UPDATE HLFBloodStore SET CrossMatched = '${crossMatchStatus}'
+        UPDATE ${hlfBloodStoreTable} SET CrossMatched = '${crossMatchStatus}'
         WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ? AND CrossMatched = 'false';
         `;
   try {
@@ -287,15 +365,15 @@ exports.updateCrossMatchStatus = async function (BagUnitNo, BagSegmentNo, Hospit
     return result;
   } catch (error) {
     // Handle SQL query execution error
-    console.log('Blood allocation updated successfully');
+    console.log('Blood allocation not updated');
     throw error;
   }
-}
+};
 
 exports.insertBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup) {
   console.log(BagUnitNo + " " + BagSegmentNo + " " + HospitalName);
   const sql = `
-        INSERT INTO HLFBloodStore(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, Allocated, AllocatedTo, CrossMatched,Donated,DonationDate)
+        INSERT INTO ${hlfBloodStoreTable}(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, Allocated, AllocatedTo, CrossMatched,Donated,DonationDate)
         VALUES (?, ?, ?, ?, ?, ?, ?, 'false', '', 'false','false','');
     `;
 
@@ -324,7 +402,7 @@ exports.getBloodByExpiry = async function (HospitalName, BloodGroup, X) {
   const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
   const sql = `
         SELECT BagUnitNo,BagSegmentNo FROM
-        (SELECT * FROM HLFBloodStore
+        (SELECT * FROM ${hlfBloodStoreTable}
         WHERE Allocated = 'false' AND BloodGroup = ? AND HospitalName = ? AND DateOfExpiry >= ?
         ORDER BY DateOfExpiry ASC, Quantity ASC
         LIMIT ?) AS DATA
@@ -349,11 +427,11 @@ exports.getBloodByExpiry = async function (HospitalName, BloodGroup, X) {
     console.error('Error fetching Blood:', error);
     throw error;
   }
-}
+};
 
 exports.allocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, SlipNo) {
   const sql = `
-        UPDATE HLFBloodStore SET Allocated = 'true', AllocatedTo = ?
+        UPDATE ${hlfBloodStoreTable} SET Allocated = 'true', AllocatedTo = ?
         WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ?;
         `;
   try {
@@ -375,11 +453,11 @@ exports.allocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName, S
     console.log('Blood allocation updated successfully');
     throw error;
   }
-}
+};
 
 exports.bagInfo = async function (BloodBagUnitNo, BloodBagSegmentNo, HospitalName) {
   const sql = `
-        SELECT BloodGroup,AllocatedTo FROM HLFBloodStore
+        SELECT BloodGroup,AllocatedTo FROM ${hlfBloodStoreTable}
         WHERE BagUnitNo=? AND BagSegmentNo =? AND HospitalName =?;  
         `;
   try {
@@ -402,11 +480,11 @@ exports.bagInfo = async function (BloodBagUnitNo, BloodBagSegmentNo, HospitalNam
     console.error('Error fetching Blood:', error);
     throw error;
   }
-}
+};
 
 exports.slips = async function (HospitalName) {
   const sql = `
-        SELECT DISTINCT(AllocatedTo) FROM HLFBloodStore
+        SELECT DISTINCT(AllocatedTo) FROM ${hlfBloodStoreTable}
         WHERE Allocated="true" AND Donated = "false" AND HospitalName = ?;
     `;
 
@@ -435,7 +513,7 @@ exports.slips = async function (HospitalName) {
 
 exports.deAllocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName) {
   const sql = `
-        UPDATE HLFBloodStore SET Allocated = 'false', AllocatedTo = '', CrossMatched='false'
+        UPDATE ${hlfBloodStoreTable} SET Allocated = 'false', AllocatedTo = '', CrossMatched='false'
         WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ?;
         `;
   try {
@@ -457,11 +535,11 @@ exports.deAllocateBlood = async function (BagUnitNo, BagSegmentNo, HospitalName)
     console.log('Error de-allocating blood');
     throw error;
   }
-}
+};
 
 exports.addCrossMatch = async function (BagUnitNo, BagSegmentNo, HospitalName) {
   const sql = `
-        UPDATE HLFBloodStore SET  CrossMatched = 'true'
+        UPDATE ${hlfBloodStoreTable} SET  CrossMatched = 'true'
         WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ?;
         `;
   try {
@@ -483,13 +561,12 @@ exports.addCrossMatch = async function (BagUnitNo, BagSegmentNo, HospitalName) {
     console.log('Error updating blood');
     throw error;
   }
-}
-
+};
 
 exports.deleteBloodRecord = async function (BagUnitNo, BagSegmentNo, HospitalName) {
   const DonationDate = new Date().toISOString().split('T')[0];
   const sql = `
-        UPDATE HLFBloodStore SET  Donated = 'true', DonationDate = ?
+        UPDATE ${hlfBloodStoreTable} SET  Donated = 'true', DonationDate = ?
         WHERE BagUnitNo = ? AND BagSegmentNo = ? AND HospitalName = ?;
         `;
   try {
@@ -511,12 +588,38 @@ exports.deleteBloodRecord = async function (BagUnitNo, BagSegmentNo, HospitalNam
     console.log('Error deleting blood:');
     throw error;
   }
-}
+};
+
+exports.deleteBloodRecordById = async function (BagUnitNo, BagSegmentNo) {
+  const sql = `
+        DELETE FROM ${hlfBloodStoreTable}
+        WHERE BagUnitNo = ? AND BagSegmentNo = ?;
+        `;
+  try {
+
+    const result = await new Promise((resolve, reject) => {
+      connection.query(sql, [BagUnitNo, BagSegmentNo], (error, result) => {
+        if (error) {
+          console.error('Error deleting blood:', error);
+          reject(error);
+          return;
+        }
+        console.log('Blood deleted successfully', result);
+        resolve(result);
+      });
+    });
+    return result;
+  } catch (error) {
+    // Handle SQL query execution error
+    console.log('Error deleting blood:');
+    throw error;
+  }
+};
 
 exports.donateBloodRecord = async function (SlipNumber, HospitalName) {
   const DonationDate = new Date().toISOString().split('T')[0];
   const sql = `
-        UPDATE HLFBloodStore SET  Donated = 'true', DonationDate = ?
+        UPDATE ${hlfBloodStoreTable} SET  Donated = 'true', DonationDate = ?
         WHERE AllocatedTo = ? AND HospitalName = ?;
         `;
   try {
@@ -538,10 +641,10 @@ exports.donateBloodRecord = async function (SlipNumber, HospitalName) {
     console.log('Error deleting blood:');
     throw error;
   }
-}
+};
 
 function queryHLFBloodTable() {
-  connection.query('SELECT * FROM HLFBloodStore;', (error, results, _fields) => {
+  connection.query(`SELECT * FROM ${hlfBloodStoreTable};`, (error, results, _fields) => {
     if (error) throw error;
     console.log('bloodBagStore table:', results);
   });
@@ -550,7 +653,7 @@ function queryHLFBloodTable() {
 ///////////////////////////// CREATE HOSPITAL /////////////////////////////////////////////
 function createHospitalTable() {
   const sql = `
-       CREATE TABLE Hospital (
+      CREATE TABLE Hospital (
 	    HospitalName VARCHAR(100) PRIMARY KEY,
 	    City VARCHAR(50),
 	    Area VARCHAR(50),
@@ -581,7 +684,7 @@ exports.insertHospital = async (req, res) => {
     console.error('Error during insertion:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
-}
+};
 
 function insertHospitalAsync(HospitalName, City, Area, Latitude, Longitude, Address) {
   return new Promise((resolve, reject) => {
@@ -613,7 +716,7 @@ exports.queryHospital = async (_req, res) => {
     console.error('Error handling request:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
-}
+};
 
 async function queryHospitalTable() {
   try {
@@ -644,7 +747,7 @@ exports.getStocksBelowThreshold = async (req, res) => {
       SELECT h.HospitalName, bg.GroupType AS BloodGroup, COALESCE(SUM(CASE WHEN bb.Allocated != 'true' THEN bb.Quantity ELSE 0 END), 0) AS TotalBloodQuantity
       FROM Hospital h
       CROSS JOIN BloodGroups bg
-      LEFT JOIN HLFBloodStore bb ON h.HospitalName = bb.HospitalName AND bg.GroupType = bb.BloodGroup
+      LEFT JOIN ${hlfBloodStoreTable} bb ON h.HospitalName = bb.HospitalName AND bg.GroupType = bb.BloodGroup
       WHERE bb.Allocated = 'false' OR bb.Allocated IS NULL
       GROUP BY h.HospitalName, bg.GroupType
       HAVING TotalBloodQuantity < ?;
@@ -666,7 +769,7 @@ exports.getStocksBelowThreshold = async (req, res) => {
     console.error('Error querying stocks below threshold:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
-}
+};
 
 
 ///////////////////////////////////////// CREATE AND QUERY BLOODGROUPS TABLE /////////////////////////////

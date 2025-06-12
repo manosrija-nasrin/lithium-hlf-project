@@ -152,7 +152,7 @@ exports.addHealthReportResults = async (req, res) => {
     const response = JSON.parse(responseBytes);
     console.debug(response);
 
-    if (response.status && response.status === 'success') {
+    if (response.status !== undefined && response.status === 'success') {
       console.log(response.deferPatient);
       // add deferred records to the pending PDC
       if (response.deferPatient === true || response.deferPatient === 'true') {
@@ -165,6 +165,36 @@ exports.addHealthReportResults = async (req, res) => {
         JSON.stringify({
           transientData: {
             deferredReasons: response.deferredReasons,
+            deferredTenure: response.deferredTenure,
+            results: diseasesTested,
+          },
+        }),
+        ];
+        // Set up and connect to Fabric Gateway using the username in header
+        const patientNetworkObj = await network.connectToNetwork(req.headers.username);
+
+        const deferredResponseBytes = await network.invokePDCTransaction(patientNetworkObj, false,
+          capitalize(userRole) + 'Contract:addPendingAlarmingHistory', deferPatientArgs);
+
+        console.debug('Response from network for adding pending defer operations', deferredResponseBytes.toString());
+        const deferredResponse = JSON.parse(deferredResponseBytes.toString());
+
+        if (deferredResponse.status === 'error') {
+          console.error('Failed to defer patient with health ID: ', args.healthId);
+        } else if (deferredResponse.status === 'success') {
+          console.debug('Status', deferredResponse.status);
+          console.debug('Successfully done');
+        }
+      } else {
+        const deferPatientArgs = [JSON.stringify({
+          healthId: healthId,
+          username: req.headers.username,
+          deferredStatus: response.deferredStatus,
+          deferredAt: response.deferredAt,
+        }),
+        JSON.stringify({
+          transientData: {
+            deferredReasons: null,
             deferredTenure: response.deferredTenure,
             results: diseasesTested,
           },
@@ -200,7 +230,7 @@ exports.addTtiResults = async (req, res) => {
     const userRole = req.headers.role;
     await validateRole([ROLE_TECHNICIAN], userRole, res);
     const args = req.body;
-    const { technicianId, healthId, _datetime, ...diseasesTested } = args;
+    const { technicianId, healthId, ...diseasesTested } = args;
 
     const hospName = technicianId.startsWith('HOSP1') ? 'Hospital 1' :
       (technicianId.startsWith('HOSP2') ? 'Hospital 2' : 'Hospital 3');
@@ -271,7 +301,9 @@ exports.addTtiResults = async (req, res) => {
       // simply insert the sensitive medical history 
       const deferPatientArgs = [JSON.stringify({
         healthId: healthId,
-        username: req.headers.username, deferredStatus: 'not deferred', deferredAt: hospName,
+        username: req.headers.username,
+        deferredStatus: 'not deferred',
+        deferredAt: hospName,
       }),
       JSON.stringify({ transientData: { deferredReasons: null, deferredTenure: 0, results: diseasesTested } })];
       const response = await network.invokePDCTransaction(patientNetworkObj, false, capitalize(userRole) +
@@ -303,8 +335,7 @@ exports.crossMatchResults = async (req, res) => {
   const args = req.body;
   const hospName = args.technicianId.startsWith('HOSP1') ? 'Hospital 1' :
     (args.technicianId.startsWith('HOSP2') ? 'Hospital 2' : 'Hospital 3');
-  const bloodBagUnitNo = args.bloodBagUnitNo;
-  const bloodBagSegmentNo = args.bloodBagSegmentNo;
+  const { technicianId, slipNumber, bloodBagUnitNo, bloodBagSegmentNo, bloodGroup, ...diseasesTested } = args;
 
   let r1 = await databaseRoutes.bagInfo(bloodBagUnitNo, bloodBagSegmentNo, hospName);
   console.log(r1);
@@ -326,7 +357,6 @@ exports.crossMatchResults = async (req, res) => {
     const bagId = getBagId(bloodBagUnitNo, bloodBagSegmentNo);
 
     const reasons = [];
-    const { diseasesTested } = args;
 
     if (args.malaria === 'true') reasons.push('Malaria');
     if (args.syphilis === 'true') reasons.push('Syphilis');
@@ -499,51 +529,61 @@ exports.checkPatientStatus = async (req, res) => {
 };
 
 exports.screenPatient = async (req, res) => {
-  const userRole = req.headers.role;
-  await validateRole([ROLE_TECHNICIAN], userRole, res);
-  const args = req.body;
-  const { healthId, technicianId, ...diseasesScreened } = args;
-  const argsArr = [JSON.stringify({
-    healthId: healthId,
-    technicianId: technicianId,
-    results: diseasesScreened,
-    ...args, // spread operator to include other properties
-  })];
-  const networkObj = await network.connectToNetwork(req.headers.username);
-  // Invoke the smart contract function
-  const responseBytes = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:screenPatient', argsArr);
-  const response = JSON.parse(responseBytes.toString());
-  console.debug('Response from network for screening patient', response);
-  // check whether patient should be deferred : if yes, execute a PDC write
-  if ('deferPatient' in response && (response.deferPatient === true || response.deferPatient === 'true')) {
-    console.log('About to defer patient');
-    const deferPatientArgs = [JSON.stringify({
-      healthId: args.healthId,
-      username: response.deferredAt,
-      deferredStatus: response.deferredStatus,
-    }), JSON.stringify({
-      transientData: {
-        deferredReasons: response.deferredReasons,
-        deferredTenure: response.deferredTenure,
-      },
-    }),
-    ];
+  try {
+    const userRole = req.headers.role;
+    await validateRole([ROLE_TECHNICIAN], userRole, res);
+    const args = req.body;
+    const { healthId, technicianId, ...diseasesScreened } = args;
+    const argsArr = [JSON.stringify({
+      healthId: healthId,
+      technicianId: technicianId,
+      results: diseasesScreened,
+      ...args, // spread operator to include other properties
+    })];
+    const networkObj = await network.connectToNetwork(req.headers.username);
+    // Invoke the smart contract function
+    const responseBytes = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:screenPatient', argsArr);
+    const response = JSON.parse(responseBytes.toString());
+    console.debug('Response from network for screening patient', response);
+    // check whether patient should be deferred : if yes, execute a PDC write
+    if ('deferPatient' in response && (response.deferPatient === true || response.deferPatient === 'true')) {
+      console.log('About to defer patient');
+      const deferPatientArgs = [JSON.stringify({
+        healthId: args.healthId,
+        username: req.headers.username,
+        deferredAt: response.deferredAt,
+        deferredStatus: response.deferredStatus,
+      }), JSON.stringify({
+        transientData: {
+          deferredReasons: response.deferredReasons,
+          deferredTenure: response.deferredTenure,
+          results: diseasesScreened,
+        },
+      }),
+      ];
 
-    const patientNetworkObj = await network.connectToNetwork(req.headers.username);
+      const patientNetworkObj = await network.connectToNetwork(req.headers.username);
 
-    const deferredResponseBytes = await network.invokePDCTransaction(patientNetworkObj, false,
-      capitalize(userRole) + 'Contract:addPendingAlarmingHistory', deferPatientArgs);
-    console.debug('Response from network for adding pending defer operations', response.toString());
-    const deferredResponse = JSON.parse(deferredResponseBytes.toString());
+      const deferredResponseBytes = await network.invokePDCTransaction(patientNetworkObj, false,
+        capitalize(userRole) + 'Contract:addPendingAlarmingHistory', deferPatientArgs);
+      const deferredResponse = JSON.parse(deferredResponseBytes.toString());
+      console.debug('Response from network for adding pending defer operations', deferredResponse);
 
-    if (deferredResponse.status === 'error') {
-      console.error('Failed to defer patient with ID: ', args.healthId);
-    } else {
-      console.debug('Status', deferredResponse.status);
+      if (deferredResponse.status === 'error') {
+        console.error('Failed to defer patient with ID: ', args.healthId);
+      } else {
+        console.debug('Status', deferredResponse.status);
+      }
     }
+    if (response.deferPatient === true || response.deferPatient === 'true') {
+      res.status(500).json({ status: 'error', message: 'Screening Failed' });
+    } else {
+      res.status(200).json({ status: 'success', message: 'Screening successful' });
+    }
+  } catch (error) {
+    console.error('Error in technician-routes/screenPatient', error);
+    res.status(500).json({ status: 'error', error: error });
   }
-  (response.error || response.deferPatient === 'true') ? res.status(500).send(response.error) :
-    res.status(200).send(getMessage(false, 'Screening successful.'));
 };
 
 exports.getTechnicianById = async (req, res) => {
@@ -578,7 +618,7 @@ exports.collectBlood = async (req, res) => {
     const response = await network.invoke(networkObj, false, capitalize(userRole) + 'Contract:bloodCollection', args);
     const parsedVAL = JSON.parse(response);
     const hospitalName = rawArgs.technicianId.startsWith('HOSP1') ? 'hospital 1' :
-      (rawArgs.doctorId.startsWith('HOSP2') ? 'hospital 2' : 'hospital 3');
+      (rawArgs.technicianId.startsWith('HOSP2') ? 'hospital 2' : 'hospital 3');
     await databaseRoutes.insertBlood(parsedVAL.bloodBagUnitNo, parsedVAL.bloodBagSegmentNo,
       hospitalName, parsedVAL.dateOfCollection, parsedVAL.dateOfExpiry, parsedVAL.quantity, parsedVAL.bloodGroup);
     // await databaseRoutes.insertDonatedBloodBagForCrossMatch(rawArgs.bloodBagUnitNo,

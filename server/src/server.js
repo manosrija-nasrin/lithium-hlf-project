@@ -278,7 +278,8 @@ app.post(
 app.get('/doctor/checkpatientstatus',
   authenticateJWT, doctorRoutes.checkPatientStatus,
 );
-app.post('/doctor/:doctorId(HOSP[0-9]+-DOC[0-9]+)/request-access/:healthId',
+// /doctor/:doctorId(HOSP[0-9]+-DOC[0-9]+)/request-access/:healthId
+app.post('/doctor/:doctorId/request-access/:healthId',  // TODO: Make separate considerations for doctorID and patientID
   authenticateJWT,
   doctorRoutes.requestAccessToSensitiveData,
 );
@@ -286,19 +287,24 @@ app.post('/doctor/:doctorId(HOSP[0-9]+-DOC[0-9]+)/request-access/:healthId',
 // //////////////////////////////// Super Routes //////////////////////////////////////
 app.get(
   '/supers/:hospitalId([0-9]+)/:superId(HOSP[0-9]+-SUP[0-9]+)',
-  authenticateJWT,
-  superRoutes.getSuperById,
+  authenticateJWT, superRoutes.getSuperById,
 );
 app.get(
   '/supers/:hospitalId([0-9]+)/:superId(HOSP[0-9]+-SUP[0-9]+)/deferredlist',
-  authenticateJWT,
-  superRoutes.getDeferredPatients,
+  authenticateJWT, superRoutes.getDeferredPatients,
 );
-app.get('/supers/:hospitalId([0-9]+)/_all', authenticateJWT, adminRoutes.getSupersByHospitalId);
+app.get('/supers/:hospitalId([0-9]+)/_all',
+  authenticateJWT, adminRoutes.getSupersByHospitalId);
 app.get('/super/checkpatientstatus',
   authenticateJWT, superRoutes.checkPatientStatus,
 );
-app.get('/super/request-approval', authenticateJWT, superRoutes.requestApproval);
+app.get('/super/get-access-requests',
+  authenticateJWT, superRoutes.getAccessRequests,
+);
+app.post('/super/:superId(HOSP[0-9]+-SUP[0-9]+)/approve-access-request',
+  authenticateJWT, superRoutes.approveAccessRequest);
+app.post('/super/:superId(HOSP[0-9]+-SUP[0-9]+)/reject-access-request',
+  authenticateJWT, superRoutes.rejectAccessRequest);
 
 // ///////////////////////////////// Technician Routes //////////////////////////////////
 app.get(
@@ -404,11 +410,15 @@ app.patch(
   authenticateJWT,
   patientRoutes.revokeAccessFromDoctor,
 );
+app.get('/patients/:healthId/sensitive-medical-history',
+  authenticateJWT,
+  patientRoutes.getSensitiveMedicalHistory,
+)
 
-///////////////////////////////////DatabaseConnect Routes /////////////////////////////
+// /////////////////////////////////DatabaseConnect Routes /////////////////////////////
 app.get('/viewhospitals', databaseRoutes.queryHospital);
 app.post('/addHospital', databaseRoutes.insertHospital);
 app.get('/displayStocksBelowThreshold', databaseRoutes.getStocksBelowThreshold);
 
-/////////////////////////////////// Geo Routes ////////////////////////////////////////
+// ///////////////////////////////// Geo Routes ////////////////////////////////////////
 app.get('/geo/:Latitude/:Longitude', geoRoutes.sortRecords);

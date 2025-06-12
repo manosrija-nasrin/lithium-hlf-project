@@ -83,33 +83,92 @@ exports.checkPatientStatus = async (req, res) => {
   (responseJson.status === 'error') ? res.status(404).send('Patient not found') : res.status(200).send(responseJson);
 };
 
-exports.requestApproval = async (req, res) => {
-  const userRole = req.headers.role;
-  await validateRole([ROLE_SUPER], userRole, res);
+exports.rejectAccessRequest = async (req, res) => {
+  try {
+    const userRole = req.headers.role;
+    await validateRole([ROLE_SUPER], userRole, res);
+    const superId = req.params.superId;
+    const { requestId } = req.body;
 
-  const parsedUrl = url.parse(req.url, true);
-  const superId = parsedUrl.query.superId;
-
-  const pendingRequests = await databaseRoutes.queryAccessRequestTableByRequestor(superId);
-  const resultArray = [];
-
-  for (const request of pendingRequests) {
-    const requestor = request.Requestor;
-    const healthId = request.HealthId;
-    const requestedTo = request.RequestedTo;
-    const hospitalName = request.HospitalName;
-    const reason = request.Reason;
-    const status = request.Status;
-
-    resultArray.push({
-      requestor: requestor,
-      healthId: healthId,
-      requestedTo: requestedTo,
-      hospitalName: hospitalName,
-      reason: reason,
-      status: status,
-    });
+    await databaseRoutes.rejectAccessRequest(requestId, superId);
+    res.status(200).send({ status: 'success', message: 'Access request rejected' });
+  } catch (error) {
+    console.error('Error in rejectAccessRequest:', error);
+    res.status(500).send({ status: 'error', message: error.message });
   }
-
-  res.status(200).send(resultArray);
 };
+
+exports.approveAccessRequest = async (req, res) => {
+  try {
+    const userRole = req.headers.role;
+    await validateRole([ROLE_SUPER], userRole, res);
+    const superId = req.params.superId;
+    const { requestId } = req.body;
+
+    const requestDetails = (await databaseRoutes.queryAccessRequestTableByRequestId(requestId))[0];
+
+    const argsArr = [JSON.stringify({
+      healthId: requestDetails.HealthId,
+      superId: superId,
+      requestor: requestDetails.Requestor,
+      reason: requestDetails.Reason,
+      requestedTo: requestDetails.RequestedTo,
+    })];
+
+    const networkObj = await network.connectToSuperNetwork(req.headers.username);
+    const responseBytes = await network.invokePDCTransaction(networkObj, false,
+      capitalize(userRole) + 'Contract:grantAccessToSensitiveData',
+      argsArr);
+    const response = JSON.parse(responseBytes);
+
+    console.debug('Response from network for requesting access to sensitive data:', response);
+    if (response.error) {
+      console.error('Error requesting access to sensitive data:', response.error);
+    } else if (response.status === 'success') {
+      console.log('Access request response from network:', response);
+
+      await databaseRoutes.approveAccessRequest(requestId, superId);
+      res.status(200).send({ status: 'success', message: 'Access request approved' });
+    }
+  } catch (error) {
+    console.error('Error in requestApproval:', error);
+    res.status(500).send({ status: 'error', message: error.message });
+  }
+};
+
+exports.getAccessRequests = async (req, res) => {
+  try {
+    const userRole = req.headers.role;
+    await validateRole([ROLE_SUPER], userRole, res);
+
+    const superId = req.query.superId;
+
+    const pendingRequests = await databaseRoutes.queryPendingAccessRequestTableByRequestedTo(superId);
+    const resultArray = [];
+
+    for (const request of pendingRequests) {
+      const requestId = request.RequestId;
+      const requestor = request.Requestor;
+      const healthId = request.HealthId;
+      const requestedTo = request.RequestedTo;
+      const hospitalName = request.HospitalName;
+      const reason = request.Reason;
+      const status = request.Status;
+
+      resultArray.push({
+        requestId: requestId,
+        requestor: requestor,
+        healthId: healthId,
+        requestedTo: requestedTo,
+        hospitalName: hospitalName,
+        reason: reason,
+        status: status,
+      });
+    }
+
+    res.status(200).send(resultArray);
+  } catch (error) {
+    console.error('Error in getAccessRequests:', error);
+    res.status(500).send({ status: 'error', message: error.message });
+  }
+}
