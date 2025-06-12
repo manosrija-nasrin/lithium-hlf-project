@@ -1,38 +1,46 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
-import { DonorComponent } from './donor/donor.component';
-import { DoctorComponent } from './doctor/doctor.component';
-import { TechnicianComponent } from './technician/technician.component';
+import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
-import { AuthGuard } from './core/auth/auth.guard';
-import { DonorEditComponent } from './donor/donor-register/donor-edit.component';
-import { DoctorRegisterComponent } from './doctor/doctor-register/doctor-register.component';
-import { TechnicianRegisterComponent } from './technician/technician-register/technician-register.component';
-import { DonorDetailsMedicalEditComponent } from './donor/donor-details-medical-edit/donor-details-medical-edit.component';
-import { DonorDetailsPersonalEditComponent } from './donor/donor-details-personal-edit/donor-details-personal-edit.component';
 import { DoctorListForAdminComponent } from './admin/doctor-list-for-admin/doctor-list-for-admin.component';
-import { TechnicianListForAdminComponent } from './admin/technician-list-for-admin/technician-list-for-admin.component';
-import { DonorListForAdminComponent } from './admin/donor-list-for-admin/donor-list-for-admin.component';
-import { DonorListForDoctorComponent } from './doctor/donor-list-for-doctor/donor-list-for-doctor.component';
-import { ViewAllHospitalsComponent } from './admin/ViewAllHospitals.component';
-import { InsertHospitalComponent } from './admin/InsertHospital.component';
 import { GetStocksBelowThresholdComponent } from './admin/GetStocksBelowThreshold.component';
-import { GeoButtonComponent } from './donor/Geobutton/geo-button.component';
-import { ScreenDonorComponent } from './doctor/screendonor.component';
-import { BloodCollectionComponent } from './doctor/bloodcollection.component';
-import { ReadBloodBagComponent } from './technician/readbloodbag.component';
-import { BloodCrossMatchComponent } from './technician/crossmatchedblood.component';
-import { ReceiverComponent } from './receiver/receiver.component';
-import { BloodRequestComponent } from './technician/bloodrequest.component';
-import { ReadAllocatedBloodBagComponent } from './technician/readallocatedbloodbag.component';
-import { LTapprovalComponent } from './technician/LTapproval.component';
-import { MOCapprovalComponent } from './doctor/MOCapproval.component';
-import { SuperComponent } from './super/super.component';
-import { BlockedDonorListForSuperComponent } from './super/blocked-donor-list-for-super/blocked-donor-list-for-super.component';
-import { SuperRegisterComponent } from './super/super-register/super-register.component';
+import { InsertHospitalComponent } from './admin/InsertHospital.component';
+import { PatientListForAdminComponent } from './admin/patient-list-for-admin/patient-list-for-admin.component';
 import { SuperListForAdminComponent } from './admin/super-list-for-admin/super-list-for-admin.component';
+import { TechnicianListForAdminComponent } from './admin/technician-list-for-admin/technician-list-for-admin.component';
+import { ViewAllHospitalsComponent } from './admin/ViewAllHospitals.component';
+import { AuthGuard } from './core/auth/auth.guard';
+import { BloodCollectionComponent } from './doctor/bloodcollection.component';
+import { DoctorRegisterComponent } from './doctor/doctor-register/doctor-register.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import { MOCapprovalComponent } from './doctor/MOCapproval.component';
+import { PatientListForDoctorComponent } from './doctor/patient-list-for-doctor/patient-list-for-doctor.component';
+import { RequestAccessToSensitiveDataComponent } from './doctor/request-access-to-sensitive-data/request-access-to-sensitive-data.component';
+import { ScreenPatientComponent } from './doctor/screenpatient.component';
+import { LoginComponent } from './login/login.component';
+import { GeoButtonComponent } from './patient/Geobutton/geo-button.component';
+import { PatientDetailsMedicalEditComponent } from './patient/patient-details-medical-edit/patient-details-medical-edit.component';
+import { PatientDetailsPersonalEditComponent } from './patient/patient-details-personal-edit/patient-details-personal-edit.component';
+import { PatientHistoryComponent } from './patient/patient-history/patient-history.component';
+import { PatientEditComponent } from './patient/patient-register/patient-edit.component';
+import { PatientComponent } from './patient/patient.component';
+import { ReceiverComponent } from './receiver/receiver.component';
+import { AccessRequestApprovalComponent } from './super/access-request-dashboard/access-request-dashboard.component';
+import { DeferredPatientListForSuperComponent } from './super/deferred-patient-list-for-super/deferred-patient-list-for-super.component';
+import { SuperRegisterComponent } from './super/super-register/super-register.component';
+import { SuperComponent } from './super/super.component';
+import { BloodRequestComponent } from './technician/bloodrequest.component';
+import { TechnicianBloodCollectionComponent } from './technician/collect-blood/collect-blood.component';
+import { BloodCrossMatchComponent } from './technician/crossmatchedblood.component';
+import { LTapprovalComponent } from './technician/LTapproval.component';
+import { PatientStatusCheckComponent } from './technician/patientstatuscheck.component';
+import { ReadAllocatedBloodBagComponent } from './technician/readallocatedbloodbag.component';
+import { ReadBloodBagComponent } from './technician/readbloodbag.component';
+import { TechnicianScreenPatientComponent } from './technician/screen-patient/screen-patient.component';
+import { AddHealthIndicatorResultsComponent } from './technician/technician-add-health-indicators/add-health-indicators.component';
+import { AddTtiResultComponent } from './technician/technician-add-tti-results/add-tti-result.component';
+import { TechnicianRegisterComponent } from './technician/technician-register/technician-register.component';
+import { TechnicianComponent } from './technician/technician.component';
 
 const routes: Routes = [
   {
@@ -45,33 +53,38 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'donor/edit/:self',
-    component: DonorEditComponent,
+    path: 'patient/edit/:self',
+    component: PatientEditComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'donor/:donorId/details/personal/edit',
-    component: DonorDetailsPersonalEditComponent,
+    path: 'patient/:healthId/details/personal/edit',
+    component: PatientDetailsPersonalEditComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'donor/:donorId/details/medical/edit',
-    component: DonorDetailsMedicalEditComponent,
+    path: 'patient/:healthId/details/medical/edit',
+    component: PatientDetailsMedicalEditComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'donor/:donorId',
-    component: DonorComponent,
+    path: 'patient/:healthId',
+    component: PatientComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'donor/view/:adminId',
-    component: DonorListForAdminComponent,
+    path: 'patient/view/:adminId',
+    component: PatientListForAdminComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'donor/:donorId/:doctorId',
-    component: DonorComponent,
+    path: 'patient/:healthId/history',
+    component: PatientHistoryComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'patient/:healthId/:doctorId',
+    component: PatientComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -125,28 +138,63 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'doctor/:doctorId/donors',
-    component: DonorListForDoctorComponent,
+    path: 'doctor/:doctorId/patients',
+    component: PatientListForDoctorComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'super/:superId/blockedlist',
-    component: BlockedDonorListForSuperComponent,
+    path: 'doctor/:doctorId/checkpatientstatus',
+    component: PatientStatusCheckComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'donor/screen/:donorId/:doctorId/:dob',
-    component: ScreenDonorComponent,
+    path: 'doctor/:doctorId/request-access/:healthId',
+    component: RequestAccessToSensitiveDataComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'donor/collect-blood/:donorId/:doctorId',
+    path: 'super/:superId/deferredlist',
+    component: DeferredPatientListForSuperComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'super/:superId/checkpatientstatus',
+    component: PatientStatusCheckComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'super/:superId/access-requests',
+    component: AccessRequestApprovalComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'patient/screen/:healthId/:doctorId/:dob',
+    component: ScreenPatientComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'patient/collect-blood/:healthId/:doctorId',
     component: BloodCollectionComponent,
     canActivate: [AuthGuard]
   },
   {
     path: 'technician/:technicianId/readbloodbag',
     component: ReadBloodBagComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'technician/:technicianId/addttiresults',
+    component: AddTtiResultComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'technician/:technicianId/checkpatientstatus',
+    component: PatientStatusCheckComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'technician/:technicianId/addhealthindicators',
+    component: AddHealthIndicatorResultsComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -167,6 +215,16 @@ const routes: Routes = [
   {
     path: 'technician/:technicianId/LTapproval',
     component: LTapprovalComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'patient/screen/technician/:technicianId',
+    component: TechnicianScreenPatientComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'technician/patient/collect-blood/:technicianId',
+    component: TechnicianBloodCollectionComponent,
     canActivate: [AuthGuard]
   },
   {

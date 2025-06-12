@@ -3,8 +3,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 import { Observable, Subscription } from 'rxjs';
 
-import { RoleEnum } from '../utils';
 import { AuthService } from '../core/auth/auth.service';
+import { RoleEnum } from '../utils';
 
 import { DoctorViewRecord } from './doctor';
 import { DoctorService } from './doctor.service';
@@ -44,5 +44,9 @@ export class DoctorComponent implements OnInit, OnDestroy {
 
   public isDoctor(): boolean {
     return this.authService.getRole() === RoleEnum.DOCTOR;
+  }
+
+  public isPatient(): boolean {
+    return this.authService.getRole() === RoleEnum.PATIENT;
   }
 }

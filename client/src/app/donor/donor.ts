@@ -24,8 +24,34 @@ export interface DonationHistory {
   [donationNumber: string]: DonationDetails;
 }
 
-export interface DonorRecord {
-  donorId: string;
+export interface TestDetails {
+  pulse: string,
+  systolic: string,
+  diastolic: string,
+  weight: string,
+  haemoglobin: string,
+  anaemia?: string,
+  cardiovascularDisease?: string,
+  haemophiliaA?: string,
+  haemophiliaB?: string,
+  hypertension?: string,
+  asthma?: string,
+}
+
+export interface MedicalHistoryDetails {
+  dateOfTest: string,
+  status: string,
+  reason?: string,
+  testedAt: string,
+  results: any
+}
+
+export interface MedicalHistory {
+  [medicalHistoryId: string]: MedicalHistoryDetails;
+}
+
+export interface PatientRecord {
+  healthId: string;
   firstName: string;
   lastName: string;
   address: string;
@@ -33,18 +59,25 @@ export interface DonorRecord {
   aadhar: string;
   phoneNumber: string;
   bloodGroup: string;
+  sex: string,
   alert: boolean;
   isDiseased: boolean;
-  creditCard: string;
-  donationStatus: string;
+  healthCreditPoints: string;
+  deferralStatus: string;
   donationHistory: DonationHistory;
   docType: string;
   changedBy: string;
   Timestamp: Timestamp;
+  medicalHistory: MedicalHistory;
+  sensitiveMedicalHistory?: MedicalHistory;
+  deferredOn?: string;
+  deferredReason?: string;
+  deferredTenure?: number;
+  deferredAt?: string;
 }
 
-export class DonorViewRecord {
-  donorId = '';
+export class PatientViewRecord {
+  healthId = '';
   firstName = '';
   lastName = '';
   address = '';
@@ -52,37 +85,51 @@ export class DonorViewRecord {
   aadhar = '';
   phoneNumber = '';
   bloodGroup = '';
+  sex = '';
   alert = false;
   isDiseased = false;
-  creditCard = '';
-  donationStatus = '';
+  healthCreditPoints = '';
+  deferralStatus = '';
   donationHistory: DonationHistory = {};
   docType = '';
   changedBy = '';
+  medicalHistory: MedicalHistory = {};
   Timestamp = '';
+  deferredOn = '';
+  deferredReason = '';
+  deferredTenure = 0;
+  deferredAt = '';
+  sensitiveMedicalHistory: MedicalHistory = {};
 
-  constructor(readonly donorRecord: DonorRecord) {
-    this.donorId = donorRecord.donorId;
-    this.firstName = donorRecord.firstName;
-    this.lastName = donorRecord.lastName;
-    this.address = donorRecord.address;
-    this.dob = donorRecord.dob;
-    this.aadhar = donorRecord.aadhar;
-    this.phoneNumber = donorRecord.phoneNumber;
-    this.bloodGroup = donorRecord.bloodGroup;
-    this.alert = donorRecord.alert;
-    this.isDiseased = donorRecord.isDiseased;
-    this.creditCard = donorRecord.creditCard;
-    this.donationStatus = donorRecord.donationStatus;
-    this.donationHistory = donorRecord.donationHistory;
-    this.docType = donorRecord.docType;
-    this.changedBy = donorRecord.changedBy;
-    this.Timestamp = donorRecord.Timestamp ? new Date(donorRecord.Timestamp.seconds.low * 1000).toDateString() : '';
+  constructor(readonly patientRecord: PatientRecord) {
+    this.healthId = patientRecord.healthId;
+    this.firstName = patientRecord.firstName;
+    this.lastName = patientRecord.lastName;
+    this.address = patientRecord.address;
+    this.dob = patientRecord.dob;
+    this.aadhar = patientRecord.aadhar;
+    this.phoneNumber = patientRecord.phoneNumber;
+    this.bloodGroup = patientRecord.bloodGroup;
+    this.sex = patientRecord.sex;
+    this.alert = patientRecord.alert;
+    this.isDiseased = patientRecord.isDiseased;
+    this.healthCreditPoints = patientRecord.healthCreditPoints;
+    this.deferralStatus = patientRecord.deferralStatus;
+    this.donationHistory = patientRecord.donationHistory;
+    this.docType = patientRecord.docType;
+    this.changedBy = patientRecord.changedBy;
+    this.Timestamp = patientRecord.Timestamp ? new Date(patientRecord.Timestamp.seconds.low * 1000).toDateString() : '';
+    this.medicalHistory = patientRecord.medicalHistory;
+    this.deferredOn = patientRecord.deferredOn || '';
+    this.deferredReason = patientRecord.deferredReason || '';
+    this.deferredTenure = patientRecord.deferredTenure || 0;
+    this.deferredAt = patientRecord.deferredAt || '';
+    this.sensitiveMedicalHistory = patientRecord.medicalHistory; // Assuming sensitive medical history is the same as medical history
   }
 }
 
-export class DonorBlocked implements DonorRecord {
-  donorId: string;
+export class PatientDeferred implements PatientRecord {
+  healthId: string;
   firstName: string;
   lastName: string;
   address: string;
@@ -90,80 +137,133 @@ export class DonorBlocked implements DonorRecord {
   aadhar: string;
   phoneNumber: string;
   bloodGroup: string;
+  sex: string;
   alert: boolean;
   isDiseased: boolean;
-  creditCard: string;
-  donationStatus: string;
+  healthCreditPoints: string;
+  deferralStatus: string;
   donationHistory: DonationHistory;
   docType: string;
   changedBy: string;
   Timestamp: Timestamp;
-  blockedDate: string;
-  blockedReason: string;
-  blockedTenure: number;
+  deferredOn: string;
+  deferredReason: string;
+  deferredTenure: number;
+  sensitiveMedicalHistory?: MedicalHistory;
+  medicalHistory: MedicalHistory;
 
-  constructor(readonly donorRecord: DonorRecord, blockedDate: string, blockedReason: string, blockedTenure: number) {
-    this.donorId = donorRecord.donorId;
-    this.firstName = donorRecord.firstName;
-    this.lastName = donorRecord.lastName;
-    this.address = donorRecord.address;
-    this.dob = donorRecord.dob;
-    this.aadhar = donorRecord.aadhar;
-    this.phoneNumber = donorRecord.phoneNumber;
-    this.bloodGroup = donorRecord.bloodGroup;
-    this.alert = donorRecord.alert;
-    this.isDiseased = donorRecord.isDiseased;
-    this.creditCard = donorRecord.creditCard;
-    this.donationStatus = donorRecord.donationStatus;
-    this.donationHistory = donorRecord.donationHistory;
-    this.docType = donorRecord.docType;
-    this.changedBy = donorRecord.changedBy;
-    this.Timestamp = donorRecord.Timestamp;
-    this.blockedDate = blockedDate;
-    this.blockedReason = blockedReason;
-    this.blockedTenure = blockedTenure;
+  constructor(readonly patientRecord: PatientRecord, deferredOn: string, deferredReason: string, deferredTenure: number) {
+    this.healthId = patientRecord.healthId;
+    this.firstName = patientRecord.firstName;
+    this.lastName = patientRecord.lastName;
+    this.address = patientRecord.address;
+    this.dob = patientRecord.dob;
+    this.aadhar = patientRecord.aadhar;
+    this.phoneNumber = patientRecord.phoneNumber;
+    this.bloodGroup = patientRecord.bloodGroup;
+    this.sex = patientRecord.sex;
+    this.alert = patientRecord.alert;
+    this.isDiseased = patientRecord.isDiseased;
+    this.healthCreditPoints = patientRecord.healthCreditPoints;
+    this.deferralStatus = patientRecord.deferralStatus;
+    this.donationHistory = patientRecord.donationHistory;
+    this.docType = patientRecord.docType;
+    this.changedBy = patientRecord.changedBy;
+    this.Timestamp = patientRecord.Timestamp;
+    this.deferredOn = deferredOn;
+    this.deferredReason = deferredReason;
+    this.deferredTenure = deferredTenure;
+    this.medicalHistory = patientRecord.medicalHistory;
+    this.deferredOn = deferredOn;
+    this.deferredReason = deferredReason;
+    this.deferredTenure = deferredTenure;
+    this.sensitiveMedicalHistory = patientRecord.sensitiveMedicalHistory;
   }
 }
 
-export class DonorAdminViewRecord {
-  donorId = '';
+export class PatientAdminViewRecord {
+  healthId = '';
   firstName = '';
   lastName = '';
   docType = '';
   aadhar = '';
   phoneNumber = '';
+  sex = '';
 
-  constructor(readonly donorRecord: DonorRecord) {
-    this.donorId = donorRecord.donorId;
-    this.firstName = donorRecord.firstName;
-    this.lastName = donorRecord.lastName;
-    this.docType = donorRecord.docType;
-    this.aadhar = donorRecord.aadhar;
-    this.phoneNumber = donorRecord.phoneNumber;
+  constructor(readonly patientRecord: PatientRecord) {
+    this.healthId = patientRecord.healthId;
+    this.firstName = patientRecord.firstName;
+    this.lastName = patientRecord.lastName;
+    this.docType = patientRecord.docType;
+    this.aadhar = patientRecord.aadhar;
+    this.phoneNumber = patientRecord.phoneNumber;
+    this.sex = patientRecord.sex;
   }
 }
 
-export class DonorDoctorViewRecord {
-  donorId = '';
+export class PatientDoctorViewRecord {
+  healthId = '';
   firstName = '';
   lastName = '';
   bloodGroup = '';
+  sex = '';
   alert = false;
   isDiseased = false;
-  creditCard = '';
-  donationStatus = '';
+  healthCreditPoints = '';
+  deferralStatus = '';
   donationHistory = {};
+  medicalHistory = {};
 
-  constructor(readonly donorRecord: DonorRecord) {
-    this.donorId = donorRecord.donorId;
-    this.firstName = donorRecord.firstName;
-    this.lastName = donorRecord.lastName;
-    this.bloodGroup = donorRecord.bloodGroup;
-    this.alert = donorRecord.alert;
-    this.isDiseased = donorRecord.isDiseased;
-    this.creditCard = donorRecord.creditCard;
-    this.donationStatus = donorRecord.donationStatus;
-    this.donationHistory = donorRecord.donationHistory;
+  constructor(readonly patientRecord: PatientRecord) {
+    this.healthId = patientRecord.healthId;
+    this.firstName = patientRecord.firstName;
+    this.lastName = patientRecord.lastName;
+    this.bloodGroup = patientRecord.bloodGroup;
+    this.sex = patientRecord.sex;
+    this.alert = patientRecord.alert;
+    this.isDiseased = patientRecord.isDiseased;
+    this.healthCreditPoints = patientRecord.healthCreditPoints;
+    this.deferralStatus = patientRecord.deferralStatus;
+    this.donationHistory = patientRecord.donationHistory;
+    this.medicalHistory = patientRecord.medicalHistory;
+  }
+}
+
+export class PatientSuperViewRecord {
+  healthId = '';
+  firstName = '';
+  lastName = '';
+  bloodGroup = '';
+  sex = '';
+  alert = false;
+  isDiseased = false;
+  healthCreditPoints = '';
+  deferralStatus = '';
+  donationHistory = {};
+  medicalHistory = {};
+  deferredOn = '';
+  deferredReason = '';
+  deferredTenure = 0;
+  deferredAt = '';
+  sensitiveMedicalHistory: MedicalHistory = {};
+
+  constructor(readonly patientRecord: PatientRecord) {
+    this.healthId = patientRecord.healthId;
+    this.firstName = patientRecord.firstName;
+    this.lastName = patientRecord.lastName;
+    this.bloodGroup = patientRecord.bloodGroup;
+    this.sex = patientRecord.sex;
+    this.alert = patientRecord.alert;
+    this.isDiseased = patientRecord.isDiseased;
+    this.healthCreditPoints = patientRecord.healthCreditPoints;
+    this.deferralStatus = patientRecord.deferralStatus;
+    this.donationHistory = patientRecord.donationHistory;
+    this.medicalHistory = patientRecord.medicalHistory;
+    this.deferredOn = patientRecord.deferredOn || '';
+    this.deferredReason = patientRecord.deferredReason || '';
+    this.deferredTenure = patientRecord.deferredTenure || 0;
+    this.deferredAt = patientRecord.deferredAt || '';
+    this.sensitiveMedicalHistory = patientRecord.sensitiveMedicalHistory || {};
   }
 }
 

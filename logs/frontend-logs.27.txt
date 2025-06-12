@@ -1,96 +1,0 @@
-Script started on 2025-01-24 09:59:29+05:30 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd l[Kclient/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
-[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start
-> panel@0.0.0 start
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve
-
-[K]0;C:\WINDOWS\system32\cmd.exe ]0;ng serve[36m- [mGenerating browser application bundles...[31m[1m(node:14188) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is dep[m
-[31m[1m[31;133Hprecated.[22m[K[m
-[31m[1m(Use `node --trace-deprecation ...` to show where the warning was created)[m[K
-[36m\ [mGenerating browser application bundles (phase: building)...[K[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K
-[92mvendor.js[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[K[m
-[92mmain.js[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m613.83 kB[K[m
-[92mstyles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[m
-[92mpolyfills.js[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[K[m
-[92mruntime.js[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[m
-
-[1m [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.52 MB[22m[K
-
-Build at: [37m[1m2025-01-24T04:32:59.372Z[m - Hash: [37m[1md54178c1d9aaeb788f4e[m - Time: [37m[1m40280[mms[K
-
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
-
-
-[92m√ [mCompiled successfully.[K
-[?25l[8;31;133t[8;1H> panel@0.0.0 start[K
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[K
-[K[36m
-- [mGenerating browser application bundles...[31m[1m(node:14188) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.[22m[K[1m
-(Use `node --trace-deprecation ...` to show where the warning was created)[m[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K[92m
-vendor.js[12X[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[K[92m
-main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m613.83 kB[K[92m
-styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[92m
-polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[K[92m
-runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[m
-[K[1m
- [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.52 MB[22m[K
-[K
-Build at: [37m[1m2025-01-24T04:32:59.372Z[m - Hash: [37m[1md54178c1d9aaeb788f4e[m - Time: [37m[1m40280[mms[K
-[K
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[K
-[K
-[K[92m
-√ [mCompiled successfully.[K
-[K[?25h[?25l[8;1H> panel@0.0.0 start[K
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[K
-[K[36m
-- [mGenerating browser application bundles...[31m[1m(node:14188) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.[22m[K[1m
-(Use `node --trace-deprecation ...` to show where the warning was created)[m[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K[92m
-vendor.js[12X[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[K[92m
-main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m613.83 kB[K[92m
-styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[92m
-polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[K[92m
-runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[m
-[K[1m
- [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.52 MB[22m[K
-[K
-Build at: [37m[1m2025-01-24T04:32:59.372Z[m - Hash: [37m[1md54178c1d9aaeb788f4e[m - Time: [37m[1m40280[mms[K
-[K
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[K
-[K
-[K[92m
-√ [mCompiled successfully.[K
-[K
-[K[31;1H[?25h[?25l[8;1H[K[36m
-- [mGenerating browser application bundles...[31m[1m(node:14188) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.[22m[K[1m
-(Use `node --trace-deprecation ...` to show where the warning was created)[m[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K[92m
-vendor.js[12X[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[K[92m
-main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m613.83 kB[K[92m
-styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[92m
-polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[K[92m
-runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[m
-[K[1m
- [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.52 MB[22m[K
-[K
-Build at: [37m[1m2025-01-24T04:32:59.372Z[m - Hash: [37m[1md54178c1d9aaeb788f4e[m - Time: [37m[1m40280[mms[K
-[K
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[K
-[K
-[K[92m
-√ [mCompiled successfully.[K
-[K[?25h[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m exit
-exit
-
-Script done on 2025-01-24 14:20:06+05:30 [COMMAND_EXIT_CODE="1"]

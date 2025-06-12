@@ -7,9 +7,9 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li *ngIf="isDonor()" class="nav-item">
-        <a class="nav-link fa fa-user" [routerLink]="['/', 'donor', getUsername()]" routerLinkActive="active"
-          [ngbTooltip]="getUsername()">&nbsp;Donor</a>
+      <li *ngIf="isPatient()" class="nav-item">
+        <a class="nav-link fa fa-user" [routerLink]="['/', 'patient', getUsername()]" routerLinkActive="active"
+          [ngbTooltip]="getUsername()">&nbsp;Patient</a>
       </li>
       <li *ngIf="isSuper()" class="nav-item">
         <a class="nav-link fa fa-user" [routerLink]="['/', 'super', getUsername()]" routerLinkActive="active"

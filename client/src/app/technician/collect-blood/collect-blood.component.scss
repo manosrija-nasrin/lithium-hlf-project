@@ -1,0 +1,45 @@
+/* blood-collection.component.css */
+.blood-collection-form {
+	max-width: 400px;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input {
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+}
+
+button {
+	padding: 10px;
+	background-color: #007BFF;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #45a049;
+}
+
+.result {
+	margin-top: 20px;
+	font-weight: bold;
+}

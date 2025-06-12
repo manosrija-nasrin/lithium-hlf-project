@@ -1,10 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { SuperService } from '../../super/super.service';
-import { DisplayVal } from '../../donor/donor';
+import { DisplayVal } from '../../patient/patient';
 import { SuperViewRecord } from '../../super/super';
-import { HttpClient } from '@angular/common/http';
+import { SuperService } from '../../super/super.service';
 
 @Component({
   selector: 'app-super-list-for-admin',

@@ -2,25 +2,25 @@
 
 const fs = require('fs');
 
-const {enrollAdminHosp1} = require('./enrollAdmin-Hospital1'); // Import function to enroll admin for Hospital 1
-const {enrollAdminHosp2} = require('./enrollAdmin-Hospital2'); // Import function to enroll admin for Hospital 2
-const {enrollAdminSuperOrg} = require('./enrollAdmin-SuperOrg'); // Import function to enroll admin for Hospital 2
-const {enrollRegisterUser} = require('./registerUser'); // Import function to enroll and register a user
-const {createRedisClient} = require('./utils'); // Import utility function to create a Redis client
+const { enrollAdminHosp1 } = require('./enrollAdmin-Hospital1'); // Import function to enroll admin for Hospital 1
+const { enrollAdminHosp2 } = require('./enrollAdmin-Hospital2'); // Import function to enroll admin for Hospital 2
+const { enrollAdminSuperOrg } = require('./enrollAdmin-SuperOrg'); // Import function to enroll admin for Hospital 2
+const { enrollRegisterUser } = require('./registerUser'); // Import function to enroll and register a user
+const { createRedisClient } = require('./utils'); // Import utility function to create a Redis client
 
 const redis = require('redis'); // Import Redis library
 
 /**
- * @description Enrolls and registers the donors in the initLedger as users.
+ * @description Enrolls and registers the patients in the initLedger as users.
  */
 async function initLedger() {
   try {
-    const jsonString = fs.readFileSync('../donor-asset-transfer/chaincode/lib/initLedgerDonor.json'); // Read JSON file containing donor data
-    const donors = JSON.parse(jsonString); // Parse the JSON file
+    const jsonString = fs.readFileSync('../donor-asset-transfer/chaincode/lib/initLedgerPatient.json'); // Read JSON file containing patient data
+    const patients = JSON.parse(jsonString); // Parse the JSON file
     let i = 0;
-    for (i = 0; i < donors.length; i++) {
-      const attr = {firstName: donors[i].firstName, lastName: donors[i].lastName, role: 'donor'}; // Create attributes for each donor
-      await enrollRegisterUser('1', 'PID'+i, JSON.stringify(attr)); // Enroll and register each donor
+    for (i = 0; i < patients.length; i++) {
+      const attr = { firstName: patients[i].firstName, lastName: patients[i].lastName, role: 'patient' }; // Create attributes for each patient
+      await enrollRegisterUser('1', patients[i].healthId, JSON.stringify(attr)); // Enroll and register each patient
     }
   } catch (err) {
     console.log(err); // Log any errors
@@ -62,7 +62,7 @@ async function enrollAndRegisterDoctors() {
     const jsonString = fs.readFileSync('./initDoctors.json'); // Read JSON file containing doctor data
     const doctors = JSON.parse(jsonString); // Parse the JSON file
     for (let i = 0; i < doctors.length; i++) {
-      const attr = {fullName: doctors[i].fullName, address: doctors[i].address, phoneNumber: doctors[i].phoneNumber, emergPhoneNumber: doctors[i].emergPhoneNumber, role: 'doctor', registration: doctors[i].registration}; // Create attributes for each doctor
+      const attr = { fullName: doctors[i].fullName, address: doctors[i].address, phoneNumber: doctors[i].phoneNumber, emergPhoneNumber: doctors[i].emergPhoneNumber, role: 'doctor', registration: doctors[i].registration }; // Create attributes for each doctor
       doctors[i].hospitalId = parseInt(doctors[i].hospitalId); // Convert hospitalId to integer
       const redisClient = createRedisClient(doctors[i].hospitalId); // Create a Redis client for each hospital
       (await redisClient).SET('HOSP' + doctors[i].hospitalId + '-' + 'DOC' + doctors[i].registration, 'password'); // Set doctor credentials in Redis
@@ -83,7 +83,7 @@ async function enrollAndRegisterSupers() {
     console.debug(jsonString);
     const supers = JSON.parse(jsonString); // Parse the JSON file
     for (let i = 0; i < supers.length; i++) {
-      const attr = {fullName: supers[i].fullName, address: supers[i].address, phoneNumber: supers[i].phoneNumber, emergPhoneNumber: supers[i].emergPhoneNumber, role: 'super', registration: supers[i].registration}; // Create attributes for each doctor
+      const attr = { fullName: supers[i].fullName, address: supers[i].address, phoneNumber: supers[i].phoneNumber, emergPhoneNumber: supers[i].emergPhoneNumber, role: 'super', registration: supers[i].registration }; // Create attributes for each doctor
       supers[i].hospitalId = parseInt(supers[i].hospitalId); // Convert hospitalId to integer
       const redisClient = createRedisClient(supers[i].hospitalId); // Create a Redis client for each hospital
       (await redisClient).SET('HOSP' + supers[i].hospitalId + '-' + 'SUP' + supers[i].registration, 'password'); // Set doctor credentials in Redis
@@ -100,7 +100,7 @@ async function enrollAndRegisterTechnicians() {
     const jsonString = fs.readFileSync('./initTechnicians.json'); // Read JSON file containing technician data
     const technicians = JSON.parse(jsonString); // Parse the JSON file
     for (let i = 0; i < technicians.length; i++) {
-      const attr = {fullName: technicians[i].fullName, address: technicians[i].address, phoneNumber: technicians[i].phoneNumber, emergPhoneNumber: technicians[i].emergPhoneNumber, role: 'technician', registration: technicians[i].registration}; // Create attributes for each technician
+      const attr = { fullName: technicians[i].fullName, address: technicians[i].address, phoneNumber: technicians[i].phoneNumber, emergPhoneNumber: technicians[i].emergPhoneNumber, role: 'technician', registration: technicians[i].registration }; // Create attributes for each technician
       technicians[i].hospitalId = parseInt(technicians[i].hospitalId); // Convert hospitalId to integer
       const redisClient = createRedisClient(technicians[i].hospitalId); // Create a Redis client for each hospital
       (await redisClient).SET('HOSP' + technicians[i].hospitalId + '-' + 'TECH' + technicians[i].registration, 'password'); // Set technician credentials in Redis
@@ -113,7 +113,7 @@ async function enrollAndRegisterTechnicians() {
 };
 
 /**
- * @description Function to initialise the backend server, enrolls and register the admins and initLedger donors.
+ * @description Function to initialise the backend server, enrolls and register the admins and initLedger patients.
  * @description Need not run this manually, included as a prestart in package.json
  */
 async function main() {

@@ -5,64 +5,64 @@
  */
 
 // Classes for Node Express
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const morgan = require("morgan");
-const jwt = require("jsonwebtoken");
-const crypto = require("crypto");
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const morgan = require('morgan');
+const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
 
-const jwtSecretToken = "password";
-const refreshSecretToken = "refreshpassword";
+const jwtSecretToken = 'password';
+const refreshSecretToken = 'refreshpassword';
 let refreshTokens = [];
 
 // Express Application init
 const app = express();
-app.use(morgan("combined"));
+app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.listen(3001, () => console.log("Backend server running on 3001"));
+app.listen(3001, () => console.log('Backend server running on 3001'));
 
 // Bring key classes into scope
-const donorRoutes = require("./donor-routes");
-const doctorRoutes = require("./doctor-routes");
-const superRoutes = require("./super-routes");
-const technicianRoutes = require("./technician-routes");
-const adminRoutes = require("./admin-routes");
-const databaseRoutes = require("./databaseConnect");
-const geoRoutes = require("./geoRoutes");
+const patientRoutes = require('./patient-routes');
+const doctorRoutes = require('./doctor-routes');
+const superRoutes = require('./super-routes');
+const technicianRoutes = require('./technician-routes');
+const adminRoutes = require('./admin-routes');
+const databaseRoutes = require('./databaseConnect');
+const geoRoutes = require('./geoRoutes');
 const {
   ROLE_SUPER,
   ROLE_DOCTOR,
   ROLE_TECHNICIAN,
   ROLE_ADMIN,
-  ROLE_DONOR,
+  ROLE_PATIENT,
   CHANGE_TMP_PASSWORD,
-} = require("../utils");
-const { createRedisClient, capitalize, getMessage } = require("../utils");
-const network = require("../../donor-asset-transfer/application-javascript/app.js");
+} = require('../utils');
+const { createRedisClient, capitalize, getMessage } = require('../utils');
+const network = require('../../donor-asset-transfer/application-javascript/app.js');
 
 const authenticateJWT = (req, res, next) => {
   const authHeader = req.headers.authorization;
 
   if (authHeader) {
-    const token = authHeader.split(" ")[1];
+    const token = authHeader.split(' ')[1];
 
-    if (token === "" || token === "null") {
-      return res.status(401).send("Unauthorized request: Token is missing");
+    if (token === '' || token === 'null') {
+      return res.status(401).send('Unauthorized request: Token is missing');
     }
     jwt.verify(token, jwtSecretToken, (err, user) => {
       if (err) {
         return res
           .status(403)
-          .send("Unauthorized request: Wrong or expired token found");
+          .send('Unauthorized request: Wrong or expired token found');
       }
       req.user = user;
       next();
     });
   } else {
-    return res.status(401).send("Unauthorized request: Token is missing");
+    return res.status(401).send('Unauthorized request: Token is missing');
   }
 };
 
@@ -71,7 +71,7 @@ const authenticateJWT = (req, res, next) => {
  */
 function generateAccessToken(username, role) {
   return jwt.sign({ username: username, role: role }, jwtSecretToken, {
-    expiresIn: "5m",
+    expiresIn: '5m',
   });
 }
 
@@ -79,63 +79,63 @@ function generateAccessToken(username, role) {
  * @description Login and create a session with and add two variables to the session
  */
 
-app.post("/login", async (req, res) => {
+app.post('/login', async (req, res) => {
   try {
     // Read username and password from request body
     let { username, password, hospitalId, role } = req.body;
     hospitalId = parseInt(hospitalId);
     let user;
 
-    if (username.includes("DOC") && role === ROLE_DOCTOR) {
+    if (username.includes('DOC') && role === ROLE_DOCTOR) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
-      console.debug("got this from redis", value);
-      console.debug("got this as pw", password);
+      console.debug('got this from redis', value);
+      console.debug('got this as pw', password);
       user = value === password;
       redisClient.quit();
     }
 
-    if (username.includes("SUP") && role === ROLE_SUPER) {
+    if (username.includes('SUP') && role === ROLE_SUPER) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
-      console.debug("got this from redis", value);
-      console.debug("got this as pw", password);
+      console.debug('got this from redis', value);
+      console.debug('got this as pw', password);
       user = value === password;
       redisClient.quit();
     }
 
-    if (username.includes("admin") && role === ROLE_ADMIN) {
+    if (username.includes('admin') && role === ROLE_ADMIN) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
-      console.debug("got this from redis", value);
-      console.debug("got this as pw", password);
+      console.debug('got this from redis', value);
+      console.debug('got this as pw', password);
       user = value === password;
       redisClient.quit();
     }
 
-    if (username.includes("TECH") && role === ROLE_TECHNICIAN) {
+    if (username.includes('TECH') && role === ROLE_TECHNICIAN) {
       const redisClient = await createRedisClient(hospitalId);
       const value = await redisClient.get(username);
-      console.debug("got this from redis", value);
-      console.debug("got this as pw", password);
+      console.debug('got this from redis', value);
+      console.debug('got this as pw', password);
       user = value === password;
       redisClient.quit();
     }
 
-    if (role === ROLE_DONOR) {
+    if (role === ROLE_PATIENT) {
       const networkObj = await network.connectToNetwork(username);
       const newPassword = req.body.newPassword;
 
-      if (!newPassword || newPassword === "") {
+      if (!newPassword || newPassword === '') {
         const value = crypto
-          .createHash("sha256")
+          .createHash('sha256')
           .update(password)
-          .digest("hex");
+          .digest('hex');
         const response = await network.invoke(
           networkObj,
           true,
-          capitalize(role) + "Contract:getDonorPassword",
-          username
+          capitalize(role) + 'Contract:getPatientPassword',
+          username,
         );
         if (response.error) {
           res.status(400).send(response.error);
@@ -143,12 +143,12 @@ app.post("/login", async (req, res) => {
         } else {
           const parsedResponse = await JSON.parse(response);
           console.log(
-            "got parsed response",
+            'got parsed response',
             parsedResponse,
-            "with value",
-            value
+            'with value',
+            value,
           );
-          if (parsedResponse.password.toString("utf8") === value) {
+          if (parsedResponse.password.toString('utf8') === value) {
             !parsedResponse.pwdTemp
               ? (user = true)
               : res.status(200).send(getMessage(false, CHANGE_TMP_PASSWORD));
@@ -156,17 +156,17 @@ app.post("/login", async (req, res) => {
         }
       } else {
         let args = {
-          donorId: username,
+          healthId: username,
           newPassword: newPassword,
         };
         args = [JSON.stringify(args)];
         const response = await network.invoke(
           networkObj,
           false,
-          capitalize(role) + "Contract:updateDonorPassword",
-          args
+          capitalize(role) + 'Contract:updatePatientPassword',
+          args,
         );
-        console.log("got this response on update pw", response);
+        console.log('got this response on update pw', response);
         if (response.error) {
           res.status(500).send(response.error);
           return; // Exit early if there's an error
@@ -180,7 +180,7 @@ app.post("/login", async (req, res) => {
       const accessToken = generateAccessToken(username, role);
       const refreshToken = jwt.sign(
         { username: username, role: role },
-        refreshSecretToken
+        refreshSecretToken,
       );
       refreshTokens.push(refreshToken);
       res.status(200);
@@ -189,19 +189,19 @@ app.post("/login", async (req, res) => {
         refreshToken,
       });
     } else {
-      res.status(400).send({ error: "Username or password incorrect!" });
+      res.status(400).send({ error: 'Username or password incorrect!' });
     }
   } catch (error) {
     // Handle any errors that occur within the try block
-    console.error("Error occurred:", error);
-    res.status(500).send({ error: "An unexpected error occurred." });
+    console.error('Error occurred:', error);
+    // res.status(500).send({ error: 'An unexpected error occurred.' });
   }
 });
 
 /**
  * @description Creates a new accessToken when refreshToken is passed in post request
  */
-app.post("/token", (req, res) => {
+app.post('/token', (req, res) => {
   const { token } = req.body;
 
   if (!token) {
@@ -230,159 +230,195 @@ app.post("/token", (req, res) => {
 /**
  * @description Logout to remove refreshTokens
  */
-app.delete("/logout", (req, res) => {
+app.delete('/logout', (req, res) => {
   refreshTokens = refreshTokens.filter((token) => token !== req.headers.token);
   res.sendStatus(204);
 });
 
 // //////////////////////////////// Admin Routes //////////////////////////////////////
-app.post("/doctors/register", authenticateJWT, adminRoutes.createDoctor);
-app.post("/supers/register", authenticateJWT, adminRoutes.createSuper);
-app.get("/donors/_all", authenticateJWT, adminRoutes.getAllDonors);
-app.post("/donors/register", authenticateJWT, adminRoutes.createDonor);
+app.post('/doctors/register', authenticateJWT, adminRoutes.createDoctor);
+app.post('/supers/register', authenticateJWT, adminRoutes.createSuper);
+app.get('/patients/_all', authenticateJWT, adminRoutes.getAllPatients);
+app.post('/patients/register', authenticateJWT, adminRoutes.createPatient);
 app.get(
-  "/technicians/:hospitalId([0-9]+)/_all",
+  '/technicians/:hospitalId([0-9]+)/_all',
   authenticateJWT,
-  adminRoutes.getTechniciansByHospitalId
+  adminRoutes.getTechniciansByHospitalId,
 );
 app.post(
-  "/technicians/register",
+  '/technicians/register',
   authenticateJWT,
-  adminRoutes.createTechnician
+  adminRoutes.createTechnician,
 );
-app.delete("/:adminId/delete/:Id", authenticateJWT, adminRoutes.deleteUser);
+app.delete('/:adminId/delete/:Id', authenticateJWT, adminRoutes.deleteUser);
 
 // //////////////////////////////// Doctor Routes //////////////////////////////////////
 app.patch(
-  "/donors/:donorId/details/medical",
+  '/patients/:healthId/details/medical',
   authenticateJWT,
-  doctorRoutes.updateDonorMedicalDetails
+  doctorRoutes.updatePatientMedicalDetails,
 );
 app.get(
-  "/doctors/:hospitalId([0-9]+)/:doctorId(HOSP[0-9]+-DOC[0-9]+)",
+  '/doctors/:hospitalId([0-9]+)/:doctorId(HOSP[0-9]+-DOC[0-9]+)',
   authenticateJWT,
-  doctorRoutes.getDoctorById
+  doctorRoutes.getDoctorById,
 );
 app.post(
-  "/doctor/screendonor/:doctorId(HOSP[0-9]+-DOC[0-9]+)",
+  '/doctor/screenpatient/:doctorId(HOSP[0-9]+-DOC[0-9]+)',
   authenticateJWT,
-  doctorRoutes.screenDonor
+  doctorRoutes.screenPatient,
 );
-app.post("/doctor/blood-collect", authenticateJWT, doctorRoutes.collectBlood);
-app.get("/doctor/MOCapproval", authenticateJWT, doctorRoutes.MOCapproval);
+app.post('/doctor/blood-collect', authenticateJWT, doctorRoutes.collectBlood);
+app.get('/doctor/MOCapproval', authenticateJWT, doctorRoutes.MOCapproval);
 app.post(
-  "/doctor/sendMOCapproval",
+  '/doctor/sendMOCapproval',
   authenticateJWT,
-  doctorRoutes.sendMOCapproval
+  doctorRoutes.sendMOCapproval,
+);
+app.get('/doctor/checkpatientstatus',
+  authenticateJWT, doctorRoutes.checkPatientStatus,
+);
+// /doctor/:doctorId(HOSP[0-9]+-DOC[0-9]+)/request-access/:healthId
+app.post('/doctor/:doctorId/request-access/:healthId',  // TODO: Make separate considerations for doctorID and patientID
+  authenticateJWT,
+  doctorRoutes.requestAccessToSensitiveData,
 );
 
 // //////////////////////////////// Super Routes //////////////////////////////////////
 app.get(
-  "/supers/:hospitalId([0-9]+)/:superId(HOSP[0-9]+-SUP[0-9]+)",
-  authenticateJWT,
-  superRoutes.getSuperById
+  '/supers/:hospitalId([0-9]+)/:superId(HOSP[0-9]+-SUP[0-9]+)',
+  authenticateJWT, superRoutes.getSuperById,
 );
 app.get(
-  "/supers/:hospitalId([0-9]+)/:superId(HOSP[0-9]+-SUP[0-9]+)/blockedlist",
-  authenticateJWT,
-  superRoutes.getBlockedDonors
+  '/supers/:hospitalId([0-9]+)/:superId(HOSP[0-9]+-SUP[0-9]+)/deferredlist',
+  authenticateJWT, superRoutes.getDeferredPatients,
 );
-app.get("/supers/:hospitalId([0-9]+)/_all", authenticateJWT, adminRoutes.getSupersByHospitalId);
+app.get('/supers/:hospitalId([0-9]+)/_all',
+  authenticateJWT, adminRoutes.getSupersByHospitalId);
+app.get('/super/checkpatientstatus',
+  authenticateJWT, superRoutes.checkPatientStatus,
+);
+app.get('/super/get-access-requests',
+  authenticateJWT, superRoutes.getAccessRequests,
+);
+app.post('/super/:superId(HOSP[0-9]+-SUP[0-9]+)/approve-access-request',
+  authenticateJWT, superRoutes.approveAccessRequest);
+app.post('/super/:superId(HOSP[0-9]+-SUP[0-9]+)/reject-access-request',
+  authenticateJWT, superRoutes.rejectAccessRequest);
 
-/////////////////////////////////// Technician Routes //////////////////////////////////
+// ///////////////////////////////// Technician Routes //////////////////////////////////
 app.get(
-  "/technicians/:hospitalId([0-9]+)/:technicianId(HOSP[0-9]+-TECH[0-9]+)",
+  '/technicians/:hospitalId([0-9]+)/:technicianId(HOSP[0-9]+-TECH[0-9]+)',
   authenticateJWT,
-  technicianRoutes.getTechnicianById
+  technicianRoutes.getTechnicianById,
 );
-app.post("/technician/bloodtest", authenticateJWT, async (req, res) => {
+app.post(
+  '/technician/:technicianId(HOSP[0-9]+-TECH[0-9]+)/addhealthreport',
+  authenticateJWT,
+  technicianRoutes.addHealthReportResults,
+);
+app.post('/technician/bloodtest', authenticateJWT, async (req, res) => {
   try {
     await technicianRoutes.bloodTestOfBloodBags(req, res);
-    console.log("FINISHED" + res);
+    console.log('FINISHED' + res);
   } catch (error) {
-    console.error("Error handling bloodtest request:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    console.error('Error handling bloodtest request:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 app.post(
-  "/technician/readbloodbag",
+  '/technician/readbloodbag',
   authenticateJWT,
-  technicianRoutes.readBloodBag
+  technicianRoutes.readBloodBag,
 );
 app.get(
-  "/technician/checkbloodavailability",
+  '/technician/checkbloodavailability',
   authenticateJWT,
-  technicianRoutes.checkBloodAvailability
+  technicianRoutes.checkBloodAvailability,
 );
 app.post(
-  "/technician/bloodallocation",
+  '/technician/bloodallocation',
   authenticateJWT,
-  technicianRoutes.allocateBag
+  technicianRoutes.allocateBag,
+);
+app.get('/technician/checkpatientstatus',
+  authenticateJWT, technicianRoutes.checkPatientStatus,
+);
+app.post('/technician/addttiresult', authenticateJWT, technicianRoutes.addTtiResults);
+app.post(
+  '/technician/crossmatchblood',
+  authenticateJWT,
+  technicianRoutes.crossMatchResults,
 );
 app.post(
-  "/technician/crossmatchblood",
+  '/technician/finalDispatch',
   authenticateJWT,
-  technicianRoutes.crossMatchResults
+  technicianRoutes.confirmbloodReceival,
 );
 app.post(
-  "/technician/finalDispatch",
+  '/technician/readreceiverbloodbag',
   authenticateJWT,
-  technicianRoutes.confirmbloodReceival
+  technicianRoutes.readReceiverBloodBag,
 );
 app.post(
-  "/technician/readreceiverbloodbag",
+  '/technician/bloodrequest',
   authenticateJWT,
-  technicianRoutes.readReceiverBloodBag
+  technicianRoutes.bloodRequest,
 );
 app.post(
-  "/technician/bloodrequest",
+  '/technician/readallocatedbloodbag',
   authenticateJWT,
-  technicianRoutes.bloodRequest
+  technicianRoutes.readAllocatedBloodBag,
+);
+app.get('/technician/LTapproval', authenticateJWT, technicianRoutes.LTapproval);
+app.post(
+  '/technician/sendLTapproval',
+  authenticateJWT,
+  technicianRoutes.sendLTapproval,
 );
 app.post(
-  "/technician/readallocatedbloodbag",
+  '/technician/screenpatient/:doctorId(HOSP[0-9]+-TECH[0-9]+)',
   authenticateJWT,
-  technicianRoutes.readAllocatedBloodBag
+  technicianRoutes.screenPatient,
 );
-app.get("/technician/LTapproval", authenticateJWT, technicianRoutes.LTapproval);
-app.post(
-  "/technician/sendLTapproval",
-  authenticateJWT,
-  technicianRoutes.sendLTapproval
-);
+app.post('/technician/blood-collect', authenticateJWT, technicianRoutes.collectBlood);
 
-// //////////////////////////////// Donor Routes //////////////////////////////////////
-app.get("/donors/:donorId", authenticateJWT, donorRoutes.getDonorById);
+// //////////////////////////////// Patient Routes //////////////////////////////////////
+app.get('/patients/:healthId', authenticateJWT, patientRoutes.getPatientById);
 app.patch(
-  "/donors/:donorId/details/personal",
+  '/patients/:healthId/details/personal',
   authenticateJWT,
-  donorRoutes.updateDonorPersonalDetails
+  patientRoutes.updatePatientPersonalDetails,
 );
 app.get(
-  "/donors/:donorId/history",
+  '/patients/:healthId/history',
   authenticateJWT,
-  donorRoutes.getDonorHistoryById
+  patientRoutes.getPatientHistoryById,
 );
 app.get(
-  "/doctors/:hospitalId([0-9]+)/_all",
+  '/doctors/:hospitalId([0-9]+)/_all',
   authenticateJWT,
-  adminRoutes.getDoctorsByHospitalId
+  adminRoutes.getDoctorsByHospitalId,
 );
 app.patch(
-  "/donors/:donorId/grant/:doctorId",
+  '/patients/:healthId/grant/:doctorId',
   authenticateJWT,
-  donorRoutes.grantAccessToDoctor
+  patientRoutes.grantAccessToDoctor,
 );
 app.patch(
-  "/donors/:donorId/revoke/:doctorId",
+  '/patients/:healthId/revoke/:doctorId',
   authenticateJWT,
-  donorRoutes.revokeAccessFromDoctor
+  patientRoutes.revokeAccessFromDoctor,
 );
+app.get('/patients/:healthId/sensitive-medical-history',
+  authenticateJWT,
+  patientRoutes.getSensitiveMedicalHistory,
+)
 
-///////////////////////////////////DatabaseConnect Routes /////////////////////////////
-app.get("/viewhospitals", databaseRoutes.queryHospital);
-app.post("/addHospital", databaseRoutes.insertHospital);
-app.get("/displayStocksBelowThreshold", databaseRoutes.getStocksBelowThreshold);
+// /////////////////////////////////DatabaseConnect Routes /////////////////////////////
+app.get('/viewhospitals', databaseRoutes.queryHospital);
+app.post('/addHospital', databaseRoutes.insertHospital);
+app.get('/displayStocksBelowThreshold', databaseRoutes.getStocksBelowThreshold);
 
-/////////////////////////////////// Geo Routes ////////////////////////////////////////
-app.get("/geo/:Latitude/:Longitude", geoRoutes.sortRecords);
+// ///////////////////////////////// Geo Routes ////////////////////////////////////////
+app.get('/geo/:Latitude/:Longitude', geoRoutes.sortRecords);

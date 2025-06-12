@@ -18,7 +18,7 @@
                 <option value="super">Super</option>
                 <option value="doctor">Doctor</option>
                 <option value="technician">Technician</option>
-                <option value="donor">Donor</option>
+                <option value="patient">Patient</option>
               </select>
             </div>
             <div class="form-group mt-3" *ngIf="showHospList">
@@ -27,7 +27,7 @@
                 [(ngModel)]="hospitalId">
                 <option value="1">Hospital 1</option>
                 <option value="2">Hospital 2</option>
-                <option value="3">Super Org</option>
+                <!-- <option value="3">Super Org</option> -->
               </select>
             </div>
             <div class="form-group mt-3">
@@ -45,7 +45,7 @@
               <div>
                 <p class="alert alert alert-danger">Please change the temporary password immediately.</p>
               </div>
-              <button type="button" class="btn btn-success float-right mt-2" (click)="loginDonor(donorPassword)">
+              <button type="button" class="btn btn-success float-right mt-2" (click)="loginPatient(patientPassword)">
                 Create new password
               </button>
             </ng-container>
@@ -71,7 +71,7 @@
 
 </div>
 
-<ng-template #donorPassword let-close="close" let-dismiss="dismiss">
+<ng-template #patientPassword let-close="close" let-dismiss="dismiss">
   <div class="modal-header">
     <h4 class="modal-title">
       <i class="fa fa-key mr-2"></i>Password
@@ -87,7 +87,7 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button type="button" id="donorPwd" class="btn btn-danger" [disabled]="!pwd" (click)="close('Confirm password')">
+    <button type="button" id="patientPwd" class="btn btn-danger" [disabled]="!pwd" (click)="close('Confirm password')">
       Confirm password and login
     </button>
     <button type="button" class="btn btn-outline-dark" (click)="dismiss('Cancel click')">Cancel</button>

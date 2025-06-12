@@ -5,8 +5,8 @@
         "bloodBagSegmentNo": "59",
         "dateOfCollection": "2023-5-13",
         "quantity": "350",
-        "dateOfExpiry":"2023-6-13",
-        "bloodGroup":"O+"
+        "dateOfExpiry": "2023-6-13",
+        "bloodGroup": "O+"
     },
     {
         "type": "tempRecord",
@@ -14,7 +14,7 @@
         "bloodBagSegmentNo": "54",
         "dateOfCollection": "2023-9-20",
         "quantity": "350",
-        "dateOfExpiry":"2023-9-20",
-        "bloodGroup":"AB+"
+        "dateOfExpiry": "2023-9-20",
+        "bloodGroup": "AB+"
     }
 ]

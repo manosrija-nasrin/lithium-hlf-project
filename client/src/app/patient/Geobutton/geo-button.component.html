@@ -1,0 +1,31 @@
+<div>
+	<form (ngSubmit)="getLocation()">
+		<div class="form-group">
+			<label for="bloodGroup">Blood Group:</label>
+			<select id="bloodGroup" name="bloodGroup" class="select-blood-group" [(ngModel)]="bloodGroup" required>
+				<option value="" disabled selected>Select a blood group</option>
+				<option *ngFor="let group of bloodGroups" [value]="group">{{ group }}</option>
+			</select>
+		</div>
+		<button type="submit" class="geo-btn" [disabled]="!bloodGroup || loading">Get nearest hospitals</button>
+	</form>
+	<div *ngIf="loading" class="loading-message">Getting all nearest hospitals. Please wait for some time...</div>
+</div>
+
+<div *ngIf="responseData && responseData.length > 0" class="response-container">
+	<h3>Nearest hospitals from your current location:</h3>
+	<ul>
+		<li *ngFor="let hospital of responseData">
+			<div>
+				<strong>Hospital Name: </strong> {{ hospital.HospitalName }}
+			</div>
+			<div>
+				<strong>Address: </strong> {{ hospital.Address }}
+			</div>
+			<div>
+				<strong>Total Quantity: </strong> {{ hospital.TotalQuantity }}
+			</div>
+		</li>
+	</ul>
+</div>
+<div *ngIf="emptyResponse" class="empty-response-message">No hospitals found nearby.</div>

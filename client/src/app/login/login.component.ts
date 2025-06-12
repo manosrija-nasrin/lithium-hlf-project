@@ -4,7 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { AuthService } from '../core/auth/auth.service';
 import { HospitalUser, User } from '../User';
-import { BrowserStorageFields, RoleEnum } from '../utils';
+import { RoleEnum } from '../utils';
 
 @Component({
   selector: 'app-login',
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
   }
 
   public roleChanged(): void {
-    this.showHospList = this.role !== RoleEnum.DONOR;
+    this.showHospList = this.role !== RoleEnum.PATIENT;
   }
 
   public loginUser(): void {
@@ -67,8 +67,8 @@ export class LoginComponent implements OnInit {
             (err: any) => this.error.message = err.message
           );
         break;
-      case RoleEnum.DONOR:
-        this.authService.loginDonorUser(new User(this.role, this.username, this.pwd, this.newPwd))
+      case RoleEnum.PATIENT:
+        this.authService.loginPatientUser(new User(this.role, this.username, this.pwd, this.newPwd))
           .subscribe(
             (res: any) => this.afterSuccessfulLogin(res),
             (err: any) => this.error.message = err.message
@@ -84,8 +84,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  public loginDonor(donorPassword: TemplateRef<any>): void {
-    this.modal.open(donorPassword).result.then(() => {
+  public loginPatient(patientPassword: TemplateRef<any>): void {
+    this.modal.open(patientPassword).result.then(() => {
       this.loginUser();
     });
   }

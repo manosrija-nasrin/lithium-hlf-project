@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 exports.buildCCPHosp1 = () => {
-  
+
   const ccpPath = path.resolve(__dirname, '..', '..', 'first-network',
     'organizations', 'peerOrganizations', 'hosp1.lithium.com', 'connection-hosp1.json');
   const fileExists = fs.existsSync(ccpPath);
@@ -32,7 +32,6 @@ exports.buildCCPHosp2 = () => {
 };
 
 exports.buildCCPSuperOrg = () => {
-  
   const ccpPath = path.resolve(__dirname, '..', '..', 'first-network',
     'organizations', 'peerOrganizations', 'superOrg.lithium.com', 'connection-superOrg.json');
   const fileExists = fs.existsSync(ccpPath);
@@ -48,7 +47,6 @@ exports.buildCCPSuperOrg = () => {
 };
 
 exports.buildWallet = async (Wallets, walletPath) => {
-
   let wallet;
   if (walletPath) {
     wallet = await Wallets.newFileSystemWallet(walletPath);

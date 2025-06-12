@@ -1,0 +1,30 @@
+<div class="container">
+	<div *ngIf="apiResponse">
+		<ng-container *ngIf="apiResponse.status === 'success'; else failureBlock">
+			<h4 [style.color]="'green'">Request submitted !!</h4>
+		</ng-container>
+		<ng-template #failureBlock>
+			<h4 [style.color]="'red'">Request submission failed !!</h4>
+		</ng-template>
+	</div>
+	<h2>Request Access to Medical History of Patient</h2>
+
+	<form [formGroup]="requestForm" (ngSubmit)="onSubmit()">
+		<div class="form-group">
+			<label for="doctorId">Requested by:</label>
+			<input type="text" id="doctorId" formControlName="doctorId" [attr.disabled]="true">
+		</div>
+
+		<div class="form-group">
+			<label for="healthId">Requesting for Health ID:</label>
+			<input type="text" id="healthId" formControlName="healthId" [attr.disabled]="true">
+		</div>
+
+		<div class="form-group">
+			<label for="reason">Reason: </label>
+			<input type="text" id="reason" formControlName="reason" required>
+		</div>
+
+		<button type="submit" [disabled]="requestForm.invalid">Submit</button>
+	</form>
+</div>

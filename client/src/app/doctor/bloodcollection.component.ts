@@ -1,7 +1,7 @@
 // blood-collection.component.ts
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,8 +13,8 @@ import { ActivatedRoute } from '@angular/router';
 </div>
 
       <form [formGroup]="bloodCollectionForm" (submit)="submitForm()">
-        <label for="donorId">Donor ID:</label>
-        <input type="text" id="donorId" formControlName="donorId" [attr.disabled]="true">
+        <label for="healthId">Health ID:</label>
+        <input type="text" id="healthId" formControlName="healthId" [attr.disabled]="true">
         
         <label for="doctorId">Doctor ID:</label>
         <input type="text" id="doctorId" formControlName="doctorId" [attr.disabled]="true">
@@ -85,22 +85,22 @@ import { ActivatedRoute } from '@angular/router';
 export class BloodCollectionComponent implements OnInit {
   bloodCollectionForm!: FormGroup;
   resultMessage!: string;
-  donorId!: string;
+  healthId!: string;
   doctorId!: string;
 
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.donorId = params['donorId'];
+      this.healthId = params['healthId'];
       this.doctorId = params['doctorId'];
 
       this.bloodCollectionForm = this.formBuilder.group({
-        donorId: [this.donorId, Validators.required],
+        healthId: [this.healthId, Validators.required],
         doctorId: [this.doctorId, Validators.required],
         bloodBagUnitNo: ['', Validators.required],
         bloodBagSegmentNo: ['', Validators.required],

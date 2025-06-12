@@ -1,6 +1,0 @@
-Script started on 2024-10-17 12:07:34+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd se[K[Kfirst-network/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mfirst-network $[00m exit
-exit
-
-Script done on 2024-10-18 04:09:43+05:30 [COMMAND_EXIT_CODE="0"]

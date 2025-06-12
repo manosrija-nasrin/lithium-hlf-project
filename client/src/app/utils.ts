@@ -1,6 +1,6 @@
 export enum RoleEnum {
   ADMIN = 'admin',
-  DONOR = 'donor',
+  PATIENT = 'patient',
   DOCTOR = 'doctor',
   TECHNICIAN = 'technician',
   SUPER = 'super'

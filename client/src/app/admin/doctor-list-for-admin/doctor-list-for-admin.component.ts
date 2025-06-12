@@ -1,10 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { DoctorService } from '../../doctor/doctor.service';
-import { DisplayVal } from '../../donor/donor';
 import { DoctorViewRecord } from '../../doctor/doctor';
-import { HttpClient } from '@angular/common/http';
+import { DoctorService } from '../../doctor/doctor.service';
+import { DisplayVal } from '../../patient/patient';
 
 @Component({
   selector: 'app-doctor-list-for-admin',
@@ -27,7 +27,7 @@ export class DoctorListForAdminComponent implements OnInit, OnDestroy {
     private readonly route: ActivatedRoute,
     private readonly doctorService: DoctorService,
     private readonly http: HttpClient
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe((params: Params) => {

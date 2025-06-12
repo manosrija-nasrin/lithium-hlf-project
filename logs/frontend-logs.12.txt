@@ -1,306 +1,0 @@
-Script started on 2024-10-23 12:32:43+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd client/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m np[K[Kecho ""A"[1P"S"[1P"T"r"y"i"n"g" "o"u"t" "n"e"w" "c"h"a"n"g"e"s" "i"n" "F"r"o"n"t"e"n"d" "a"f"t"e"r" "a"d"d"i"n"g" "S"p"e"r"[1P"[1P"[1P"[1P"S"u"e"r"[1P"[1P"p"e"e"r"[1P"[1P"r" "r"o"l"e"[C
-Trying out new changes in Frontend after adding Super role
-]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start\[K|[K[K
-> panel@0.0.0 start
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve
-
-[K]0;C:\windows\system32\cmd.exe ]0;ng serve[36m-[m Generating browser application bundles...[1m[91m(node:19596) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is dep[m
-[1m[91mrecated.[m
-[1m[91m(Use `node --trace-deprecation ...` to show where the warning was created)[m[K
-[36m\[m Generating browser application bundles (phase: building)...[K[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[32m√[m Browser application bundle generation complete.
-
-[1m[97mInitial Chunk Files[m   | [1m[97mNames[m         |      [1m[97mSize[m[K
-[92mstyles.css, styles.js[m | styles        | [96m563.71 kB[m[K
-[92mpolyfills.js[m          | polyfills     | [96m343.95 kB[m[K
-[92mvendor.js[m             | vendor        | [96m342.28 kB[m[K
-[92mruntime.js[m            | runtime       |   [96m6.15 kB[m[K
-[92mmain.js[m               | main          |   [96m1.75 kB[m[K
-
-[1m[97m [m                     | [1m[97mInitial Total[m |   [1m[97m1.23 MB[m[K
-
-Build at: [1m[97m2024-10-23T07:05:43.682Z[m - Hash: [1m[97m37d2b45f9f159820f109[m - Time: [1m[97m23679[mms[K
-[91m
-Error: HostResourceResolver: could not resolve ./blocked-donor-list-for-super.component.scss in context of F:/blood-data-management-s[m
-[91mystem/client/src/app/super/blocked-donor-list-for-super/blocked-donor-list-for-super.component.ts)[m
-
-
-
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
-
-]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start[Knpm start
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[25l
-> panel@0.0.0 start[40X
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[6;1H[?25h[K]0;C:\windows\system32\cmd.exe ]0;ng serve[36m-[m Generating browser application bundles...[36m-[m Generating browser application bundles...[1m[91m(node:5744) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is depr
-ecated.[m[K[1m[91m
-(Use `node --trace-deprecation ...` to show where the warning was created)[m[K[36m
-\[m Generating browser application bundles (phase: building)...[K[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
-[1m[97m
-Initial Chunk Files[m   | [1m[97mNames[m         |      [1m[97mSize[m[30X[92m
-styles.css, styles.js[m | styles        | [96m563.71 kB[m[30X[92m
-polyfills.js[m          | polyfills     | [96m343.95 kB[m[30X[92m
-vendor.js[m             | vendor        | [96m342.28 kB[m[30X[92m
-runtime.js[m            | runtime       |   [96m6.15 kB[m[30X[92m
-main.js[m               | main          |   [96m1.75 kB[m[30X
-[79X[1m[97m
- [m                     | [1m[97mInitial Total[m |   [1m[97m1.23 MB[m[30X
-[79X
-Build at: [1m[97m2024-10-23T07:09:57.915Z[m - Hash: [1m[97m7ee6534c3bdcd06da4d2[m - Time: [1m[97m18257[mms[25l[91m[22;1HError: [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.html[m:[93m18[m:[93m41[m - [91merror[90m TS2339: [mProperty 'superRecords$' does n
-ot exist on type 'DoctorListForAdminComponent'.[K
-[K[30m[101m
-18[m         <tr *ngFor="let singleRecord of superRecords$ | async">[K[30m[101m
-  [m [91m                                        ~~~~~~~~~~~~~[m[K
-[K[91m
-  [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K[91m
-    [30m[101m11[m   templateUrl: './doctor-list-for-admin.component.html',[K[91m
-    [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K[91m
-    Error occurs in the template of component DoctorListForAdminComponent.[m[K[96m
-src/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.html[m:[93m29[m:[93m27[m - [91merror[90m TS2571: [mObject is of type 'unknown'.[K[?25h
-
-[30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
-[30m[101m  [m [91m                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-
-[91m  [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
-[91m    [30m[101m11[m   templateUrl: './doctor-list-for-admin.component.html',[K
-[91m    [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[91m    Error occurs in the template of component DoctorListForAdminComponent.[m[K[1m[91m
-[22m[96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.html[m:[93m29[m:[93m27[m - [91merror[90m TS2339: [mProperty[1m[91m 'superRecords$' does not exis[m
-[1m[91mt on type 'DoctorListForAdminComponent'.[m
-
-[30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
-[30m[101m  [m [91m                          ~~~~~~~~~~~~~[m[K
-
-[91m  [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
-[91m    [30m[101m11[m   templateUrl: './doctor-list-for-admin.component.html',[K
-[91m    [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[91m    Error occurs in the template of component DoctorListForAdminComponent.[m[K
-[96msrc/app/super/blocked-donor-list-for-super/blocked-donor-list-for-super.component.html[m:[93m25[m:[93m32[m - [91merror[90m TS2339: [mProperty 'blockedDate' d
-oes not exist on type 'DonorDoctorViewRecord'.
-
-[30m[101m25[m             <td>{{singleRecord.blockedDate}}</td>[K
-[30m[101m  [m [91m                               ~~~~~~~~~~~[m[K
-
-[91m  [96msrc/app/super/blocked-donor-list-for-super/blocked-donor-list-for-super.component.ts[m:[93m9[m:[93m16[m[K
-[91m    [30m[101m9[m   templateUrl: './blocked-donor-list-for-super.component.html',[K
-[91m    [30m[101m [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[91m    Error occurs in the template of component BlockedDonorListForSuperComponent.[m[K
-[96msrc/app/super/blocked-donor-list-for-super/blocked-donor-list-for-super.component.html[m:[93m26[m:[93m32[m - [91merror[90m TS2339: [mProperty 'blockedReason'
- does not exist on type 'DonorDoctorViewRecord'.
-
-[30m[101m26[m        [1m[91m     <td>{{singleRecord.blockedReason}}</td>[m[K
-[30m[101m  [m [91m                               ~~~~~~~~~~~~~[m[K
-
-[91m  [96msrc/app/super/blocked-donor-list-for-super/blocked-donor-list-for-super.component.ts[m:[93m9[m:[93m16[m[K
-[91m    [30m[101m9[m   templateUrl: './blocked-donor-list-for-super.component.html',[K
-[91m    [30m[101m [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[91m    Error occurs in the template of component BlockedDonorListForSuperComponent.[m[K
-
-
-
-
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
-
-[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
-
-[1m[97mInitial Chunk Files[m   | [1m[97mNames[m     |      [1m[97mSize[m[K
-[92mvendor.js[m             | vendor    |   [96m3.89 MB[m[K
-[92mmain.js[m               | main      | [96m599.27 kB[m[K
-[92mstyles.css, styles.js[m | styles    | [96m563.71 kB[m[K
-[92mpolyfills.js[m          | polyfills | [96m484.61 kB[m[K
-
-1 unchanged chunks
-
-Build at: [1m[97m2024-10-23T07:13:48.766Z[m - Hash: [1m[97m2a5e5c3fe7a96f781c30[m - Time: [1m[97m11480[mms[K
-
-[92m√[m Compiled successfully.[K
-[1m[91m    [m
-[1m[91m    Error: [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.html[m:[93m29[m:[93m27[m - [91merror[90m TS2571: [mObject is of type 'unknown'
-.
-[1m[91m    [m[K
-[1m[91m    [30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
-[1m[91m    [30m[101m  [m [91m                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[1m[91m    [m[K
-[1m[91m      [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
-[1m[91m        [30m[101m11[m   templateUrl: './doctor-list-for-admin.component.html',[K
-[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[1m[91m        Error occurs in the template of component DoctorListForAdminComponent.[m[K
-[1m[91m    [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.html[m:[93m29[m:[93m27[m - [91merror[90m TS2339: [mProperty 'superRecords$' does not 
-exist on type 'DoctorListForAdminComponent'.
-[1m[91m    [m[K
-[1m[91m    [30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
-[1m[91m    [30m[101m  [m [91m                          ~~~~~~~~~~~~~[m[K
-[1m[91m    [m[K
-[1m[91m      [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
-[1m[91m        [30m[101m11[m   templateUrl: './doctor-list-for-admin.component.html',[K
-[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[1m[91m        Error occurs in the template of component DoctorListForAdminComponent.[m[K
-[1m[91m    [m[K
-[36m-[m Generating browser application bundles...[1m[91m    [m
-[1m[91m    Error: [96msrc/app/super/blocked-donor-list-for-super/blocked-donor-list-for-super.component.ts[m:[93m4[m:[93m22[m - [91merror[90m TS2300: [mDuplicate identi
-fier 'DonorBlocked'.
-[1m[91m    [m[K
-[1m[91m    [30m[101m4[m import { DisplayVal, DonorBlocked, DonorDoctorViewRecord, DonorBlocked } from '../../donor/donor';[K
-[1m[91m    [30m[101m [m [91m                     ~~~~~~~~~~~~[m[K
-[1m[91m    [96msrc/app/super/blocked-donor-list-for-super/blocked-donor-list-for-super.component.ts[m:[93m4[m:[93m59[m - [91merror[90m TS2300: [mDuplicate identifier 'D
-onorBlocked'.
-[1m[91m    [m[K
-[1m[91m    [30m[101m4[m import { DisplayVal, DonorBlocked, DonorDoctorViewRecord, DonorBlocked } from '../../donor/donor';[K
-[1m[91m    [30m[101m [m [91m                                                          ~~~~~~~~~~~~[m[K
-[1m[91m    [m[K
-[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[K[80C[32m√[m Browser application bundle generation complete.
-
-[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
-[92mmain.js[m             | main  | [96m599.26 kB[m[K
-
-4 unchanged chunks
-
-Build at: [1m[97m2024-10-23T07:13:55.193Z[m - Hash: [1m[97mcb0def300cf808da3e30[m - Time: [1m[97m2150[mms[K
-
-[92m√[m Compiled successfully.[K
-[36m-[m Generating browser application bundles...[K[43C[32m√[m Browser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [1m[97m2024-10-23T07:14:00.219Z[m - Hash: [1m[97mcb0def300cf808da3e30[m - Time: [1m[97m1871[mms[K
-
-[92m√[m Compiled successfully.[K
-[1m[91m    [m
-[1m[91m    Error: [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.html[m:[93m29[m:[93m27[m - [91merror[90m TS2571: [mObject is of type 'unknown'
-.
-[1m[91m    [m[K
-[1m[91m    [30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
-[1m[91m    [30m[101m  [m [91m                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[1m[91m    [m[K
-[1m[91m      [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
-[1m[91m        [30m[101m11[m   templateUrl: './doctor-list-for-admin.component.html',[K
-[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[1m[91m        Error occurs in the template of component DoctorListForAdminComponent.[m[K
-[1m[91m    [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.html[m:[93m29[m:[93m27[m - [91merror[90m TS2339: [mProperty 'superRecords$' does not 
-exist on type 'DoctorListForAdminComponent'.
-[1m[91m    [m[K
-[1m[91m    [30m[101m29[m     <span>Total count: {{(superRecords$ | async)?.length}}</span>[K
-[1m[91m    [30m[101m  [m [91m                          ~~~~~~~~~~~~~[m[K
-[1m[91m    [m[K
-[1m[91m      [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.ts[m:[93m11[m:[93m16[m[K
-[1m[91m        [30m[101m11[m   templateUrl: './doctor-list-for-admin.component.html',[K
-[1m[91m        [30m[101m  [m [96m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[1m[91m        Error occurs in the template of component DoctorListForAdminComponent.[m[K
-[1m[91m    [m[K
-]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start
-> panel@0.0.0 start
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve
-
-[K]0;C:\windows\system32\cmd.exe ]0;ng serve[36m-[m Generating browser application bundles...[1m[91m(node:26992) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is dep[m
-[1m[91mrecated.[m
-[1m[91m(Use `node --trace-deprecation ...` to show where the warning was created)[m[K
-[36m\[m Generating browser application bundles (phase: building)...[K[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
-
-[1m[97mInitial Chunk Files[m   | [1m[97mNames[m         |      [1m[97mSize[m[K
-[92mvendor.js[m             | vendor        |   [96m3.89 MB[m[K
-[92mmain.js[m               | main          | [96m599.26 kB[m[K
-[92mstyles.css, styles.js[m | styles        | [96m563.71 kB[m[K
-[92mpolyfills.js[m          | polyfills     | [96m484.61 kB[m[K
-[92mruntime.js[m            | runtime       |   [96m6.15 kB[m[K
-
-[1m[97m [m                     | [1m[97mInitial Total[m |   [1m[97m5.50 MB[m[K
-
-Build at: [1m[97m2024-10-23T07:15:30.427Z[m - Hash: [1m[97m0c24cce32ad7654315ca[m - Time: [1m[97m12494[mms[K
-
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
-
-
-[92m√[m Compiled successfully.[K
-[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
-
-[1m[97mInitial Chunk Files[m   | [1m[97mNames[m  |      [1m[97mSize[m[K
-[92mmain.js[m               | main   | [96m599.26 kB[m[K
-[92mstyles.css, styles.js[m | styles | [96m563.71 kB[m[K
-
-3 unchanged chunks
-
-Build at: [1m[97m2024-10-23T07:30:29.322Z[m - Hash: [1m[97m2e46a7c773e19aebc5c4[m - Time: [1m[97m2933[mms[K
-
-[92m√[m Compiled successfully.[K
-[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
-
-[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
-[92mmain.js[m             | main  | [96m599.35 kB[m[K
-
-4 unchanged chunks
-
-Build at: [1m[97m2024-10-23T07:39:17.834Z[m - Hash: [1m[97medc8e7eb1ece87c8460d[m - Time: [1m[97m4210[mms[K
-
-[92m√[m Compiled successfully.[K
-[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
-
-[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
-[92mmain.js[m             | main  | [96m599.71 kB[m[K
-
-4 unchanged chunks
-
-Build at: [1m[97m2024-10-23T07:39:55.255Z[m - Hash: [1m[97m25401b49fb057169571a[m - Time: [1m[97m2849[mms[K
-
-[92m√[m Compiled successfully.[K
-[36m-[m Generating browser application bundles...[K[43C[32m√[m Browser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [1m[97m2024-10-23T07:39:57.953Z[m - Hash: [1m[97m25401b49fb057169571a[m - Time: [1m[97m2474[mms[K
-
-[92m√[m Compiled successfully.[K
-[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
-
-[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
-[92mmain.js[m             | main  | [96m599.29 kB[m[K
-
-4 unchanged chunks
-
-Build at: [1m[97m2024-10-23T08:16:02.251Z[m - Hash: [1m[97m845bc3755489d806a423[m - Time: [1m[97m3606[mms[K
-
-[92m√[m Compiled successfully.[K
-[36m-[m Generating browser application bundles...[K[43C[36m\[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
-
-[1m[97mInitial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[m[K
-[92mmain.js[m             | main  | [96m599.30 kB[m[K
-
-4 unchanged chunks
-
-Build at: [1m[97m2024-10-23T08:16:39.832Z[m - Hash: [1m[97mb16d36b73b31567ad98a[m - Time: [1m[97m889[mms[K
-
-[92m√[m Compiled successfully.[K
-[25l[H[K[92m
-√[m Compiled successfully.[K[32m
-√[m Browser application bundle generation complete.[K
-[K
-5 unchanged chunks[K
-[K
-Build at: [1m[97m2024-10-23T07:39:57.953Z[m - Hash: [1m[97m25401b49fb057169571a[m - Time: [1m[97m2474[mms[K
-[K[92m
-√[m Compiled successfully.[K[32m
-√[m Browser application bundle generation complete.[K
-[K[1m[97m
-Initial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[K[22m[92m
-main.js[m             | main  | [96m599.29 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [1m[97m2024-10-23T08:16:02.251Z[m - Hash: [1m[97m845bc3755489d806a423[m - Time: [1m[97m3606[mms[K
-[K[92m
-√[m Compiled successfully.[K[32m
-√[m Browser application bundle generation complete.[K
-[K[1m[97m
-Initial Chunk Files[m | [1m[97mNames[m |      [1m[97mSize[K[22m[92m
-main.js[m             | main  | [96m599.30 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [1m[97m2024-10-23T08:16:39.832Z[m - Hash: [1m[97mb16d36b73b31567ad98a[m - Time: [1m[97m889[mms[K
-[K[92m
-√[m Compiled successfully.[K
-[K[?25h]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m exir[Kt
-exit
-
-Script done on 2024-10-23 21:08:27+05:30 [COMMAND_EXIT_CODE="1"]

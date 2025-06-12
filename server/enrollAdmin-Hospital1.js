@@ -2,11 +2,11 @@
  * @desc Execute this file to create and enroll an admin at Hospital 1.
  */
 
-const {Wallets} = require('fabric-network');
+const { Wallets } = require('fabric-network');
 const FabricCAServices = require('fabric-ca-client');
 const path = require('path');
-const {buildCAClient, enrollAdmin} = require('../donor-asset-transfer/application-javascript/CAUtil.js');
-const {buildCCPHosp1, buildWallet} = require('../donor-asset-transfer/application-javascript/AppUtil.js');
+const { buildCAClient, enrollAdmin } = require('../donor-asset-transfer/application-javascript/CAUtil.js');
+const { buildCCPHosp1, buildWallet } = require('../donor-asset-transfer/application-javascript/AppUtil.js');
 const adminHospital1 = 'hosp1admin';
 const adminHospital1Passwd = 'hosp1lithium';
 
@@ -19,7 +19,7 @@ const walletPath = path.join(__dirname, '../donor-asset-transfer/application-jav
 /**
  * @description This functions enrolls the admin of Hospital 1
  */
-exports.enrollAdminHosp1 = async function() {
+exports.enrollAdminHosp1 = async function () {
   try {
     // build an in memory object with the network configuration (also known as a connection profile)
     const ccp = buildCCPHosp1();

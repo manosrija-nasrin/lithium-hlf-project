@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs/operators';
 import { HospitalUser, User } from '../../User';
@@ -27,8 +27,8 @@ export class AuthService {
     return this.http.post<any>(this.loginUrl, technicianUser);
   }
 
-  public loginDonorUser(donorUser: User): any {
-    return this.http.post<any>(this.loginUrl, donorUser);
+  public loginPatientUser(patientUser: User): any {
+    return this.http.post<any>(this.loginUrl, patientUser);
   }
 
   public getNewAccessToken(): any {
@@ -100,7 +100,7 @@ export class AuthService {
     localStorage.removeItem(BrowserStorageFields.USERNAME);
     localStorage.removeItem(BrowserStorageFields.TOKEN_EXPIRY);
   }
-  
+
   public isTokenExpired(): boolean {
     const expiry = localStorage.getItem(BrowserStorageFields.TOKEN_EXPIRY);
     if (!expiry) {
