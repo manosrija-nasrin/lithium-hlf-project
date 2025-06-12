@@ -1,1051 +1,0 @@
-Script started on 2025-05-22 15:18:53+05:30 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd server/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m cd server/./install-chaincode.sh -c donor -v 16 -s 17[C[C[C[C[C[C[C[C[Ccd server/[K[Knpm start
-[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
-> donor-application@1.0.0 prestart
-> node initServer.js[9;1H[?25h[K[?25l[K
-> donor-application@1.0.0 start
-> node node_modules/nodemon/bin/nodemon.js src/server.js[13;1H[K[?25h[33m[nodemon] 1.19.4
-[m[33m[nodemon] to restart at any time, enter `rs`
-[nodemon] watching dir(s): *.*
-[nodemon] watching extensions: js,mjs,json[32m
-[nodemon] starting `node src/server.js`
-[mBackend server running on 3001
-Connected to the database
-::1 - - [22/May/2025:09:52:28 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:52:28 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:53:11 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-got this from redis password
-got this as pw password
-::1 - - [22/May/2025:09:53:12 +0000] "POST /login HTTP/1.1" 200 387 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:53:12 +0000] "OPTIONS /doctors/2/HOSP2-DOC32850 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
-[31;133Hium.com\connection-hosp2.json
-Built a CA Client named ca-hosp2
-::1 - - [22/May/2025:09:53:13 +0000] "GET /doctors/2/HOSP2-DOC32850 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
-[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:53:14 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:53:14 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1249 more bytes>
-::1 - - [22/May/2025:09:53:14 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
-[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1249 more bytes>
-::1 - - [22/May/2025:09:53:15 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
-[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:53:17 +0000] "OPTIONS /donors/842886637084 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
-[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 38 34 32 38 38 36 36 33 37 30 38 34 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 50 6f
-[31;133Hf 72 74 69 61 22 2c 22 6c ... 161 more bytes>
-::1 - - [22/May/2025:09:53:17 +0000] "GET /donors/842886637084 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
-[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:54:03 +0000] "OPTIONS /doctor/screendonor/HOSP2-DOC32850 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.
-[31;133H.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-{
-  healthId: [32m'842886637084'[m,[K
-  doctorId: [32m'HOSP2-DOC32850'[m,[K
-  dob: [32m'1998-10-30'[m,[K
-  pulse: [32m'65'[m,[K
-  systolic: [32m'80'[m,[K
-  diastolic: [32m'120'[m,[K
-  haemoglobin: [32m'13'[m,[K
-  anaemia: [32m'false'[m,[K
-  weight: [32m'75'[m,[K
-  haemophiliaA: [32m'false'[m,[K
-  haemophiliaB: [32m'false'[m,[K
-  cardiovascular: [32m'false'[m,[K
-  hypertension: [32m'false'[m,[K
-  asthma: [32m'false'[K[m
-}
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-{
-  healthId: [32m'842886637084'[m,[K
-  doctorId: [32m'HOSP2-DOC32850'[m,[K
-  dob: [32m'1998-10-30'[m,[K
-  pulse: [32m'65'[m,[K
-  systolic: [32m'80'[m,[K
-  diastolic: [32m'120'[m,[K
-  haemoglobin: [32m'13'[m,[K
-  anaemia: [32m'false'[m,[K
-  weight: [32m'75'[m,[K
-  haemophiliaA: [32m'false'[m,[K
-  haemophiliaB: [32m'false'[m,[K
-  cardiovascular: [32m'false'[m,[K
-  hypertension: [32m'false'[m,[K
-  asthma: [32m'false'[K[m
-}
-{}
-::1 - - [22/May/2025:09:54:06 +0000] "POST /doctor/screendonor/HOSP2-DOC32850 HTTP/1.1" 200 57 "http://localhost:4200/" "Mozilla/5.0 
-[31;133H (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:54:12 +0000] "OPTIONS /doctors/2/HOSP2-DOC32850 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
-[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
-[31;133Hium.com\connection-hosp2.json
-Built a CA Client named ca-hosp2
-::1 - - [22/May/2025:09:54:12 +0000] "GET /doctors/2/HOSP2-DOC32850 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
-[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:54:14 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:54:14 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1252 more bytes>
-::1 - - [22/May/2025:09:54:14 +0000] "GET /donors/_all HTTP/1.1" 200 1302 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
-[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1252 more bytes>
-::1 - - [22/May/2025:09:54:15 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
-[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:54:17 +0000] "OPTIONS /donors/842886637084 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
-[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 38 34 32 38 38 36 36 33 37 30 38 34 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 50 6f
-[31;133Hf 72 74 69 61 22 2c 22 6c ... 293 more bytes>
-::1 - - [22/May/2025:09:54:17 +0000] "GET /donors/842886637084 HTTP/1.1" 200 343 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
-[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:54:45 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
-[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:54:45 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
-[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:55:00 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
-[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-got this from redis hosp1lithium
-got this as pw hosp1lithium
-::1 - - [22/May/2025:09:55:00 +0000] "POST /login HTTP/1.1" 200 373 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
-[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:09:55:37 +0000] "OPTIONS /donors/register HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
-[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-{
-  firstName: [32m'Olive'[m,[K
-  lastName: [32m'Randall'[m,[K
-  address: [32m'Earth'[m,[K
-  dob: [32m'1988-05-22'[m,[K
-  phoneNumber: [32m'8974562135'[m,[K
-  aadhar: [32m'174517451256'[m,[K
-  bloodGroup: [32m'B-'[m,[K
-  sex: [32m'F'[m,[K
-  alert: [1mnull[22m,[K
-  isDiseased: [1mnull[22m,[K
-  creditCard: [1mnull[22m,[K
-  donationStatus: [1mnull[22m,[K
-  donationHistory: [1mnull[22m,[K
-  healthId: [32m''[m,[K
-  password: [32m'9z14xqqn'[m,[K
-  changedBy: [32m'hosp1admin'[K[m
-}
-{}
-Donor ID: 427068311100
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a CA Client named ca-hosp1
-Successfully registered and enrolled user 427068311100 and imported it into the wallet
-Successfully registered user: + 427068311100
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a CA Client named ca-hosp1
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
-[31;133Hithium.com\connection-superOrg.json
-Built a CA Client named ca-superOrg
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
-[31;133Hium.com\connection-hosp2.json
-Built a CA Client named ca-hosp2
-{ healthId: [32m'427068311100'[m, doctorId: [32m'HOSP1-DOC32849' [m}
-{}
-2025-05-22T09:55:41.543Z - [31merror[m: [Transaction]: Error: No valid responses from any peers. Errors:
-    peer=peer0.hosp2.lithium.com:9051, status=500, message=The patient hosp1admin does not have permission to view 427068311100      
-    at newEndorsementError (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-network\l
-[31;133Hlib\transaction.js:77:12)
-    at getResponsePayload (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-network\li
-[31;133Hib\transaction.js:45:23)
-    at Transaction.submit (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\fabric-network\li
-[31;133Hib\transaction.js:258:28)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async exports.createDonor (F:\blood-data-management-system\server\src\admin-routes.js:92:16)
-[?25lnode:internal/process/promises:289
-            triggerUncaughtException(err, true /* fromPromise */);
-            ^
-
-Error: No valid responses from any peers. Errors:
-    peer=peer0.hosp2.lithium.com:9051, status=500, message=The patient hosp1admin does not have permission to view 427068311100      [32;128H[?25h
-    at newEndorsementError (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\[4mfabric-network[24m\l
-[31;133Hlib\transaction.js:77:12)
-    at getResponsePayload (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\[4mfabric-network[24m\li
-[31;133Hib\transaction.js:45:23)
-    at Transaction.submit (F:\blood-data-management-system\donor-asset-transfer\application-javascript\node_modules\[4mfabric-network[24m\li
-[31;133Hib\transaction.js:258:28)
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[m
-    at async exports.createDonor [90m(F:\blood-data-management-system\server\[msrc\admin-routes.js:92:16[90m) [m{[K
-  responses: [
-    {
-      version: [33m0[m,[K
-      timestamp: [1mnull[22m,[K
-      response: {
-        status: [33m500[m,[K
-        message: [32m'The patient hosp1admin does not have permission to view 427068311100'[m,[K
-        payload: Buffer(0) [Uint8Array] []
-      },
-      payload: Buffer(238) [Uint8Array] [
-[33m[9C10[m,  [33m32[m, [33m225[m,  [33m22[m,  [33m79[m, [33m246[m, [33m251[m, [33m139[m, [33m148[m,  [33m20[m, [33m236[m,  [33m69[m,[K
-        [33m191[m, [33m137[m, [33m238[m, [33m184[m,  [33m66[m,  [33m12[m,  [33m13[m, [33m249[m, [33m226[m,  [33m48[m,  [33m46[m, [33m180[m,[K
-        [33m218[m, [33m142[m,  [33m52[m,  [33m54[m,  [33m71[m, [33m203[m, [33m248[m, [33m252[m,  [33m81[m,  [33m47[m,  [33m18[m, [33m201[m,[K
-[33m[10C1[m,  [33m10[m, [33m111[m,  [33m18[m,  [33m54[m,  [33m10[m,  [33m10[m,  [33m95[m, [33m108[m, [33m105[m, [33m102[m, [33m101[m,[K
-[33m[9C99[m, [33m121[m,  [33m99[m, [33m108[m, [33m101[m,  [33m18[m,  [33m40[m,  [33m10[m,  [33m38[m,  [33m10[m,  [33m32[m, [33m110[m,[K
-[33m[9C97[m, [33m109[m, [33m101[m, [33m115[m, [33m112[m,  [33m97[m,  [33m99[m, [33m101[m, [33m115[m,  [33m47[m, [33m102[m, [33m105[m,[K
-        [33m101[m, [33m108[m, [33m100[m, [33m115[m,  [33m47[m, [33m100[m, [33m111[m, [33m110[m, [33m111[m, [33m114[m,  [33m47[m,  [33m83[m,[K
-        [33m101[m, [33m113[m, [33m117[m, [33m101[m, [33m110[m,  [33m99[m, [33m101[m,  [33m18[m,   [33m2[m,   [33m8[m, [33m104[m,  [33m18[m,[K
-[33m[9C53[m,  [33m10[m,   [33m5[m, [33m100[m,[K
-        ... 138 more items
-      ],
-      endorsement: [1mnull[22m,[K
-      connection: {
-        type: [32m'Endorser'[m,[K
-        name: [32m'peer0.hosp2.lithium.com:9051'[m,[K
-        url: [32m'grpcs://localhost:9051'[m,[K
-        options: {
-[32m[10C'grpc.max_receive_message_length'[m: [33m-1[m,[K
-[32m[10C'grpc.max_send_message_length'[m: [33m-1[m,[K
-[32m[10C'grpc.keepalive_time_ms'[m: [33m120000[m,[K
-[32m[10C'grpc.http2.min_time_between_pings_ms'[m: [33m120000[m,[K
-[32m[10C'grpc.keepalive_timeout_ms'[m: [33m20000[m,[K
-[32m[10C'grpc.http2.max_pings_without_data'[m: [33m0[m,[K
-[32m[10C'grpc.keepalive_permit_without_calls'[m: [33m1[m,[K
-[32m[10C'grpc-wait-for-ready-timeout'[m: [33m3000[m,[K
-[32m[10C'request-timeout'[m: [33m45000[m,[K
-          clientCert: [32m'-----BEGIN CERTIFICATE-----\r\n' [m+[K
-[32m[12C'MIIBVDCB+6ADAgECAgEEMAoGCCqGSM49BAMCMBgxFjAUBgNVBAMMDWZhYnJpYy1j\r\n' [m+[K
-[32m[12C'b21tb24wIhgPMjAyNTA1MjIwODMyMTdaGA8yMDI1MDUyMzAyMzUzN1owGDEWMBQG\r\n' [m+[K
-[32m[12C'A1UEAwwNZmFicmljLWNvbW1vbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABCwR\r\n' [m+[K
-[32m[12C'zm7l4Rxs4o4Tn5oKy53frv0xP4If0a3UlDRvk2wXglXN2C2YDv9z5xmtpo984wOv\r\n' [m+[K
-[32m[12C'1oetNg9xcdIgNAU83QmjMjAwMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMBMG\r\n' [m+[K
-[32m[12C'A1UdJQQMMAoGCCsGAQUFBwMCMAoGCCqGSM49BAMCA0gAMEUCIQDRSulw3wyjTozt\r\n' [m+[K
-[32m[12C'HAVrB38CuRbevZ4VsJMOB682IoNqcwIgFhBorepFuQgq6nLAEL3yhf0+9UhHmVS6\r\n' [m+[K
-[32m[12C'Y8TkLRjxTFI=\r\n' [m+[K
-[32m[12C'-----END CERTIFICATE-----\r\n'[m,[K
-          url: [32m'grpcs://localhost:9051'[m,[K
-          pem: [32m'-----BEGIN CERTIFICATE-----\n' [m+[K
-[32m[12C'MIICIjCCAcmgAwIBAgIUCx7q8b+WvQZOUFzB9CEAScBvYRIwCgYIKoZIzj0EAwIw\n' [m+[K
-[32m[12C'bjELMAkGA1UEBhMCVUsxEjAQBgNVBAgTCUhhbXBzaGlyZTEQMA4GA1UEBxMHSHVy\n' [m+[K
-[32m[12C'c2xleTEaMBgGA1UEChMRaG9zcDIubGl0aGl1bS5jb20xHTAbBgNVBAMTFGNhLmhv\n' [m+[K
-[32m[12C'c3AyLmxpdGhpdW0uY29tMB4XDTI1MDUxMjA4NTYwMFoXDTQwMDUwODA4NTYwMFow\n' [m+[K
-[32m[12C'bjELMAkGA1UEBhMCVUsxEjAQBgNVBAgTCUhhbXBzaGlyZTEQMA4GA1UEBxMHSHVy\n' [m+[K
-[32m[12C'c2xleTEaMBgGA1UEChMRaG9zcDIubGl0aGl1bS5jb20xHTAbBgNVBAMTFGNhLmhv\n' [m+[K
-[32m[12C'c3AyLmxpdGhpdW0uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEGe3JpgTF\n' [m+[K
-[32m[12C'ZkqXCa/5omb+GiRvk/ez471q447R0mgpGDveFhtSXhJem5tBrtmOpLO6ulgseRXH\n' [m+[K
-[32m[12C'cA8YDd7Xv4nScKNFMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8C\n' [m+[K
-[32m[12C'AQEwHQYDVR0OBBYEFByowAlkFN3E58cmLpORzvLTfYyPMAoGCCqGSM49BAMCA0cA\n' [m+[K
-[32m[12C'MEQCIBPbTSuOWSuExGpYOnhckMJ74sylkxHY0ihLuFGj/5aaAiBxD9BXHT4/ShEw\n' [m+[K
-[32m[12C'GsBTtRxygRDOJpbTSpoEbpKmnwSeYA==\n' [m+[K
-[32m[12C'-----END CERTIFICATE-----\n'[m,[K
-[32m[10C'ssl-target-name-override'[m: [32m'peer0.hosp2.lithium.com'[m,[K
-          name: [32m'peer0.hosp2.lithium.com:9051'[m,[K
-          requestTimeout: [33m3000[m,[K
-[32m[10C'grpc.ssl_target_name_override'[m: [32m'peer0.hosp2.lithium.com'[m,[K
-[32m[10C'grpc.default_authority'[m: [32m'peer0.hosp2.lithium.com'[K[m
-        }
-      },
-      peer: [32m'peer0.hosp2.lithium.com:9051'[K[m
-    }
-  ],
-  errors: []
-}
-
-Node.js v20.9.0
-[31m[nodemon] app crashed - waiting for file changes before starting...[m
-rs
-[32m[nodemon] starting `node src/server.js`[m
-Backend server running on 3001
-Connected to the database
-::1 - - [22/May/2025:10:04:41 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
-[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:04:41 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
-[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:04:53 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
-[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-got this from redis hosp1lithium
-got this as pw hosp1lithium
-::1 - - [22/May/2025:10:04:53 +0000] "POST /login HTTP/1.1" 200 373 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
-[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:05:07 +0000] "OPTIONS /donors/register HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0
-[31;133H0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-{
-  firstName: [32m'Olive'[m,[K
-  lastName: [32m'Randall'[m,[K
-  address: [32m'Earth'[m,[K
-  dob: [32m'1988-05-22'[m,[K
-  phoneNumber: [32m'8974562135'[m,[K
-  aadhar: [32m'174517451256'[m,[K
-  bloodGroup: [32m'A-'[m,[K
-  sex: [32m'F'[m,[K
-  alert: [1mnull[22m,[K
-  isDiseased: [1mnull[22m,[K
-  creditCard: [1mnull[22m,[K
-  donationStatus: [1mnull[22m,[K
-  donationHistory: [1mnull[22m,[K
-  healthId: [32m''[m,[K
-  password: [32m'bguwd3yk'[m,[K
-  changedBy: [32m'hosp1admin'[K[m
-}
-{}
-Donor ID: 410540473531
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a CA Client named ca-hosp1
-Successfully registered and enrolled user 410540473531 and imported it into the wallet
-Successfully registered user: + 410540473531
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a CA Client named ca-hosp1
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\superOrg.li
-[31;133Hithium.com\connection-superOrg.json
-Built a CA Client named ca-superOrg
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp2.lithi
-[31;133Hium.com\connection-hosp2.json
-Built a CA Client named ca-hosp2
-{ healthId: [32m'410540473531'[m, doctorId: [32m'HOSP1-DOC32849' [m}
-{}
-{ healthId: [32m'410540473531'[m, doctorId: [32m'HOSP2-DOC32850' [m}
-{}
-{ healthId: [32m'410540473531'[m, superId: [32m'HOSP2-SUP12227' [m}
-{}
-{ healthId: [32m'410540473531'[m, superId: [32m'HOSP1-SUP12226' [m}
-{}
-::1 - - [22/May/2025:10:05:19 +0000] "POST /donors/register HTTP/1.1" 201 86 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; 
-[31;133H Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:07:05 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:07:05 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1488 more bytes>
-::1 - - [22/May/2025:10:07:06 +0000] "GET /donors/_all HTTP/1.1" 200 1538 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
-[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1488 more bytes>
-::1 - - [22/May/2025:10:07:06 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
-[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:07:16 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
-[31;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:07:16 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
-[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:07:34 +0000] "OPTIONS /login HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
-[31;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-got this from redis password
-got this as pw password
-::1 - - [22/May/2025:10:07:34 +0000] "POST /login HTTP/1.1" 200 387 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x6
-[31;133H64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:07:34 +0000] "OPTIONS /doctors/1/HOSP1-DOC32849 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
-[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a CA Client named ca-hosp1
-::1 - - [22/May/2025:10:07:34 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 200 193 "http://localhost:4200/" "Mozilla/5.0 (Windows 
-[31;133H NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:07:36 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:07:36 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1433 more bytes>
-::1 - - [22/May/2025:10:07:37 +0000] "GET /donors/_all HTTP/1.1" 200 1483 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
-[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1433 more bytes>
-::1 - - [22/May/2025:10:07:37 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
-[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:07:39 +0000] "OPTIONS /donors/410540473531 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
-[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 34 31 30 35 34 30 34 37 33 35 33 31 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4f 6c
-[31;133Hc 69 76 65 22 2c 22 6c 61 ... 161 more bytes>
-::1 - - [22/May/2025:10:07:39 +0000] "GET /donors/410540473531 HTTP/1.1" 200 211 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
-[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:08:28 +0000] "OPTIONS /doctor/screendonor/HOSP1-DOC32849 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.
-[31;133H.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-{
-  healthId: [32m'410540473531'[m,[K
-  doctorId: [32m'HOSP1-DOC32849'[m,[K
-  dob: [32m'1988-05-22'[m,[K
-  pulse: [32m'80'[m,[K
-  systolic: [32m'120'[m,[K
-  diastolic: [32m'80'[m,[K
-  haemoglobin: [32m'12'[m,[K
-  anaemia: [32m'false'[m,[K
-  weight: [32m'70'[m,[K
-  haemophiliaA: [32m'false'[m,[K
-  haemophiliaB: [32m'false'[m,[K
-  cardiovascular: [32m'false'[m,[K
-  hypertension: [32m'false'[m,[K
-  asthma: [32m'false'[K[m
-}
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-{
-  healthId: [32m'410540473531'[m,[K
-  doctorId: [32m'HOSP1-DOC32849'[m,[K
-  dob: [32m'1988-05-22'[m,[K
-  pulse: [32m'80'[m,[K
-  systolic: [32m'120'[m,[K
-  diastolic: [32m'80'[m,[K
-  haemoglobin: [32m'12'[m,[K
-  anaemia: [32m'false'[m,[K
-  weight: [32m'70'[m,[K
-  haemophiliaA: [32m'false'[m,[K
-  haemophiliaB: [32m'false'[m,[K
-  cardiovascular: [32m'false'[m,[K
-  hypertension: [32m'false'[m,[K
-  asthma: [32m'false'[K[m
-}
-{}
-::1 - - [22/May/2025:10:08:30 +0000] "POST /doctor/screendonor/HOSP1-DOC32849 HTTP/1.1" 200 57 "http://localhost:4200/" "Mozilla/5.0 
-[31;133H (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:08:33 +0000] "OPTIONS /doctors/1/HOSP1-DOC32849 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Window
-[31;133Hws NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a CA Client named ca-hosp1
-::1 - - [22/May/2025:10:08:33 +0000] "GET /doctors/1/HOSP1-DOC32849 HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT
-[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:08:35 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:08:35 +0000] "OPTIONS /donors/_all HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Wi
-[31;133Hin64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
-::1 - - [22/May/2025:10:08:35 +0000] "GET /donors/_all HTTP/1.1" 200 1491 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win
-[31;133Hn64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 5b 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 31 32 33 34 35 36 37 38 39 30 31 32 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4d
-[31;133Hd 6f 6e 69 63 61 22 2c 22 ... 1441 more bytes>
-::1 - - [22/May/2025:10:08:35 +0000] "GET /donors/_all HTTP/1.1" 304 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64;
-[31;133H; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:08:38 +0000] "OPTIONS /donors/410540473531 HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 
-[31;133H 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-<Buffer 7b 22 68 65 61 6c 74 68 49 64 22 3a 22 34 31 30 35 34 30 34 37 33 35 33 31 22 2c 22 66 69 72 73 74 4e 61 6d 65 22 3a 22 4f 6c
-[31;133Hc 69 76 65 22 2c 22 6c 61 ... 265 more bytes>
-::1 - - [22/May/2025:10:08:38 +0000] "GET /donors/410540473531 HTTP/1.1" 200 315 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10
-[31;133H0.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:08:48 +0000] "OPTIONS /doctor/blood-collect HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT
-[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-{
-  healthId: [32m'410540473531'[m,[K
-  doctorId: [32m'HOSP1-DOC32849'[m,[K
-  bloodBagUnitNo: [32m'550'[m,[K
-  bloodBagSegmentNo: [32m'550'[m,[K
-  quantity: [33m500[K[m
-}
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-{
-  healthId: [32m'410540473531'[m,[K
-  doctorId: [32m'HOSP1-DOC32849'[m,[K
-  bloodBagUnitNo: [32m'550'[m,[K
-  bloodBagSegmentNo: [32m'550'[m,[K
-  quantity: [33m500[K[m
-}
-{}
-550 550 hospital 1
-Error inserting Blood: Error: ER_DUP_ENTRY: Duplicate entry '550-550' for key 'HLFBloodStore.PRIMARY'
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
-[90m    at Socket.emit (node:events:514:28)[m
-[90m    at addChunk (node:internal/streams/readable:376:12)[m
-    --------------------
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:182:24[90m)[K[m
-    at new Promise (<anonymous>)
-    at exports.insertBlood [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:181:30[90m)[K[m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:87:24[90m)[K[m
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DUP_ENTRY'[m,[K
-  errno: [33m1062[m,[K
-  sqlMessage: [32m"Duplicate entry '550-550' for key 'HLFBloodStore.PRIMARY'"[m,[K
-  sqlState: [32m'23000'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'\n' [m+[K
-    [32m'        INSERT INTO HLFBloodStore(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, A[m
-[32m[31;133HAllocated, AllocatedTo, CrossMatched,Donated,DonationDate)\n' [m+[K
-    [32m"        VALUES ('550', '550', 'hospital 1', '2025-05-22', '2025-09-19', 500, 'A-', 'false', '', 'false','false','');\n" [m+       [32;1H
-    [32m'    '[K[m
-}
-Error inserting Blood: Error: ER_DUP_ENTRY: Duplicate entry '550-550' for key 'HLFBloodStore.PRIMARY'
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
-[90m    at Socket.emit (node:events:514:28)[m
-[90m    at addChunk (node:internal/streams/readable:376:12)[m
-    --------------------
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:182:24[90m)[K[m
-    at new Promise (<anonymous>)
-    at exports.insertBlood [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:181:30[90m)[K[m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:87:24[90m)[K[m
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DUP_ENTRY'[m,[K
-  errno: [33m1062[m,[K
-  sqlMessage: [32m"Duplicate entry '550-550' for key 'HLFBloodStore.PRIMARY'"[m,[K
-  sqlState: [32m'23000'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'\n' [m+[K
-    [32m'        INSERT INTO HLFBloodStore(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, A[m
-[32m[31;133HAllocated, AllocatedTo, CrossMatched,Donated,DonationDate)\n' [m+[K
-    [32m"        VALUES ('550', '550', 'hospital 1', '2025-05-22', '2025-09-19', 500, 'A-', 'false', '', 'false','false','');\n" [m+       [32;1H
-    [32m'    '[K[m
-}
-node:internal/process/promises:289
-            triggerUncaughtException(err, true /* fromPromise */);
-            ^
-
-Error: ER_DUP_ENTRY: Duplicate entry '550-550' for key 'HLFBloodStore.PRIMARY'
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;132H[m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
-[90m    at Socket.emit (node:events:514:28)[m
-[90m    at addChunk (node:internal/streams/readable:376:12)[m
-    --------------------
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:182:24[90m)[K[m
-    at new Promise (<anonymous>)
-    at exports.insertBlood [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:181:30[90m)[K[m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:87:24[90m)[K[m
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DUP_ENTRY'[m,[K
-  errno: [33m1062[m,[K
-  sqlMessage: [32m"Duplicate entry '550-550' for key 'HLFBloodStore.PRIMARY'"[m,[K
-  sqlState: [32m'23000'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'\n' [m+[K
-    [32m'        INSERT INTO HLFBloodStore(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, A[m
-[32m[31;133HAllocated, AllocatedTo, CrossMatched,Donated,DonationDate)\n' [m+[K
-    [32m"        VALUES ('550', '550', 'hospital 1', '2025-05-22', '2025-09-19', 500, 'A-', 'false', '', 'false','false','');\n" [m+       [32;127H
-    [32m'    '[K[m
-}
-
-Node.js v20.9.0
-[31m[nodemon] app crashed - waiting for file changes before starting...[m
-rs
-[32m[nodemon] starting `node src/server.js`[m
-Backend server running on 3001
-Connected to the database
-::1 - - [22/May/2025:10:09:14 +0000] "OPTIONS /doctor/blood-collect HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT
-[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-{
-  healthId: [32m'410540473531'[m,[K
-  doctorId: [32m'HOSP1-DOC32849'[m,[K
-  bloodBagUnitNo: [32m'512'[m,[K
-  bloodBagSegmentNo: [32m'512'[m,[K
-  quantity: [33m500[K[m
-}
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-{
-  healthId: [32m'410540473531'[m,[K
-  doctorId: [32m'HOSP1-DOC32849'[m,[K
-  bloodBagUnitNo: [32m'512'[m,[K
-  bloodBagSegmentNo: [32m'512'[m,[K
-  quantity: [33m500[K[m
-}
-{}
-512 512 hospital 1
-Error inserting Blood: Error: ER_DUP_ENTRY: Duplicate entry '512-512' for key 'HLFBloodStore.PRIMARY'
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
-[90m    at Socket.emit (node:events:514:28)[m
-[90m    at addChunk (node:internal/streams/readable:376:12)[m
-    --------------------
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:182:24[90m)[K[m
-    at new Promise (<anonymous>)
-    at exports.insertBlood [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:181:30[90m)[K[m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:87:24[90m)[K[m
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DUP_ENTRY'[m,[K
-  errno: [33m1062[m,[K
-  sqlMessage: [32m"Duplicate entry '512-512' for key 'HLFBloodStore.PRIMARY'"[m,[K
-  sqlState: [32m'23000'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'\n' [m+[K
-    [32m'        INSERT INTO HLFBloodStore(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, A[m
-[32m[31;133HAllocated, AllocatedTo, CrossMatched,Donated,DonationDate)\n' [m+[K
-    [32m"        VALUES ('512', '512', 'hospital 1', '2025-05-22', '2025-09-19', 500, 'A-', 'false', '', 'false','false','');\n" [m+       [32;1H
-    [32m'    '[K[m
-}
-Error inserting Blood: Error: ER_DUP_ENTRY: Duplicate entry '512-512' for key 'HLFBloodStore.PRIMARY'
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
-[90m    at Socket.emit (node:events:514:28)[m
-[90m    at addChunk (node:internal/streams/readable:376:12)[m
-    --------------------
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:182:24[90m)[K[m
-    at new Promise (<anonymous>)
-    at exports.insertBlood [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:181:30[90m)[K[m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:87:24[90m)[K[m
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DUP_ENTRY'[m,[K
-  errno: [33m1062[m,[K
-  sqlMessage: [32m"Duplicate entry '512-512' for key 'HLFBloodStore.PRIMARY'"[m,[K
-  sqlState: [32m'23000'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'\n' [m+[K
-    [32m'        INSERT INTO HLFBloodStore(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, A[m
-[32m[31;133HAllocated, AllocatedTo, CrossMatched,Donated,DonationDate)\n' [m+[K
-    [32m"        VALUES ('512', '512', 'hospital 1', '2025-05-22', '2025-09-19', 500, 'A-', 'false', '', 'false','false','');\n" [m+       [32;1H
-    [32m'    '[K[m
-}
-node:internal/process/promises:289
-            triggerUncaughtException(err, true /* fromPromise */);
-            ^
-
-Error: ER_DUP_ENTRY: Duplicate entry '512-512' for key 'HLFBloodStore.PRIMARY'
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;132H[m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
-[90m    at Socket.emit (node:events:514:28)[m
-[90m    at addChunk (node:internal/streams/readable:376:12)[m
-    --------------------
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:182:24[90m)[K[m
-    at new Promise (<anonymous>)
-    at exports.insertBlood [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:181:30[90m)[K[m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:87:24[90m)[K[m
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DUP_ENTRY'[m,[K
-  errno: [33m1062[m,[K
-  sqlMessage: [32m"Duplicate entry '512-512' for key 'HLFBloodStore.PRIMARY'"[m,[K
-  sqlState: [32m'23000'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'\n' [m+[K
-    [32m'        INSERT INTO HLFBloodStore(BagUnitNo, BagSegmentNo, HospitalName, DateOfCollection, DateOfExpiry, Quantity, BloodGroup, A[m
-[32m[31;133HAllocated, AllocatedTo, CrossMatched,Donated,DonationDate)\n' [m+[K
-    [32m"        VALUES ('512', '512', 'hospital 1', '2025-05-22', '2025-09-19', 500, 'A-', 'false', '', 'false','false','');\n" [m+       [32;127H
-    [32m'    '[K[m
-}
-
-Node.js v20.9.0
-[31m[nodemon] app crashed - waiting for file changes before starting...[m
-rs
-[32m[nodemon] starting `node src/server.js`[m
-Backend server running on 3001
-Connected to the database
-::1 - - [22/May/2025:10:09:34 +0000] "OPTIONS /doctor/blood-collect HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT
-[31;133HT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-{
-  healthId: [32m'410540473531'[m,[K
-  doctorId: [32m'HOSP1-DOC32849'[m,[K
-  bloodBagUnitNo: [32m'512'[m,[K
-  bloodBagSegmentNo: [32m'516'[m,[K
-  quantity: [33m500[K[m
-}
-Loaded the network configuration located at F:\blood-data-management-system\first-network\organizations\peerOrganizations\hosp1.lithi
-[31;133Hium.com\connection-hosp1.json
-Built a file system wallet at F:\blood-data-management-system\donor-asset-transfer\application-javascript\wallet\
-Succesfully connected to the network.
-{
-  healthId: [32m'410540473531'[m,[K
-  doctorId: [32m'HOSP1-DOC32849'[m,[K
-  bloodBagUnitNo: [32m'512'[m,[K
-  bloodBagSegmentNo: [32m'516'[m,[K
-  quantity: [33m500[K[m
-}
-{}
-512 516 hospital 1
-Blood record created successfully
-Error inserting Blood: Error: ER_DATA_TOO_LONG: Data too long for column 'DonatedBy' at row 1
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
-[90m    at Socket.emit (node:events:514:28)[m
-[90m    at addChunk (node:internal/streams/readable:376:12)[m
-    --------------------
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:103:24[90m)[K[m
-    at new Promise (<anonymous>)
-    at Object.name [as insertDonatedBloodBagForCrossMatch] [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:102:30[90m)    [32;1H[m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:88:24[90m)[K[m
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DATA_TOO_LONG'[m,[K
-  errno: [33m1406[m,[K
-  sqlMessage: [32m"Data too long for column 'DonatedBy' at row 1"[m,[K
-  sqlState: [32m'22001'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'INSERT INTO HLFPendingCrossMatchBloodBags(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy, CrossMatched)\n' [m+[K
-    [32m"            VALUES ('512', '516', 'hospital 1', '410540473531', 'false')"[K[m
-}
-Error inserting Blood: Error: ER_DATA_TOO_LONG: Data too long for column 'DonatedBy' at row 1
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;1H[m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
-[90m    at Socket.emit (node:events:514:28)[m
-[90m    at addChunk (node:internal/streams/readable:376:12)[m
-    --------------------
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:103:24[90m)[K[m
-    at new Promise (<anonymous>)
-    at Object.name [as insertDonatedBloodBagForCrossMatch] [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:102:30[90m)    [32;1H[m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:88:24[90m)[K[m
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DATA_TOO_LONG'[m,[K
-  errno: [33m1406[m,[K
-  sqlMessage: [32m"Data too long for column 'DonatedBy' at row 1"[m,[K
-  sqlState: [32m'22001'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'INSERT INTO HLFPendingCrossMatchBloodBags(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy, CrossMatched)\n' [m+[K
-    [32m"            VALUES ('512', '516', 'hospital 1', '410540473531', 'false')"[K[m
-}
-node:internal/process/promises:289
-            triggerUncaughtException(err, true /* fromPromise */);
-            ^
-
-Error: ER_DATA_TOO_LONG: Data too long for column 'DonatedBy' at row 1
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [32;132H[m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K[m
-[90m    at Socket.emit (node:events:514:28)[m
-[90m    at addChunk (node:internal/streams/readable:376:12)[m
-    --------------------
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:103:24[90m)[K[m
-    at new Promise (<anonymous>)
-    at Object.name [as insertDonatedBloodBagForCrossMatch] [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:102:30[90m)    [32;130H[m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:88:24[90m)[K[m
-[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DATA_TOO_LONG'[m,[K
-  errno: [33m1406[m,[K
-  sqlMessage: [32m"Data too long for column 'DonatedBy' at row 1"[m,[K
-  sqlState: [32m'22001'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'INSERT INTO HLFPendingCrossMatchBloodBags(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy, CrossMatched)\n' [m+[K
-    [32m"            VALUES ('512', '516', 'hospital 1', '410540473531', 'false')"[K[m
-}
-
-Node.js v20.9.0
-[31m[nodemon] app crashed - waiting for file changes before starting...[m
-[?25l[8;31;133t[HError: ER_DATA_TOO_LONG: Data too long for column 'DonatedBy' at row 1[K
-    at Sequence._packetToError [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Sequence.js:47:14[90m)  [m
-    at Query.ErrorPacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\sequences\Query.js:79:18[90m)[K[m
-    at Protocol._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:291:23[90m)[K[m
-    at Parser._parsePacket [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:433:10[90m)[K[m
-    at Parser.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Parser.js:43:10[90m)[K[m
-    at Protocol.write [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:38:16[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:88:28[90m)[K[m
-    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K
-    at Socket.emit (node:events:514:28)[K
-    at addChunk (node:internal/streams/readable:376:12)[K[m
-    --------------------[K
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:103:24[90m)[K[m
-    at new Promise (<anonymous>)[K
-    at Object.name [as insertDonatedBloodBagForCrossMatch] [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:102:30[90m)    [m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:88:24[90m)[K
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DATA_TOO_LONG'[m,[K
-  errno: [33m1406[m,[K
-  sqlMessage: [32m"Data too long for column 'DonatedBy' at row 1"[m,[K
-  sqlState: [32m'22001'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'INSERT INTO HLFPendingCrossMatchBloodBags(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy, CrossMatched)\n' [m+[K
-    [32m"            VALUES ('512', '516', 'hospital 1', '410540473531', 'false')"[K[m
-}[K
-[K
-Node.js v20.9.0[K[31m
-[nodemon] app crashed - waiting for file changes before starting...[K[m
-[K[?25h[32m[nodemon] restarting due to changes...[m
-[32m[nodemon] starting `node src/server.js`[m
-Backend server running on 3001
-Connected to the database
-::1 - - [22/May/2025:10:11:03 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; 
-[30;133H x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-::1 - - [22/May/2025:10:11:03 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x
-[30;133Hx64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
-[?25l[H    at Socket.<anonymous> [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:526:10[90m)[K
-    at Socket.emit (node:events:514:28)[K
-    at addChunk (node:internal/streams/readable:376:12)[K[m
-    --------------------[K
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:103:24[90m)[K[m
-    at new Promise (<anonymous>)[K
-    at Object.name [as insertDonatedBloodBagForCrossMatch] [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:102:30[90m)    [m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:88:24[90m)[K
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DATA_TOO_LONG'[m,[K
-  errno: [33m1406[m,[K
-  sqlMessage: [32m"Data too long for column 'DonatedBy' at row 1"[m,[K
-  sqlState: [32m'22001'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'INSERT INTO HLFPendingCrossMatchBloodBags(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy, CrossMatched)\n' [m+[K
-    [32m"            VALUES ('512', '516', 'hospital 1', '410540473531', 'false')"[K[m
-}[K
-[K
-Node.js v20.9.0[K[31m
-[nodemon] app crashed - waiting for file changes before starting...[K[32m
-[nodemon] restarting due to changes...[K
-[nodemon] starting `node src/server.js`[K[m
-Backend server running on 3001[K
-Connected to the database[K
-::1 - - [22/May/2025:10:11:03 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
-::1 - - [22/May/2025:10:11:03 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
-[K
-[K[31;1H[?25hConnected to the database
-[?25l[90m[H    at Socket.emit (node:events:514:28)[K
-    at addChunk (node:internal/streams/readable:376:12)[K[m
-    --------------------[K
-    at Protocol._enqueue [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\protocol\Protocol.js:144:48[90m)[K[m
-    at Connection.query [90m(F:\blood-data-management-system\server\[mnode_modules\[4mmysql[24m\lib\Connection.js:198:25[90m)[K[m
-    at result [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:103:24[90m)[K[m
-    at new Promise (<anonymous>)[K
-    at Object.name [as insertDonatedBloodBagForCrossMatch] [90m(F:\blood-data-management-system\server\[msrc\databaseConnect.js:102:30[90m)    [m
-    at exports.collectBlood [90m(F:\blood-data-management-system\server\[msrc\doctor-routes.js:88:24[90m)[K
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) [m{[K
-  code: [32m'ER_DATA_TOO_LONG'[m,[K
-  errno: [33m1406[m,[K
-  sqlMessage: [32m"Data too long for column 'DonatedBy' at row 1"[m,[K
-  sqlState: [32m'22001'[m,[K
-  index: [33m0[m,[K
-  sql: [32m'INSERT INTO HLFPendingCrossMatchBloodBags(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy, CrossMatched)\n' [m+[K
-    [32m"            VALUES ('512', '516', 'hospital 1', '410540473531', 'false')"[K[m
-}[K
-[K
-Node.js v20.9.0[K[31m
-[nodemon] app crashed - waiting for file changes before starting...[K[32m
-[nodemon] restarting due to changes...[K
-[nodemon] starting `node src/server.js`[K[m
-Backend server running on 3001[K
-Connected to the database[K
-::1 - - [22/May/2025:10:11:03 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
-::1 - - [22/May/2025:10:11:03 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
-Connected to the database[K
-[K[?25hF:\blood-data-management-system\server\src\databaseConnect.js:27
-            throw err;
-            ^
-
-Error: read ECONNRESET
-[90m    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) [m{[K
-  errno: [33m-4077[m,[K
-  code: [32m'ECONNRESET'[m,[K
-  syscall: [32m'read'[m,[K
-  fatal: [33mtrue[K[m
-}
-
-Node.js v20.9.0
-[31m[nodemon] app crashed - waiting for file changes before starting...[m
-[?25l[H  index: [33m0[m,[K
-  sql: [32m'INSERT INTO HLFPendingCrossMatchBloodBags(BagUnitNo, BagSegmentNo, HospitalName, DonatedBy, CrossMatched)\n' [m+[K
-    [32m"            VALUES ('512', '516', 'hospital 1', '410540473531', 'false')"[K[m
-}[K
-[K
-Node.js v20.9.0[K[31m
-[nodemon] app crashed - waiting for file changes before starting...[K[32m
-[nodemon] restarting due to changes...[K
-[nodemon] starting `node src/server.js`[K[m
-Backend server running on 3001[K
-Connected to the database[K
-::1 - - [22/May/2025:10:11:03 +0000] "OPTIONS /logout HTTP/1.1" 204 0 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
-::1 - - [22/May/2025:10:11:03 +0000] "DELETE /logout HTTP/1.1" 204 - "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"[K
-Connected to the database[K
-F:\blood-data-management-system\server\src\databaseConnect.js:27[K
-            throw err;[K
-            ^[K
-[K
-Error: read ECONNRESET[K[90m
-    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) [m{[K
-  errno: [33m-4077[m,[K
-  code: [32m'ECONNRESET'[m,[K
-  syscall: [32m'read'[m,[K
-  fatal: [33mtrue[K[m
-}[K
-[K
-Node.js v20.9.0[K[31m
-[nodemon] app crashed - waiting for file changes before starting...[K[m
-[K
-[K[31;1H[?25hrs
-[32m[nodemon] starting `node src/server.js`[m
-Backend server running on 3001
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-^C\[K|[K/[K[K[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m exit
-exit
-
-Script done on 2025-05-22 17:59:23+05:30 [COMMAND_EXIT_CODE="58"]

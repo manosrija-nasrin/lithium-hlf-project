@@ -1,48 +1,0 @@
-Script started on 2025-01-21 08:43:25+05:30 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd server/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
-[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
-> donor-application@1.0.0 prestart
-> node initServer.js[8;1H[?25h[K[?25l[K
-> donor-application@1.0.0 start
-> node node_modules/nodemon/bin/nodemon.js src/server.js[12;1H[K[?25h[33m[nodemon] 1.19.4
-[m[33m[nodemon] to restart at any time, enter `rs`
-[nodemon] watching dir(s): *.*
-[nodemon] watching extensions: js,mjs,json[32m
-[nodemon] starting `node src/server.js`
-[mBackend server running on 3001
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-Connected to the database
-F:\blood-data-management-system\server\src\databaseConnect.js:27
-            throw err;
-            ^
-
-Error: read ECONNRESET
-[90m    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) [m{[K
-  errno: [33m-4077[m,[K
-  code: [32m'ECONNRESET'[m,[K
-  syscall: [32m'read'[m,[K
-  fatal: [33mtrue[K[m
-}
-
-Node.js v20.9.0
-[31m[nodemon] app crashed - waiting for file changes before starting...[m
-ex  ^C\[K[K[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m exit
-exit
-
-Script done on 2025-01-22 01:02:08+05:30 [COMMAND_EXIT_CODE="58"]

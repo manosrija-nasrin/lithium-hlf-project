@@ -1,54 +1,0 @@
-Script started on 2024-09-01 14:43:20+05:30 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m exitnpm startcd client/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m cd client/[6Pexitnpm start
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[25l
-> panel@0.0.0 start[40X
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[7;1H[?25h[K]0;C:\windows\system32\cmd.exe ]0;ng serve[36m-[m Generating browser application bundles...[36m-[m Generating browser application bundles...[1m[91m(node:33256) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is dep
-recated.[m[K[1m[91m
-(Use `node --trace-deprecation ...` to show where the warning was created)[m[K[36m
-\[m Generating browser application bundles (phase: building)...[K[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: building)...[K[61C[36m-[m Generating browser application bundles (phase: building)...[K[61C[36m\[m Generating browser application bundles (phase: building)...[K[61C[36m|[m Generating browser application bundles (phase: building)...[K[61C[36m/[m Generating browser application bundles (phase: additional asset processing)...[K[80C[32m√[m Browser application bundle generation complete.
-[1m[97m
-Initial Chunk Files[m   | [1m[97mNames[m         |      [1m[97mSize[m[30X[92m
-vendor.js[m             | vendor        |   [96m3.89 MB[m[30X[92m
-styles.css, styles.js[m | styles        | [96m563.71 kB[m[30X[92m
-main.js[m               | main          | [96m545.55 kB[m[30X[92m
-polyfills.js[m          | polyfills     | [96m484.61 kB[m[30X[92m
-runtime.js[m            | runtime       |   [96m6.15 kB[m[30X
-[79X[1m[97m
- [m                     | [1m[97mInitial Total[m |   [1m[97m5.45 MB[m[30X
-[79X
-Build at: [1m[97m2024-09-01T09:15:56.736Z[m - Hash: [1m[97me70c5147d32a2ab3268a[m - Time: [1m[97m38390[mms[25l[23;1H** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
-[113X
-[113X[92m
-√[m Compiled successfully.[89X
-[?25h[25l[3;1H[K
-> panel@0.0.0 start[K
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[K
-[K[36m
--[m Generating browser application bundles...[1m[91m(node:33256) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is dep
-recated.[K
-(Use `node --trace-deprecation ...` to show where the warning was created)[K[22m[32m
-√[m Browser application bundle generation complete.[K
-[K[1m[97m
-Initial Chunk Files[m   | [1m[97mNames[m         |      [1m[97mSize[K[22m[92m
-vendor.js[m             | vendor        |   [96m3.89 MB[K[92m
-styles.css, styles.js[m | styles        | [96m563.71 kB[K[92m
-main.js[m               | main          | [96m545.55 kB[K[92m
-polyfills.js[m          | polyfills     | [96m484.61 kB[K[92m
-runtime.js[m            | runtime       |   [96m6.15 kB[K[m
-[K[1m[97m
- [m                     | [1m[97mInitial Total[m |   [1m[97m5.45 MB[K[m
-[K
-Build at: [1m[97m2024-09-01T09:15:56.736Z[m - Hash: [1m[97me70c5147d32a2ab3268a[m - Time: [1m[97m38390[mms[K
-[K
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[K
-[K
-[K[92m
-√[m Compiled successfully.[K
-[K
-[K
-[K
-[K[27;1H[?25h]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m exit
-exit
-
-Script done on 2024-09-01 15:56:45+05:30 [COMMAND_EXIT_CODE="1"]

@@ -1,92 +1,0 @@
-Script started on 2025-05-22 08:40:01+05:30 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd client/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
-[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start
-> panel@0.0.0 start
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve
-
-[K]0;C:\WINDOWS\system32\cmd.exe ]0;ng serve[36m- [mGenerating browser application bundles...[31m[1m(node:8808) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is depr[m
-[31m[1m[31;133Hrecated.[22m[K[m
-[31m[1m(Use `node --trace-deprecation ...` to show where the warning was created)[m[K
-[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[22m[K
-[92mvendor.js[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[K[m
-[92mmain.js[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m689.71 kB[K[m
-[92mstyles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[K[m
-[92mpolyfills.js[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[K[m
-[92mruntime.js[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[K[m
-
-[1m [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.59 MB[22m[K
-
-Build at: [37m[1m2025-05-22T03:14:26.841Z[m - Hash: [37m[1m81c57f892527dbed07e9[m - Time: [37m[1m49112[mms[K
-
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
-
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m  [2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[14C | [22mmain  [2m | [96m[22m689.71 kB[K[m
-[92mstyles.css, styles.js[m[2m | [22mstyles[2m | [96m[22m563.71 kB[K[m
-
-3 unchanged chunks
-
-Build at: [37m[1m2025-05-22T03:33:03.300Z[m - Hash: [37m[1m6cb6eac7a8565458b7cd[m - Time: [37m[1m8601[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m689.73 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-22T03:33:09.114Z[m - Hash: [37m[1mce144866f1d3fd22e3de[m - Time: [37m[1m5558[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m689.74 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-22T03:35:00.894Z[m - Hash: [37m[1m167254ac75ca8436809b[m - Time: [37m[1m7199[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-22T03:35:07.866Z[m - Hash: [37m[1m167254ac75ca8436809b[m - Time: [37m[1m6730[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m689.99 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-22T04:05:03.526Z[m - Hash: [37m[1m4301ff1e1347e6982022[m - Time: [37m[1m3933[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[31m[1m    [m
-[31m[1m    Error: [96msrc/app/login/login.component.ts[m:[93m71[m:[93m45 [m- [91merror [90mTS2304: [mCannot find name 'User'.[K
-[31m[1m    [m[K
-[31m[1m    [7m71[m         this.authService.loginDonorUser(new User(this.role, this.username, this.pwd, this.newPwd))[K
-[31m[1m    [7m  [m[45X[91m[45C~~~~[K[m
-[31m[1m    [m[K
-[K[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m689.88 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-22T04:08:08.209Z[m - Hash: [37m[1m8eee1f7537bc8984e385[m - Time: [37m[1m4529[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset p

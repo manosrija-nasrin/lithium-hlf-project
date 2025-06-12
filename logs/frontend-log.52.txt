@@ -1,258 +1,0 @@
-Script started on 2025-06-04 12:48:00+05:30 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd client/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm stta[K[Kart
-[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start\[K[?25l[K
-> panel@0.0.0 start
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[9;1H[K[?25h]0;C:\WINDOWS\system32\cmd.exe ]0;ng serve[36m- [mGenerating browser application bundles...[31m[1m(node:8324) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
-(Use `node --trace-deprecation ...` to show where the warning was created)[m
-[36m\ [mGenerating browser application bundles (phase: building)...[K[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-[?25l[1m
-Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[92m[22m
-vendor.js[12X[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[92m
-main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m765.38 kB[92m
-styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[92m
-polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[92m
-runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[m[1m[21;1H [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.67 MB[22m[23;1HBuild at: [37m[1m2025-06-04T07:23:51.111Z[m - Hash: [37m[1ma525c7d7256cb15c0c80[m - Time: [37m[1m89991[mms[?25h[?25l[25;1H** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[92m[28;1H√ [mCompiled successfully.
-[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-[1m
-Initial Chunk Files[22m  [2m | [22m[1mNames[22m [2m | [22m     [1mSize[92m[22m
-main.js[14X[m[2m[14C | [22mmain  [2m | [96m[22m765.38 kB[m
-[92mstyles.css, styles.js[m[2m | [22mstyles[2m | [96m[22m563.71 kB[K[m
-
-3 unchanged chunks
-
-Build at: [37m[1m2025-06-04T08:32:09.534Z[m - Hash: [37m[1mef81c733aaabb08e6460[m - Time: [37m[1m12710[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-06-04T08:32:23.373Z[m - Hash: [37m[1mef81c733aaabb08e6460[m - Time: [37m[1m2146[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m766.21 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-06-04T08:33:08.559Z[m - Hash: [37m[1m0252e82ba11d56bd9f4b[m - Time: [37m[1m1964[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/patient/patient.component.html[m:[93m85[m:[93m46 [m- [91merror [90mTS2339: [mProperty 'test' does not exist on type 'PatientComponent'.   [32;1H
-[31m[1m    [m[K
-[31m[1m    [7m85[m                         <ng-container *ngIf="test.value['status'] === 'failed'; else successBlock">[K
-[31m[1m    [7m  [m[46X[91m[46C~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/patient/patient.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './patient.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component PatientComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m766.93 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-06-04T08:35:45.621Z[m - Hash: [37m[1mbf4cc4de16873e125be4[m - Time: [37m[1m3297[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m767.30 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-06-04T08:36:15.531Z[m - Hash: [37m[1mf3e0ea71e47132977574[m - Time: [37m[1m2451[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m766.55 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-06-04T08:36:39.758Z[m - Hash: [37m[1ma584b692c13f0f2ea81f[m - Time: [37m[1m973[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m766.62 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-06-04T08:36:51.796Z[m - Hash: [37m[1m54a1e84f939d496cbec3[m - Time: [37m[1m933[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m766.39 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-06-04T08:36:57.814Z[m - Hash: [37m[1m872878ccd1689cb5a29e[m - Time: [37m[1m1507[mms[K
-
-[92m√ [mCompiled successfully.[K
-[?25l[8;31;133t[32m[H√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.55 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:39.758Z[m - Hash: [37m[1ma584b692c13f0f2ea81f[m - Time: [37m[1m973[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.62 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:51.796Z[m - Hash: [37m[1m54a1e84f939d496cbec3[m - Time: [37m[1m933[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.39 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:57.814Z[m - Hash: [37m[1m872878ccd1689cb5a29e[m - Time: [37m[1m1507[mms[K
-[K[92m
-√ [mCompiled successfully.[K
-[K[?25h[?25l[32m[H√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.55 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:39.758Z[m - Hash: [37m[1ma584b692c13f0f2ea81f[m - Time: [37m[1m973[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.62 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:51.796Z[m - Hash: [37m[1m54a1e84f939d496cbec3[m - Time: [37m[1m933[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.39 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:57.814Z[m - Hash: [37m[1m872878ccd1689cb5a29e[m - Time: [37m[1m1507[mms[K
-[K[92m
-√ [mCompiled successfully.[K
-[K
-[K[31;1H[?25h[?25l[32m[H√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.55 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:39.758Z[m - Hash: [37m[1ma584b692c13f0f2ea81f[m - Time: [37m[1m973[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.62 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:51.796Z[m - Hash: [37m[1m54a1e84f939d496cbec3[m - Time: [37m[1m933[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.39 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:57.814Z[m - Hash: [37m[1m872878ccd1689cb5a29e[m - Time: [37m[1m1507[mms[K
-[K[92m
-√ [mCompiled successfully.[K
-[K[?25h[?25l[32m[H√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.55 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:39.758Z[m - Hash: [37m[1ma584b692c13f0f2ea81f[m - Time: [37m[1m973[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.62 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:51.796Z[m - Hash: [37m[1m54a1e84f939d496cbec3[m - Time: [37m[1m933[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.39 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:57.814Z[m - Hash: [37m[1m872878ccd1689cb5a29e[m - Time: [37m[1m1507[mms[K
-[K[92m
-√ [mCompiled successfully.[K
-[K
-[K[31;1H[?25h[?25l[1m[HInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.55 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:39.758Z[m - Hash: [37m[1ma584b692c13f0f2ea81f[m - Time: [37m[1m973[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.62 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:51.796Z[m - Hash: [37m[1m54a1e84f939d496cbec3[m - Time: [37m[1m933[mms[K
-[K[92m
-√ [mCompiled successfully.[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m766.39 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-06-04T08:36:57.814Z[m - Hash: [37m[1m872878ccd1689cb5a29e[m - Time: [37m[1m1507[mms[K
-[K[92m
-√ [mCompiled successfully.[K
-[K[?25h[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m exit
-exit
-
-Script done on 2025-06-04 14:22:58+05:30 [COMMAND_EXIT_CODE="1"]

@@ -1,933 +1,0 @@
-Script started on 2025-05-23 08:27:24+05:30 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cd client/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m npm start
-[6n[?9001h[?1004h[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[?25l
-> panel@0.0.0 start
-> cross-env NODE_OPTIONS=--openssl-legacy-provider ng serve[9;1H[?25h[K]0;C:\WINDOWS\system32\cmd.exe ]0;ng serve[36m- [mGenerating browser application bundles...[31m[1m(node:5588) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
-(Use `node --trace-deprecation ...` to show where the warning was created)[m
-[K[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: building)...[K[61C[36m- [mGenerating browser application bundles (phase: building)...[K[61C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: building)...[K[61C[36m/ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-[?25l[1m
-Initial Chunk Files[22m  [2m | [22m[1mNames[22m        [2m | [22m     [1mSize[92m[22m
-vendor.js[12X[m[2m[12C | [22mvendor       [2m | [22m  [96m3.89 MB[92m
-main.js[14X[m[2m[14C | [22mmain[9X[2m[9C | [96m[22m689.92 kB[92m
-styles.css, styles.js[m[2m | [22mstyles       [2m | [96m[22m563.71 kB[92m
-polyfills.js[9X[m[2m[9C | [22mpolyfills    [2m | [96m[22m484.61 kB[92m
-runtime.js[11X[m[2m[11C | [22mruntime      [2m | [22m  [96m6.15 kB[m[1m[21;1H [22m[20X[2m[20C | [22m[1mInitial Total[22m[2m | [22m  [1m5.59 MB[22m[23;1HBuild at: [37m[1m2025-05-23T03:02:09.959Z[m - Hash: [37m[1m3d4f9def5019bf218371[m - Time: [37m[1m70283[mms[?25h[?25l[25;1H** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[92m[28;1H√ [mCompiled successfully.
-[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-[1m
-Initial Chunk Files[22m  [2m | [22m[1mNames[22m [2m | [22m     [1mSize[92m[22m
-styles.css, styles.js[m[2m | [22mstyles[2m | [96m[22m563.71 kB[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T03:10:27.779Z[m - Hash: [37m[1mca3461e27195cd448e3d[m - Time: [37m[1m12179[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m689.93 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T03:11:55.107Z[m - Hash: [37m[1m06480af6b156d19bbd9f[m - Time: [37m[1m6723[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m689.92 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T03:17:56.490Z[m - Hash: [37m[1m2505338e1976d8d54f76[m - Time: [37m[1m12532[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:05:25.520Z[m - Hash: [37m[1m387f73826f8d100d9837[m - Time: [37m[1m5900[mms[K
-
-[91mError: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-
-[91m[7m81[m   {[K
-[91m[7m  [m   [91m~[K[m
-
-
-
-[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:05:36.618Z[m - Hash: [37m[1m387f73826f8d100d9837[m - Time: [37m[1m1379[mms[K
-
-[91mError: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-
-[91m[7m81[m   {[K
-[91m[7m  [m   [91m~[K[m
-
-
-
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:06:29.510Z[m - Hash: [37m[1m387f73826f8d100d9837[m - Time: [37m[1m498[mms[K
-
-[91mError: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-
-[91m[7m81[m   {[K
-[91m[7m  [m   [91m~[K[m
-
-
-
-[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:07:22.562Z[m - Hash: [37m[1m387f73826f8d100d9837[m - Time: [37m[1m476[mms[K
-
-[91mError: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-
-[91m[7m81[m   {[K
-[91m[7m  [m   [91m~[K[m
-
-
-
-[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:07:25.269Z[m - Hash: [37m[1m387f73826f8d100d9837[m - Time: [37m[1m721[mms[K
-
-[91mError: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-
-[91m[7m81[m   {[K
-[91m[7m  [m   [91m~[K[m
-
-
-
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:08:26.745Z[m - Hash: [37m[1m387f73826f8d100d9837[m - Time: [37m[1m598[mms[K
-
-[91mError: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-
-[91m[7m81[m   {[K
-[91m[7m  [m   [91m~[K[m
-
-
-
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m690.57 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:08:55.892Z[m - Hash: [37m[1mc6ca48ed69dd1dd877c4[m - Time: [37m[1m5548[mms[K
-
-[92m√ [mCompiled successfully.[K
-[?25l[8;31;120t[91m[HError: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-[K[91m[7m
-81[m   {[K[91m[7m
-  [m   [91m~[K[m
-[K
-[K
-[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K
-5 unchanged chunks[K
-[K
-Build at: [37m[1m2025-05-23T04:08:26.745Z[m - Hash: [37m[1m387f73826f8d100d9837[m - Time: [37m[1m598[mms[K
-[K[91m
-Error: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-[K[91m[7m
-81[m   {[K[91m[7m
-  [m   [91m~[K[m
-[K
-[K
-[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m690.57 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-05-23T04:08:55.892Z[m - Hash: [37m[1mc6ca48ed69dd1dd877c4[m - Time: [37m[1m5548[mms[K
-[K[92m
-√ [mCompiled successfully.[K
-[K[?25h[?25l[91m[HError: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-[K[91m[7m
-81[m   {[K[91m[7m
-  [m   [91m~[K[m
-[K
-[K
-[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K
-5 unchanged chunks[K
-[K
-Build at: [37m[1m2025-05-23T04:08:26.745Z[m - Hash: [37m[1m387f73826f8d100d9837[m - Time: [37m[1m598[mms[K
-[K[91m
-Error: [96msrc/app/app-routing.module.ts[m:[93m81[m:[93m3 [m- [91merror [90mTS1005: [m',' expected.[K
-[K[91m[7m
-81[m   {[K[91m[7m
-  [m   [91m~[K[m
-[K
-[K
-[K[32m
-√ [mBrowser application bundle generation complete.[K
-[K[1m
-Initial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K[92m
-main.js[12X[m[2m[12C | [22mmain [2m | [96m[22m690.57 kB[K[m
-[K
-4 unchanged chunks[K
-[K
-Build at: [37m[1m2025-05-23T04:08:55.892Z[m - Hash: [37m[1mc6ca48ed69dd1dd877c4[m - Time: [37m[1m5548[mms[K
-[K[92m
-√ [mCompiled successfully.[K
-[K
-[K[31;1H[?25h[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:10:33.843Z[m - Hash: [37m[1mc6ca48ed69dd1dd877c4[m - Time: [37m[1m2309[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m691.00 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:10:42.784Z[m - Hash: [37m[1ma312249e397b2a94a289[m - Time: [37m[1m1662[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m691.66 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:12:01.398Z[m - Hash: [37m[1m15c908f70932648a3887[m - Time: [37m[1m1842[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m691.70 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:15:19.681Z[m - Hash: [37m[1mcf16b4bb806644ea9e45[m - Time: [37m[1m7222[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m691.66 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:15:24.318Z[m - Hash: [37m[1m15c908f70932648a3887[m - Time: [37m[1m4417[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m690.57 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:17:54.310Z[m - Hash: [37m[1mc6ca48ed69dd1dd877c4[m - Time: [37m[1m1630[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m690.92 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:18:10.673Z[m - Hash: [37m[1m231e2d00f5c8fbef1259[m - Time: [37m[1m2954[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m690.57 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-23T04:22:58.875Z[m - Hash: [37m[1mc6ca48ed69dd1dd877c4[m - Time: [37m[1m1378[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:16:13.057Z[m - Hash: [37m[1mc6ca48ed69dd1dd877c4[m - Time: [37m[1m4358[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m690.62 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:17:09.869Z[m - Hash: [37m[1m011159a3648ee8d0d356[m - Time: [37m[1m2971[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m176[m:[93m10 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not exist on type 'DonorDoctorViewRecord'.   [32;1H
-[31m[1m    [m[K
-[31m[1m    [7m176[m     this.medicalHistory = donorRecord.medicalHistory;[K
-[31m[1m    [7m   [m[10X[91m[10C~~~~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/donor/donor.ts[m:[93m176[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not exist on type 'DonorRecord'.[K
-[31m[1m    [m[K
-[31m[1m    [7m176[m     this.medicalHistory = donorRecord.medicalHistory;[K
-[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m690.66 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:17:17.251Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m2364[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m177[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not exist on type 'DonorRecord'.[K
-[31m[1m    [m[K
-[31m[1m    [7m177[m     this.medicalHistory = donorRecord.medicalHistory;[K
-[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:17:38.389Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m438[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m184[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not exist on type 'DonorRecord'.[K
-[31m[1m    [m[K
-[31m[1m    [7m184[m     this.medicalHistory = donorRecord.medicalHistory;[K
-[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:19:21.475Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m664[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m187[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not exist on type 'DonorRecord'.[K
-[31m[1m    [m[K
-[31m[1m    [7m187[m     this.medicalHistory = donorRecord.medicalHistory;[K
-[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:19:28.814Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m517[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m187[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not exist on type 'DonorRecord'.[K
-[31m[1m    [m[K
-[31m[1m    [7m187[m     this.medicalHistory = donorRecord.medicalHistory;[K
-[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:19:33.510Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m716[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m187[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not exist on type 'DonorRecord'.[K
-[31m[1m    [m[K
-[31m[1m    [7m187[m     this.medicalHistory = donorRecord.medicalHistory;[K
-[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:20:15.363Z[m - Hash: [37m[1mb3d2262b85f6d1fc7b38[m - Time: [37m[1m1107[mms[K
-
-[91mError: [96msrc/app/donor/donor.ts[m:[93m203[m:[93m1 [m- [91merror [90mTS1005: [m'}' expected.[K
-
-[91m[7m203[m[K
-[91m[7m   [m[K
-
-[91m  [96msrc/app/donor/donor.ts[m:[93m33[m:[93m2[K[m
-[91m    [7m33[m }{[K
-[91m    [7m  [m  [96m~[K[m
-[91m    The parser expected to find a '}' to match the '{' token here.[m
-
-
-
-[36m- [mGenerating browser application bundles...[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m189[m:[93m41 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not exist on type 'DonorRecord'.[K
-[31m[1m    [m[K
-[31m[1m    [7m189[m       this.medicalHistory = donorRecord.medicalHistory;[K
-[31m[1m    [7m   [m[41X[91m[41C~~~~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/admin/doctor-list-for-admin/doctor-list-for-admin.component.ts[m:[93m5[m:[93m10 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' has no e
-[31;133Hexported member 'DisplayVal'.
-[31m[1m    [m[K
-[31m[1m    [7m5[m import { DisplayVal } from '../../donor/donor';[K
-[31m[1m    [7m [m[10X[91m[10C~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/admin/donor-list-for-admin/donor-list-for-admin.component.ts[m:[93m6[m:[93m10 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' has no exp
-[31;133Hported member 'DisplayVal'.
-[31m[1m    [m[K
-[31m[1m    [7m6[m import { DisplayVal, DonorAdminViewRecord, DonorViewRecord } from '../../donor/donor';[K
-[31m[1m    [7m [m[10X[91m[10C~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/admin/donor-list-for-admin/donor-list-for-admin.component.ts[m:[93m6[m:[93m22 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' has no exp
-[31;133Hported member 'DonorAdminViewRecord'.
-[31m[1m    [m[K
-[31m[1m    [7m6[m import { DisplayVal, DonorAdminViewRecord, DonorViewRecord } from '../../donor/donor';[K
-[31m[1m    [7m [m[22X[91m[22C~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/admin/donor-list-for-admin/donor-list-for-admin.component.ts[m:[93m6[m:[93m44 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' has no exp
-[31;133Hported member 'DonorViewRecord'.
-[31m[1m    [m[K
-[31m[1m    [7m6[m import { DisplayVal, DonorAdminViewRecord, DonorViewRecord } from '../../donor/donor';[K
-[31m[1m    [7m [m[44X[91m[44C~~~~~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/admin/super-list-for-admin/super-list-for-admin.component.ts[m:[93m5[m:[93m10 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' has no exp
-[31;133Hported member 'Displ[31m[1mayVal'.[m
-[31m[1m    [m[K
-[31m[1m    [7m5[m import { DisplayVal } from '../../donor/donor';[K
-[31m[1m    [7m [m[10X[91m[10C~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/admin/technician-list-for-admin/technician-list-for-admin.component.ts[m:[93m7[m:[93m10 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' 
-[31;133H has no exported member 'DisplayVal'.
-[31m[1m    [m[K
-[31m[1m    [7m7[m import { DisplayVal} from '../../donor/donor';[K
-[31m[1m    [7m [m[10X[91m[10C~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/doctor/donor-list-for-doctor/donor-list-for-doctor.component.ts[m:[93m4[m:[93m10 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' has no 
-[31;133H exported member 'DisplayVal'.
-[31m[1m    [m[K
-[31m[1m    [7m4[m import { DisplayVal, DonorDoctorViewRecord, DonorViewRecord } from '../../donor/donor';[K
-[31m[1m    [7m [m[10X[91m[10C~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/doctor/donor-list-for-doctor/donor-list-for-doctor.component.ts[m:[93m4[m:[93m22 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' has no 
-[31;133H exported member 'DonorDoctorViewRecord'.
-[31m[1m    [m[K
-[31m[1m    [7m4[m import { DisplayVal, DonorDoctorViewRecord, DonorViewRecord } from '../../donor/donor';[K
-[31m[1m    [7m [m[22X[91m[22C~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/doctor/donor-list-for-doctor/donor-list-for-doctor.component.ts[m:[93m4[m:[93m45 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' has no 
-[31;133H exported member 'DonorViewRecord'.
-[31m[1m    [m[K
-[31m[1m    [7m4[m import { DisplayVal, DonorDoctorViewRecord, DonorViewRecord } from '../../donor/donor';[K
-[31m[1m    [7m [m[45X[91m[45C~~~~~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/donor/donor-history/donor-history.component.ts[m:[93m8[m:[93m10 [m- [91merror [90mTS2305: [mModule '"../donor"' has no exported member 'DisplayVa
-[31;133Hal'.
-[31m[1m    [m[K
-[31m[1m    [7m8[m import { DisplayVal, DonorViewRecord } from '../donor';[K
-[31m[1m    [7m [m[10X[91m[10C~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/donor/donor-history/donor-history.component.ts[m:[93m8[m:[31m[1m93m22[m - [91merror [90mTS2305: [mModule '"../donor"' has no exported member 'DonorV
-[31;133HViewRecord'.
-[31m[1m    [m[K
-[31m[1m    [7m8[m import { DisplayVal, DonorViewRecord } from '../donor';[K
-[31m[1m    [7m [m[22X[91m[22C~~~~~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/donor/donor-register/donor-edit.component.ts[m:[93m9[m:[93m10 [m- [91merror [90mTS2305: [mModule '"../donor"' has no exported member 'DonorRecord
-[31;133Hd'.
-[31m[1m    [m[K
-[31m[1m    [7m9[m import { DonorRecord } from '../donor';[K
-[31m[1m    [7m [m[10X[91m[10C~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/donor/donor.component.ts[m:[93m8[m:[93m44 [m- [91merror [90mTS2305: [mModule '"./donor"' has no exported member 'DonorViewRecord'.[K
-[31m[1m    [m[K
-[31m[1m    [7m8[m import { DonationDetails, DonationHistory, DonorViewRecord } from './donor';[K
-[31m[1m    [7m [m[44X[91m[44C~~~~~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.ts[m:[93m4[m:[93m10 [m- [91merror [90mTS2305: [mModule '"../../donor/
-[31;133H/donor"' has no exported member 'DisplayVal'.
-[31m[1m    [m[K
-[31m[1m    [7m4[m import { DisplayVal, DonorDeferred } from '../../donor/donor';[K
-[31m[1m    [7m [m[10X[91m[10C~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/super/deferred-donor-list-for-super/deferred-donor-list-for-super.component.ts[m:[93m4[m:[93m22 [m- [91merror [90mTS2305: [mModule '"../../donor/
-[31;133H/donor"' has no exported member 'DonorDeferred'.
-[31m[1m    [m[K
-[31m[1m    [7m4[m import { DisplayVal, DonorDeferred } from '../../donor/donor';[K
-[31m[1m    [7m [m[22X[91m[22C~~~~~~~~~~~~~[K[m
-[31m[1m    [96msrc/app/doctor/doctor-list-for-donor/doctor-list-for-donor.component.ts[m:[93m5[m:[93m10 [m- [91merror [90mTS2305: [mModule '"../../donor/donor"' has no 
-[31;133H exported member 'DisplayVal'.
-[31m[1m    [m[K
-[31m[1m    [7m5[m import { DisplayVal } from '../../donor/donor';[K
-[31m[1m    [7m [m[10X[91m[10C~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:20:18.230Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m929[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m189[m:[93m39 [m- [91merror [90mTS2339: [mProperty 'medicalHistory' does not exist on type 'DonorRecord'.[K
-[31m[1m    [m[K
-[31m[1m    [7m189[m     this.medicalHistory = donorRecord.medicalHistory;[K
-[31m[1m    [7m   [m[39X[91m[39C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:21:22.010Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m1604[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m100[m:[93m14 [m- [91merror [90mTS2420: [mClass 'DonorDeferred' incorrectly implements interface 'DonorRecord'.       [32;1H
-[31m[1m      Property 'medicalHistory' is missing in type 'DonorDeferred' but required in type 'DonorRecord'.[m[K
-[31m[1m    [m[K
-[31m[1m    [7m100[m export class DonorDeferred implements DonorRecord {[K
-[31m[1m    [7m   [m[14X[91m[14C~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.ts[m:[93m57[m:[93m3[K[m
-[31m[1m        [7m57[m   medicalHistory: MedicalHistory;[K
-[31m[1m        [7m  [m   [96m~~~~~~~~~~~~~~[K[m
-[31m[1m        'medicalHistory' is declared here.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:22:48.903Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m2954[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m108[m:[93m14 [m- [91merror [90mTS2420: [mClass 'DonorDeferred' incorrectly implements interface 'DonorRecord'.       [32;1H
-[31m[1m      Property 'medicalHistory' is missing in type 'DonorDeferred' but required in type 'DonorRecord'.[m[K
-[31m[1m    [m[K
-[31m[1m    [7m108[m export class DonorDeferred implements DonorRecord {[K
-[31m[1m    [7m   [m[14X[91m[14C~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.ts[m:[93m65[m:[93m3[K[m
-[31m[1m        [7m65[m   medicalHistory: MedicalHistory;[K
-[31m[1m        [7m  [m   [96m~~~~~~~~~~~~~~[K[m
-[31m[1m        'medicalHistory' is declared here.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:23:42.451Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m1847[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m114[m:[93m14 [m- [91merror [90mTS2420: [mClass 'DonorDeferred' incorrectly implements interface 'DonorRecord'.       [32;1H
-[31m[1m      Property 'medicalHistory' is missing in type 'DonorDeferred' but required in type 'DonorRecord'.[m[K
-[31m[1m    [m[K
-[31m[1m    [7m114[m export class DonorDeferred implements DonorRecord {[K
-[31m[1m    [7m   [m[14X[91m[14C~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.ts[m:[93m71[m:[93m3[K[m
-[31m[1m        [7m71[m   medicalHistory: MedicalHistory;[K
-[31m[1m        [7m  [m   [96m~~~~~~~~~~~~~~[K[m
-[31m[1m        'medicalHistory' is declared here.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:23:54.601Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m734[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m114[m:[93m14 [m- [91merror [90mTS2420: [mClass 'DonorDeferred' incorrectly implements interface 'DonorRecord'.       [32;1H
-[31m[1m      Property 'medicalHistory' is missing in type 'DonorDeferred' but required in type 'DonorRecord'.[m[K
-[31m[1m    [m[K
-[31m[1m    [7m114[m export class DonorDeferred implements DonorRecord {[K
-[31m[1m    [7m   [m[14X[91m[14C~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.ts[m:[93m71[m:[93m3[K[m
-[31m[1m        [7m71[m   medicalHistory: MedicalHistory;[K
-[31m[1m        [7m  [m   [96m~~~~~~~~~~~~~~[K[m
-[31m[1m        'medicalHistory' is declared here.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:24:03.334Z[m - Hash: [37m[1mae3cbd21f49fc0e4b347[m - Time: [37m[1m1128[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.ts[m:[93m114[m:[93m14 [m- [91merror [90mTS2420: [mClass 'DonorDeferred' incorrectly implements interface 'DonorRecord'.       [32;1H
-[31m[1m      Property 'medicalHistory' is missing in type 'DonorDeferred' but required in type 'DonorRecord'.[m[K
-[31m[1m    [m[K
-[31m[1m    [7m114[m export class DonorDeferred implements DonorRecord {[K
-[31m[1m    [7m   [m[14X[91m[14C~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.ts[m:[93m71[m:[93m3[K[m
-[31m[1m        [7m71[m   medicalHistory: MedicalHistory;[K
-[31m[1m        [7m  [m   [96m~~~~~~~~~~~~~~[K[m
-[31m[1m        'medicalHistory' is declared here.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m690.71 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:24:49.466Z[m - Hash: [37m[1m9a65734b0f254ec0f258[m - Time: [37m[1m1431[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m690.75 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:25:28.301Z[m - Hash: [37m[1m59f07a8d5d6b56f70181[m - Time: [37m[1m2528[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m690.80 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:25:43.987Z[m - Hash: [37m[1m0e8689e228fa51f6d7e3[m - Time: [37m[1m1243[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:26:12.857Z[m - Hash: [37m[1m0e8689e228fa51f6d7e3[m - Time: [37m[1m1143[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m699.50 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:28:51.097Z[m - Hash: [37m[1mea2f4cbb4678fce1126f[m - Time: [37m[1m5463[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m117[m:[93m44 [m- [91merror [90mTS7053: [mElement implicitly has an 'any' type because expression of type 
-[31;133H '"screenedAt"' can't be used to index type 'MedicalHistoryDetails'.
-[31m[1m      Property 'screenedAt' does not exist on type 'MedicalHistoryDetails'.[m[K
-[31m[1m    [m[K
-[31m[1m    [7m117[m                         <li>Screened At: {{test.value['screenedAt']}}</li>[K
-[31m[1m    [7m   [m[44X[91m[44C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m124[m:[93m48 [m- [91merror [90mTS2339: [mProperty 'donation' does not exist on type 'DonorComponent'.[K
-[31m[1m    [m[K
-[31m[1m    [7m124[m                           <ng-container *ngIf="donation.value['status'] === 'in progress'; else successBlock">[K
-[31m[1m    [7m   [m[48X[91m[48C~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m131[m:[93m56 [m- [91merror [90mTS2339: [mProperty 'donation' does not exist on type 'DonorComponent'.[K
-[31m[1m    [m[K
-[31m[1m    [7m131[m                             <li>Blood Collected By: {{ donation.value['collectedBy'] }}</li>[K
-[31m[1m    [7m   [m[56X[91m[56C~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[K[4C[31m[1m            ~~~~~~~~~~~~~~~~~~~~~~~~[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m132[m:[93m55 [m- [91merror [90mTS2339: [mProperty 'donation' does not exist on type 'DonorComponent'.[K
-[31m[1m    [m[K
-[31m[1m    [7m132[m                             <li>Blood Bag Unit No: {{ donation.value['bloodBagUnitNo'] }}</li>[K
-[31m[1m    [7m   [m[55X[91m[55C~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m133[m:[93m58 [m- [91merror [90mTS2339: [mProperty 'donation' does not exist on type 'DonorComponent'.[K
-[31m[1m    [m[K
-[31m[1m    [7m133[m                             <li>Blood Bag Segment No: {{ donation.value['bloodBagSegmentNo'] }}</li>[K
-[31m[1m    [7m   [m[58X[91m[58C~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [96msrc/app/donor/donor.component.html[m:[93m134[m:[93m46 [m- [91merror [90mTS2339: [mProperty 'donation' does not exist on type 'DonorComponent'.[K
-[31m[1m    [m[K
-[31m[1m    [7m134[m                             <li>Quantity: {{ donation.value['quantity'] }}</li>[K
-[31m[1m    [7m   [m[46X[91m[46C~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: building)...[K[61C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m [2m | [22m     [1mSize[22m[K
-[92mvendor.js[m[2m[10C | [22mvendor[2m | [22m  [96m3.91 MB[K[m
-[92mmain.js[m[2m[12C | [22mmain  [2m | [96m[22m660.02 kB[K[m
-
-3 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:29:06.137Z[m - Hash: [37m[1m21f30def16d7f30b0719[m - Time: [37m[1m3314[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:30:30.569Z[m - Hash: [37m[1m21f30def16d7f30b0719[m - Time: [37m[1m629[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:31:08.270Z[m - Hash: [37m[1m21f30def16d7f30b0719[m - Time: [37m[1m1177[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:35:03.580Z[m - Hash: [37m[1m21f30def16d7f30b0719[m - Time: [37m[1m1441[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:36:55.939Z[m - Hash: [37m[1m21f30def16d7f30b0719[m - Time: [37m[1m1037[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:37:03.816Z[m - Hash: [37m[1m21f30def16d7f30b0719[m - Time: [37m[1m1685[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:37:35.722Z[m - Hash: [37m[1m21f30def16d7f30b0719[m - Time: [37m[1m521[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:37:50.067Z[m - Hash: [37m[1m21f30def16d7f30b0719[m - Time: [37m[1m679[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:38:41.481Z[m - Hash: [37m[1m21f30def16d7f30b0719[m - Time: [37m[1m618[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[K[K[80C[36m| [mGenerating browser application bundles (phase: additional asset processing)...[K[80C[32m√ [mBrowser application bundle generation complete.
-
-[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m[2m | [22m     [1mSize[22m[K
-[92mmain.js[m[2m[12C | [22mmain [2m | [96m[22m659.21 kB[K[m
-
-4 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:40:57.844Z[m - Hash: [37m[1m6366a3de3f325639344b[m - Time: [37m[1m7269[mms[K
-
-[92m√ [mCompiled successfully.[K
-[36m- [mGenerating browser application bundles...[K[43C[36m\ [mGenerating browser application bundles (phase: additional asset processing)...[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:41:01.505Z[m - Hash: [37m[1m6366a3de3f325639344b[m - Time: [37m[1m3321[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[36m- [mGenerating browser application bundles...[K[43C[32m√ [mBrowser application bundle generation complete.[K
-
-5 unchanged chunks
-
-Build at: [37m[1m2025-05-24T04:41:47.254Z[m - Hash: [37m[1m6366a3de3f325639344b[m - Time: [37m[1m625[mms[K
-
-[92m√ [mCompiled successfully.[K
-[31m[1m    [m
-[31m[1m    Error: [96msrc/app/donor/donor.component.html[m:[93m129[m:[93m25 [m- [91merror [90mNG5002: [mUnexpected closing tag "ng-template". It may happen when the tag
-[31;133Hg has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied
-[31;133Hd-end-tags
-[31m[1m    [m[K
-[31m[1m    [7m129[m                         </ng-template>[K
-[31m[1m    [7m   [m[25X[91m[25C~~~~~~~~~~~~~~[K[m
-[31m[1m    [m[K
-[31m[1m      [96msrc/app/donor/donor.component.ts[m:[93m14[m:[93m16[K[m
-[31m[1m        [7m14[m   templateUrl: './donor.component.html',[K
-[31m[1m        [7m  [m[16X[96m[16C~~~~~~~~~~~~~~~~~~~~~~~~[K[m
-[31m[1m        Error occurs in the template of component DonorComponent.[m[K
-[31m[1m    [m[K
-[?9001l[?1004l]0;nasrin@LAPTOP-F30RQ071 [01;34mclient $[00m rci[K[K[Kexit
-exit
-
-Script done on 2025-05-24 10:12:17+05:30 [COMMAND_EXIT_CODE="1"]

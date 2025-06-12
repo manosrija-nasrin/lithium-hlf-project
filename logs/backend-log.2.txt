@@ -1,915 +1,0 @@
-Script started on 2024-08-22 15:27:50+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="133" LINES="32"]
-]0;nasrin@LAPTOP-F30RQ071 [01;34mblood-data-management-system $[00m cds[K server/
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm start
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm start[25l
-> donor-application@1.0.0 prestart
-> node initServer.js[14X[8;1H[?25h[Knode:internal/modules/cjs/loader:1051[59X
-  throw err;[84X
-  ^[93X
-[96X
-Error: Cannot find module 'fabric-network'[54X
-Require stack:[82X
-- F:\blood-data-management-system\server\enrollAdmin-Hospital1.js[31X
-- F:\blood-data-management-system\server\initServer.js[42X[90m
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)[m[23X[90m
-    at Module._load (node:internal/modules/cjs/loader:901:27)[m[35X[90m
-    at Module.require (node:internal/modules/cjs/loader:1115:19)[m[32X[90m
-    at require (node:internal/modules/helpers:130:18)[m[43X
-    at Object.<anonymous> [90m(F:\blood-data-management-system\server\[menrollAdmin-Hospital1.js:5:19[90m)
-    at Module._compile (node:internal/modules/cjs/loader:1241:14)[m[31X[90m
-    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)[m[24X[90m
-    at Module.load (node:internal/modules/cjs/loader:1091:32)[m[35X[90m
-    at Module._load (node:internal/modules/cjs/loader:938:12)[m[35X[90m
-    at Module.require (node:internal/modules/cjs/loader:1115:19)[m {[30X
-  code: [32m'MODULE_NOT_FOUND'[m,[69X
-  requireStack: [[79X
-    [32m'F:\\blood-data-management-system\\server\\enrollAdmin-Hospital1.js'[m,[23X
-    [32m'F:\\blood-data-management-system\\server\\initServer.js'[m[35X
-  ][93X
-}[95X
-
-Node.js v20.9.0
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm install fac[Kbric [K-network
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm install fabric-network\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[K\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[K\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[1m[97mnpm[m [31merror[m [94mcode[m ENOTFOUND[K
-[1m[97mnpm[m [31merror[m [94msyscall[m getaddrinfo[K
-[1m[97mnpm[m [31merror[m [94merrno[m ENOTFOUND[K
-[1m[97mnpm[m [31merror[m [94mnetwork[m request to https://registry.npmjs.org/fabric-network failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org      
-[1m[97mnpm[m [31merror[m [94mnetwork[m This is a problem related to network connectivity.[K
-[1m[97mnpm[m [31merror[m [94mnetwork[m In most cases you are behind a proxy or have bad network settings.[K
-[1m[97mnpm[m [31merror[m [94mnetwork[m[K
-[1m[97mnpm[m [31merror[m [94mnetwork[m If you are behind a proxy, please make sure that the[K
-[1m[97mnpm[m [31merror[m [94mnetwork[m 'proxy' config is set properly.  See: 'npm help config'[K
-\[1m[97mnpm[m [31merror[m A complete log of this run can be found in: C:\Users\MANOSRIJA NASRIN\AppData\Local\npm-cache\_logs\2024-08-22T09_58_22_752
-Z-debug-0.log
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm install fabric-network
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm install fabric-network\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m Unsupported engine {[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   package: [32m'geo-distance-js@1.0.0'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   required: { node: [32m'~0.10.0'[m },[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   current: { node: [32m'v20.9.0'[m, npm: [32m'10.8.2'[m }[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m }[K
-\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a 
-good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m npmlog@5.0.1: This package is no longer supported.[K
-\|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated[K
-\|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m urix@0.1.0: Please see https://github.com/lydell/urix#deprecated[K
-[1m[97mnpm[m [33mwarn[m [94mdeprecated[m rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported[K
-|[1m[97mnpm[m [33mwarn[m [94mdeprecated[m har-validator@5.1.5: this library is no longer supported[K
-/-[K\[K|[K/[K-[K\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m glob@7.1.6: Glob versions prior to v9 are no longer supported[K
-/-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m are-we-there-yet@2.0.0: This package is no longer supported.[K
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated[K
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dep
-endencies
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated[K
-\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m cloudant-follow@0.17.0: This package is no longer maintained.[K
--\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m gauge@3.0.2: This package is no longer supported.[K
-\[1m[97mnpm[m [33mwarn[m [94mdeprecated[m uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstance
-s, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
-\[1m[97mnpm[m [33mwarn[m [94mdeprecated[m request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142[K
-\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[K/-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m bson@6.4.0: a critical bug affecting zSeries s390x big-endian systems is fixed in bson@6.5.0[K
-|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[K/-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m grpc@1.24.11: This library will not receive further updates other than security fixes. We recommend using @grpc/g
-rpc-js instead.
-\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[K|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K]0;C:\windows\system32\cmd.exe /[K]0;node-pre-gyp]0;node-gyp-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K]0;Windows PowerShell/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K]0;node-gyp/[K-[K\[K|[K/[K-[K\[K]0;Windows PowerShell|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[1m[97mnpm[m [33mwarn[m [94mcleanup[m Failed to remove some directories [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\third_party\upb'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32mthird_party\\upb'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\src\core\ext'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32msrc\\core\\ext'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ][K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m ][K
--[1m[97mnpm[m [31merror[m [94mcode[m [33m1[m[K
-[1m[97mnpm[m [31merror[m [94mpath[m F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m command failed[K
-[1m[97mnpm[m [31merror[m [94mcommand[m C:\windows\system32\cmd.exe /d /s /c node-pre-gyp install --fallback-to-build --library=static_library[K
-[1m[97mnpm[m [31merror[m Failed to execute 'C:\Program Files\nodejs\node.exe C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_mod
-ules\node-gyp\bin\node-gyp.js configure --fallback-to-build --library=static_library --module=F:\blood-data-management-system\server\
-node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node-v115-win32-x64-unknown\grpc_node.node --module_name=grpc_
-node --module_path=F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node
--v115-win32-x64-unknown --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v115' (1)
-[1m[97mnpm[m [31merror[m node-pre-gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info using node-pre-gyp@1.0.11[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info check checked for "F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc\sr
-c\node\extension_binary\node-v115-win32-x64-unknown\grpc_node.node" (not found)
-[1m[97mnpm[m [31merror[m node-pre-gyp http GET https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v115-win32-x64-unknown.tar.gz[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! install response status 404 Not Found on https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v11
-5-win32-x64-unknown.tar.gz
-[1m[97mnpm[m [31merror[m node-pre-gyp WARN Pre-built binaries not installable for grpc@1.24.11 and node@20.9.0 (node-v115 ABI, unknown) (falling bac
-k to source compile with node-gyp)
-[1m[97mnpm[m [31merror[m node-pre-gyp WARN Hit error response status 404 Not Found on https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v
-115-win32-x64-unknown.tar.gz
-[1m[97mnpm[m [31merror[m gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m gyp info using node-gyp@10.1.0[K
-[1m[97mnpm[m [31merror[m gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m gyp info ok[K
-[1m[97mnpm[m [31merror[m gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m gyp info using node-gyp@10.1.0[K
-[1m[97mnpm[m [31merror[m gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m gyp info find Python using Python version 3.9.13 found at "C:\Users\MANOSRIJA NASRIN\AppData\Local\Microsoft\WindowsApps\Py
-thonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe"
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS msvs_version not set from command line or npm config[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS VCINSTALLDIR not set, not running in VS Command Prompt[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS not looking for VS2015 as it is only supported up to Node.js 18[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS not looking for VS2013 as it is only supported up to Node.js 8[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS **************************************************************[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS You need to install the latest version of Visual Studio[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS including the "Desktop development with C++" workload.[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS For more information consult the documentation at:[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS https://github.com/nodejs/node-gyp#on-windows[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS **************************************************************[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! configure error[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack Error: Could not find any Visual Studio installation to use[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack at VisualStudioFinder.fail (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node
--gyp\lib\find-visualstudio.js:116:11)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at VisualStudioFinder.findVisualStudio (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_
-modules\node-gyp\lib\find-visualstudio.js:72:17)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack at async createBuildDir (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node-gy
-p\lib\configure.js:95:26)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at async run (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node-gyp\bin\node-
-gyp.js:81:18)
-[1m[97mnpm[m [31merror[m gyp ERR! System Windows_NT 10.0.19045[K
-[1m[97mnpm[m [31merror[m gyp ERR! command "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\MANOSRIJA NASRIN\\AppData\\Roaming\\npm\\node_modules\\n
-pm\\node_modules\\node-gyp\\bin\\node-gyp.js" "configure" "--fallback-to-build" "--library=static_library" "--module=F:\\blood-data-m
-anagement-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\src\\node\\extension_binary\\node-v115-win32-x64-unknown\\
-grpc_node.node" "--module_name=grpc_node" "--module_path=F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_
-modules\\grpc\\src\\node\\extension_binary\\node-v115-win32-x64-unknown" "--napi_version=9" "--node_abi_napi=napi" "--napi_build_vers
-ion=0" "--node_napi_label=node-v115"
-[1m[97mnpm[m [31merror[m gyp ERR! cwd F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m gyp ERR! node -v v20.9.0[K
-[1m[97mnpm[m [31merror[m gyp ERR! node-gyp -v v10.1.0[K
-[1m[97mnpm[m [31merror[m gyp ERR! not ok[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! build error[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack Error: Failed to execute 'C:\Program Files\nodejs\node.exe C:\Users\MANOSRIJA NASRIN\AppData\Roamin
-g\npm\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js configure --fallback-to-build --library=static_library --module=F:\blood
--data-management-system\server\node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node-v115-win32-x64-unknown\grp
-c_node.node --module_name=grpc_node --module_path=F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc
-\src\node\extension_binary\node-v115-win32-x64-unknown --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label
-=node-v115' (1)
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess.<anonymous> (F:\blood-data-management-system\server\node_modules\@mapbox\node-p
-re-gyp\lib\util\compile.js:89:23)
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess.emit (node:events:514:28)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at maybeClose (node:internal/child_process:1105:16)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess._handle.onexit (node:internal/child_process:305:5)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! System Windows_NT 10.0.19045[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! command "C:\\Program Files\\nodejs\\node.exe" "F:\\blood-data-management-system\\server\\node_modules\\@m
-apbox\\node-pre-gyp\\bin\\node-pre-gyp" "install" "--fallback-to-build" "--library=static_library"
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! cwd F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! node -v v20.9.0[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! node-pre-gyp -v v1.0.11[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! not ok[K
-[1m[97mnpm[m [31merror[m A complete log of this run can be found in: C:\Users\MANOSRIJA NASRIN\AppData\Local\npm-cache\_logs\2024-08-22T10_00_29_180
-Z-debug-0.log
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm uninstall
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm uninstall[1m[97mnpm[m [31merror[m Must provide a package name to remove[K
-\[1m[97mnpm[m [31merror[m A complete log of this run can be found in: C:\Users\MANOSRIJA NASRIN\AppData\Local\npm-cache\_logs\2024-08-22T10_03_09_355
-Z-debug-0.log
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm uninstall all
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm uninstall all\[K[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m Unsupported engine {[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   package: [32m'geo-distance-js@1.0.0'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   required: { node: [32m'~0.10.0'[m },[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   current: { node: [32m'v20.9.0'[m, npm: [32m'10.8.2'[m }[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m }[K
-|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a 
-good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-|[1m[97mnpm[m [33mwarn[m [94mdeprecated[m npmlog@5.0.1: This package is no longer supported.[K
-|/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated[K
-/-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m urix@0.1.0: Please see https://github.com/lydell/urix#deprecated[K
-|[1m[97mnpm[m [33mwarn[m [94mdeprecated[m rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported[K
-/-[K\[K|[K/[K-[K\[K[K|/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m har-validator@5.1.5: this library is no longer supported[K
-/-[K\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m glob@7.1.6: Glob versions prior to v9 are no longer supported[K
--\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m are-we-there-yet@2.0.0: This package is no longer supported.[K
-\[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated[K
-\[1m[97mnpm[m [33mwarn[m [94mdeprecated[m chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dep
-endencies
-\[1m[97mnpm[m [33mwarn[m [94mdeprecated[m resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated[K
-|/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m cloudant-follow@0.17.0: This package is no longer maintained.[K
-\|[K/[K-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m gauge@3.0.2: This package is no longer supported.[K
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstance
-s, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142[K
-\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m bson@6.4.0: a critical bug affecting zSeries s390x big-endian systems is fixed in bson@6.5.0[K
-|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m grpc@1.24.11: This library will not receive further updates other than security fixes. We recommend using @grpc/g
-rpc-js instead.
-/-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K]0;C:\windows\system32\cmd.exe ]0;node-gyp]0;node-pre-gyp-[K\[K|[K/[K-[K\[K|[K]0;Windows PowerShell/[K-[K\[K|[K/[K-[K\[K|[K/[K]0;node-gyp]0;Windows PowerShell-[K]0;node-gyp\[K|[K]0;Windows PowerShell/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mcleanup[m Failed to remove some directories [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\third_party\boringssl\third_party\googletest\include'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32mthird_party\\boringssl\\third_party\\googletest\\include'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\src\core\ext\upb-generated\envoy'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32msrc\\core\\ext\\upb-generated\\envoy'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\src\core\ext\filters'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32msrc\\core\\ext\\filters'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ][K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m ][K
-|[1m[97mnpm[m [31merror[m [94mcode[m [33m1[m[K
-[1m[97mnpm[m [31merror[m [94mpath[m F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m command failed[K
-[1m[97mnpm[m [31merror[m [94mcommand[m C:\windows\system32\cmd.exe /d /s /c node-pre-gyp install --fallback-to-build --library=static_library[K
-[1m[97mnpm[m [31merror[m Failed to execute 'C:\Program Files\nodejs\node.exe C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_mod
-ules\node-gyp\bin\node-gyp.js configure --fallback-to-build --library=static_library --module=F:\blood-data-management-system\server\
-node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node-v115-win32-x64-unknown\grpc_node.node --module_name=grpc_
-node --module_path=F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node
--v115-win32-x64-unknown --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v115' (1)
-[1m[97mnpm[m [31merror[m node-pre-gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info using node-pre-gyp@1.0.11[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info check checked for "F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc\sr
-c\node\extension_binary\node-v115-win32-x64-unknown\grpc_node.node" (not found)
-[1m[97mnpm[m [31merror[m node-pre-gyp http GET https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v115-win32-x64-unknown.tar.gz[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! install response status 404 Not Found on https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v11
-5-win32-x64-unknown.tar.gz
-[1m[97mnpm[m [31merror[m node-pre-gyp WARN Pre-built binaries not installable for grpc@1.24.11 and node@20.9.0 (node-v115 ABI, unknown) (falling bac
-k to source compile with node-gyp)
-[1m[97mnpm[m [31merror[m node-pre-gyp WARN Hit error response status 404 Not Found on https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v
-115-win32-x64-unknown.tar.gz
-[1m[97mnpm[m [31merror[m gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m gyp info using node-gyp@10.1.0[K
-[1m[97mnpm[m [31merror[m gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m gyp info ok[K
-[1m[97mnpm[m [31merror[m gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m gyp info using node-gyp@10.1.0[K
-[1m[97mnpm[m [31merror[m gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m gyp info find Python using Python version 3.9.13 found at "C:\Users\MANOSRIJA NASRIN\AppData\Local\Microsoft\WindowsApps\Py
-thonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe"
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS msvs_version not set from command line or npm config[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS VCINSTALLDIR not set, not running in VS Command Prompt[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS not looking for VS2015 as it is only supported up to Node.js 18[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS not looking for VS2013 as it is only supported up to Node.js 8[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS **************************************************************[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS You need to install the latest version of Visual Studio[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS including the "Desktop development with C++" workload.[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS For more information consult the documentation at:[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS https://github.com/nodejs/node-gyp#on-windows[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS **************************************************************[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! configure error[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack Error: Could not find any Visual Studio installation to use[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack at VisualStudioFinder.fail (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node
--gyp\lib\find-visualstudio.js:116:11)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at VisualStudioFinder.findVisualStudio (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_
-modules\node-gyp\lib\find-visualstudio.js:72:17)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack at async createBuildDir (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node-gy
-p\lib\configure.js:95:26)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at async run (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node-gyp\bin\node-
-gyp.js:81:18)
-[1m[97mnpm[m [31merror[m gyp ERR! System Windows_NT 10.0.19045[K
-[1m[97mnpm[m [31merror[m gyp ERR! command "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\MANOSRIJA NASRIN\\AppData\\Roaming\\npm\\node_modules\\n
-pm\\node_modules\\node-gyp\\bin\\node-gyp.js" "configure" "--fallback-to-build" "--library=static_library" "--module=F:\\blood-data-m
-anagement-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\src\\node\\extension_binary\\node-v115-win32-x64-unknown\\
-grpc_node.node" "--module_name=grpc_node" "--module_path=F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_
-modules\\grpc\\src\\node\\extension_binary\\node-v115-win32-x64-unknown" "--napi_version=9" "--node_abi_napi=napi" "--napi_build_vers
-ion=0" "--node_napi_label=node-v115"
-[1m[97mnpm[m [31merror[m gyp ERR! cwd F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m gyp ERR! node -v v20.9.0[K
-[1m[97mnpm[m [31merror[m gyp ERR! node-gyp -v v10.1.0[K
-[1m[97mnpm[m [31merror[m gyp ERR! not ok[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! build error[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack Error: Failed to execute 'C:\Program Files\nodejs\node.exe C:\Users\MANOSRIJA NASRIN\AppData\Roamin
-g\npm\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js configure --fallback-to-build --library=static_library --module=F:\blood
--data-management-system\server\node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node-v115-win32-x64-unknown\grp
-c_node.node --module_name=grpc_node --module_path=F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc
-\src\node\extension_binary\node-v115-win32-x64-unknown --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label
-=node-v115' (1)
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess.<anonymous> (F:\blood-data-management-system\server\node_modules\@mapbox\node-p
-re-gyp\lib\util\compile.js:89:23)
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess.emit (node:events:514:28)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at maybeClose (node:internal/child_process:1105:16)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess._handle.onexit (node:internal/child_process:305:5)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! System Windows_NT 10.0.19045[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! command "C:\\Program Files\\nodejs\\node.exe" "F:\\blood-data-management-system\\server\\node_modules\\@m
-apbox\\node-pre-gyp\\bin\\node-pre-gyp" "install" "--fallback-to-build" "--library=static_library"
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! cwd F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! node -v v20.9.0[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! node-pre-gyp -v v1.0.11[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! not ok[K
-[1m[97mnpm[m [31merror[m A complete log of this run can be found in: C:\Users\MANOSRIJA NASRIN\AppData\Local\npm-cache\_logs\2024-08-22T10_03_16_685
-Z-debug-0.log
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m A[Knpm insrall[K[K[K[Ktall
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm install\[K[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m Unsupported engine {[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   package: [32m'geo-distance-js@1.0.0'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   required: { node: [32m'~0.10.0'[m },[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   current: { node: [32m'v20.9.0'[m, npm: [32m'10.8.2'[m }[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m }[K
-|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a 
-good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-|[1m[97mnpm[m [33mwarn[m [94mdeprecated[m npmlog@5.0.1: This package is no longer supported.[K
-|/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/config-array@0.5.0: Use @eslint/config-array instead[K
-/[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated[K
--\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m urix@0.1.0: Please see https://github.com/lydell/urix#deprecated[K
-/[1m[97mnpm[m [33mwarn[m [94mdeprecated[m rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported[K
-/[1m[97mnpm[m [33mwarn[m [94mdeprecated[m har-validator@5.1.5: this library is no longer supported[K
--[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m glob@7.1.6: Glob versions prior to v9 are no longer supported[K
-|/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m are-we-there-yet@2.0.0: This package is no longer supported.[K
-/[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated[K
-/[1m[97mnpm[m [33mwarn[m [94mdeprecated[m chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dep
-endencies
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated[K
--\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m cloudant-follow@0.17.0: This package is no longer maintained.[K
-/-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/object-schema@1.2.1: Use @eslint/object-schema instead[K
-\|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m gauge@3.0.2: This package is no longer supported.[K
-[1m[97mnpm[m [33mwarn[m [94mdeprecated[m uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstance
-s, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
-/[1m[97mnpm[m [33mwarn[m [94mdeprecated[m request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142[K
-/-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m bson@6.4.0: a critical bug affecting zSeries s390x big-endian systems is fixed in bson@6.5.0[K
--\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m grpc@1.24.11: This library will not receive further updates other than security fixes. We recommend using @grpc/g
-rpc-js instead.
-\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K]0;C:\windows\system32\cmd.exe |[K]0;node-pre-gyp/[K-[K\[K|[K/[K-[K\[K]0;Windows PowerShell|[K/[K-[K\[K|[K/[K]0;node-gyp-[K\[K|[K]0;Windows PowerShell/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mcleanup[m Failed to remove some directories [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\@babel'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\@babel'] {   
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\@babel'[m[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\winston'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\winston'] {  
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\winston'[m[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\third_party\boringssl\ssl'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32mthird_party\\boringssl\\ssl'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\third_party\boringssl\third_party'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32mthird_party\\boringssl\\third_party'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\third_party\abseil-cpp\absl'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32mthird_party\\abseil-cpp\\absl'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\src\core\ext\upb-generated'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32msrc\\core\\ext\\upb-generated'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ][K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m ][K
-[1m[97mnpm[m [31merror[m [94mcode[m [33m1[m[K
-[1m[97mnpm[m [31merror[m [94mpath[m F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m command failed[K
-[1m[97mnpm[m [31merror[m [94mcommand[m C:\windows\system32\cmd.exe /d /s /c node-pre-gyp install --fallback-to-build --library=static_library[K
-[1m[97mnpm[m [31merror[m Failed to execute 'C:\Program Files\nodejs\node.exe C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_mod
-ules\node-gyp\bin\node-gyp.js configure --fallback-to-build --library=static_library --module=F:\blood-data-management-system\server\
-node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node-v115-win32-x64-unknown\grpc_node.node --module_name=grpc_
-node --module_path=F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node
--v115-win32-x64-unknown --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v115' (1)
-\[1m[97mnpm[m [31merror[m node-pre-gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info using node-pre-gyp@1.0.11[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info check checked for "F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc\sr
-c\node\extension_binary\node-v115-win32-x64-unknown\grpc_node.node" (not found)
-[1m[97mnpm[m [31merror[m node-pre-gyp http GET https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v115-win32-x64-unknown.tar.gz[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! install response status 404 Not Found on https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v11
-5-win32-x64-unknown.tar.gz
-[1m[97mnpm[m [31merror[m node-pre-gyp WARN Pre-built binaries not installable for grpc@1.24.11 and node@20.9.0 (node-v115 ABI, unknown) (falling bac
-k to source compile with node-gyp)
-[1m[97mnpm[m [31merror[m node-pre-gyp WARN Hit error response status 404 Not Found on https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v
-115-win32-x64-unknown.tar.gz
-[1m[97mnpm[m [31merror[m gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m gyp info using node-gyp@10.1.0[K
-[1m[97mnpm[m [31merror[m gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m gyp info ok[K
-[1m[97mnpm[m [31merror[m gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m gyp info using node-gyp@10.1.0[K
-[1m[97mnpm[m [31merror[m gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m gyp info find Python using Python version 3.9.13 found at "C:\Users\MANOSRIJA NASRIN\AppData\Local\Microsoft\WindowsApps\Py
-thonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe"
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS msvs_version not set from command line or npm config[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS VCINSTALLDIR not set, not running in VS Command Prompt[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS not looking for VS2015 as it is only supported up to Node.js 18[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS not looking for VS2013 as it is only supported up to Node.js 8[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS **************************************************************[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS You need to install the latest version of Visual Studio[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS including the "Desktop development with C++" workload.[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS For more information consult the documentation at:[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS https://github.com/nodejs/node-gyp#on-windows[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS **************************************************************[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! configure error[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack Error: Could not find any Visual Studio installation to use[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack at VisualStudioFinder.fail (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node
--gyp\lib\find-visualstudio.js:116:11)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at VisualStudioFinder.findVisualStudio (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_
-modules\node-gyp\lib\find-visualstudio.js:72:17)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack at async createBuildDir (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node-gy
-p\lib\configure.js:95:26)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at async run (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node-gyp\bin\node-
-gyp.js:81:18)
-[1m[97mnpm[m [31merror[m gyp ERR! System Windows_NT 10.0.19045[K
-[1m[97mnpm[m [31merror[m gyp ERR! command "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\MANOSRIJA NASRIN\\AppData\\Roaming\\npm\\node_modules\\n
-pm\\node_modules\\node-gyp\\bin\\node-gyp.js" "configure" "--fallback-to-build" "--library=static_library" "--module=F:\\blood-data-m
-anagement-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\src\\node\\extension_binary\\node-v115-win32-x64-unknown\\
-grpc_node.node" "--module_name=grpc_node" "--module_path=F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_
-modules\\grpc\\src\\node\\extension_binary\\node-v115-win32-x64-unknown" "--napi_version=9" "--node_abi_napi=napi" "--napi_build_vers
-ion=0" "--node_napi_label=node-v115"
-[1m[97mnpm[m [31merror[m gyp ERR! cwd F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m gyp ERR! node -v v20.9.0[K
-[1m[97mnpm[m [31merror[m gyp ERR! node-gyp -v v10.1.0[K
-[1m[97mnpm[m [31merror[m gyp ERR! not ok[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! build error[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack Error: Failed to execute 'C:\Program Files\nodejs\node.exe C:\Users\MANOSRIJA NASRIN\AppData\Roamin
-g\npm\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js configure --fallback-to-build --library=static_library --module=F:\blood
--data-management-system\server\node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node-v115-win32-x64-unknown\grp
-c_node.node --module_name=grpc_node --module_path=F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc
-\src\node\extension_binary\node-v115-win32-x64-unknown --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label
-=node-v115' (1)
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess.<anonymous> (F:\blood-data-management-system\server\node_modules\@mapbox\node-p
-re-gyp\lib\util\compile.js:89:23)
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess.emit (node:events:514:28)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at maybeClose (node:internal/child_process:1105:16)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess._handle.onexit (node:internal/child_process:305:5)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! System Windows_NT 10.0.19045[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! command "C:\\Program Files\\nodejs\\node.exe" "F:\\blood-data-management-system\\server\\node_modules\\@m
-apbox\\node-pre-gyp\\bin\\node-pre-gyp" "install" "--fallback-to-build" "--library=static_library"
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! cwd F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! node -v v20.9.0[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! node-pre-gyp -v v1.0.11[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! not ok[K
-[1m[97mnpm[m [31merror[m A complete log of this run can be found in: C:\Users\MANOSRIJA NASRIN\AppData\Local\npm-cache\_logs\2024-08-22T10_07_56_605
-Z-debug-0.log
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm outdates[Kd
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm outdated\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[4m[1m[97mPackage[24m[m[11X[4m[1m[97m[11CCurrent[24m[m  [4m[1m[97mWanted[24m[m  [4m[1m[97mLatest[24m[m  [4m[1m[97mLocation[24m[m[20X[4m[1m[97m[20CDepended by[24m[m[K
-[31mbody-parser[m       MISSING  [36m1.20.2[m  [34m1.20.2[m  -                           server[K
-[31mconcurrently[m      MISSING   [36m5.3.0[m   [34m8.2.2[m  -                           server[K
-[31mcors[m              MISSING   [36m2.8.5[m   [34m2.8.5[m  -                           server[K
-[31mexpress[m           MISSING  [36m4.19.2[m  [34m4.19.2[m  -                           server[K
-[31mexpress-session[m   MISSING  [36m1.18.0[m  [34m1.18.0[m  -                           server[K
-[31mfabric-ca-client[m  MISSING  [36m2.2.20[m  [34m2.2.20[m  -                           server[K
-[31mfabric-client[m     MISSING  [36m1.4.20[m  [34m1.4.20[m  node_modules/fabric-client  server[K
-[31mfabric-network[m    MISSING  [36m2.2.20[m  [34m2.2.20[m  -                           server[K
-[31mgeo-distance-js[m   MISSING   [36m1.0.0[m   [34m0.0.2[m  -                           server[K
-[31mgeolocation[m       MISSING   [36m0.2.0[m   [34m0.2.0[m  -                           server[K
-[31mjsonwebtoken[m      MISSING   [36m8.5.1[m   [34m9.0.2[m  -                           server[K
-[31mmongodb[m           MISSING   [36m6.8.0[m   [34m6.8.0[m  -                           server[K
-[31mmongoose[m          MISSING   [36m8.5.3[m   [34m8.5.3[m  -                           server[K
-[31mmorgan[m            MISSING  [36m1.10.0[m  [34m1.10.0[m  -                           server[K
-[31mmy-sql[m            MISSING  [36m1.2.15[m  [34m1.2.15[m  -                           server[K
-[31mnodemon[m           MISSING  [36m1.19.4[m   [34m3.1.4[m  -                           server[K
-[31mredis[m             MISSING   [36m3.1.2[m   [34m4.7.0[m  -                           server[K
-[31mrouter[m            MISSING   [36m1.3.8[m   [34m1.3.8[m  -                           server[K
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm outdated[1Pinstall[Kl n[Kbody-parde[K[Kser
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm install body-parser\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m Unsupported engine {[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   package: [32m'geo-distance-js@1.0.0'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   required: { node: [32m'~0.10.0'[m },[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   current: { node: [32m'v20.9.0'[m, npm: [32m'10.8.2'[m }[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m }[K
-\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a 
-good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-\|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m npmlog@5.0.1: This package is no longer supported.[K
-|[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/config-array@0.5.0: Use @eslint/config-array instead[K
-|/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated[K
-/-[K\[K|[K/[K-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m urix@0.1.0: Please see https://github.com/lydell/urix#deprecated[K
-[1m[97mnpm[m [33mwarn[m [94mdeprecated[m rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported[K
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m har-validator@5.1.5: this library is no longer supported[K
--\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m glob@7.1.6: Glob versions prior to v9 are no longer supported[K
-/-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m are-we-there-yet@2.0.0: This package is no longer supported.[K
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated[K
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dep
-endencies
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated[K
-\|[K/[K-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m cloudant-follow@0.17.0: This package is no longer maintained.[K
-\|[K/[K-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/object-schema@1.2.1: Use @eslint/object-schema instead[K
--[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m gauge@3.0.2: This package is no longer supported.[K
-|[1m[97mnpm[m [33mwarn[m [94mdeprecated[m uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstance
-s, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
-|[1m[97mnpm[m [33mwarn[m [94mdeprecated[m request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142[K
-|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m bson@6.4.0: a critical bug affecting zSeries s390x big-endian systems is fixed in bson@6.5.0[K
-|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[K\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m grpc@1.24.11: This library will not receive further updates other than security fixes. We recommend using @grpc/g
-rpc-js instead.
-\|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K]0;C:\windows\system32\cmd.exe ]0;node-gyp]0;node-pre-gyp\[K|[K/[K-[K\[K|[K/[K]0;Windows PowerShell-[K\[K|[K/[K-[K\[K]0;node-gyp|[K/[K-[K\[K]0;Windows PowerShell|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mcleanup[m Failed to remove some directories [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-network\\node_modules\\nano\\node_modules\\axios[m
-[32m'[m,[32m[K[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-networ
-k\node_modules\nano\node_modules\axios\lib'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-network\\node_modules\\nano\\node_module[m
-[32ms\\axios\\lib'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\third_party\boringssl\crypto'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32mthird_party\\boringssl\\crypto'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\third_party\boringssl\third_party\googletest\xcode'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32mthird_party\\boringssl\\third_party\\googletest\\xcode'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ],[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   [[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     [Error: EPERM: operation not permitted, rmdir 'F:\blood-data-management-system\server\node_modules\fabric-client
-\node_modules\grpc\deps\grpc\src\core\ext\upb-generated'] {
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       errno: [33m-4048[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       code: [32m'EPERM'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       syscall: [32m'rmdir'[m,[K[32m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m       path: [32m'F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\deps\\grpc\\[m
-[32msrc\\core\\ext\\upb-generated'[m
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m     }[K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m   ][K
-[1m[97mnpm[m [33mwarn[m [94mcleanup[m ][K
-[1m[97mnpm[m [31merror[m [94mcode[m [33m1[m[K
-[1m[97mnpm[m [31merror[m [94mpath[m F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m command failed[K
-[1m[97mnpm[m [31merror[m [94mcommand[m C:\windows\system32\cmd.exe /d /s /c node-pre-gyp install --fallback-to-build --library=static_library[K
-[1m[97mnpm[m [31merror[m Failed to execute 'C:\Program Files\nodejs\node.exe C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_mod
-ules\node-gyp\bin\node-gyp.js configure --fallback-to-build --library=static_library --module=F:\blood-data-management-system\server\
-node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node-v115-win32-x64-unknown\grpc_node.node --module_name=grpc_
-node --module_path=F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node
--v115-win32-x64-unknown --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v115' (1)
-[1m[97mnpm[m [31merror[m node-pre-gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info using node-pre-gyp@1.0.11[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m node-pre-gyp info check checked for "F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc\sr
-c\node\extension_binary\node-v115-win32-x64-unknown\grpc_node.node" (not found)
-[1m[97mnpm[m [31merror[m node-pre-gyp http GET https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v115-win32-x64-unknown.tar.gz[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! install response status 404 Not Found on https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v11
-5-win32-x64-unknown.tar.gz
-[1m[97mnpm[m [31merror[m node-pre-gyp WARN Pre-built binaries not installable for grpc@1.24.11 and node@20.9.0 (node-v115 ABI, unknown) (falling bac
-k to source compile with node-gyp)
-[1m[97mnpm[m [31merror[m node-pre-gyp WARN Hit error response status 404 Not Found on https://node-precompiled-binaries.grpc.io/grpc/v1.24.11/node-v
-115-win32-x64-unknown.tar.gz
-[1m[97mnpm[m [31merror[m gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m gyp info using node-gyp@10.1.0[K
-[1m[97mnpm[m [31merror[m gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m gyp info ok[K
-[1m[97mnpm[m [31merror[m gyp info it worked if it ends with ok[K
-[1m[97mnpm[m [31merror[m gyp info using node-gyp@10.1.0[K
-[1m[97mnpm[m [31merror[m gyp info using node@20.9.0 | win32 | x64[K
-[1m[97mnpm[m [31merror[m gyp info find Python using Python version 3.9.13 found at "C:\Users\MANOSRIJA NASRIN\AppData\Local\Microsoft\WindowsApps\Py
-thonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe"
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS msvs_version not set from command line or npm config[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS VCINSTALLDIR not set, not running in VS Command Prompt[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS could not use PowerShell to find Visual Studio 2017 or newer, try re-running with '--loglevel silly' for m
-ore details.
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS Failure details: undefined[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS not looking for VS2015 as it is only supported up to Node.js 18[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS not looking for VS2013 as it is only supported up to Node.js 8[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS **************************************************************[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS You need to install the latest version of Visual Studio[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS including the "Desktop development with C++" workload.[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS For more information consult the documentation at:[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS https://github.com/nodejs/node-gyp#on-windows[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS **************************************************************[K
-[1m[97mnpm[m [31merror[m gyp ERR! find VS[K
-[1m[97mnpm[m [31merror[m gyp ERR! configure error[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack Error: Could not find any Visual Studio installation to use[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack at VisualStudioFinder.fail (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node
--gyp\lib\find-visualstudio.js:116:11)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at VisualStudioFinder.findVisualStudio (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_
-modules\node-gyp\lib\find-visualstudio.js:72:17)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[K
-[1m[97mnpm[m [31merror[m gyp ERR! stack at async createBuildDir (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node-gy
-p\lib\configure.js:95:26)
-[1m[97mnpm[m [31merror[m gyp ERR! stack at async run (C:\Users\MANOSRIJA NASRIN\AppData\Roaming\npm\node_modules\npm\node_modules\node-gyp\bin\node-
-gyp.js:81:18)
-[1m[97mnpm[m [31merror[m gyp ERR! System Windows_NT 10.0.19045[K
-[1m[97mnpm[m [31merror[m gyp ERR! command "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\MANOSRIJA NASRIN\\AppData\\Roaming\\npm\\node_modules\\n
-pm\\node_modules\\node-gyp\\bin\\node-gyp.js" "configure" "--fallback-to-build" "--library=static_library" "--module=F:\\blood-data-m
-anagement-system\\server\\node_modules\\fabric-client\\node_modules\\grpc\\src\\node\\extension_binary\\node-v115-win32-x64-unknown\\
-grpc_node.node" "--module_name=grpc_node" "--module_path=F:\\blood-data-management-system\\server\\node_modules\\fabric-client\\node_
-modules\\grpc\\src\\node\\extension_binary\\node-v115-win32-x64-unknown" "--napi_version=9" "--node_abi_napi=napi" "--napi_build_vers
-ion=0" "--node_napi_label=node-v115"
-[1m[97mnpm[m [31merror[m gyp ERR! cwd F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m gyp ERR! node -v v20.9.0[K
-[1m[97mnpm[m [31merror[m gyp ERR! node-gyp -v v10.1.0[K
-[1m[97mnpm[m [31merror[m gyp ERR! not ok[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! build error[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack Error: Failed to execute 'C:\Program Files\nodejs\node.exe C:\Users\MANOSRIJA NASRIN\AppData\Roamin
-g\npm\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js configure --fallback-to-build --library=static_library --module=F:\blood
--data-management-system\server\node_modules\fabric-client\node_modules\grpc\src\node\extension_binary\node-v115-win32-x64-unknown\grp
-c_node.node --module_name=grpc_node --module_path=F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc
-\src\node\extension_binary\node-v115-win32-x64-unknown --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label
-=node-v115' (1)
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess.<anonymous> (F:\blood-data-management-system\server\node_modules\@mapbox\node-p
-re-gyp\lib\util\compile.js:89:23)
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess.emit (node:events:514:28)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at maybeClose (node:internal/child_process:1105:16)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! stack     at ChildProcess._handle.onexit (node:internal/child_process:305:5)[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! System Windows_NT 10.0.19045[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! command "C:\\Program Files\\nodejs\\node.exe" "F:\\blood-data-management-system\\server\\node_modules\\@m
-apbox\\node-pre-gyp\\bin\\node-pre-gyp" "install" "--fallback-to-build" "--library=static_library"
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! cwd F:\blood-data-management-system\server\node_modules\fabric-client\node_modules\grpc[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! node -v v20.9.0[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! node-pre-gyp -v v1.0.11[K
-[1m[97mnpm[m [31merror[m node-pre-gyp ERR! not ok[K
-[1m[97mnpm[m [31merror[m A complete log of this run can be found in: C:\Users\MANOSRIJA NASRIN\AppData\Local\npm-cache\_logs\2024-08-22T10_18_38_320
-Z-debug-0.log
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm ls grpc
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm ls grpc\[Kdonor-application@1.0.0 F:\blood-data-management-system\server[K
-`-- fabric-client@ [31minvalid: "^1.4.10" from the root project[m[K
-  `-- [33mgrpc@[m [31mextraneous[m[K
-[K
-[K]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm ls grpc[K[K[K[Kbofy[K[K[K[Kinflight
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm ls inflight\[Kdonor-application@1.0.0 F:\blood-data-management-system\server[K
-`-- (empty)[K
-[K
-[K]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm ls inflight[K[K[K[K[K[K[K[K[K
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm ls\[Kdonor-application@1.0.0 F:\blood-data-management-system\server[K
-+-- [31mUNMET DEPENDENCY[m body-parser@^1.19.0[K
-+-- [31mUNMET DEPENDENCY[m concurrently@^5.2.0[K
-+-- [31mUNMET DEPENDENCY[m cors@^2.8.5[K
-+-- [31mUNMET DEPENDENCY[m eslint-config-google@^0.14.0[K
-+-- [31mUNMET DEPENDENCY[m eslint-plugin-react@^7.33.2[K
-+-- [31mUNMET DEPENDENCY[m eslint@^7.32.0[K
-+-- [31mUNMET DEPENDENCY[m express-session@^1.18.0[K
-+-- [31mUNMET DEPENDENCY[m express@^4.17.1[K
-+-- [31mUNMET DEPENDENCY[m fabric-ca-client@^2.2.0[K
-+-- fabric-client@ [31minvalid: "^1.4.10" from the root project[m[K
-+-- [31mUNMET DEPENDENCY[m fabric-network@^2.2.0[K
-+-- [31mUNMET DEPENDENCY[m geo-distance-js@^1.0.0[K
-+-- [31mUNMET DEPENDENCY[m geolocation@^0.2.0[K
-+-- [31mUNMET DEPENDENCY[m jsonwebtoken@^8.5.1[K
-+-- [31mUNMET DEPENDENCY[m mongodb@^6.3.0[K
-+-- [31mUNMET DEPENDENCY[m mongoose@^8.1.3[K
-+-- [31mUNMET DEPENDENCY[m morgan@^1.9.1[K
-+-- [31mUNMET DEPENDENCY[m my-sql@^1.2.15[K
-+-- [31mUNMET DEPENDENCY[m nodemon@^1.19.1[K
-+-- [31mUNMET DEPENDENCY[m redis@^3.0.2[K
-`-- [31mUNMET DEPENDENCY[m router@^1.3.8[K
-
-\[1m[97mnpm[m [31merror[m [94mcode[m ELSPROBLEMS[K
-[1m[97mnpm[m [31merror[m missing: body-parser@^1.19.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: concurrently@^5.2.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: cors@^2.8.5, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: eslint-config-google@^0.14.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: eslint-plugin-react@^7.33.2, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: eslint@^7.32.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: express-session@^1.18.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: express@^4.17.1, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: fabric-ca-client@^2.2.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m invalid: fabric-client@ F:\blood-data-management-system\server\node_modules\fabric-client[K
-[1m[97mnpm[m [31merror[m missing: fabric-network@^2.2.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: geo-distance-js@^1.0.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: geolocation@^0.2.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: jsonwebtoken@^8.5.1, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: mongodb@^6.3.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: mongoose@^8.1.3, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: morgan@^1.9.1, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: my-sql@^1.2.15, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: nodemon@^1.19.1, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: redis@^3.0.2, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: router@^1.3.8, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m A complete log of this run can be found in: C:\Users\MANOSRIJA NASRIN\AppData\Local\npm-cache\_logs\2024-08-22T10_19_52_575
-Z-debug-0.log
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m [H[2J]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm ls inflight[4Pgrpcinstall body-parser[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pls grpcinflight[K
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm ls\[KF:\blood-data-management-system\server[K
-`-- fabric-client@ [31mextraneous[m[K
-[K[1m[97m
-npm[m [31merror[m [94mcode[m EJSONPARSE[K[1m[97m
-npm[m [31merror[m [94mJSON.parse[m Failed to parse root package.json[K
-\[K[1m[97mnpm[m [31merror[m [94mJSON.parse[m Failed to parse JSON data.[K[1m[97m
-npm[m [31merror[m [94mJSON.parse[m Note: package.json must be actual JSON, not just JavaScript.[K[1m[97m
-npm[m [31merror[m A complete log of this run can be found in: C:\Users\MANOSRIJA NASRIN\AppData\Local\npm-cache\_logs\2024-08-22T10_21_26_625
-Z-debug-0.log[K
-[K]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm ls
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm lsdonor-application@1.0.0 F:\blood-data-management-system\server[K
-+-- [31mUNMET DEPENDENCY[m body-parser@^1.19.0[K
-+-- [31mUNMET DEPENDENCY[m concurrently@^5.2.0[K
-+-- [31mUNMET DEPENDENCY[m cors@^2.8.5[K
-+-- [31mUNMET DEPENDENCY[m eslint-config-google@^0.14.0[K
-+-- [31mUNMET DEPENDENCY[m eslint-plugin-react@^7.33.2[K
-+-- [31mUNMET DEPENDENCY[m eslint@^7.32.0[K
-+-- [31mUNMET DEPENDENCY[m express-session@^1.18.0[K
-+-- [31mUNMET DEPENDENCY[m express@^4.17.1[K
-+-- [31mUNMET DEPENDENCY[m fabric-ca-client@^2.2.0[K
-+-- fabric-client@ [31mextraneous[m[K
-+-- [31mUNMET DEPENDENCY[m fabric-network@^2.2.0[K
-+-- [31mUNMET DEPENDENCY[m geo-distance-js@^1.0.0[K
-+-- [31mUNMET DEPENDENCY[m geolocation@^0.2.0[K
-+-- [31mUNMET DEPENDENCY[m jsonwebtoken@^8.5.1[K
-+-- [31mUNMET DEPENDENCY[m mongodb@^6.3.0[K
-+-- [31mUNMET DEPENDENCY[m mongoose@^8.1.3[K
-+-- [31mUNMET DEPENDENCY[m morgan@^1.9.1[K
-+-- [31mUNMET DEPENDENCY[m my-sql@^1.2.15[K
-+-- [31mUNMET DEPENDENCY[m nodemon@^1.19.1[K
-+-- [31mUNMET DEPENDENCY[m redis@^3.0.2[K
-`-- [31mUNMET DEPENDENCY[m router@^1.3.8[K
-
-\[1m[97mnpm[m [31merror[m [94mcode[m ELSPROBLEMS[K
-[1m[97mnpm[m [31merror[m missing: body-parser@^1.19.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: concurrently@^5.2.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: cors@^2.8.5, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: eslint-config-google@^0.14.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: eslint-plugin-react@^7.33.2, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: eslint@^7.32.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: express-session@^1.18.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: express@^4.17.1, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: fabric-ca-client@^2.2.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m extraneous: fabric-client@ F:\blood-data-management-system\server\node_modules\fabric-client[K
-[1m[97mnpm[m [31merror[m missing: fabric-network@^2.2.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: geo-distance-js@^1.0.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: geolocation@^0.2.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: jsonwebtoken@^8.5.1, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: mongodb@^6.3.0, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: mongoose@^8.1.3, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: morgan@^1.9.1, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: my-sql@^1.2.15, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: nodemon@^1.19.1, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: redis@^3.0.2, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m missing: router@^1.3.8, required by donor-application@1.0.0[K
-[1m[97mnpm[m [31merror[m A complete log of this run can be found in: C:\Users\MANOSRIJA NASRIN\AppData\Local\npm-cache\_logs\2024-08-22T10_21_42_902
-Z-debug-0.log
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m i[Knpm i[Kuninstall fabric-client
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm uninstall fabric-client\[K[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m Unsupported engine {[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   package: [32m'geo-distance-js@1.0.0'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   required: { node: [32m'~0.10.0'[m },[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   current: { node: [32m'v20.9.0'[m, npm: [32m'10.8.2'[m }[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m }[K
-|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a 
-good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-\|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/config-array@0.5.0: Use @eslint/config-array instead[K
-|/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated[K
-/-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m urix@0.1.0: Please see https://github.com/lydell/urix#deprecated[K
-|[1m[97mnpm[m [33mwarn[m [94mdeprecated[m rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported[K
-|/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m glob@7.1.6: Glob versions prior to v9 are no longer supported[K
-|/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated[K
-/[1m[97mnpm[m [33mwarn[m [94mdeprecated[m chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dep
-endencies
-/[1m[97mnpm[m [33mwarn[m [94mdeprecated[m resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated[K
--\[K|[K/[K-[K\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/object-schema@1.2.1: Use @eslint/object-schema instead[K
-/-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m bson@6.4.0: a critical bug affecting zSeries s390x big-endian systems is fixed in bson@6.5.0[K
--\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K[K-\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm uninstall fabric-client[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K inflight[4Pgrpcinstall body-parser[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pls grpc[C[C[C[1@ [1@ [C[C[1P[C[C[C[C[C[C[K[K[K[Kfabric-client
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm ls fabric-client\[Kdonor-application@1.0.0 F:\blood-data-management-system\server[K
-`-- (empty)
-
-]0;nasrin@LAPTOP-F30RQ071 [01;34mserver $[00m npm  ls fabric-client[C[C[C[C[C[C[C[C[C[C[C[C[C[6@uninstall[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-[6n[m]0;C:\Program Files\nodejs\node.exe[?25h]0;npm]0;npm uninstall fabric-client\[K[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m Unsupported engine {[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   package: [32m'geo-distance-js@1.0.0'[m,[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   required: { node: [32m'~0.10.0'[m },[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m   current: { node: [32m'v20.9.0'[m, npm: [32m'10.8.2'[m }[K
-[1m[97mnpm[m [33mwarn[m [94mEBADENGINE[m }[K
-|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a 
-good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-|/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/config-array@0.5.0: Use @eslint/config-array instead[K
-/-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated[K
--\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m urix@0.1.0: Please see https://github.com/lydell/urix#deprecated[K
-[1m[97mnpm[m [33mwarn[m [94mdeprecated[m rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported[K
--\[K|[K/[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m glob@7.1.6: Glob versions prior to v9 are no longer supported[K
-/-[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated[K
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dep
-endencies
--[1m[97mnpm[m [33mwarn[m [94mdeprecated[m resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated[K
-\|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m @humanwhocodes/object-schema@1.2.1: Use @eslint/object-schema instead[K
-/-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K[1m[97mnpm[m [33mwarn[m [94mdeprecated[m bson@6.4.0: a critical bug affecting zSeries s390x big-endian systems is fixed in bson@6.5.0[K
-|/[K-[K\[K|[K/[K-[K\[K|[K/[K-[K\[K|[K
